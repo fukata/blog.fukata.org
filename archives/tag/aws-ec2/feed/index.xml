@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>AWS EC2 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/aws-ec2/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:03:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ServersMan@VPS ProとEC2 micro instanceのベンチマークを比較</title>
+		<link>/archives/5180/</link>
+					<comments>/archives/5180/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 23 Jan 2011 13:45:21 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS EC2]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[ベンチマーク]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5180</guid>
+
+					<description><![CDATA[昨日、EC2からServersMan@VPSに出戻りしたので、早速、両サーバで当サイトのベンチマークを取ってみました。ベンチマークの計測には、ab &#8211; Apache HTTP server ... <a href="/archives/5180/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、<a href="https://fukata.org/2011/01/23/servers-man-vps-pro/">EC2からServersMan@VPSに出戻り</a>したので、早速、両サーバで当サイトのベンチマークを取ってみました。ベンチマークの計測には、<a href="https://httpd.apache.org/docs/2.0/programs/ab.html">ab &#8211; Apache HTTP server benchmarking tool</a>を使用しました。</p>
+<p>abの実行はそれぞれのサーバ上にて行っています。</p>
+<p>今回は、apache,mysql,phpに関して、サーバ固有のチューニングは行わず、EC2で利用していた設定をServersManの方に適用して計測しました。</p>
+<p>思ったよりServersManが頑張っていたので、とりあえずほっとしています。</p>
+<p><span id="more-5180"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>WordPressのコンテンツ状況に多少の違いはありましたが、これほど差が出るとは思いませんでした。</p>
+<p>Failed requestsに関して、EC2は382件あるのに対し、ServersManは0件でした。これは、処理能力の違いによりEC2の方では処理しきれなかったのかもしれません。</p>
+<p>また、Transfer rateに関しても5倍以上の差をつけて、ServersManの方が速い結果となりました。その他の計測値についてもServersManの方が大差で勝っており、サーバの安定性、サポートの質などを考慮しなければ、EC2 micro instanceよりは、ServersMan@VPS Proの方がコストパフォーマンスは高そうです。</p>
+<p>料金についても、ServersMan@VPS Proの方は、1980円に対し、EC2の方は$25程度かかっていたので、多少コストダウンしています。</p>
+<p>EC2、ServersManの両サービスで、割り当てられるインスタンス、プランによって大元のサーバスペック、インフラも違う可能性があるので、同様の結果になるかは不明です。CPUなどは共有なので、この辺は、運の要素もあるかもしれません。</p>
+<p>各、サーバでのabの結果は以下。</p>
+<h2>EC2 micro instance</h2>
+<pre lang="bash">
+$ ab -c10 -n1000 https://fukata.org/
+This is ApacheBench, Version 2.3 < $Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, https://www.zeustech.net/
+Licensed to The Apache Software Foundation, https://www.apache.org/
+
+Benchmarking fukata.org (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        Apache/2.2.16
+Server Hostname:        fukata.org
+Server Port:            80
+
+Document Path:          /
+Document Length:        101894 bytes
+
+Concurrency Level:      10
+Time taken for tests:   2285.760 seconds
+Complete requests:      1000
+Failed requests:        382
+   (Connect: 0, Receive: 0, Length: 382, Exceptions: 0)
+Write errors:           0
+Total transferred:      101632220 bytes
+HTML transferred:       101168220 bytes
+Requests per second:    0.44 [#/sec] (mean)
+Time per request:       22857.601 [ms] (mean)
+Time per request:       2285.760 [ms] (mean, across all concurrent requests)
+Transfer rate:          43.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   12 130.0      1    1535
+Processing:  1663 22823 31178.9   3880  137603
+Waiting:       77 3259 9076.9    423   65292
+Total:       1664 22835 31178.3   3881  137604
+
+Percentage of the requests served within a certain time (ms)
+  50%   3881
+  66%  16392
+  75%  34607
+  80%  58282
+  90%  67163
+  95%  100522
+  98%  111876
+  99%  112836
+ 100%  137604 (longest request)
+</pre>
+<h2>ServersMan@VPS Pro</h2>
+<pre lang="bash">
+$ ab -c10 -n1000 https://fukata.org/
+This is ApacheBench, Version 2.3 < $Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, https://www.zeustech.net/
+Licensed to The Apache Software Foundation, https://www.apache.org/
+
+Benchmarking fukata.org (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        Apache/2.2.14
+Server Hostname:        fukata.org
+Server Port:            80
+
+Document Path:          /
+Document Length:        85413 bytes
+
+Concurrency Level:      10
+Time taken for tests:   297.972 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      85867000 bytes
+HTML transferred:       85413000 bytes
+Requests per second:    3.36 [#/sec] (mean)
+Time per request:       2979.716 [ms] (mean)
+Time per request:       297.972 [ms] (mean, across all concurrent requests)
+Transfer rate:          281.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.8      0      24
+Processing:  1055 2972 1139.9   2768   12319
+Waiting:      149 1153 537.8   1090    8186
+Total:       1055 2973 1139.9   2768   12319
+
+Percentage of the requests served within a certain time (ms)
+  50%   2768
+  66%   3060
+  75%   3269
+  80%   3407
+  90%   4084
+  95%   5404
+  98%   6218
+  99%   6761
+ 100%  12319 (longest request)
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5180/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>EC2にブログを移行しました</title>
+		<link>/archives/4815/</link>
+					<comments>/archives/4815/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 19 Oct 2010 20:16:46 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[AWS EC2]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4815</guid>
+
+					<description><![CDATA[中国の壁越え用としてAmazonのEC２(Micro Instance)を使用していたのですが、マシンパワーが余っていたので当サイトを移行してみました。 また、その際、以前言っていた中国国内からアクセ ... <a href="/archives/4815/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>中国の壁越え用としてAmazonのEC２(Micro Instance)を使用していたのですが、マシンパワーが余っていたので当サイトを移行してみました。<br />
+また、その際、以前言っていた中国国内からアクセスされた場合には、FacebookやTwitterなどの表示を切り替えるようにもしました。これで、中国国内からのアクセス時に不要なウィジェットを配信することがなくなったと思います。</p>
+<p>自分は回線の弱い中国にいるので実際にどれくらい早くなったのかいまいちわかりませんが、それでも前より描画が早くなったような気がします。</p>
+<p>これで、自分のサイトが急激に大きくなってもスケーラビリティのあるEC２やその他のサービスを利用することが可能になります。まぁ、当分はMicro Instanceのみで充分だと思いますが＾＾；</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4815/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

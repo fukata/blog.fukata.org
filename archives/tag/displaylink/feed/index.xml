@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DisplayLink &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/displaylink/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>REX-USBDVI2でトリプルディスプレイを構築してみました～Windows編～</title>
+		<link>/archives/2343/</link>
+					<comments>/archives/2343/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 03 Feb 2010 06:33:30 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[DisplayLink]]></category>
+		<category><![CDATA[REX-USBDVI2]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2343</guid>
+
+					<description><![CDATA[REX-USBDVI2が届いたので早速Windows環境にてトリプルディスプレイを構築してみました。 今回構築した環境は下記のような感じになっています。まぁ、Windowsなんで何も考えずに付属のディ ... <a href="/archives/2343/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5092/5476137764_235233fcdc_m.jpg"><img loading="lazy" class="alignleft size-thumbnail wp-image-2344" title="IMG_0911" src="https://farm6.static.flickr.com/5092/5476137764_235233fcdc_m.jpg" alt="" width="150" height="150" /></a><a href="https://www.ratocsystems.com/products/subpage/usbdvi2.html">REX-USBDVI2</a>が届いたので早速Windows環境にてトリプルディスプレイを構築してみました。</p>
+<p>今回構築した環境は下記のような感じになっています。まぁ、Windowsなんで何も考えずに付属のディスクからドライバとユーティリティソフトをインストールすればあとは、ユーティリティソフトから「ミラーモード」「拡張モード」を選択すれば完了です。</p>
+<p>USBタイプのグラフィックアダプタなので、表示速度に関しては購入前からネット上の評判などから得ていたので、あまり期待していなかったのですが、あまり負荷をかけなければとりあえず動画は再生できます。これはパソコンのスペックにかなり依存する物があると思うので、一概には言えませんが。</p>
+<p style="text-align: center;"><a href="https://farm6.static.flickr.com/5258/5476137160_d6aa50e553_m.jpg"><img loading="lazy" class="aligncenter" title="REX-USBDVI2" src="https://farm6.static.flickr.com/5258/5476137160_d6aa50e553_m.jpg" alt="" width="300" height="224" /></a></p>
+<p>初めてVGA以外のケーブルでディスプレイを接続してみたのですが、全然違うのにちょっとびっくりしました。文字がくっきりしていて、とても見やすいです。コーディングの際に目に負担がかからなくて良いかもしれません。</p>
+<p>Windowsはあっけなく構築が完了しましたが、問題はLinuxです。次は、Linux上でのREX-USBDVI2を使用したトリプルディスプレイの構築方法について書きたいと思います。</p>
+<div><span style="color: #0000ee; -webkit-text-decorations-in-effect: underline;"><br />
+</span></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2343/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>EMR &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/emr/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>EMRのmapper,reducerに引数を渡す</title>
+		<link>/archives/7521/</link>
+					<comments>/archives/7521/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 27 Aug 2013 14:55:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[EMR]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7521</guid>
+
+					<description><![CDATA[ふと、mapperに引数を渡したくなってどうやって渡すんだろうと考えていてあれこれ考えては試していなかったんですが、何のことはない、普通にいつも通り指定するだけでした。 $ elastic-mapre ... <a href="/archives/7521/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ふと、mapperに引数を渡したくなってどうやって渡すんだろうと考えていてあれこれ考えては試していなかったんですが、何のことはない、普通にいつも通り指定するだけでした。</p>
+<pre lang="bash">
+ $ elastic-mapreduce ... --mapper "s3n://bucket/path/to/mapper arg1 arg2"
+</pre>
+<p>これだけのことです。ただ、意外と情報が無かったのでメモっておきます。まぁ、通常は引数なんて渡すことほとんどないでしょうけど。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7521/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>3日で既存のバッチをEMRに移行した話</title>
+		<link>/archives/7493/</link>
+					<comments>/archives/7493/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 11 Jul 2013 17:08:52 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[EMR]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7493</guid>
+
+					<description><![CDATA[先週末から急激にトラフィックが増えて既存の集計バッチ、サーバでは処理できなくなってしまっていたので今週頭から急遽EMRに移すことを決意しました。 広告 構成 以前の構成はこんな感じ。 +----[S3 ... <a href="/archives/7493/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先週末から急激にトラフィックが増えて既存の集計バッチ、サーバでは処理できなくなってしまっていたので今週頭から急遽EMRに移すことを決意しました。</p>
+<p><span id="more-7493"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>構成</h2>
+<p>以前の構成はこんな感じ。</p>
+<pre>
+                             +----[S3]
+[ADサーバ]N-----N[LogProxy]N--+
+                             +----[集計サーバ]
+</pre>
+<p>ADサーバからLogProxyに対してラウンドロビンでログを転送してLogProxyから集計サーバ(単体サーバ)に集めるというもの。バックアップ先としてS3を利用しています。ログの転送にはもちろんfluentdを使っています。fluentdが無かったらと思うとゾッとします。</p>
+<p>ログの流量が多くなってしまい遅延するようになったり、Log Proxy側で集計サーバに流している分のログが溢れてしまうということも見受けられました。仮にログが正常に集計サーバに集まったとしても集計処理が長くなってしまい、時間別の集計も日々延びており、1日分の再集計に関してはアホかってくらい時間が掛かるようになってしまっていました。</p>
+<p>そういうこともあってEMRに移ることにしました。</p>
+<p>全体的な構成自体は変わっておらず、LogProxyからS3へアップしたログをEMRに食わすというもの。ただ、全てS3に移すと気軽にログを見たい時に不便なので、EMRで処理しなくても大丈夫な量のログに関しては今まで集計サーバで、多いものだけEMRで処理するようにしています。また、EMRで処理させるログに関しても、傾向を見たり統計データを算出するのにサンプリング後(1/100とか)を集計サーバに流すようにしています。</p>
+<p>S3へは<strong>YYYY/MM/DD/HH/hoge.${ADサーバのHOST}.${LogProxyサーバのHOST.PORT}.log</strong>のように時間まで階層化されてその中に各種ログが入っています。</p>
+<h2>hive or streaming?</h2>
+<p>EMRでjava,hive,streamingなどどれを使おうか迷った挙句、調査をする時間もなかったので以前少し触ったことがあるstreamingにしました。処理が簡単なものはhiveを使った方がmapper/reducerのスクリプトを書かなくてくてメンテ性も上がるので様子を見ながらstreamingで実装したスクリプトをhiveで再実装しようかと思っています。</p>
+<h2>ジョブの登録と取り込み</h2>
+<p>cronなどから定期的にジョブを登録するための仕組みと、処理が終わったジョブを既存DB(mysql)へ取り込むための仕組みが必要になります。</p>
+<h3>ジョブの登録</h3>
+<p>ジョブの登録は<a href="https://aws.amazon.com/developertools/2264">elastic-mapreduce-ruby</a>クライアントを使えば出来るんですが、設定ファイルからデフォルト値のロードとか色々既存アプリと共通化したかったのでperlから呼ぶことに。。。こんな感じで登録出来る。</p>
+<pre lang="bash">
+perl job_register.pl --func='hoge_func' --from='2013-07-11 00:00:00' --to='2013-07-12 00:00:00'
+</pre>
+<p>するとこんな感じの引数でelastic-mapreduce-rubyを呼び出します。</p>
+<pre lang="bash">
+elastic-mapreduce --create --stream \
+--enable-debugging \
+--mapper s3n://bucket/path/to/mapper \
+--reducer s3n://bucket/path/to/reducer \
+--log-uri s3n://bucket/path/to/debug/YYYY/MM/DD/hoge_func_HHMMSS
+--output s3n://bucket/path/to/output/YYYY/MM/DD/hoge_func_HHMMSS
+--master-instance-type m1.small \
+--slave-instance-type m1.small \
+--num-instances 3 \
+--input s3n://bucket/path/to/logs/2013/07/11/*/impression.*.log.gz,s3n://bucket/path/to/logs/2013/07/11/*/click.*.log.gz
+</pre>
+<p>instance-type、num-instancesなど各種パラメータに関してはデフォルト値は設定ファイルに、必要に応じてjob_register.plの引数で上書きすることが出来るようにしています。これで、時間帯毎にインスタンス数を変えたりするのも楽です。</p>
+<h3>取り込み</h3>
+<p>先ほどのスクリプトから登録されたジョブIDはジョブキューに登録され、監視用workerでステータスを監視して、正常終了していたら各処理(hoge_func等)個別の取り込みバッチを実行するというものを実装しています。ステータスが処理中の場合は一定時間後に再度チェック。異常終了、キャンセルの場合はジョブキューから削除。という感じです。</p>
+<p>処理個別の取り込みバッチに関してはworkerからしか起動できないと開発時などめんどくさいのでスクリプト単体でも実行できるようにしています。</p>
+<h2>まとめ</h2>
+<p>1日分の集計が20時間弱かかっていたのが1時間未満で終わるようになったりとスケールするって素晴らしい！こんなことならさっさとEMRに移しておけば良かった。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7493/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>elastic-mapreduce-rubyで&#8211;inputを複数指定する方法</title>
+		<link>/archives/7490/</link>
+					<comments>/archives/7490/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 10 Jul 2013 21:20:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[elastic-mapreduce-ruby]]></category>
+		<category><![CDATA[EMR]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7490</guid>
+
+					<description><![CDATA[最近、仕事でEMRを使うようになって調べていたことがあったのでメモっておきます。 タイトルの通りなんですけど、elastic-mapreduce-rubyで&#8211;inputを複数指定する方法が ... <a href="/archives/7490/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、仕事でEMRを使うようになって調べていたことがあったのでメモっておきます。</p>
+<p>タイトルの通りなんですけど、<a href="https://aws.amazon.com/developertools/2264">elastic-mapreduce-ruby</a>で&#8211;inputを複数指定する方法が分からなかったんですが、解決しました。まぁ、こんな感じで単純にカンマ区切りに指定すればよかったというオチでした。</p>
+<pre lang="bash">
+elastic-mapreduce --create --stream \
+--mapper s3n://bucket/path/to/mapper \
+--reducer s3n://bucket/path/to/reducer \
+--master-instance-type m1.small \
+--slave-instance-type m1.small \
+--num-instances 3 \
+--input s3n://bucket/path/to/dir1/*,s3n://bucket/path/to/dir2/*
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7490/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SLIK &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/slik/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:43 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>SLIK製のミニ三脚を購入</title>
+		<link>/archives/290/</link>
+					<comments>/archives/290/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 17 Feb 2008 07:26:55 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[SLIK]]></category>
+		<category><![CDATA[三脚]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/02/17/290/</guid>
+
+					<description><![CDATA[ついに、ミニ三脚をゲットしました！ これで、自分がパソコンを操作している時の映像を撮ることが出来ます。また、夜の写真を撮る時なんかにも役立ちそう♪ 写真を見ると分かるかと思いますが、偶然にもパソコンと ... <a href="/archives/290/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5011/5475568657_71a5d88698_m.jpg" target="_blank" title="sankyaku.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5011/5475568657_71a5d88698_m.jpg" alt="sankyaku.jpg" class="imageframe imgalignleft" align="left" height="150" width="200" /></a>ついに、ミニ三脚をゲットしました！</p>
+<p>これで、自分がパソコンを操作している時の映像を撮ることが出来ます。また、夜の写真を撮る時なんかにも役立ちそう♪</p>
+<p>写真を見ると分かるかと思いますが、偶然にもパソコンと同色ですｗ</p>
+<p>実は今早速撮った動画をyoutubeにアップロードしている最中でして、もうすぐしたらブログにも貼り付けることが出来るかと思います。</p>
+<p>youtubeといえば、こういう動画共有サイトがあるおかげで自分のサーバーに動画をアップしなくても良くなったので管理だったり容量的にもかなり助かってます。個人のサイトでもニコニコ動画みたいにコメントが動画に付けれれば楽しいかも。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/290/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

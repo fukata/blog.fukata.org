@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ショートカット &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 09 Sep 2017 06:03:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Mac標準のスクリーンショットで特定のウィンドウだけを指定する方法</title>
+		<link>/archives/8874/</link>
+					<comments>/archives/8874/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2017 05:49:58 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<category><![CDATA[スクリーンショット]]></category>
+		<guid isPermaLink="false">/?p=8874</guid>
+
+					<description><![CDATA[誰かに画面をシェアする際に適当に範囲選択してスクリーンショットを取っていたけど特定のウィンドウだけを指定する方法を最近知ったのでメモ。 広告 Mac標準のスクリーンショットのショートカットは下記の通り ... <a href="/archives/8874/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8874/"><img src="https://farm5.staticflickr.com/4406/36719048610_fecef1d3e4_c.jpg" alt="Screenshot only Active Window" class="aligncenter"/></a></p>
+<p>誰かに画面をシェアする際に適当に範囲選択してスクリーンショットを取っていたけど特定のウィンドウだけを指定する方法を最近知ったのでメモ。</p>
+<p><span id="more-8874"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>Mac標準のスクリーンショットのショートカットは下記の通り。</p>
+<ul>
+<li>全画面: Shift + Command + 3</li>
+<li>範囲選択: Shfit + Command + 4</li>
+<li>特定のウィンドウのみ:
+<ol>
+<li>Shift + Command + 4</li>
+<li>Space</li>
+<li>スクリーンショットしたいウィンドウにカーソルを合わせクリック</li>
+</ol>
+</li>
+</ul>
+<p>範囲選択モードにした後にスペースを押すとカーソルがカメラマークになり、対象のウィンドウが分かるようになる。その状態でクリックをするとそのウィンドウだけのスクリーンショットを保存することが出来るようになる。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8874/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4406/36719048610_fecef1d3e4.jpg</image>
+	</item>
+		<item>
+		<title>BetterTouchToolを使ってキーボードショートカットでマウスカーソルをモニタ間で移動させる設定</title>
+		<link>/archives/8868/</link>
+					<comments>/archives/8868/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2017 04:51:49 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BetterTouchTool]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<guid isPermaLink="false">/?p=8868</guid>
+
+					<description><![CDATA[モニタが余っていたのでトリプルディスプレイにしてみたけど、マウスカーソルの移動が大変な場面があるのでBetterTouchToolを使って瞬時にカーソルを移動させてみた。 広告 「Move Mouse ... <a href="/archives/8868/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4399/36302210293_e23ea231a0_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>モニタが余っていたのでトリプルディスプレイにしてみたけど、マウスカーソルの移動が大変な場面があるのでBetterTouchToolを使って瞬時にカーソルを移動させてみた。</p>
+<p><span id="more-8868"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>「Move Mouse To Position」というアクションがあるのでそれで移動させたい位置を指定すれば完了。</p>
+<p>具体的な設定手順は下記の通り。</p>
+<ol>
+<li>Add New Shortcut or Key Sequence</li>
+<li>Shortcutを設定して、任意のキーを入力。今回は Shift + Control + 1(2,3) に設定</li>
+<li>Trigger Predefined Actionに「Other Mouse Actions」-> 「Move Mouse To Position」</li>
+<li>移動させたい任意の位置を指定</li>
+</ol>
+<p><a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4399/36302210293_e23ea231a0_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>一番右にMBP15inch(3が一番右)を置いて左に2つフルHDのモニタを置いた状態の設定。<br />
+<a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4388/37114952655_940a545454_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>これで、左のモニタから右に移動させたい時にもショートカットですぐに移動できる。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8868/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4399/36302210293_e23ea231a0.jpg</image>
+	</item>
+		<item>
+		<title>Mac版Eclipseで頻繁に使用するキーボードショートカット一覧 &#8211; Java編</title>
+		<link>/archives/6720/</link>
+					<comments>/archives/6720/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 28 Dec 2011 00:37:43 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Eclipse]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<guid isPermaLink="false">http://fukata.org/2011/12/28/useful-mac-eclipse-keyboard-shortcut-java/</guid>
+
+					<description><![CDATA[以前、Eclipseで頻繁に使用するキーボードショートカット一覧 – Java編で、WindowsでのEclipseのショートカット一覧を書きましたが、最近Mac版Eclipseで開発することが多いの ... <a href="/archives/6720/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前、<a href="https://fukata.org/2010/05/30/useful-eclipse-keyboard-shortcut-java/">Eclipseで頻繁に使用するキーボードショートカット一覧 – Java編</a>で、WindowsでのEclipseのショートカット一覧を書きましたが、最近Mac版Eclipseで開発することが多いので、Mac版Eclipseでのショートカットを載せておきたいと思います。</p>
+<h2>入力系</h2>
+<ul>
+<li><strong>Ctrl+Space</strong>：Content Assist &#8211; コンテンツアシスト</li>
+<li><strong>Command+/</strong>：Toggle Comment &#8211; １行コメントの有効・無効（複数行の範囲指定可）</li>
+<li><strong>Command+D</strong>：Delete Line &#8211; １行削除（複数行の範囲指定可）</li>
+<li><strong>Command+1</strong>：Quick Fix &#8211; カーソル位置のエラー等の解決方法を表示</li>
+<li><strong>Alt+Command+R</strong>：Rename &#8211; クラス名、変数名等のリネーム</li>
+<li><strong>Alt+Up[Down]</strong>：Move Lines Up[Down] &#8211; カーソル行を上[下]に移動（複数行の範囲指定可）</li>
+<li><strong>Command+Alt+Up[Down]</strong>：Duplicate Lines[Copy Lines]カーソル行を上[下]にコピー（複数行の範囲指定可）</li>
+<li><strong>Command+Shift+F</strong>：Format &#8211; コードのフォーマット（フォーマット対象の範囲指定可）</li>
+<li><strong>Command+Shift+O</strong>：Organize Imports &#8211; import文の整理</li>
+</ul>
+<h2>検索系</h2>
+<ul>
+<li><strong>Command+F</strong>：Find and Replace &#8211; ファイル内検索・置換</li>
+<li><strong>Command+J</strong>：Incremental Find &#8211; インクリメンタル検索</li>
+<li><strong>Command+O</strong>：Quick Outline &#8211; カーソル位置のクラスのメソッド一覧を表示</li>
+<li><strong>Command[+Shift]+K</strong>：Find Next[Previous] &#8211; 範囲指定語句の後方[前方]移動</li>
+<li><strong>Next[+Shift]+.</strong>：Next[Previous] &#8211; エラー等の後方[前方]移動</li>
+<li><strong>Shift+F2</strong>：Open External Javadoc &#8211; カーソル位置のクラス、インタフェース等のJavaDocへ移動</li>
+<li><strong>F3</strong>：Open Declaration &#8211; カーソル位置のクラス、インタフェース、変数等の宣言場所へ移動</li>
+<li><strong>Command+Shift+P</strong>：Go to Matching Backlet &#8211; 対応する括弧へ移動</li>
+<li><strong>F4</strong>：Open Type Hierarchy &#8211; カーソル位置のクラスの継承関係を表示</li>
+<li><strong>Command+T</strong>：Quick Hierarchy &#8211; カーソル位置のクラスの継承関係を表示</li>
+<li><strong>Command+Shift+R</strong>：Open Resource &#8211; リソース検索</li>
+<li><strong>Command+Shift+T</strong>：Open Type &#8211; クラス、インタフェース等の検索</li>
+<li><strong>Ctrl+Alt+H</strong>：Open Call Hierarchy &#8211; メソッド等の使用箇所を表示</li>
+</ul>
+<h2>その他</h2>
+<ul>
+<li><strong>Command+F8</strong>：Next Perspective &#8211; 次のパースペクティブを表示</li>
+<li><strong>Shift+Alt+X</strong>：Run As &#8211; 実行形式を選択</li>
+<li><strong>Shift+Alt+D</strong>：Debug As &#8211; デバッグ形式を選択</li>
+<li><strong>Ctrl+PageUp[PageDown]</strong>：Next[Previous] Tabタブの切り替え</li>
+<li><strong>Command+Shift+L</strong>：Show Key Assist &#8211; ショートカット一覧表示</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6720/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]Gmailショートカット一覧</title>
+		<link>/archives/5197/</link>
+					<comments>/archives/5197/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 30 Jan 2011 22:35:31 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[gmail]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5197</guid>
+
+					<description><![CDATA[先日、DROID PROで何気なくgmailを触っていると何かのキーを押したのか、inboxから返信画面へ遷移した。 ん？と思い、WEB版のショートカットである、「R」を押すとやはり返信画面へ遷移する ... <a href="/archives/5197/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日、DROID PROで何気なくgmailを触っていると何かのキーを押したのか、inboxから返信画面へ遷移した。</p>
+<p>ん？と思い、WEB版のショートカットである、「R」を押すとやはり返信画面へ遷移する。</p>
+<p>ということで、Android版、gmailアプリのショートカット一覧をメモとして残しておきます。多少、窮屈にはなるけど十字キーを付けるべきだと思いました。DROID PRO以外でも動作するのかは手元に別の端末がないので分かりません。</p>
+<p><span id="more-5197"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<table>
+<tr>
+<th>ショートカット</th>
+<th>内容</th>
+</tr>
+<tr>
+<th>R</th>
+<td>返信</td>
+</tr>
+<tr>
+<th>A</th>
+<td>全員に返信</td>
+</tr>
+<tr>
+<th>C</th>
+<td>メール作成</td>
+</tr>
+<tr>
+<th>F</th>
+<td>転送</td>
+</tr>
+<tr>
+<th>M</th>
+<td>ミュート</td>
+</tr>
+<tr>
+<th>J</th>
+<td>前のスレッド</td>
+</tr>
+<tr>
+<th>K</th>
+<td>次のスレッド</td>
+</tr>
+<tr>
+<th>Menu + S</th>
+<td>スター</td>
+</tr>
+<tr>
+<th>Y(E)</th>
+<td>アーカイブ</td>
+</tr>
+<tr>
+<th>L</th>
+<td>ラベル移動</td>
+</tr>
+<tr>
+<th>V</th>
+<td>ラベル付与</td>
+</tr>
+</table>
+<p>スターはなんで「S」ではなく「Menu + S」なんだろう。WEB版と合わせてくれた方が学習コストが低くて助かるのに。何か他のもので使われてましたっけ？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5197/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Eclipseで頻繁に使用するキーボードショートカット一覧 &#8211; Java編</title>
+		<link>/archives/4482/</link>
+					<comments>/archives/4482/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 30 May 2010 12:51:18 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Eclipse]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4482</guid>
+
+					<description><![CDATA[Mac版Eclipseのショートカットはこちらになります。 Javaはもちろんのこと、最近ではPHPやPython、Rubyなどでも利用することが多くなった統合開発環境のEclipseですが、普通に使 ... <a href="/archives/4482/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Mac版Eclipseのショートカットは<a href="https://fukata.org/2011/12/28/useful-mac-eclipse-keyboard-shortcut-java/">こちら</a>になります。</p>
+<p>Javaはもちろんのこと、最近ではPHPやPython、Rubyなどでも利用することが多くなった統合開発環境のEclipseですが、普通に使用していたのでは、ただのテキストエディタとあまり変わりません。</p>
+<p>タッチタイピングは前提として、キーボードショートカットを多用すれば良いのです。</p>
+<h2>入力系</h2>
+<ul>
+<li><strong>Ctrl+Space</strong>：Content Assist &#8211; コンテンツアシスト</li>
+<li><strong>Ctrl+/</strong>：Toggle Comment &#8211; １行コメントの有効・無効（複数行の範囲指定可）</li>
+<li><strong>Ctrl+D</strong>：Delete Line &#8211; １行削除（複数行の範囲指定可）</li>
+<li><strong>Ctrl+1</strong>：Quick Fix &#8211; カーソル位置のエラー等の解決方法を表示</li>
+<li><strong>Alt+Shift+R</strong>：Rename &#8211; クラス名、変数名等のリネーム</li>
+<li><strong>Alt+Up[Down]</strong>：Move Lines Up[Down] &#8211; カーソル行を上[下]に移動（複数行の範囲指定可）</li>
+<li><strong>Ctrl+Alt+Up[Down]</strong>：Duplicate Lines[Copy Lines]カーソル行を上[下]にコピー（複数行の範囲指定可）</li>
+<li><strong>Ctrl+Shift+F</strong>：Format &#8211; コードのフォーマット（フォーマット対象の範囲指定可）</li>
+<li><strong>Ctrl+Shift+O</strong>：Organize Imports &#8211; import文の整理</li>
+</ul>
+<h2>検索系</h2>
+<ul>
+<li><strong>Ctrl+F</strong>：Find and Replace &#8211; ファイル内検索・置換</li>
+<li><strong>Ctrl+J</strong>：Incremental Find &#8211; インクリメンタル検索</li>
+<li><strong>Ctrl+O</strong>：Quick Outline &#8211; カーソル位置のクラスのメソッド一覧を表示</li>
+<li><strong>Ctrl[+Shift]+K</strong>：Find Next[Previous] &#8211; 範囲指定語句の後方[前方]移動</li>
+<li><strong>Ctrl+.[,]</strong>：Next[Previous] &#8211; エラー等の後方[前方]移動</li>
+<li><strong>Shift+F2</strong>：Open External Javadoc &#8211; カーソル位置のクラス、インタフェース等のJavaDocへ移動</li>
+<li><strong>F3</strong>：Open Declaration &#8211; カーソル位置のクラス、インタフェース、変数等の宣言場所へ移動</li>
+<li><strong>Ctrl+Shift+P</strong>：Go to Matching Backlet &#8211; 対応する括弧へ移動</li>
+<li><strong>F4</strong>：Open Type Hierarchy &#8211; カーソル位置のクラスの継承関係を表示</li>
+<li><strong>Ctrl+T</strong>：Quick Hierarchy &#8211; カーソル位置のクラスの継承関係を表示</li>
+<li><strong>Ctrl+Shift+R</strong>：Open Resource &#8211; リソース検索</li>
+<li><strong>Ctrl+Shift+T</strong>：Open Type &#8211; クラス、インタフェース等の検索</li>
+<li><strong>Ctrl+Alt+H</strong>：Open Call Hierarchy &#8211; メソッド等の使用箇所を表示</li>
+</ul>
+<h2>その他</h2>
+<ul>
+<li><strong>Ctrl+F8</strong>：Next Perspective &#8211; 次のパースペクティブを表示</li>
+<li><strong>Shift+Alt+X</strong>：Run As &#8211; 実行形式を選択</li>
+<li><strong>Shift+Alt+D</strong>：Debug As &#8211; デバッグ形式を選択</li>
+<li><strong>Ctrl+PageUp[PageDown]</strong>：Next[Previous] Tabタブの切り替え</li>
+<li><strong>Ctrl+Shift+L</strong>：Show Key Assist &#8211; ショートカット一覧表示</li>
+</ul>
+<p>上記は個人的に頻繁に使用しているWindows版Eclipseのキーボードショートカットですが、これだけでもマスターして使えばかなり効率化されます。Javaコードに対する固有のショートカットなども含まれていると思います。MacOX版については実行環境がないので分かりませんが、Windows版とLinux版でデフォルトのショートカットが若干違うようです。（ファイル保存やコピー＆ペーストなどの基本的なショートカットは省略しています。）</p>
+<p>Eclipseを使う場合にはプログラムを左側から順に入力するのではなく、これらのキーボードショートカットを活用し極力タイピング量を減らすことでさらに効率良くなります。</p>
+<p>また、マウスを利用するよりもキーボードメインにした方が手を常にキーボードに置くことができるので無駄な動作が減ります。どうしてもマウスを使わないといけない場合でも、Thinkpadなどのトラックポインタ付きキーボードを使えば極力キーボードから手を離さなくて良いのでコーディングに向いていると言えるでしょう。個人的にかもしれませんが、日本語配列よりも英語配列の方がコーディング時に使用頻度の高い記号（波括弧や丸括弧など）が使い易い配置になっているので、個人的には英語配列を好んで使用しています。</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=FFFFFF&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;m=amazon&#038;f=ifr&#038;md=1X69VDGQCMF7Z30FM082&#038;asins=B002NSDWPM" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+<p>USBタイプのキーボードであればこちらがオススメです。</p>
+<p>次回はこれらのキーボードショートカットを実際に使用して、効率良くJavaコーディングする方法を書きたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4482/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

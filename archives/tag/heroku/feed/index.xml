@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Heroku &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/heroku/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[LT]Clojure on Heroku 〜Hello World〜</title>
+		<link>/archives/6445/</link>
+					<comments>/archives/6445/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 04 Nov 2011 12:24:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Heroku]]></category>
+		<category><![CDATA[LT]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6445</guid>
+
+					<description><![CDATA[社内勉強会で「Clojure on Heroku」をやりました。 下記、スライドです。 Clojure on Heroku スライド置き場が欲しいです。 なんで、Clojure on Herokuなの ... <a href="/archives/6445/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>社内勉強会で「Clojure on Heroku」をやりました。</p>
+<p>下記、スライドです。</p>
+<p><a href="https://dl.dropbox.com/u/2020396/presen/clojure_on_heroku/index.html">Clojure on Heroku</a></p>
+<p>スライド置き場が欲しいです。</p>
+<p>なんで、Clojure on Herokuなのかというと、最近ちょうどClojure使ってWEBアプリ作ってるからですね。まだまだ、Clojureの基礎も分かっていませんが、他言語にないイディオムが多くて日々新鮮な気持ちでプログラミング出来ています。</p>
+<p>そうえいば、こういうスライドを使って何かを発表するというのは、社会人になって初めてだったかもしれない。LTの場数も踏みたい。</p>
+<p><span id="more-6445"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>勉強会の反省点を少し。</p>
+<p>持ち時間は一人１５分程度でスライド数が28だったので、1枚30秒程度で話す予定だったのですが、慣れていないのも相まって思いっきりオーバーして25分弱話してました。</p>
+<p>質疑応答が5分だとして、LT10分である程度きちんと話す事を考えるとスライドの枚数は10枚程度かなと感じています。この辺は場数を踏めば経験的に分かってくるのかな（分かってきてほしい）</p>
+<p>ということで、次があれば10枚程度でやりたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6445/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>HerokuでClojure(Compojure)を動かすまで</title>
+		<link>/archives/6150/</link>
+					<comments>/archives/6150/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 25 Sep 2011 06:51:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[Heroku]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6150</guid>
+
+					<description><![CDATA[最近、あるアプリを作るためにHeroku上でClojureを動かしてみました。 その際参考にしたサイトは下記です。 HerokuでClojure(Compojure)を使う &#8211; komag ... <a href="/archives/6150/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、あるアプリを作るためにHeroku上でClojureを動かしてみました。</p>
+<p>その際参考にしたサイトは下記です。</p>
+<ul>
+<li><a href="https://docs.komagata.org/4816">HerokuでClojure(Compojure)を使う &#8211; komagata</a></li>
+<li><a href="https://devcenter.heroku.com/articles/clojure">Heroku | Dev Center | Getting Started With Clojure on Heroku/Cedar</a></li>
+</ul>
+<p>で、いつものようにまともに説明を読まずにやっていたらherokuにpushして、heroku psコマンドでプロセスを確認したところ一向に立ち上がっていませんでした。で、もう一度公式の手順を一から順に観てるとProcfileを作成していないことに気づき、Procfileを作成し、pushしたところ、正常にプロセスが立ち上がりました。</p>
+<p>たいてい動かない時というのは、自分が手順をすっぽかしてる事が多いですね・・・気を付けないと。</p>
+<p><a href="https://devcenter.heroku.com/articles/procfile">Heroku | Dev Center | Declaring and Scaling Process Types with Procfile</a></p>
+<p>一応今のところ、Clojure(Compojure) + MongoDBという構成（テンプレートエンジンは模索中）で作ろうかと思っているので、また何かあったら書こうかと思います。それにしてもherokuコマンドだけでも色々なことができるんですね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6150/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

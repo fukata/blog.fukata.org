@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: (途中メモ)fluentdのout_exec_filterがうまく動作しない	</title>
+	<atom:link href="/archives/7159/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/7159/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7159/comment-page-1/#comment-842</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Thu, 18 Apr 2013 08:41:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7159#comment-842</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7159/comment-page-1/#comment-841&quot;&gt;Takashi Kaneda&lt;/a&gt;.
+
+コメントありがとうございます。
+バッファリングの時間を調整して再度試してみたいと思います。
+
+
+このブログを書いてからすっかり忘れていたので、
+コメントもらってから思い出しました^^;]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7159/comment-page-1/#comment-841">Takashi Kaneda</a>.</p>
+<p>コメントありがとうございます。<br />
+バッファリングの時間を調整して再度試してみたいと思います。</p>
+<p>このブログを書いてからすっかり忘れていたので、<br />
+コメントもらってから思い出しました^^;</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Takashi Kaneda		</title>
+		<link>/archives/7159/comment-page-1/#comment-841</link>
+
+		<dc:creator><![CDATA[Takashi Kaneda]]></dc:creator>
+		<pubDate>Thu, 18 Apr 2013 08:23:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7159#comment-841</guid>
+
+					<description><![CDATA[自分も同じところで引っかかっていたのですが、おそらくbufferingされているため全ての値が出てこないのだと思います。]]></description>
+			<content:encoded><![CDATA[<p>自分も同じところで引っかかっていたのですが、おそらくbufferingされているため全ての値が出てこないのだと思います。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

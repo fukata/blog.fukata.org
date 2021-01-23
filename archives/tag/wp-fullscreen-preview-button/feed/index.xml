@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>wp-fullscreen-preview-button &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/wp-fullscreen-preview-button/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[WordPress]wp-fullscreen-preview-buttonのバージョン0.1.1をリリース</title>
+		<link>/archives/6666/</link>
+					<comments>/archives/6666/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 05 Dec 2011 00:16:01 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-fullscreen-preview-button]]></category>
+		<guid isPermaLink="false">http://fukata.org/2011/12/05/release-wp-fullscreen-preview-button-0-1/</guid>
+
+					<description><![CDATA[フルスクリーン編集モード時にもプレビュー表示ボタンを表示するためのプラグイン、wp-fullscreen-preview-buttonのバージョン0.1.1をリリースしました。 0.1.0からの変更点 ... <a href="/archives/6666/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>フルスクリーン編集モード時にもプレビュー表示ボタンを表示するためのプラグイン、<a href="https://fukata.org/dev/wp-plugin/wp-fullscreen-preview-button/">wp-fullscreen-preview-button</a>のバージョン0.1.1をリリースしました。</p>
+<h2>0.1.0からの変更点</h2>
+<ul>
+<li>国際化に対応</li>
+</ul>
+<p><span id="more-6666"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>国際化に対応</h3>
+<p>対応しているのが英語のみだったので、日本語やその他の多言語にも対応してみました。というのも、元々のページにあるプレビューボタンの文字列を表示するようにしてみただけです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6666/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[WordPress]wp-fullscreen-preview-buttonのバージョン0.1.0をリリース</title>
+		<link>/archives/6660/</link>
+					<comments>/archives/6660/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 04 Dec 2011 15:28:31 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-fullscreen-preview-button]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6660</guid>
+
+					<description><![CDATA[フルスクリーン編集モード時にもプレビュー表示ボタンを表示するためのプラグイン、wp-fullscreen-preview-buttonのバージョン0.1.0をリリースしました。 もしかしたら、既に同じ ... <a href="/archives/6660/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>フルスクリーン編集モード時にもプレビュー表示ボタンを表示するためのプラグイン、<a href="https://fukata.org/dev/wp-plugin/wp-fullscreen-preview-button/">wp-fullscreen-preview-button</a>のバージョン0.1.0をリリースしました。</p>
+<p>もしかしたら、既に同じようなプラグインが存在するのかもしれませんが、簡単に作れそうだったので作っちゃいました。</p>
+<p>個人的には長めの文章を書くことがあり、フルスクリーンモードで書くことがあったので、ある程度書いたところでプレビューを見たいと思い、プレビューボタンを探しても無く、結局一度フルスクリーンモードを閉じて、通常のプレビューボタンを押すような事をしていました。</p>
+<p>「あ、フルスクリーンモード時にはプレビューボタン表示されないのか」とそのたびに思い、フルスクリーンモードを解除していて・・・というのを繰り返しているのが、とてもめんどくさかったので勢いで作っちゃいました。</p>
+<p>ちなみに、誰か作ってないかなと検索してみたところ、同じようにプレビューボタン無いの？って言っている人がいました。（きっと他にも同じように思っている人も多いはず）</p>
+<p><a href="https://wordpress.org/support/topic/preview-button-on-the-fullscreen-page?replies=2">WordPress › Support » Preview Button on the Fullscreen Page?</a></p>
+<p>フルスクリーンモード時の保存ボタンのところにプラグインからボタンを追加するようなアクションが定義されていなかったので、今のところは無理矢理JSで挿入しています。</p>
+<p>また、今のところは国際化（英語のみ）は対応していません。</p>
+<p>同じように感じている人がいましたら使ってみてください。</p>
+<p>プラグインではなく、WordPressの標準機能として実装してくれる事を望みます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6660/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

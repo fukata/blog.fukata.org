@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [アクセスレポート]2009-01-01 〜 2009-12-31	</title>
+	<atom:link href="/archives/2030/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/2030/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:49:01 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: tatsuya		</title>
+		<link>/archives/2030/comment-page-1/#comment-595</link>
+
+		<dc:creator><![CDATA[tatsuya]]></dc:creator>
+		<pubDate>Mon, 04 Jan 2010 17:12:42 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=2030#comment-595</guid>
+
+					<description><![CDATA[&gt;&gt; tsukasa-reaさん
+
+明けましておめでとうございます。
+こちらこそ、今年もよろしくお願いします。
+この記事は、自動的に投稿されるんですよ＾＾；
+そういえば、年初めの記事をまだ書いてないですね。
+明日にでも書きたいと思います。]]></description>
+			<content:encoded><![CDATA[<p>>> tsukasa-reaさん</p>
+<p>明けましておめでとうございます。<br />
+こちらこそ、今年もよろしくお願いします。<br />
+この記事は、自動的に投稿されるんですよ＾＾；<br />
+そういえば、年初めの記事をまだ書いてないですね。<br />
+明日にでも書きたいと思います。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: tukasa-rea		</title>
+		<link>/archives/2030/comment-page-1/#comment-594</link>
+
+		<dc:creator><![CDATA[tukasa-rea]]></dc:creator>
+		<pubDate>Mon, 04 Jan 2010 11:34:55 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=2030#comment-594</guid>
+
+					<description><![CDATA[明けましておめでとう！
+今年も宜しくね。
+元旦からアクセス解析かいっ！（笑）]]></description>
+			<content:encoded><![CDATA[<p>明けましておめでとう！<br />
+今年も宜しくね。<br />
+元旦からアクセス解析かいっ！（笑）</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>アプリ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%A2%E3%83%97%E3%83%AA/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 22 Jun 2015 19:10:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>一発で通貨毎のレートが把握できるAndroid, iPhoneアプリ</title>
+		<link>/archives/361/</link>
+					<comments>/archives/361/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 22 Jun 2015 19:10:19 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[アプリ]]></category>
+		<guid isPermaLink="false">http://travel.fukata.org/?p=361</guid>
+
+					<description><![CDATA[色んな国に旅行や仕事で行ってるとその国での通貨レートが他の国の通貨ではいくらなのか知りたくなる時がある。そんな時、一覧で見れるアプリがあるとすごい便利でよく使っているアプリをメモ代わりに残しておきます ... <a href="/archives/361/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/14900480207" title="P8311854"><img src="https://farm4.staticflickr.com/3925/14900480207_20229f1eb3_z.jpg" alt="P8311854" class="aligncenter" /></a></p>
+<p>色んな国に旅行や仕事で行ってるとその国での通貨レートが他の国の通貨ではいくらなのか知りたくなる時がある。そんな時、一覧で見れるアプリがあるとすごい便利でよく使っているアプリをメモ代わりに残しておきます。</p>
+<p><span id="more-361"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://itunes.apple.com/us/app/currency-lite/id411146507?mt=8" title="Currency Lite on the App Store on iTunes">Currency Lite</a><br />
+<a href="https://www.flickr.com/photos/fukata/18874488660" title="Currency Lite"><img src="https://farm1.staticflickr.com/429/18874488660_3064695002_z.jpg" alt="Currency Lite" class="aligncenter" /></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=net.xelnaga.exchanger" title="為替レート - Google Play の Android アプリ">Exchange Rates</a><br />
+<a href="https://www.flickr.com/photos/fukata/18875754399" title="Exchange Rates"><img src="https://farm1.staticflickr.com/525/18875754399_8d3c096502_z.jpg" alt="Exchange Rates" class="aligncenter" /></a></p>
+<p>Exchange RatesはDonate版を使えば広告が消えてくれるのでそっちを使っている。やっぱり広告はうざい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/361/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm4.staticflickr.com/3925/14900480207_20229f1eb3.jpg</image>
+	</item>
+	</channel>
+</rss>

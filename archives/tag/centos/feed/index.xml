@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CentOS &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/centos/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CentOS6.3にSueprvisord 3系をインストールしてみた</title>
+		<link>/archives/7248/</link>
+					<comments>/archives/7248/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 09 Oct 2012 02:14:26 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CentOS]]></category>
+		<category><![CDATA[rpmbuild]]></category>
+		<category><![CDATA[supervisord]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7248</guid>
+
+					<description><![CDATA[CentOS6.3にyumでsupervisordを入れると2.1.8が入りますが、どうも2系のsupervisorctlの挙動が怪しく、stopやstartをしてもプロセスは実際に停止や起動されてい ... <a href="/archives/7248/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CentOS6.3にyumでsupervisordを入れると2.1.8が入りますが、どうも2系のsupervisorctlの挙動が怪しく、stopやstartをしてもプロセスは実際に停止や起動されているのにコマンドが終わらなかったりというのがあったのと、3.0から加わった設定ファルの分割機能が使いたかったので、rpmをrebuildしてインストールしてみました。</p>
+<p><span id="more-7248"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>コマンドとしてはこれだけです。</p>
+<pre lang="bash">
+wget ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/linux/updates/14/SRPMS/supervisor-3.0-0.5.a10.fc14.src.rpm
+rpmbuild --rebuild supervisor-3.0-0.5.a10.fc14.src.rpm
+yum localinstall /root/rpmbuild/RPMS/noarch/supervisor-3.0-0.5.a10.el6.noarch.rpm
+
+/etc/init.d/supervisor start
+supervisorctl status
+</pre>
+<h3>参考サイト</h3>
+<ul>
+<li><a href="https://www.g-loaded.eu/2011/05/12/running-supervisor-3-on-centos-5/" title="Running supervisor 3 on CentOS 5" target="_blank">Running supervisor 3 on CentOS 5</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7248/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>CentOSでのsmbmountについて</title>
+		<link>/archives/1159/</link>
+					<comments>/archives/1159/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 May 2009 17:47:43 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CentOS]]></category>
+		<category><![CDATA[mount]]></category>
+		<category><![CDATA[samba]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1159</guid>
+
+					<description><![CDATA[どうやら、CentOS5からはsmbfsがないため、smbmountが使えない。どうやって、自宅のsambaファイルサーバをマウントしようかと思って、ぐぐったら代替策がありました。 以下のコマンドで無 ... <a href="/archives/1159/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>どうやら、CentOS5からはsmbfsがないため、smbmountが使えない。どうやって、自宅のsambaファイルサーバをマウントしようかと思って、ぐぐったら代替策がありました。</p>
+<p>以下のコマンドで無事マウントすることが出来ました。</p>
+<pre lang="Bash">
+mount -t cifs //192.168.11.8/files /home/vmadmin/fileserver/ -o user=samba,password=******,iocharset=utf8,uid=vmadmin,gid=vmadmin
+</pre>
+<p>変わったのは、マウントするファイルシステムのタイプとしてsmbfsではなく、<strong>cifs</strong>を指定するということ。また、単純にrootユーザでマウントするとnobodyユーザ権限になってしまっていたので、uidとgidでマウント後の権限を指定しています。</p>
+<p>■参考サイト</p>
+<li>
+<ul><a href="https://kamoland.com/wiki/wiki.cgi?WebDAV%A4%C7Windows%A5%D5%A5%A1%A5%A4%A5%EB%A5%B5%A1%BC%A5%D0%A4%F2%A5%DE%A5%A6%A5%F3%A5%C8%B8%F8%B3%AB%A4%B9%A4%EB#i3">https://kamoland.com/wiki/wiki.cgi?WebDAV%A4%C7Windows%A5%D5%A5%A1%A5%A4%A5%EB%A5%B5%A1%BC%A5%D0%A4%F2%A5%DE%A5%A6%A5%F3%A5%C8%B8%F8%B3%AB%A4%B9%A4%EB#i3</a></ul>
+</li>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1159/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

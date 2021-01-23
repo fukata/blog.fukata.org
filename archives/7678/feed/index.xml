@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン1.9.19をリリース	</title>
+	<atom:link href="/archives/7678/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/7678/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:12 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7678/comment-page-1/#comment-890</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Thu, 24 Jul 2014 19:08:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7678#comment-890</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7678/comment-page-1/#comment-889&quot;&gt;ish&lt;/a&gt;.
+
+良かったです！]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7678/comment-page-1/#comment-889">ish</a>.</p>
+<p>良かったです！</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ish		</title>
+		<link>/archives/7678/comment-page-1/#comment-889</link>
+
+		<dc:creator><![CDATA[ish]]></dc:creator>
+		<pubDate>Thu, 24 Jul 2014 16:40:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7678#comment-889</guid>
+
+					<description><![CDATA[早速バージョンアップしたところ、問題なく使えるようになりました！このプラグインが使えるようになったこと、また海外にいてお忙しいところ早速修正していただき、心から感謝します。どうもありがとうございました！]]></description>
+			<content:encoded><![CDATA[<p>早速バージョンアップしたところ、問題なく使えるようになりました！このプラグインが使えるようになったこと、また海外にいてお忙しいところ早速修正していただき、心から感謝します。どうもありがとうございました！</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

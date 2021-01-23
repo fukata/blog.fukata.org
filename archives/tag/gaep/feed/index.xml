@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GAE/P &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/gaep/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[GAE/P]独自のValidationManagerを作ってみました</title>
+		<link>/archives/1887/</link>
+					<comments>/archives/1887/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2009 02:56:35 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[GAE]]></category>
+		<category><![CDATA[GAE/P]]></category>
+		<category><![CDATA[validation]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1887</guid>
+
+					<description><![CDATA[GAEでアプリを作成していて、入力値への検証機構が貧弱だと思ったので、作りました。今回作成したのは、検証情報をyamlに記述し、その検証情報に沿ってモデルのプロパティを走査していくという物です。 検証 ... <a href="/archives/1887/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>GAEでアプリを作成していて、入力値への検証機構が貧弱だと思ったので、作りました。今回作成したのは、検証情報をyamlに記述し、その検証情報に沿ってモデルのプロパティを走査していくという物です。</p>
+<p>検証情報yamlの記述方法、使い方ともにSymfonyのValidationManagerに酷似していると思います。なので、Symfonyを使ったことがある人であれば、なんとなくわかりやすいかもしれません。と言っても、SymfonyのValidationManagerほどまだ細部までエラーチェックなどをしていないので、検証情報yamlの記述によっては、予期しないエラーが発生すると思います。ですので、この辺は、もう少しリファクタリングをしないといけないかと思います。</p>
+<p>Pythonによるリフレクション部分だったりdb.Modelの扱い方がもし間違っていたら是非教えてください。</p>
+<p>今回、関係するソースは下記に載せておきます。</p>
+<p>■検証情報yaml</p>
+<pre lang="YAML" line="1">
+validate:
+  name:
+    - validator: RequiredValidator
+</pre>
+<p>■ValidationManager</p>
+<pre lang="Python" line="1">
+class ValidationManager(object):
+    VALIDATOR_PACKAGES = [
+                          'org.fukata.mapshare.system.utils.validation.common.',
+                          'org.fukata.mapshare.system.utils.validation.extention.',
+                          ]
+    
+    valid = None
+    errors = None
+    
+    def __init__(self,validYaml):
+        self.valid = YamlUtils.load(validYaml)
+        
+    def validate(self,model):
+        # initialize
+        self.errors = Errors()
+        
+        for item in self.valid[config.VALIDATE_KEY]:
+            for validInfo in self.valid[config.VALIDATE_KEY][item]:
+                validator = self._getValidatorInstance(validInfo)
+                # check exists attribute
+                props = model.properties()
+                prop = None
+                if props.has_key(item):
+                    prop = props[item]
+                else:
+                    # don't have a key.
+                    raise BadKeyError("Key %s is don't have property." % item)
+                
+                value = getattr(model, prop._attr_name(), None)
+                try:
+                    validator.validate(value, prop, model)
+                except ValidationError, e:
+                    self.errors.append(prop, e.__str__())
+                
+        return not bool(self.errors)
+    
+    def _getValidatorInstance(self, validInfo):
+
+        clazz = ReflectionUtils.getClazz(validInfo['validator'], self.VALIDATOR_PACKAGES);
+        options = validInfo['options'] if validInfo.has_key('options') else {} 
+        return clazz(options)
+</pre>
+<p>■ValidationError</p>
+<pre lang="Python" line="1">
+class ValidationError(Exception):
+    def __init__(self, value):
+        self.value = value
+        
+    def __str__(self):
+        return self.value
+</pre>
+<p>■BaseValidator</p>
+<pre lang="Python" line="1">
+class BaseValidator(object):
+    options = None
+
+    def __init__(self, options=None):
+        self.options = options
+        
+    def validate(self,value,prop,model):
+        return False
+</pre>
+<p>■RequiredValidator</p>
+<pre lang="Python" line="1">
+class RequiredValidator(BaseValidator):
+    def validate(self,value,prop,model):
+        if value is None:
+            raise ValidationError('Property %s is required' % prop.name)
+
+        if StringUtils.isNone(value):
+            raise ValidationError('Property %s is required' % prop.name)
+        
+        return True
+</pre>
+<p>■BaseModel</p>
+<pre lang="Python" line="1">
+# skip default validation of db.Property
+setattr(db.Property, '__set__', 
+        lambda self, model_instance, value: 
+            setattr(model_instance, self._attr_name(), value))
+
+class BaseModel(db.Model):
+    errors = None
+
+    def __init__(self, *args, **kwds):
+        super(BaseModel, self).__init__(*args, **kwds)
+        self.errors = Errors()
+
+    def validate(self,valid_yaml=None):
+        if valid_yaml is None:
+            for prop in self.properties().values():
+                value = getattr(self, prop._attr_name(), None)
+                try:
+                    value = prop.validate(value)
+                    setattr(self, prop._attr_name(), value)
+                except db.BadValueError, e:
+                    self.errors.append(prop, e.message)
+            return not bool(self.errors)
+        else:
+            manager = ValidationManager(valid_yaml)
+            manager.validate(self)
+            self.errors = manager.errors
+            return not bool(self.errors)
+</pre>
+<p>■Errors</p>
+<pre lang="Python" line="1">
+class Errors(list):
+    '''container of validation errors
+    '''
+    def __init__(self):
+        self.map = dict()
+
+    def append(self, prop, msg=None, error=True):
+        if error:
+            if isinstance(prop, db.Property):
+                super(Errors, self).append(Error(prop, msg))
+                self.map[prop.name] = len(self) - 1
+            elif isinstance(prop, (str, unicode)):
+                super(Errors, self).append(Error(prop, msg))
+                self.map[prop] = len(self) - 1
+            else:
+                super(Errors, self).append(Error(None, prop))
+
+    def clear(self):
+        del self[:]
+    
+    def get(self, index, default=None):
+        return self[index] if index in self else default
+
+    def tostr(self, sep=u"\n", **ops):
+        msgs=list()
+        for error in self:
+            msgs.append(error.tostr(**ops))
+        return sep.join(msgs)
+
+    def __str__(self):
+        return self.tostr()
+
+    def __contains__(self, name):
+        return name in self.map
+    
+    def __getitem__(self, index):
+        if isinstance(index, (str, unicode)):
+            if index not in self.map:
+                raise IndexError(u"'%s' property has not error." % index)
+            index = self.map[index]
+        return super(Errors, self).__getitem__(index)
+</pre>
+<p>■Error</p>
+<pre lang="Python" line="1">
+class Error(object):
+    '''container of validation error
+    '''
+    
+    def __init__(self, prop, msg=None):
+        self.prop = prop
+        self.msg = msg
+
+    def __str__(self):
+        return self.tostr()
+
+    def tostr(self, format=u"%(msg)s"):
+        if isinstance(self.prop, db.Property) and format:
+            name = self.prop.verbose_name or self.prop.name
+            msg = re.sub(' '+name+' ', ' %(name)s ', self.msg)
+            format = format % {
+                            'msg': msg,
+                        }
+            return _(format) % {
+                             'name': _(self.prop.verbose_name) or _(self.prop.name),
+                            }
+        else:
+            return _(self.msg)
+</pre>
+<p>■ReflectionUtils</p>
+<pre lang="Python" line="1">
+class ReflectionUtils(object):
+    BIG_PATTERN = re.compile('[A-Z]')
+    
+    @classmethod
+    def getClazz(cls,className,basePackageList=[]):
+        packageName = cls.generatePackageName(className)
+        
+        clazz = None
+        if len(basePackageList)>0:
+            for basePackage in basePackageList:
+                packageName = basePackage+packageName
+                try:
+                    module = __import__(packageName, globals(), locals(), [className])
+                    clazz = getattr(module, className)
+                except ImportError, e:
+                    continue
+                except AttributeError, e:
+                    continue
+        else:
+            try:
+                module = __import__(packageName, globals(), locals(), [className])
+                clazz = getattr(module, className)
+            except ImportError, e:
+                pass
+            except AttributeError, e:
+                pass
+        
+        if clazz is None:
+            raise AttributeError('%s class is not exists.' % className)
+        
+        return clazz
+        
+    
+    @classmethod
+    def newInstance(cls,className,basePackageList=[]):
+        try:
+            clazz = cls.getClazz(className, basePackageList)
+            instance = clazz()
+        except ImportError, e:
+            pass
+        except AttributeError, e:
+            pass
+        
+        if instance is None:
+            raise AttributeError('%s is not exists.' % className)
+        
+        return instance
+    
+    @classmethod
+    def generatePackageName(cls,className):
+        split = cls.BIG_PATTERN.split(className)
+        findall = cls.BIG_PATTERN.findall(className)
+        
+        str_list = []
+        white=0
+        for i in range(len(split)):
+            if split[i]:
+                head = findall[i-white].lower()
+                str = head+split[i]
+                str_list.append(str)
+            else:
+                white = white+1
+                
+        return '_'.join(str_list)
+</pre>
+<p>■YamlUtils</p>
+<pre lang="Python" line="1">
+class YamlUtils(object):
+    
+    @classmethod
+    def load(cls,path):
+        return yaml.load(cls._get_stream(path))
+    
+    @classmethod
+    def load_all(cls,path):
+        return yaml.load_all(cls._get_stream(path))
+    
+    @classmethod
+    def _get_stream(cls,path):
+        fp = open(path, 'r')
+        stream = fp.read()
+        fp.close()
+        return stream
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1887/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[GAE/P]db.ModelのValidtionを任意のタイミングで行えるように変更</title>
+		<link>/archives/1846/</link>
+					<comments>/archives/1846/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2009 02:06:06 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[db.Model]]></category>
+		<category><![CDATA[GAE]]></category>
+		<category><![CDATA[GAE/P]]></category>
+		<category><![CDATA[validation]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1846</guid>
+
+					<description><![CDATA[GAE の Model の バリデーションの動作を変えてみた &#8211; 幸せプールさんの記事を元に任意のタイミングでvalidationが行えるようにしました。まだ、コードが参照元のソースをコピ ... <a href="/archives/1846/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://d.hatena.ne.jp/hipuri/20091022/1256217975">GAE の Model の バリデーションの動作を変えてみた &#8211; 幸せプール</a>さんの記事を元に任意のタイミングでvalidationが行えるようにしました。まだ、コードが参照元のソースをコピっただけなので、、自分流にカスタマイズをしましたら、ソースを載せたいと思います。</p>
+<p>それにしても、まだ、Pythonのコードをちゃんと理解していないんだなと感じさせられました。あぁ、早く好きなようにカスタマイズできるようになりたいw</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1846/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[GAE/P]国際化に対応してみました　〜その３〜</title>
+		<link>/archives/1834/</link>
+					<comments>/archives/1834/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 04 Nov 2009 15:34:51 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[GAE]]></category>
+		<category><![CDATA[GAE/P]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1834</guid>
+
+					<description><![CDATA[前回に引き続き国際化についてです。 前の記事で書いていた「Environment variable DJANGO_SETTINGS_MODULE is undefined.」のエラーについてですが、あ ... <a href="/archives/1834/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>前回に引き続き国際化についてです。</p>
+<p>前の記事で書いていた「Environment variable DJANGO_SETTINGS_MODULE is undefined.」のエラーについてですが、あの記事を書いた後も何度か発生しており、今日、GAE上にアップしたアプリを動かしていると、一時ページを表示した状態で放置し、改めて操作するとAjax部分の通信で上記のエラーが出ていました。</p>
+<p>それで、色々調べているとimportの順番が問題だったようで、試してみるとエラーが出なくなりました。その修正内容を書いておきたいと思います。</p>
+<p>■編集前</p>
+<pre lang="Python" line="1">
+from django.utils import translation
+from google.appengine.ext import webapp
+from org.fukata.mapshare.system.utils.cookies import Cookies
+import os
+from django.conf import settings
+
+os.environ.__setitem__('DJANGO_SETTINGS_MODULE', 'conf.settings')
+# Force Django to reload settings
+settings._target = None
+</pre>
+<p>■編集後</p>
+<pre lang="Python" line="1">
+import os
+from google.appengine.ext import webapp
+from google.appengine.ext.webapp import template
+from django.utils import translation
+from org.fukata.mapshare.system.utils.cookies import Cookies
+from django.conf import settings
+
+os.environ.__setitem__('DJANGO_SETTINGS_MODULE', 'conf.settings')
+# Force Django to reload settings
+settings._target = None
+</pre>
+<p>全体的に順序も入れ替わってしまっているので分かりにくいと思いますが、</p>
+<pre lang="Python">
+from django.utils import translation
+</pre>
+<p>の前に</p>
+<pre lang="Python">
+from google.appengine.ext import webapp
+from google.appengine.ext.webapp import template
+</pre>
+<p>を読み込むということです。</p>
+<p>また、エラーが出るようでしたら追記したいと思います。これで、最後であってほしい。。。（直接的な原因を調べろよ。。。）</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1834/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[GAE/P]国際化に対応してみました　〜その２〜</title>
+		<link>/archives/1830/</link>
+					<comments>/archives/1830/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 01 Nov 2009 16:24:06 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[GAE]]></category>
+		<category><![CDATA[GAE/P]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1830</guid>
+
+					<description><![CDATA[前の記事でGAE/Pの標準環境にて国際化に対応した際の記事を書いたのですが、実際にGAE上にデプロイして動かしてみると何点かエラーが出たので、追加したいと思います。 ■UnicodeDecodeErr ... <a href="/archives/1830/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>前の記事でGAE/Pの標準環境にて国際化に対応した際の記事を書いたのですが、実際にGAE上にデプロイして動かしてみると何点かエラーが出たので、追加したいと思います。</p>
+<p>■UnicodeDecodeErrorの発生<br />
+実際にアップロードして、.poファイルで日本語が定義しているmsgidが存在するページを開いた際に同様のエラーが発生しました。これは、.poファイルの文字コードが設定されていなかった為に起こったようです。下記が、現在の.poファイルになります。</p>
+<pre lang="PO">
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Tatsuya Fukata <tatsuya .fukata@gmail.com>\n"
+"Report-Msgid-Bugs-To: Tatsuya Fukata </tatsuya><tatsuya .fukata@gmail.com>\n"
+"Language-Team: Japanese\n"
+"Project-Id-Version: MapShare\n"
+
+msgid "Spot"
+msgstr "スポット"
+
+msgid "Spot List"
+msgstr "スポット一覧"
+
+msgid "other"
+msgstr "その他"
+</tatsuya></pre>
+<p>■DJANGO_SETTINGS_MODULEの未設定<br />
+次に、何度かデプロイしている間に上記のようなエラーが発生するようになりました。実際に使われているのは前の記事で作成したクラス「I18NRequestHandler」のファイル内で同様の記述が存在します。直接キーを指定している部分を下記のように修正して、エラーが出なくなりました。</p>
+<pre lang="Python">
+#os.environ['DJANGO_SETTINGS_MODULE'] = 'conf.settings'
+os.environ.__setitem__('DJANGO_SETTINGS_MODULE', 'conf.settings')
+</pre>
+<p>まだ、完全に国際化に対応されていないかもしれませんが、何かエラーが発生したら随時載せていきたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1830/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[GAE/P]国際化に対応してみました　〜その１〜</title>
+		<link>/archives/1823/</link>
+					<comments>/archives/1823/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 01 Nov 2009 13:44:20 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[GAE]]></category>
+		<category><![CDATA[GAE/P]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1823</guid>
+
+					<description><![CDATA[現在、GAE/P環境にて作成しているアプリの国際化を対応してみました。Django-1.0やKayといったFWを使って国際化も対応できるようですが、今更変更するのもだるかったので、標準の環境で対応しま ... <a href="/archives/1823/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、GAE/P環境にて作成しているアプリの国際化を対応してみました。Django-1.0やKayといったFWを使って国際化も対応できるようですが、今更変更するのもだるかったので、標準の環境で対応しました。</p>
+<p>多分、次に作成するなら、標準の環境ではなく、他のFWを試すかもしれません。</p>
+<p>とまぁ、自分のことは置いといて早速、国際化の手順を書いていきたいと思います。まずは、最終的な構成を書きます。</p>
+<pre>
+.
+`-- src
+    |-- app.yaml
+    |-- conf
+    |   |-- locale
+    |   |   |-- en
+    |   |   |   `-- LC_MESSAGES
+    |   |   |       |-- django.mo
+    |   |   |       `-- django.po
+    |   |   `-- ja
+    |   |       `-- LC_MESSAGES
+    |   |           |-- django.mo
+    |   |           `-- django.po
+    |   `-- settings.py
+    `-- org
+        `-- fukata
+            `-- mapshare
+                |-- public
+                |   |-- css
+                |   |-- img
+                |   `-- js
+                `-- system
+                    |-- handler
+                    |   |-- i18NRequestHandler.py
+                    |   |-- pc
+                    |   |   `-- index.py
+                    |   `-- webapi
+                    |-- model
+                    |-- template
+                    |   `-- pc
+                    `-- utils
+                         `-- cookies.py
+</pre>
+<p>今回、国際化の為に新規に追加のは以下のファイル群都なります。</p>
+<ul>
+<li>config/settings.py</li>
+<li>config/locale/*</li>
+<li>org/fukata/mapshare/system/i18NRequestHandler.py</li>
+<li>org/fukata/mapshare/system/utils/cookies.py</li>
+</ul>
+<p>次に各ファイルの内容になります。言語ファイル（.po, .mo）に関しては省きたいと思います。</p>
+<p>■config/settings.py</p>
+<pre lang="Python" line="1">
+ USE_I18N = True
+ 
+ # Valid languages
+ LANGUAGES = (
+     # 'en', 'zh_TW' should match the directories in conf/locale/*
+     ('en', _('English')),
+     ('ja', _('Japanese')),
+     )
+ 
+ # This is a default language
+ LANGUAGE_CODE = 'ja'
+</pre>
+<p>■org/fukata/mapshare/system/i18NRequestHandler.py</p>
+<pre lang="Python" line="1">
+ from django.utils import translation
+ from google.appengine.ext import webapp
+ from org.fukata.mapshare.system.utils.cookies import Cookies
+ import os
+ 
+ os.environ['DJANGO_SETTINGS_MODULE'] = 'conf.settings'
+ from django.conf import settings
+ # Force Django to reload settings
+ settings._target = None
+ 
+ class I18NRequestHandler(webapp.RequestHandler):
+ 
+     def initialize(self, request, response):
+         webapp.RequestHandler.initialize(self, request, response)
+ 
+         self.request.COOKIES = Cookies(self)
+         self.request.META = os.environ
+         self.reset_language()
+ 
+     def reset_language(self):
+ 
+         # Decide the language from Cookies/Headers
+         language = translation.get_language_from_request(self.request)
+         translation.activate(language)
+         self.request.LANGUAGE_CODE = translation.get_language()
+     
+         # Set headers in response
+         self.response.headers['Content-Language'] = translation.get_language()
+ #        translation.deactivate()
+</pre>
+<p>■org/fukata/mapshare/system/utils/cookies.py</p>
+<pre lang="Python" line="1">
+ import UserDict
+ from Cookie import BaseCookie
+ class Cookies(UserDict.DictMixin):
+     def __init__(self, handler, **policy):
+         self.response = handler.response
+         self._in = handler.request.cookies
+         self.policy = policy
+         if 'secure' not in policy and handler.request.environ.get('HTTPS', '').lower() in ['on', 'true']:
+             policy['secure'] = True
+         self._out = {}
+     def __getitem__(self, key):
+         if key in self._out:
+             return self._out[key]
+         if key in self._in:
+             return self._in[key]
+         raise KeyError(key)
+     def __setitem__(self, key, item):
+         self._out[key] = item
+         self.set_cookie(key, item, **self.policy)
+     def __contains__(self, key):
+         return key in self._in or key in self._out
+     def keys(self):
+         return self._in.keys() + self._out.keys()
+     def __delitem__(self, key):
+         if key in self._out:
+             del self._out[key]
+             self.unset_cookie(key)
+         if key in self._in:
+             del self._in[key]
+             p = {}
+             if 'path' in self.policy: p['path'] = self.policy['path']
+             if 'domain' in self.policy: p['domain'] = self.policy['domain']
+             self.delete_cookie(key, **p)
+     #begin WebOb functions
+     def set_cookie(self, key, value='', max_age=None,
+                    path='/', domain=None, secure=None, httponly=False,
+                    version=None, comment=None):
+         """
+         Set (add) a cookie for the response
+         """
+         cookies = BaseCookie()
+         cookies[key] = value
+         for var_name, var_value in [
+             ('max-age', max_age),
+             ('path', path),
+             ('domain', domain),
+             ('secure', secure),
+             ('HttpOnly', httponly),
+             ('version', version),
+             ('comment', comment),
+             ]:
+             if var_value is not None and var_value is not False:
+                 cookies[key][var_name] = str(var_value)
+             if max_age is not None:
+                 cookies[key]['expires'] = max_age
+         header_value = cookies[key].output(header='').lstrip()
+         self.response.headers._headers.append(('Set-Cookie', header_value))
+     def delete_cookie(self, key, path='/', domain=None):
+         """
+         Delete a cookie from the client.  Note that path and domain must match
+         how the cookie was originally set.
+         This sets the cookie to the empty string, and max_age=0 so
+         that it should expire immediately.
+         """
+         self.set_cookie(key, '', path=path, domain=domain,
+                         max_age=0)
+     def unset_cookie(self, key):
+         """
+         Unset a cookie with the given name (remove it from the
+         response).  If there are multiple cookies (e.g., two cookies
+         with the same name and different paths or domains), all such
+         cookies will be deleted.
+         """
+         existing = self.response.headers.get_all('Set-Cookie')
+         if not existing:
+             raise KeyError(
+                 "No cookies at all have been set")
+         del self.response.headers['Set-Cookie']
+         found = False
+         for header in existing:
+             cookies = BaseCookie()
+             cookies.load(header)
+             if key in cookies:
+                 found = True
+                 del cookies[key]
+             header = cookies.output(header='').lstrip()
+             if header:
+                 self.response.headers.add('Set-Cookie', header)
+         if not found:
+             raise KeyError(
+                 "No cookie has been set with the name %r" % key)
+</pre>
+<p>となります。で、通常のハンドラに対して「webapp.RequestHandler」ではなく、「I18NRequestHandler」を継承するようにします。これで、基本的には大丈夫です。テンプレート内で、国際化のタグを使用するには、テンプレートの先頭などで、{% load i18n %}と記述します。これで、国際化用のタグが使えるようになります。</p>
+<p>また、.poファイルに関してですが、sdkにスクリプトが付随しているようですが、自分は下記のように.moファイルを生成しています。まぁ、スクリプトを使った方が便利だと思います^^;</p>
+<pre lang="BASH" line="1">
+msgfmt django.po 
+mv messages.mo  django.mo
+</pre>
+<p>今回使用した、コードに関しては、参考サイトの方にほぼすべてあります。というか、掲載されているコードそのままで動きました。</p>
+<p>■参考サイト</p>
+<ul>
+<li><a href="https://makeyjl.blogspot.com/2009/02/using-djangos-i18n-in-google-app-engine.html">https://makeyjl.blogspot.com/2009/02/using-djangos-i18n-in-google-app-engine.html</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1823/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[GAE/P]必須カラムの登録について</title>
+		<link>/archives/1817/</link>
+					<comments>/archives/1817/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 28 Oct 2009 19:36:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[GAE]]></category>
+		<category><![CDATA[GAE/P]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1817</guid>
+
+					<description><![CDATA[最近、GAE for Pythonでアプリを作っているのですが、必須カラムの値がうまく登録できなかった問題が解決したので、メモとして残しておきたいと思います。 ■A.py class A(db.Mod ... <a href="/archives/1817/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、GAE for Pythonでアプリを作っているのですが、必須カラムの値がうまく登録できなかった問題が解決したので、メモとして残しておきたいと思います。</p>
+<p>■A.py</p>
+<pre lang="Python" line="1">
+class A(db.Model):
+    owner = db.UserProperty(required=True,auto_current_user_add=True)
+</pre>
+<p>■B.py</p>
+<pre lang="Python" line="1">
+class B(db.Model):
+    a = db.ReferenceProperty(required=True,reference_class=A)
+</pre>
+<p>■main.py</p>
+<pre lang="Python" line="1">
+a_key = [エンティティAのKeyを取得]
+a = A.get(a_key)
+# コンストラクタで指定しないと登録時にエラーになります。
+b = B(a=a)
+# 以下のようにフィールドを指定して代入してもエラーとなる。
+b.a = a
+b.put()
+</pre>
+<p>ずっと、後者のようにフィールドを指定して代入していたので、「なんで代入してるのにエラーになるんだ？」という風に思っていて、コンストラクタに指定するというのに気づくのがかなり遅くなってしまいました。</p>
+<p>とりあえず、なんとか登録することもでき、前に進むことができるようになりました。今作っているアプリはjsごりごりのアプリなので、デバッグがいつもに比べ手間がかかります＾＾；しかも、Python自体もまだ勉強し始めてそんなに時間が経っていないのでどういう関数があるのかすら分からない状態で、常にググりながらのコーディングとなっています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1817/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

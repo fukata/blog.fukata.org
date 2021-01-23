@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>amazon &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/amazon/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>写真、300GB強をAmazon Cloud Driveにバックアップしてみた</title>
+		<link>/archives/487/</link>
+					<comments>/archives/487/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 15 Feb 2016 10:01:17 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[プライム・フォト]]></category>
+		<category><![CDATA[プライム会員]]></category>
+		<guid isPermaLink="false">https://camera.fukata.org/?p=487</guid>
+
+					<description><![CDATA[タイのネットワークが遅く、バックアップに思いっきり時間掛かってしまったがやっと終わった。 広告 Prime会員だと写真のバックアップは無料になるということなのでバックアップしてみたところ2014(半年 ... <a href="/archives/487/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/487/"><img src="https://farm2.staticflickr.com/1487/25014748256_7c4cb7d00e_z.jpg" alt="Amazon Cloud Drive" class="aligncenter" /></a></p>
+<p>タイのネットワークが遅く、バックアップに思いっきり時間掛かってしまったがやっと終わった。</p>
+<p><span id="more-487"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>Prime会員だと写真のバックアップは無料になるということなのでバックアップしてみたところ2014(半年分)、2015、2016(1月分のみ)で331GBとなった。</p>
+<p>Lightroomの管理ファイルが254MBあるが5GBまで余裕あるのでこれで無料枠で当分運用できそう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/487/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1487/25014748256_7c4cb7d00e.jpg</image>
+	</item>
+		<item>
+		<title>決定版か！？容量無制限の写真保存サービス「プライム・フォト」</title>
+		<link>/archives/480/</link>
+					<comments>/archives/480/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 21 Jan 2016 04:27:12 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[プライム・フォト]]></category>
+		<category><![CDATA[プライム会員]]></category>
+		<guid isPermaLink="false">https://camera.fukata.org/?p=480</guid>
+
+					<description><![CDATA[現在はAWS S3に写真を保存しているが毎月10USD程度かかっているのでなんとかしたいと思っていたけど良いサービスがなかったがコレは良いかもしれない。 広告 Amazon、容量無制限の写真保存サービ ... <a href="/archives/480/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/480/"><img src="https://farm2.staticflickr.com/1478/24189463781_0afc12418f_z.jpg" alt="P1092791" class="aligncenter" /></a></p>
+<p>現在はAWS S3に写真を保存しているが毎月10USD程度かかっているのでなんとかしたいと思っていたけど良いサービスがなかったがコレは良いかもしれない。</p>
+<p><span id="more-480"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="http://dc.watch.impress.co.jp/docs/news/20160121_740002.html">Amazon、容量無制限の写真保存サービス「プライム・フォト」 &#8211; デジカメ Watch</a></p>
+<p>現在、AWS S3に月単位でzipにまとめたものをアップしていて毎月10USD程度かかっていて年間にすると現在で120USDかかることになる。現在、年間に300GB程度写真を撮っているが今のペースで増え続けると数年後には・・・大変な事になる。コレは早急になんとかしたい。</p>
+<p><a href="http://dc.watch.impress.co.jp/docs/news/20150529_704419.html">GoogleフォトもあったがRAWに対応しておらず</a>あっちは専らスマホで撮った画像の保存用として使っている。確かにGoogleフォトの検索や勝手にタグ付けしてくれる機能は便利だがバックアップ用途としてはいまいち。</p>
+<p>帰ったら早速写真をアップしてみよう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/480/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1478/24189463781_0afc12418f.jpg</image>
+	</item>
+		<item>
+		<title>ClojureからECSにアクセスする「clj-aws-ecs」</title>
+		<link>/archives/6480/</link>
+					<comments>/archives/6480/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 13 Nov 2011 05:48:09 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[ECS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6480</guid>
+
+					<description><![CDATA[making/clj-aws-ecs &#8211; GitHub 今作っているサービスで少し使ってみたので、メモしておきます。 広告 使い方は至って簡単で、 (use 'am.ik.clj-aws- ... <a href="/archives/6480/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/making/clj-aws-ecs">making/clj-aws-ecs &#8211; GitHub</a></p>
+<p>今作っているサービスで少し使ってみたので、メモしておきます。</p>
+<p><span id="more-6480"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>使い方は至って簡単で、</p>
+<pre lang="clojure">
+(use 'am.ik.clj-aws-ecs)
+(def requester (make-requester "ecs.amazonaws.jp" "YOUR-ACCESS-KEY-ID" "YOUR-ACCESS-SECRET-KEY"))
+(item-search-map requester "SearchIndex" "KEYWORD")
+</pre>
+<p><a href="https://www.ajaxtower.jp/ecs/itemsearch/index2.html">商品カテゴリーの指定(SearchIndex) &#8211; 商品検索(ItemSearch) &#8211; Amazon Web サービス</a></p>
+<p>SearchIndex一覧については上記のページに書いています。</p>
+<p><a href="https://clojars.org/am.ik/clj-aws-ecs">clj-aws-ecs | Clojars</a></p>
+<p>clojars.orgにも登録されているので、project.cljに下記のように登録すれば簡単に使えるようになります。</p>
+<pre lang="clojure">
+[am.ik/clj-aws-ecs "0.1.0"]
+</pre>
+<p>ただ、ECSの戻り値がXMLで、<strong>item-search-map</strong>の構造はXMLをそのままMapに変換した構造になっているため、その値を使って何かに利用する時に面倒なので、簡易的ですが、下記のようなコードを書いてXMLベースのMapから値を抜き出す処理を書きました。</p>
+<pre lang="clojure">
+(defn ecs-attr-value
+  ([attrs tag] (ecs-attr-value attrs tag true))
+  ([attrs tag first-only]
+   (if (empty? attrs)
+     nil 
+     (let [attr (first attrs)
+           attr-tag (:tag (first attrs))]
+       (if (= tag attr-tag)
+         (if first-only
+           (first (:content attr))
+           (:content attr))
+         (recur (next attrs) tag first-only))))))
+
+(defn ecs-item-attrs-parse
+  [item attrs]
+  (if (empty? attrs)
+    item
+    (let [attr (first attrs)]
+      (def attr-value
+        (cond
+          (= (:tag attr) :ASIN) {:ASIN (first (:content attr))} 
+          (= (:tag attr) :ItemAttributes) {:Title (ecs-attr-value (:content attr) :Title)} 
+          (= (:tag attr) :SmallImage) {:SmallImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :MediumImage) {:MediumImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :LargeImage) {:LargeImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :DetailPageURL) {:DetailPageURL (first (:content attr))}))
+      (recur (if (nil? attr-value) item (conj item attr-value)) (next attrs)))))
+
+(defn ecs-item-parse [items xml-items] 
+  (if (empty? xml-items)
+    items
+    (recur 
+      (conj items (ecs-item-attrs-parse {} (:content (first xml-items)))) 
+      (next xml-items))))
+
+(defn ecs-item-search [search-index keywords]
+  (ecs-item-parse [] (filter 
+                       #(= :Item (% :tag))
+                       (:content 
+                         (first 
+                           (filter 
+                             #(= :Items (% :tag))
+                             (:content (item-search-map 
+                                         requester 
+                                         search-index 
+                                         keywords 
+                                         {"AssociateTag" "example-22"
+                                          "ResponseGroup" "Medium"}))))))))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6480/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>EC2にブログを移行しました</title>
+		<link>/archives/4815/</link>
+					<comments>/archives/4815/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 19 Oct 2010 20:16:46 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[AWS EC2]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4815</guid>
+
+					<description><![CDATA[中国の壁越え用としてAmazonのEC２(Micro Instance)を使用していたのですが、マシンパワーが余っていたので当サイトを移行してみました。 また、その際、以前言っていた中国国内からアクセ ... <a href="/archives/4815/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>中国の壁越え用としてAmazonのEC２(Micro Instance)を使用していたのですが、マシンパワーが余っていたので当サイトを移行してみました。<br />
+また、その際、以前言っていた中国国内からアクセスされた場合には、FacebookやTwitterなどの表示を切り替えるようにもしました。これで、中国国内からのアクセス時に不要なウィジェットを配信することがなくなったと思います。</p>
+<p>自分は回線の弱い中国にいるので実際にどれくらい早くなったのかいまいちわかりませんが、それでも前より描画が早くなったような気がします。</p>
+<p>これで、自分のサイトが急激に大きくなってもスケーラビリティのあるEC２やその他のサービスを利用することが可能になります。まぁ、当分はMicro Instanceのみで充分だと思いますが＾＾；</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4815/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

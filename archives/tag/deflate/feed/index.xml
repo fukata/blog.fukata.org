@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>deflate &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/deflate/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:03:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[nginx]proxy_cacheでgzip済みコンテンツをキャッシュする</title>
+		<link>/archives/7260/</link>
+					<comments>/archives/7260/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 25 Oct 2012 05:59:06 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[deflate]]></category>
+		<category><![CDATA[gzip]]></category>
+		<category><![CDATA[nginx]]></category>
+		<category><![CDATA[proxy_cache]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7260</guid>
+
+					<description><![CDATA[nginx + proxy_cacheの威力は凄まじく、ほとんどアプリケーションサーバまでアクセスが行かなくなることもあるので、proxy_cacheが使える状況なら非常に有効な手段だと思います。 今 ... <a href="/archives/7260/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>nginx + proxy_cacheの威力は凄まじく、ほとんどアプリケーションサーバまでアクセスが行かなくなることもあるので、proxy_cacheが使える状況なら非常に有効な手段だと思います。</p>
+<p>今回は、proxy_cacheはしているけど、ページの容量が大きく転送量も減らしたいという場合のgzip圧縮の話です。</p>
+<p>リクエスト毎にgzip圧縮の処理が行われてしまっており、リクエスト数が多大になってくるとcpuリソースを食ってしまう可能性があります。どうせgzip圧縮するんだったらそれごとproxy_cacheしちゃえばいいんじゃないかと思い、設定してみたところ正常に動作したので設定を書いておきたいと思います。</p>
+<p><span id="more-7260"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>目指す構成</h2>
+<pre>Internet -> [nginx(LB)] -> [nginx(RPX) -> app]</pre>
+<p>これの、RPXの部分でgzip処理を行い、LBの方ではその内容をproxy cacheして配信時に改めてgzipするのではなく、proxy cacheした内容を返す。</p>
+<p>※[]はサーバの単位</p>
+<h2>nginx.lb.conf</h2>
+<p><script src="https://gist.github.com/3950740.js?file=nginx.lb.conf"></script></p>
+<h2>nginx.rpx.conf</h2>
+<p><script src="https://gist.github.com/3950740.js?file=nginx.rpx.conf"></script></p>
+<p>proxy_cache先にgzip後の容量で保存されているか確認。</p>
+<p>ということで、とりあえず動いたのでメモでした。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7260/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

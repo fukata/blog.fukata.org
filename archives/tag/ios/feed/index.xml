@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>iOS &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ios/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>iPhoneがマウス、キーボードになるMouse Proが便利</title>
+		<link>/archives/7723/</link>
+					<comments>/archives/7723/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 21 Nov 2014 00:37:47 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[App]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[mouse]]></category>
+		<category><![CDATA[Mouse Pro]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7723</guid>
+
+					<description><![CDATA[モニタアームを装着したことによってモニタをベッドの方に向ける事ができるようになり、寝ながらhuluを見る事が多くなりました。今までいつも使っているマウスをベッドで操作していましたが不便なのでワイヤレス ... <a href="/archives/7723/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/15217203474" target="_blank" title="PB210001"><img src="https://farm8.staticflickr.com/7474/15217203474_063b5b1854_c.jpg" alt="PB210001" class="aligncenter"/></a></p>
+<p>モニタアームを装着したことによってモニタをベッドの方に向ける事ができるようになり、寝ながらhuluを見る事が多くなりました。今までいつも使っているマウスをベッドで操作していましたが不便なのでワイヤレスのトラックボール付きキーボードを探していましたがiPhoneをマウス、キーボードとして使えるMouse Proというアプリが用途に合っていて便利だったので書きたいと思います。</p>
+<p><span id="more-7723"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://www.mobilemouse.com/" title="Mobile Mouse Remote &#038; Trackpad for the iPhone, iPod, iPad, and Android">Mobile Mouse Remote &#038; Trackpad for the iPhone, iPod, iPad, and Android</a></p>
+<p>Mouse ProはiPhoneと操作したいパソコンにサーバ用アプリをインストールする必要があるので、上記サイトからサーバ用アプリをパソコンにインストールします。</p>
+<p>サーバ用アプリ。自動起動するようにしています。<br />
+<a href="https://www.flickr.com/photos/fukata/15651792558" target="_blank" title=""><img src="https://farm9.staticflickr.com/8622/15651792558_337eff1c8d_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>次にApp StoreからMouse Proをインストールし、アプリを起動して操作したいパソコンを登録します。</p>
+<p><a href="https://www.flickr.com/photos/fukata/15838748962" target="_blank" title=""><img src="https://farm8.staticflickr.com/7504/15838748962_196ed0f642_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>設定はこんな感じです。KeyBufferをONにしておかないと漢字の変換が正常に反映されません。また、Macユーザの場合はNatureScrollをONにしているとタッチパッドと同じ方向でスクロールできます。</p>
+<p><a href="https://www.flickr.com/photos/fukata/15652052417" target="_blank" title=""><img src="https://farm9.staticflickr.com/8632/15652052417_61ae7f188d_c.jpg" alt="" class="aligncenter"/></a></p>
+<p><a href="https://www.flickr.com/photos/fukata/15835325121" target="_blank" title=""><img src="https://farm8.staticflickr.com/7525/15835325121_86809598c0_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>タッチパッドのみ表示。タッチパッドと同じように2本指でスクロールもできます。<br />
+<a href="https://www.flickr.com/photos/fukata/15838751012" target="_blank" title=""><img src="https://farm9.staticflickr.com/8656/15838751012_a46cc19fb4_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>キーボード<br />
+<a href="https://www.flickr.com/photos/fukata/15217210984" target="_blank" title=""><img src="https://farm9.staticflickr.com/8642/15217210984_0e1d1b8325_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>対応していればアプリ特有のショートカットが使えます。<br />
+<a href="https://www.flickr.com/photos/fukata/15217767173" target="_blank" title=""><img src="https://farm8.staticflickr.com/7488/15217767173_d517cac36e_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>それ以外はDockが表示されるみたいです。<br />
+<a href="https://www.flickr.com/photos/fukata/15837185395" target="_blank" title=""><img src="https://farm9.staticflickr.com/8609/15837185395_3f780c92c5_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>普段から使っているiPhoneなので充電を忘れるということもほぼ無いですし、小型でマウスにもキーボードにもなりYoutubeやhuluで少し検索して閲覧するだけなら合っていると思います。何よりデバイスが増えないのが一番良いです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7723/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7474/15217203474_063b5b1854.jpg</image>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Remember The Milk &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/remember-the-milk/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>タスク管理を「Remember The Milk」に統一</title>
+		<link>/archives/1285/</link>
+					<comments>/archives/1285/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 13 Jun 2009 09:51:02 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[Remember The Milk]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1285</guid>
+
+					<description><![CDATA[今まで、タスクの管理というと手帳のタスクシートを使っていたのですが、前日からの持ち越しのタスクなどを新たに手書きで書く行為に疲れて来たので、どうにかデジタルで管理できないかと思っていました。 そこで、 ... <a href="/archives/1285/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5212/5475649757_1a7f33a95d_m.jpg" target="_blank" title="Capture18_42_29"><img loading="lazy" src="https://farm6.static.flickr.com/5212/5475649757_1a7f33a95d_m.jpg" alt="Capture18_42_29" width="200" height="133" class="attachment wp-att-1286 alignleft" /></a>今まで、タスクの管理というと手帳のタスクシートを使っていたのですが、前日からの持ち越しのタスクなどを新たに手書きで書く行為に疲れて来たので、どうにかデジタルで管理できないかと思っていました。</p>
+<p>そこで、以前使ったこともある「<a href="https://www.rememberthemilk.com/">Remember The Milk</a>」が今自分が使っているBlackberry Bold（以下、BB）のタスク機能と同期ができる（Proアカウントのみ）「MilkSync for Blackberry」というソフトが出ていたので統一してみました。</p>
+<p>使い心地としては、結構良いです。</p>
+<p>PCとBBの同期はGoogle Calendarでも使っているのですが、これの場合はPC→BBの同期しかできないのですが、Remember The Milkの場合、双方向に同期ができるので非常に便利です。</p>
+<p>BB→PCの同期が可能になると何が便利かというと、ちょっとhttps://したことを外出先でメモで残す時なども使えるので非常に便利です。いちいち、メモ帳に保存して帰ってからPCから入力。というような事をしなくても済むので。/</p>
+<p>また、前日からの持ち越しタスクについても、当たり前ですが、コピーする必要などは無くタスクの整理がかなり楽になりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1285/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

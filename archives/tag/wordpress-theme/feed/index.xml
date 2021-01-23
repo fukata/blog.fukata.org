@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WordPress Theme &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/wordpress-theme/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>WordPressテーマ「tanzaku」の画像サイズを調整するPHP</title>
+		<link>/archives/7075/</link>
+					<comments>/archives/7075/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 14 May 2012 16:52:10 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[WordPress Theme]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7075</guid>
+
+					<description><![CDATA[WordPressテーマ「tanzaku」の画像サイズを調整するJS 昨日は、画像の比率を調整するためのJSスクリプトを書きました。 今回は詳細ページにMedium 640を貼った画像をトップページや ... <a href="/archives/7075/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://fukata.org/2012/05/14/javascript-adjust-image-size-wordpress-theme-tanzaku/">WordPressテーマ「tanzaku」の画像サイズを調整するJS</a></p>
+<p>昨日は、画像の比率を調整するためのJSスクリプトを書きました。</p>
+<p>今回は詳細ページにMedium 640を貼った画像をトップページや検索ページでそのまま表示すると画像サイズも大きいため、読み込みに多少時間がかかってしまいます。そのため、サムネイル用のSmall 320を表示するように画像のURLを置換するPHPコードを書いてみました。</p>
+<p><span id="more-7075"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<pre lang="php">
+function replace_flickr_image_size($img, $size='n') {
+    $pattern = "/(farm[0-9]+\.staticflickr\.com\/.*_)(m|z|c|l|o)\.(jpg|gif|png)/";
+    $replace = "$1$size.$3";
+    $img = preg_replace($pattern, $replace, $img);
+    return $img;
+}
+</pre>
+<p>あとは、これを101行目付近で生成しているグリッド用画像のURLを置換します。</p>
+<pre lang="php" line="101">
+// check image link
+//$chk_imglink = '/(<a (?:.+?)rel="(?:lightbox[^"]*?)"(?:[^>]*?)>)'. preg_quote($matches2[0], '/') .'/';
+$chk_imglink = '/(</a><a (?:.+?)href="(?:.+?\.(?:jpe?g|png|gif))"(?:[^>]*?)>)'. preg_quote($matches2[0], '/') .'/';
+if ($flg_img_forcelink) {
+    $grid_img = '</a><a href="'. get_permalink() .'" title="' . esc_attr($post->post_title) . '">' . $grid_img . '</a>';
+}   
+else if ( preg_match($chk_imglink, $content, $matches3) ) { 
+    $grid_img = $matches3[1] . $grid_img . '';
+}   
+$grid_img = replace_flickr_image_size($grid_img);
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7075/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>WordPressテーマ「tanzaku」の画像サイズを調整するJS</title>
+		<link>/archives/7071/</link>
+					<comments>/archives/7071/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 13 May 2012 18:34:02 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[WordPress Theme]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7071</guid>
+
+					<description><![CDATA[WordPress › tanzaku « Free WordPress Themesのテーマを使ってブログを一つ作ってみたんですが、トップページなどの短冊内に表示される画像がWordPressにアッ ... <a href="/archives/7071/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://wordpress.org/extend/themes/tanzaku">WordPress › tanzaku « Free WordPress Themes</a>のテーマを使ってブログを一つ作ってみたんですが、トップページなどの短冊内に表示される画像がWordPressにアップロードしたものではなく、Flickrのものだったので正常に画像サイズを取得できず、デフォルトの290&#215;290で表示されてしまい、歪んだような形になってしまっていました。</p>
+<p>そこで、JSで簡単にではありますが、画像サイズを調整するようなJSスクリプトを書いてみました。</p>
+<p><span id="more-7071"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<pre lang="javascript">
+        $('.grid-image img').each(function(){
+            var $img = $(this);
+            $img.hide().attr({ width: "", height: "" });
+            var w = $img.width();
+            var h = $img.height();
+            if (w >= h) {
+                w = 290;
+                h = 217;
+            } else {
+                w = 217;
+                h = 290;
+            }
+            $img.attr({ width: w, height: h }).show();
+        });
+</pre>
+<p>これをheader.php内にある下記のコードの直下くらいに貼り付ければ正常に動作するかと思います。</p>
+<pre lang="javascript">
+(function($){
+    $(function(){
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7071/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

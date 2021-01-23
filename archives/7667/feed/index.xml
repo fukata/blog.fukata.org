@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン1.9.18をリリース	</title>
+	<atom:link href="/archives/7667/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/7667/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:12 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: ish		</title>
+		<link>/archives/7667/comment-page-1/#comment-888</link>
+
+		<dc:creator><![CDATA[ish]]></dc:creator>
+		<pubDate>Thu, 24 Jul 2014 16:06:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7667#comment-888</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7667/comment-page-1/#comment-886&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+うわ、早速の反応、ありがとうございます！すごく嬉しいです。楽しみに待っています。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7667/comment-page-1/#comment-886">Tatsuya Fukata</a>.</p>
+<p>うわ、早速の反応、ありがとうございます！すごく嬉しいです。楽しみに待っています。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7667/comment-page-1/#comment-886</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Thu, 24 Jul 2014 14:17:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7667#comment-886</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7667/comment-page-1/#comment-883&quot;&gt;ish&lt;/a&gt;.
+
+バグの原因が分かったので本日または明日にv1.9.19をリリースしたいと思います。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7667/comment-page-1/#comment-883">ish</a>.</p>
+<p>バグの原因が分かったので本日または明日にv1.9.19をリリースしたいと思います。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7667/comment-page-1/#comment-885</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Thu, 24 Jul 2014 13:34:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7667#comment-885</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7667/comment-page-1/#comment-883&quot;&gt;ish&lt;/a&gt;.
+
+今、coreserverの環境が手に入ったので実際に試してみたいと思います。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7667/comment-page-1/#comment-883">ish</a>.</p>
+<p>今、coreserverの環境が手に入ったので実際に試してみたいと思います。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ish		</title>
+		<link>/archives/7667/comment-page-1/#comment-883</link>
+
+		<dc:creator><![CDATA[ish]]></dc:creator>
+		<pubDate>Thu, 24 Jul 2014 13:04:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7667#comment-883</guid>
+
+					<description><![CDATA[初めまして。XREAの無料サーバーにWPをインストールしテスト運用していましたが、このプラグインはとても便利に思っていました。最近coreserverがセーフモードオフになったので本格的にWPを運用しようと試してみたら、先にコメントされたinoueさんと全く同じ現象が起こり(経緯も同じ)使用できませんでした。coreserver側の問題かも知れませんが、とても困っています。お忙しいとは思いますが、何かアドバイスをいただければ幸いです。]]></description>
+			<content:encoded><![CDATA[<p>初めまして。XREAの無料サーバーにWPをインストールしテスト運用していましたが、このプラグインはとても便利に思っていました。最近coreserverがセーフモードオフになったので本格的にWPを運用しようと試してみたら、先にコメントされたinoueさんと全く同じ現象が起こり(経緯も同じ)使用できませんでした。coreserver側の問題かも知れませんが、とても困っています。お忙しいとは思いますが、何かアドバイスをいただければ幸いです。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Gistをブログ形式で表示する「gistlog」	</title>
+	<atom:link href="/archives/5486/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5486/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 通りすがり		</title>
+		<link>/archives/5486/comment-page-1/#comment-694</link>
+
+		<dc:creator><![CDATA[通りすがり]]></dc:creator>
+		<pubDate>Thu, 28 Apr 2011 00:59:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5486#comment-694</guid>
+
+					<description><![CDATA[管理者様
+
+対応の程ありがとうございます。
+
+先ほどソースも拝見させていただき、対応確認いたしました。]]></description>
+			<content:encoded><![CDATA[<p>管理者様</p>
+<p>対応の程ありがとうございます。</p>
+<p>先ほどソースも拝見させていただき、対応確認いたしました。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5486/comment-page-1/#comment-693</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Wed, 27 Apr 2011 10:38:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5486#comment-693</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5486/comment-page-1/#comment-692&quot;&gt;とおりすがり&lt;/a&gt;.
+
+ユーザのemailアドレスが無条件に公開されてしまう事につきましては、私の配慮不足によるものです。
+大変失礼致しました。
+
+表示項目の選別に付きましては、認証済みのユーザが選別できるような機能を考慮致します。
+取り急ぎ、emailに関しまして非表示にするように致しました。
+
+ご指摘、誠にありがとうございました。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5486/comment-page-1/#comment-692">とおりすがり</a>.</p>
+<p>ユーザのemailアドレスが無条件に公開されてしまう事につきましては、私の配慮不足によるものです。<br />
+大変失礼致しました。</p>
+<p>表示項目の選別に付きましては、認証済みのユーザが選別できるような機能を考慮致します。<br />
+取り急ぎ、emailに関しまして非表示にするように致しました。</p>
+<p>ご指摘、誠にありがとうございました。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: とおりすがり		</title>
+		<link>/archives/5486/comment-page-1/#comment-692</link>
+
+		<dc:creator><![CDATA[とおりすがり]]></dc:creator>
+		<pubDate>Wed, 27 Apr 2011 10:18:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5486#comment-692</guid>
+
+					<description><![CDATA[はじめまして。
+先程gistlogというあなた様が運営していらっしゃるサービス内にて、メールアドレスが垂れ流しとなっているページが多数存在していましたが、これらのページが検索エンジンにインデックスされ、個人情報であるメールアドレスが漏洩しています。
+
+サービス運営者としていかがお考えでしょうか？
+
+また、フォローしているユーザーのメールアドレスまでが漏れているようです。
+
+サービスを運営するうえで、出す情報の選別は必要かと思いますが、いかがでしょうか？
+
+早急に、サービスを停止していただくか、何かしらの対処を強く望みます。]]></description>
+			<content:encoded><![CDATA[<p>はじめまして。<br />
+先程gistlogというあなた様が運営していらっしゃるサービス内にて、メールアドレスが垂れ流しとなっているページが多数存在していましたが、これらのページが検索エンジンにインデックスされ、個人情報であるメールアドレスが漏洩しています。</p>
+<p>サービス運営者としていかがお考えでしょうか？</p>
+<p>また、フォローしているユーザーのメールアドレスまでが漏れているようです。</p>
+<p>サービスを運営するうえで、出す情報の選別は必要かと思いますが、いかがでしょうか？</p>
+<p>早急に、サービスを停止していただくか、何かしらの対処を強く望みます。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

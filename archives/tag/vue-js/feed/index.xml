@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Vue.js &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/vue-js/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Wed, 21 Nov 2018 16:23:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Vue.jsでbeforeunloadを正しく実装する</title>
+		<link>/archives/9613/</link>
+					<comments>/archives/9613/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Nov 2018 10:57:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Vue.js]]></category>
+		<guid isPermaLink="false">/?p=9613</guid>
+
+					<description><![CDATA[トラハをnuxtjsで書き換えて多少バグがあるものの概ねうまく動いている。記事の作成、編集をする時にページから離脱する際に警告を出しているがVueで実装する際に少し調べたのでメモしておく。 広告 現状 ... <a href="/archives/9613/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/31044568317" target="_blank" title="Screenshot from 2018-11-21 17-45-02"><img loading="lazy" src="https://farm5.staticflickr.com/4893/31044568317_469b6428e4_c.jpg" alt="Screenshot from 2018-11-21 17-45-02" class="aligncenter" width="800" height="588"/></a></p>
+<p><a href="https://traha.org/" title="トップページ | トラハ 旅の記録をするなら！" target="_blank">トラハ</a>をnuxtjsで書き換えて多少バグがあるものの概ねうまく動いている。記事の作成、編集をする時にページから離脱する際に警告を出しているがVueで実装する際に少し調べたのでメモしておく。</p>
+<p><span id="more-9613"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>現状は下記のコードをpagesに定義することで実現している。 <code>beforeRouteLeave</code> のみだとリロードや戻るボタンなどに対応出来なかったので通常の <code>beforeunload</code> イベントもフックするようにしている。</p>
+<pre><code>  created() {
+    if (process.browser) {
+      // ページを消そうとしたりリロードした場合などに対応
+      $(window)
+        .off('beforeunload')
+        .on('beforeunload', () =&gt; {
+          if (!this.pageState.saving) {
+            return '編集中のデータがあります！'
+          }
+        })
+    }
+  },
+  beforeRouteLeave(to, from, next) {
+    // フォームを送信した場合などに離脱とみなさないようにするため。
+    if (this.pageState.saving) {
+      $(window).off('beforeunload')
+      return next()
+    }
+
+    this.$swal({
+      title: '編集中のデータがあります！',
+      text: 'ページを移動すると編集中のデータが失くなります。',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'はい、移動します',
+      cancelButtonText: 'キャンセル'
+    }).then(result =&gt; {
+      if (result.value) {
+        $(window).off('beforeunload')
+        next()
+      } else {
+        next(false)
+      }
+    })
+  }
+}
+</code></pre>
+<p>今回使用したメソッドについては下記のページを参考にした。</p>
+<p><a href="https://router.vuejs.org/guide/advanced/navigation-guards.html#per-route-guard" title="Navigation Guards | Vue Router" target="_blank">Navigation Guards | Vue Router</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9613/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4893/31044568317_469b6428e4.jpg</image>
+	</item>
+	</channel>
+</rss>

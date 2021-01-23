@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン2.6.0をリリース	</title>
+	<atom:link href="/archives/9261/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/9261/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 20 Jan 2018 17:17:00 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9261/comment-page-1/#comment-988</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Sat, 20 Jan 2018 17:17:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9261#comment-988</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9261/comment-page-1/#comment-987&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+v2.6.1で対応したのでお試しください。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9261/comment-page-1/#comment-987">Tatsuya Fukata</a>.</p>
+<p>v2.6.1で対応したのでお試しください。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9261/comment-page-1/#comment-987</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Fri, 19 Jan 2018 08:18:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9261#comment-987</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9261/comment-page-1/#comment-986&quot;&gt;けい&lt;/a&gt;.
+
+コメントありがとうございます。
+
+なるほど、確かに現在、wp-flickr-pressで挿入された画像に関してはwidth,heightの指定がありませんね。
+
+可能か調べてみて対応できそうであれば新たなタグを用意したいと思います。
+
+少々お待ち下さい。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9261/comment-page-1/#comment-986">けい</a>.</p>
+<p>コメントありがとうございます。</p>
+<p>なるほど、確かに現在、wp-flickr-pressで挿入された画像に関してはwidth,heightの指定がありませんね。</p>
+<p>可能か調べてみて対応できそうであれば新たなタグを用意したいと思います。</p>
+<p>少々お待ち下さい。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: けい		</title>
+		<link>/archives/9261/comment-page-1/#comment-986</link>
+
+		<dc:creator><![CDATA[けい]]></dc:creator>
+		<pubDate>Fri, 19 Jan 2018 03:34:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9261#comment-986</guid>
+
+					<description><![CDATA[こんにちは！ブログいつも拝見しています。スコタイ良いですねー。バーの写真が良い感じすぎます。大阪に同名のタイ古式マッサージがあるんですが、かなり上手いと評判です（笑）
+
+今回は、amp対応でつまずいているので、ご報告させていただきます！
+
+Googleがランキング要素に読み込み速度を反映させると言うことで、amp対応が必要になってきています
+
+Google ウェブマスター向け公式ブログ: ページの読み込み速度をモバイル検索のランキング要素に使用します https://webmaster-ja.googleblog.com/2018/01/using-page-speed-in-mobile-search.html
+
+というわけで対応したいんですが、flickerを画像置き場にしている場合、widthとheightの書き込みを手動で行わなければなりません。私は手動で1000枚程度書き換えていたら、夜が明けましたw
+
+[WordPress]wp-flickr-pressのバージョン2.3.0をリリース &#124; blog.fukata.org /archives/7954
+
+こちらの記事のコメントでもありましたが、ampはwidthとheightを指定しないと、エラーとなってしまいます。「amp化プラグイン」を入れてみたところ、amp対応のテンプレートではエラーが出てしまいました。
+
+CSSでの対応も試みたのですが、手打ちで入れる必要があって、画像を大量に使うサイトでは、かなり時間がかかってしまう状態です
+https://qiita.com/narikei/items/50c0c805846c0bd69423
+
+ですので、wp-flicker-pressで画像を挿入する際にwidthとheightを入れられると、とても助かるわけです。
+
+いつもこのプラグインには助けられているので、欲しいものリスト公開してくれれば嬉しいです。あるいは、アマゾンギフトを送りつけたいです（笑）
+
+それでは、これからもよろしくお願いします！]]></description>
+			<content:encoded><![CDATA[<p>こんにちは！ブログいつも拝見しています。スコタイ良いですねー。バーの写真が良い感じすぎます。大阪に同名のタイ古式マッサージがあるんですが、かなり上手いと評判です（笑）</p>
+<p>今回は、amp対応でつまずいているので、ご報告させていただきます！</p>
+<p>Googleがランキング要素に読み込み速度を反映させると言うことで、amp対応が必要になってきています</p>
+<p>Google ウェブマスター向け公式ブログ: ページの読み込み速度をモバイル検索のランキング要素に使用します <a href="https://webmaster-ja.googleblog.com/2018/01/using-page-speed-in-mobile-search.html" rel="nofollow ugc">https://webmaster-ja.googleblog.com/2018/01/using-page-speed-in-mobile-search.html</a></p>
+<p>というわけで対応したいんですが、flickerを画像置き場にしている場合、widthとheightの書き込みを手動で行わなければなりません。私は手動で1000枚程度書き換えていたら、夜が明けましたw</p>
+<p>[WordPress]wp-flickr-pressのバージョン2.3.0をリリース | blog.fukata.org <a href="/archives/7954" rel="nofollow ugc">/archives/7954</a></p>
+<p>こちらの記事のコメントでもありましたが、ampはwidthとheightを指定しないと、エラーとなってしまいます。「amp化プラグイン」を入れてみたところ、amp対応のテンプレートではエラーが出てしまいました。</p>
+<p>CSSでの対応も試みたのですが、手打ちで入れる必要があって、画像を大量に使うサイトでは、かなり時間がかかってしまう状態です<br />
+<a href="https://qiita.com/narikei/items/50c0c805846c0bd69423" rel="nofollow ugc">https://qiita.com/narikei/items/50c0c805846c0bd69423</a></p>
+<p>ですので、wp-flicker-pressで画像を挿入する際にwidthとheightを入れられると、とても助かるわけです。</p>
+<p>いつもこのプラグインには助けられているので、欲しいものリスト公開してくれれば嬉しいです。あるいは、アマゾンギフトを送りつけたいです（笑）</p>
+<p>それでは、これからもよろしくお願いします！</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

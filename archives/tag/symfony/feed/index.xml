@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>symfony &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/symfony/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CodeIgniterか、Symfonyか</title>
+		<link>/archives/839/</link>
+					<comments>/archives/839/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 15 Jan 2009 05:41:59 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[symfony]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=839</guid>
+
+					<description><![CDATA[現在、社内で使用する基盤FWの選定を行っています。 Syfmonyは既に1度だけプロジェクトで使用したことがあり、良い点、悪い点、まだ未確認な点などが上がっています。ただ、CodeIgniterに関し ... <a href="/archives/839/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、社内で使用する基盤FWの選定を行っています。</p>
+<p>Syfmonyは既に1度だけプロジェクトで使用したことがあり、良い点、悪い点、まだ未確認な点などが上がっています。ただ、CodeIgniterに関しては、フォームレベルで使用したことがあるだけで、本格的に中規模レベル（2、3人月程度）のプロジェクトで使用したことがありません。なので、まだ良い点や悪い点などが上がっていません。</p>
+<p>現在、CodeIgniterのユーザガイドを読みながら少しコードを試し書きしています。自分のいつもの開発環境は、IDEとしてEclipseのPDTを使用しているのですが、Symfonyも同様ですが、CodeIgniterの方が、Eclipseの補完機能が機能していないです。（動的にフィールドを定義している為など）</p>
+<p>現在の各FWの検証状況は以下のような感じです。</p>
+<p>■Syfmony（version 1.1.4）</p>
+<p style="padding-left: 30px;"><strong><span style="color: #ff0000;">□良い点</span></strong></p>
+<blockquote>
+<ul>
+<li>Yahooでの採用実績がある</li>
+<li>基本的なWebFWとして、ほぼ完成している</li>
+<li>リリースにrysncを採用しており、作業が制限されるが作業の安定性（人為的ミスなど）、簡略化されている</li>
+<li>WebFWではあるが、バッチ処理も考慮されている（コマンドラインからの実行）</li>
+<li>sfPropelPagerが意外と便利</li>
+<li>入力チェック情報を外部ファイルとして分離できる</li>
+<li>独自のURLマッピングが可能</li>
+<li>多言語化の為の機能は容易されている</li>
+</ul>
+</blockquote>
+<p style="padding-left: 30px;"><strong><span style="color: #0000ff;">□悪い点</span></strong></p>
+<blockquote>
+<ul>
+<li>フォームの入力・確認・完了の確認画面が考慮されていない。ただし、ラッピングする形では対応可能。</li>
+<li>ログローテーションの設定が弱い（設定ファイルで定義できない？）</li>
+<li>モデル自体の容量が大きい為、対象のオブジェクトを使用する際に、メモリ使用量が大きい。</li>
+<li>init-adminが融通が効かなすぎて実務には使えない。</li>
+<li>レスポンスが悪い</li>
+<li>YAMLが書きにくい</li>
+</ul>
+</blockquote>
+<p style="padding-left: 30px;"><span style="color: #008000;"><strong>□未確認な点</strong></span></p>
+<blockquote>
+<ul>
+<li>複数DBの接続切り替え</li>
+<li>モバイルへの対応</li>
+<li>大量データの処理</li>
+</ul>
+</blockquote>
+<p>■CodeIgniter</p>
+<p style="padding-left: 30px;"><strong><span style="color: #ff0000;">□良い点</span></strong></p>
+<blockquote>
+<ul>
+<li>縛りが緩く、また、ソースが比較的小さい為、拡張性は高い</li>
+<li>基本的なライブラリ群は用意されている</li>
+<li>インストールが楽</li>
+<li>php4でも動作可能</li>
+<li>独自のURLマッピングが可能</li>
+<li>複数のDBの定義が可能。また、接続切り替えも容易</li>
+<li>多言語化の為の機能は容易されている</li>
+</ul>
+</blockquote>
+<p style="padding-left: 30px;"><strong><span style="color: #0000ff;">□悪い点</span></strong></p>
+<blockquote>
+<ul>
+<li>入力チェックがコントローラと密結合している</li>
+<li>コマンドラインからの実行が考慮されていない</li>
+<li>URLと実際のコントローラのファイルが密結合している</li>
+<li>アクセスメソッド（URL）が一つのコントローラにまとまっていて、分離できない。</li>
+<li>FWのコードがphp4ベースで書かれている。</li>
+</ul>
+</blockquote>
+<p style="padding-left: 30px;"><span style="color: #008000;"><strong>□未確認な点</strong></span></p>
+<blockquote>
+<ul>
+<li>モバイルへの対応</li>
+<li>実際のパフォーマンス</li>
+<li>ログのローテーション</li>
+<li>ログファイルの切り替え</li>
+</ul>
+</blockquote>
+<p>というような感じになっています。まだ、出しきれていないので、間違っている部分などがあるかと思いますが、その際はコメントいただければと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/839/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

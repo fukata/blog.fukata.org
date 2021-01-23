@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: GR DIGITAL 4を持って北海道旅行に行ってみて感じたこと	</title>
+	<atom:link href="/archives/101/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/101/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 18 Aug 2012 07:56:00 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/101/comment-page-1/#comment-948</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Sat, 18 Aug 2012 07:56:00 +0000</pubDate>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=101#comment-948</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/101/comment-page-1/#comment-947&quot;&gt;通りすがり&lt;/a&gt;.
+
+すいません、デジタルズームの間違いです。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/101/comment-page-1/#comment-947">通りすがり</a>.</p>
+<p>すいません、デジタルズームの間違いです。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 通りすがり		</title>
+		<link>/archives/101/comment-page-1/#comment-947</link>
+
+		<dc:creator><![CDATA[通りすがり]]></dc:creator>
+		<pubDate>Sat, 18 Aug 2012 07:52:00 +0000</pubDate>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=101#comment-947</guid>
+
+					<description><![CDATA[光学ズームしか付いておらず?? ]]></description>
+			<content:encoded><![CDATA[<p>光学ズームしか付いておらず?? </p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

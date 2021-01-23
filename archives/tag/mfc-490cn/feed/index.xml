@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MFC-490CN &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mfc-490cn/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 14 Aug 2017 05:56:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>MFC-490CNで封筒印刷</title>
+		<link>/archives/1804/</link>
+					<comments>/archives/1804/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 19 Oct 2009 00:58:28 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[MFC-490CN]]></category>
+		<category><![CDATA[筆まめ]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1804</guid>
+
+					<description><![CDATA[実家の仕事の関係で長形3号の封筒に印刷することになったんですが、MFC-490CNで印刷していると、用紙が詰まること詰まること。2、30枚ほど封筒を入れると85%くらいの確率が詰まります。だんだんイラ ... <a href="/archives/1804/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>実家の仕事の関係で長形3号の封筒に印刷することになったんですが、MFC-490CNで印刷していると、用紙が詰まること詰まること。2、30枚ほど封筒を入れると85%くらいの確率が詰まります。だんだんイライラしてきたので、10枚程度に減らすとほぼ100%の確率で印刷が可能なことが分かりました。</p>
+<p>あと、用紙サイズで長形3号というのがなかったので、しょうがなくユーザ定義で「120mm x 235mm」を追加してなんとか印刷できました。</p>
+<p>また、筆まめのレイアウト表示で郵便番号の部分を1つ下に下げることでちょうど枠内に収まってくれました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1804/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MFC-490CNを購入しました</title>
+		<link>/archives/1542/</link>
+					<comments>/archives/1542/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 27 Sep 2009 16:55:52 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[brother]]></category>
+		<category><![CDATA[MFC-490CN]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1542</guid>
+
+					<description><![CDATA[以前、記事でも書いたように、「MFC-490CN」を購入しました。 ADF、FAX、スキャナ、コピー、カラープリント、無線LAN、有線LAN、ネットワーク機能などが付いて、18500円でした。値段の割 ... <a href="/archives/1542/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5055/5475644733_c5af2bdc3f_m.jpg" target="_blank" title="IMG_0725"><img loading="lazy" src="https://farm6.static.flickr.com/5055/5475644733_c5af2bdc3f_m.jpg" alt="IMG_0725" width="200" height="133" class="attachment wp-att-1543 alignleft" /></a>以前、記事でも書いたように、「<a href="https://www.brother.co.jp/product/mymio/info/mfc490cn/index.htm">MFC-490CN</a>」を購入しました。</p>
+<p>ADF、FAX、スキャナ、コピー、カラープリント、無線LAN、有線LAN、ネットワーク機能などが付いて、18500円でした。値段の割りにはスペックは結構よさげかなと思いました。ただ、給紙が120枚というのがちょっと少ないかなと感じるくらいで、あとは満足するスペックです。</p>
+<p>セットアップ自体は、付属のインストールディスクから簡単にできます。まだ、Ubuntuでの設定はしていませんので、設定がややこしくあれば、載せたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1542/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

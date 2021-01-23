@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>パートカラー &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%91%E3%83%BC%E3%83%88%E3%82%AB%E3%83%A9%E3%83%BC/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Tue, 11 Jun 2013 06:00:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Lightroom4でパートカラー加工する際の設定とプリセットの作成方法</title>
+		<link>/archives/7989/</link>
+					<comments>/archives/7989/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 11 Jun 2013 06:00:11 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Lightroom]]></category>
+		<category><![CDATA[Lightroom-Preset]]></category>
+		<category><![CDATA[パートカラー]]></category>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=276</guid>
+
+					<description><![CDATA[前回アップした「紫陽花の写真をパートカラー加工してみた」の写真を加工する際にLightroomでパートカラー加工を行った際の設定方法を載せておきます。 広告 今回加工する写真はコレ Developをク ... <a href="/archives/7989/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/45259648@N06/8996854997" target="_blank" title="LT_PartColor_1"><img src="https://farm9.staticflickr.com/8272/8996854997_59e8517cd1_z.jpg" alt="LT_PartColor_1" class="aligncenter" /></a></p>
+<p>前回アップした「<a href="https://camera.fukata.org/archives/272" title="紫陽花の写真をパートカラー加工してみた | 写真記">紫陽花の写真をパートカラー加工してみた</a>」の写真を加工する際にLightroomでパートカラー加工を行った際の設定方法を載せておきます。</p>
+<p><span id="more-7989"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今回加工する写真はコレ<br />
+<a href="https://www.flickr.com/photos/45259648@N06/8996854997" target="_blank" title="LT_PartColor_1"><img src="https://farm9.staticflickr.com/8272/8996854997_59e8517cd1_z.jpg" alt="LT_PartColor_1" class="aligncenter" /></a></p>
+<p>Developをクリックすると「HSL / Color / B&amp;W」という項目があるので、それを開くと各色のバランス(-100から100)というのがあるので、今回は青色だけを残したいのでBlue以外を-100に設定します。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/8998041058" target="_blank" title="LT_PartColor_2"><img src="https://farm3.staticflickr.com/2868/8998041058_34344706d0_z.jpg" alt="LT_PartColor_2" class="aligncenter" /></a></p>
+<p>するとこんな感じになります。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/8997022653" target="_blank" title="LT_PartColor_3"><img src="https://farm4.staticflickr.com/3810/8997022653_dcf23c5a6c_z.jpg" alt="LT_PartColor_3" class="aligncenter" /></a></p>
+<h2>毎回設定するのがめんどくさい</h2>
+<p>今回は5,6枚だけでしたが10枚も20枚もこの設定を行うのは非常にめんどくさいです。Lightroomには予め設定を保存しておいてそれを簡単に適用できる「プリセット」という機能があります。プリセットはユーザが簡単に作ることもできるので、今回はそのプリセットの作り方も一緒に載せたいと思います。</p>
+<p>パートカラー加工した状態で上部メニューの「Develop」から「New Preset」をクリック<br />
+<a href="https://www.flickr.com/photos/45259648@N06/8998040550" target="_blank" title="LT_PartColor_4"><img src="https://farm9.staticflickr.com/8275/8998040550_0d18756150_z.jpg" alt="LT_PartColor_4" class="aligncenter" /></a></p>
+<p>適当な名前を入力します。今回は「PartColor-Blue」にします。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/8996854553" target="_blank" title="LT_PartColor_5"><img src="https://farm9.staticflickr.com/8393/8996854553_6268f48505_z.jpg" alt="LT_PartColor_5" class="aligncenter" /></a></p>
+<p>するとLibrary画面の「Saved Preset」プルダウンから簡単に先ほど作成したプリセットを適用することが出来ます。他の色もついでに作っておくと便利そうですね。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/8998040090" target="_blank" title="LT_PartColor_6"><img src="https://farm4.staticflickr.com/3731/8998040090_0bf830f41d_z.jpg" alt="LT_PartColor_6" class="aligncenter" /></a></p>
+<p>どうだったでしょうか。こんな感じで自分で加工した設定をプリセットにしておくことが出来るので、気に入った設定値などがあったらプリセットにしておくといつか役に立つことがあるかもしれませんね。</p>
+<p>また、今回紹介したプリセットですが、有料版もあり下記のホームページで販売されています。</p>
+<p><a href="https://www.lightroompresets.com/" title="Pretty Presets for Lightroom | Welcome">Pretty Presets for Lightroom | Welcome</a></p>
+<p>自分もチルトシフト加工やHDR加工用のプリセットを買って使用しています。結構な頻度で割引クーポンが送られてくるので、とりあえずアカウントだけでも登録しておくと良いかもしれません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7989/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8272/8996854997_59e8517cd1.jpg</image>
+	</item>
+		<item>
+		<title>紫陽花の写真をパートカラー加工してみた</title>
+		<link>/archives/272/</link>
+					<comments>/archives/272/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 10 Jun 2013 08:00:30 +0000</pubDate>
+				<category><![CDATA[カメラ]]></category>
+		<category><![CDATA[Lightroom]]></category>
+		<category><![CDATA[パートカラー]]></category>
+		<category><![CDATA[紫陽花]]></category>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=272</guid>
+
+					<description><![CDATA[今回も紫陽花ネタです。いつも一眼レフやGRで撮影する時はRAWで撮影してLightroomで現像ということをやっています。今回はそのLightroomでパートカラー加工してみたので、加工した紫陽花の写 ... <a href="/archives/272/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/45259648@N06/8994308354" target="_blank" title="I0000362"><img src="https://farm6.staticflickr.com/5341/8994308354_9a9664cfaa_z.jpg" alt="I0000362" class="aligncenter" /></a></p>
+<p>今回も紫陽花ネタです。いつも一眼レフやGRで撮影する時はRAWで撮影してLightroomで現像ということをやっています。今回はそのLightroomでパートカラー加工してみたので、加工した紫陽花の写真を載せてみたいと思います。</p>
+<p><span id="more-272"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8994308252" target="_blank" title="I0000492"><img src="https://farm4.staticflickr.com/3750/8994308252_7cb0decb61_z.jpg" alt="I0000492" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8994308142" target="_blank" title="I0000642"><img src="https://farm9.staticflickr.com/8261/8994308142_026261f48e_z.jpg" alt="I0000642" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8994307776" target="_blank" title="I0000734"><img src="https://farm9.staticflickr.com/8116/8994307776_bb28967f1d_z.jpg" alt="I0000734" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8994307674" target="_blank" title="I0000763"><img src="https://farm6.staticflickr.com/5327/8994307674_7917c4586c_z.jpg" alt="I0000763" class="aligncenter" /></a></p>
+<p>次回はLightroomでパートカラー加工する際のやり方を載せてみたいと思います。</p>
+<p><a href="https://camera.fukata.org/archives/276" title="Lightroom4でパートカラー加工する際の設定とプリセットの作成方法 | 写真記">Lightroom4でパートカラー加工する際の設定とプリセットの作成方法</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/272/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5341/8994308354_9a9664cfaa.jpg</image>
+	</item>
+	</channel>
+</rss>

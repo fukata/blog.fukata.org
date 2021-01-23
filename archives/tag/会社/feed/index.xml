@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>会社 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E4%BC%9A%E7%A4%BE/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:14:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>来週からスタッフが増える</title>
+		<link>/archives/7923/</link>
+					<comments>/archives/7923/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 13 Mar 2016 03:00:50 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[タイ]]></category>
+		<category><![CDATA[会社]]></category>
+		<guid isPermaLink="false">https://fukata.org/?p=7923</guid>
+
+					<description><![CDATA[やっと来週からAndroidエンジニアが1人参加してくれるようになった。今までエンジニア1人でここ数ヶ月やってきたので非常に嬉しい。 広告 どこで採用したのか Job search, job oppo ... <a href="/archives/7923/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7923/"><img src="https://farm2.staticflickr.com/1609/25733212225_e90b83f698_c.jpg" alt="I0000205" class="aligncenter"/></a></p>
+<p>やっと来週からAndroidエンジニアが1人参加してくれるようになった。今までエンジニア1人でここ数ヶ月やってきたので非常に嬉しい。</p>
+<p><span id="more-7923"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>どこで採用したのか</h2>
+<p><a href="http://th.jobsdb.com/th">Job search, job opportunities &amp; career development | jobsDB Thailand</a></p>
+<p>ここ。</p>
+<p>会社の住所をタイに設定しているのに海外在住の人からも結構応募が来る。</p>
+<p>とりあえず今のところ、Androidエンジニアが3人、デザイナーが1人の採用が決まっている。iOS、フロントエンドエンジニアについては絶賛募集中。</p>
+<h2>機材</h2>
+<p>今住んでる地域の近くにIKEAがあるのでデスクと椅子はそこで購入した。</p>
+<p>Samsung 24 inch SD300。<br />
+<a data-flickr-embed="true" data-header="true" data-footer="true" href="http://www.flickr.com/photos/fukata/25733212225" target="_blank" title="I0000205"><img src="https://farm2.staticflickr.com/1609/25733212225_e90b83f698_c.jpg" alt="I0000205" class="aligncenter"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Mackbook Pro 13 inch。<br />
+<a data-flickr-embed="true" data-header="true" data-footer="true" href="http://www.flickr.com/photos/fukata/25612176442" target="_blank" title="I0000206"><img src="https://farm2.staticflickr.com/1489/25612176442_e69d4d4d62_c.jpg" alt="I0000206" class="aligncenter"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7923/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1609/25733212225_e90b83f698.jpg</image>
+	</item>
+	</channel>
+</rss>

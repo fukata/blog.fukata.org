@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OrePresentation &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/orepresentation/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Presentationツールにテーマ「slide」を追加しました</title>
+		<link>/archives/6508/</link>
+					<comments>/archives/6508/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 19 Nov 2011 14:14:20 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[OrePresentation]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6508</guid>
+
+					<description><![CDATA[テキストファイルにページ毎の内容をmarkdown形式で書けば、スライド用HTMLを生成できるPresentationツールですが、最近社内でも少し使ってくれている人がいるみたいなので、テーマを追加し ... <a href="/archives/6508/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>テキストファイルにページ毎の内容をmarkdown形式で書けば、スライド用HTMLを生成できる<a href="https://github.com/fukata/Presentation">Presentationツール</a>ですが、最近社内でも少し使ってくれている人がいるみたいなので、テーマを追加しました。</p>
+<p>今回追加したテーマは「slide」で名前の通り、今までページ遷移時に何のエフェクトもない状態でしたが、スライドショーっぽいエフェクトを付けて、ぬるっとページが切り替わるようなものになっています。</p>
+<p>HTMLコンテンツのスライドには<a href="https://www.ndoherty.biz/tag/coda-slider/">Coda-Slider</a>を使用しています。</p>
+<p>テーマ「slide」を用いたサンプルは<a href="https://dl.dropbox.com/u/2020396/presen/tests/slide/index.html">こちら</a>にアップしています。</p>
+<p>表示後、ウィンドウサイズを変更するとその後正常に動作しなくなる可能性があるので、一度F5もしくはCtrl+F5などで再表示してみてください。今後、ウィンドウサイズの変更にも対応するかもしれません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6508/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>車輪の再発明どんとこい。オレオレプレゼンテーションツール「Presentation」</title>
+		<link>/archives/6336/</link>
+					<comments>/archives/6336/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 19 Oct 2011 02:18:56 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[OrePresentation]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6336</guid>
+
+					<description><![CDATA[初めてのYAPC::Asia 2011に行ってきたでせっかくPerlのイベントに参加したのでなんか書いてみようということで、イベントのスライドで意外に多かったHTML+JSベースのプレゼンテーションツ ... <a href="/archives/6336/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://fukata.org/2011/10/15/yapc-asia-2011/">初めてのYAPC::Asia 2011に行ってきた</a>でせっかくPerlのイベントに参加したのでなんか書いてみようということで、イベントのスライドで意外に多かったHTML+JSベースのプレゼンテーションツールを再発明してみることにしました。</p>
+<p><a href="https://github.com/fukata/Presentation">fukata/Presentation &#8211; GitHub</a></p>
+<h2>特徴</h2>
+<ol>
+<li>各スライドの内容を1つのテキストファイルにmarkdown形式で記述(vim等で気楽に書きたい！！)</li>
+<li>HTML,CSS,JSはテーマとして追加可能</li>
+</ol>
+<p><a href="https://subtech.g.hatena.ne.jp/mala/20111017/1318865712">YAPC::Asia 2011で発表してきました &#8211; 金利0無利息キャッシング – キャッシングできます &#8211; subtech</a></p>
+<p>main.txtの書式はmalaさんが上記で公開していたものを参考にしました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6336/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

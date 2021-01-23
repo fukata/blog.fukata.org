@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Manual &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/manual/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ServersMan@VPSにpywebsocketをインストールしてみた</title>
+		<link>/archives/4438/</link>
+					<comments>/archives/4438/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 27 May 2010 15:36:49 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Manual]]></category>
+		<category><![CDATA[pywebsocket]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[websocket]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4438</guid>
+
+					<description><![CDATA[HTML5に加わるwebsoketを使用すると今まで以上にリアルタイム性の高いアプリケーションを作成することができる為個人的に非常に注目しています。 メインで使用しているブラウザのChromeには既に ... <a href="/archives/4438/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>HTML5に加わる<a href="https://www.html5.jp/trans/w3c_websockets.html">websoket</a>を使用すると今まで以上にリアルタイム性の高いアプリケーションを作成することができる為個人的に非常に注目しています。</p>
+<p>メインで使用しているブラウザのChromeには既にWebsocketが実装されており、使用することが可能だということで、簡易的なチャットでも作ってみようかと思い、色々調べていました。</p>
+<p><a href="https://labs.mapion.co.jp/blog/java/jetty7websocket.php">Jetty7でWebSocket開発：マピオンラボ(Java)</a></p>
+<p>サーバ側の実装についてまとめられています。今回私が選択したのは、<a href="https://code.google.com/p/pywebsocket/">pywebsocket</a>というものです。これは、apacheのモジュールとして提供されwsプロトコルの場合はwebsocketハンドラに処理を流すというものです。スタンドアロンで使用することもできるらしいのですが、今回はapacheのモジュールとして使用します。pywebsocketという名前からwebsocketハンドラはプログラム言語Pythonで実装する必要があります。</p>
+<p>インストールした環境は、ServersMan@VPSでOSはCentOs 5.4です。それでは、早速手順の方を書いていきたいと思います。</p>
+<p>手順は以下から<br />
+<span id="more-4438"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>概要</h2>
+<p>ServersMan@VPS上にapacheのwebsocket</p>
+<h2>前提条件</h2>
+<ul>
+<li>環境はServersMan@VPSのEntryプランのものを使用する。</li>
+<li>yumにてhttpdをインストール済みとする。</li>
+<li>下記の手順はユーザ「root」にて行うこと。</li>
+<li>ダウンロードなどの作業ディレクトリは「/root/tmp」とする。</li>
+</ul>
+<h2>作業手順</h2>
+<h3>python-develのインストール</h3>
+<p>mod_pythonをコンパイルする際にPythonのソースが必要な為インストールする。</p>
+<p><strong>ダウンロード、インストール</strong></p>
+<blockquote><p>
+# wget ftp://mirror.switch.ch/pool/3/mirror/centos/5.5/os/x86_64/CentOS/python-devel-2.4.3-27.el5.i386.rpm<br />
+# rpm -ivh python-devel-2.4.3-27.el5.i386.rpm
+</p></blockquote>
+<p>上記のダウンロードURLの接続が悪い場合などは、下記のサイトから他のミラーサイトのURLを使用する。<br />
+RPM Search CentOS 5 python-devel-2.4.3-27.el5.i386.rpm</p>
+<h3>mod_pythonのインストール</h3>
+<p><a href="https://code.google.com/p/pywebsocket/issues/detail?id=42">Issue 42 &#8211; pywebsocket &#8211; Python2.4 Support (CentOS/RHEL) &#8211; Project Hosting on Google Code</a></p>
+<p>mod_python自体はyumでもインストールすることは可能だが、バージョンが3.2.xであり、pywebsocketはmod_pythonの3.3より低いバージョンはサポートしていない為ソースからコンパイルする。</p>
+<p><strong>ダウンロード、インストール</strong></p>
+<blockquote><p>
+# wget https://ftp.kddilabs.jp/infosystems/apache/httpd/modpython/mod_python-3.3.1.tgz<br />
+# tar zxf mod_python-3.3.1.tgz<br />
+# cd mod_python-3.3.1<br />
+# ./configure &#8211;with-apxs=/usr/sbin/apxs &#8211;with-python=/usr/bin/python<br />
+# make<br />
+# make install
+</p></blockquote>
+<p><strong>python.confの作成</strong><br />
+ファイルパス：/etc/httpd/conf.d/python.conf<br />
+ファイル内容</p>
+<blockquote><p>
+LoadModule python_module modules/mod_python.so<br />
+AddHandler mod_python .py
+</p></blockquote>
+<h3>pywebsocketのインストール</h3>
+<p>svnのtrunkを使用しても良いが、安定している可能性が高いバージョンが区切られたものを今回は使用する。今回使用したwebsocketの<a href="https://code.google.com/p/pywebsocket/">本家サイト</a>をチェックし、バージョン0.5よりも新しいものがリリースされている場合は、できる限りそちらを使った方が良い。ただし、正常にインストールできるかは保証しない。</p>
+<p><strong>ダウンロード、インストール</strong></p>
+<blockquote><p>
+# wget https://pywebsocket.googlecode.com/files/mod_pywebsocket-0.5.tar.gz<br />
+# tar zxf mod_pywebsocket-0.5.tar.gz<br />
+# cd pywebsocket-0.5/src<br />
+# python setup.py build<br />
+# python setup.py install
+</p></blockquote>
+<blockquote><p>
+# python setup.py install
+</p></blockquote>
+<p>を実行した際にインストールされたディレクトリが出力されるのでメモを取る。今回は下記のディレクトリ。</p>
+<blockquote><p>
+/usr/lib/python2.4/site-packages/
+</p></blockquote>
+<p><strong>python_mod_pywebsocket.confの作成</strong><br />
+ファイルパス：/etc/httpd/conf.d/python_mod_pywebsocket.conf<br />
+ファイル内容</p>
+<blockquote><p>
+&lt;IfModule python_module&gt;<br />
+  PythonPath &#8220;sys.path+[&#8216;/usr/lib/python2.4/site-packages/&#8217;]&#8221;<br />
+  PythonOption mod_pywebsocket.handler_root /var/www/html/wsh<br />
+  PythonHeaderParserHandler mod_pywebsocket.headerparserhandler<br />
+&lt;/IfModule&gt;
+</p></blockquote>
+<p>設定値の説明は下記の通り。</p>
+<blockquote><p>PythonPath &#8220;sys.path+[&#8216;/usr/lib/python2.4/site-packages/&#8217;]&#8221;</p></blockquote>
+<p>pywebsocketがインストールされているディレクトリパス。</p>
+<blockquote><p>PythonOption mod_pywebsocket.handler_root /var/www/html/wsh</p></blockquote>
+<p>websocketハンドラを格納されているディレクトリ</p>
+<h3>pywebsocketの反映</h3>
+<p>インストールしたpywebsocketを反映させる為にapacheを再起動する。</p>
+<blockquote><p>
+# /etc/init.d/httpd restart
+</p></blockquote>
+<h3>サンプルの配置・動作確認</h3>
+<p>上記でダウンロードしたpywebsocketにはサンプルが含まれているので、それが正常に動作するか動作確認を行う。</p>
+<p><strong>サンプルの配置</strong></p>
+<blockquote><p>
+# cd pywebsocket-0.5/src/example<br />
+# cp echo_wsh.py /var/www/html/wsh/
+</p></blockquote>
+<p><strong>動作確認</strong></p>
+<blockquote><p>
+# python echo_client.py -s localhost -r /echo<br />
+Send: Hello<br />
+Recv: Hello<br />
+Send: 日本<br />
+Recv: 日本<br />
+Closing handshake<br />
+# python echo_client.py -s localhost -r /echo -m &#8216;hoge&#8217;,&#8217;foo&#8217;<br />
+Send: hoge<br />
+Recv: hoge<br />
+Send: foo<br />
+Recv: foo<br />
+Closing handshake
+</p></blockquote>
+<h2>補足</h2>
+<h3>websocketハンドラファイルの命名規則</h3>
+<blockquote><p>PythonOption mod_pywebsocket.handler_root /var/www/html/wsh</p></blockquote>
+<p>上記で設定したmod_pywebsocket.handler_rootから下記のような命名規則でハンドラが実行されます。</p>
+<blockquote><p>
+[{ディレクトリパス}]{リソース名}_wsh.py
+</p></blockquote>
+<p><strong>サンプル</strong><br />
+アクセスURI：ws://localhost:80/echo<br />
+実行されるハンドラパス：/var/www/html/wsh/echo_wsh.py</p>
+<p>アクセスURI：ws://localhost:80/chat/echo<br />
+実行されるハンドラパス：/var/www/html/wsh/chat/echo_wsh.py</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4438/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[BlackBerry]OSの削除手順</title>
+		<link>/archives/2631/</link>
+					<comments>/archives/2631/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 09 Mar 2010 04:06:44 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[Manual]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2631</guid>
+
+					<description><![CDATA[以前、「[BlackBerry]OSの再インストール手順」でBlackBerryのOS再インストールについて書いたが、削除手順については触れていなかったので、Wikiの方に追加。 Delete Bla ... <a href="/archives/2631/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前、「<a href="https://fukata.org/2010/02/17/tutorial-reinstall-blackberry-os/">[BlackBerry]OSの再インストール手順</a>」でBlackBerryのOS再インストールについて書いたが、削除手順については触れていなかったので、Wikiの方に追加。</p>
+<p><a href="https://sites.google.com/site/tatsuyafukata/tutorial/delete-blackberry-os">Delete BlackBerry OS (Tatsuya Wiki)</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2631/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[BlackBerry]OSの再インストール手順</title>
+		<link>/archives/2451/</link>
+					<comments>/archives/2451/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 17 Feb 2010 02:10:14 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry OS 5]]></category>
+		<category><![CDATA[Manual]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2451</guid>
+
+					<description><![CDATA[昨日の記事「[BlackBerry]Bold 9000に公式版OS5.0をインストールしました」の中でも再インストール手順について少し明記しましたが、wikiの方にまとめましたので、URLを貼っておき ... <a href="/archives/2451/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の記事「<a href="https://fukata.org/2010/02/17/blackberry-bold-9000-os5-0-install-official-version/">[BlackBerry]Bold 9000に公式版OS5.0をインストールしました</a>」の中でも再インストール手順について少し明記しましたが、wikiの方にまとめましたので、URLを貼っておきたいと思います。</p>
+<p><a href="https://sites.google.com/site/tatsuyafukata/tutorial/bb-os-reinstall">ReInstall BlackBerry OS (Tatsuya Wiki)</a></p>
+<p>多少不明確な部分がありますが、何かわかり次第、上記のページを更新していきたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2451/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

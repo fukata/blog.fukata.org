@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>リスト &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%AA%E3%82%B9%E3%83%88/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sun, 26 Jul 2015 17:45:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>台湾、香港で行きたい場所をまとめてみた</title>
+		<link>/archives/366/</link>
+					<comments>/archives/366/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 26 Jul 2015 17:45:24 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[リスト]]></category>
+		<category><![CDATA[台湾]]></category>
+		<category><![CDATA[香港]]></category>
+		<guid isPermaLink="false">http://travel.fukata.org/?p=366</guid>
+
+					<description><![CDATA[(写真は上海のもので、好物の白切鶏) 2015.08.08 &#8211; 2015.08.13で台湾、香港へ行ってくることになったがどちらも初めてなので予定表みたいなのを作ってみた。 広告 今回は台 ... <a href="/archives/366/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/16087210127" title=""><img src="https://farm8.staticflickr.com/7508/16087210127_e122e66f6e_z.jpg" alt="" class="aligncenter" /></a></p>
+<p>(写真は上海のもので、好物の白切鶏)</p>
+<p>2015.08.08 &#8211; 2015.08.13で台湾、香港へ行ってくることになったがどちらも初めてなので予定表みたいなのを作ってみた。</p>
+<p><span id="more-366"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今回は台湾2泊、香港3泊という日程。</p>
+<p>どちらも初なので分からないがきっとどちらも物足らないものになるだろう。でも、また行きたい国かどうか知るのには良いかもしれない。</p>
+<p>下記がそのリスト。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/366/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7508/16087210127_e122e66f6e.jpg</image>
+	</item>
+	</channel>
+</rss>

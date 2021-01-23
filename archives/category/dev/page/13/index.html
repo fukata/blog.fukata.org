@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name='B-verify' content='1eef0dd0da25b13b2fae70673c38f59bb11c954e' />
+<title>開発 | blog.fukata.org</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="/wp-content/themes/subblog_v2/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- All in One SEO Pack 3.3.4 by Michael Torbert of Semper Fi Web Design[376,403] -->
+
+<meta name="keywords"  content="flash,google,google tv,google wave,html5,serversman@vps,v8,開発,heteml,phpspeed,ベンチマーク,broken link checker,plugins,wordpress plugin,フリーウェア,xml-rpc,blackberry,geocode,release,wp-gmaps-entry,ggoogle analytics,アクセスレポート,アクセス解析,xstream,xstream-1.3.1,xstream-for-android,ie7,gae,gae/p,validation,db.model,install,pdf,redmine,プロジェクト管理,python,daap,over ssh,rhythmbox,ubuntu" />
+<link rel="prev" href="/archives/category/dev/page/12/" />
+<link rel="next" href="/archives/category/dev/page/14/" />
+
+<script type="application/ld+json" class="aioseop-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"/#organization","url":"/","name":"blog.fukata.org","sameAs":[]},{"@type":"WebSite","@id":"/#website","url":"/","name":"blog.fukata.org","publisher":{"@id":"/#organization"}},{"@type":"CollectionPage","@id":"/archives/category/dev/#collectionpage","url":"/archives/category/dev/","inLanguage":"en-US","name":"\u958b\u767a","isPartOf":{"@id":"/#website"}}]}</script>
+<!-- All in One SEO Pack -->
+<link rel='dns-prefetch' href='' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="blog.fukata.org &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="blog.fukata.org &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="blog.fukata.org &raquo; 開発 Category Feed" href="/archives/category/dev/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-19570640-21';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-19570640-21', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css'  href='/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=1509' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/subblog_v2/style.css?ver=5.6' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/wp-content/themes/subblog_v2/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4' id='monsterinsights-frontend-script-js'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" type="application/json" href="/wp-json/wp/v2/categories/1980" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<meta name="google-site-verification" content="yjvKGgbcWE3PHz6TpeUVsUpgV_igFWiuFjeo8u1oBSg" /><style type="text/css">div#toc_container {width: 100%;}</style>
+<!-- BEGIN: WP-OGP by http://www.millerswebsite.co.uk Version: 1.0.5  -->
+<meta property="og:title" content="blog.fukata.org" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/wp-content/plugins/wp-ogp/default.jpg" />
+<meta property="image_src" content="/wp-content/plugins/wp-ogp/default.jpg" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="blog.fukata.org" />
+<!-- BEGIN: WP Social Bookmarking Light HEAD -->
+
+
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<style type="text/css">
+    .wp_social_bookmarking_light{
+    border: 0 !important;
+    padding: 10px 0 20px 0 !important;
+    margin: 0 !important;
+}
+.wp_social_bookmarking_light div{
+    float: left !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 5px 0px 0 !important;
+    min-height: 30px !important;
+    line-height: 18px !important;
+    text-indent: 0 !important;
+}
+.wp_social_bookmarking_light img{
+    border: 0 !important;
+    padding: 0;
+    margin: 0;
+    vertical-align: top !important;
+}
+.wp_social_bookmarking_light_clear{
+    clear: both !important;
+}
+#fb-root{
+    display: none;
+}
+.wsbl_twitter{
+    width: 100px;
+}
+.wsbl_facebook_like iframe{
+    max-width: none !important;
+}
+.wsbl_pinterest a{
+    border: 0px !important;
+}
+</style>
+<!-- END: WP Social Bookmarking Light HEAD -->
+	<style type="text/css">
+			.site-title a,
+		.site-description {
+			color: #444444 !important;
+		}
+	        .widget-title {
+            background-color: #444444;
+        }
+        .entry-content h2 {
+            border-left: #444444 solid 10px;
+            padding-left: 10px;
+        }
+	</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #282c34; }
+</style>
+	</head>
+
+<body class="archive paged category category-dev category-1980 custom-background paged-13 category-paged-13 custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="blog.fukata.org" rel="home">blog.fukata.org</a></h1>
+			<h2 class="site-description">旅するプログラマ</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+      <div class="menu-menu-1-container"><ul id="menu-menu-1" class="nav-menu"><li id="menu-item-7952" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-7952"><a href="/">Home</a></li>
+<li id="menu-item-8057" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8057"><a href="/archives/category/travel/">旅行</a></li>
+<li id="menu-item-8055" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8055"><a href="/archives/category/eating/">食事</a></li>
+<li id="menu-item-8056" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8056"><a href="/archives/category/camera/">カメラ</a></li>
+<li id="menu-item-8785" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-8785"><a href="/archives/category/dev/" aria-current="page">開発</a></li>
+<li id="menu-item-8786" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8786"><a href="/archives/category/note/">雑記</a></li>
+<li id="menu-item-7971" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7971"><a href="https://twitter.com/fukata/">Twitter</a></li>
+<li id="menu-item-7972" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7972"><a href="https://www.facebook.com/fukata.org">Facebook</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7973"><a href="https://www.youtube.com/c/FukataOrg">YouTube</a></li>
+<li id="menu-item-7974" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7974"><a href="https://www.instagram.com/tatsuya_fukata/">Instagram</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Category Archives: <span>開発</span></h1>
+
+        			</header><!-- .archive-header -->
+
+			
+	<article id="post-4351" class="post-4351 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-flash tag-google tag-google-tv tag-google-wave tag-html5 tag-serversmanvps tag-v8">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/4351/" title="Permalink to ServersMan@VPSのプランをEntryからStandardに変更" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/4351/" title="Permalink to ServersMan@VPSのプランをEntryからStandardに変更" rel="bookmark">ServersMan@VPSのプランをEntryからStandardに変更</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-05-21T12:14:58+00:00">2010-05-21</time></a>
+            <p class="entry-tags"><a href="/archives/tag/flash/" rel="tag">Flash</a>, <a href="/archives/tag/google/" rel="tag">Google</a>, <a href="/archives/tag/google-tv/" rel="tag">Google TV</a>, <a href="/archives/tag/google-wave/" rel="tag">Google Wave</a>, <a href="/archives/tag/html5/" rel="tag">HTML5</a>, <a href="/archives/tag/serversmanvps/" rel="tag">ServersMan@VPS</a>, <a href="/archives/tag/v8/" rel="tag">V8</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-4330" class="post-4330 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-serversmanvps">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/4330/" title="Permalink to ServersMan@VPSでの無料期間中のプラン変更" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/4330/" title="Permalink to ServersMan@VPSでの無料期間中のプラン変更" rel="bookmark">ServersMan@VPSでの無料期間中のプラン変更</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-05-20T19:37:00+00:00">2010-05-20</time></a>
+            <p class="entry-tags"><a href="/archives/tag/serversmanvps/" rel="tag">ServersMan@VPS</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-4218" class="post-4218 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-heteml tag-phpspeed tag-serversmanvps tag-739">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/4218/" title="Permalink to hetemlとServerMan@VPSでベンチマークを比較" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/4218/" title="Permalink to hetemlとServerMan@VPSでベンチマークを比較" rel="bookmark">hetemlとServerMan@VPSでベンチマークを比較</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-05-14T05:03:07+00:00">2010-05-14</time></a>
+            <p class="entry-tags"><a href="/archives/tag/heteml/" rel="tag">heteml</a>, <a href="/archives/tag/phpspeed/" rel="tag">PHPspeed</a>, <a href="/archives/tag/serversmanvps/" rel="tag">ServersMan@VPS</a>, <a href="/archives/tag/%e3%83%99%e3%83%b3%e3%83%81%e3%83%9e%e3%83%bc%e3%82%af/" rel="tag">ベンチマーク</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-4015" class="post-4015 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-broken-link-checker tag-plugins tag-wordpress-plugin">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/4015/" title="Permalink to リンク切れを発見してくれるWordPressプラグイン「Broken Link Checker」" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/4015/" title="Permalink to リンク切れを発見してくれるWordPressプラグイン「Broken Link Checker」" rel="bookmark">リンク切れを発見してくれるWordPressプラグイン「Broken Link Checker」</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-05-02T22:10:08+00:00">2010-05-02</time></a>
+            <p class="entry-tags"><a href="/archives/tag/broken-link-checker/" rel="tag">Broken Link Checker</a>, <a href="/archives/tag/plugins/" rel="tag">plugins</a>, <a href="/archives/tag/wordpress-plugin/" rel="tag">WordPress Plugin</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-2337" class="post-2337 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-450">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/2337/" title="Permalink to マウスカーソルをモニター間で移動する「MultiMonitorMouse」" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/2337/" title="Permalink to マウスカーソルをモニター間で移動する「MultiMonitorMouse」" rel="bookmark">マウスカーソルをモニター間で移動する「MultiMonitorMouse」</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-02-03T05:44:16+00:00">2010-02-03</time></a>
+            <p class="entry-tags"><a href="/archives/tag/%e3%83%95%e3%83%aa%e3%83%bc%e3%82%a6%e3%82%a7%e3%82%a2/" rel="tag">フリーウェア</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-2258" class="post-2258 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-xml-rpc">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/2258/" title="Permalink to [WordPress]XML-RPCでのリモート投稿時のタグの付与について" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/2258/" title="Permalink to [WordPress]XML-RPCでのリモート投稿時のタグの付与について" rel="bookmark">[WordPress]XML-RPCでのリモート投稿時のタグの付与について</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-01-27T01:29:54+00:00">2010-01-27</time></a>
+            <p class="entry-tags"><a href="/archives/tag/xml-rpc/" rel="tag">xml-rpc</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-2235" class="post-2235 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-blackberry">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/2235/" title="Permalink to [BlackBerry]Code Signing Keysの再申請について" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/2235/" title="Permalink to [BlackBerry]Code Signing Keysの再申請について" rel="bookmark">[BlackBerry]Code Signing Keysの再申請について</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-01-26T10:35:32+00:00">2010-01-26</time></a>
+            <p class="entry-tags"><a href="/archives/tag/blackberry/" rel="tag">BlackBerry</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-2232" class="post-2232 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-blackberry tag-geocode">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/2232/" title="Permalink to [BlackBerry]Geocodeのサンプル作りました" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/2232/" title="Permalink to [BlackBerry]Geocodeのサンプル作りました" rel="bookmark">[BlackBerry]Geocodeのサンプル作りました</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-01-24T02:41:57+00:00">2010-01-24</time></a>
+            <p class="entry-tags"><a href="/archives/tag/blackberry/" rel="tag">BlackBerry</a>, <a href="/archives/tag/geocode/" rel="tag">geocode</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-2070" class="post-2070 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-release tag-wp-gmaps-entry">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/2070/" title="Permalink to [WordPress]WP-GMaps-Entryのv0.3をリリースしました。" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/2070/" title="Permalink to [WordPress]WP-GMaps-Entryのv0.3をリリースしました。" rel="bookmark">[WordPress]WP-GMaps-Entryのv0.3をリリースしました。</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2010-01-09T19:39:08+00:00">2010-01-09</time></a>
+            <p class="entry-tags"><a href="/archives/tag/release/" rel="tag">Release</a>, <a href="/archives/tag/wp-gmaps-entry/" rel="tag">wp-gmaps-entry</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-2001" class="post-2001 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-google-analytics tag-xml-rpc tag-47 tag-46">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/2001/" title="Permalink to GoogleAnalyticsのアクセス解析情報をWordPressに自動投稿するプログラムを作りました" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/2001/" title="Permalink to GoogleAnalyticsのアクセス解析情報をWordPressに自動投稿するプログラムを作りました" rel="bookmark">GoogleAnalyticsのアクセス解析情報をWordPressに自動投稿するプログラムを作りました</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-12-25T10:52:23+00:00">2009-12-25</time></a>
+            <p class="entry-tags"><a href="/archives/tag/google-analytics/" rel="tag">Ggoogle Analytics</a>, <a href="/archives/tag/xml-rpc/" rel="tag">xml-rpc</a>, <a href="/archives/tag/%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88/" rel="tag">アクセスレポート</a>, <a href="/archives/tag/%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e8%a7%a3%e6%9e%90/" rel="tag">アクセス解析</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1910" class="post-1910 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-xstream tag-xstream-1-3-1 tag-xstream-for-android">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1910/" title="Permalink to [Android]O/XマッパーのXStreamをAndroidで利用できるようにしてみました" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1910/" title="Permalink to [Android]O/XマッパーのXStreamをAndroidで利用できるようにしてみました" rel="bookmark">[Android]O/XマッパーのXStreamをAndroidで利用できるようにしてみました</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-12-06T22:35:33+00:00">2009-12-06</time></a>
+            <p class="entry-tags"><a href="/archives/tag/xstream/" rel="tag">xstream</a>, <a href="/archives/tag/xstream-1-3-1/" rel="tag">xstream-1.3.1</a>, <a href="/archives/tag/xstream-for-android/" rel="tag">xstream-for-android</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1901" class="post-1901 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-ie7">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1901/" title="Permalink to [JavaScript]IEにて、「注意識別子、文字列または数がありません。」のエラーの回避策" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1901/" title="Permalink to [JavaScript]IEにて、「注意識別子、文字列または数がありません。」のエラーの回避策" rel="bookmark">[JavaScript]IEにて、「注意識別子、文字列または数がありません。」のエラーの回避策</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-11-29T23:46:49+00:00">2009-11-29</time></a>
+            <p class="entry-tags"><a href="/archives/tag/ie7/" rel="tag">IE7</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1887" class="post-1887 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-gae tag-gaep tag-validation">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1887/" title="Permalink to [GAE/P]独自のValidationManagerを作ってみました" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1887/" title="Permalink to [GAE/P]独自のValidationManagerを作ってみました" rel="bookmark">[GAE/P]独自のValidationManagerを作ってみました</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-11-25T11:56:35+00:00">2009-11-25</time></a>
+            <p class="entry-tags"><a href="/archives/tag/gae/" rel="tag">GAE</a>, <a href="/archives/tag/gaep/" rel="tag">GAE/P</a>, <a href="/archives/tag/validation/" rel="tag">validation</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1846" class="post-1846 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-db-model tag-gae tag-gaep tag-validation">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1846/" title="Permalink to [GAE/P]db.ModelのValidtionを任意のタイミングで行えるように変更" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1846/" title="Permalink to [GAE/P]db.ModelのValidtionを任意のタイミングで行えるように変更" rel="bookmark">[GAE/P]db.ModelのValidtionを任意のタイミングで行えるように変更</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-11-12T11:06:06+00:00">2009-11-12</time></a>
+            <p class="entry-tags"><a href="/archives/tag/db-model/" rel="tag">db.Model</a>, <a href="/archives/tag/gae/" rel="tag">GAE</a>, <a href="/archives/tag/gaep/" rel="tag">GAE/P</a>, <a href="/archives/tag/validation/" rel="tag">validation</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1837" class="post-1837 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-install tag-pdf tag-redmine tag-408">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1837/" title="Permalink to Ubuntu Jeos 8.04.3にRedmine+Passengerをインストールしてみました" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1837/" title="Permalink to Ubuntu Jeos 8.04.3にRedmine+Passengerをインストールしてみました" rel="bookmark">Ubuntu Jeos 8.04.3にRedmine+Passengerをインストールしてみました</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-11-10T15:29:13+00:00">2009-11-10</time></a>
+            <p class="entry-tags"><a href="/archives/tag/install/" rel="tag">install</a>, <a href="/archives/tag/pdf/" rel="tag">pdf</a>, <a href="/archives/tag/redmine/" rel="tag">redmine</a>, <a href="/archives/tag/%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e7%ae%a1%e7%90%86/" rel="tag">プロジェクト管理</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1834" class="post-1834 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-gae tag-gaep tag-python">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1834/" title="Permalink to [GAE/P]国際化に対応してみました　〜その３〜" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1834/" title="Permalink to [GAE/P]国際化に対応してみました　〜その３〜" rel="bookmark">[GAE/P]国際化に対応してみました　〜その３〜</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-11-05T00:34:51+00:00">2009-11-05</time></a>
+            <p class="entry-tags"><a href="/archives/tag/gae/" rel="tag">GAE</a>, <a href="/archives/tag/gaep/" rel="tag">GAE/P</a>, <a href="/archives/tag/python/" rel="tag">Python</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1830" class="post-1830 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-gae tag-gaep tag-python">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1830/" title="Permalink to [GAE/P]国際化に対応してみました　〜その２〜" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1830/" title="Permalink to [GAE/P]国際化に対応してみました　〜その２〜" rel="bookmark">[GAE/P]国際化に対応してみました　〜その２〜</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-11-02T01:24:06+00:00">2009-11-02</time></a>
+            <p class="entry-tags"><a href="/archives/tag/gae/" rel="tag">GAE</a>, <a href="/archives/tag/gaep/" rel="tag">GAE/P</a>, <a href="/archives/tag/python/" rel="tag">Python</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1823" class="post-1823 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-gae tag-gaep tag-python">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1823/" title="Permalink to [GAE/P]国際化に対応してみました　〜その１〜" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1823/" title="Permalink to [GAE/P]国際化に対応してみました　〜その１〜" rel="bookmark">[GAE/P]国際化に対応してみました　〜その１〜</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-11-01T22:44:20+00:00">2009-11-01</time></a>
+            <p class="entry-tags"><a href="/archives/tag/gae/" rel="tag">GAE</a>, <a href="/archives/tag/gaep/" rel="tag">GAE/P</a>, <a href="/archives/tag/python/" rel="tag">Python</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1817" class="post-1817 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-gae tag-gaep tag-python">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1817/" title="Permalink to [GAE/P]必須カラムの登録について" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1817/" title="Permalink to [GAE/P]必須カラムの登録について" rel="bookmark">[GAE/P]必須カラムの登録について</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-10-29T04:36:11+00:00">2009-10-29</time></a>
+            <p class="entry-tags"><a href="/archives/tag/gae/" rel="tag">GAE</a>, <a href="/archives/tag/gaep/" rel="tag">GAE/P</a>, <a href="/archives/tag/python/" rel="tag">Python</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+
+	<article id="post-1812" class="post-1812 post type-post status-publish format-standard has-post-thumbnail hentry category-dev tag-daap tag-over-ssh tag-rhythmbox tag-ubuntu">
+		                                          <header class="entry-header not-has-post-thumbnail">
+              <a href="/archives/1812/" title="Permalink to UbuntuでDAAP over SSHをやってみました" rel="bookmark"></a>
+            </header><!-- .entry-header -->
+                  
+		        <footer class="entry-meta">
+			<h1 class="entry-title">
+                <a href="/archives/1812/" title="Permalink to UbuntuでDAAP over SSHをやってみました" rel="bookmark">UbuntuでDAAP over SSHをやってみました</a>
+			</h1>
+
+                        <p class="category-name category-name-1980">開発</p>
+            <time class="entry-date" datetime="2009-10-26T11:20:50+00:00">2009-10-26</time></a>
+            <p class="entry-tags"><a href="/archives/tag/daap/" rel="tag">daap</a>, <a href="/archives/tag/over-ssh/" rel="tag">over ssh</a>, <a href="/archives/tag/rhythmbox/" rel="tag">Rhythmbox</a>, <a href="/archives/tag/ubuntu/" rel="tag">ubuntu</a></p>
+        </footer><!-- .entry-meta -->
+        	</article><!-- #post -->
+		<nav id="nav-below" class="navigation" role="navigation">
+			<h3 class="assistive-text">Post navigation</h3>
+			<div class="nav-previous alignleft"><a href="/archives/category/dev/page/14/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+			<div class="nav-next alignright"><a href="/archives/category/dev/page/12/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+		</nav><!-- #nav-below .navigation -->
+	
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			
+		<aside id="recent-posts-3" class="widget widget_recent_entries">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="/archives/9629/">New XPS 13(9370)を半年以上使ってみた感想</a>
+									</li>
+											<li>
+					<a href="/archives/9625/">2018年の振り返り</a>
+									</li>
+											<li>
+					<a href="/archives/9613/">Vue.jsでbeforeunloadを正しく実装する</a>
+									</li>
+											<li>
+					<a href="/archives/9605/">Nuxt.js(@nuxtjs/auth)とRails(omniauth)でTwitterとOAuth認証を行う方法</a>
+									</li>
+											<li>
+					<a href="/archives/9601/">JavaScriptからGoogle Adsenseを動的に表示する方法</a>
+									</li>
+											<li>
+					<a href="/archives/9595/">Windows10でSteamが突然落ちる問題を解決する方法</a>
+									</li>
+											<li>
+					<a href="/archives/9574/">開発マシンをNew XPS 13(9370)にした</a>
+									</li>
+											<li>
+					<a href="/archives/9581/">Saigon Cup 2018を観戦してきた</a>
+									</li>
+											<li>
+					<a href="/archives/9566/">Android One端末の「Xiaomi Mi A1」を2.3万円弱でゲットした</a>
+									</li>
+											<li>
+					<a href="/archives/9556/">バンコクで開催された「Thaiger Uppercut 2018」を観戦してきた</a>
+									</li>
+					</ul>
+
+		</aside><aside id="tag_cloud-3" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="/archives/tag/blackberry/" class="tag-cloud-link tag-link-282 tag-link-position-1" style="font-size: 11.36pt;" aria-label="BlackBerry (17 items)">BlackBerry</a>
+<a href="/archives/tag/cafebar-petit-plum/" class="tag-cloud-link tag-link-1494 tag-link-position-2" style="font-size: 10.333333333333pt;" aria-label="Cafe+bar Petit plum (13 items)">Cafe+bar Petit plum</a>
+<a href="/archives/tag/codeigniter/" class="tag-cloud-link tag-link-153 tag-link-position-3" style="font-size: 9.96pt;" aria-label="CodeIgniter (12 items)">CodeIgniter</a>
+<a href="/archives/tag/codeigniter-2-x/" class="tag-cloud-link tag-link-850 tag-link-position-4" style="font-size: 11.08pt;" aria-label="CodeIgniter 2.x (16 items)">CodeIgniter 2.x</a>
+<a href="/archives/tag/gr/" class="tag-cloud-link tag-link-1184 tag-link-position-5" style="font-size: 8.9333333333333pt;" aria-label="GR (9 items)">GR</a>
+<a href="/archives/tag/jcommunity/" class="tag-cloud-link tag-link-341 tag-link-position-6" style="font-size: 9.3066666666667pt;" aria-label="JCommunity (10 items)">JCommunity</a>
+<a href="/archives/tag/motorola-milestone/" class="tag-cloud-link tag-link-801 tag-link-position-7" style="font-size: 8.9333333333333pt;" aria-label="Motorola Milestone (9 items)">Motorola Milestone</a>
+<a href="/archives/tag/osse/" class="tag-cloud-link tag-link-1716 tag-link-position-8" style="font-size: 9.96pt;" aria-label="OSSE (12 items)">OSSE</a>
+<a href="/archives/tag/release/" class="tag-cloud-link tag-link-880 tag-link-position-9" style="font-size: 16.96pt;" aria-label="Release (72 items)">Release</a>
+<a href="/archives/tag/ricoh/" class="tag-cloud-link tag-link-1148 tag-link-position-10" style="font-size: 9.3066666666667pt;" aria-label="RICOH (10 items)">RICOH</a>
+<a href="/archives/tag/serversmanvps/" class="tag-cloud-link tag-link-738 tag-link-position-11" style="font-size: 8.9333333333333pt;" aria-label="ServersMan@VPS (9 items)">ServersMan@VPS</a>
+<a href="/archives/tag/sukhumvit/" class="tag-cloud-link tag-link-1253 tag-link-position-12" style="font-size: 11.08pt;" aria-label="Sukhumvit (16 items)">Sukhumvit</a>
+<a href="/archives/tag/ubuntu/" class="tag-cloud-link tag-link-23 tag-link-position-13" style="font-size: 9.3066666666667pt;" aria-label="ubuntu (10 items)">ubuntu</a>
+<a href="/archives/tag/wp-flickr-press/" class="tag-cloud-link tag-link-819 tag-link-position-14" style="font-size: 17.053333333333pt;" aria-label="wp-flickr-press (73 items)">wp-flickr-press</a>
+<a href="/archives/tag/%e3%82%ab%e3%83%95%e3%82%a7/" class="tag-cloud-link tag-link-1366 tag-link-position-15" style="font-size: 9.96pt;" aria-label="カフェ (12 items)">カフェ</a>
+<a href="/archives/tag/%e3%82%ab%e3%83%ac%e3%83%bc/" class="tag-cloud-link tag-link-303 tag-link-position-16" style="font-size: 10.613333333333pt;" aria-label="カレー (14 items)">カレー</a>
+<a href="/archives/tag/%e3%82%ab%e3%83%b3%e3%83%9c%e3%82%b8%e3%82%a2/" class="tag-cloud-link tag-link-1272 tag-link-position-17" style="font-size: 9.3066666666667pt;" aria-label="カンボジア (10 items)">カンボジア</a>
+<a href="/archives/tag/%e3%82%b5%e3%83%a0%e3%83%83%e3%83%88%e3%83%97%e3%83%a9%e3%82%ab%e3%83%bc%e3%83%b3/" class="tag-cloud-link tag-link-1275 tag-link-position-18" style="font-size: 12.48pt;" aria-label="サムットプラカーン (23 items)">サムットプラカーン</a>
+<a href="/archives/tag/%e3%82%bf%e3%82%a4/" class="tag-cloud-link tag-link-1057 tag-link-position-19" style="font-size: 19.853333333333pt;" aria-label="タイ (147 items)">タイ</a>
+<a href="/archives/tag/%e3%82%bf%e3%82%a4%e6%96%99%e7%90%86/" class="tag-cloud-link tag-link-1887 tag-link-position-20" style="font-size: 8.4666666666667pt;" aria-label="タイ料理 (8 items)">タイ料理</a>
+<a href="/archives/tag/%e3%83%90%e3%83%b3%e3%82%b3%e3%82%af/" class="tag-cloud-link tag-link-1058 tag-link-position-21" style="font-size: 15.746666666667pt;" aria-label="バンコク (53 items)">バンコク</a>
+<a href="/archives/tag/%e3%83%9b%e3%83%86%e3%83%ab/" class="tag-cloud-link tag-link-123 tag-link-position-22" style="font-size: 9.96pt;" aria-label="ホテル (12 items)">ホテル</a>
+<a href="/archives/tag/%e3%83%a9%e3%82%aa%e3%82%b9/" class="tag-cloud-link tag-link-1285 tag-link-position-23" style="font-size: 11.36pt;" aria-label="ラオス (17 items)">ラオス</a>
+<a href="/archives/tag/%e3%83%a9%e3%83%b3%e3%83%81/" class="tag-cloud-link tag-link-74 tag-link-position-24" style="font-size: 14.533333333333pt;" aria-label="ランチ (39 items)">ランチ</a>
+<a href="/archives/tag/%e3%83%ab%e3%82%a2%e3%83%b3%e3%83%91%e3%83%90%e3%83%bc%e3%83%b3/" class="tag-cloud-link tag-link-1435 tag-link-position-25" style="font-size: 9.3066666666667pt;" aria-label="ルアンパバーン (10 items)">ルアンパバーン</a>
+<a href="/archives/tag/%e4%b8%89%e8%bb%92%e8%8c%b6%e5%b1%8b/" class="tag-cloud-link tag-link-1609 tag-link-position-26" style="font-size: 8.9333333333333pt;" aria-label="三軒茶屋 (9 items)">三軒茶屋</a>
+<a href="/archives/tag/%e4%b8%8a%e6%b5%b7/" class="tag-cloud-link tag-link-53 tag-link-position-27" style="font-size: 8.4666666666667pt;" aria-label="上海 (8 items)">上海</a>
+<a href="/archives/tag/%e4%b8%8b%e5%8c%97%e6%b2%a2/" class="tag-cloud-link tag-link-1588 tag-link-position-28" style="font-size: 11.08pt;" aria-label="下北沢 (16 items)">下北沢</a>
+<a href="/archives/tag/%e5%8c%97%e6%b5%b7%e9%81%93/" class="tag-cloud-link tag-link-1164 tag-link-position-29" style="font-size: 9.96pt;" aria-label="北海道 (12 items)">北海道</a>
+<a href="/archives/tag/%e5%a4%96%e9%a3%9f/" class="tag-cloud-link tag-link-1982 tag-link-position-30" style="font-size: 22pt;" aria-label="外食 (248 items)">外食</a>
+<a href="/archives/tag/%e5%af%bf%e5%8f%b8/" class="tag-cloud-link tag-link-1513 tag-link-position-31" style="font-size: 8.4666666666667pt;" aria-label="寿司 (8 items)">寿司</a>
+<a href="/archives/tag/%e6%97%85%e8%a1%8c/" class="tag-cloud-link tag-link-1165 tag-link-position-32" style="font-size: 9.68pt;" aria-label="旅行 (11 items)">旅行</a>
+<a href="/archives/tag/%e6%97%a5%e6%9c%ac/" class="tag-cloud-link tag-link-1455 tag-link-position-33" style="font-size: 21.066666666667pt;" aria-label="日本 (198 items)">日本</a>
+<a href="/archives/tag/%e6%9c%ad%e5%b9%8c/" class="tag-cloud-link tag-link-714 tag-link-position-34" style="font-size: 9.3066666666667pt;" aria-label="札幌 (10 items)">札幌</a>
+<a href="/archives/tag/%e6%9d%b1%e4%ba%ac/" class="tag-cloud-link tag-link-131 tag-link-position-35" style="font-size: 20.413333333333pt;" aria-label="東京 (170 items)">東京</a>
+<a href="/archives/tag/%e6%9d%b1%e5%8d%97%e3%82%a2%e3%82%b8%e3%82%a2/" class="tag-cloud-link tag-link-1130 tag-link-position-36" style="font-size: 20.693333333333pt;" aria-label="東南アジア (181 items)">東南アジア</a>
+<a href="/archives/tag/%e6%a9%9f%e6%9d%90/" class="tag-cloud-link tag-link-1983 tag-link-position-37" style="font-size: 11.733333333333pt;" aria-label="機材 (19 items)">機材</a>
+<a href="/archives/tag/%e6%b8%8b%e8%b0%b7/" class="tag-cloud-link tag-link-1162 tag-link-position-38" style="font-size: 10.613333333333pt;" aria-label="渋谷 (14 items)">渋谷</a>
+<a href="/archives/tag/%e7%a6%8f%e5%b2%a1/" class="tag-cloud-link tag-link-27 tag-link-position-39" style="font-size: 8.4666666666667pt;" aria-label="福岡 (8 items)">福岡</a>
+<a href="/archives/tag/%e7%b5%8c%e5%a0%82/" class="tag-cloud-link tag-link-1507 tag-link-position-40" style="font-size: 12.666666666667pt;" aria-label="経堂 (24 items)">経堂</a>
+<a href="/archives/tag/%e8%87%aa%e7%82%8a/" class="tag-cloud-link tag-link-1981 tag-link-position-41" style="font-size: 8.4666666666667pt;" aria-label="自炊 (8 items)">自炊</a>
+<a href="/archives/tag/%e8%a1%a8%e5%8f%82%e9%81%93/" class="tag-cloud-link tag-link-1486 tag-link-position-42" style="font-size: 12.76pt;" aria-label="表参道 (25 items)">表参道</a>
+<a href="/archives/tag/%e8%b1%aa%e5%be%b3%e5%af%ba/" class="tag-cloud-link tag-link-1483 tag-link-position-43" style="font-size: 13.413333333333pt;" aria-label="豪徳寺 (29 items)">豪徳寺</a>
+<a href="/archives/tag/%e8%b2%b7%e3%81%84%e7%89%a9/" class="tag-cloud-link tag-link-1319 tag-link-position-44" style="font-size: 12.293333333333pt;" aria-label="買い物 (22 items)">買い物</a>
+<a href="/archives/tag/%e9%81%ba%e8%b7%a1/" class="tag-cloud-link tag-link-1283 tag-link-position-45" style="font-size: 8pt;" aria-label="遺跡 (7 items)">遺跡</a></div>
+</aside><aside id="categories-281282962" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-1137"><a href="/archives/category/camera/">カメラ</a> (52)
+</li>
+	<li class="cat-item cat-item-1278"><a href="/archives/category/travel/">旅行</a> (140)
+</li>
+	<li class="cat-item cat-item-1980 current-cat"><a aria-current="page" href="/archives/category/dev/">開発</a> (306)
+</li>
+	<li class="cat-item cat-item-1156"><a href="/archives/category/note/">雑記</a> (148)
+</li>
+	<li class="cat-item cat-item-1482"><a href="/archives/category/eating/">食事</a> (261)
+</li>
+			</ul>
+
+			</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
+		<select id="archives-dropdown-2" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='/archives/date/2018/12/'> December 2018 &nbsp;(2)</option>
+	<option value='/archives/date/2018/11/'> November 2018 &nbsp;(3)</option>
+	<option value='/archives/date/2018/06/'> June 2018 &nbsp;(2)</option>
+	<option value='/archives/date/2018/05/'> May 2018 &nbsp;(1)</option>
+	<option value='/archives/date/2018/03/'> March 2018 &nbsp;(7)</option>
+	<option value='/archives/date/2018/02/'> February 2018 &nbsp;(4)</option>
+	<option value='/archives/date/2018/01/'> January 2018 &nbsp;(8)</option>
+	<option value='/archives/date/2017/12/'> December 2017 &nbsp;(11)</option>
+	<option value='/archives/date/2017/11/'> November 2017 &nbsp;(4)</option>
+	<option value='/archives/date/2017/10/'> October 2017 &nbsp;(11)</option>
+	<option value='/archives/date/2017/09/'> September 2017 &nbsp;(12)</option>
+	<option value='/archives/date/2017/08/'> August 2017 &nbsp;(10)</option>
+	<option value='/archives/date/2017/07/'> July 2017 &nbsp;(3)</option>
+	<option value='/archives/date/2017/06/'> June 2017 &nbsp;(6)</option>
+	<option value='/archives/date/2017/04/'> April 2017 &nbsp;(3)</option>
+	<option value='/archives/date/2017/03/'> March 2017 &nbsp;(11)</option>
+	<option value='/archives/date/2017/02/'> February 2017 &nbsp;(2)</option>
+	<option value='/archives/date/2017/01/'> January 2017 &nbsp;(4)</option>
+	<option value='/archives/date/2016/12/'> December 2016 &nbsp;(12)</option>
+	<option value='/archives/date/2016/11/'> November 2016 &nbsp;(3)</option>
+	<option value='/archives/date/2016/08/'> August 2016 &nbsp;(2)</option>
+	<option value='/archives/date/2016/07/'> July 2016 &nbsp;(6)</option>
+	<option value='/archives/date/2016/06/'> June 2016 &nbsp;(15)</option>
+	<option value='/archives/date/2016/05/'> May 2016 &nbsp;(36)</option>
+	<option value='/archives/date/2016/04/'> April 2016 &nbsp;(14)</option>
+	<option value='/archives/date/2016/03/'> March 2016 &nbsp;(14)</option>
+	<option value='/archives/date/2016/02/'> February 2016 &nbsp;(12)</option>
+	<option value='/archives/date/2016/01/'> January 2016 &nbsp;(13)</option>
+	<option value='/archives/date/2015/12/'> December 2015 &nbsp;(3)</option>
+	<option value='/archives/date/2015/11/'> November 2015 &nbsp;(6)</option>
+	<option value='/archives/date/2015/08/'> August 2015 &nbsp;(3)</option>
+	<option value='/archives/date/2015/07/'> July 2015 &nbsp;(5)</option>
+	<option value='/archives/date/2015/06/'> June 2015 &nbsp;(9)</option>
+	<option value='/archives/date/2015/05/'> May 2015 &nbsp;(4)</option>
+	<option value='/archives/date/2015/04/'> April 2015 &nbsp;(3)</option>
+	<option value='/archives/date/2015/03/'> March 2015 &nbsp;(1)</option>
+	<option value='/archives/date/2015/02/'> February 2015 &nbsp;(3)</option>
+	<option value='/archives/date/2015/01/'> January 2015 &nbsp;(3)</option>
+	<option value='/archives/date/2014/12/'> December 2014 &nbsp;(1)</option>
+	<option value='/archives/date/2014/11/'> November 2014 &nbsp;(3)</option>
+	<option value='/archives/date/2014/09/'> September 2014 &nbsp;(5)</option>
+	<option value='/archives/date/2014/08/'> August 2014 &nbsp;(6)</option>
+	<option value='/archives/date/2014/07/'> July 2014 &nbsp;(6)</option>
+	<option value='/archives/date/2014/06/'> June 2014 &nbsp;(2)</option>
+	<option value='/archives/date/2014/05/'> May 2014 &nbsp;(12)</option>
+	<option value='/archives/date/2014/04/'> April 2014 &nbsp;(8)</option>
+	<option value='/archives/date/2014/03/'> March 2014 &nbsp;(15)</option>
+	<option value='/archives/date/2014/02/'> February 2014 &nbsp;(2)</option>
+	<option value='/archives/date/2014/01/'> January 2014 &nbsp;(12)</option>
+	<option value='/archives/date/2013/12/'> December 2013 &nbsp;(19)</option>
+	<option value='/archives/date/2013/11/'> November 2013 &nbsp;(1)</option>
+	<option value='/archives/date/2013/09/'> September 2013 &nbsp;(7)</option>
+	<option value='/archives/date/2013/08/'> August 2013 &nbsp;(15)</option>
+	<option value='/archives/date/2013/07/'> July 2013 &nbsp;(19)</option>
+	<option value='/archives/date/2013/06/'> June 2013 &nbsp;(26)</option>
+	<option value='/archives/date/2013/05/'> May 2013 &nbsp;(13)</option>
+	<option value='/archives/date/2013/04/'> April 2013 &nbsp;(9)</option>
+	<option value='/archives/date/2013/03/'> March 2013 &nbsp;(10)</option>
+	<option value='/archives/date/2013/02/'> February 2013 &nbsp;(14)</option>
+	<option value='/archives/date/2013/01/'> January 2013 &nbsp;(4)</option>
+	<option value='/archives/date/2012/12/'> December 2012 &nbsp;(5)</option>
+	<option value='/archives/date/2012/11/'> November 2012 &nbsp;(14)</option>
+	<option value='/archives/date/2012/10/'> October 2012 &nbsp;(5)</option>
+	<option value='/archives/date/2012/09/'> September 2012 &nbsp;(18)</option>
+	<option value='/archives/date/2012/08/'> August 2012 &nbsp;(8)</option>
+	<option value='/archives/date/2012/07/'> July 2012 &nbsp;(25)</option>
+	<option value='/archives/date/2012/06/'> June 2012 &nbsp;(18)</option>
+	<option value='/archives/date/2012/05/'> May 2012 &nbsp;(13)</option>
+	<option value='/archives/date/2012/04/'> April 2012 &nbsp;(2)</option>
+	<option value='/archives/date/2012/03/'> March 2012 &nbsp;(3)</option>
+	<option value='/archives/date/2012/02/'> February 2012 &nbsp;(13)</option>
+	<option value='/archives/date/2012/01/'> January 2012 &nbsp;(7)</option>
+	<option value='/archives/date/2011/12/'> December 2011 &nbsp;(12)</option>
+	<option value='/archives/date/2011/11/'> November 2011 &nbsp;(16)</option>
+	<option value='/archives/date/2011/10/'> October 2011 &nbsp;(21)</option>
+	<option value='/archives/date/2011/09/'> September 2011 &nbsp;(9)</option>
+	<option value='/archives/date/2011/08/'> August 2011 &nbsp;(5)</option>
+	<option value='/archives/date/2011/07/'> July 2011 &nbsp;(4)</option>
+	<option value='/archives/date/2011/06/'> June 2011 &nbsp;(16)</option>
+	<option value='/archives/date/2011/05/'> May 2011 &nbsp;(5)</option>
+	<option value='/archives/date/2011/04/'> April 2011 &nbsp;(12)</option>
+	<option value='/archives/date/2011/03/'> March 2011 &nbsp;(11)</option>
+	<option value='/archives/date/2011/02/'> February 2011 &nbsp;(4)</option>
+	<option value='/archives/date/2011/01/'> January 2011 &nbsp;(5)</option>
+	<option value='/archives/date/2010/12/'> December 2010 &nbsp;(6)</option>
+	<option value='/archives/date/2010/11/'> November 2010 &nbsp;(12)</option>
+	<option value='/archives/date/2010/10/'> October 2010 &nbsp;(5)</option>
+	<option value='/archives/date/2010/09/'> September 2010 &nbsp;(6)</option>
+	<option value='/archives/date/2010/08/'> August 2010 &nbsp;(3)</option>
+	<option value='/archives/date/2010/07/'> July 2010 &nbsp;(6)</option>
+	<option value='/archives/date/2010/06/'> June 2010 &nbsp;(2)</option>
+	<option value='/archives/date/2010/05/'> May 2010 &nbsp;(14)</option>
+	<option value='/archives/date/2010/04/'> April 2010 &nbsp;(5)</option>
+	<option value='/archives/date/2010/03/'> March 2010 &nbsp;(5)</option>
+	<option value='/archives/date/2010/02/'> February 2010 &nbsp;(10)</option>
+	<option value='/archives/date/2010/01/'> January 2010 &nbsp;(8)</option>
+	<option value='/archives/date/2009/12/'> December 2009 &nbsp;(5)</option>
+	<option value='/archives/date/2009/11/'> November 2009 &nbsp;(8)</option>
+	<option value='/archives/date/2009/10/'> October 2009 &nbsp;(8)</option>
+	<option value='/archives/date/2009/09/'> September 2009 &nbsp;(3)</option>
+	<option value='/archives/date/2009/08/'> August 2009 &nbsp;(2)</option>
+	<option value='/archives/date/2009/07/'> July 2009 &nbsp;(11)</option>
+	<option value='/archives/date/2009/06/'> June 2009 &nbsp;(7)</option>
+	<option value='/archives/date/2009/05/'> May 2009 &nbsp;(11)</option>
+	<option value='/archives/date/2009/04/'> April 2009 &nbsp;(2)</option>
+	<option value='/archives/date/2009/03/'> March 2009 &nbsp;(1)</option>
+	<option value='/archives/date/2009/01/'> January 2009 &nbsp;(3)</option>
+	<option value='/archives/date/2008/12/'> December 2008 &nbsp;(1)</option>
+	<option value='/archives/date/2008/11/'> November 2008 &nbsp;(3)</option>
+	<option value='/archives/date/2008/10/'> October 2008 &nbsp;(2)</option>
+	<option value='/archives/date/2008/09/'> September 2008 &nbsp;(1)</option>
+	<option value='/archives/date/2008/08/'> August 2008 &nbsp;(2)</option>
+	<option value='/archives/date/2008/07/'> July 2008 &nbsp;(3)</option>
+	<option value='/archives/date/2008/05/'> May 2008 &nbsp;(4)</option>
+	<option value='/archives/date/2008/04/'> April 2008 &nbsp;(2)</option>
+	<option value='/archives/date/2008/03/'> March 2008 &nbsp;(4)</option>
+	<option value='/archives/date/2008/02/'> February 2008 &nbsp;(5)</option>
+	<option value='/archives/date/2008/01/'> January 2008 &nbsp;(1)</option>
+	<option value='/archives/date/2007/12/'> December 2007 &nbsp;(2)</option>
+	<option value='/archives/date/2007/11/'> November 2007 &nbsp;(1)</option>
+	<option value='/archives/date/2007/10/'> October 2007 &nbsp;(1)</option>
+	<option value='/archives/date/2007/09/'> September 2007 &nbsp;(1)</option>
+
+		</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-2" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+            Powered by WordPress 5.6, PHP: 7.1.12		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+<!-- BEGIN: WP Social Bookmarking Light FOOTER -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<!-- END: WP Social Bookmarking Light FOOTER -->
+<script type='text/javascript' id='disqus_count-js-extra'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"fukata"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.17' id='disqus_count-js'></script>
+<script type='text/javascript' id='toc-front-js-extra'>
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1","visibility_show":"\u8868\u793a","visibility_hide":"\u975e\u8868\u793a","width":"100%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/table-of-contents-plus/front.min.js?ver=1509' id='toc-front-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/wp-syntax/js/wp-syntax.js?ver=1.1' id='wp-syntax-js-js'></script>
+<script type='text/javascript' src='/wp-content/themes/subblog_v2/js/navigation.js?ver=1.0' id='twentytwelve-navigation-js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+</html>

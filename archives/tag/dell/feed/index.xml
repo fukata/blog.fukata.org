@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Dell &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/dell/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 31 Dec 2018 07:00:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>New XPS 13(9370)を半年以上使ってみた感想</title>
+		<link>/archives/9629/</link>
+					<comments>/archives/9629/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 31 Dec 2018 07:00:03 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Dell]]></category>
+		<category><![CDATA[XPS13]]></category>
+		<guid isPermaLink="false">/?p=9629</guid>
+
+					<description><![CDATA[New XPS 13(9370)を開発マシンとして使い始めて半年ほど経つのでレビュー(メモ)を残しておく。 広告 開発マシンをNew XPS 13(9370)にした &#124; blog.fukata.org ... <a href="/archives/9629/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/41018399390" target="_blank" title="IMG_20180616_132942"><img loading="lazy" src="https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4_c.jpg" alt="IMG_20180616_132942" class="aligncenter" width="800" height="600"/></a></p>
+<p>New XPS 13(9370)を開発マシンとして使い始めて半年ほど経つのでレビュー(メモ)を残しておく。</p>
+<p><span id="more-9629"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="/archives/9574">開発マシンをNew XPS 13(9370)にした | blog.fukata.org</a></p>
+<p>開発マシンをXPS13に変更した時の記事は2018-06-16に上記として書いた。</p>
+<h2>主な用途</h2>
+<p>開発用とのUbuntu、動画、写真編集のWindowsのデュアルブート体制となっている。</p>
+<ul>
+<li>Ubuntu 18.10
+<ul>
+<li>Vim</li>
+<li>Chrome</li>
+<li>Docker </li>
+</ul>
+</li>
+<li>Windows 10
+<ul>
+<li>Lightroom</li>
+<li>Photoshop</li>
+<li>Filmora</li>
+</ul>
+</li>
+</ul>
+<h2>外観・本体</h2>
+<p>個人的にはローズゴールドの方が欲しかったが、上位スペックのものでは選択不可だったので仕方なくシルバーを使っている。</p>
+<p>デザインはシンプルで気に入っている。</p>
+<p>とても軽い(1.21kg)なのでリュックに入れても重さをあまり感じないくらい。</p>
+<h2>ディスプレイ</h2>
+<p>小さなボディながら13インチのディスプレイが付いているので十分大きく感じる。ディスプレイ自体も綺麗。</p>
+<p>今回のが人生初のタッチパネル対応のディスプレイを搭載したモデルだったのだがコレが意外と役立つ。主に寝ながらYouTubeを観る時に。</p>
+<h2>バッテリー</h2>
+<p>YouTubeを常に再生しながらでも5時間以上、YouTubeを観ながらではなければ9時間ほど使える。</p>
+<p>そのため、カフェに行く際に充電アダプターを持っていかなくても困らなくなったのは非常に大きい。</p>
+<h2>キーボード</h2>
+<p>ちょっと打鍵感が重い気もする。</p>
+<p>この当たりは好みの問題が大きく、どうしても気になるならお気に入りのキーボードを接続して使えば良い。</p>
+<p>長時間使用しているとどうしても本体のパームレスト部分が熱くなってきてプログラミングをやっていると手汗をかいてしまうので長時間作業する際には外付けキーボードを持参している。</p>
+<p>New XPS 13はUSB Type-AではなくUSB Type-Cポートのみなので外で作業する時はハブやら配線やらでごちゃごちゃしがちなのでBluetooth接続のキーボードの方が便利。自分はLenovoのワイヤレストラッキングポイントキーボードを使っている。マウスを持ち運ぶ必要もないので荷物削減にもなって良い。</p>
+<p>以前まではHHKB + マウス + パームレストを持ち運んでいたが荷物が非常に多くなるので邪魔になっていた。</p>
+<p>自宅では今もHHKB + マウス + パームレストの構成で行っている。</p>
+<h2>タッチパッド</h2>
+<p>Macbookと比べると感度が悪く引っかかる事が多い。</p>
+<p>大雑把な作業なら問題ないけど細かいものは素直にマウスを接続した方がストレスが少ない。</p>
+<h2>USB Type-Cポート</h2>
+<p>今まで充電用のポートは本体のどちらかにしかなかったがUSB Type-Cになってから左右のどちらからでも充電が可能になったのでカフェなど限られたスペースで充電したい時により便利になった。</p>
+<p>ただ、USB Type-Aポートが付いていないので従来までのキーボードやマウスなどを使う場合にはハブが必要になってしまうのが外ではちょっと使いにくいところではある。</p>
+<p>旅行することが多く旅先でもデュアルディスプレイを使いたいとのことからモバイルデュアルディスプレイを半年前に本体と同時に購入した。実際には15インチのディスプレイは持ち運ぶには大きすぎてあまり持ち運べてはいないがいざという時には持ち運べるので便利。</p>
+<p>ただ、今はより持ち運びやすいDUEXというディスプレイを注文している。本体に装着可能で更に持ち運びに適した形となっている。発送が予定の1月から遅れて2月頃とのことなので早く試したくてワクワクしている。</p>
+<p><a href="https://traha.org/p/%E3%83%8E%E3%83%9E%E3%83%89%E7%94%A8%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%81%AE%E6%B1%BA%E5%AE%9A%E7%89%88%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%8B%EF%BC%81%EF%BC%9F%E3%83%8E%E3%83%BC%E3%83%88%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%AB%E8%A3%85%E7%9D%80%E5%8F%AF%E8%83%BD%E3%81%AA%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%80%8CDUEX%E3%80%8D/59">ノマド用モバイルディスプレイの決定版になるか！？ノートパソコンに装着可能なディスプレイ「DUEX」 | トラハ 旅の記録をするなら！</a></p>
+<h2>動画編集</h2>
+<p>Filmoraを使っている。</p>
+<p>多少もっさりしているため大きなファイルの編集は厳しそう。</p>
+<p>10-20分程度のシンプルな動画であれば問題なくできる。</p>
+<h2>写真現像</h2>
+<p>Lightroomを使っている。</p>
+<p>それほど違和感無く編集作業が出来ている。</p>
+<p>動画編集の時も同じだが書き出しに若干時間がかかっているがそこまで大規模なファイルを編集、現像していないので困っていない。</p>
+<h2>ゲーム</h2>
+<p>Steam版のストリートファイターVを時々プレイしたりしているが低解像度版でもラグが生じるのでゲームはあまり出来ないと割り切った方が良さそう。</p>
+<p>他のゲームはあまり試していないので分からないが。</p>
+<p>最近だとeGPUもあるので自宅でゲームする時だけその恩恵を受ける。みたいな運用方法でも良いかもしれない。</p>
+<h2>価格</h2>
+<p>今回買ったスペックで23万円。MBPで同等のスペックを買うより断然安い。</p>
+<h2>macOSからUbuntu(+Windows)に乗り換えてみて</h2>
+<p>6年ほどプライベートでも仕事でもmacOSを使い続けてきたがXPS13にしてからメインOSをUbuntuに切り替えた。</p>
+<p>社会人になりたての頃、UbuntuをThinkPadに入れてプライベートでも仕事でもそれで開発を行っていたので久々のUbuntu Desktop。あの頃よりもだいぶ進化していて随分と使いやすくはなっているもののデフォルトでも便利かと言われると流石にmacOSほどではない。なんとか自分に合った形でカスタマイズしたので今は特に不自由なく使えているがカスタマイズをあまりしたくない人には向いていないので素直にmacOSかWindowsを使っていた方がよい。</p>
+<h2>まとめ</h2>
+<p>小さく処理能力もそれなりにあり、軽いため持ち運びにも適している。</p>
+<p>開発が主な用途なので今の所特に困っていない。OSをmacOSからUbuntuに変えたわけだけどある程度カスタマイズさせるのが面倒なのでそういうのが苦に感じる人はmacを使い続ける方が得策だと思う。</p>
+<p>Ubuntuを使い始めるとmacOSがデフォルトでもよく動いてくれるのをよく感じる。</p>
+<p>ただ、個人的にはMBP 15 Mid 2014からXPS13に変更して今のところ満足している。</p>
+<p>次回、パソコンを買い換える時はXPS以外にも長らく使っていないThinkPadも視野に入れてみよう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9629/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4.jpg</image>
+	</item>
+		<item>
+		<title>開発マシンをNew XPS 13(9370)にした</title>
+		<link>/archives/9574/</link>
+					<comments>/archives/9574/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 16 Jun 2018 07:52:25 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Dell]]></category>
+		<category><![CDATA[XPS13]]></category>
+		<guid isPermaLink="false">/?p=9574</guid>
+
+					<description><![CDATA[前職にいた時から開発マシンはずっとmacを使っていたので7、8年くらいmacを開発マシンとして使い続けてきたけど今回、Linuxをメインに使おうと思ってDELLのNew XPS 13を購入した。 広告 ... <a href="/archives/9574/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/41018399390" target="_blank" title="IMG_20180616_132942"><img loading="lazy" src="https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4_c.jpg" alt="IMG_20180616_132942" class="aligncenter" width="800" height="600"/></a></p>
+<p>前職にいた時から開発マシンはずっとmacを使っていたので7、8年くらいmacを開発マシンとして使い続けてきたけど今回、Linuxをメインに使おうと思ってDELLのNew XPS 13を購入した。</p>
+<p><span id="more-9574"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>iOSの開発を仕事でも趣味でもほとんどやらなくなってしまったのでLinuxをメインに使うことにした。</p>
+<p>あと、ここ５、６年ほどずっと15インチのものを使っていたけど今回は13インチのものにした。</p>
+<p>New XPS 13はカスタマイズ内容によって、ディスプレイなど固定されてしまう部分があり、今回買ったスペックは後述するがディスプレイが4Kになってしまう。4KディスプレイになるとフルHDのものと比べて駆動時間が4時間ほど少なくなってしまうようなので開発マシンとして使う身としてはフルHD版も提供してほしかった。</p>
+<h2>スペック</h2>
+<pre><code>XPS 9370 - New XPS 13プラチナハイエンド・4Kタッチパネル・1TB SSD
+ コメント:
+   なし
+ CPU:
+   第8世代 インテルR Core? i7-8550U プロセッサー (8M キャッシュ, 最大 4.0 GHzまで可能)
+ OS:
+   Windows 10 Home 64ビット 英語
+ オフィス プロダクト キー:
+   なし
+ Microsoft アプリケーション ソフトウェア:
+   なし
+ Microsoft オペレーティング  システム メディア:
+   OS メディア キット なし
+ セキュリティソフトウェア:
+   マカフィーR リブセーフ? (12ヶ月間更新サービス)
+ メモリ:
+   16GB LPDDR3 2133MHz
+ ハードディスク:
+   1TB PCIe ソリッド ステート ドライブ
+ ドライバ:
+   Killer 1435 ドライバー
+ ワイヤレス:
+   Killer 1435 802.11ac 2x2 and Bluetooth
+ ディスプレイ:
+   13.3” 4K Ultra HD (3840 x 2160) フレームレス・タッチディスプレイ（プラチナシルバー&amp;ブラック）
+ プロセッサー ブランディング:
+   インテルR Core? i7 ラベル
+ ビデオ カード:
+   インテルR UHD グラフィックス 620
+ システムマネジメント:
+   システム マネジメント
+ 配送:
+   デル配送(日本)
+ キーボード:
+   バックライト キーボード (US/インターナショナル) 指紋認証リーダー 付き
+ 追加ソフトウェア:
+   追加 ソフトウェア
+ プライマリバッテリ:
+   52WHr バッテリー
+ 電源 ユニット:
+   Dell アダプタ USB-C to USB-A 3.0
+ パワー オプション:
+   電源ケーブル (日本)
+ FGA Module:
+   ITALIA1805_608/ITALIA1901_608/KR/JP/HK/BTO
+ ベース:
+   XPS 13 9370 BTX BASE
+ 将来のテクニカルサポート:
+   Standard Technical Phone Support (7x12)
+ Bundle:
+   CAX6080SPITS16ON3OJP-XPS 13
+ プレースマット:
+   プレースマット
+ パッケージング:
+   出荷資料 (ダイレクト)
+ オーダー 情報:
+   なし
+ リテール 情報:
+   なし
+ アセット プロテクション:
+   2年目 バッテリ保証延長サービス
+ テック シートを含め:
+   テクシート (JP)
+ 安心サポート&lt;br&gt;最大50%OFF！ 新生活応援ディスカウントキャンペーン実施中:
+   1年間 引き取り修理サービス
+ アクシデンタル ダメージ サービス:
+   1年間 アクシデンタルダメージ (盗難対応オプション付き)
+ 商品配達希望時間:
+   ローカル デリバリー
+ ドキュメンテーション /ディスク:
+   ドキュメントMUI用 (英語,中国語・簡体,日本語,中国語・繁体,韓国語)
+数量: 1
+</code></pre>
+<h2>アクセサリー</h2>
+<p>予備バッテリーや今回初めてモバイルディスプレイも買ってみた。</p>
+<ul>
+<li><a href="https://amzn.to/2rgkx7a" rel="noopener" target="_blank">For Dell XPS13 XPS 13 2015 Laptop Power Adapter Folding 3 to 2 Pin Plug Charger [並行輸入品] </a></li>
+<li><a href="https://amzn.to/2FGGl16" rel="noopener" target="_blank">Lenovo (純正品) トラックポイント・キャップ　(ソフト・ドーム)　10個セット</a></li>
+<li><a href="https://amzn.to/2rgNVe9" rel="noopener" target="_blank">【反射防止(アンチグレア) 液晶保護フィルム】 DELL XPS 13 (13.3インチ)機種用 気泡が消えるエアーレス加工[クリーニングクロス＆ヘラ付]</a></li>
+<li><a href="https://amzn.to/2ri9M4p" rel="noopener" target="_blank">ASUS モバイルディスプレイ MB16AC 15.6インチモニター(1,920×1,080 / ブルーライト軽減 / USB Type-C / IPSパネル)</a></li>
+<li><a href="https://amzn.to/2wb4Q6W" rel="noopener" target="_blank">Dell デル 45W Type-C USB-C AC アダプター 5V/20V-2A/2.25A　PSE コード付き</a></li>
+<li><a href="https://amzn.to/2KxdKi8" rel="noopener" target="_blank">Tomtoc 360°保護 耐衝撃 インナーケース 13インチ New MacBook Pro Touch Bar搭載 (A1706 A1708) | 13インチ Dell XPS 用 13インチ ラップトップスリーブケース 、撥水加工、 ブルーブラック</a></li>
+<li><a href="https://amzn.to/2Kw8RWw" rel="noopener" target="_blank">レノボ・ジャパン ThinkPad Bluetooth ワイヤレス・トラックポイント・キーボード &#8211; 英語 0B47189</a></li>
+<li><a href="https://amzn.to/2FBnQuQ" rel="noopener" target="_blank">USB ハブ USB-C usb3.0ポートアダプターNOVOO Micro SD/ usb type c ハブ SDカードリーダー USB HDMI USB3.0 MacBook2016 MacBook Pro/ChromeBook対応 (グレー)</a></li>
+<li><a href="https://amzn.to/2riIgDN" rel="noopener" target="_blank">ASUS MB16AC 15.6インチ用【高硬度9Hアンチグレアタイプ】液晶保護フィルム 反射防止！強化ガラス同等の高硬度9Hフィルム</a></li>
+<li><a href="https://amzn.to/2w7k6BH" rel="noopener" target="_blank">Dell New XPS 13 9370 2018年2月モデル 13.3インチ用【高硬度9Hアンチグレアタイプ】液晶保護フィルム 反射防止！強化ガラス同等の高硬度9Hフィルム</a></li>
+</ul>
+<h2>金額</h2>
+<p>New XPS 13本体がクーポンなどを適用して23万円弱、アクセサリー類が7万円弱と合計30万円弱となった。</p>
+<h2>まとめ</h2>
+<p>前回、1ヶ月ベトナムのダラットに住んでみて宿のソファとローテーブルで作業をしていると体勢的に腰を痛めてしまったのでThinkpad Bluetoothキーボードを使ってみることにした。</p>
+<p>また、モバイルディスプレイも同じ理由で長期滞在などで利用するホテル、宿でもデュアルディスプレイを使いたいという要望から。</p>
+<p>windows 10 / ubuntu 18.04を使ってみてmacのUIが優れているのが確認できた。アンチmacでもない人は素直にmac使うのが無難だと思う。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9574/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4.jpg</image>
+	</item>
+	</channel>
+</rss>

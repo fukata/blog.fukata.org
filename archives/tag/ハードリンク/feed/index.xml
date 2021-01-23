@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ハードリンク &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%8F%E3%83%BC%E3%83%89%E3%83%AA%E3%83%B3%E3%82%AF/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>VistaのC:\Windows肥大化を解消</title>
+		<link>/archives/4399/</link>
+					<comments>/archives/4399/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 24 May 2010 16:22:26 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CCleaner]]></category>
+		<category><![CDATA[vista]]></category>
+		<category><![CDATA[シンボリックリンク]]></category>
+		<category><![CDATA[ハードリンク]]></category>
+		<category><![CDATA[容量削減]]></category>
+		<category><![CDATA[復元ポイント]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4399</guid>
+
+					<description><![CDATA[現在、Vista Ultimateを使用しているのですが、Cドライブの残り容量が100MBしかない日々が続いていました。元々HDDが40GB(Ubuntu 40GB／Windows 40GBのデュアル ... <a href="/archives/4399/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、Vista Ultimateを使用しているのですが、Cドライブの残り容量が100MBしかない日々が続いていました。元々HDDが40GB(Ubuntu 40GB／Windows 40GBのデュアルブート)しかないため、気を付けてファイルをこまめに削除していたんですが、不要ファイルユーティリティなどを使っても最近は改善される事が少なくなったので何でかと思い各フォルダごとの容量を調べてみたところ、フォルダ「C:\Windows」が21GB以上になっていました。実に全体の半分以上です。で、さらに見てみると「C:\Windows\SoftwareDistribution\Download」と「C:\Windows\winsxs」を合わせて15GB程使っていました。</p>
+<p>これらのフォルダを調べてみると、</p>
+<p><a href="https://www.atmarkit.co.jp/fwin2k/win2ktips/1073patchdel/patchdel.html">修正プログラムのアンインストール情報を削除してディスクの空き容量を増やす － ＠IT</a></p>
+<p><strong>C:\Windows\SoftwareDistribution\Download</strong>は、WindowsUpdateのダウンロードしたファイルが格納されているそうです。既にWindowsUpdateが終わっていれば削除しても大丈夫だということなので、削除しました。これで、6GB程度空きました。</p>
+<p>そして、<strong>C:\Windows\winsxs</strong>ですが、下記の記事にまとめられています。</p>
+<p><a href="https://d.hatena.ne.jp/NyaRuRu/20081208/p2">Win32 API でファイルのハードリンクカウントを調べる &#8211; WinSxS フォルダの真実 &#8211; NyaRuRuの日記</a></p>
+<p>元記事と思われるのはこちら。<br />
+<a href="https://blogs.msdn.com/e7/archive/2008/11/19/disk-space.aspx">Engineering Windows 7 : Disk Space</a></p>
+<p><strong>C:\Windows\winsx</strong>の中身は、</p>
+<blockquote><p>The Windows SxS directory represents the “installation and servicing state” of all system components. </p></blockquote>
+<p>とあるので、インストールとサービスの状態を示すファイル（ハードリンク）の一覧のようです。実体でもないのに容量が実容量のようになっているのはハードリンクの特性でシンボリックリンクに比べてよりリンクを意識させることなく利用するためにその方が適しているからでしょう。ハードリンクについて詳しくは<a href="https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%83%AA%E3%83%B3%E3%82%AF">こちら</a>。</p>
+<p><strong>C:\Windows\winsx</strong>の中身を削除することによりシステムが不安定になったり、最悪起動しなくなったりする恐れがあるので下手に触らない方が吉でしょう。</p>
+<p>この他にもVistaの容量削減については、復元ポイントの削除や不要ファイル削除ユーティリティの使用などがあります。ちなみに、私がいつも使っている不要ファイル削除ユーティリティは下記のソフトウェアです。</p>
+<p><a href="https://www.piriform.com/ccleaner">CCleaner &#8211; Optimization and Cleaning &#8211; Free Download</a></p>
+<p>結局、私は6GB程容量を確保することができました。そろそろ限界です。早くX201sよ来てくれ・・・。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4399/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

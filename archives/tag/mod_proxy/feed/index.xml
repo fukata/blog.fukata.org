@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mod_proxy &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mod_proxy/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>NodeJSをサブディレクトリで動かす為のApacheの設定</title>
+		<link>/archives/6237/</link>
+					<comments>/archives/6237/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 10 Oct 2011 17:10:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[mod_proxy]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6237</guid>
+
+					<description><![CDATA[そろそろnginxに移行しようかなとも思っているのですが、現状、Apache上で動かしていたため、ApacheでのNodeJSのプロキシ設定です。 Apacheの設定は、最初に設定してそれっきりで次に ... <a href="/archives/6237/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>そろそろnginxに移行しようかなとも思っているのですが、現状、Apache上で動かしていたため、ApacheでのNodeJSのプロキシ設定です。</p>
+<p>Apacheの設定は、最初に設定してそれっきりで次に設定する時に覚えていないので、メモとして残しておきます。</p>
+<p>別にNodeJSに限った話ではなく、他の似たようなモノにも適用できるかもしれません。</p>
+<p>ProxyPass, ProxyPassReverseのみだと、NodeJS内のドキュメントルート以下のリンクなどがそのまま表示されてしまい、正常に動作しないので、SetOutputFilterとProxyHTMLURLMapを設定し、ドキュメントルート以下のリンクに指定したサブディレクトリを追加するように設定します。</p>
+<pre>
+&lt;VirtualHost *:80&gt;
+  ... その他設定 ...
+ 
+  ProxyPass /hoge https://localhost:3000/
+  ProxyPassReverse /hoge https://localhost:3000/
+  &lt;Location /hoge&gt;
+    SetOutputFilter proxy-html
+    ProxyHTMLURLMap / /hoge/
+  &lt;/Location&gt;
+ 
+  ... その他設定 ...
+&lt;/VirtualHost&gt;
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6237/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

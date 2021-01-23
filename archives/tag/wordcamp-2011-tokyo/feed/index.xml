@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WordCamp 2011 Tokyo &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/wordcamp-2011-tokyo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:06:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>WordCamp 2011 Tokyoに行ってきた</title>
+		<link>/archives/6542/</link>
+					<comments>/archives/6542/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 28 Nov 2011 05:01:01 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[WordCamp]]></category>
+		<category><![CDATA[WordCamp 2011 Tokyo]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6542</guid>
+
+					<description><![CDATA[WordCamp Tokyo 2011 &#124; 2011年11月27日(日) 品川シーサイド 楽天タワー2号館 昨日、品川シーサイドの楽天タワー２号館で行われたWordCamp 2011 Tokyoに行っ ... <a href="/archives/6542/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://2011.tokyo.wordcamp.org/">WordCamp Tokyo 2011 | 2011年11月27日(日) 品川シーサイド 楽天タワー2号館</a></p>
+<p>昨日、品川シーサイドの楽天タワー２号館で行われたWordCamp 2011 Tokyoに行ってきました。</p>
+<p>仕事関係で行く勉強会と大きく違ったのは、利用者、開発者、デザイナと多種多様な人が集まっていたことです。あと、デザイン関係も関わっているということで、女性の比率が高かったです。</p>
+<p>普段は技術系のセッションしか聴かないのですが、今回はせっかくWordPressのカンファレンスということもあり、普段と違って、ブロガー目線のセッションを多めに参加してきました。今回、参加したセッションは下記です。本当は、開会の挨拶から聴く予定だったのですが、まさかの寝坊で10:45のセッションから参加することになりました。</p>
+<ol>
+<li>10:45-11:15 ブロガーのための解析を使ったサイト改善 <a href="https://twitter.com/#!/cafemusic">春元和正</a>さん</li>
+<li>11:30-12:00 WordPressの動作原理詳説 <a href="https://twitter.com/#!/jim0912/">大曲仁</a>さん</li>
+<li>13:00-13:30 WordPressの現在とこれから <a href="https://twitter.com/#!/naokomc">マクラケン直子</a>さん</li>
+<li>13:45-14:15 WordCamp Tokyo 2011スタッフおすすめ！WordPressの面白いプラグインやテーマカスタマイズ <a href="https://twitter.com/#!/khoshino">星野邦敏</a>さん</li>
+<li>14:30-15:00 コンテンツ戦略を意識した今後のCMSの姿 <a href="https://twitter.com/#!/Yhassy">長谷川恭久</a>さん</li>
+<li>15:15-15:45 WordPressハイパフォーマンスチューニングReloaded <a href="https://twitter.com/#!/wokamoto">をかもと</a>さん</li>
+<li>16:00-16:45 パネルディスカッション：ブロガーによるブロガーのためのブログ運営のコツ <a href="https://twitter.com/#!/mehori/">堀正岳</a>さん、<a href="https://twitter.com/#!/goryugo">五藤隆介</a>さん、<a href="https://twitter.com/#!/draftbeerman/">タカバシ</a>さん</li>
+</ol>
+<p><span id="more-6542"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>WordPressの盛り上がりですが、@<a href="https://twitter.com/#!/naokomc">naokomc</a>さんの<a href="https://www.slideshare.net/naokomc/wordpress-10355769">スライド</a>の中にありますが、CMS別シェアで54.1%というまさに一人勝ち状態です。また、WordCampとしての日本での盛り上がりについても、@<a href="https://twitter.com/#!/megane9988">megane9988</a>さんの<a href="https://www.slideshare.net/hajimeogushi/wordcamp-tokyo-2011">スライド</a>にありますが、</p>
+<ul>
+<li>WordCamp 2011 Fukuoka 400人</li>
+<li>WordCamp 2011 Kobe 700人</li>
+<li>WordCamp 2011 Tokyo <strong>1300人</strong></li>
+</ul>
+<p>と、同じ年に開催された、WorcCamp 2011 Fukuokaに比べて3倍以上にもなっているというすごい盛り上がり方ですね。</p>
+<p>LT枠で発表された方々の動画はこちらになります。<a href="https://twitter.com/#!/megane9988">megane9988</a>さんのリズムの良いLTは本当に面白かったです。発表内容的にもまとめっぽくなってしまったので、閉会式を忘れてしまうというハプニングも。（後の懇親会で閉会式を行いました）</p>
+<p><iframe src="https://www.ustream.tv/embed/recorded/18775162" width="608" height="368" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe></p>
+<p>トゥギャッターの方にもWordCamp 2011 Tokyoの件がまとめられています。</p>
+<p><a href="https://togetter.com/li/219940">WordCamp Tokyo 2011 &#8221; #wctokyo &#8221; まとめ（お昼頃から） &#8211; Togetter</a></p>
+<p>WordCampを終えて、今この記事を書いているわけですが、普段、利用者の方とネット以外で接点を持つことはほとんどありませんでした。今回WordCampに参加してみて、こんなに盛り上がっているとは思っていなかったので、プラグイン開発者として利用者に少しでも気軽に使ってもらえるように、今までプラグインの説明や文言を英語中心で書いていたのを日本語の方も少し気にして作ろうかと思います。</p>
+<p>ブロガーがブログを書くモチベーション維持ではないですけど、開発者として開発のモチベーションを維持するのに勉強会というのは、以前参加したYAPC::Asiaでもそうですが、最近すごく有効だなと感じています。</p>
+<p>是非、次回のWordCampも参加してみようかと思います。いやぁ〜参加して良かった！</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6414951359" target='_blank'><img src="https://farm8.staticflickr.com/7017/6414951359_09a4a17f5e.jpg" alt="IMG_6817"  class='aligncenter'/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6414952259" target='_blank'><img src="https://farm8.staticflickr.com/7144/6414952259_f9878f0291.jpg" alt="IMG_6821"  class='aligncenter'/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6414947151" target='_blank'><img src="https://farm8.staticflickr.com/7033/6414947151_36652fd08b.jpg" alt="IMG_6813"  class='aligncenter'/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6414948469" target='_blank'><img src="https://farm7.staticflickr.com/6092/6414948469_8fc6234fe0.jpg" alt="IMG_6815"  class='aligncenter'/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6408927513" target='_blank'><img src="https://farm8.staticflickr.com/7024/6408927513_8ee9b6e90c.jpg" alt="焼売からあげ弁当 #wctokyo"  class='aligncenter'/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6415133853" target='_blank'><img src="https://farm8.staticflickr.com/7015/6415133853_9511914cf2.jpg" alt="2011-11-27_19-22-31_63"  class='aligncenter'/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6415132447" target='_blank'><img src="https://farm8.staticflickr.com/7033/6415132447_7b7049f305.jpg" alt="2011-11-27_19-18-51_967"  class='aligncenter'/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6415137413" target='_blank'><img src="https://farm8.staticflickr.com/7171/6415137413_6b51f1c7aa.jpg" alt="2011-11-27_19-35-57_589"  class='aligncenter'/></a></p>
+<p>@<a href="https://twitter.com/#!/Hitomi_e">Hitomi_e</a>さんのドラ娘のドラがあまり聞けなかったのが少し残念でした。次回こそは。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6542/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7017/6414951359_09a4a17f5e.jpg</image>
+	</item>
+	</channel>
+</rss>

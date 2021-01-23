@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>addon &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/addon/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ウィンドウ全体を楽々キャプチャFirefoxアドオン「ScreenGrab」</title>
+		<link>/archives/257/</link>
+					<comments>/archives/257/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 04 Feb 2008 19:12:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[addon]]></category>
+		<category><![CDATA[firefox]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/02/05/257/</guid>
+
+					<description><![CDATA[仕事で、ウィンドウ全体をキャプチャする必要があり、自分が既に入れていたソフトでは対応していなかったので色々探していたらfirefoxのアドオンでよさげな物があったので早速使ってみました。 実際に使って ... <a href="/archives/257/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p align="left"><a href="https://farm6.static.flickr.com/5135/5475570237_c7f0bb05bb_m.jpg" target="_blank" title="1146.gif"><img loading="lazy" src="https://farm6.static.flickr.com/5135/5475570237_c7f0bb05bb_m.jpg" alt="1146.gif" class="imageframe imgalignright" align="right" height="121" width="129" /></a>仕事で、ウィンドウ全体をキャプチャする必要があり、自分が既に入れていたソフトでは対応していなかったので色々探していたらfirefoxのアドオンでよさげな物があったので早速使ってみました。</p>
+<p align="left">実際に使ってみた感じは結構良いです。ただ、一つ言うならばショートカットキーが割り当てられるといいなぁと。</p>
+<p align="left">ScreenGrabのダウンロードは<a href="https://addons.mozilla.org/ja/firefox/addon/1146" target="_blank">こちら</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/257/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

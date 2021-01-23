@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WordPress &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/wordpress/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 28 Oct 2017 16:43:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>h2o+mrubyで移行前のブログURLを正常にリダイレクトするようにした</title>
+		<link>/archives/9053/</link>
+					<comments>/archives/9053/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 28 Oct 2017 13:43:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[mruby]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/?p=9053</guid>
+
+					<description><![CDATA[WordPressのインポート機能で取り込んだ時にIDが変わってしまったものがあったのでリダイレクタを作った。 広告 プログラムから生成したmrubyのリダイレクタは下記。 blog_redirect ... <a href="/archives/9053/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9053/"><img src="https://farm5.staticflickr.com/4514/37588929851_6344b9140a_c.jpg" alt="PA083776" class="aligncenter"/></a></p>
+<p>WordPressのインポート機能で取り込んだ時にIDが変わってしまったものがあったのでリダイレクタを作った。</p>
+<p><span id="more-9053"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>プログラムから生成したmrubyのリダイレクタは下記。</p>
+<p><a href="https://gist.github.com/fukata/a7c13342d4057b0567fb0fc6ded3c804" title="blog_redirect_handler.rb" target="_blank">blog_redirect_handler.rb</a></p>
+<p>あとは、これをh2oの設定ファイルで <code>mruby.handler-file</code> に指定すれば正常に動作する。</p>
+<p>WordPressのプラグインとして書こうかとも思ったけど既に以前のドメインでアクセスが来た際にblog.fukata.orgにリダイレクトしていたのでフローを変えずに処理するのはこれが最も楽だったと思う。</p>
+<p>プログラムから吐き出したmrubyスクリプトは<a href="https://github.com/erniebrodeur/ruby-beautify" title="erniebrodeur/ruby-beautify: a cli tool to beautify ruby output to screen." target="_blank">erniebrodeur/ruby-beautify</a>で整形した。簡単に整形出来て良い。なんならsyntaxチェックまでやってくれるので便利。</p>
+<p>久々にRailsじゃなくてruby書いた気がする。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9053/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4514/37588929851_6344b9140a.jpg</image>
+	</item>
+		<item>
+		<title>このサイトにdockerを使ってみた</title>
+		<link>/archives/7969/</link>
+					<comments>/archives/7969/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 27 Dec 2016 15:52:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[docker]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[Redis]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7969</guid>
+
+					<description><![CDATA[前回、h2o+phpのdockerイメージを練習がてらに作ってみたので今回はそれを使ってこの主にWordPressで構成されたサイトをdockerコンテナを使ってみた。 広告 構成 前回とほとんど構成 ... <a href="/archives/7969/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7969/"><img src="https://farm1.staticflickr.com/430/31834794276_e4d08e5f90_c.jpg" alt="PC263121" class="aligncenter"/></a></p>
+<p>前回、h2o+phpのdockerイメージを練習がてらに作ってみたので今回はそれを使ってこの主にWordPressで構成されたサイトをdockerコンテナを使ってみた。</p>
+<p><span id="more-7969"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>構成</h2>
+<p>前回とほとんど構成は変わってない。</p>
+<ul>
+<li>Digital Ocean Singapore 512MB</li>
+<li>Ubuntu 16.04 LTS</li>
+<li>MySQL 5.7</li>
+<li>Redis 3.2</li>
+<li>h2o 2.1.0-beta4</li>
+<li>php 7.0.14</li>
+</ul>
+<h2>dockerイメージ</h2>
+<p>使ったdockerイメージは下記。</p>
+<ul>
+<li><a href="https://hub.docker.com/_/mysql/">mysql:5.7</a></li>
+<li><a href="https://hub.docker.com/_/redis/">redis:3.2</a></li>
+<li><a href="https://hub.docker.com/r/fukata/h2o-php/">fukata/h2o-php</a></li>
+</ul>
+<p>/var/www 以下にあるWordPressやその他のWEBに公開しているファイルは現状はコンテ化出来ていないのでそのままホストに置いている状態となっている。</p>
+<p>これもコンテナ化しようかと思ったんだけどWordPress自身でのアップデートとかもあるしローカルで変更してイメージ化して再アップってのが個人で運営するブログ程度だと面倒くささが勝ちそうだったので良い案が思い浮かぶまでとりあえずホスト側に置くことにした。</p>
+<p>なので、h2o-phpコンテナとはvolumeに指定してマウントしている。</p>
+<h2>wp-config.php</h2>
+<p>h2o-phpコンテナからmysql,redisコンテナにアクセスするために下記のような設定を行っている。</p>
+<p>docker runのlinkオプションに他コンテナを指定することで環境変数に色々定義されるのでそれを使う。</p>
+<pre lang="php">
+/** MySQL hostname */
+define('DB_HOST', getenv('DB_PORT_3306_TCP_ADDR') ?: 'localhost');
+
+// redis
+define('WP_REDIS_HOST', getenv('REDIS_PORT_6379_TCP_ADDR') ?: 'localhost');
+define('WP_REDIS_PORT', getenv('REDIS_PORT_6379_TCP_PORT') ?: '6379');
+</pre>
+<p>今回、初めてphpの <em>?:</em> という演算子を知った。<br />
+いわゆるデフォルト値を定義してあげる時に便利なやつ。</p>
+<h2>ansible</h2>
+<p>ansibleのタスクからdockerコンテナの部分だけ抜粋。</p>
+<pre lang="yaml">
+- name: Create mysql container
+  docker_container:
+    name: db
+    image: mysql:5.7
+    pull: true
+    restart: yes
+    restart_policy: always
+    env:
+      MYSQL_ALLOW_EMPTY_PASSWORD: YES
+      MYSQL_USER: "{{ db_user }}"
+      MYSQL_PASSWORD: "{{ db_password }}"
+    ports:
+      - 127.0.0.1:3306:3306
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+      - /etc/mysql:/etc/mysql
+  tags: mysql
+
+- name: Create redis container
+  docker_container:
+    name: redis
+    image: redis:3.2
+    pull: true
+    restart: yes
+    restart_policy: always
+    ports:
+      - 127.0.0.1:6379:6379
+    volumes:
+      - /etc/redis:/etc/redis
+  tags: redis
+
+- name: Create h2o container
+  docker_container:
+    name: h2o
+    image: fukata/h2o-php
+    pull: true
+    restart: yes
+    restart_policy: always
+    ports:
+      - 0.0.0.0:80:80
+      - 0.0.0.0:443:443
+    links:
+      - db
+      - redis
+    volumes:
+      - /var/www:/var/www
+      - /var/log/h2o:/var/log/h2o
+      - /etc/h2o:/etc/h2o
+      - /etc/letsencrypt:/etc/letsencrypt
+  tags: h2o
+
+</pre>
+<h2>まとめ</h2>
+<p>今回、DigitalOceanのインスタンスを512MBプランに変更してみたんだけど普通に動いてるっぽい。かなりギリギリになってるので何かあるとすぐいっぱいになってしまいそうな不安はあるけど。</p>
+<p>とりあえず、今年中にやりたかったdockerコンテナを使ってサイトを公開出来たのは良かった。</p>
+<p>そろそろEC2に移行しようかな。どうせならterraformなど使って移行したい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7969/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/430/31834794276_e4d08e5f90.jpg</image>
+	</item>
+		<item>
+		<title>PHP7.0.2にアップグレードした</title>
+		<link>/archives/7871/</link>
+					<comments>/archives/7871/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 13 Jan 2016 08:11:04 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[PHP7]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://fukata.org/?p=7871</guid>
+
+					<description><![CDATA[以前、サイトをSSL化したが今回は使用しているPHPのバージョンを5.5.9から7.0.2にアップグレードした。 広告 環境 Ubuntu 14.04 PHP 5.5.9-1ubuntu4.14 PH ... <a href="/archives/7871/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7871/"><img src="https://farm2.staticflickr.com/1707/24189587091_3c413258e0_c.jpg" alt="P1092544" class="aligncenter"/></a></p>
+<p>以前、サイトをSSL化したが今回は使用しているPHPのバージョンを5.5.9から7.0.2にアップグレードした。</p>
+<p><span id="more-7871"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<ul>
+<li>Ubuntu 14.04</li>
+<li>PHP 5.5.9-1ubuntu4.14</li>
+</ul>
+<h2>PHP7インストール</h2>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-upgrade-to-php-7-on-ubuntu-14-04">How To Upgrade to PHP 7 on Ubuntu 14.04 | DigitalOcean</a></p>
+<p>基本的には上記のページに書かれている方法でPHP7にアップグレードする事が出来る。</p>
+<p>下記はメモとしてphp5の時に使っていたパッケージのphp7版をインストールした時のログ。</p>
+<p><script src="https://gist.github.com/fukata/e04bb98ea96c97e9b3a8.js?file=install_php7.sh"></script></p>
+<h2>WordPress</h2>
+<p>ここまででデフォルトのWordPressであれば動いているはず。</p>
+<p>自分の環境ではWP_Cache_Objectでpecl-memcacheに依存している部分があり、pecl-memcacheのメンテナンスが長い事行われてなかったりphp7対応するのがめんどくさそうだったので下記のプラグインを使ってキャッシュストアをRedisに変更した。</p>
+<p><a href="https://wordpress.org/plugins/redis-cache/installation/">WordPress › Redis Object Cache « WordPress Plugins</a></p>
+<p>上記プラグインはphpredisに対応しているのでphpredisを下記の要領でビルドすれば使えるようになった。</p>
+<p><script src="https://gist.github.com/fukata/e04bb98ea96c97e9b3a8.js?file=install_phpredis.sh"></script></p>
+<p>再移動も忘れずにしておこう。</p>
+<h2>まとめ</h2>
+<p><a href="https://fukata.org/2015/12/31/https-by-lets-encrypt/">Let’s Encryptを使ってサイトをSSL(http2)化した | Tatsuya Blog</a></p>
+<p>前回は、下記の記事でサイトのSSL化を行ったが、やっと今回PHP7化を行うことが出来た。</p>
+<p>と言っても自分のサイトくらいであれば大したアクセスもなければ基本的にはnginxのキャッシュを返している事が多いのであまり目に見えてるような恩恵は受けられていないかもしれない。とりあえず、PHP7でサイトを動かせたのは良かった。</p>
+<p>次はなんだろう。。。ログを可視化とかしてみたいかな。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7871/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1707/24189587091_3c413258e0.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]ServerMan@VPSでの高速化のためのチューニング</title>
+		<link>/archives/4301/</link>
+					<comments>/archives/4301/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 17 May 2010 19:02:32 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[LAMP]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[チューニング]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4301</guid>
+
+					<description><![CDATA[ServerMan@VPSに移行したということもあり、自由にサーバの設定をいじれるようになったので、高速化のためのチューニングを色々試してみました。現在のところどれくらい速くなったかというと、先日のh ... <a href="/archives/4301/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ServerMan@VPSに移行したということもあり、自由にサーバの設定をいじれるようになったので、高速化のためのチューニングを色々試してみました。現在のところどれくらい速くなったかというと、先日の<a href="https://fukata.org/2010/05/16/switch-from-heteml-to-serverman/">hetemlからServerMan@VPSに移行完了</a>で当サイトのトップページの表示速度が0.3s程度まで縮小されたと記述しました。気づけばhetemlの時より半分以下になっていますね。今回のチューニング後は0.23s程度まで短縮されました。なんとか、0.1s台までチューニングしたいところです。</p>
+<p>また、今回チューニングを行ったのはWordPress自身ではなく、WordPressを実行するサーバ側です。行ったのは下記のチューニングです。</p>
+<ul>
+<li>PHPアクセラレータの導入</li>
+<li>MySQLのクエリキャッシュの導入</li>
+<li>Apacheの圧縮転送の導入</li>
+</ul>
+<h2>PHPアクセラレータの導入</h2>
+<p>PHPはインタープリタ言語と言われる、実行時に動的にコンパイルする言語です。そのため、実行毎にコンパイルするのではなく、コンパイル結果をキャッシュする為の役目をPHPアクセラレータが担ってくれます。</p>
+<p>代表的なPHPアクセラレータにはGIGAZINEの下記の記事が詳しいです。</p>
+<p><a href="https://gigazine.net/index.php?/news/comments/20061103_php_accelerator/">PHPアクセラレータで一番高速なのはどれか？ &#8211; GIGAZINE</a></p>
+<p>今回ServerMan@VPSに導入したのは、APCというPHPアクセラレータです。インストールに関しては下記を参考にしました。</p>
+<p><a href="https://2bits.com/articles/installing-php-apc-gnulinux-centos-5.html">Installing PHP APC on GNU/Linux Centos 5 | 2bits.com, Inc. &#8211; Drupal Development, Customization and Consulting</a></p>
+<h2>Apacheの圧縮転送の導入</h2>
+<p>次に行ったのがApacheが配信するデータを圧縮するというもので、Apache1.3まではmod_gzipモジュールが、Apache2.0からはmod_deflateモジュールというのを使用して行います。<br />
+今回使用しているApacheは2.x系なので、mod_deflateを使います。</p>
+<p>導入に関してはCentOSでyumでhttpd-develをインストールすると初期状態でmod_deflateが有効になっているので今回は割愛します。設定方法に関しては下記が参考になります。</p>
+<p><a href="https://www.sssg.org/blogs/naoya/archives/827">mod_deflate を試してみた</a></p>
+<p>ちなみに、mod_cacheとmod_deflateを併用して描画時間が短縮されるか確かめてみたのですが、同程度だった為、単体でより短縮されるmod_deflateを利用しました。ただ、mod_deflateは毎回配信するデータを圧縮するのでCPUに負荷がかかります。回線の使用帯域とCPUリソースを天秤にかけてmod_cacheもしくは、mod_deflateどちらかを使用するか決めると良いかと思います。</p>
+<h2>MySQLのクエリキャッシュの導入</h2>
+<p><a href="https://dev.mysql.com/doc/refman/5.1/ja/query-cache.html">MySQL :: MySQL 5.1 リファレンスマニュアル :: 4.13 MySQL クエリ キャッシュ</a></p>
+<p>最後に行ったのがMySQLで発行されるSQLクエリをキャッシュするというもの。設定方法に関しては下記が参考になります。</p>
+<p>クエリ結果のキャッシュ｜MySQL｜プログラムメモ</p>
+<p>大きな設定に関しては上記の通りです。サーバ監視アプリの<a href="https://munin-monitoring.org/">Munin</a>をサーバにインストールしたので、これから定期的に計測して細かいチューニングを行います。また、改善されるようなチューニングが見つかった時には書きたいと思います。</p>
+<p>今回のチューニングはあくまでもServerMan@VPSの限られたリソース内でのチューニングなので、サーバスペックが変わればチューニング方法も変わる可能性がありますので、各自のサーバスペックと相談の上チューニングを行ってください。また、今回はサーバ側の設定のみでWordPressには依存しないものなので、基本的なLAMP環境のチューニングとしても利用可能です。</p>
+<p>最後に下記は上記のチューニング項目の現在の設定値になります。</p>
+<h3>PHPアクセラレータ(APC)</h3>
+<blockquote><p>
+APC Support	enabled<br />
+Version	3.0.19<br />
+MMAP Support	Enabled<br />
+MMAP File Mask	no value<br />
+Locking type	pthread mutex Locks<br />
+Revision	$Revision: 3.154.2.5 $<br />
+Build Date	May 13 2010 14:20:28</p>
+<p>Directive	Local Value	Master Value<br />
+apc.cache_by_default	On	On<br />
+apc.coredump_unmap	Off	Off<br />
+apc.enable_cli	Off	Off<br />
+apc.enabled	On	On<br />
+apc.file_update_protection	2	2<br />
+apc.filters	no value	no value<br />
+apc.gc_ttl	3600	3600<br />
+apc.include_once_override	Off	Off<br />
+apc.max_file_size	1M	1M<br />
+apc.mmap_file_mask	no value	no value<br />
+apc.num_files_hint	1000	1000<br />
+apc.report_autofilter	Off	Off<br />
+apc.shm_segments	1	1<br />
+apc.shm_size	30	30<br />
+apc.slam_defense	0	0<br />
+apc.stat	On	On<br />
+apc.stat_ctime	Off	Off<br />
+apc.ttl	0	0<br />
+apc.user_entries_hint	4096	4096<br />
+apc.user_ttl	0	0<br />
+apc.write_lock	On	On
+</p></blockquote>
+<h3>MySQLクエリキャッシュ</h3>
+<blockquote><p>
+| have_query_cache                | YES                                                        |<br />
+| query_cache_limit               | 1048576                                                    |<br />
+| query_cache_min_res_unit        | 4096                                                       |<br />
+| query_cache_size                | 33554432                                                   |<br />
+| query_cache_type                | ON                                                         |<br />
+| query_cache_wlock_invalidate    | OFF                                                        |
+</p></blockquote>
+<h3>mod_deflate</h3>
+<blockquote><p>
+SetOutputFilter DEFLATE<br />
+BrowserMatch ^Mozilla/4 gzip-only-text/html<br />
+BrowserMatch ^Mozilla/4\.0[678] no-gzip<br />
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html<br />
+SetEnvIfNoCase Request_URI \<br />
+\.(?:gif|jpe?g|png)$ no-gzip dont-vary<br />
+Header append Vary User-Agent env=!dont-vary
+</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4301/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>wordpress上でソースコードを綺麗に表示できる「WP-Styntax」をインストール</title>
+		<link>/archives/750/</link>
+					<comments>/archives/750/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 21 Nov 2008 14:29:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=750</guid>
+
+					<description><![CDATA[以前の記事で、PHPで10進数&#60;-&#62;32進数のソースコードを表示したんですけど、その時に「WP-Syntax」というプラグインを使ってみました。 ブログ上にも関わらず、綺麗に色分けされたプ ... <a href="/archives/750/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前の記事で、PHPで10進数&lt;-&gt;32進数のソースコードを表示したんですけど、その時に「<a href="https://wordpress.org/extend/plugins/wp-syntax/">WP-Syntax</a>」というプラグインを使ってみました。</p>
+<p>ブログ上にも関わらず、綺麗に色分けされたプログラムコードが表示されてます。</p>
+<p>wordpressを使用していて、プログラムコードを表示することが多い方は入れてみてはいかがでしょうか？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/750/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>WP Super Cacheをアンインストール</title>
+		<link>/archives/745/</link>
+					<comments>/archives/745/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 20 Nov 2008 02:11:15 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=745</guid>
+
+					<description><![CDATA[今朝インストールした、「WP Super Cache」を早速アンインストールしました。 なぜかというと、現在、ブログのモバイル対応に「Ktai Style」というプラグインを使用していたんですが、どう ... <a href="/archives/745/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今朝インストールした、「WP Super Cache」を早速アンインストールしました。</p>
+<p>なぜかというと、現在、ブログのモバイル対応に「Ktai Style」というプラグインを使用していたんですが、どうやらモバイル用のテンプレートを読み込まないといけないのに、PC用のテンプレートを読み込んでしまい、PC用テンプレートで表示されてしまっていました。</p>
+<p>別段速度的にも劇的に変わるほどでもないので、アンインストールしました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/745/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

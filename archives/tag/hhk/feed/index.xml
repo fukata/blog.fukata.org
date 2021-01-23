@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HHK &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/hhk/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>キーボードをHHKに変更しました</title>
+		<link>/archives/6751/</link>
+					<comments>/archives/6751/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 12 Jan 2012 03:17:44 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[HHK]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6751</guid>
+
+					<description><![CDATA[最近の職場のキーボード周りはこんな感じです。マシンはMacBook Pro 13inchで、フルHDの外部ディスプレイを使用しています。ここ4年くらいはずっとThinkPadを使っており、職場でも家で ... <a href="/archives/6751/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/45259648@N06/6682287551" target="_blank" title="HHK用のパームレスト"><img src="https://farm8.staticflickr.com/7016/6682287551_69c8f10468.jpg" alt="HHK用のパームレスト" class="aligncenter"/></a></p>
+<p>最近の職場のキーボード周りはこんな感じです。マシンはMacBook Pro 13inchで、フルHDの外部ディスプレイを使用しています。ここ4年くらいはずっとThinkPadを使っており、職場でも家でもトラベルキーボードやUSBトラックポイントキーボードを使用している赤ポッチ愛用者です。</p>
+<p><span id="more-6751"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>ちなみに、赤ポッチに出会う前は東プレのRealforce 89UとロジクールのMX1000なんかを使っていました。</p>
+<p>現在は上記の通り、HHK + Magic Trackpadという全然違う環境になっています。HHKは、なかなか試す機会がなかったのですが、職場の周りに愛用者が何人か居て、指の移動量が少なくて使いやすいとの評判は聞いていたので思い切って乗り換えてみました。</p>
+<p>乗り換えた一番の原因は、なんと言っても自宅でも使用しているウルトラナビ付きトラベルキーボードが売られなくなってしまったことです。</p>
+<p>ウルトラナビ付きトラベルキーボード<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6678941789" target="_blank" title="ウルトラナビ付きトラベルキーボード"><img src="https://farm8.staticflickr.com/7164/6678941789_bcf1dcfcb5.jpg" alt="ウルトラナビ付きトラベルキーボード" class="aligncenter"/></a></p>
+<p>Lenovoのサポセンの人も再販は今のところ予定していないとの事でした。本当に残念。</p>
+<p>現在、売られているコレと似たようなキーボードと言えば、<a href="https://www.amazon.co.jp/gp/product/B002NSDWPM/ref=as_li_ss_tl?ie=UTF8&#038;tag=fukata-22&#038;linkCode=as2&#038;camp=247&#038;creative=7399&#038;creativeASIN=B002NSDWPM">ThinkPad USB トラックポイントキーボード</a>で、実際に職場でも使っていました。キーボード+マウスでこの値段を考えれば十分過ぎるスペックなんですが、トラベルキーボードやHHK Pro、Realforceと比べるとどうしても打鍵感がチープで違和感がありました。</p>
+<p>それでも、赤ポッチが付いているということだけで職場で使っていたのですが、最近、職場の開発マシンがThinkPadからMacBook Proに移ったということもあり、将来的にも自宅の開発マシンもMacBook Proに移行しようかと考えているので、MacBook ProやMacBook Air単体で利用する時のことを考えるとマルチタッチのジェスチャーを覚えていた方が良いかなという安易な考えでマウスはMagic Trackpadになり、キーボードは指の移動量は極力抑えたいので、せっかく移行する機会が来たということもあり、今まで使用したことのないHHKにすることにしました。</p>
+<p>移行した結果はというと、HHKは正解でした。プログラミング中の指の移動量がトラベルキーボードの時よりも結構減った気がします。（使い始めた１，２日は慣れなくて、右Fnを意識して多用するようにしていたのと、右Shiftと右Fnを押し間違えないようにとで右小指がつりそうになりました）まだ、HHK使い始めて1週間も経っていませんが、早くも<a href="https://www.pfu.fujitsu.com/direct/hhkb/detail_hhkb-pro2-types.html" target="_blank">Type-S</a>が欲しいです。</p>
+<p>ただ、少しだけマウスを使いたい時にさっと使える赤ポッチが好きなので、現在は開発が止まっていますが、<a href="https://www.guru-board.com/japanese/home_jp" target="_blank">miniguru</a>が発売されればまた赤ポッチに戻るかもしれません。</p>
+<p>Magic Trackpadはというと、トラックパッド全般に言えることだと思いますが、指が湿っていると滑りが悪くなり使いにくくなるところが、なんとかならないものかなぁという感じです。</p>
+<p>赤ポッチからHHKに移行したわけですが、数年前は当分赤ポッチ使うだろうと思い、赤ポッチをこんなに買ってしまいました。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6679041721" target="_blank" title="赤ポッチの在庫"><img src="https://farm8.staticflickr.com/7160/6679041721_afb5547f13.jpg" alt="赤ポッチの在庫" class="aligncenter"/></a></p>
+<p>実はこれでは半分以上減っており、クラシックドームを15袋（1袋10個入り）買ったので150個もありました。さすがに15袋も買う予定はなく、5袋程度買う予定だったのが間違って15袋注文してしまっただけなんですが、一人でそんなに消費できるわけもなく、知人にあげたりして、やっと100個近く減りました。ただ、HHKに移行してしまったのでこれから減る量はだいぶ減るんじゃないかと思います。。。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6751/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7016/6682287551_69c8f10468.jpg</image>
+	</item>
+	</channel>
+</rss>

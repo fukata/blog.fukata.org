@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Google &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/google/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 12 Aug 2017 02:14:34 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CodeIgniterからGooglePlusAPIを使ってみた</title>
+		<link>/archives/6123/</link>
+					<comments>/archives/6123/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 16 Sep 2011 02:08:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Google Plus]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6123</guid>
+
+					<description><![CDATA[fukata/Study-GooglePlusAPI &#8211; GitHub 公開されたGoogle+ APIをCodeIgniterから簡単に実行してみました。基本的にGoogleのOAuth ... <a href="/archives/6123/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/fukata/Study-GooglePlusAPI">fukata/Study-GooglePlusAPI &#8211; GitHub</a></p>
+<p>公開されたGoogle+ APIをCodeIgniterから簡単に実行してみました。基本的にGoogleのOAuthを使っているだけなので、OAuthのプログラム書いたことのある人なら、すぐに使えるんじゃないかと思います。</p>
+<h2>APIの有効化</h2>
+<p>まずは、Google+ APIを有効化。<br />
+<a href="https://code.google.com/apis/console/b/0/">Google APIs Console</a></p>
+<h2>アプリケーションの作成</h2>
+<p>OAuthで使用するアプリケーション情報を下記から作成。<br />
+<a href="https://code.google.com/apis/console/b/0/#access">Google APIs Console</a></p>
+<p>上記で作成したClient ID, Client Secretを<strong>application/config/google_plus_api.php</strong>に設定すれば、使えるようになると思います。</p>
+<h2>各種クライアント</h2>
+<p>今回はpeclのOAuthを使いましたが、各種言語の公式クライアントがあるみたいなので、普通はそっちを使った方が楽かもしれません。</p>
+<p>各種、Google APIのクライントは下記からDLできます。<br />
+<a href="https://developers.google.com/+/downloads">Downloads &#8211; Google+ Platform — Google Developers</a></p>
+<h2>その他Google+情報</h2>
+<p>APIや各種情報については下記から。<br />
+<a href="https://developers.google.com/+/api/">Google+ API &#8211; Google+ Platform — Google Developers</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6123/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ServersMan@VPSのプランをEntryからStandardに変更</title>
+		<link>/archives/4351/</link>
+					<comments>/archives/4351/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 21 May 2010 12:14:58 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Flash]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Google TV]]></category>
+		<category><![CDATA[Google Wave]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[V8]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4351</guid>
+
+					<description><![CDATA[昨日の夜にEntry->Standardへプラン変更の申請を行いました。変更後のVPSが提供されるのは1ヶ月以内ということなので、提供される頃には無料期間（2010年6月30日まで）は残り僅かになって ... <a href="/archives/4351/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の夜にEntry->Standardへプラン変更の申請を行いました。変更後のVPSが提供されるのは1ヶ月以内ということなので、提供される頃には無料期間（2010年6月30日まで）は残り僅かになっています。現状としてメモリが常に枯渇状態になっているので、安定性を増させるためには良いと思います。とりあえず、これで少し様子を見ます。</p>
+<p>以下、最近気になった出来事。</p>
+<p><a href="https://googlewave.blogspot.com/2010/05/google-wave-available-for-everyone.html">Google Wave Available for Everyone &#8211; Google Wave Blog</a></p>
+<p>Googleが提供する超リアルタイムディスカッションツールであるGoogle Waveがついに一般公開されました。私は招待制の頃に使ったことがあるのですが、まだ、Chromeでしか利用したことがありませんがレスポンスがだいぶ良くなっています。以前は入力や画面スクロールにイライラしていましたが、今回はそれが解消されています。他人が現在入力している文字はもちろん、漢字変換などもリアルタイムに表示されるので、本当に話しているかのような感覚になります。また、APIなんかも公開されているので、これからさらに盛り上がっていきそうな感じです。</p>
+<p><a href="https://www.atmarkit.co.jp/news/201005/20/vp8.html">グーグルがVP8をOSS化、HTML5のvideo問題が決着か － ＠IT</a></p>
+<p>さすが、Google！<br />
+他にも、Google TVやらiTunesキラーとますます目の離せないGoogleに注目です。</p>
+<p><a href="https://journal.mycom.co.jp/articles/2010/05/20/jonathan_gay/index.html">【レポート】Flashの父、「iPhoneは今後数年でFlashをサポートすることになる」 (1) Flashの歴史 | パソコン | マイコミジャーナル</a></p>
+<p>個人的には、AppleのFlash排除に勢い付けてHTML5の普及し、Flash勢力は弱くなっていくと思うんですけどね・・・。Androidも現在はFlashをサポートしていますけど、それは現在のシェアが高いためでしょうし。Google自体がHTML5の普及に力を入れてることも考えると時代はFlash->HTML5になるんでしょうかね。</p>
+<p>私個人としては、クローズドなFlashよりもオープンなHTML5側の人間です。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4351/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>gmailのショートカット</title>
+		<link>/archives/764/</link>
+					<comments>/archives/764/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 25 Nov 2008 22:31:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[gmail]]></category>
+		<category><![CDATA[Google]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=764</guid>
+
+					<description><![CDATA[Ubuntuをメインマシンにしてから、メーラーは専らgmailにしています。 以前から、gmailにショートカットが存在することは知っていたんですが、ほとんど使っていませんでした。ふと、どんなショート ... <a href="/archives/764/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Ubuntuをメインマシンにしてから、メーラーは専らgmailにしています。</p>
+<p>以前から、gmailにショートカットが存在することは知っていたんですが、ほとんど使っていませんでした。ふと、どんなショートカットが存在するのか気になったので調べてみました。</p>
+<p>一応、全リストは<a href="https://mail.google.com/support/bin/answer.py?hl=ja&amp;ctx=mail&amp;answer=6594">こちら</a>になります。困ったときにはShift + ?でショートカット一覧が表示できます。ただ、一つ気になったのが、ページ遷移用のショートカットがないことです。普通によく使いそうなんだけどなぁ・・・。</p>
+<p><span style="color: #ff0000;">追記（2008-11-26）：</span></p>
+<blockquote><p>ページ遷移のショートカットがないと思ったんですが、ページ内の末尾のメールが選択されている状態で前のメールへ遷移（ショートカット：j）すると、次のページへ遷移できるみたいです。</p>
+<p>ただ、直接次ページや前ページへ遷移するショートカットは未だに不明</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/764/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>札幌旅行を終えて</title>
+		<link>/archives/394/</link>
+					<comments>/archives/394/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 03 May 2008 02:40:22 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[picasa]]></category>
+		<category><![CDATA[北海道]]></category>
+		<category><![CDATA[日本]]></category>
+		<category><![CDATA[札幌]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/05/03/394/</guid>
+
+					<description><![CDATA[1時間半かけて新千歳空港から羽田空港に戻ってきました。 う～ん、東京の空気はやっぱりよどんでる感じがしました＾＾；まぁ実際よどんでるんでしょうけどｗ 札幌で撮ってきた写真などを整理していつも通りウェブ ... <a href="/archives/394/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5100/5475575475_256e3aeca2_m.jpg" target="_blank" title="sapporo_04.JPG"><img loading="lazy" src="https://farm6.static.flickr.com/5100/5475575475_256e3aeca2_m.jpg" alt="sapporo_04.JPG" class="imageframe imgalignright" align="right" height="150" width="200" /></a>1時間半かけて新千歳空港から羽田空港に戻ってきました。</p>
+<p>う～ん、東京の空気はやっぱりよどんでる感じがしました＾＾；まぁ実際よどんでるんでしょうけどｗ</p>
+<p>札幌で撮ってきた写真などを整理していつも通りウェブアルバムの方にもアップロードしたので、もしよろしければ後で見てやってください＾＾（リンクは記事の最後に載せています）</p>
+<p>今思えば、今回の旅行は自分の稼いだお金で初めて行った旅行だったような気がします。今まで仕事に追われて時間があまりなかったので遠くへ行く機会がなかったのですが、今回まとまった時間が出来た為思い切って札幌まで行ってきました。</p>
+<p>でも、行った甲斐はありました＾＾色々見て回れたし、何より息抜きになりました♪自分が思っていた以上にお金は使ってしまいましたがまぁたまにはね＾＾；ということで大目に見てますｗ</p>
+<p>また、仕事に追われて精神的にきつくなったら知らない土地へ行ってリフレッシュしたいと思います＾＾</p>
+<p>ウェブアルバム「<a href="https://picasaweb.google.co.jp/tatsuya.fukata/nsHixC" target="_blank">札幌旅行</a>」</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/394/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

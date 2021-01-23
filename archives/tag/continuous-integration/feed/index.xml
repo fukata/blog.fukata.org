@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Continuous Integration &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/continuous-integration/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CodeIgniter2 + CIUnit2 + Jenkinsで継続的インテグレーションをやってみた</title>
+		<link>/archives/5991/</link>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 27 Jul 2011 03:37:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[Continuous Integration]]></category>
+		<category><![CDATA[Jenkins]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5991</guid>
+
+					<description><![CDATA[なんか、色々と意気消沈気味だったので、東京から上海に戻ってくる時にVMの構築を途中まで行っていたJenkinsを少し触ってみることにしました。とりあえず、目的としては、表題にも書いている通り、Code ... <a href="/archives/5991/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>なんか、色々と意気消沈気味だったので、東京から上海に戻ってくる時にVMの構築を途中まで行っていたJenkinsを少し触ってみることにしました。とりあえず、目的としては、表題にも書いている通り、CodeIgniter2(2.0.2), CIUnit2(カスタム版）, Jenkinsを使って、ビルドからテスト、コードチェックまで行える環境を作ることです。</p>
+<p>また、今回使用したソースは下記のリポジトリにアップしています。</p>
+<p><a href="https://github.com/fukata/ciunit2_and_jenkins">fukata/ciunit2_and_jenkins &#8211; GitHub</a></p>
+<p>PHPによるJenkinsのインストールなどについては、下記のサイトがとても参考になりました。</p>
+<p><a href="https://d.hatena.ne.jp/Yamashiro0217/20110619/1308491991">PHPでTDD&#038;CIワークショップ、Jenkins + PHP の各種プラグインパート資料 &#8211; Yamashiro0217の日記</a><br />
+<a href="https://blog.symfony.jp/2011/03/19/307">Symfony2でJenkinsを使ってCI « symfonyで開発日記</a></p>
+<p>今回はUbuntu 10.04 Server版を使ったため、Jenkinsはapt版を入れています。インストール方法は<a href="https://pkg.jenkins-ci.org/debian/" target="_blank">ここに</a>書かれている通りです。</p>
+<pre lang="BASH">
+wget -q -O - https://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo vim /etc/apt/sources.list
+> 末尾に追加: deb https://pkg.jenkins-ci.org/debian binary/
+sudo apt-get update
+sudo apt-get install jenkins
+</pre>
+<h3>build.xml作成</h3>
+<p>Jenkinsからプロジェクトをビルドする際に使用するbuild.xmlは上記のサイトでも行われているppwコマンドを利用しました。今回のプロジェクトだと下記のようになりました。</p>
+<pre lang="BASH">
+cd ciunit2_and_jenkins
+ppw --name ciunit2_and_jenkins --source ./src/application/ --tests ./src/application/tests/ --bootstrap ./src/application/third_party/CIUnit/bootstrap_phpunit.php --phpcs PEAR .
+</pre>
+<p>ただ、CIUnitの場合、sourceで指定したディレクトリ内にCIUnitやtestsコードが含まれている為、これらを解析対象から除外したい場合には下記のように、生成されたbuild.xmlを修正します。</p>
+<pre lang="DIFF">
+--- build.xml	2011-07-27 10:41:01.164477818 +0800
++++ build.xml.new	2011-07-27 10:40:51.814477818 +0800
+@@ -49,7 +49,8 @@
+    <arg line="${source}
+               xml
+               codesize,design,naming,unusedcode
+-              --reportfile ${basedir}/build/logs/pmd.xml"></arg>
++              --reportfile ${basedir}/build/logs/pmd.xml
++              --exclude third_party/CIUnit/" />
+   
+  
+ 
+@@ -61,7 +62,7 @@
+ 
+  <target name="phploc" description="Generate phploc.csv">
+   <exec executable="phploc">
+-   <arg line="--log-csv ${basedir}/build/logs/phploc.csv ${source}"></arg>
++   <arg line="--log-csv ${basedir}/build/logs/phploc.csv --exclude ${source}third_party/CIUnit ${source}"></arg>
+   </exec>
+  </target>
+ 
+@@ -70,13 +71,14 @@
+    <arg line="--report=checkstyle
+               --report-file=${basedir}/build/logs/checkstyle.xml
+               --standard=PEAR
++              --ignore=tests/,third_party/CIUnit
+               ${source}"></arg>
+   
+  
+ 
+  <target name="phpdoc" description="Generate API documentation using PHPDocumentor">
+   <exec executable="phpdoc">
+-   <arg line="-d ${source} -t ${basedir}/build/api"></arg>
++   <arg line="-d ${source} -t ${basedir}/build/api -i third_party/CIUnit/"></arg>
+   </exec>
+  </target>
+</pre>
+<h3>CodeIgniter用のCodeSniffer</h3>
+<p>ppwコマンドの&#8211;phpcsオプションでコードのスタイルチェックのモジュールを選べます。先ほどのコマンドではPEARを選択（デフォルトでもPEAR）したのですが、PEARのコード規約とCodeIgniterのコード規約がところどころ異なっており、CodeIgniterの規約的には正しいのに間違ってると警告されます。</p>
+<p>上記のページを参考にphpcsをインストールした場合、linuxの場合、下記のディレクトリにインストールされていると思います。</p>
+<pre lang="BASH">
+/usr/share/php/PHP/CodeSniffer/Standards
+</pre>
+<p>初期でインストールされているのは、下記のみです。</p>
+<pre lang="BASH">
+phpcs -i
+The installed coding standards are PEAR, MySource, PHPCS, Squiz and Zend
+</pre>
+<p>インストールされているものを参考にCodeIgniter用のCodeSnifferを作成すれば、コードチェックについても正常に行えるようになります。</p>
+<p>で、少し探してみたのですが、CodeIgniter用のCodeSnifferが見つからなかったので、作る必要があるかもしません。とりあえず、先走り気味にリポジトリだけ作成しました。</p>
+<p><del datetime="2011-07-27T06:13:08+00:00">fukata/codesniffer_codeigniter &#8211; GitHub</del></p>
+<p>@<a href="https://twitter.com/#!/yterajima">yterajima</a>さんから下記のリポジトリを教えてもらったので、これをforkすることにしました。<br />
+<a href="https://github.com/thomas-ernest/CodeIgniter-for-PHP_CodeSniffer">thomas-ernest/CodeIgniter-for-PHP_CodeSniffer &#8211; GitHub</a></p>
+<h3>おまけ：githubのプライベートリポジトリを利用する</h3>
+<p>jenkinsのgit pluginからgithubのプライベートリポジトリを利用する機会があったので、その時にはまったことについて書いておきます。</p>
+<p>はまったのは、gitへ接続する際に利用するssh keyの設定についてです。</p>
+<p>apt版jenkinsの場合、jenkinsの実行にはjenkinsユーザが行っているかと思います。そのjenkinsユーザのホームディレクトリが/var/lib/jenkinsに設定されており、/var/lib/jenkins/.sshがあるので、そこに必要な鍵等を入れます。で、次にjenkinsユーザでログインし、下記のコマンドでgithubに一度繋いでおきます。</p>
+<pre lang="BASH">
+ssh git@github.com
+</pre>
+<p>これで、jenkinsで、githubのプライベートリポジトリに対してgit cloneを正常に行えるようになります。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

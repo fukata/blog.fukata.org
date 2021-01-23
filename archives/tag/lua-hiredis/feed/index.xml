@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>lua-hiredis &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/lua-hiredis/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>lua-hiredisでcloseしているのにnetstatで確認するとTIME_WAITが大量発生していた件</title>
+		<link>/archives/7452/</link>
+					<comments>/archives/7452/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 12 May 2013 18:45:40 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Lua]]></category>
+		<category><![CDATA[lua-hiredis]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7452</guid>
+
+					<description><![CDATA[lua-hiredisを使っていてcloseしているのにabで30000以上アクセスさせてみるとredisに接続出来なくなるということが発生しました。また、netstatで確認するとredisへのコネ ... <a href="/archives/7452/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/agladysh/lua-hiredis" target="_blank">lua-hiredis</a>を使っていてcloseしているのにabで30000以上アクセスさせてみるとredisに接続出来なくなるということが発生しました。また、netstatで確認するとredisへのコネクションがTIME_WAITが大量に表示されていました。</p>
+<p><span id="more-7452"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<pre lang="lua">
+local redis = require('hiredis')
+local conn = redis.connect('127.0.0.1', 6379)
+
+local hoge_value = conn:command('GET', 'Hoge')
+
+conn:close()
+</pre>
+<p>というような簡単なコードだったんですが、どうもうまくredisとのコネクションが切れていなかったので、lua-hiredisのclose処理を見てみるとredisのquitコマンドは発行していなかったので、試しに、closeの前にquitコマンドを発行してみることにしました。</p>
+<pre lang="lua">
+local redis = require('hiredis')
+local conn = redis.connect('127.0.0.1', 6379)
+
+local hoge_value = conn:command('GET', 'Hoge')
+
+conn:command('QUIT')
+conn:close()
+</pre>
+<p>するとTIME_WAITが大量に発生することなく、abで大量にアクセスしてみてもredisへ接続出来なくなるという現象も発生せず安定するようになりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7452/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

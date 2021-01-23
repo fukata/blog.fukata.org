@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MugenPower &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mugenpower/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]Mugen Power HLI-A855XLの使用感</title>
+		<link>/archives/4875/</link>
+					<comments>/archives/4875/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 07 Nov 2010 15:29:43 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<category><![CDATA[MugenPower]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4875</guid>
+
+					<description><![CDATA[先日購入したHLI-A855XLですが、昨日今日とみっちり使ってみました。 バッテリー残量表示に関しては先日の記事を参照してください。今もこの現象は続いています。実際どれくらい保つのかというと、今日、 ... <a href="/archives/4875/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日購入した<a href="https://www.mugen-power-batteries.com/mugen-power-extended-battery-for-motorola-a855-milestone-with-battery-in-black-3300mah.html">HLI-A855XL</a>ですが、昨日今日とみっちり使ってみました。</p>
+<p>バッテリー残量表示に関しては<a href="https://fukata.org/2010/11/05/order-mugen-power-extended-battery-for-motorola-a855-milestone-with-battery-in-black-3300mah-hli-a855xl/">先日の記事</a>を参照してください。今もこの現象は続いています。実際どれくらい保つのかというと、今日、12時頃から主に以下の機能を常にONにした状態で22時までノンストップで稼働しました。</p>
+<ul>
+<li>VPN</li>
+<li>オーバークロック（1Ghz）</li>
+<li>Twidroid(更新間隔1分間)</li>
+<li>ディスプレイ光量50%</li>
+</ul>
+<p>１０時間以上ノンストップで稼働していたということで、普段こんなに使わないのでバッテリーが無くなる心配は不要なようです。また、これだけバッテリーが保つのであれば現在、音楽プレイヤーとして使用しているiPodをMilestoneに移しても大丈夫かもしれません。これはまた別の日にでも試してみたいと思います。それにしても、予想以上に保ってくれています。実用量は1300mAh -> 3300mAhなので約2.5倍ですが保ちの感覚としてはもっとあるように感じます。</p>
+<p>ただ、このバッテリを装着すると厚みが2倍になるので正直ジーンズのポケットなどに入れるのはきついです。。。自分は上着のポケットに入れるようにしています。そうしないと引っかかって取り出せないので＾＾；</p>
+<p>一日フルにスマートフォンを使いたいという人に是非使ってもらいたいバッテリーです。先日の記事にも書きましたが、個人的には今のスマートフォンのバッテリーの保ちだと拡張バッテリーは必須だと思っています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4875/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]Mugen Power Extended Battery for Motorola A855 Milestone with battery in Black 3300mAh [HLI-A855XL]を購入</title>
+		<link>/archives/4864/</link>
+					<comments>/archives/4864/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 05 Nov 2010 02:05:49 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<category><![CDATA[MugenPower]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4864</guid>
+
+					<description><![CDATA[スマートフォンと言えば拡張バッテリーというくらい、スマートフォンには必須のアイテムだと思っています。 以前使っていたBlackBerry Bold 9000にもこちらを装備していました。スマートフォン ... <a href="/archives/4864/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>スマートフォンと言えば拡張バッテリーというくらい、スマートフォンには必須のアイテムだと思っています。<br />
+以前使っていたBlackBerry Bold 9000にも<a href="https://goo.gl/mKLsX">こちら</a>を装備していました。スマートフォンながら、普通に使用して2日間ほど保っていました。</p>
+<p>今回もそれくらい持ってほしいと思って購入したのですが、標準バッテリーと同じくらいの勢いでバッテリーのパーセンテージが減っていきます。<br />
+変だと思い、一度完全放電するために動画をずっと再生していたところ、途中で再起動することになり再起動が完了。この時、バッテリー残量は5%。</p>
+<p>ん？</p>
+<p>再起動後、バッテリ残量を確認すると60%。</p>
+<p>・・・</p>
+<p>！？</p>
+<p>挙動的にMilestoneでの計算用バッテリー最大容量が決まっており、その値で計算されているように見えます。再起動せずに使いつづけると5%を保ち、一応使用することは可能なようです。（バッテリーが少なくなってるからチャージしてね。という警告は出ます。）オーバークロック、3Dベンチマークを実行し続けて５、６時間は持つことを確認しました。</p>
+<p>オーバークロックせずにそんなに酷使しなければ普通に一日程度は持ちそうです。ちなみに、今回試したのはMilestone 2.1 update-1なので、OSのバージョンが変わればバッテリー残量表示は正常になるかもしれません。</p>
+<p>標準バッテリーとの比較<br />
+<a href="https://farm6.static.flickr.com/5296/5476154598_4654ab871f_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5296/5476154598_4654ab871f_m.jpg" alt="" title="IMAG0026" width="500" height="299" class="aligncenter size-large wp-image-4865" /></a></p>
+<p>横にしてみた感じ<br />
+<a href="https://farm6.static.flickr.com/5179/5476153722_cb9e798792_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5179/5476153722_cb9e798792_m.jpg" alt="" title="IMAG0028" width="500" height="299" class="aligncenter size-large wp-image-4867" /></a></p>
+<p>持ってみた感じ<br />
+<a href="https://farm6.static.flickr.com/5171/5475556927_5474df3d4e_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5171/5475556927_5474df3d4e_m.jpg" alt="" title="IMAG0027" width="299" height="500" class="aligncenter size-large wp-image-4866" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4864/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[BlackBerry]Bold 9000用超大容量バッテリMugenPower HLI-9000XL(3600mAh)を購入</title>
+		<link>/archives/2867/</link>
+					<comments>/archives/2867/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 07 Apr 2010 13:10:05 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry Bold 9000]]></category>
+		<category><![CDATA[HLI-9000XL]]></category>
+		<category><![CDATA[MugenPower]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2867</guid>
+
+					<description><![CDATA[昨日予約した記事「 [BlackBerry]Bold 9000用超大容量バッテリMugenPower HLI-9000XL(3600mAh)を予約」を書きましたが、なんと今日届きました。昨日の夕方に楽 ... <a href="/archives/2867/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日予約した記事「<a href="https://fukata.org/2010/04/07/reservation-blackberrybold-9000-mugenpower-hli-9000xl3600mah/"> [BlackBerry]Bold 9000用超大容量バッテリMugenPower HLI-9000XL(3600mAh)を予約</a>」を書きましたが、なんと今日届きました。昨日の夕方に楽天に出店されているMobilePlazaさんの方で購入したのですが、今日届くとはMobilePlazaさんの素早い対応と日本の物流に感謝します。</p>
+<p>さてと、それでは早速HLI-9000XLをBBB9000に装着してみたいと思います。</p>
+<p>パッケージ</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5298/5476134972_6598357235_m.jpg" title="IMG_2575" width="499" height="333" class="aligncenter size-large wp-image-2870" /></p>
+<p>専用バッテリドア(CVR-9000XL)とバッテリ(HLI-9000XL)</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5180/5476134362_56a66c05ed_m.jpg" title="IMG_2576" width="499" height="333" class="aligncenter size-large wp-image-2872" /></p>
+<p>標準バッテリとの比較</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5219/5475538031_7cacd52378_m.jpg" title="IMG_2577" width="499" height="333" class="aligncenter size-large wp-image-2873" /></p>
+<p>標準サイズのバッテリドアとの比較</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5133/5476134132_02a7d3ec4e_m.jpg" title="IMG_2578" width="499" height="333" class="aligncenter size-large wp-image-2874" /></p>
+<p>実際に装着してみました</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5179/5475538213_5b1b3b0e16_m.jpg" title="IMG_2580" width="499" height="333" class="aligncenter size-large wp-image-2871" /></p>
+<p>実際に装着してみた感じは、思っていた以上に厚みがあるなと感じました。ただ、1週間ほど使い続ければ慣れる程度の厚みではあります。重さも気になっていたのですが、そこまで重くなった感じはありません。</p>
+<p>専用バッテリドアの質感ですが見た目は標準バッテリドアと同じフェイクレザーのような感じなのですが、こちらは模様は似ていますが、質感はプラスチックなので標準バッテリドアのように汗を吸ってしまったりする心配はありません。</p>
+<p>同梱されていた取扱説明書にバッテリを効率良く使うには、2～3回程度コンディショニングした方がよいとの事なので、現在は動画をリピート再生してます。また、取扱説明書によると月に1回程度は満充電と完全放電のリコンディショニングを行った方がよいみたいです。</p>
+<p>今週末にでもフル充電して一日外出してバッテリの持ちを確かめたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2867/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

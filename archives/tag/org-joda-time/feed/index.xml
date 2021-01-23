@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>org.joda.time &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/org-joda-time/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Clojureでorg.joda.timeを扱うclj-time</title>
+		<link>/archives/6451/</link>
+					<comments>/archives/6451/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 06 Nov 2011 05:34:35 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[clj-time]]></category>
+		<category><![CDATA[org.joda.time]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6451</guid>
+
+					<description><![CDATA[seancorfield/clj-time &#8211; GitHub clojureから日付関係を扱う場合、java.util.Dateを直接使う事が多いかったんですが、何時間前とか今月の末日を求 ... <a href="/archives/6451/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/seancorfield/clj-time">seancorfield/clj-time &#8211; GitHub</a></p>
+<p>clojureから日付関係を扱う場合、java.util.Dateを直接使う事が多いかったんですが、何時間前とか今月の末日を求める時に不便だったので何かライブラリが無いか探してみるとorg.joda.timeをclojureから扱う「clj-time」というのが使いやすかったので、載せておきます。</p>
+<p>どんだけ楽なのかは上記のサイトを見ればもうほとんど書いてあるのですが、一部載せておきます。</p>
+<p><span id="more-6451"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<pre lang="clojure">
+;日付指定でDateオブジェクトを取得
+(date-time 1986 10 14)
+
+;1ヶ月後の日付を取得
+(plus (now) (months 1))
+
+;1ヶ月前の日付を取得
+(minus (now) (months 1))
+
+;org.joda.time.DateTimeからjava.util.Dateへ変換
+(.toDate (now))
+</pre>
+<p>この他にも便利な関数が沢山あるので、日付計算を多用する場合には是非使ってみると便利だと思います。</p>
+<p>また、clj-time.coreですが、useするとclj-time.core/extendとclojure.core/extendが被ってしまい、警告が出るので、asで別名を付けるかonlyで必要なものだけ読み込んだ方が良いかもしれません。</p>
+<p><strong>追記：2011.11.06</strong><br />
+githubのURLが間違っていたとのコメントを頂いたので修正しました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6451/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

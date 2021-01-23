@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>社内勉強会 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E7%A4%BE%E5%86%85%E5%8B%89%E5%BC%B7%E4%BC%9A/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:06:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[LT]Git Hooksを使ってみよう</title>
+		<link>/archives/7060/</link>
+					<comments>/archives/7060/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 25 Apr 2012 00:06:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7060</guid>
+
+					<description><![CDATA[社内勉強会にて、GitのHooks機能について簡単にLTした時のスライドを下記に載せておきます。 Git Hooks View more presentations from Tatsuya Fuka ... <a href="/archives/7060/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>社内勉強会にて、GitのHooks機能について簡単にLTした時のスライドを下記に載せておきます。</p>
+<div style="width:425px" id="__ss_12666385"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/fukata0711/git-hooks-12666385" title="Git Hooks" target="_blank">Git Hooks</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/12666385" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </p>
+<div style="padding:5px 0 12px"> View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/fukata0711" target="_blank">Tatsuya Fukata</a> </div>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7060/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[LT]jQuery Custom Selector</title>
+		<link>/archives/7013/</link>
+					<comments>/archives/7013/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 18 Mar 2012 09:37:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7013</guid>
+
+					<description><![CDATA[社内勉強会にて、jQueryのCustom Selector(Filter)について少し話しました。次回はライブコーディングを行おうかと思っています。ただし、内容が内容なだけに外部にはどれくらいの情報 ... <a href="/archives/7013/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>社内勉強会にて、jQueryのCustom Selector(Filter)について少し話しました。次回はライブコーディングを行おうかと思っています。ただし、内容が内容なだけに外部にはどれくらいの情報を載せられるかわかりません。。。非常に残念です。</p>
+<p>今回は、Custom Selectorとして独自データ属性用の簡易的なフィルタを実装してみました。実際に利用する方は、もっと有名な下記をお使いください。</p>
+<p><a href="https://code.google.com/p/jquerypluginsblog/source/browse/trunk/dataSelector/jquery.dataSelector.js">jquery.dataSelector.js &#8211; jquerypluginsblog &#8211; A whole range of plugins &#8211; Google Project Hosting</a></p>
+<div style="width:425px" id="__ss_12017376"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/fukata0711/jquery-custom-selector" title="Jquery custom selector" target="_blank">Jquery custom selector</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/12017376" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </p>
+<div style="padding:5px 0 12px"> View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/fukata0711" target="_blank">Tatsuya Fukata</a> </div>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7013/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[LT]テストもDRY</title>
+		<link>/archives/6818/</link>
+					<comments>/archives/6818/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 03 Feb 2012 07:46:59 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6818</guid>
+
+					<description><![CDATA[昨日、今年初めての社内勉強会でエニグモさんと合同で行いました。 個人的な今年の抱負として、会社のテスト環境を充実させたいというのがあり、 今回は、それの布教用のLTを行いました。メインはDEMOだった ... <a href="/archives/6818/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、今年初めての社内勉強会で<a href="https://www.enigmo.co.jp/">エニグモ</a>さんと合同で行いました。</p>
+<p>個人的な今年の抱負として、会社のテスト環境を充実させたいというのがあり、<br />
+今回は、それの布教用のLTを行いました。メインはDEMOだったので、資料だけ見てもわかりにくいところがあるかもしれません。</p>
+<p><a href="https://dl.dropbox.com/u/2020396/presen/dry_testing/index.html#0">テストもDRY</a></p>
+<p>せっかく、AndroidアプリやiPhoneアプリも作成しているので、ネイティブアプリのテスト環境も整えていきたいところ。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6818/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[LT]Presentationツールの導入とTips</title>
+		<link>/archives/6515/</link>
+					<comments>/archives/6515/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 22 Nov 2011 15:05:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6515</guid>
+
+					<description><![CDATA[今日は社内勉強会だったのでLTしてきました。 ただ、先週の金曜に急遽、今日ということになったのでネタが間に合わず、LTの時に使っているオレオレPresentationツールのセットアップとTipsの紹 ... <a href="/archives/6515/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今日は社内勉強会だったのでLTしてきました。</p>
+<p>ただ、先週の金曜に急遽、今日ということになったのでネタが間に合わず、LTの時に使っているオレオレPresentationツールのセットアップとTipsの紹介ということになりました。</p>
+<p><a href="https://dl.dropbox.com/u/2020396/presen/presentation_tool/index.html#0">Presentation</a></p>
+<p>エフェクトが好きな人には興味ないかもしれないツールになっています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6515/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

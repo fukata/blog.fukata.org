@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Test::More &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/testmore/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>PerlのテストコードをJenkinsで動かす</title>
+		<link>/archives/6847/</link>
+					<comments>/archives/6847/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 08 Feb 2012 00:06:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Jenkins]]></category>
+		<category><![CDATA[TAP]]></category>
+		<category><![CDATA[Test::More]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6847</guid>
+
+					<description><![CDATA[社内で使用している主な言語がPerlということもあり、せっかく社内にJenkinsを導入したので、Perlのテストコードも管理できないかと設定した時のログです。 広告 Perlのテストコード テストコ ... <a href="/archives/6847/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>社内で使用している主な言語がPerlということもあり、せっかく社内にJenkinsを導入したので、Perlのテストコードも管理できないかと設定した時のログです。</p>
+<p><span id="more-6847"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>Perlのテストコード</h2>
+<p>テストコード自体は下記のような構造で<a href="https://search.cpan.org/search?query=test%3A%3Amore&#038;mode=all">Test::More</a>を使ったシンプルなものを使用します。</p>
+<pre lang="bash">
+[Project]/
+  ...
+  t/
+    sub/
+      test_sub1.t
+    test1.t
+    test2.t
+    test3.t
+</pre>
+<p>テスト自体も下記のような簡単なものをとりあえず使用します。</p>
+<pre lang="Perl">
+use Test::More tests => 3;
+
+is 1, 1;
+ok 2 == 2;
+isnt 2, 1;
+</pre>
+<h3>JUnit互換のテストスイート生成</h3>
+<p>JenkinsでPerlのテストコード結果を集計するのにJUnitで使用されているXMLを使用します。</p>
+<p>Test::Moreをインストールした時に付いてくるproveコマンドを使用します。コマンド時にフォーマットモジュールを指定するようになっていますが、今回はJUnit互換のものを生成するので、TAP::Formatter:JUnitというフォーマッターを使用します。JUnit以外のフォーマッターについては<a href="https://search.cpan.org/search?query=tap%3A%3Aformatter&#038;mode=all">こちら</a>を参照ください。</p>
+<p>で、実際にテストコードからJUnit互換のテストスイートを作成するには、下記のようなコマンドになります。</p>
+<pre lang="bash">
+cd [Project]
+prove --formatter=TAP::Formatter::JUnit -l t > test_results.xml
+</pre>
+<p>実際に生成されるファイルはこんな感じです。</p>
+<pre lang="XML">
+<testsuites>
+  <testsuite failures="0"
+             errors="0"
+             tests="3"
+             name="sub_test_sub1_t">
+    <testcase name="1"></testcase>
+    <testcase name="2"></testcase>
+    <testcase name="3"></testcase>
+    <system -out>< ![CDATA[1..3
+ok 1
+ok 2
+ok 3
+]]&gt;</system>
+    <system -err></system>
+  </testsuite>
+  <testsuite failures="0" errors="0" tests="3" name="test1_t">
+    <testcase name="1"></testcase>
+    <testcase name="2"></testcase>
+    <testcase name="3"></testcase>
+    <system -out>< ![CDATA[1..3
+ok 1
+ok 2
+ok 3
+]]&gt;</system>
+    <system -err></system>
+  </testsuite>
+  <testsuite failures="0" errors="0" tests="3" name="test2_t">
+    <testcase name="1"></testcase>
+    <testcase name="2"></testcase>
+    <testcase name="3"></testcase>
+    <system -out>< ![CDATA[1..3
+ok 1
+ok 2
+ok 3
+]]&gt;</system>
+    <system -err></system>
+  </testsuite>
+  <testsuite failures="0" errors="0" tests="4" name="test3_t">
+    <testcase name="1"></testcase>
+    <testcase name="2"></testcase>
+    <testcase name="3"></testcase>
+    <testcase name="4"></testcase>
+    <system -out>< ![CDATA[1..4
+ok 1
+ok 2
+ok 3
+ok 4
+]]&gt;</system>
+    <system -err></system>
+  </testsuite>
+</testsuites>
+</pre>
+<h2>Jenkins側の設定</h2>
+<p>Jenkins側でのビルド周りの設定です。これで、基本的な設定は完了しているので、svnやgitのリポジトリ設定をすれば動作すると思います。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838365177" target="_blank" title="スクリーンショット 2012-02-08 8.58.38"><img src="https://farm8.staticflickr.com/7157/6838365177_496bf39427.jpg" alt="スクリーンショット 2012-02-08 8.58.38" class="aligncenter"/></a></p>
+<p>テスト結果も通常通りグラフで見れます。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838382515" target="_blank" title="スクリーンショット 2012-02-08 9.03.53"><img src="https://farm8.staticflickr.com/7161/6838382515_e62dcc816a.jpg" alt="スクリーンショット 2012-02-08 9.03.53" class="aligncenter"/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6847/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7157/6838365177_496bf39427.jpg</image>
+	</item>
+	</channel>
+</rss>

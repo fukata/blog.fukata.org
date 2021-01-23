@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>samba &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/samba/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Macのコマンドラインからsambaをマウント</title>
+		<link>/archives/1347/</link>
+					<comments>/archives/1347/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 22 Jun 2009 15:50:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[samba]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1347</guid>
+
+					<description><![CDATA[現在、たまにmacを使うのですが、その時会社のsambaファイルサーバをマウントしないといけない時に調べたメモです。通常は、Finder経由で「移動→サーバへ移動」で楽々接続できると思います。 ただ、 ... <a href="/archives/1347/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、たまにmacを使うのですが、その時会社のsambaファイルサーバをマウントしないといけない時に調べたメモです。通常は、Finder経由で「移動→サーバへ移動」で楽々接続できると思います。</p>
+<p>ただ、個人的に任意のディレクトリに割り当てたかったのと、GUIだと使い方がいまいちわからなかったので、コマンドラインでの利用方法を調べてみました。</p>
+<p>ようするにですね、以下のコマンドでsambaマウントできます。</p>
+<blockquote><p>
+/sbin/mount_smbfs //[ユーザ][:パスワード]@[サーバドメイン]:139/[共有パス] [マウントパス]</p>
+<p>例）<br />
+/sbin/mount_smbfs //samba:samba@192.168.11.8:139/files ./fileserver/
+</p></blockquote>
+<p>コマンドの詳しいオプションを見たい方は/sbin/mount_smbfs &#8211;helpで参照してください。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1347/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>iPod+Sambaでファイルの同期</title>
+		<link>/archives/1239/</link>
+					<comments>/archives/1239/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 02 Jun 2009 14:51:02 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[iPod]]></category>
+		<category><![CDATA[iTunes]]></category>
+		<category><![CDATA[samba]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1239</guid>
+
+					<description><![CDATA[現在、ipodのデータは自宅のsambaファイルサーバでクライアントマシンと共有しています。 ipodのデータが40GB近くもなってきたので、クライアントマシンには重いので、せっかくファイルサーバ作っ ... <a href="/archives/1239/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5260/5475648917_e5538237dd_m.jpg" target="_blank" title="ipod_itunes"><img loading="lazy" src="https://farm6.static.flickr.com/5260/5475648917_e5538237dd_m.jpg" alt="ipod_itunes" width="200" height="150" class="attachment wp-att-1240 alignleft" /></a>現在、ipodのデータは自宅のsambaファイルサーバでクライアントマシンと共有しています。</p>
+<p>ipodのデータが40GB近くもなってきたので、クライアントマシンには重いので、せっかくファイルサーバ作ったんだし、ファイルサーバから共有ができたら便利だと思い、さっそく移動しました。</p>
+<p>そして、早速同期作業を行ってみると。。。「必要なディスクが見つかりません。」というエラーが毎回表示されるようになりました。</p>
+<p>ググってみると他にも同じような現象になった人がいたみたいですが、その人たちは別に自分と同じようにsambaなどを使用しているわけではなく、突然そうなってしまったらしいです。。</p>
+<p>そして、解決策としては、リセットを行うみたいです。直るかどうか確実ではなかったんですけど、同期できないのはこの先辛いので、試してみると以前のように普通に同期ができるようになりました。</p>
+<p>これで、やっと、sambaファイルサーバのファイルをiTunesを利用してipodにデータを同期することができました。</p>
+<p>めでたし♪めでたし♪</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1239/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>CentOSでのsmbmountについて</title>
+		<link>/archives/1159/</link>
+					<comments>/archives/1159/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 May 2009 17:47:43 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CentOS]]></category>
+		<category><![CDATA[mount]]></category>
+		<category><![CDATA[samba]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1159</guid>
+
+					<description><![CDATA[どうやら、CentOS5からはsmbfsがないため、smbmountが使えない。どうやって、自宅のsambaファイルサーバをマウントしようかと思って、ぐぐったら代替策がありました。 以下のコマンドで無 ... <a href="/archives/1159/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>どうやら、CentOS5からはsmbfsがないため、smbmountが使えない。どうやって、自宅のsambaファイルサーバをマウントしようかと思って、ぐぐったら代替策がありました。</p>
+<p>以下のコマンドで無事マウントすることが出来ました。</p>
+<pre lang="Bash">
+mount -t cifs //192.168.11.8/files /home/vmadmin/fileserver/ -o user=samba,password=******,iocharset=utf8,uid=vmadmin,gid=vmadmin
+</pre>
+<p>変わったのは、マウントするファイルシステムのタイプとしてsmbfsではなく、<strong>cifs</strong>を指定するということ。また、単純にrootユーザでマウントするとnobodyユーザ権限になってしまっていたので、uidとgidでマウント後の権限を指定しています。</p>
+<p>■参考サイト</p>
+<li>
+<ul><a href="https://kamoland.com/wiki/wiki.cgi?WebDAV%A4%C7Windows%A5%D5%A5%A1%A5%A4%A5%EB%A5%B5%A1%BC%A5%D0%A4%F2%A5%DE%A5%A6%A5%F3%A5%C8%B8%F8%B3%AB%A4%B9%A4%EB#i3">https://kamoland.com/wiki/wiki.cgi?WebDAV%A4%C7Windows%A5%D5%A5%A1%A5%A4%A5%EB%A5%B5%A1%BC%A5%D0%A4%F2%A5%DE%A5%A6%A5%F3%A5%C8%B8%F8%B3%AB%A4%B9%A4%EB#i3</a></ul>
+</li>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1159/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>UbuntuとWindowsの共存について実現してみた</title>
+		<link>/archives/557/</link>
+					<comments>/archives/557/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 01 Aug 2008 16:38:16 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[samba]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[vista]]></category>
+		<category><![CDATA[vmware]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[xp]]></category>
+		<category><![CDATA[仮想化]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=557</guid>
+
+					<description><![CDATA[今、自分のメインOSであるUbuntuとまだまだフリーソフトのおかげで個人的に需要があるWindowsの共存について実現してみたので記録として載せてみようと思います。 個人的に行った方法はUbuntu ... <a href="/archives/557/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="private_network" href="https://farm6.static.flickr.com/5093/5476163064_ae86d326da_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-558 alignright" src="https://farm6.static.flickr.com/5093/5476163064_ae86d326da_m.jpg" alt="private_network" width="200" height="149" /></a>今、自分のメインOSであるUbuntuとまだまだフリーソフトのおかげで個人的に需要があるWindowsの共存について実現してみたので記録として載せてみようと思います。</p>
+<p>個人的に行った方法はUbuntu内のVM WareにWindows XPをインストールするというもの。</p>
+<p>言葉だけだとあれなので図なんかも作成しちゃいましたw（友達に説明するために作ったんですけどねw）</p>
+<p>図を見ればなんとなく分かるかもしれませんが、まずパーティションは以下の３つです。</p>
+<ol>
+<li>Windows Vista システム用</li>
+<li>Ubuntu システム用</li>
+<li>VistaとUbuntuのファイル共有用</li>
+</ol>
+<p>3番目の「VistaとUbuntuのファイル共有用」はVistaからは普通の内臓HDDとして、Ubuntuからは「/windows」ディレクトリとしてntfsマウントして認識させています。</p>
+<p>これで、一応Vista側で作成したファイルをUbuntu側と共有することは可能なのですが、いちいちVistaを起動するのが面倒なので図にも書かれているようにUbuntuにVM Ware Serverを入れ、その中にWindows XPをインストールしています。</p>
+<p>VM Ware内のXPからUbuntuの「/windows」ディレクトリはsamba共有にて実現しています。</p>
+<p>これによって、Ubuntuを使用しながらXPで作成したファイルなどを共有しています。また、XPはNAT接続なのでオフライン時でもUbuntuと通信可能になっています。</p>
+<p><a title="screenshot" href="https://farm6.static.flickr.com/5057/5475566129_260f74a518_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-559 alignleft" src="https://farm6.static.flickr.com/5057/5475566129_260f74a518_m.jpg" alt="screenshot" width="200" height="150" /></a>実際に使用している感じもキャプチャしてみましたw</p>
+<p>いやぁ、思っていたよりもVM Wareがサクサク動いていてなかなか快調です。</p>
+<p>これからの対応としてはVM Ware内のXPでiPodを使用すること。かなw</p>
+<p>認識はするんですが、認識した途端にブルー画面になって再起動がかかるのでこれを乗り切ればゴールまで後もう少しって感じです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/557/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

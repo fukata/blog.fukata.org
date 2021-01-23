@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>go-mongo &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/go-mongo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>go-mongoでの基本操作</title>
+		<link>/archives/6167/</link>
+					<comments>/archives/6167/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 01 Oct 2011 19:55:32 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[go-mongo]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6167</guid>
+
+					<description><![CDATA[一部の機能を実装するのにgolangを利用することになり、DBはMongoDBだったので、以下のライブラリを使うことにしました。 garyburd/go-mongo &#8211; GitHub もう ... <a href="/archives/6167/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>一部の機能を実装するのにgolangを利用することになり、DBはMongoDBだったので、以下のライブラリを使うことにしました。</p>
+<p><a href="https://github.com/garyburd/go-mongo">garyburd/go-mongo &#8211; GitHub</a></p>
+<p>もう一つ、<a href="https://github.com/mikejs/gomongo">gomongo</a>（名前が紛らわしい）というのもあるそうですが、こっちは現リリース版のgolangだとコンパイルが通らなかったので、とりあえず、上記のものを利用しました。</p>
+<p>githubのREADMEに情報が少なかったので、メモとして基本的な操作方法について記載しておきます。</p>
+<h2>基本操作</h2>
+<h3>接続、コレクションの選択、切断</h3>
+<pre lang="GOLANG">
+// 接続
+conn, err := mongo.Dial("localhost:27017")
+// コレクションの選択
+c := mongo.Collection{conn, "hoge.foocollections", mongo.DefaultLastErrorCmd}
+// 切断
+conn.Close()
+</pre>
+<h3>SELECT</h3>
+<pre lang="GOLANG">
+// 単数
+// 値をマップに格納
+var foo_map mongo.M
+err := c.Find(nil).One(&foo_map)
+log.Println(foo_map["_id"])
+
+// 値を構造体に格納
+type Foo struct {
+    Id mongo.ObjectId `bson:"_id"`
+    Name string `bson:"name"`
+}
+
+var foo Foo
+err := c.Find(nil).One(&foo)
+log.Println(foo.Id)
+
+// 複数
+cursor, err := c.Find(nil).Limit(10).Cursor()
+for cursor.HasNext() {
+    var f Foo
+    err = cursor.Next(&f)
+    log.Println(f)
+}
+</pre>
+<h3>INSERT</h3>
+<pre lang="GOLANG">
+id := mongo.NewObjectId()
+err = c.Insert(&Foo{Id: id, Name: "Tatsuya Fukata"})
+</pre>
+<h3>UPDATE</h3>
+<pre lang="GOLANG">
+// 引数： 検索条件, 更新情報
+err = c.Update(mongo.M{"name": "Tatsuya Fukata"}, mongo.M{"name": "深田達也"})
+</pre>
+<h3>DELETE</h3>
+<pre lang="GOLANG">
+err = c.Remove(mongo.M{"name": "深田達也"})
+</pre>
+<h2>BSONとGolangの変換表</h2>
+<p>go-mongoではBSONからgolang内の型変換は下記のようになっています。</p>
+<pre lang="GOLANG">
+//      BSON                -> Go
+//      Integer32           -> signed and unsigned integers, floats, bool
+//      Integer64           -> signed and unsigned integers, floats, bool
+//      Array               -> []interface{}, other slice types
+//      Binary              -> []byte
+//      Boolean             -> bool
+//      Datetime            -> mongo.Datetime, int64
+//      Document            -> map[string]interface{}, struct types
+//      Double              -> signed and unsigned integers, floats, bool
+//      MinValue, MaxValue  -> mongo.MinMax
+//      ObjectID            -> mongo.ObjectId
+//      Symbol              -> mongo.Symbol, string
+//      Timestamp           -> mongo.Timestamp, int64
+//      string              -> string
+</pre>
+<p>後でmasterブランチのテストコードを見てみると上記の方法ではなく、Queryに対してUpdateやRemoveメソッドが使えるようになっていたので、今後はメソッドチェインで検索条件を構築した後に、操作が行えるようにもなるみたいです。</p>
+<p>これは、goinstallでインストールされるバージョンにはまだ含まれていません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6167/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

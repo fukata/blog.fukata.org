@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>12vpn.com &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/12vpn-com/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:04:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>月7USDのVPNサービス「StrongVPN」</title>
+		<link>/archives/5033/</link>
+					<comments>/archives/5033/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 06 Dec 2010 21:03:38 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[12vpn.com]]></category>
+		<category><![CDATA[StrongVPN]]></category>
+		<category><![CDATA[VPN]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5033</guid>
+
+					<description><![CDATA[エントリ「[Android]CyanogenMod 6.1.0 RC5 for Milestoneの使用感」でも書いたのですが、12vpn.comが提供するOpenVPNをCyanogenMod 6. ... <a href="/archives/5033/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>エントリ「<a href="https://fukata.org/2010/12/05/review-android-cyanogenmod-6-1-0-rc5-for-milestone/">[Android]CyanogenMod 6.1.0 RC5 for Milestoneの使用感</a>」でも書いたのですが、12vpn.comが提供するOpenVPNをCyanogenMod 6.1.0 RC5 for Milestoneで使用した場合にとても不安定になりまともに利用できなかったので我慢できずに新たにVPNサービスを契約しました。</p>
+<p><a href="https://strongvpn.com/">StrongVPN.com is VPN service, offers security and anonymity for personal use</a></p>
+<p>新たに契約したVPNサービスはStrongVPNです。PCはもちろん、Androidやその他のスマートフォンでも利用が可能です。</p>
+<p><a href="https://unblockfacebookinchina.info/12vpn-vs-strongvpn">12 VPN vs. Strong VPN &#8211; Unblock Facebook in China</a></p>
+<p>比較記事にも書かれていますが、料金は12vpn.comに比べれば割高ですが、接続にかかる時間も短いですし、速度自体も速いです。また、12vpnとは違い、途中で接続先のサーバを変更することができるので、調子が悪い時に改善を試みることが可能です。12vpnもそうですが、Androidに限らずパソコンからの利用も可能なので、中国に長期間来ることがある方はVPNサービスを契約しておくのも良いかもしれません。</p>
+<p>とりあえずVPNを使ってみたいという方は、スマートフォン向けになってしまいますが下記の無料のVPNサービスを使ってみるのも良いかもしれません。<br />
+Revolutionary VPN Client For Smartphone-EVOVPN</p>
+<p>12vpnの時のように買って半年もしないうちに繋がらなくなると悲しいので、とりあえず今回は一番安い3ヶ月プラン（21USD）にしました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5033/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]年間30USDのVPNサービス「12vpn.com」</title>
+		<link>/archives/4810/</link>
+					<comments>/archives/4810/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 13 Oct 2010 12:06:47 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[12vpn.com]]></category>
+		<category><![CDATA[VPN]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4810</guid>
+
+					<description><![CDATA[中国を代表するネットサービスQQがネットの壁越えを堂々と伝授 &#8211; 中国リアルIT事情 中国からTwitter、Facebook、Dropbox等へのアクセスが遮断されているのは有名で、それ ... <a href="/archives/4810/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://blogmag.ascii.jp/china/2010/10/004006.html">中国を代表するネットサービスQQがネットの壁越えを堂々と伝授 &#8211; 中国リアルIT事情</a></p>
+<p>中国からTwitter、Facebook、Dropbox等へのアクセスが遮断されているのは有名で、それらをくぐり抜ける方法もネットを探せばいくらでも見つかると思います。</p>
+<p>PCからはVPNを使っていたのですが、AndroidでもTwitterやDropboxを使用したくなって自宅にPPTP VPNを設置したのですが一向に繋がらず、<del datetime="2010-10-13T11:49:10+00:00">諦め</del>時間の無駄だと思ったので有料のVPNサービスを利用することにしました。</p>
+<p><a href="https://xiaolongchakan.com/archives/752666.html">☆小龍茶館 上海支店☆ : 中国「壁越え（ネット規制回避）」最新事情（2010.10.2現在）</a></p>
+<p>Androidで利用可能なVPNサービスは上記を参考にし、安定していそうな12vpn.comにしました。支払いもクレジットカードもしくはPayPalが可能なので申し込みから利用まで30分もかかりませんでした。</p>
+<p>ただ、自分の端末のせいなのか利用可能になってから一時はすぐには繋がらず、何回か接続を試みないと繋がりませんでした。今は、ほとんど失敗することはありません。ただ、中国の回線の問題なのか不安定で、切れることもあります。</p>
+<p>それを踏まえても年間30USDで各種プラットフォームに対応したVPNが利用できるのは安いと感じました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4810/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

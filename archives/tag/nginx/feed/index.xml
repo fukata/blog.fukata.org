@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>nginx &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/nginx/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>nginxからh2oに変えてみた</title>
+		<link>/archives/7965/</link>
+					<comments>/archives/7965/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 20 Dec 2016 03:00:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[nginx]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7965</guid>
+
+					<description><![CDATA[カンボジアで泊まったホテルに居た猫。可愛かったなぁ。 いつか試したかったh2o。ちょっと時間が作れたのでメモしておこう。 広告 サイト構成 Digital Ocean 1GB (Singapore)  ... <a href="/archives/7965/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7965/"><img src="https://farm6.staticflickr.com/5713/31364430101_799aa29835_c.jpg" alt="PC030437" class="aligncenter"/></a></p>
+<p>カンボジアで泊まったホテルに居た猫。可愛かったなぁ。<br />
+いつか試したかったh2o。ちょっと時間が作れたのでメモしておこう。</p>
+<p><span id="more-7965"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>サイト構成</h2>
+<ul>
+<li>Digital Ocean 1GB (Singapore)</li>
+<li>Ubuntu 16.04 LTS</li>
+<li>PHP 7.0.14-1</li>
+<li>nginx 1.10.11</li>
+</ul>
+<p>こんな感じだろうか。今までDigital Oceanの2GBプランを使っていたけど調べてみるとほとんどメモリ使っていなかったので1GBプランに落とした。メモリも400MB程度しか使っていないので将来的に512MBのプランで運用しようかと思っている。</p>
+<p>今回は、今までnginxで運用していたところをh2oに変えてみた。</p>
+<h2>h2oインストール</h2>
+<p>必要なパッケージをaptで入れて下記のコマンドをh2oの直下で行えば簡単にインストールすることが出来た。今回はmrubyも使いたいのでmrubyを有効にするオプションも忘れずに。<br />
+<a href="https://h2o.examp1e.net/install.html">Install &#8211; H2O &#8211; the optimized HTTP/2 server</a></p>
+<p>あとは、依存しているwebsocketのcライブラリであるwslayもソースからコンパイルして入れておく。インストール方法等は公式リポジトリから。<br />
+<a href="https://github.com/tatsuhiro-t/wslay">tatsuhiro-t/wslay: The WebSocket library in C</a></p>
+<pre lang="bash">
+% cmake -DWITH_BUNDLED_SSL=on -DWITH_MRUBY=on .
+% make
+% sudo make install
+</pre>
+<h2>WordPressのディレクトリ構造</h2>
+<p>このサイトはWordPressのマルチサイト機能を使っていて下記のようなディレクトリ構造になっている。</p>
+<pre>
+/var/www/fukata.org/index.php # WordPressのindex.php
+/var/www/fukata.org/wordpress/ # WordPress本体
+</pre>
+<p>極力 <code>wordpress</code> という文字列をURLに含みたくなかったのでh2oの設定ファイルは下記のような感じになっている。多分もっとスマートに書く方法があるだろうから、追々編集するはず。</p>
+<p><a href="https://gist.github.com/fukata/658754babe9cbb7f6736592ed543518b">https://fukata.org/ &#8216;s h2o config</a></p>
+<h2>まとめ</h2>
+<p>意外とあっさりnginxからh2oに乗り換える事が出来たんだけど、もっと言えばnginxの時に使っていたレスポンス結果をディスクにキャッシュさせて任意のURLのキャッシュだけ削除したりなんて事が出来ると嬉しいかな。</p>
+<p>現状どこまでmrubyを使ってh2oを拡張出来るのか把握していないので色々試したいところ。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7965/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5713/31364430101_799aa29835.jpg</image>
+	</item>
+		<item>
+		<title>[nginx]proxy_cacheでgzip済みコンテンツをキャッシュする</title>
+		<link>/archives/7260/</link>
+					<comments>/archives/7260/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 25 Oct 2012 05:59:06 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[deflate]]></category>
+		<category><![CDATA[gzip]]></category>
+		<category><![CDATA[nginx]]></category>
+		<category><![CDATA[proxy_cache]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7260</guid>
+
+					<description><![CDATA[nginx + proxy_cacheの威力は凄まじく、ほとんどアプリケーションサーバまでアクセスが行かなくなることもあるので、proxy_cacheが使える状況なら非常に有効な手段だと思います。 今 ... <a href="/archives/7260/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>nginx + proxy_cacheの威力は凄まじく、ほとんどアプリケーションサーバまでアクセスが行かなくなることもあるので、proxy_cacheが使える状況なら非常に有効な手段だと思います。</p>
+<p>今回は、proxy_cacheはしているけど、ページの容量が大きく転送量も減らしたいという場合のgzip圧縮の話です。</p>
+<p>リクエスト毎にgzip圧縮の処理が行われてしまっており、リクエスト数が多大になってくるとcpuリソースを食ってしまう可能性があります。どうせgzip圧縮するんだったらそれごとproxy_cacheしちゃえばいいんじゃないかと思い、設定してみたところ正常に動作したので設定を書いておきたいと思います。</p>
+<p><span id="more-7260"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>目指す構成</h2>
+<pre>Internet -> [nginx(LB)] -> [nginx(RPX) -> app]</pre>
+<p>これの、RPXの部分でgzip処理を行い、LBの方ではその内容をproxy cacheして配信時に改めてgzipするのではなく、proxy cacheした内容を返す。</p>
+<p>※[]はサーバの単位</p>
+<h2>nginx.lb.conf</h2>
+<p><script src="https://gist.github.com/3950740.js?file=nginx.lb.conf"></script></p>
+<h2>nginx.rpx.conf</h2>
+<p><script src="https://gist.github.com/3950740.js?file=nginx.rpx.conf"></script></p>
+<p>proxy_cache先にgzip後の容量で保存されているか確認。</p>
+<p>ということで、とりあえず動いたのでメモでした。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7260/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>自宅のgitoriousサーバをrvm + passenger(apache2) + daemontoolsからrbenv + bundler + passenger(standalone) + supervisordに移行した</title>
+		<link>/archives/7228/</link>
+					<comments>/archives/7228/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 06 Oct 2012 17:50:01 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[god]]></category>
+		<category><![CDATA[nginx]]></category>
+		<category><![CDATA[passenger]]></category>
+		<category><![CDATA[rbenv]]></category>
+		<category><![CDATA[ruby-build]]></category>
+		<category><![CDATA[supervisord]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7228</guid>
+
+					<description><![CDATA[当ブログで利用しているサーバ（さくらのVPS 4G）が色々同居させており、gitoriousのバッチがたまに負荷をかけ重くなってしまっていたので余っていたさくらのVPS 1Gに移しました。 どうせ移す ... <a href="/archives/7228/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>当ブログで利用しているサーバ（さくらのVPS 4G）が色々同居させており、gitoriousのバッチがたまに負荷をかけ重くなってしまっていたので余っていたさくらのVPS 1Gに移しました。</p>
+<p>どうせ移すんだったらと思い、今までrvm, passenger(apache2), daemontoolsだった構成をrbenv, passenger(standalone), supervisordに移行しました。</p>
+<p><span id="more-7228"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>gitoriousの主な構成は下記の通り</p>
+<ul>
+<li>OS: Ubuntu 12.04LTS</li>
+<li>Ruby: 1.8.7-p370</li>
+<li>実行ユーザ: git</li>
+<li>リポジトリパス: /home/git/repos</li>
+<li>Gitoriousルート: /var/www/gitorious</li>
+</ul>
+<p>以前はapache2 + passengerで動作させていたのでwebの実行ユーザはwww-dataのままで、git-daemonなどの実行ユーザはgitという感じでしたが、今回はgitユーザに全て統一させました。</p>
+<h2>rbenv + ruby-buildへの移行</h2>
+<p>まず、rvmからrbenv, ruby-buildへ移行します。手順は下記のページで書かれている通りに実行すれば大丈夫です。</p>
+<p><a href="https://miuralph.blogspot.jp/2011/08/rvmrbenv.html" title="うぶ毛プリン: rvmからrbenvに移行した" target="_blank">うぶ毛プリン: rvmからrbenvに移行した</a></p>
+<p>実際に入れたRubyのバージョンは1.8.7-p370なので、コレを入れておきます。</p>
+<pre lang="bash">
+rbenv install 1.8.7-p370
+</pre>
+<p>gemでモジュールをインストールした際にrehashする手間を省くため、rbenv-rehashを下記の通りにインストールします。</p>
+<p><a href="https://d.hatena.ne.jp/rhysd/20120226/1330265121" title="rbenv で gem を使った時に rbenv rehash しなくて良くする - sorry, unimplemented:" target="_blank">rbenv で gem を使った時に rbenv rehash しなくて良くする &#8211; sorry, unimplemented:</a></p>
+<p>これで、gemを入れた段階で自動的にrehash作業も行なってくれます。</p>
+<h2>Gitoriousのインストール</h2>
+<pre lang="bash">
+cd /var/www
+git clone git://gitorious.org/gitorious/mainline.git gitorious
+</pre>
+<p>gitoriousの細かな設定については下記のgistを参考にしました。</p>
+<p><a href="https://gist.github.com/1122244" title="Gitorious installation on Ubuntu 12.04 — Gist" target="_blank">Gitorious installation on Ubuntu 12.04 — Gist</a></p>
+<p>実際には移行だったのでまるまるインストールってわけではなく、/var/www/gitoriousディレクトリとmysqlのdumpを移行させた程度です。</p>
+<h2>Bundlerでモジュール管理</h2>
+<pre lang="bash">
+gem install bundler
+cd /var/www/gitorious
+bundle install --deployment
+</pre>
+<h2>Passenger StandaloneでGitoriousを起動してみる</h2>
+<pre lang="bash">
+cd /var/www/gitrious
+RAILS_ENV=production passenger start
+</pre>
+<h2>Supervisord経由で起動する</h2>
+<p>最近はdaemontoolsではなくsupervisordで運用することが増えました。今回もsupervisordを使ってみます。設定は下記のようにしています。</p>
+<p><script src="https://gist.github.com/3845542.js?file=supervisord_gitorious.conf"></script></p>
+<p>なんか、調べているうちに<a href="https://godrb.com/" title="God" target="_blank">God</a>というRuby製のプロセス監視ツール？があるらしいのでどっかで使ってみたいところ。</p>
+<p>起動スクリプトはこんな感じ</p>
+<p><script src="https://gist.github.com/3845542.js?file=start-gitorious"></script></p>
+<h2>pushしたらgitoriousコマンドが無いと言われる</h2>
+<p>.ssh/environmetに下記のように設定をする。</p>
+<p><script src="https://gist.github.com/3845542.js?file=environment"></script></p>
+<p>かなり端折ってて分かりにくいですが、rbenvに慣れていなくてsupervisordなどから実行させるのにはまりました。gitoriousはpassengerのstandalone版で動作させnginxをリバースプロキシとして置いて運用させています。とりあえず、今はこんな感じです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7228/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

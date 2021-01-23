@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>xstream-for-android &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/xstream-for-android/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]O/XマッパーのXStreamをAndroidで利用できるようにしてみました</title>
+		<link>/archives/1910/</link>
+					<comments>/archives/1910/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 06 Dec 2009 13:35:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[xstream]]></category>
+		<category><![CDATA[xstream-1.3.1]]></category>
+		<category><![CDATA[xstream-for-android]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1910</guid>
+
+					<description><![CDATA[久々のAndroidネタです。 今やっている案件で、外部サーバとデータ連携をしないといけないのですが、そこで、サーバ側の配信データがXMLにしているので、Android側でパースする必要が出ました。  ... <a href="/archives/1910/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>久々のAndroidネタです。</p>
+<p>今やっている案件で、外部サーバとデータ連携をしないといけないのですが、そこで、サーバ側の配信データがXMLにしているので、Android側でパースする必要が出ました。</p>
+<p>なんか、手軽に出来ないものかと探しているとXStreamというのが楽そうだったので、まず、試しにそのままAndroid環境で使ってみることに。エラー続出です。まぁ、そうですよね。ということで、Androidで利用不可パッケージなんかを極力削除し、外部パーサをxpp3に制限したものでリコンパイル。今度は無事使用することができるようになりました。</p>
+<p>今回は、動作速度なんかは問われていないので、どうしてもここがボトルネックになるようであれば、自作でパーサを作る可能性もあります。</p>
+<p>XStreamのライセンスはBSDライセンスということなので、もし欲しい方が入ればjarファイルを配信できるようにしたいと思います。ソースの方はまだアドホックな修正などが多々ありますので、jarファイルだけにさせていただきます。</p>
+<p><strong>追記：2010-04-11 00:00</strong></p>
+<p>下記のプロジェクトサイトを立ち上げましたので、最新版は下記のサイトからダウンロードしてください。</p>
+<p><a href="https://code.google.com/p/xstream-for-android/">xstream-for-android &#8211; Project Hosting on Google Code</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1910/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

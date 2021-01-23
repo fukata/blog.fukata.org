@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Google Adsense &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/google-adsense/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 08 Nov 2018 16:27:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>JavaScriptからGoogle Adsenseを動的に表示する方法</title>
+		<link>/archives/9601/</link>
+					<comments>/archives/9601/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 08 Nov 2018 15:26:03 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Google Adsense]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/?p=9601</guid>
+
+					<description><![CDATA[最近、チェンマイに引っ越した。バンコクほど暑くなくて快適に過ごせるので非常に居心地が良い。 今までJavaScriptから動的にGoogle Adsenseの広告を表示したことがなかったのでメモを残し ... <a href="/archives/9601/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/31825100798" target="_blank" title="PB029211"><img loading="lazy" src="https://farm5.staticflickr.com/4892/31825100798_3ab5afff3a_c.jpg" alt="PB029211" class="aligncenter" width="800" height="600"/></a></p>
+<p>最近、チェンマイに引っ越した。バンコクほど暑くなくて快適に過ごせるので非常に居心地が良い。</p>
+<p>今までJavaScriptから動的にGoogle Adsenseの広告を表示したことがなかったのでメモを残しておく。</p>
+<p><span id="more-9601"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>最近主に記事をアップしている<a href="https://traha.org/" rel="noopener" target="_blank">トラハ</a>では目次をJSで動的に作成している。で、その下に広告を表示できないかと思い試してみたら普通に出来たので今後のためにメモを残しておこうと思う。</p>
+<p>と言ってもやることは簡単だ。</p>
+<p>下記のadsenseで共通で利用するJSをどこでもいいので読み込まれるようにしておく。今回はheadタグ内に追加した。</p>
+<pre><code>&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>今回はjsrenderを使っているので下記のようなadsenseで使い回せるテンプレートを定義する。</p>
+<pre><code>&lt;script type="text/x-jsrender" id="adsense-template"&gt;
+&lt;ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="{{:layout}}"
+     data-ad-format="{{:format}}"
+     data-ad-client="{{:client}}"
+     data-ad-slot="{{:slot}}"&gt;&lt;/ins&gt;
+&lt;/script&gt;
+</code></pre>
+<p>最後に表示したい箇所に追加して終わり。</p>
+<pre><code>var $contaienr = $('#adsense-container');
+var data = {layout: '', format: '', client: '', slot: ''};
+$container.append($.templates('#adsense-template').render(data));
+(adsbygoogle = window.adsbygoogle || []).push({});
+</code></pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9601/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4892/31825100798_3ab5afff3a.jpg</image>
+	</item>
+	</channel>
+</rss>

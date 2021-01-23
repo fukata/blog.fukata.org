@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>b-mobile SIM &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/b-mobile-sim/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Motorola Milestone + b-mobile SIM</title>
+		<link>/archives/4723/</link>
+					<comments>/archives/4723/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 10 Sep 2010 15:33:57 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[b-mobile SIM]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4723</guid>
+
+					<description><![CDATA[昨日の記事でも書いたとおり、b-mobile SIMが届いていました。 さっそく、Motorola Milestoneに挿入してAPNの設定をしました。 ・・・ 電話番号や通信方法については適切な値が ... <a href="/archives/4723/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5257/5476136424_95305c6e81_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5255/5476136910_58fe329a36_m.jpg" alt="" title="2010-09-10_20-47-49_754" width="150" height="150" class="alignleft size-thumbnail wp-image-4725" /></a>昨日の記事でも書いたとおり、b-mobile SIMが届いていました。</p>
+<p>さっそく、Motorola Milestoneに挿入してAPNの設定をしました。</p>
+<p>・・・</p>
+<p>電話番号や通信方法については適切な値が設定されているのですが、Mobile NetworkでNTT DOCOMOとSoftbankが出てき、NTT DOCOMOを選択するも、登録作業が一向に終わらない状態でした。</p>
+<p><a href="https://miledemairu.blogspot.com/2010/04/registering-b-mobile-sim-u300.html">MILESTONEで参る: Registering がとまらない ～b-mobile SIM U300～</a></p>
+<p>現象としては、上記のページで説明されているのと同様で、事前に一応調べてはいたのですが、やはりダメなようでした。素直に現在使っているdocomoのSIMのプランを変更するか、MilestoneのOSが2.2にアップグレードされるのを待ちます。ちなみに、下記の記事によるとdocomoの定額プランはMilestoneでも利用可能なようです。</p>
+<p><a href="https://d.hatena.ne.jp/sgrmatha/20100716/1279249561">ドコモ定額データSIMはMilestoneで使えるみたい &#8211; モバイルをバックパックにつめこんで</a></p>
+<p>もう少しWiFiのみでがんばってみようかと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4723/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

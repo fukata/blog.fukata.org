@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>gmail &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/gmail/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:05:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]Gmailショートカット一覧</title>
+		<link>/archives/5197/</link>
+					<comments>/archives/5197/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 30 Jan 2011 22:35:31 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[gmail]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5197</guid>
+
+					<description><![CDATA[先日、DROID PROで何気なくgmailを触っていると何かのキーを押したのか、inboxから返信画面へ遷移した。 ん？と思い、WEB版のショートカットである、「R」を押すとやはり返信画面へ遷移する ... <a href="/archives/5197/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日、DROID PROで何気なくgmailを触っていると何かのキーを押したのか、inboxから返信画面へ遷移した。</p>
+<p>ん？と思い、WEB版のショートカットである、「R」を押すとやはり返信画面へ遷移する。</p>
+<p>ということで、Android版、gmailアプリのショートカット一覧をメモとして残しておきます。多少、窮屈にはなるけど十字キーを付けるべきだと思いました。DROID PRO以外でも動作するのかは手元に別の端末がないので分かりません。</p>
+<p><span id="more-5197"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<table>
+<tr>
+<th>ショートカット</th>
+<th>内容</th>
+</tr>
+<tr>
+<th>R</th>
+<td>返信</td>
+</tr>
+<tr>
+<th>A</th>
+<td>全員に返信</td>
+</tr>
+<tr>
+<th>C</th>
+<td>メール作成</td>
+</tr>
+<tr>
+<th>F</th>
+<td>転送</td>
+</tr>
+<tr>
+<th>M</th>
+<td>ミュート</td>
+</tr>
+<tr>
+<th>J</th>
+<td>前のスレッド</td>
+</tr>
+<tr>
+<th>K</th>
+<td>次のスレッド</td>
+</tr>
+<tr>
+<th>Menu + S</th>
+<td>スター</td>
+</tr>
+<tr>
+<th>Y(E)</th>
+<td>アーカイブ</td>
+</tr>
+<tr>
+<th>L</th>
+<td>ラベル移動</td>
+</tr>
+<tr>
+<th>V</th>
+<td>ラベル付与</td>
+</tr>
+</table>
+<p>スターはなんで「S」ではなく「Menu + S」なんだろう。WEB版と合わせてくれた方が学習コストが低くて助かるのに。何か他のもので使われてましたっけ？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5197/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>gmailのショートカット</title>
+		<link>/archives/764/</link>
+					<comments>/archives/764/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 25 Nov 2008 22:31:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[gmail]]></category>
+		<category><![CDATA[Google]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=764</guid>
+
+					<description><![CDATA[Ubuntuをメインマシンにしてから、メーラーは専らgmailにしています。 以前から、gmailにショートカットが存在することは知っていたんですが、ほとんど使っていませんでした。ふと、どんなショート ... <a href="/archives/764/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Ubuntuをメインマシンにしてから、メーラーは専らgmailにしています。</p>
+<p>以前から、gmailにショートカットが存在することは知っていたんですが、ほとんど使っていませんでした。ふと、どんなショートカットが存在するのか気になったので調べてみました。</p>
+<p>一応、全リストは<a href="https://mail.google.com/support/bin/answer.py?hl=ja&amp;ctx=mail&amp;answer=6594">こちら</a>になります。困ったときにはShift + ?でショートカット一覧が表示できます。ただ、一つ気になったのが、ページ遷移用のショートカットがないことです。普通によく使いそうなんだけどなぁ・・・。</p>
+<p><span style="color: #ff0000;">追記（2008-11-26）：</span></p>
+<blockquote><p>ページ遷移のショートカットがないと思ったんですが、ページ内の末尾のメールが選択されている状態で前のメールへ遷移（ショートカット：j）すると、次のページへ遷移できるみたいです。</p>
+<p>ただ、直接次ページや前ページへ遷移するショートカットは未だに不明</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/764/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

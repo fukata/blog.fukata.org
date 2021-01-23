@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 複数のJavaScriptを同期的に読み込み、実行する	</title>
+	<atom:link href="/archives/5320/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5320/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5320/comment-page-1/#comment-696</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Thu, 05 May 2011 12:20:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5320#comment-696</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5320/comment-page-1/#comment-695&quot;&gt;NORI&lt;/a&gt;.
+
+ご指摘ありがとうございます。
+確かにご指摘の通り、掲載しているスクリプトについては、最初と最後のスクリプトしか読み込まれないというバグが存在します。
+jQueryプラグイン版になりますが、下記の物を参考にされた方が良いかもしれません。
+
+http://plugins.jquery.com/project/jsloader]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5320/comment-page-1/#comment-695">NORI</a>.</p>
+<p>ご指摘ありがとうございます。<br />
+確かにご指摘の通り、掲載しているスクリプトについては、最初と最後のスクリプトしか読み込まれないというバグが存在します。<br />
+jQueryプラグイン版になりますが、下記の物を参考にされた方が良いかもしれません。</p>
+<p><a href="http://plugins.jquery.com/project/jsloader" rel="nofollow ugc">http://plugins.jquery.com/project/jsloader</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: NORI		</title>
+		<link>/archives/5320/comment-page-1/#comment-695</link>
+
+		<dc:creator><![CDATA[NORI]]></dc:creator>
+		<pubDate>Thu, 05 May 2011 12:13:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5320#comment-695</guid>
+
+					<description><![CDATA[参考にさせていただきました。
+しかし、幾つかのjsファイルを指定して試してみたところ、src_list の最初と最後に指定したソースしか読み込まれませんでした。Firefox, Chrome, Opera で試しましたが、同様の結果です。
+
+ループ内で、
+s.nextScript = nextScript;
+とし、イベントハンドラ内で
+var elem = event.target &#124;&#124; event.srcElement;
+head.appendChild(elem.nextScript);
+の様にしたところ、上記のブラウザでは期待通りに動きました。
+
+手元のIE8では修正してもしなくても src_list の最初のソースしか読み込まれませんでした。
+]]></description>
+			<content:encoded><![CDATA[<p>参考にさせていただきました。<br />
+しかし、幾つかのjsファイルを指定して試してみたところ、src_list の最初と最後に指定したソースしか読み込まれませんでした。Firefox, Chrome, Opera で試しましたが、同様の結果です。</p>
+<p>ループ内で、<br />
+s.nextScript = nextScript;<br />
+とし、イベントハンドラ内で<br />
+var elem = event.target || event.srcElement;<br />
+head.appendChild(elem.nextScript);<br />
+の様にしたところ、上記のブラウザでは期待通りに動きました。</p>
+<p>手元のIE8では修正してもしなくても src_list の最初のソースしか読み込まれませんでした。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

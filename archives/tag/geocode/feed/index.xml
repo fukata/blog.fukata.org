@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>geocode &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/geocode/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 14 Aug 2017 05:56:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]Geocodeのサンプル作りました</title>
+		<link>/archives/2232/</link>
+					<comments>/archives/2232/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 23 Jan 2010 17:41:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[geocode]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2232</guid>
+
+					<description><![CDATA[ちょっとあるものを作ろうとGPSだったりGeocode周りのAPIを調べていてサンプルを作ったので、載せたいたと思います。今回は、Geocodeです。GPSのサンプルもあるので、機会があれば載せたいと ... <a href="/archives/2232/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ちょっとあるものを作ろうとGPSだったりGeocode周りのAPIを調べていてサンプルを作ったので、載せたいたと思います。今回は、Geocodeです。GPSのサンプルもあるので、機会があれば載せたいと思います。</p>
+<p>サンプルについては、<a href="https://sites.google.com/site/tatsuyafukata/pg/blackberry/geocoding">Geocoding (Tatsuya Wiki)</a>を参照下さい。また、サンプルプロジェクトもzip形式でアップしています。</p>
+<p>今回のGeocodeでつまずいたのは、Landmark#getNameなどの戻り値を以下のように文字連結しようとするとエラーで落ちていたことです。最初はここで落ちているとは思わず、かなり遠回りして発見しました。ちなみに、今も原因がわかっていません。十分にjavadocを読んでいないのが原因かもしれませんが＾＾；明日にでも読んでみようと思います。</p>
+<pre lang="JAVA">StringBuffer buffer = new StringBuffer();
+buffer.append(landmark.getName() + "\n");</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2232/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

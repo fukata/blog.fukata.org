@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [FuelPHP]Validationの使い方	</title>
+	<atom:link href="/archives/6598/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/6598/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: FuelPHP Advent Calendar 2011		</title>
+		<link>/archives/6598/comment-page-1/#comment-784</link>
+
+		<dc:creator><![CDATA[FuelPHP Advent Calendar 2011]]></dc:creator>
+		<pubDate>Tue, 27 Dec 2011 01:06:29 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=6598#comment-784</guid>
+
+					<description><![CDATA[[...] Model-View-ControllerそしてViewModel [FuelPHP]Validationの使い方 FuelPHPでFacebookアプリを作ってみよう。準備編。 FuelPHPで作るログイン管理 [...]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] Model-View-ControllerそしてViewModel [FuelPHP]Validationの使い方 FuelPHPでFacebookアプリを作ってみよう。準備編。 FuelPHPで作るログイン管理 [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

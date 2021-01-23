@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Shape Services &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/shape-services/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]IM+ for SkypeのVOIPをWIFI環境下で試してみました</title>
+		<link>/archives/2481/</link>
+					<comments>/archives/2481/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 20 Feb 2010 19:09:46 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[IM+ for Skype]]></category>
+		<category><![CDATA[Shape Services]]></category>
+		<category><![CDATA[skype]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2481</guid>
+
+					<description><![CDATA[IM+ for Skype For BlackBerryがVer4.0にアップデートされてから、wifi環境下でのVOIPが無料で使えるようになりました。ということなので、早速どれくらいの音質なのか確 ... <a href="/archives/2481/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.shapeservices.com/en/products/details.php?product=skype&amp;platform=bb">IM+ for Skype For BlackBerry</a>がVer4.0にアップデートされてから、wifi環境下でのVOIPが無料で使えるようになりました。ということなので、早速どれくらいの音質なのか確かめてみました。</p>
+<p>通話をかける方法は、SkypeOutを使ったことの分かる人は飛ばしてください。まず、かけたい相手にカーソルを合わせて通話ボタン（BBB9000だと左端にある緑のボタン）を押すか、メニューからCallを選択します。すると、相手を呼び出します。そして、受信側ではPCと同じように応答ボタンを押して下さい。</p>
+<p>今回は、BB→PCでしたが、PC→BBでも発信は問題ありません。マルチタスクなので、他の作業をしていてもIM+ for Skypeをバックエンドで立ち上げておけば大丈夫です。iPhoneと比べてこの点はかなりマルチタスクの恩恵を受けるのではないでしょうか。</p>
+<p>で、肝心の音質ですが、相手側の音声は若干のタイムラグはありますが、許容範囲内と言ったレベルです。ただ、こちら側の音声が相手に全く伝わりません。執筆時の使用端末はBBB9000でOS5.0なので、OS5.0が不具合の原因であれば、なんら問題ないのですが、確かめるためだけにOS4.6を入れ直すのはバカらしいので、どなたか別の方の動作確認記事でも探そうかと思います。もし、既に動いた。という方がいましたらコメントいただけると助かります。</p>
+<p><strong>訂正：2010-03-31</strong></p>
+<p>通話設定について、下記の記事にまとめました。</p>
+<p><a href="https://fukata.org/2010/03/31/blackberry-im-talk-talk-setting/">[BlackBerry]IM+ Talkの通話設定</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2481/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>aMSN &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/amsn/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>aMSNを使ってみた</title>
+		<link>/archives/1233/</link>
+					<comments>/archives/1233/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 30 May 2009 13:23:00 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[aMSN]]></category>
+		<category><![CDATA[msn]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1233</guid>
+
+					<description><![CDATA[Ubuntuにデフォルトで入っているMSN互換メッセンジャーである「pidgn」の調子が悪かったので、別のアプリを探してみたら、結構良さげだったので入れてみました。インストールに関しては、aptから入 ... <a href="/archives/1233/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5140/5476248040_c2f9a3ccea_m.jpg" target="_blank" title="screenshot-amsn-02"><img loading="lazy" src="https://farm6.static.flickr.com/5140/5476248040_c2f9a3ccea_m.jpg" alt="screenshot-amsn-02" width="200" height="150" class="attachment wp-att-1234 alignleft" /></a>Ubuntuにデフォルトで入っているMSN互換メッセンジャーである「pidgn」の調子が悪かったので、別のアプリを探してみたら、結構良さげだったので入れてみました。インストールに関しては、aptから入れました。</p>
+<p>pidgnの不具合はどういうものかというと、3行以上連続して入力しようとすると必ず、アプリがハングアップしてしまい、終了してしまうというもの。</p>
+<p>aMSNですが、チャットウィンドウにて、日本語入力時にツールチップみたいなところに一時的に格納される以外は安定しています。というか、pidginよりもMSNメッセンジャーとしての役割は果たせていると思います。</p>
+<p>1点ハマってしまったのが、アプリの右上にある閉じるボタンを押し際に、「トレイに格納する」か、そのまま「アプリを終了する」の選択肢があったのですが、これを間違って「アプリを終了する」を選んでしまい、さらに、毎回聞かれないようにする部分に関してもチェックしてしまったので、閉じるボタンを押すと毎回アプリが終了してしまい、困っていました。</p>
+<p>クライアントアプリの挙動に関してなんで、どうせどっかに設定ファイルでもあるだろうと思い、パソコンを検索してみると、以下のコンフィグファイルが見つかりました。</p>
+<blockquote><p> /home/tatsuya/.amsn/[ログインメールアドレス]/config.xml</p></blockquote>
+<p>この中にある、以下の値を変更することで、トレイに格納するように変更できました。</p>
+<blockquote><p>closingdocks<br />
+　1: トレイに格納<br />
+　2: アプリ終了</p></blockquote>
+<p>もし、他にもMSN互換メッセンジャーでバグの少ない物がありましたら、誰か教えて下さい。機能よりも正常に動くアプリが純粋に欲しいw</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1233/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

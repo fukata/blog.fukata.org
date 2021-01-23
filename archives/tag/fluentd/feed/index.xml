@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>fluentd &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/fluentd/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>norikra + fluentd + mongodbで遊んだ</title>
+		<link>/archives/7651/</link>
+					<comments>/archives/7651/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 24 Mar 2014 05:24:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[fluentd]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[norikra]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7651</guid>
+
+					<description><![CDATA[去年からずっと導入したい導入したいと思っているnorikra。未だに導入できていないわけですが、norikraがどういったものなのか感覚だけでも社内の人たちに分かってもらえればと思い、社内勉強会でデモ ... <a href="/archives/7651/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>去年からずっと導入したい導入したいと思っているnorikra。未だに導入できていないわけですが、norikraがどういったものなのか感覚だけでも社内の人たちに分かってもらえればと思い、社内勉強会でデモを行った時の環境をvagrantで残したのでメモしておきたいと思います。</p>
+<p><span id="more-7651"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://github.com/fukata/vagrant-norikra-fluentd-mongodb" title="fukata/vagrant-norikra-fluentd-mongodb">fukata/vagrant-norikra-fluentd-mongodb</a></p>
+<p>fluentd経由でnorikraに送られたログをストリームで処理してくれている感じが分かるかと思います。</p>
+<p>何かで遊んだ環境をvagrantで残しておけば環境構築ログも残せるしすぐ手元で動かせるしで便利なので次回からもvagrantで残していこうと思った。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7651/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>fluent-plugin-hostname v0.0.2をリリース</title>
+		<link>/archives/7457/</link>
+					<comments>/archives/7457/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 16 May 2013 06:07:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[fluent-plugin-hostname]]></category>
+		<category><![CDATA[fluentd]]></category>
+		<category><![CDATA[Release]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7457</guid>
+
+					<description><![CDATA[add_prefixなどタグを変更させる機能を提供していなかったのと、プラグイン自体でもタグを変更してemitしていなかったので、無限ループになってしまっていたという指摘をtwitterでもらったので ... <a href="/archives/7457/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>add_prefixなどタグを変更させる機能を提供していなかったのと、プラグイン自体でもタグを変更してemitしていなかったので、無限ループになってしまっていたという指摘をtwitterでもらったのでadd_prefixを実装しました。</p>
+<p><a href="https://github.com/fukata/fluent-plugin-hostname" title="fukata/fluent-plugin-hostname · GitHub">fukata/fluent-plugin-hostname · GitHub</a></p>
+<p><span id="more-7457"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>元々オレオレプラグインとして開発しており、使うのも自分くらいしか居ないだろうと軽い気持ちで開発していてかつ、forestプラグインと併用しておりタグの変更はforestプラグインの方で行なっていました。このプラグイン単体で使っていなかったので問題に気づいていませんでした。</p>
+<p>でも、各プラグインでタグに関する機能を実装しないといけないのは統一感も出にくいので、簡単に組み込めると楽なんだけどなぁ。それこそforestプラグインみたいなプラグインと併用すれば良いんじゃないかと個人的には思った。それすらもコストになるようなものだったら独自に実装すればいいし、こういう部分もfluentd-v11のlabel機能とかで解決できるようになったりするのかな。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7457/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>(途中メモ)fluentdのout_exec_filterがうまく動作しない</title>
+		<link>/archives/7159/</link>
+					<comments>/archives/7159/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 29 Jul 2012 15:05:59 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[fluentd]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[Treasure Data]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7159</guid>
+
+					<description><![CDATA[fluentdのout_exec_filterを使って、アプリから出されるログを整形して出力をそのままfluentdへ戻すということが出来ます。コレを使って、検索クエリをmecabに通して名詞のみを引 ... <a href="/archives/7159/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>fluentdのout_exec_filterを使って、アプリから出されるログを整形して出力をそのままfluentdへ戻すということが出来ます。コレを使って、検索クエリをmecabに通して名詞のみを引っ張ってこようかと思い、以下の様なプログラムを書いてみました。参考にしたのは、<a href="https://d.hatena.ne.jp/studio3104/20120619/1340069545" target="_blank">こちら</a>です。</p>
+<p>現在も調査中なので、下記はメモ程度に受け取って下さい。</p>
+<p><span id="more-7159"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今回使用したtd-agentのバージョンは<strong>0.10.25</strong>になります。</p>
+<p>exec_filterのソースとtd-agent.confの設定は下記のようになっています。mecabで分解した文字列が名詞かどうか判定するのが下記のやり方で正しいのかどうかわかりませんが。</p>
+<p><script src="https://gist.github.com/3199348.js"> </script></p>
+<p>実際に動かしてみた挙動としては、td-agentを再起動する段階で値が入ることもあれば、入らないこともあるという感じで、少なくともリアルタイムには値が入っていませんでした。今回行ったmecabでの名詞取り出しの処理はout_exec_filterで行うには重い処理なのかもしれないと思い、試しにmecabを使わずに固定の文字列を出力するだけのものを作成し、動かしてみたところ、クエリの総数よりも少ない数がいくつかだけデータベースに格納されているといった状況でした。</p>
+<p>ちなみに、今回、Treasure Dataとローカルに設置したMongoDBの2つに格納するようにしていますが、ローカルのMongoDBにもリアルタイムとは言えないラグがありました。また、予想された数よりも少ないレコードしかありませんでした。out_exec_filterを介さず、直接データを格納するようにすればほとんどラグが無くデータが格納されます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7159/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MongoDBのエラー「8011: tried to insert object with no valid shard key」でハマった</title>
+		<link>/archives/7116/</link>
+					<comments>/archives/7116/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 12 Jun 2012 00:34:51 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[fluentd]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7116</guid>
+
+					<description><![CDATA[今月も既に中旬となってしまいましたが、今月初めてのブログ更新です。 役職が付くようになり、今まで自分が行なっていた仕事を他に振るようになったので、以前に比べてプログラミングする量がかなり減って多少焦っ ... <a href="/archives/7116/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今月も既に中旬となってしまいましたが、今月初めてのブログ更新です。</p>
+<p>役職が付くようになり、今まで自分が行なっていた仕事を他に振るようになったので、以前に比べてプログラミングする量がかなり減って多少焦っているところです。</p>
+<p>今回は、fluentd経由でMongoDBにログを400万件ほど挿れていたところ、「<strong>8011: tried to insert object with no valid shard key</strong>」というエラーが出てかなりハマったのでログとして残しておきます。</p>
+<p><span id="more-7116"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>foward先としてリモートに設置したfluentdのログに下記のようなものが出ていました。</p>
+<pre>
+2012-06-11 21:33:18 +0900: failed to flush the buffer, retrying. error="8011: tried to insert object with no valid shard key" instance=70320056203900
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/mongo-1.6.2/lib/mongo/networking.rb:95:in `send_message_with_safe_check'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/mongo-1.6.2/lib/mongo/collection.rb:979:in `block in insert_documents'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/mongo-1.6.2/lib/mongo/util/logging.rb:36:in `instrument'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/mongo-1.6.2/lib/mongo/collection.rb:977:in `insert_documents'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/mongo-1.6.2/lib/mongo/collection.rb:353:in `insert'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/fluent-plugin-mongo-0.6.7/lib/fluent/plugin/out_mongo.rb:139:in `operate_invalid_records'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/fluent-plugin-mongo-0.6.7/lib/fluent/plugin/out_mongo.rb:118:in `operate'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/fluent-plugin-mongo-0.6.7/lib/fluent/plugin/out_mongo.rb:106:in `write'
+2012-06-11 21:33:18 +0900: /usr/lib64/fluent/ruby/lib/ruby/gems/1.9.1/gems/fluentd-0.10.22/lib/fluent/buffer.rb:274:in `write_chunk'
+</pre>
+<p>no valid shard keyと書かれているのでてっきりshard keyに不正な値でも指定してしまったのかなと思い、そこばかり探していたんですが、似たような現象にあったブログもあまり見つからなかったので、ローラー作戦的に挿入するドキュメントの内容をshard keyのみから始まり、徐々に増やしていくことにしました。そこで、一番最初にshard keyのみで挿入したところ、正常に処理できたので、shard key自体が問題ではないんだなと思いました。徐々に増やしていった結果、あるキーに対する値が変に文字化けを起こしており、それが原因で当エラーが発生していたようです。そのキーを外したところ、正常に処理されました。</p>
+<p>今回はあまり時間がなかったので直接的な原因は調べられていませんが、一段落着いたら調べてみたいと思います。</p>
+<p>また、少し気になった動作として挿入できなかった場合にリトライするような設定になっているんですが、リトライする単位はchunkだと思うのですが、chunk内で異常なデータを含まないものに関しては重複して挿入されているような気がします。（プログラム側から指定した以上の件数が挿入されていたため）コレを防ぐ方法があるのかどうかはまだ分かりませんが・・・。</p>
+<h2>環境</h2>
+<p>MongoDB: 2.0.6<br />
+fluentd: 1.1.6</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7116/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

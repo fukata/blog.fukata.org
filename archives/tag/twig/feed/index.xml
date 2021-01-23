@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Twig &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/twig/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[CodeIgniter]Twigと連携してみた &#8211; その1</title>
+		<link>/archives/4556/</link>
+					<comments>/archives/4556/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 04 Jul 2010 06:58:17 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[Twig]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4556</guid>
+
+					<description><![CDATA[PHPの軽量フレームワークである日本CodeIgniterユーザ会とDJangoやTilesのように継承機能を用いたPHPテンプレートエンジン「Twig &#8211; The flexible, f ... <a href="/archives/4556/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>PHPの軽量フレームワークである<a href="https://codeigniter.jp/">日本CodeIgniterユーザ会</a>とDJangoやTilesのように継承機能を用いたPHPテンプレートエンジン「<a href="https://www.twig-project.org/">Twig &#8211; The flexible, fast, and secure template language for PHP</a>」を簡単に連携させてみましたので設定を書きたいと思います。</p>
+<p>ただ、CodeIgniterで作成したHelperなどをTwig内での使用までは検証できなかったのでまた時間がある時にでもやってみたいと思います。</p>
+<p>下記で説明しているファイルはこちらのファイルに含まれています。<br />
+説明用にソースを一部編集していますので、異なる部分もあるのでご了承ください。</p>
+<p><a href='https://fukata.org/media/2010/07/ci-twig-1.0.0.zip'>ci-twig-1.0.0.zip</a></p>
+<p>※下記のソースは<a href="https://github.com/jamiepittock/codeigniter-twig">jamiepittock&#8217;s codeigniter-twig at master &#8211; GitHub</a>を拝借して一部編集しています。</p>
+<h2>全体の構成</h2>
+<blockquote>
+<pre>
+.
+`-- system
+    |-- application
+    |   |-- config
+    |   |   `-- twig.php // Twig用設定ファイル
+    |   |-- controllers
+    |   |-- errors
+    |   |-- helpers
+    |   |-- hooks
+    |   |-- language
+    |   |-- libraries
+    |   |   |-- Twig // Twigライブラリ
+    |   |   `-- Twig.php // Twigクラス
+    |   |-- models
+    |   `-- views
+    |-- cache
+    |   `-- twig // Twig用キャッシュディレクトリ
+    |-- codeigniter
+    |-- database
+    |   `-- drivers
+    |-- fonts
+    |-- helpers
+    |-- language
+    |   `-- english
+    |-- libraries
+    |-- logs
+    |-- plugins
+    `-- scaffolding
+        |-- images
+        `-- views
+</pre>
+</blockquote>
+<h2>追加ファイル</h2>
+<h3>application/libraries/Twig</h3>
+<p><a href="https://www.twig-project.org/installation">https://www.twig-project.org/installation</a>からダウンロードしたTwigのlibディレクトリ以下を格納する。</p>
+<h3>application/config/twig.php</h3>
+<pre lang="PHP">
+< ?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+$config['template_dir'] = APPPATH.'views';
+$config['cache_dir'] = BASEPATH.'cache/twig';
+?>
+</pre>
+<h3>application/libraries/Twig.php</h3>
+<pre lang="PHP">
+< ?php if (!defined('BASEPATH')) {exit('No direct script access allowed');}
+
+class Twig
+{
+	private $CI;
+	private $_twig;
+	private $_template_dir;
+	private $cache_dir;
+
+	/**
+	 * Constructor
+	 *
+	 */
+	function __construct()
+	{
+		$this->CI =& get_instance();
+		$this->CI->config->load('twig');
+	  
+		ini_set('include_path',
+		ini_get('include_path') . PATH_SEPARATOR . APPPATH . 'libraries/Twig');
+
+		require_once (string) "Autoloader" . EXT;
+		log_message('debug', "Twig Autoloader Loaded");
+
+		Twig_Autoloader::register();
+
+		$this->_template_dir = $this->CI->config->item('template_dir');
+		$this->_cache_dir = $this->CI->config->item('cache_dir');
+
+		$loader = new Twig_Loader_Filesystem($this->_template_dir);
+		$this->_twig = new Twig_Environment($loader, array(
+			'debug' => true,
+			'cache' => $this->_cache_dir,
+		));
+	}
+
+	public function view($template, $data = array()) {
+		$template = $this->_twig->loadTemplate($template);
+
+		echo $template->render($data);
+	}
+}
+?>
+</pre>
+<h2>サンプル</h2>
+<h3>application/controllers/</h3>
+<pre lang="PHP">
+< ?php
+
+class Welcome extends Controller {
+	function Welcome()
+	{
+		parent::Controller();
+		$this->load-library('twig');
+	}
+	
+	function index()
+	{
+		$data['name'] = 'Tatsuya';
+		$this->twig->view('welcome_message.php', $data);
+	}
+}
+
+/* End of file welcome.php */
+/* Location: ./system/application/controllers/welcome.php */
+?>
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4556/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

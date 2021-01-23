@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>StrongVPN &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/strongvpn/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:04:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>月7USDのVPNサービス「StrongVPN」</title>
+		<link>/archives/5033/</link>
+					<comments>/archives/5033/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 06 Dec 2010 21:03:38 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[12vpn.com]]></category>
+		<category><![CDATA[StrongVPN]]></category>
+		<category><![CDATA[VPN]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5033</guid>
+
+					<description><![CDATA[エントリ「[Android]CyanogenMod 6.1.0 RC5 for Milestoneの使用感」でも書いたのですが、12vpn.comが提供するOpenVPNをCyanogenMod 6. ... <a href="/archives/5033/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>エントリ「<a href="https://fukata.org/2010/12/05/review-android-cyanogenmod-6-1-0-rc5-for-milestone/">[Android]CyanogenMod 6.1.0 RC5 for Milestoneの使用感</a>」でも書いたのですが、12vpn.comが提供するOpenVPNをCyanogenMod 6.1.0 RC5 for Milestoneで使用した場合にとても不安定になりまともに利用できなかったので我慢できずに新たにVPNサービスを契約しました。</p>
+<p><a href="https://strongvpn.com/">StrongVPN.com is VPN service, offers security and anonymity for personal use</a></p>
+<p>新たに契約したVPNサービスはStrongVPNです。PCはもちろん、Androidやその他のスマートフォンでも利用が可能です。</p>
+<p><a href="https://unblockfacebookinchina.info/12vpn-vs-strongvpn">12 VPN vs. Strong VPN &#8211; Unblock Facebook in China</a></p>
+<p>比較記事にも書かれていますが、料金は12vpn.comに比べれば割高ですが、接続にかかる時間も短いですし、速度自体も速いです。また、12vpnとは違い、途中で接続先のサーバを変更することができるので、調子が悪い時に改善を試みることが可能です。12vpnもそうですが、Androidに限らずパソコンからの利用も可能なので、中国に長期間来ることがある方はVPNサービスを契約しておくのも良いかもしれません。</p>
+<p>とりあえずVPNを使ってみたいという方は、スマートフォン向けになってしまいますが下記の無料のVPNサービスを使ってみるのも良いかもしれません。<br />
+Revolutionary VPN Client For Smartphone-EVOVPN</p>
+<p>12vpnの時のように買って半年もしないうちに繋がらなくなると悲しいので、とりあえず今回は一番安い3ヶ月プラン（21USD）にしました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5033/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

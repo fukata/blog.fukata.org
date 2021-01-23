@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Windows &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/windows/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:57:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>UbuntuとWindowsの共存について実現してみた</title>
+		<link>/archives/557/</link>
+					<comments>/archives/557/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 01 Aug 2008 16:38:16 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[samba]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[vista]]></category>
+		<category><![CDATA[vmware]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[xp]]></category>
+		<category><![CDATA[仮想化]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=557</guid>
+
+					<description><![CDATA[今、自分のメインOSであるUbuntuとまだまだフリーソフトのおかげで個人的に需要があるWindowsの共存について実現してみたので記録として載せてみようと思います。 個人的に行った方法はUbuntu ... <a href="/archives/557/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="private_network" href="https://farm6.static.flickr.com/5093/5476163064_ae86d326da_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-558 alignright" src="https://farm6.static.flickr.com/5093/5476163064_ae86d326da_m.jpg" alt="private_network" width="200" height="149" /></a>今、自分のメインOSであるUbuntuとまだまだフリーソフトのおかげで個人的に需要があるWindowsの共存について実現してみたので記録として載せてみようと思います。</p>
+<p>個人的に行った方法はUbuntu内のVM WareにWindows XPをインストールするというもの。</p>
+<p>言葉だけだとあれなので図なんかも作成しちゃいましたw（友達に説明するために作ったんですけどねw）</p>
+<p>図を見ればなんとなく分かるかもしれませんが、まずパーティションは以下の３つです。</p>
+<ol>
+<li>Windows Vista システム用</li>
+<li>Ubuntu システム用</li>
+<li>VistaとUbuntuのファイル共有用</li>
+</ol>
+<p>3番目の「VistaとUbuntuのファイル共有用」はVistaからは普通の内臓HDDとして、Ubuntuからは「/windows」ディレクトリとしてntfsマウントして認識させています。</p>
+<p>これで、一応Vista側で作成したファイルをUbuntu側と共有することは可能なのですが、いちいちVistaを起動するのが面倒なので図にも書かれているようにUbuntuにVM Ware Serverを入れ、その中にWindows XPをインストールしています。</p>
+<p>VM Ware内のXPからUbuntuの「/windows」ディレクトリはsamba共有にて実現しています。</p>
+<p>これによって、Ubuntuを使用しながらXPで作成したファイルなどを共有しています。また、XPはNAT接続なのでオフライン時でもUbuntuと通信可能になっています。</p>
+<p><a title="screenshot" href="https://farm6.static.flickr.com/5057/5475566129_260f74a518_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-559 alignleft" src="https://farm6.static.flickr.com/5057/5475566129_260f74a518_m.jpg" alt="screenshot" width="200" height="150" /></a>実際に使用している感じもキャプチャしてみましたw</p>
+<p>いやぁ、思っていたよりもVM Wareがサクサク動いていてなかなか快調です。</p>
+<p>これからの対応としてはVM Ware内のXPでiPodを使用すること。かなw</p>
+<p>認識はするんですが、認識した途端にブルー画面になって再起動がかかるのでこれを乗り切ればゴールまで後もう少しって感じです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/557/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>TiltShift &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/tiltshift/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 28 Mar 2013 17:35:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>LightroomのTiltShiftを使ってみた</title>
+		<link>/archives/172/</link>
+					<comments>/archives/172/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 28 Mar 2013 17:35:44 +0000</pubDate>
+				<category><![CDATA[カメラ]]></category>
+		<category><![CDATA[TiltShift]]></category>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=172</guid>
+
+					<description><![CDATA[今まで一眼レフなどで撮った生データを現像するのにLightroomを使っていたんですが、加工などは一切したことなかったのと最近チルトシフトのエフェクトを掛けてくれるプリセットが売っていることを知ったの ... <a href="/archives/172/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/45259648@N06/8598524260" target="_blank" title="f22204992"><img src="https://farm9.staticflickr.com/8388/8598524260_78436daa3a_z.jpg" alt="f22204992" class="aligncenter" /></a></p>
+<p>今まで一眼レフなどで撮った生データを現像するのにLightroomを使っていたんですが、加工などは一切したことなかったのと最近チルトシフトのエフェクトを掛けてくれるプリセットが売っていることを知ったので、去年ハウステンボスに行った時に撮った写真に適用してみました。</p>
+<p><span id="more-172"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8598524362" target="_blank" title="f20615232"><img src="https://farm9.staticflickr.com/8110/8598524362_04386a94c3_z.jpg" alt="f20615232" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8598524412" target="_blank" title="f20168768"><img src="https://farm9.staticflickr.com/8512/8598524412_1662515f60_z.jpg" alt="f20168768" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8598524478" target="_blank" title="f18929920"><img src="https://farm9.staticflickr.com/8528/8598524478_0ae79504b9_z.jpg" alt="f18929920" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8597421873" target="_blank" title="f21924416"><img src="https://farm9.staticflickr.com/8244/8597421873_b178198e21_z.jpg" alt="f21924416" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8597422151" target="_blank" title="f18853184"><img src="https://farm9.staticflickr.com/8246/8597422151_f824def3ba_z.jpg" alt="f18853184" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8598524192" target="_blank" title="IMG_8235"><img src="https://farm9.staticflickr.com/8507/8598524192_b95801b537_z.jpg" alt="IMG_8235" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8598524624" target="_blank" title="f8966656"><img src="https://farm9.staticflickr.com/8529/8598524624_fa507157fa_z.jpg" alt="f8966656" class="aligncenter" /></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/8598524584" target="_blank" title="f9739392"><img src="https://farm9.staticflickr.com/8226/8598524584_0845c8f8bb_z.jpg" alt="f9739392" class="aligncenter" /></a></p>
+<p>買ったのは、このプリセットです。</p>
+<p><a href="https://www.adobe.com/cfusion/exchange/index.cfm?event=extensionDetail&amp;loc=en_us&amp;extid=3265522" title="Adobe - Lightroom Develop Presets">Adobe &#8211; Lightroom Develop Presets</a></p>
+<p>インストールも楽で、ここの記事が参考になりました。</p>
+<p><a href="https://blog.sen-i.jp/photoshop-lightroom/lightroom-preset-install.html" title="Lightroomの強み。一つにプリセットダウンロード。 | blog 戦意">Lightroomの強み。一つにプリセットダウンロード。 | blog 戦意</a></p>
+<p>やっぱり、上から見下ろしたような写真の方がエフェクトが綺麗にかかって見えますね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/172/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8388/8598524260_78436daa3a.jpg</image>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mojolicious &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mojolicious/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Mojolicious::Plugin::SQLMakerをリリースしました</title>
+		<link>/archives/7317/</link>
+					<comments>/archives/7317/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Nov 2012 08:54:20 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[Mojolicious::Plugin::SQLMaker]]></category>
+		<category><![CDATA[Release]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7317</guid>
+
+					<description><![CDATA[SQL::MakerのMojoliciousプラグインが無さそうだったので作りました。 Mojolicious::Plugin::SQLMaker &#8211; search.cpan.org ソー ... <a href="/archives/7317/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>SQL::MakerのMojoliciousプラグインが無さそうだったので作りました。</p>
+<p><a href="https://search.cpan.org/~fukata/Mojolicious-Plugin-SQLMaker/lib/Mojolicious/Plugin/SQLMaker.pm" title="Mojolicious::Plugin::SQLMaker - search.cpan.org" target="_blank">Mojolicious::Plugin::SQLMaker &#8211; search.cpan.org</a></p>
+<p>ソースはこちら。<br />
+<a href="https://github.com/fukata/Mojolicious-Plugin-SQLMaker" title="fukata/Mojolicious-Plugin-SQLMaker" target="_blank">fukata/Mojolicious-Plugin-SQLMaker</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7317/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MojoX::Session::Store::Redisが動くようになりました！</title>
+		<link>/archives/7305/</link>
+					<comments>/archives/7305/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 11 Nov 2012 12:20:35 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[MojoX::Session]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7305</guid>
+
+					<description><![CDATA[Tatsuya Blog » MojoliciousのSession管理について考えてみたの中でも紹介したMojoX::Session::Store::Redisですが、無事Pull Requestが ... <a href="/archives/7305/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://fukata.org/2012/11/06/mojolicious-session/" title="Tatsuya Blog » MojoliciousのSession管理について考えてみた" target="_blank">Tatsuya Blog » MojoliciousのSession管理について考えてみた</a>の中でも紹介した<a href="https://search.cpan.org/~bluet/MojoX-Session-Store-Redis-0.06/lib/MojoX/Session/Store/Redis.pm" title="MojoX::Session::Store::Redis">MojoX::Session::Store::Redis</a>ですが、無事Pull RequestがMergeされ、正常に動作するバージョンがCPANにアップされました。これで正常に使えます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7305/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MojoliciousのSession管理について考えてみた</title>
+		<link>/archives/7292/</link>
+					<comments>/archives/7292/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 05 Nov 2012 17:08:14 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[MojoX::Session]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7292</guid>
+
+					<description><![CDATA[Mojoliciousのデフォルトのセッションではcookieにbase64化した文字列を格納しています。そのため、4kbの制限や毎回すべてのセッションデータを送ることになったりと色々よろしくないとこ ... <a href="/archives/7292/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Mojoliciousのデフォルトのセッションではcookieにbase64化した文字列を格納しています。そのため、4kbの制限や毎回すべてのセッションデータを送ることになったりと色々よろしくないところがあるんですが、FW基盤としてのMojoliciousという意味ではプラグインでどうにでもなるような構造が用意されていればどうでも良い気がする。</p>
+<p>そんなsessionに関して、使う機会があったので少しでもまともな実装を探してみました。</p>
+<p><span id="more-7292"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>Plack::Middleware？Mojolicious::Plugin？</h2>
+<p><a href="https://yusukebe.com/archives/20120225/081052.html" title="PerlのWAFはMojolicious推しな件とそのノウハウ - ゆーすけべー日記" target="_blank">PerlのWAFはMojolicious推しな件とそのノウハウ &#8211; ゆーすけべー日記</a></p>
+<p>でも書かれている通り、デフォルトのsession管理は使えない。また、この中ではPlackのセッション機構を使っている。個人的に、環境依存ファイルは極力少なくしたかったので可能な限りMojolicious::Plugin::Configで利用している設定ファイルのみに留めておきたかった。</p>
+<p>ただ、Mojoliciousで利用している設定ファイルと共通化したいというのも下記のMojolicious::Plugin::PlackMiddlewareというのを使えばもしかしたら解決できるのかもしれない。ただ、試していないのでなんとも言えないが。</p>
+<p><a href="https://search.cpan.org/~jamadam/Mojolicious-Plugin-PlackMiddleware-0.24/lib/Mojolicious/Plugin/PlackMiddleware.pm" title="Mojolicious::Plugin::PlackMiddleware - search.cpan.org" target="_blank">Mojolicious::Plugin::PlackMiddleware &#8211; search.cpan.org</a></p>
+<h2>MojoX::Session</h2>
+<p>今回、初めてMojoliciousを使うということもあって標準的なものを使おうと色々探してみたところ、MojoX::Sessionというのを見つけました。</p>
+<p><a href="https://search.cpan.org/~vti/MojoX-Session-0.25/lib/MojoX/Session.pm" title="MojoX::Session - search.cpan.org" target="_blank">MojoX::Session &#8211; search.cpan.org</a></p>
+<p>データストアとしてRedisを使っていたので当然MojoX::Session::Store::Redisを使うことにしました。実際に使ってみると・・・。</p>
+<p><strong>全然動かねぇ！！！</strong></p>
+<p>なんで動かないのか調べてみると、Redisのデータとして「Hash(x14123)」みたいな文字が入っていました。もしや・・・と思い、実装を見てみると、hashrefをそのまま格納してやがりました。RedisなんでせめてHash型として入れてくれていれば最低限動いていたんですが、全く動かない程度の実装になっていました。</p>
+<p>MojoX::Session::Storeの方でbase64など暗号化した文字列を下位モジュールへ渡してくれると思いきや、MojoX::Sessionの実装方針がわかりませんが、同梱されているMojoX::Session::Store::dbiの実装を見てみるとMojoX::Session::Store::dbiの中でbase64化していました。</p>
+<p>これは、MongoDBなどコレクションに格納する際にはデータを構造的に入れれるためへの配慮なんだろうと思い、Redisの方ではjson化したものを突っ込むようにしました。本家の方にPull Requestは送ったんですがまだ取り込まれる気配はありません。</p>
+<p>現在までの実装はgithubへアップしています。</p>
+<p><a href="https://github.com/fukata/p5-MojoX-Session-Store-Redis" title="fukata/p5-MojoX-Session-Store-Redis" target="_blank">fukata/p5-MojoX-Session-Store-Redis</a></p>
+<p>json化するのとRedisのキー自体にもexpireを適用するようにも対応しています。</p>
+<h2>インタフェース</h2>
+<p>無事、データストアにsessionを保存することができるようになったので、実際にコントローラ内部で使ってみたいと思います。MojoX::Sessionを使う場合、startupの中で下記のように定義します。</p>
+<pre lang="perl">
+    $self->plugin(
+        session => {
+            stash_key => 'mojox-session',
+            store     => MojoX::Session::Store::Redis->new(
+                {
+                    server  => '127.0.0.1:6379',
+                    redis_prefix    => 'mojo-session',
+                    redis_dbid      => 1,
+                }
+            ),
+            expires_delta => 3600,
+        }
+    );
+</pre>
+<p>そうするとコントローラ内ではこんな感じになります。</p>
+<pre lang="perl">
+my $session = $self->stash('mojox-session');
+$session->load;
+$session->create unless $session->sid;
+#set 
+$session->data(
+    id => 5,
+    name => 'hoge',
+);
+#get
+my $name = $session->data('name');
+</pre>
+<h2>Helper</h2>
+<p>sessionを取り出すのにstash関数を直に使うのもダサいし、リクエスト毎に自分でloadしたりするのもなんだかなぁと思ったので簡単なHelperを実装しました。</p>
+<pre lang="perl">
+use strict;
+use warnings;
+use utf8;
+
+package Hoge::Mojolicious::Plugin::SessionHelper;
+use Mojo::Base 'Mojolicious::Plugin';
+
+sub register {
+    my ($self, $app, $conf) = @_; 
+    $conf ||= {}; 
+    $conf->{stash_key} ||= 'mojox-session';
+
+    my $stash_key = $conf->{stash_key};
+
+    $app->hook(
+        before_dispatch => sub {
+            my $self = shift;
+            my $session = $self->stash( $stash_key );
+            $session->load;
+            $session->create unless $session->sid;
+
+            $self->stash()
+        }   
+    );  
+
+    $app->helper( sessions => sub { shift->stash($stash_key); } );
+}
+
+1;
+</pre>
+<p>これで、コントローラ内部ではこんな感じで書けるようになりました。</p>
+<pre lang="perl">
+#set
+$self->sessions->data(
+    id => 5,
+    name => 'hoge',
+);
+#get
+my $name = $self->sessions->data('name');
+</pre>
+<p>リクエスト毎にloadなどもしないで良いし、セッション用のAPIも用意することで見た目もすっきりするようになりました。本当は$self->session->data(&#8216;name&#8217;)みたいな感じで書けると良かったんですがsessionメソッドはMojolicious::Controllerに既に定義されているためできませんでした。</p>
+<p>MojoX::Sessionも元々存在するMojolicious::Controller::sessionメソッドは利用していないので、フックしにくい構造になっているのかもしれない。せっかくデフォルトでAPIを定義しているのだからこれを上手く利用したいし、その方がわかりやすいだろう。</p>
+<p>その辺の話はまた今度。今回はとりあえずこの実装でやってみる。</p>
+<p><strong>追記：2012.11.14</strong><br />
+<a href="https://fukata.org/2012/11/11/available-mojox-session-store-redis/" title="MojoX::Session::Store::Redisが動くようになりました！">MojoX::Session::Store::Redisが動くようになりました！</a>でMergeされて無事動くようになりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7292/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mojoliciousのstatic,templateディレクトリを変更</title>
+		<link>/archives/7290/</link>
+					<comments>/archives/7290/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 03 Nov 2012 13:37:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7290</guid>
+
+					<description><![CDATA[Mojoliciousを使用して、別ドメインだけど同じプロジェクトで管理したいということがあるので、static(publicディレクトリ)、templateの変更方法を探してみました。 広告 Moj ... <a href="/archives/7290/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Mojoliciousを使用して、別ドメインだけど同じプロジェクトで管理したいということがあるので、static(publicディレクトリ)、templateの変更方法を探してみました。</p>
+<p><span id="more-7290"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>Mojolicious.pm内で下記のようなコードがあったので、この辺を上書きして上げれば変更できそう。</p>
+<pre lang="perl">
+# Paths
+my $home = $self->home;
+push @{$self->renderer->paths}, $home->rel_dir('templates');
+push @{$self->static->paths},   $home->rel_dir('public');
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7290/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mojoliciousを使ってオレオレFW化への道 〜ModelとLogicの分離〜</title>
+		<link>/archives/7219/</link>
+					<comments>/archives/7219/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 23 Sep 2012 15:01:52 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[オレオレFW]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7219</guid>
+
+					<description><![CDATA[前回、Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜で、MojoliciousにCLI機能を追加したことを書いたんですが、今回はModelとLogicを分離します。 中規模程 ... <a href="/archives/7219/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>前回、<a href="https://fukata.org/2012/07/08/mojolicious-oreore-fw-add-cli/" title="Tatsuya Blog » Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜" target="_blank">Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜</a>で、MojoliciousにCLI機能を追加したことを書いたんですが、今回はModelとLogicを分離します。</p>
+<p>中規模程度のサイトになってくるとそれなりに処理を共通化させないと自分の頭ではどこに何があるか分からなくなるので、これらは必須です。</p>
+<p>現在作成中のサービスでMojoliciousを初めて使っており、今回作成した構造がうまく機能しない可能性もあります。とりあえず、第1弾として実装してみました。また、今回ModelとLogicを分離するのにあたって、Mojoliciousプラグインも一緒に作ってみました。</p>
+<p><span id="more-7219"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>ディレクトリ構造</h2>
+<p>lib以下のディレクトリ構造は下記のようになっています。CliとWebでModel, Logicを共通化したかったので、同じ階層に持ってきています。また、分離するのにMojoliciousプラグインとして実装したので、MyApp::Mojolicious::Pluginにプラグインとして置いています。全然大したプラグインではないのと、ほとんど重複しているので1つのプラグインとして実装できると思います。</p>
+<pre>
+lib/
+├── MyApp
+│   ├── Cli
+│   │   └── Example.pm
+│   ├── Cli.pm
+│   ├── Logic
+│   │   └── Example.pm
+│   ├── Logic.pm
+│   ├── Model
+│   │   └── Example.pm
+│   ├── Model.pm
+│   ├── Mojolicious
+│   │   └── Plugin
+│   │       ├── Logic.pm
+│   │       └── Model.pm
+│   ├── Web
+│   │   └── Controller
+│   │       └── Root.pm
+│   └── Web.pm
+└── MyApp.pm
+</pre>
+<h2>MyApp::Mojolicious::Plugin::Model</h2>
+<p>Logicの方はModelの部分がLogicに変わっただけです。今回アプリを実際に作ってみて共通化して問題なさげだったらModelとLogic用のプラグインを1つにまとめた方が良いかもしれません。</p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Mojolicious-Plugin-Model.pm"></script></p>
+<h2>MyApp::Modelとその子クラス</h2>
+<p>ModelのベースとなるMyApp::Modelとその子クラスになります。まだ、Model共通で使うORMなどは定義していないんですが、ここに定義すればいいのかなと思っています。</p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Model.pm"></script></p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Model-Example.pm"></script></p>
+<h2>プラグインの登録、呼び出し</h2>
+<p>Mojoliciousプラグインは通常Mojolicious::Pluginから検索するんですが、今回はプロジェクト内にアプリ固有のネームスペース配下にプラグインを設置したのでネームスペースを追加する必要があります。<br />
+<script src="https://gist.github.com/3771718.js?file=Web.pm"></script></p>
+<p>実際にアプリ内から呼び出してみたところ。無名関数なのでアロー演算子があるが、出来ればコレが無い形で提供できれば呼び出しも綺麗になる。もしくは、こんな感じでも良い。</p>
+<pre lang="perl">
+// コレがベスト
+my $model = $self->app->model("Example");
+// コレでもいい
+my $model = $self->app->model->load("Example");
+</pre>
+<p>まぁ、オレオレで使うだけなので、極力文字数が少ない方に越したこと無い。</p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Web-Controller-Root.pm"></script></p>
+<p>ということで、とりあえずModelとLogicを分離してみました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7219/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜</title>
+		<link>/archives/7136/</link>
+					<comments>/archives/7136/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 08 Jul 2012 07:52:58 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[オレオレFW]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7136</guid>
+
+					<description><![CDATA[最近、自分の中で中規模（WEBとちょっとしたバッチ数本）サイトを作成する時に以前はPHPを使用していたんですが、本業でPerlを触りだしたというのとCPANの便利さに慣れてしまって今ではPerlで作る ... <a href="/archives/7136/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、自分の中で中規模（WEBとちょっとしたバッチ数本）サイトを作成する時に以前はPHPを使用していたんですが、本業でPerlを触りだしたというのとCPANの便利さに慣れてしまって今ではPerlで作ることが多くなりました。 スタートアップを早めるために個人的に使いやすいFWを使ってプロジェクトのひな形を作っています。</p>
+<p>プロジェクトのひな形を作る前にどのFWを使おうか迷ったんですが、MVCベースで依存性の低いものが欲しかったのとちょうど<a href="https://mojolicio.us/" target="_blank">Mojolicious3.0</a>のリリース記事を見かけたのでMojoliciousを使うことにしました。ちなみにMojoliciousを使うのは今回が初めてです。</p>
+<p>今回はMojoliciousにCLI機能を追加してみます。</p>
+<p><span id="more-7136"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>まず、最終的にこんな感じで実行したいです。</p>
+<pre lang="bash">
+./script/cli Hoge
+</pre>
+<p>Hogeはファイル単位に分割されたcli用モジュール名です。</p>
+<p>Mojoliciousにcil機能を追加した結果、下記のようなファイル構成になりました。mojo generate app MyApp::WebとすることでWeb用のネームスペースを確保しています。</p>
+<pre>
+my_app/
+├── lib
+│   └── MyApp
+│       ├── Cli
+│       │   └── Hoge.pm
+│       ├── Cli.pm
+│       ├── Web
+│       │   └── Example.pm
+│       └── Web.pm
+├── log
+├── public
+│   └── index.html
+├── script
+│   ├── cli
+│   └── my_app
+├── t
+│   └── basic.t
+└── templates
+    ├── example
+    │   └── welcome.html.ep
+    └── layouts
+        └── default.html.ep
+</pre>
+<p>新たに追加したファイルはこんな感じになっています。</p>
+<h2>追加したファイル</h2>
+<h3>MyApp/Cli.pm</h3>
+<pre lang="perl">
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+
+package MyApp::Cli;
+use Mojo::Base 'Mojo::Command';
+
+use FindBin;
+use File::Basename 'dirname';
+use File::Spec::Functions qw(catdir splitdir);
+
+sub development_mode {
+    my $self = shift;
+}
+
+sub production_mode {
+    my $self = shift;
+}
+
+sub setup {
+    my $self = shift;
+    my $app  = $self->app;
+    my $mode = $app->mode;
+
+    # setup each mode
+    eval {
+        my $method = "${mode}_mode";
+        $self->$method;
+    };
+}
+
+1;
+</pre>
+<h3>MyApp/Cli/Hoge.pm</h3>
+<pre lang="perl">
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+
+package MyApp::Cli::Hoge;
+use Mojo::Base 'MyApp::Cli';
+
+sub run {
+    my $self = shift;
+    local @ARGV = @_; 
+
+    $self->setup;
+}
+
+1;
+</pre>
+<h3>script/cli</h3>
+<pre lang="perl">
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+
+use UNIVERSAL::require;
+use File::Basename 'dirname';
+use File::Spec::Functions qw(catdir splitdir);
+
+# Source directory has precedence
+my @base = (splitdir(dirname(__FILE__)), '..');
+my $lib = join('/', @base, 'lib');
+-e catdir(@base, 't') ? unshift(@INC, $lib) : push(@INC, $lib);
+
+my $cmd = shift @ARGV;
+my $module = "MyApp::Cli::$cmd";
+$module->require;
+$module->run( @ARGV );
+</pre>
+<h2>まとめ</h2>
+<p>とりあえず、./script/cli Hogeの形でモジュールを実行することが出来るようになりました。cli側で$app->pluginメソッドも使えるので、web側と同じようにconfigやdatabase、その他のpluginをロードして利用することが出来るようになっています。</p>
+<p>database周りと入力値の検証用ライブラリ、ロジックの分離ができたら実際にアプリを作ってみたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7136/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

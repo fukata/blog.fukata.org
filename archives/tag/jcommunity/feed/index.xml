@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>JCommunity &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/jcommunity/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[JC]外部公開しました。</title>
+		<link>/archives/1450/</link>
+					<comments>/archives/1450/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 06 Aug 2009 16:22:04 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1450</guid>
+
+					<description><![CDATA[この度やっと、自宅の開発環境を外部に公開することが出来ました。 下記がそのURLになります。 https://fukata.myhome.cx:8180/jc-front/Index まだ、デザインも ... <a href="/archives/1450/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>この度やっと、自宅の開発環境を外部に公開することが出来ました。<br />
+下記がそのURLになります。</p>
+<p>https://fukata.myhome.cx:8180/jc-front/Index</p>
+<p>まだ、デザインも自分で作成しているので味気ないですが、とりあえず動いてますwまだ、未実装な部分もかなり残っていますが＾＾；<br />
+肝心の新規登録もまだ未実装状態なので、もし使ってみたいと思った方は、お問い合わせフォームからメールしてもらえればアカウントを登録致します。</p>
+<p>本当に人手が足りない状態です＾＾；<br />
+javaに興味がある方募集中ですw</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1450/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]改行コードをbrタグに置換するタグライブラリを作成しました</title>
+		<link>/archives/1444/</link>
+					<comments>/archives/1444/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2009 16:10:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[struts2]]></category>
+		<category><![CDATA[taglib]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1444</guid>
+
+					<description><![CDATA[はい。タイトル通りのタグライブラリを作成してみました。当初普通のJSPのタグライブラリを作成したのですが、下記のように値を渡す予定だったのですが、これじゃ渡せないじゃんということに作成し終わった後に気 ... <a href="/archives/1444/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>はい。タイトル通りのタグライブラリを作成してみました。当初普通のJSPのタグライブラリを作成したのですが、下記のように値を渡す予定だったのですが、これじゃ渡せないじゃんということに作成し終わった後に気づいて作成しなおしました。というか、デバッグの始まりでしたw</p>
+<pre lang="JSP">
+<jc :txt2br value="%{messageDto.body}"></jc>
+</pre>
+<p>今回作成したのは下記の4点です。</p>
+<ul>
+<li>Text2BrTag.java：タグライブラリクラス</li>
+<li>Text2Br.java：タグライブラリコンポーネント</li>
+<li>HtmlUtils.java：HTML出力用ユーティリティ</li>
+<li>jcommunity.tld：カスタムタグ定義ファイル</li>
+</ul>
+<p>また今回も醜いかとは思いますが、何かの役に立てばと思い、ソースを貼り付けておきます。</p>
+<p><span id="more-1444"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>■Text2BrTag.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_common.view.taglib;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.components.Component;
+import org.apache.struts2.views.jsp.ComponentTagSupport;
+import org.fukata.jc_common.view.component.Text2Br;
+
+import com.opensymphony.xwork2.util.ValueStack;
+
+/**
+ * テキストの改行コードを<br />に置換する
+ * 
+ * @author tatsuya
+ *
+ */
+public class Text2BrTag extends ComponentTagSupport {
+	
+	private static final long serialVersionUID = 1L;
+	
+	// 置換する文字列
+	private String value;
+	
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public Component getBean(ValueStack stack, HttpServletRequest req,
+			HttpServletResponse res) {
+		return new Text2Br(stack);
+	}
+	
+	@Override
+	protected void populateParams() {
+		super.populateParams();
+		
+		Text2Br text2Br = (Text2Br) component;
+		text2Br.setValue(this.value);
+	}
+
+	
+}
+</pre>
+<p>■Text2Br.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_common.view.component;
+
+import java.io.IOException;
+import java.io.Writer;
+
+import org.apache.struts2.components.Component;
+import org.fukata.jc_common.utils.HtmlUtils;
+
+import com.opensymphony.xwork2.util.ValueStack;
+
+public class Text2Br extends Component {
+
+	private String value;
+	
+	public Text2Br(ValueStack stack) {
+		super(stack);
+	}
+	
+	@Override
+	public boolean start(Writer writer) {
+		boolean result = super.start(writer);
+		
+		if (this.value!=null) {
+			this.value = findString(this.value);
+			// 改行コードをbrタグに置換
+			this.value = HtmlUtils.getTxt2Br(this.value);
+		}
+		
+		return result;
+	}
+	
+	@Override
+	protected boolean end(Writer writer, String body, boolean popComponentStack) {
+		boolean result = super.end(writer, body, popComponentStack);
+		
+		try {
+			// 画面に書き出す
+			writer.write(this.value);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	
+}
+</pre>
+<p>■HtmlUtils.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_common.utils;
+
+public class HtmlUtils {
+	
+	private static final String BKREAK_REGEX = "(\r\n|\r|\n)"; 
+	private static final String HTML_BREAK = "<br />"; 
+	
+	private HtmlUtils() {
+	}
+	
+	public static String getTxt2Br(String txt) {
+		return txt.replaceAll(BKREAK_REGEX, HTML_BREAK);
+	}
+}
+</pre>
+<p>■jcommunity.tld</p>
+<pre lang="XML" line="1">
+< ?xml version="1.0" ?>
+< !DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "https://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib xmlns="https://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://java.sun.com/xml/ns/j2eeweb-jsptaglibrary_2_0.xsd"
+        version="2.0">
+  <tlibversion>1.0</tlibversion>
+  <jspversion>2.0</jspversion>
+  <shortname>jcommunity</shortname>
+  <info>JCommunity tab library</info>
+
+  <tag>
+    <name>txt2br</name>
+    <tagclass>org.fukata.jc_common.view.taglib.Text2BrTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>text to html br tag</info>
+    <attribute>
+    	<name>value</name>
+    	<required>true</required>
+    	<rtexprvalue>true</rtexprvalue>
+    	<description>< ![CDATA[Value expression for Parameter to set]]&gt;</description>
+    </attribute>
+  </tag>
+</taglib>
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1444/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]日記削除と日記コメント削除機能を追加しました</title>
+		<link>/archives/1440/</link>
+					<comments>/archives/1440/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 25 Jul 2009 14:39:02 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1440</guid>
+
+					<description><![CDATA[表題の通り、「日記削除」と「日記コメント削除」を追加しました。これで、日記に関する機能は最低限整ったのではないかと思います。まぁ、本当のことを言えば、入力したデータの改行コードをHTML表示用に変換す ... <a href="/archives/1440/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>表題の通り、「日記削除」と「日記コメント削除」を追加しました。これで、日記に関する機能は最低限整ったのではないかと思います。まぁ、本当のことを言えば、入力したデータの改行コードをHTML表示用に変換するユーティリティを作成しないと見栄えが悪いんですけどね＾＾；（現在は、改行されずに見た目上1行で表示されている感じです）</p>
+<p>SNSと言いながら未だに「友達申請」ができないので次はその辺を作成しようかと思います。メッセージ管理ですね。</p>
+<p>う〜ん、本当に人手が欲しい今日この頃です；；</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1440/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]Struts2での例外処理について</title>
+		<link>/archives/1429/</link>
+					<comments>/archives/1429/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 25 Jul 2009 00:32:39 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[struts2]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1429</guid>
+
+					<description><![CDATA[ActionなどでExceptionが発生した際に、自動的にエラーページに遷移できるようにしておくと余計なエラー処理を内部で各必要がなくなるので便利かと思い作成しました。 今回の要件として、上記に加え ... <a href="/archives/1429/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5019/5475643477_903f716249_m.jpg" target="_blank" title="ExceptionSequence"><img loading="lazy" src="https://farm6.static.flickr.com/5019/5475643477_903f716249_m.jpg" alt="ExceptionSequence" width="200" height="150" class="attachment wp-att-1430 alignleft" /></a>ActionなどでExceptionが発生した際に、自動的にエラーページに遷移できるようにしておくと余計なエラー処理を内部で各必要がなくなるので便利かと思い作成しました。</p>
+<p>今回の要件として、上記に加え、エラーの内容をメッセージコードで管理しているのでそれを利用し、さらに意図しないエラーの場合はデフォルトのメッセージコードを割り当てるというものです。</p>
+<p>作成したのは、「<strong>com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor</strong>」を継承した自作例外インターセプタークラスだけです。実際、処理もほとんど変わっていません。</p>
+<p>いつもの用に作成したソースは、下記に掲載しているので良ければ見てください。</p>
+<p>作成したクラス以外の注意点として、インターセプタースタックにデフォルトの「defaultStack」を利用している場合、exceptionという通常の例外処理用インターセプターが存在するため、それを除外する必要があります。定義済みのスタックから除外する方法が見つからなかったので、defaultStackからexceptionを除いてstruts.xmlにて再定義しています。</p>
+<p><span id="more-1429"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>■JcExceptionInterceptor</p>
+<pre lang="java" line="1">
+package org.fukata.jc_common.interceptor;
+
+import java.util.List;
+
+import org.apache.commons.lang.StringUtils;
+import org.fukata.jc_common.exception.JcSystemException;
+
+import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.config.entities.ExceptionMappingConfig;
+import com.opensymphony.xwork2.interceptor.ExceptionHolder;
+import com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor;
+
+public class JcExceptionInterceptor extends ExceptionMappingInterceptor {
+
+	private static final long serialVersionUID = 1L;
+	
+	protected String defaultMessageCode;
+	
+	public String getDefaultMessageCode() {
+		return defaultMessageCode;
+	}
+
+	public void setDefaultMessageCode(String defaultMessageCode) {
+		this.defaultMessageCode = defaultMessageCode;
+	}
+
+	@Override
+	public String intercept(ActionInvocation invocation) throws Exception {
+        String result;
+
+        try {
+            result = invocation.invoke();
+        } catch (Exception e) {
+            if (isLogEnabled()) {
+                handleLogging(e);
+            }
+            List<exceptionmappingconfig> exceptionMappings = invocation.getProxy().getConfig().getExceptionMappings();
+            String mappedResult = this.findResultFromExceptions(exceptionMappings, e);
+            if (mappedResult != null) {
+            	
+            	// メッセージコードの格納
+            	Exception ex = e; 
+            	if (isDefaultMessageCode(e)) {
+            		ex = new JcSystemException(getDefaultMessageCode());
+            	}
+            	
+                result = mappedResult;
+                publishException(invocation, new ExceptionHolder(ex));
+            } else {
+                throw e;
+            }
+        }
+
+		return result;
+	}
+
+	/**
+	 * デフォルトのメッセージコードを適用するかどうか
+	 * @param e
+	 * @return
+	 */
+    private boolean isDefaultMessageCode(Exception e) {
+    	if (e instanceof JcSystemException) {
+			if (StringUtils.isBlank(e.getMessage())) {
+				return true;
+			}
+		} else {
+			return true;
+		}
+    	return false;
+	}
+
+	private String findResultFromExceptions(List</exceptionmappingconfig><exceptionmappingconfig> exceptionMappings, Throwable t) {
+        String result = null;
+
+        // Check for specific exception mappings.
+        if (exceptionMappings != null) {
+            int deepest = Integer.MAX_VALUE;
+            for (Object exceptionMapping : exceptionMappings) {
+                ExceptionMappingConfig exceptionMappingConfig = (ExceptionMappingConfig) exceptionMapping;
+                int depth = getDepth(exceptionMappingConfig.getExceptionClassName(), t);
+                if (depth >= 0 && depth < deepest) {
+                    deepest = depth;
+                    result = exceptionMappingConfig.getResult();
+                }
+            }
+        }
+
+        return result;
+    }
+}
+</pre>
+<p>■applicationContext.xml</p>
+<pre lang="XML" line="1">
+	<bean id="jcExceptionInterceptor" class="org.fukata.jc_common.interceptor.JcExceptionInterceptor"
+		scope="prototype">
+		<property name="defaultMessageCode" value="exception.M00100"></property>
+	</bean>
+</pre>
+<p>■struts.xml</p>
+<pre lang="XML" line="1">
+		<!-- インターセプター -->
+		<interceptors>
+			<interceptor name="jcException" class="jcExceptionInterceptor"></interceptor>
+			<interceptor name="login" class="loginInterceptor"></interceptor>
+
+			<interceptor -stack name="myDefaultStack">
+				<interceptor -ref name="jcException"></interceptor>
+				<interceptor -ref name="login"></interceptor>
+				<interceptor -ref name="alias"></interceptor>
+				<interceptor -ref name="servletConfig"></interceptor>
+				<interceptor -ref name="i18n"></interceptor>
+				<interceptor -ref name="prepare"></interceptor>
+				<interceptor -ref name="chain"></interceptor>
+				<interceptor -ref name="debugging"></interceptor>
+				<interceptor -ref name="profiling"></interceptor>
+				<interceptor -ref name="scopedModelDriven"></interceptor>
+				<interceptor -ref name="modelDriven"></interceptor>
+				<interceptor -ref name="fileUpload"></interceptor>
+				<interceptor -ref name="checkbox"></interceptor>
+				<interceptor -ref name="staticParams"></interceptor>
+				<interceptor -ref name="actionMappingParams"></interceptor>
+				</interceptor><interceptor -ref name="params">
+					<param name="excludeParams"/>dojo\..*,^struts\..*
+				</interceptor>
+				<interceptor -ref name="conversionError"></interceptor>
+				<interceptor -ref name="validation">
+					<param name="excludeMethods"/>input,back,cancel,browse
+				</interceptor>
+				<interceptor -ref name="workflow">
+					<param name="excludeMethods"/>input,back,cancel,browse
+				</interceptor>
+			
+		</interceptors>
+
+		<default -interceptor-ref name="myDefaultStack"></default>
+
+		<global -results>
+			<result name="exception">/jsp/Error.jsp</result>
+		</global>
+
+		<global -exception-mappings>
+			<exception -mapping result="exception" exception="java.lang.Exception"></exception>
+		</global>
+</pre>
+<p></exceptionmappingconfig></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1429/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]コメント投稿機能追加とJSでtrimメソッド</title>
+		<link>/archives/1424/</link>
+					<comments>/archives/1424/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 22 Jul 2009 17:43:28 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[正規表現]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1424</guid>
+
+					<description><![CDATA[やっとコメント投稿機能を追加しました。 そして、その際、空白コメントや、改行しかないコメントの場合にJSでエラーを出すようにしてみたのですが、その際作成したtrimメソッドのコードを公開したいと思いま ... <a href="/archives/1424/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5091/5475643361_918a47fe12_m.jpg" target="_blank" title="ArticleDetail_1248284312768"><img loading="lazy" src="https://farm6.static.flickr.com/5091/5475643361_918a47fe12_m.jpg" alt="ArticleDetail_1248284312768" width="200" height="154" class="attachment wp-att-1425 alignleft" /></a>やっとコメント投稿機能を追加しました。</p>
+<p>そして、その際、空白コメントや、改行しかないコメントの場合にJSでエラーを出すようにしてみたのですが、その際作成したtrimメソッドのコードを公開したいと思います。まぁ、と言っても簡単な正規表現を繰り替えしているだけなんですけどね＾＾；</p>
+<p>正規表現を考えるのがだるかったので、パワーコードになっているので利用する際は注意してください。</p>
+<p>■string.js</p>
+<pre lang="javascript" line="1">
+String.prototype.trim = function() {
+	var _str = this;
+	var length = 0;
+	do {
+		length = _str.length;
+		// 先頭、末尾の半角空白文字の削除
+		_str = _str.replace(/^[ ]+|[ ]+$/g, '');
+		// 先頭、末尾の全角空白文字の削除
+		_str = _str.replace(/^[　]+|[　]+$/g, '');
+		// 先頭、末尾の改行コードの削除
+		_str = _str.replace(/^[\r\n]+|[\r\n]+$/g, '');
+	} while (length!=_str.length)
+	
+	return _str;
+}
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1424/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]jspファイルの命名規則</title>
+		<link>/archives/1417/</link>
+					<comments>/archives/1417/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 22 Jul 2009 12:18:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1417</guid>
+
+					<description><![CDATA[今まで、jspのファイル名を適当に付けていたのですが、ちょっと破綻ぎみになってきたので統一しようかと思っています。 ■基本的な命名規則 javaのクラス名と同様（頭文字を大文字、単語の区切り文字を大文 ... <a href="/archives/1417/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今まで、jspのファイル名を適当に付けていたのですが、ちょっと破綻ぎみになってきたので統一しようかと思っています。</p>
+<p>■基本的な命名規則</p>
+<blockquote><p>javaのクラス名と同様（頭文字を大文字、単語の区切り文字を大文字それ以外は小文字）<br />
+例：ArticleDetail.jsp
+</p></blockquote>
+<p>■類似画面の命名規則</p>
+<blockquote><p>基本的なファイル名+ハイフン+識別する文字列（基本的な命名規則に準拠）<br />
+例：ArticleDetail-Friends.jsp
+</p></blockquote>
+<p>■include専用のファイルの命名規則</p>
+<blockquote><p>アンダースコア+（基本的な命名規則または類似画面の命名規則）<br />
+例：_Sidebar.jsp
+</p></blockquote>
+<p>こんな感じになりました。<br />
+皆さんはどのような命名規則で開発を行っていますか？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1417/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]DWR2+Spring2の連携とTwitter4Jに対応しました</title>
+		<link>/archives/1402/</link>
+					<comments>/archives/1402/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2009 16:34:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[dwr]]></category>
+		<category><![CDATA[ibatis]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[spring]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1402</guid>
+
+					<description><![CDATA[タイトルからも分かる通り、SNS内から、Twitterを通じて発言できるようにしてみました。さらに、Ajaxのライブラリとして、DWR2を採用。同ライブラリは元々Springとの連携も考慮されているの ... <a href="/archives/1402/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5219/5476239644_56ac4fb8d3_m.jpg" target="_blank" title="home_1247931392419"><img loading="lazy" src="https://farm6.static.flickr.com/5219/5476239644_56ac4fb8d3_m.jpg" alt="home_1247931392419" width="200" height="152" class="attachment wp-att-1401 alignleft" /></a>タイトルからも分かる通り、SNS内から、Twitterを通じて発言できるようにしてみました。さらに、Ajaxのライブラリとして、DWR2を採用。同ライブラリは元々Springとの連携も考慮されているので、比較的連携は簡単でした。</p>
+<p>また、Twitterのライブラリとしてfaff.jpの作成者でもあるHaruyoshiさんから「<a href="https://yusuke.homeip.net/twitter4j/ja/index.html">Twitter4J</a>」が便利だと聞いて採用しました。Javaオブジェクトで操作が出来るため、自分でXMLなどの面倒なパースをしなくて済むのが一番の大きな点です。</p>
+<p>JavaでTwitterと連携したいのであれば、一番簡単なんじゃないかと思います。注意として、ライブラリを最新版(2.0.8)にしないと、Twitter側のAPIとの絡みでExceptionは発生します。なので、使用する際は、最新版を利用してください。</p>
+<p>まぁ、今回の連携について、コードを残しておきますので、何かの役に立てばと思います。</p>
+<p>DWR2+Spring2の連携により、dwr.xmlの記述が必要なくなり、applicationContext.xmlに記述するだけでよくなり、Springに慣れている人は設定しやすいと思います。</p>
+<p>自分メモですが、今回のタグは「MileStone_008」にDWR2+Spring2の連動までの確認を含めたソースをコミットしています。</p>
+<p><span id="more-1402"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>■applicationContext.xml</p>
+<pre lang="XML" line="1">
+< ?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="false"
+	xmlns="https://www.springframework.org/schema/beans" 
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dwr="https://www.directwebremoting.org/schema/spring-dwr"
+	xmlns:aop="https://www.springframework.org/schema/aop" 
+	xmlns:tx="https://www.springframework.org/schema/tx"
+	xsi:schemaLocation="https://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+	https://www.springframework.org/schema/tx 
+	https://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+	https://www.springframework.org/schema/aop 
+	https://www.springframework.org/schema/aop/spring-aop.xsd
+	https://www.directwebremoting.org/schema/spring-dwr
+	https://www.directwebremoting.org/schema/spring-dwr-2.0.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driver}"></property>
+		<property name="url" value="${jdbc.url}"></property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<bean id="transactionAttributeSource"
+		class="org.springframework.transaction.interceptor.NameMatchTransactionAttributeSource">
+		<property name="properties">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<!-- <prop key="*">PROPAGATION_REQUIRED,readOnly -->
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager"></property>
+		<property name="transactionAttributeSource" ref="transactionAttributeSource"></property>
+	</bean>
+
+	<bean id="beanNameAutoProxy"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames">
+			<list>
+				<value>*Service</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- Model -->
+	<bean id="loginModel" class="org.fukata.jc_front.model.LoginModel">
+	</bean>
+
+	<!-- Dao -->
+	<bean id="customerDao" class="org.fukata.jc_front.dao.impl.CustomerDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+	<bean id="communityDao" class="org.fukata.jc_front.dao.impl.CommunityDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+	<bean id="informationDao" class="org.fukata.jc_front.dao.impl.InformationDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+
+	<!-- Service -->
+	<bean id="customerService" class="org.fukata.jc_front.service.impl.CustomerServiceImpl">
+		<property name="customerDao" ref="customerDao"></property>
+		<property name="communityDao" ref="communityDao"></property>
+	</bean>
+	<bean id="informationService" class="org.fukata.jc_front.service.impl.InformationServiceImpl">
+		<property name="informationDao" ref="informationDao"></property>
+	</bean>
+	<bean id="twitterService" class="org.fukata.jc_front.service.impl.TwitterServiceImpl">
+	</bean>
+
+	<!-- Action -->
+	<bean id="loginAction" class="org.fukata.jc_front.action.LoginAction"
+		scope="prototype">
+	</bean>
+	<bean id="loginWithValidationAction" class="org.fukata.jc_front.action.LoginWithValidationAction"
+		scope="prototype">
+		<property name="loginModel" ref="loginModel"></property>
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+	<bean id="indexAction" class="org.fukata.jc_front.action.IndexAction"
+		scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+		<property name="informationService" ref="informationService"></property>
+	</bean>
+	<bean id="logoutAction" class="org.fukata.jc_front.action.LogoutAction"
+		scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+
+	<!-- DWR Manager -->
+	<dwr :configuration>
+		</dwr><dwr :convert type="bean" class="org.fukata.jc_front.dwr.bean.TwitterBean"></dwr>
+		<dwr :convert type="bean" class="twitter4j.Status"></dwr>
+		<dwr :convert type="bean" class="twitter4j.User"></dwr>
+	
+	<bean id="twitterManager" class="org.fukata.jc_front.dwr.manager.TwitterManager">
+		<property name="customerService" ref="customerService"></property>
+		<property name="twitterService" ref="twitterService"></property>
+
+		<dwr :remote javascript="TwitterManager">
+			</dwr><dwr :include method="echo"></dwr>
+			<dwr :include method="getFriendsTimeline"></dwr>
+			<dwr :include method="setCustomerService"></dwr>
+			<dwr :include method="setTwitterService"></dwr>
+		
+	</bean>
+
+
+	<!-- Interceptor -->
+	<bean id="loginInterceptor" class="org.fukata.jc_front.interceptor.LoginInterceptor"
+		scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+
+	<!-- Advice -->
+	<aop :config>
+		</aop><aop :advisor pointcut="execution(* org.fukata.jc_front.service.*Service.*(..))"
+			advice-ref="loggingAdvice"></aop>
+	
+	<bean id="loggingAdvice" class="org.fukata.jc_common.advice.LoggingAdvice"
+		scope="prototype">
+	</bean>
+</beans>
+</pre>
+<p>■web.xml</p>
+<pre lang="XML" line="1">
+< !DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "https://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web -app>
+	<display -name>jc-front</display>
+	<!-- Setting for Spring2 listner. -->
+	<context -param>
+		<param -name/>contextConfigLocation
+		<param -value/>/WEB-INF/applicationContext.xml
+	</context>
+
+	<filter>
+		</filter><filter -name>jc-front</filter>
+		<filter -class>org.apache.struts2.dispatcher.FilterDispatcher</filter>
+		<init -param>
+			<param -name/>actionPackages
+			<param -value/>org.fukata.jc_front.action
+		</init>
+	
+
+	<filter -mapping>
+		</filter><filter -name>jc-front</filter>
+		<url -pattern>/*</url>
+	
+
+	<listener>
+		</listener><listener -class>org.springframework.web.context.ContextLoaderListener</listener>
+	
+
+
+	<!-- DWR -->
+	<servlet>
+		</servlet><servlet -name>dwr-invoker</servlet>
+		<servlet -class>org.directwebremoting.spring.DwrSpringServlet</servlet>
+		<init -param>
+			<!-- (1)デバッグモードの有効化 -->
+			<param -name/>debug
+			<param -value/>true
+		</init>
+		<init -param>
+			<param -name/>activeReverseAjaxEnabled
+			<param -value/>true
+		</init>
+		<load -on-startup>1</load>
+	
+
+	<servlet -mapping>
+		</servlet><servlet -name>dwr-invoker</servlet>
+		<!-- (1)DwrServletからJavaScriptを自動生成するための設定 -->
+		<url -pattern>/dwr/*</url>
+	
+
+</web>
+</pre>
+<p>■TwitterManager.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_front.dwr.manager;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.directwebremoting.WebContext;
+import org.directwebremoting.WebContextFactory;
+import org.fukata.jc_common.utils.beanutils.JcBeanUtils;
+import org.fukata.jc_front.dto.CustomerDto;
+import org.fukata.jc_front.dto.SessionUserDto;
+import org.fukata.jc_front.dto.TwitterDto;
+import org.fukata.jc_front.dwr.bean.TwitterBean;
+import org.fukata.jc_front.service.CustomerService;
+import org.fukata.jc_front.service.TwitterService;
+
+import twitter4j.Status;
+
+public class TwitterManager {
+	
+	private CustomerService customerService;
+	private TwitterService twitterService;
+	
+	/**
+	 * 発言用メソッド
+	 * @param status
+	 */
+	public TwitterBean echo(String status) {
+		WebContext dwrContext = WebContextFactory.get();
+		HttpServletRequest request = dwrContext .getHttpServletRequest();
+		TwitterDto twitterDto = generateTwitterDto(request);
+		// status
+		twitterDto.setStatus(status);
+		
+		Status updateStatus = this.twitterService.updateStatus(twitterDto);
+		
+		// beanの生成
+		TwitterBean bean = new TwitterBean();
+		bean.setLatestStatus(updateStatus);
+		
+		return bean;
+	}
+
+	private TwitterDto generateTwitterDto(HttpServletRequest request) {
+		SessionUserDto sessionUserDto = this.customerService.getSessionUserDto(request);
+		CustomerDto customerDto = this.customerService.selectByCustomerId(sessionUserDto.getCustomerId());
+		
+		TwitterDto twitterDto = new TwitterDto();
+		JcBeanUtils.copyProperties(twitterDto, customerDto);
+		
+		return twitterDto;
+	}
+
+	/**
+	 * フレンドタイムライン取得用メソッド
+	 * @param value
+	 */
+	public TwitterBean getFriendsTimeline() {
+		WebContext dwrContext = WebContextFactory.get();
+		HttpServletRequest request = dwrContext .getHttpServletRequest();
+		TwitterDto twitterDto = generateTwitterDto(request);
+		
+		List<status> friendsTimeline = this.twitterService.getFriendsTimeline(twitterDto);
+		
+		// beanの生成
+		TwitterBean bean = new TwitterBean();
+		bean.setFriendsTimeline(friendsTimeline);
+		
+		return bean;
+	}
+
+	public CustomerService getCustomerService() {
+		return customerService;
+	}
+
+	public void setCustomerService(CustomerService customerService) {
+		this.customerService = customerService;
+	}
+
+	public TwitterService getTwitterService() {
+		return twitterService;
+	}
+
+	public void setTwitterService(TwitterService twitterService) {
+		this.twitterService = twitterService;
+	}
+	
+}
+</status></pre>
+<p>■TwitterBean.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_front.dwr.bean;
+
+import java.io.Serializable;
+import java.util.List;
+
+import twitter4j.Status;
+
+public class TwitterBean implements Serializable {
+	private Status latestStatus;
+	private List<status> friendsTimeline;
+	
+	public Status getLatestStatus() {
+		return latestStatus;
+	}
+	public void setLatestStatus(Status latestStatus) {
+		this.latestStatus = latestStatus;
+	}
+	public List</status><status> getFriendsTimeline() {
+		return friendsTimeline;
+	}
+	public void setFriendsTimeline(List</status><status> friendsTimeline) {
+		this.friendsTimeline = friendsTimeline;
+	}
+	
+}
+</status></pre>
+<p>■twitter.js(jquery.jsに依存しています)</p>
+<pre lang="JavaScript" line="1">
+// 発言用
+function echo() {
+	// HTMLからデータを取得
+	var status = dwr.util.getValue("twitter_status");
+	// 入力値が空の場合は発言しない。
+	if (status.trim=="") {
+		return false;
+	}
+	
+	// リモートオブジェクトの実行（第二引数はコールバック関数）
+	TwitterManager.echo(status, _echo);
+
+	return false;
+}
+
+// 発言用コールバック
+function _echo(twitterBean) {
+	// 入力値の初期化
+	dwr.util.setValue("twitter_status", "");
+}
+
+// 返信
+function reply(to) {
+	var status = dwr.util.getValue("twitter_status");
+	status = '@' + to + " " + status;
+	dwr.util.setValue("twitter_status", status);
+}
+
+// 初期ロード時実行用
+function init() {
+	dwr.engine.setActiveReverseAjax(true);
+	
+	getFriendsTimeline();
+}
+
+// フレンドタイムライン取得用
+function getFriendsTimeline() {
+	TwitterManager.getFriendsTimeline({
+        callback: _getFriendsTimeline
+    });
+}
+
+// フレンドタイムライン取得用コールバック
+function _getFriendsTimeline(twitterBean) {
+	var options = {};
+	options.escapeHtml = false;
+	
+	// 初期化
+	dwr.util.setValue("twitter_timeline", "", options);
+	var html = "";
+	for (var i = 0; i < twitterBean.friendsTimeline.length; i++) {
+		var status = twitterBean.friendsTimeline[i];
+		var _html = "";
+		_html += '<div class="timeline_row clearfix">';
+		_html += '<div class="twitter_img">';
+		_html += '<img loading="lazy" src="https://fukata.org/2009/07/19/jc-dwr2-spring2-and-twitter4j/" width="48" height="48"/>';
+		_html += '</div>';
+		_html += '<div class="twitter_message">';
+		_html += status.user.screenName + "<br />";
+		_html += status.text;
+		_html += '</div>';
+		_html += '<div class="twitter_action">';
+		_html += '<a href="javascript:reply(\''+status.user.screenName+'\')"></a>';
+		_html += '</div>';
+		_html += '';
+		
+		html += _html;
+		dwr.util.setValue("twitter_timeline", html, options);
+	}
+	
+	// ポーリング
+	setTimeout(getFriendsTimeline, 60000);
+}
+
+$(document).ready(init);
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1402/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]ログイン画面用の画像分割プログラム</title>
+		<link>/archives/1397/</link>
+					<comments>/archives/1397/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 14 Jul 2009 22:52:13 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1397</guid>
+
+					<description><![CDATA[画像は開発途中のログイン画面のものなのであまり気にしないで下さい＾＾； 今回作成したのは、mixiであるような大きな画像を等分割して体感速度を上げるための小細工用のプログラムです。単純に指定されたサイ ... <a href="/archives/1397/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5214/5475642871_b13554b596_m.jpg" target="_blank" title="_1247611434908"><img loading="lazy" src="https://farm6.static.flickr.com/5214/5475642871_b13554b596_m.jpg" alt="_1247611434908" width="200" height="116" class="attachment wp-att-1398 alignleft" /></a>画像は開発途中のログイン画面のものなのであまり気にしないで下さい＾＾；</p>
+<p>今回作成したのは、mixiであるような大きな画像を等分割して体感速度を上げるための小細工用のプログラムです。単純に指定されたサイズで画像を切り取っています。まぁ、画像ソフトの使い方を知らない自分としては、これしか使い道がないですし、なによりプログラムになっているので指定された材料を置けば使える状態になっているので、２、３度行う時にかなり便利です。</p>
+<p>というか、やはりフロント側もjavaで作ることになっちゃいましたね＾＾；なんというか、管理側から作成するにはかなりの根気がないとモチベーション的に持たないことが分かりましたw</p>
+<p>プログラムは詳細以下に載せておきたいと思います。</p>
+<p><span id="more-1397"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>■org.fukata.jc_tools.main.ImageDiviveMain</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_tools.main;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+import org.fukata.jc_common.utils.ImageUtils;
+
+
+/**
+ * ログイン画面用の950x460画像を横5, 縦2に分割して生成する
+ * 
+ * @author tatsuya
+ *
+ */
+public class ImageDiviveMain {
+	
+	private static final int WIDTH=950;
+	private static final int HEIGHT=460;
+	
+	private static final int IMG_WIDTH=190;
+	private static final int IMG_HEIGHT=230;
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		String workDir = "/home/tatsuya/workspace/workspace_java_ee/ImageDivideTools/src/main/resources";
+		String filename = workDir+"/main.png";
+		BufferedImage loadImage = ImageUtils.loadImage(filename);
+		
+		int width = loadImage.getWidth();
+		int height = loadImage.getHeight();
+		System.out.println("width="+width);
+		System.out.println("height="+height);
+		
+		// check
+		if (WIDTH!=width || HEIGHT!=height) {
+			throw new Exception("width="+width+", height="+height);
+		}
+		
+		// subimage
+		int count = 0;
+		for (int i=0; i<height /IMG_HEIGHT; i++) {
+			for (int j=0; j<WIDTH/IMG_WIDTH; j++) {
+				count++;
+				System.out.println(String.format("x=%03d, y=%03d, w=%03d, h=%03d", j*IMG_WIDTH, i*IMG_HEIGHT, IMG_WIDTH, IMG_HEIGHT));
+				BufferedImage image = loadImage.getSubimage(j*IMG_WIDTH, i*IMG_HEIGHT, IMG_WIDTH, IMG_HEIGHT);
+				
+				// write
+				String imgName = String.format("main_%02d.png", count);
+				ImageIO.write(image, "png", new File(workDir+"/result/"+imgName));
+			}
+		}
+	}
+	
+}
+</pre>
+<p>■org.fukata.jc_common.utils.ImageUtils</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_common.utils;
+
+import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.imageio.ImageIO;
+
+public class ImageUtils {
+	public static BufferedImage loadImage(String filename) {
+		InputStream inputStream = null;
+		BufferedImage read = null;
+		try {
+			inputStream = new FileInputStream(filename);
+			read = ImageIO.read(inputStream);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (inputStream!=null) {
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return read;
+	}
+}
+</pre>
+<p></height></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1397/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]Struts2でjsp内でsessionの値の取得について</title>
+		<link>/archives/1392/</link>
+					<comments>/archives/1392/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 06 Jul 2009 20:43:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[jsp]]></category>
+		<category><![CDATA[session]]></category>
+		<category><![CDATA[struts2]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1392</guid>
+
+					<description><![CDATA[セッションにキー「user」としてUserクラスのインスタンスを格納して、jsp内で、Userクラスのnameフィールドを表示したい。というようなシナリオがあるとします。今回はそのようなシナリオでやっ ... <a href="/archives/1392/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>セッションにキー「user」としてUserクラスのインスタンスを格納して、jsp内で、Userクラスのnameフィールドを表示したい。というようなシナリオがあるとします。今回はそのようなシナリオでやっていこうと思います。</p>
+<p>■User.java</p>
+<pre lang="JAVA" line="1">
+public class User {
+	private String name;
+	
+	public String getName(){
+		return this.name;
+	}
+
+	public String setName(String name){
+		return this.name = name;
+	}
+}
+</pre>
+<p>■Hoge.jsp</p>
+<pre lang="html" line="1">
+Hello <s :property value="#session.user.name"></s>
+</pre>
+<p>簡単に書きましたが、以下のフォーマットでアクセスできるようです。</p>
+<pre lang="html">
+<s :property value="#session.[キー名].[フィールド名]"></s>
+</pre>
+<p>ちなみに、Mapなんかでも同じようにアクセスできるので、試してみて下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1392/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[JC]「Cannot load JDBC driver class」エラーについて</title>
+		<link>/archives/1387/</link>
+					<comments>/archives/1387/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 06 Jul 2009 20:02:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[error]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[jdbc]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1387</guid>
+
+					<description><![CDATA[Spring2 + Struts2 + iBatisの特にiBatis回りの動作確認を行っていたんですが、「Cannot load JDBC driver class」エラーが出ていてハマっていました ... <a href="/archives/1387/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5054/5476240564_78195c1683_m.jpg" target="_blank" title="admin_1246910707127"><img loading="lazy" src="https://farm6.static.flickr.com/5054/5476240564_78195c1683_m.jpg" alt="admin_1246910707127" width="200" height="103" class="attachment wp-att-1389 alignleft" /></a>Spring2 + Struts2 + iBatisの特にiBatis回りの動作確認を行っていたんですが、「Cannot load JDBC driver class」エラーが出ていてハマっていました。いや、Eclipseのビルドパスには、jdbc.jarファイルは登録していたんですよ。それでも、エラーが出続けていたのでしょうがなく、${CATALINA_HOME}/common/libにjdbc.jarファイルを入れたら動くようになりました。以前は、Eclipseのビルドパスに登録するだけで良かったような気がするんだけどなぁ。。。</p>
+<p>とりあえず、何はともあれ、iBatis回りの動作確認が取れましたので、本格的に実装が乗り始めそうな予感がしています。</p>
+<p>struts2での、session内の値の取得方法などについても分かったことがありますので、今度記事に書きたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1387/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

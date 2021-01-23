@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [Android]MilestoneにG.O.T 2.2.1を適用	</title>
+	<atom:link href="/archives/4887/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/4887/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/4887/comment-page-1/#comment-677</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Wed, 02 Feb 2011 23:45:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=4887#comment-677</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/4887/comment-page-1/#comment-676&quot;&gt;はり&lt;/a&gt;.
+
+はじめまして。私もG.O.T 2.2.1でのマルチバイト問題を調べましたが、その当時、解決策が見つからず、他のCyanogenMod for Milestoneを入れてしまいました。
+
+CyanogenMod4Milestone - http://goo.gl/A5PdG
+
+現在は、G.O.T 2.2.1のバグフィックス版が出ているようですが、インストールされたのはこちらでしょうか？もし、バグフィックス以前のものをインストールされているようでしたら、一度試してみてはいかがでしょうか？
+
+Bugfixes in 2.2.1 – update for OR in the works - http://goo.gl/9VbQm
+
+お役に立てず申し訳ありません。。。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/4887/comment-page-1/#comment-676">はり</a>.</p>
+<p>はじめまして。私もG.O.T 2.2.1でのマルチバイト問題を調べましたが、その当時、解決策が見つからず、他のCyanogenMod for Milestoneを入れてしまいました。</p>
+<p>CyanogenMod4Milestone &#8211; <a href="http://goo.gl/A5PdG" rel="nofollow ugc">http://goo.gl/A5PdG</a></p>
+<p>現在は、G.O.T 2.2.1のバグフィックス版が出ているようですが、インストールされたのはこちらでしょうか？もし、バグフィックス以前のものをインストールされているようでしたら、一度試してみてはいかがでしょうか？</p>
+<p>Bugfixes in 2.2.1 – update for OR in the works &#8211; <a href="http://goo.gl/9VbQm" rel="nofollow ugc">http://goo.gl/9VbQm</a></p>
+<p>お役に立てず申し訳ありません。。。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: はり		</title>
+		<link>/archives/4887/comment-page-1/#comment-676</link>
+
+		<dc:creator><![CDATA[はり]]></dc:creator>
+		<pubDate>Wed, 02 Feb 2011 11:32:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=4887#comment-676</guid>
+
+					<description><![CDATA[はじめまして。私もSMSのマルチバイト問題が解決できずに弱っています。
+もしも何か手をうってらっしゃいましたら教えてください。（ちなみに私も中国在住）]]></description>
+			<content:encoded><![CDATA[<p>はじめまして。私もSMSのマルチバイト問題が解決できずに弱っています。<br />
+もしも何か手をうってらっしゃいましたら教えてください。（ちなみに私も中国在住）</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

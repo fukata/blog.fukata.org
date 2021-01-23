@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>react-native &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/react-native/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 08 Dec 2017 18:29:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>旅行用にGPSロガーを作り始めた</title>
+		<link>/archives/9253/</link>
+					<comments>/archives/9253/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 08 Dec 2017 18:29:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[react-native]]></category>
+		<category><![CDATA[react.js]]></category>
+		<category><![CDATA[TravelLogger]]></category>
+		<guid isPermaLink="false">/?p=9253</guid>
+
+					<description><![CDATA[react-nativeの勉強も兼ねて急にGPSロガーを作りたくなったので作り始めた。 広告 リポジトリは下記。 fukata/travel-logger-app: THIS IS SAMPLE AP ... <a href="/archives/9253/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9253/"><img src="https://farm5.staticflickr.com/4690/27141003139_5a83ca2db8_c.jpg" alt="Screen Shot 2017-12-08 at 15.05.11" class="aligncenter"/></a></p>
+<p>react-nativeの勉強も兼ねて急にGPSロガーを作りたくなったので作り始めた。</p>
+<p><span id="more-9253"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>リポジトリは下記。</p>
+<p><a href="https://github.com/fukata/travel-logger-app" title="fukata/travel-logger-app: THIS IS SAMPLE APP of react-native (only testing android)" target="_blank">fukata/travel-logger-app: THIS IS SAMPLE APP of react-native (only testing android)</a></p>
+<p>まだ、</p>
+<ul>
+<li>位置情報を定期的にファイルに書き出し。</li>
+<li>記録したログファイル一覧、シェア(Androidのシェア機能)、削除。</li>
+<li>各種、取得する位置情報に関する設定の更新。</li>
+</ul>
+<p>これくらいしか出来ていない。</p>
+<p>あと、アプリとは別に記録したログファイルからgoogleマップに情報をプロットするためのスクリプトも簡単ではあるけど用意した。これは今のところ単にそれぞれの位置情報をpolylineで描画するというもの。</p>
+<p>最終的には移動中や停止などを判別してどの区間でどれくらいかかったなども表示出来るようにしてブログに埋め込みたいと思っている。最悪、インタラクティブな物じゃなくてもじゃなくても静止画でも良い。</p>
+<p>react-nativeは以前から触ってみたいと思っていたのに仕事を理由にしたり、作るものが思いつかなかったなどがあったけど、急にGPSロガーを作って記録してみたいと思ったので夜にチマチマやって3日ほどで現状まで出来た。</p>
+<p>react-nativeの事をよく分かっていないのでコードはぐちゃぐちゃだと思う。まぁ、この辺は今はあまり気にしないでおこうと思う。とりあえず、自分が使える程度の動くものを最優先している。じゃないと開発へのモチベーションが一気に低下してしまう。それが最も現れたのがデフォルトの設定値の保存を行うタイミング。</p>
+<p>現状、<a href="https://reactnavigation.org/docs/navigators/tab" rel="noopener" target="_blank">TabNavigator</a>を <code>AppRegisry.registerComponent</code> に渡している。出来れば、アプリの起動時に初期設定を行ってから画面を描画したい。ただし、設定値を端末側に保存するライブラリのAPIが非同期でこの辺を上手いこと処理する方法が思いつかなかったので今はその辺がものすごくグチャッとなっている。</p>
+<p>ただ、目的は位置情報を記録してブログに埋め込めれば良いので今は諦めた。落ち着いたら見直したい。というか作り直した方が良いレベルのものだと思う。</p>
+<p>2日間react.jsを触ってその1,2週間後くらいにこれを作り始めたわけだけど、react.jsの知識があればだいぶ気軽にアプリが作れるなと感じた。特に今回作ってるのが複雑なフローもレイアウトも重い画像などが無いというのが非常に大きいと思う。</p>
+<p>なんとかモチベーションが低下しないうちにブログへの埋め込みまで作ってしまいたい。</p>
+<p>とはいえ、アプリ側は出来たので来週のラオス小旅行中に早速これが使える。</p>
+<p>今月の16日から数日、バンコクからラオスとの国境沿いの街であるノンカーイに行って、そこからヴィエンチャンに陸路で入国するつもり。タイに3年ほど住んでるけど陸路での入出国は未体験なので楽しみ。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9253/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4690/27141003139_5a83ca2db8.jpg</image>
+	</item>
+	</channel>
+</rss>

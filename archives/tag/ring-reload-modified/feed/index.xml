@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ring-reload-modified &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ring-reload-modified/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ring-reload-modifiedで自動リロード</title>
+		<link>/archives/6383/</link>
+					<comments>/archives/6383/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2011 17:01:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<category><![CDATA[ring-reload-modified]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6383</guid>
+
+					<description><![CDATA[weavejester/ring-reload-modified &#8211; GitHub WEB開発を行っていると編集した内容をすぐに確認したいですよね。以前までは、編集してはサーバプログラムを ... <a href="/archives/6383/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/weavejester/ring-reload-modified">weavejester/ring-reload-modified &#8211; GitHub</a></p>
+<p>WEB開発を行っていると編集した内容をすぐに確認したいですよね。以前までは、編集してはサーバプログラムを一度停止して再度起動するということをやっており、毎回手動で再起動処理を行うのが非常に面倒で、さらには再起動を忘れ、動作確認時に「あれ？」みたいな事がたまにあったので、解決策を探しているとRingのMiddlewareとして上記がありました。</p>
+<p>これは、指定したソースディレクトリのClojureファイルが修正されたらリロードしてくれるというものです。設定は簡単で、こんな感じにします。</p>
+<p>ただ、一つ難点があり、Fleetのテンプレートファイルのみを編集した場合には変更を検出してくれず、正常に変更を表示できません。まだ、ring-reload-modifiedのソースを見れていないので、もしかすると簡単に対応できるかもしれません。</p>
+<p>とりあえず、設定方法は下記のようになります。</p>
+<p><span id="more-6383"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>設定方法</h2>
+<p>project.cljの:dependenciesに<code>[ring-reload-modified "0.1.1"]</code>を追加後、下記の設定を行えば自動リロードするようになります。</p>
+<h3>変更前</h3>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]
+            [compojure.handler :as handler]))
+
+;; ... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty (handler/site app) {:port port})))
+</pre>
+<h3>変更後</h3>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
++       ring.middleware.reload-modified
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]
+            [compojure.handler :as handler]))
+
+;; ... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
++ ;; AutoReload Configuration
++ (def app (handler/site app))
++ (def handlerApp 
++     (wrap-reload-modified #'app ["src"]))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+-     (run-jetty (handler/site app) {:port port})))
++     (run-jetty handlerApp {:port port})))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6383/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Custom ROM &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/custom-rom/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]MilestoneにMotoFrenzy 0.52を適用</title>
+		<link>/archives/4899/</link>
+					<comments>/archives/4899/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2010 15:58:34 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Custom ROM]]></category>
+		<category><![CDATA[MotoFrenzy]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4899</guid>
+
+					<description><![CDATA[下記のサイトで配布されているMotoFrenzy 0.52をMilestoneに適用してみました。 Dexter&#8217;s Mod&#8217;s G.O.T 2.2.1の時にマルチバイトのSM ... <a href="/archives/4899/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>下記のサイトで配布されているMotoFrenzy 0.52をMilestoneに適用してみました。<br />
+Dexter&#8217;s Mod&#8217;s</p>
+<p>G.O.T 2.2.1の時にマルチバイトのSMSが送信できなかった問題は解消したのですが、カメラのオートフォーカスについてはこちらも対応していません。５００万画素もあるので、オートフォーカスに対応したバージョンが出てほしいものです。</p>
+<p>また、今回試したMotoFrenzy以外にもHTC SenseをMilestoneでも利用できるようにしたMotoFroyoSenseやCharmなどで採用されているMotoBlurをMilestoneで利用できるようにしたMotoBlur(そのまま)などと言ったカスタムROMも使ってみました。ただ、どちらもまだバグが残っていたり動作が不安定だったりしたので今回は諦めました。</p>
+<p>MotoBlurが触れたのはちょっと嬉しかったです。今回使用したカスタムROMがどこまで最新のMotoBlurを再現しているのかはわかりませんが、印象的にはHTC Senseに比べるとそこまで作り込みは少ないのかなと感じました。ただ、ソーシャル関連のウィジェットだったりがデフォルトで豊富に入っていたのは魅力的でした。中国ではVPNを経由しないと使えないでしょうけど＾＾；</p>
+<p>カスタムROMをいくつか使って全てに共通することはタッチパネルの精度が純正に比べてかなり劣ることです。大きくずれたり、ドラッグがうまくいかなかったりと割と酷い状態なんじゃないかなと。カスタムROMを利用する以上、自己責任なので仕方ありませんが普段使用していて一番イラッとする部分ですので改善されると非常に助かる人が多いのではないでしょうか。</p>
+<p>一昨日から4つほどカスタムROMを試してみている中で一つ気に入ったアプリがありました。それは下記のGalleryアプリです。正式名があるのかどうか分かりませんが、システムのアプリケーション一覧にもGalleryとだけ記載されていました。何が気に入ったかというと、まず、UIがかっこいい。それからPicasaにアップした画像も閲覧可能なところです。個人的にウェブアルバムはPicasaを主に利用しているので標準で対応していることは結構大きいです。また、Picasaにアップしている画像もBluetooth通信や壁紙設定が可能でした。また、これは2.1までの標準Galleryにはなかった（と思います）機能ですが、複数ファイルを一括操作することが出来、ホワイトボードやちょっとした画像を撮る私としては、今まで一つずつチマチマ送信していた手間が省けて非常にありがたいです。</p>
+<p>写真がずれてしまっているのは、このGalleryアプリが角度によって写真が傾くのですが、使っていたスクリーンキャプチャソフトがシェイクして撮るというもので、その時にずれてしまったようです。本当はなめらかに動作します。オーバークロックしていないMilestoneでも普通に動作するので最新端末では軽快に動作すると思います。</p>
+<p>というわけで、今はMotoFrenzyに落ち着いています。とりあえず、大きなバグがない限りこれを使い続けてみようかと思います。</p>
+<p>バージョン、Galleryアプリの画像は下記から</p>
+<p><span id="more-4899"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>バージョン等<br />
+<a href="https://farm6.static.flickr.com/5051/5476154470_621ecb7be1_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5051/5476154470_621ecb7be1_m.jpg" alt="" title="CAP201011111142" width="281" height="500" class="aligncenter size-large wp-image-4900" /></a></p>
+<p>フォルダ一覧<br />
+<a href="https://farm6.static.flickr.com/5136/5475557519_d5f86e48fe_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5136/5475557519_d5f86e48fe_m.jpg" alt="" title="CAP201011112108" width="281" height="500" class="aligncenter size-large wp-image-4901" /></a></p>
+<p>写真一覧<br />
+<a href="https://farm6.static.flickr.com/5251/5475557833_68205a7cf0_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5251/5475557833_68205a7cf0_m.jpg" alt="" title="CAP2010111121101" width="281" height="500" class="aligncenter size-large wp-image-4904" /></a></p>
+<p>Picasaのアルバムも閲覧可能<br />
+<a href="https://farm6.static.flickr.com/5140/5475557045_78f90b6ba0_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5140/5475557045_78f90b6ba0_m.jpg" alt="" title="CAP201011112110" width="281" height="500" class="aligncenter size-large wp-image-4902" /></a></p>
+<p>Picasaに上げた写真<br />
+<a href="https://farm6.static.flickr.com/5095/5476154258_8420ea2407_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5095/5476154258_8420ea2407_m.jpg" alt="" title="CAP201011112111" width="281" height="500" class="aligncenter size-large wp-image-4903" /></a></p>
+<p>複数ファイルを一括でBluetooth経由で送信することも可能<br />
+<a href="https://farm6.static.flickr.com/5300/5476154040_e7f83ff36f_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5300/5476154040_e7f83ff36f_m.jpg" alt="" title="CAP201011112343" width="281" height="500" class="aligncenter size-large wp-image-4907" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4899/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

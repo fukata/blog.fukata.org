@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>FW &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/fw/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CodeIgniter</title>
+		<link>/archives/694/</link>
+					<comments>/archives/694/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 23 Oct 2008 18:04:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[FW]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=694</guid>
+
+					<description><![CDATA[最近、5日間ほど自宅に帰っていなかったのですが、そんな中、合間を見てCodeIgniterというPHPのフレームワークを少し触って見ましたので、それの感想でも少し書きたいと思います。このブログでこうい ... <a href="/archives/694/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、5日間ほど自宅に帰っていなかったのですが、そんな中、合間を見てCodeIgniterというPHPのフレームワークを少し触って見ましたので、それの感想でも少し書きたいと思います。このブログでこういうのを書くのは本当に久しぶりなんじゃないかと思います。</p>
+<p>というか、技術系の記事は主に別のブログに書いていたのですが、案の定面倒くさくなってこっちに書いているというのは内緒でw</p>
+<p>で、本題のCodeIgniterですが、大雑把に言うと、基本的なMVC+ライブラリ群といった感じがします。最近、巷で流行っているRoRやCakePHP、Symfonyなどと言ったようなコマンド一発アボーン（何）というようなFWとはちょっと違い、素材はあるから後は自由にやってよ。と言ったような印象を受けました。</p>
+<p>また、環境になるべく依存しないような設計になっており、基本的にレンタルサーバでも動作すると思います。</p>
+<p>ただ、弱い部分も多々ありますが、その辺を改良できれば、素敵なFWが作れそうな感じです。あと、ソース全体が比較的小さいので、ハックもしやすく、手を加えやすくなっています。</p>
+<p>でも、本当はJavaが書きたいんです。。。</p>
+<p>■参考サイト</p>
+<ul>
+<li><a href="https://codeigniter.com/">CodeIgniter公式サイト</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/694/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

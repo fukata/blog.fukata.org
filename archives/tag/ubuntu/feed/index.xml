@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ubuntu &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ubuntu/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Ubuntu 10.04にOpenCVをインストールするまで</title>
+		<link>/archives/6839/</link>
+					<comments>/archives/6839/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 07 Feb 2012 01:07:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[OpenCV]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6839</guid>
+
+					<description><![CDATA[最近、OpenCVを学ぼうと思い、開発マシンにインストールした時のログを載せておきたいと思います。 必要モジュールのインストール コンパイルに必要なモジュール群です。 sudo apt-get ins ... <a href="/archives/6839/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、OpenCVを学ぼうと思い、開発マシンにインストールした時のログを載せておきたいと思います。</p>
+<h2>必要モジュールのインストール</h2>
+<p>コンパイルに必要なモジュール群です。</p>
+<pre lang="bash">
+sudo apt-get install build-essential \
+pkg-config \
+cmake \
+libtiff4-dev \
+libjasper-dev \
+libjasper1 \
+libjasper-runtime \
+libtbb-dev \
+ffmpeg \
+libqt4-dev \
+libv4l-dev
+</pre>
+<p><span id="more-6839"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>OpenCVのダウンロード</h2>
+<p><a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.2/">Open Computer Vision Library &#8211; Browse /opencv-unix/2.2 at SourceForge.net</a></p>
+<p>上記のページからOpenCV-2.2.0をDLします。</p>
+<p>今回は、ホームディレクトリ以下にインストールしたいので、とりあえず、~/usr/local/srcにダウンロードします。</p>
+<pre lang="bash">cd ~/usr/local/src
+wget -O OpenCV-2.2.0.tar.bz2 "https://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.2/OpenCV-2.2.0.tar.bz2?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fopencvlibrary%2Ffiles%2Fopencv-unix%2F2.2%2F&amp;ts=1328574902&amp;use_mirror=jaist"
+tar jxf OpenCV-2.2.0.tar.bz2</pre>
+<h2>インストール</h2>
+<p>インストール先として、~/usr/local/opencv-2.2.0を指定します。</p>
+<pre lang="bash">cd OpenCV-2.2.0
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=~/usr/local/opencv-2.2.0 \
+-D BUILD_PYTHON_SUPPORT=ON -D WITH_TBB=ON -D WITH_QT=ON \
+./</pre>
+<p>すると、下記のような<strong><span style="color: #ff0000;">エラーが発生</span></strong>すると思います。</p>
+<h3>linux/videodev.h : no such file or directory</h3>
+<p><a href="https://code.ros.org/trac/opencv/attachment/ticket/862/OpenCV-2.2-nov4l1.patch">Ticket #862: OpenCV-2.2-nov4l1.patch</a><br />
+を参考にファイルを編集します。</p>
+<p>ここまでやったら、改めて<strong>cmake</strong>からやり直してみてください。今度は正常に動作すると思います。</p>
+<h3>コンパイルパスの設定</h3>
+<p>~/.bashrcに下記を追加</p>
+<pre lang="bash">
+# OpenCV 2.2.0
+export PKG_CONFIG_PATH=~/usr/local/opencv-2.2.0/lib/pkgconfig:$PKG_CONFIG_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=~/usr/local/opencv-2.2.0/lib:$DYLD_FALLBACK_LIBRARY_PATH
+</pre>
+<p>設定を反映するために、下記も一緒に行います。</p>
+<pre lang="bash">
+source ~/.bashrc
+</pre>
+<h2>インストール確認</h2>
+<p>インストールが終わったことなので、早速サンプルプログラムを動かしてみます。<br />
+サンプルは下記を使用します。</p>
+<p><script src="https://gist.github.com/1756286.js"> </script></p>
+<p>ファイルをダウンロードし、下記のコマンドを実行することで、コンパイル・実行することができます。<br />
+Windowが立ち上がるので実行する場合は、デスクトップ環境の存在するところで実行してみてください。</p>
+<pre lang="bash">
+wget https://gist.github.com/raw/1756286/299ea0b336323a1633c5021369223a5c698e7d74/put_text_sample.c
+gcc put_text_sample.c -o put_text_sample `pkg-config --libs --cflags opencv` && ./put_text_sample
+</pre>
+<p>すると、下記のようなエラーが発生するかもしれません。</p>
+<h3>../../lib/libopencv_highgui.so.2.2.0: undefined reference to `cvCreateCameraCapture_V4L(int)&#8217;</h3>
+<p>もし、このエラーが発生したら、~/.bashrcに下記を追加します。</p>
+<pre lang="bash">
+export LD_LIBRARY_PATH=~/usr/local/opencv-2.2.0/lib:$LD_LIBRARY_PATH
+</pre>
+<h2>参考ページ</h2>
+<ul>
+<li><a href="https://d.hatena.ne.jp/ser1zw/20110904/1315083776">OpenCVをホームディレクトリ以下にインストールする -Mac OS X Lion編- &#8211; ser1zw::diary</a></li>
+<li><a href="https://stackoverflow.com/questions/5842235/linux-videodev-h-no-such-file-or-directory-opencv-on-ubuntu-11-04">linux/videodev.h : no such file or directory &#8211; OpenCV on ubuntu 11.04 &#8211; Stack Overflow</a></li>
+<li><a href="https://w.livedoor.jp/nuko/d/Arch%20Linux%20-%20OpenCV%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB">Arch Linux &#8211; OpenCVのインストール &#8211; 本当に小さな小さな備忘録 &#8211; livedoor Wiki（ウィキ）</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6839/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>UbuntuでDAAP over SSHをやってみました</title>
+		<link>/archives/1812/</link>
+					<comments>/archives/1812/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 26 Oct 2009 02:20:50 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[daap]]></category>
+		<category><![CDATA[over ssh]]></category>
+		<category><![CDATA[Rhythmbox]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1812</guid>
+
+					<description><![CDATA[現在、自宅でiTunesやRhythmboxで音楽を聞く場合は、自宅内にあるDAAPサーバに繋げて音楽を聞いています。それで、外出先からも聞けないかと思い、やってみました。 sshで自宅ネットワークに ... <a href="/archives/1812/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、自宅でiTunesやRhythmboxで音楽を聞く場合は、自宅内にあるDAAPサーバに繋げて音楽を聞いています。それで、外出先からも聞けないかと思い、やってみました。</p>
+<p>sshで自宅ネットワークに繋げることは成功していたので、とりあえず、ポートフォワードの設定に[daapサーバのIP]:3689への転送設定を追加し、RhythmboxでDAAPサーバを追加・・・うん、楽曲が取得できませんでした。というよりも、接続できてない感じですね。</p>
+<p>そこで、ググってみると意外と情報が多く、あっさり見つけられました。</p>
+<p>まず、上記にも書いている通り、sshのポート転送設定にdaapサーバへの転送設定を追加します。</p>
+<pre lang="SHELL">
+ssh -o GatewayPorts=yes -C -N -f \
+-L [転送元ポート]:[DAAPサーバIP]:3689 \
+[接続先ホスト] -p [接続ポート] -l [接続ユーザ名]
+</pre>
+<p>sshにて、接続を確立した後に、下記のコマンドを実行し、DAAPサーバへマッピングを行います。これにより、DAAPサーバが検出されるようになります。</p>
+<pre lang="SHELL">
+avahi-publish-address -v -H [自マシンのホスト名].local -s "myhome firefly" _daap._tcp. [転送元ポート] &
+</pre>
+<p>とまぁ、大雑把にはこの様な感じになります。詳細については、下記の参考サイトを参照ください。まぁ、自分がすべて管理しているサーバなどであれば、この様なことをせずとも、ssh接続後に対象ディレクトリをマウントして音楽を聞けばいいとも思うんですけどね^^;まぁ、興味本位ということで。</p>
+<p>あ、ただ、DAAPサーバにパスワード（管理画面ではなく）をかけていると、Rhythmboxでは、パスワードを聞かれることなく、接続中になったまま反応がありませんでした。これは、クライアントの問題かもしれないので、後ほど色々試したいと思います。</p>
+<p>参考サイト：</p>
+<ul>
+<li><a href="https://nozell.com/blog/2006/11/29/access-a-remote-daap-share-by-tunneling-over-ssh-ubuntuedgy/">https://nozell.com/blog/2006/11/29/access-a-remote-daap-share-by-tunneling-over-ssh-ubuntuedgy/</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1812/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Ubuntuで「Brother HL-2170W」を使ってみました</title>
+		<link>/archives/1327/</link>
+					<comments>/archives/1327/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 21 Jun 2009 00:31:43 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[brother]]></category>
+		<category><![CDATA[hl-2170w]]></category>
+		<category><![CDATA[printer]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1327</guid>
+
+					<description><![CDATA[ついに自宅にプリンタを買っちゃいましたw プリンタって見た目以上に重く、今回買った「Brother HL-2170W」も6キロ以上あるみたいです；；新宿から光が丘まで持ってくるの結構大変でした；； 現 ... <a href="/archives/1327/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5015/5475648807_32c1b638cd_m.jpg" target="_blank" title="CIMG1023"><img loading="lazy" src="https://farm6.static.flickr.com/5015/5475648807_32c1b638cd_m.jpg" alt="CIMG1023" width="200" height="150" class="attachment wp-att-1328 alignleft" /></a>ついに自宅にプリンタを買っちゃいましたw</p>
+<p>プリンタって見た目以上に重く、今回買った「<a href="https://www.brother.co.jp/product/printer/info/hl2170w/index.htm">Brother HL-2170W</a>」も6キロ以上あるみたいです；；新宿から光が丘まで持ってくるの結構大変でした；；</p>
+<p>現在使用しているメインOSがUbuntuなので、Ubuntu上で動作することが必須条件でした。適当にググってみたら動作報告もあるみたいで、ネットワーク対応のモノクロレーザにしては結構安かったのでHL-2170Wを選んだのですが、実際にプリンタの設定をしてみると、すんなり追加できない。。。orz</p>
+<p>会社で使用しているHL-5250DNなんかは、簡単に設定ができるんですが、HL-2170Wの項目は見当たりません。。。ググってみると、こちらからPPDファイルをダウンロードして、PPDファイル指定でインストールすると、無事インストールでき、綺麗に印刷できています。</p>
+<p>ふぅ。。よかったwちょっと一安心w</p>
+<p>何枚か印刷してみたんですけど、ネットワーク印刷の為か、使い始めなのか印刷速度が遅いです。まぁ、この辺はもうちょっと使ってみて反応を見たいと思います。</p>
+<p>まぁ、無事、自宅でもプリンタが使えるようになったので良かったです。</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B00194T818&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1327/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>トリプルディスプレイへの道 〜その1〜</title>
+		<link>/archives/1195/</link>
+					<comments>/archives/1195/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 14 May 2009 11:16:01 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[トリプルディスプレイ]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1195</guid>
+
+					<description><![CDATA[今、猛烈にトリプルディスプレイにしたいです。 今からトリプルディスプレイにするんだったら19インチとかケチってないで思い切ってもっと解像度の高い奴を買ってやろうと思い、価格.comで検索してみました。 ... <a href="/archives/1195/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今、猛烈にトリプルディスプレイにしたいです。</p>
+<p>今からトリプルディスプレイにするんだったら19インチとかケチってないで思い切ってもっと解像度の高い奴を買ってやろうと思い、価格.comで検索してみました。</p>
+<p>コストパフォーマンス的に下記の商品が良さげ。<br />
+<a href="https://kakaku.com/spec/K0000023792/">https://kakaku.com/spec/K0000023792/</a></p>
+<p>24インチでフルHD。さらに光沢パネルじゃないとキタ。光沢パネルだと論外なので、これに対応してくれてて嬉しい。光沢パネルって電気とか写り込んで邪魔なんですよね。</p>
+<p>そして、自分はThinkpad X61を使用しているので、デュアルディスプレイまでは簡単に設定ができるんですが、トリプルディスプレイとなるとマルチディスプレイアダプタを接続する必要があり、さらにそのデバイスがubuntu上で動作確認できないといけない。</p>
+<p>買おうとしているディスプレイの接続方法は下記の三つなんですが、これに対応しているマルチディスプレイアダプタの動作確認済機種、設定方法を現在調査中です。</p>
+<p>そもそも、24インチのディスプレイを二つなんて今のデスクに置けるかな・・・</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B001U65S0U&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1195/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Ubuntu 8.04に「RealPlayer for Linux」をインストールしてみた</title>
+		<link>/archives/662/</link>
+					<comments>/archives/662/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 21 Sep 2008 07:54:23 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[QuickTime]]></category>
+		<category><![CDATA[RealPlayer]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=662</guid>
+
+					<description><![CDATA[下記のダウンロード元からファイルをダウンロードし、以下の手順でインストールすれば完了です。 $ chmod 777 RealPlayer11GOLD.bin $ sudo ./RealPlayer11 ... <a href="/archives/662/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="screenshot-realplayer" href="https://farm6.static.flickr.com/5291/5475566755_46b730c953_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-664 alignright" src="https://farm6.static.flickr.com/5291/5475566755_46b730c953_m.jpg" alt="screenshot-realplayer" width="200" height="170" /></a>下記のダウンロード元からファイルをダウンロードし、以下の手順でインストールすれば完了です。</p>
+<blockquote><p>$ chmod 777 RealPlayer11GOLD.bin<br />
+$ sudo ./RealPlayer11GOLD.bin</p></blockquote>
+<p>思っていた以上にあっさりインストールすることができました。</p>
+<p>あと、以前からデジカメで撮影した動画（mov形式）のファイルがUbuntuでうまく再生することができなかったのですが、VLCプレイヤーを入れることできちんと動画と音声も再生されました。</p>
+<p>いやぁ、一時は<a href="https://www.heroinewarrior.com/quicktime.php3">QuickTime 4 Linux</a>をインストールしようとがんばってみたんですが、ライブラリ不足でうまくインストールできなかったので諦めてたんですが、こんな身近に使えるやつがいたなんて知りませんでした＾＾；</p>
+<p>なにはともあれこれで、無事にデジカメの動画をUbuntuで再生することが可能になりました！って、記事の本題とは違うんですけどねw</p>
+<p>■ダウンロード元：<a href="https://www.real.com/linux/">RealPlayer for Linux</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/662/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>UbuntuでJUDEを動かしてみた</title>
+		<link>/archives/568/</link>
+					<comments>/archives/568/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 06 Aug 2008 17:33:07 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[jude]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[uml]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=568</guid>
+
+					<description><![CDATA[今作っているSNSのUMLをUbuntu上で起動しているJUDEで動かしてみました。 別にこれと言って動かない機能などは今のところなかったです。 いやぁ、それにしてもUMLって難しい。 視点をずらさな ... <a href="/archives/568/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="screenshot-jude-home-tatsuya-jobs-projects-alone-yomikaki-workspace-trunk1-docs-uml-umljude" href="https://farm6.static.flickr.com/5060/5476162978_ccd5e3578f_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-569 alignright" src="https://farm6.static.flickr.com/5060/5476162978_ccd5e3578f_m.jpg" alt="screenshot-jude-home-tatsuya-jobs-projects-alone-yomikaki-workspace-trunk1-docs-uml-umljude" width="200" height="138" /></a>今作っているSNSのUMLをUbuntu上で起動しているJUDEで動かしてみました。</p>
+<p>別にこれと言って動かない機能などは今のところなかったです。</p>
+<p>いやぁ、それにしてもUMLって難しい。</p>
+<p>視点をずらさないとようにしないと何を作ってるのかさっぱりわからなくなる＾＾；とりあえずフロント側と管理側のUMLを作成したので明日見せてみよう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/568/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>UbuntuとWindowsの共存について実現してみた</title>
+		<link>/archives/557/</link>
+					<comments>/archives/557/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 01 Aug 2008 16:38:16 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[samba]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[vista]]></category>
+		<category><![CDATA[vmware]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[xp]]></category>
+		<category><![CDATA[仮想化]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=557</guid>
+
+					<description><![CDATA[今、自分のメインOSであるUbuntuとまだまだフリーソフトのおかげで個人的に需要があるWindowsの共存について実現してみたので記録として載せてみようと思います。 個人的に行った方法はUbuntu ... <a href="/archives/557/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="private_network" href="https://farm6.static.flickr.com/5093/5476163064_ae86d326da_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-558 alignright" src="https://farm6.static.flickr.com/5093/5476163064_ae86d326da_m.jpg" alt="private_network" width="200" height="149" /></a>今、自分のメインOSであるUbuntuとまだまだフリーソフトのおかげで個人的に需要があるWindowsの共存について実現してみたので記録として載せてみようと思います。</p>
+<p>個人的に行った方法はUbuntu内のVM WareにWindows XPをインストールするというもの。</p>
+<p>言葉だけだとあれなので図なんかも作成しちゃいましたw（友達に説明するために作ったんですけどねw）</p>
+<p>図を見ればなんとなく分かるかもしれませんが、まずパーティションは以下の３つです。</p>
+<ol>
+<li>Windows Vista システム用</li>
+<li>Ubuntu システム用</li>
+<li>VistaとUbuntuのファイル共有用</li>
+</ol>
+<p>3番目の「VistaとUbuntuのファイル共有用」はVistaからは普通の内臓HDDとして、Ubuntuからは「/windows」ディレクトリとしてntfsマウントして認識させています。</p>
+<p>これで、一応Vista側で作成したファイルをUbuntu側と共有することは可能なのですが、いちいちVistaを起動するのが面倒なので図にも書かれているようにUbuntuにVM Ware Serverを入れ、その中にWindows XPをインストールしています。</p>
+<p>VM Ware内のXPからUbuntuの「/windows」ディレクトリはsamba共有にて実現しています。</p>
+<p>これによって、Ubuntuを使用しながらXPで作成したファイルなどを共有しています。また、XPはNAT接続なのでオフライン時でもUbuntuと通信可能になっています。</p>
+<p><a title="screenshot" href="https://farm6.static.flickr.com/5057/5475566129_260f74a518_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-559 alignleft" src="https://farm6.static.flickr.com/5057/5475566129_260f74a518_m.jpg" alt="screenshot" width="200" height="150" /></a>実際に使用している感じもキャプチャしてみましたw</p>
+<p>いやぁ、思っていたよりもVM Wareがサクサク動いていてなかなか快調です。</p>
+<p>これからの対応としてはVM Ware内のXPでiPodを使用すること。かなw</p>
+<p>認識はするんですが、認識した途端にブルー画面になって再起動がかかるのでこれを乗り切ればゴールまで後もう少しって感じです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/557/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>GPartedでパーティション拡大</title>
+		<link>/archives/320/</link>
+					<comments>/archives/320/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 19 Mar 2008 17:28:20 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/03/20/320/</guid>
+
+					<description><![CDATA[先日、windowsからlinuxに移ったわけですが、その際にパーティションを70GBと40GBに分けたんですが、何を血迷ったのかメインにするはずだったlinuxを40GBの方にインストールしてしまっ ... <a href="/archives/320/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5176/5475571341_fc594b08ec_m.jpg" target="_blank" title="gparted.png"><img loading="lazy" src="https://farm6.static.flickr.com/5176/5475571341_fc594b08ec_m.jpg" alt="gparted.png" class="imageframe imgalignright" align="right" height="125" width="200" /></a>先日、windowsからlinuxに移ったわけですが、その際にパーティションを70GBと40GBに分けたんですが、何を血迷ったのかメインにするはずだったlinuxを40GBの方にインストールしてしまったみたいで、それに気がついたのが昨日でしたw</p>
+<p>で、パーティションの拡大をしようと思って早速ubuntuのLiveCDから拡大してみました。</p>
+<p>あっさり終了♪</p>
+<p>写真は領域拡大後の内容です。</p>
+<p>また、タイトルとは関係ありませんが、キャプチャについて気づいた事があります。</p>
+<p>詳細は以下から&#8230;</p>
+<p><span id="more-320"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>最近、自宅でもデュアルディスプレイでパソコンライフを楽しんでるんですが、このキャプチャを撮ったらサブディスプレイの領域までキャプチャに入っていてしかも、サブディスプレイの領域は透明になっていました。</p>
+<p>これってどうにかならないのかな。片方もしくは両方撮れるようになれば、いいんですが・・・</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/320/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Skype for LinuxでWebカメラが動くか試してみました。</title>
+		<link>/archives/319/</link>
+					<comments>/archives/319/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 16 Mar 2008 04:22:40 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/03/16/319/</guid>
+
+					<description><![CDATA[まずは、自分のマシンの構成から。 メーカー：DELL 製品名：XPS M1210 OS：Ubuntu Desktop 7.10 Skype: 2.0 大まかにこんな感じです。 相変わらずライン入力から ... <a href="/archives/319/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>まずは、自分のマシンの構成から。</p>
+<ul>
+<li>メーカー：DELL</li>
+<li>製品名：XPS M1210</li>
+<li>OS：Ubuntu Desktop 7.10</li>
+<li>Skype: 2.0</li>
+</ul>
+<p>大まかにこんな感じです。</p>
+<p>相変わらずライン入力から音声が入らず、色々調べていたらSkypeのベータ版がリリースされていたので早速ダウンロードしてみました。結果的にライン入力からは未だ音声が入らないのですが、Logicool Qcam Orbit MPでは音声もWebカメラも正常に動いているみたいです。ただ、音声の方はブツ切れになるとのことでしたので、その辺をもう少し調査してみる必要があります。</p>
+<p>Orbit MP用の設定としては、Skypeの<span style="color: #ff0000">オプション→サウンドデバイス→サウンド入力</span>の項目をUSB Deviceに変更する。とこれだけです。</p>
+<p>もし、ブツ切れになる原因を知っている方がいましたらコメントかメールで教えて下さると幸いです。</p>
+<p>Skype for Linuxの最新版のダウンロードは<a href="https://www.skype.com/download/skype/linux/" target="_blank">こちら</a>から。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/319/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Ubuntuで異なる解像度によるデュアルディスプレイ</title>
+		<link>/archives/316/</link>
+					<comments>/archives/316/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 15 Mar 2008 01:49:04 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/03/15/316/</guid>
+
+					<description><![CDATA[最近、すっかり更新頻度が落ちちゃってますが、ちゃんと生きてますので＾＾； 前にも言ったかもしれませんが、WindowsからLinuxに移行しています。そして、現在は会社のディスプレイが余っていたのでデ ... <a href="/archives/316/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5095/5476168548_c2dcdfacc7_m.jpg" target="_blank" title="ubuntu_02.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5095/5476168548_c2dcdfacc7_m.jpg" alt="ubuntu_02.jpg" class="imageframe imgalignright" align="right" height="150" width="200" /></a>最近、すっかり更新頻度が落ちちゃってますが、ちゃんと生きてますので＾＾；</p>
+<p>前にも言ったかもしれませんが、WindowsからLinuxに移行しています。そして、現在は会社のディスプレイが余っていたのでデュアルディスプレイ化してみました。すべてをGUIから変更することは難しかったので/etc/X11/xorg..confファイルをいじることになりました。</p>
+<p>この設定ファイルもwikiの方にアップしたいんですけど、wikiのセキュリティ制限がうまくかかっていないため公開出来ていない状況です。</p>
+<p>自分のパソコンは1280&#215;800というワイドで右にあるサブディスプレイは1280&#215;1024で解像度が異なるため、設定ファイルを手作業でいじる事になったのかもしれません。どちらも同じ解像度のディスプレイであれば、GUIだけで完了するのかな。。。やったことないですけど。</p>
+<p>以下、デュアルディスプレイ化する時に注意した点や参考にしたサイトなどを紹介しています。</p>
+<p>詳細は以下から&#8230;</p>
+<p><span id="more-316"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>とりあえず、何か作業する前にバックアップを取りましょうw</p>
+<p>cp /etc/X11/xorg.conf /etc/X11/xorg.conf.single</p>
+<p>こんな感じでいいんじゃないでしょうか。</p>
+<p>僕の場合は次にシステム→システム管理→モニタとグラフィックカードを選択し、サブディスプレイの設定をしました。この時点で再起動すれば一応デュアルディスプレイ化されていました。ただし、どちらも1280&#215;1024に合わせてしまっている為、ノートの方が領域がはみ出しちゃっていました。そこで設定したのが、以下のような設定です。</p>
+<blockquote><p>Section &#8220;Device&#8221;<br />
+Identifier      &#8220;nVidia Corporation G72M [GeForce Go 7400]&#8221;<br />
+Boardname       &#8220;nv&#8221;<br />
+Busid           &#8220;PCI:1:0:0&#8221;<br />
+Driver          &#8220;nvidia&#8221;<br />
+<span style="color: #ff0000">Option          &#8220;MetaModes&#8221; &#8220;1280&#215;800-1280&#215;1024&#8221;</span><br />
+Screen  0<br />
+EndSection</p>
+<p>Section &#8220;Monitor&#8221;<br />
+Identifier      &#8220;Generic Monitor&#8221;<br />
+Modelname       &#8220;Custom 1&#8221;<br />
+modeline  &#8220;640&#215;480@60&#8221; 25.2 640 656 752 800 480 490 492 525 -vsync -hsync<br />
+modeline  &#8220;800&#215;600@56&#8221; 36.0 800 824 896 1024 600 601 603 625 +hsync +vsync<br />
+modeline  &#8220;800&#215;600@60&#8221; 40.0 800 840 968 1056 600 601 605 628 +hsync +vsync<br />
+modeline  &#8220;1024&#215;768@60&#8221; 65.0 1024 1048 1184 1344 768 771 777 806 -vsync -hsync<br />
+<span style="color: #ff0000">modeline  &#8220;1280&#215;800@60&#8221; 69.50 1280 1360 1392 1424 800 803 804 812 +hsync +vsync</span><br />
+modeline  &#8220;1280&#215;960@60&#8221; 102.1 1280 1360 1496 1712 960 961 964 994 -hsync +vsync<br />
+modeline  &#8220;1280&#215;1024@60&#8221; 108.0 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync<br />
+Gamma   1.0<br />
+EndSection</p></blockquote>
+<p>メインディスプレイのSection &#8220;Device&#8221;にOption &#8220;MetaModes&#8221;という項目を追加して、1280&#215;800と1280&#215;1024の解像度が存在しますよということを知らせて上げました。また、Section &#8220;Monitor&#8221;の方には1280&#215;800用のmodelineを追加しました。</p>
+<p>正しい設定としてこれで合っているのか分かりませんが，今のところ無事動いています。ただ、エフェクトが使えてない為、エフェクトが使えるようになる設定も入れたいと思ってます。それはまた今度ということで＾＾</p>
+<p>今日は久しぶりに長い記事を書いてみましたが最後まで読んでいただき有難うございましたm(_ _)mてか、あまりwiki以外には技術ネタは書かない用にしていたんですが＾＾；</p>
+<p>以下、今回参考にさせていただいたサイトです。</p>
+<ul>
+<li><a href="https://www.linuxmania.jp/aino_twinview.html#dual" target="_blank">LinuxMania: 相ノ坂モデル デュアルディスプレイ設定方法(Fedora)</a></li>
+<li>Xorg / XFree86 の Modelineパラメータの求め方</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/316/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

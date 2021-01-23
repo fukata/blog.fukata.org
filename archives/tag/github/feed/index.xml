@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>github &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/github/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>githubのプライベートリポジトリをgitoriousへ移行</title>
+		<link>/archives/6083/</link>
+					<comments>/archives/6083/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 04 Sep 2011 16:26:12 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[github]]></category>
+		<category><![CDATA[gitorious]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6083</guid>
+
+					<description><![CDATA[githubの有料プラン内で最低ランクのMicroアカウントを使っていたのですが、月７ドル程度かかるのと、全然開発も進んでいなかったので、勉強も兼ねて個人用にgitoriousというgithubに似た ... <a href="/archives/6083/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>githubの有料プラン内で最低ランクのMicroアカウントを使っていたのですが、月７ドル程度かかるのと、全然開発も進んでいなかったので、勉強も兼ねて個人用に<a href="https://gitorious.org/">gitorious</a>というgithubに似たオープンソースなものを自分のサーバにインストールしました。</p>
+<p>ubuntu用のインストールメモなどが公式に提供されていたりしたのですが、インストールする環境がubuntu 10.04 LTSだった為かそれではうまく行かずに結構苦労しました。苦労した甲斐もあり、なんとか動かすことができ、現在はgithubのプライベートリポジトリを全てgitoriousへ移行しました。少人数でアクセス数も微々たるものなので、githubにリポジトリを置くより快適なようです。もちろん安全性などは低いですが。</p>
+<p>それでも、今までプライベートリポジトリ数の上限に達しており、Smallに上げようかどうか迷っていたところなので、全て移行出来て良かったです。これで非公開プロジェクトをバンバン開発することが出来ます。</p>
+<p>githubのリポジトリのoriginをgitoriousのリポジトリに変更してpushするまでのコマンドです。</p>
+<pre lang="BASH">
+cd [github repository]
+git checkout master
+git remote set-url origin [gitorious repository url]
+git push origin master
+</pre>
+<h3>ハマったところ</h3>
+<p>gitoriousのインストールではrubyライブラリのバージョン依存に色々苦労したのですが、インストールが終わってからもssh keyの登録がうまく行かず、手動でauthorized_keysに追加していたのが悪かったらしく、gitoriousでは、gitoriousが入力された公開鍵を変換してautohrized_keysに書き込んだ値でないと正常にclone出来ないようです。これを解決するのに丸１日ほど費やしてしまいました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6083/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ReplaceImageLink2PostURL &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/replaceimagelink2posturl/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ちょっと気が早いけどReplaceImageLink2PostURLというプラグインをリリースした</title>
+		<link>/archives/7378/</link>
+					<comments>/archives/7378/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Feb 2013 04:46:01 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[ReplaceImageLink2PostURL]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7378</guid>
+
+					<description><![CDATA[まだ、WordPressの公式プラグインディレクトリには登録されていないんですが、「食べ歩記」「写真記」で使用するために昨日、新宿バルト9で映画上映開始までの空き時間でサクッと実装しました。 広告 何 ... <a href="/archives/7378/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/8458873248" target="_blank" title="screenshot1"><img src="https://farm9.staticflickr.com/8384/8458873248_b35a330f46.jpg" alt="screenshot1" class="aligncenter"/></a></p>
+<p>まだ、WordPressの公式プラグインディレクトリには登録されていないんですが、「食べ歩記」「写真記」で使用するために昨日、新宿バルト9で映画上映開始までの空き時間でサクッと実装しました。</p>
+<p><span id="more-7378"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>何のプラグインを実装したかというと、写真を貼るために「wp-flickr-press」を使っているわけですが、リンクの飛び先として登録出来るのはflickrのページしか設定できないので、検索結果やトップページなどで表示されている場合に画像をクリックすると詳細ページではなく、flickrのページの方に飛んでしまいます。</p>
+<p>先頭の画像と概要だけを表示する場合などはテンプレートの修正だけで実現出来ると思いますが、毎回テンプレートを変更するのも面倒なので、詳細ページ以外で、予め登録されている飛び先のURLが含まれる画像に対するリンクがある場合に記事詳細へのリンクURLに置換するというプラグインを今回作成しました。</p>
+<p>多分、上記の画像もトップページなどでクリックするとflickrへ飛ばずに詳細ページに飛ぶと思います。また詳細ページではflickrの方に飛ぶのが確認できるかと思います。</p>
+<p>それが「ReplaceImageLink2PostURL」です。まだWordPressの公式プラグインディレクトリに登録されていないので今すぐに使いたい人は<a href="https://github.com/fukata/wp-ReplaceImageLink2PostURL/tags" title="ReplaceImageLink2PostURL" target="_blank">こちら</a>から最新版をダウンロードして使って下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7378/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8384/8458873248_b35a330f46.jpg</image>
+	</item>
+	</channel>
+</rss>

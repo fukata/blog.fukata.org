@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>アクセスレポート &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[アクセスレポート]2011-12-01 〜 2011-12-31</title>
+		<link>/archives/6725/</link>
+					<comments>/archives/6725/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 02 Jan 2012 03:00:14 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[アクセスレポート]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6725</guid>
+
+					<description><![CDATA[今月は本業の方が少し忙しかったのであまりブログを書けず、ほとんどリリース記事になってしまいました。 去年は12月頃にいくつか勉強会に参加したのですが、今年は、もう少し増やしていきたいと思います。データ ... <a href="/archives/6725/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今月は本業の方が少し忙しかったのであまりブログを書けず、ほとんどリリース記事になってしまいました。</p>
+<p>去年は12月頃にいくつか勉強会に参加したのですが、今年は、もう少し増やしていきたいと思います。データマイニング系をはじめ、WEB系の勉強会にも参加希望です。また、今年中にwp-flickr-press１万DLを目指して機能改修、バグ修正もしていきたいと思います。</p>
+<p>wp-flickr-pressのバグだったり機能追加要望は<a href="https://github.com/fukata/wp-flickr-press/issues?sort=created&#038;direction=desc&#038;state=open">こちら</a>に頂けると随時対応していきます。</p>
+<p>今年もよろしくお願い致します。</p>
+<div class="wp-report">
+<h3>書いた記事</h3>
+<table class="wp-rep-table">
+<tbody>
+<tr class="wp-rep-table-header">
+<td class="wp-rep-table-td-date">日付</td>
+<td class="wp-rep-table-td-post">記事</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-02 12:00:19</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/02/access-report-from-2011-11-01-to-2011-11-30/">[アクセスレポート]2011-11-01 〜 2011-11-30</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-04 04:37:43</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/04/fuelphp-usage-validation/">[FuelPHP]Validationの使い方</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-05 00:28:31</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/05/release-wp-fullscreen-preview-button-0-1-0/">[WordPress]wp-fullscreen-preview-buttonのバージョン0.1.0をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-05 00:32:14</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/?p=4862">[WordPress]nginx on Ubuntuで動かしてみた</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-05 09:16:01</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/05/release-wp-fullscreen-preview-button-0-1/">[WordPress]wp-fullscreen-preview-buttonのバージョン0.1.1をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-13 20:56:18</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/13/release-wp-flickr-press-1-7-2/">[WordPress]wp-flickr-pressのバージョン1.7.2をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-16 01:51:09</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/16/release-wp-flickr-press-1-7-3/">[WordPress]wp-flickr-pressのバージョン1.7.3をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-16 01:58:59</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/16/release-wp-flickr-press-1-7-4/">[WordPress]wp-flickr-pressのバージョン1.7.4をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-22 06:23:02</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/22/release-wp-flickr-press-1-7-5/">[WordPress]wp-flickr-pressのバージョン1.7.5をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-23 03:52:41</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/23/release-wp-flickr-press-1-7-6/">[WordPress]wp-flickr-pressのバージョン1.7.6をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-23 13:05:58</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/23/release-wp-flickr-press-1-7-7/">[WordPress]wp-flickr-pressのバージョン1.7.7をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-25 04:30:02</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/25/release-wp-flickr-press-1-7-8/">[WordPress]wp-flickr-pressのバージョン1.7.8をリリース</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-26 01:43:27</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/26/wp-flickr-press-install-tutorial-en/">wp-flickr-press Install Tutorial</a></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-date">2011-12-28 09:37:43</td>
+<td class="wp-rep-table-td-post"><a href="https://fukata.org/2011/12/28/useful-mac-eclipse-keyboard-shortcut-java/">Mac版Eclipseで頻繁に使用するキーボードショートカット一覧 &#8211; Java編</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="more-6725"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<div class="wp-report">
+<h3>基本情報</h3>
+<div class="wp-rep-prev-title">前回：2011-11-01 〜 2011-11-30</div>
+<p>ビジター数：5851(前回：5820)<span class="wp-rep-up">+0.53%</span><br />
+		PV数：9168(前回：9475)<span class="wp-rep-down">-3.24%</span><br />
+		平均PV数：1.57(前回：1.63)</p>
+<h3>人気記事ランキング</h3>
+<table class="wp-rep-table">
+<tbody>
+<tr class="wp-rep-table-header">
+<td class="wp-rep-table-td-rank">順位</td>
+<td class="wp-rep-table-td-page">ページ</td>
+<td class="wp-rep-table-td-pv">今回<br />PV</td>
+<td class="wp-rep-table-td-ppv">前回<br />PV</td>
+<td class="wp-rep-table-td-pvp">増減</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank1">1</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2010/05/25/vista-bloated-c-windows/">Tatsuya Blog » VistaのC:\Windows肥大化を解消</a></td>
+<td class="wp-rep-table-td-pv">1103</td>
+<td class="wp-rep-table-td-ppv">1179</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-6.45%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank2">2</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2010/05/30/useful-eclipse-keyboard-shortcut-java/">Tatsuya Blog » Eclipseで頻繁に使用するキーボードショートカット一覧 – Java編</a></td>
+<td class="wp-rep-table-td-pv">652</td>
+<td class="wp-rep-table-td-ppv">710</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-8.17%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank3">3</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2010/05/12/release-asgdownloadhelper-1-1/">Tatsuya Blog » [ChromeExtensions]裏アゲサゲの動画を楽々ダウンロード「AsgDownloadHelper」</a></td>
+<td class="wp-rep-table-td-pv">625</td>
+<td class="wp-rep-table-td-ppv">774</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-19.25%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank4">4</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2010/10/29/android-setting-ringtone/">Tatsuya Blog » [Android]着信音の設定方法と配置先</a></td>
+<td class="wp-rep-table-td-pv">557</td>
+<td class="wp-rep-table-td-ppv">289</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+92.73%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank5">5</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2011/12/04/fuelphp-usage-validation/">Tatsuya Blog » [FuelPHP]Validationの使い方</a></td>
+<td class="wp-rep-table-td-pv">325</td>
+<td class="wp-rep-table-td-ppv">0</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-new"></div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank6">6</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2011/05/10/android-install-referrer/">Tatsuya Blog » [Android]インストール時のリファラを取得する</a></td>
+<td class="wp-rep-table-td-pv">164</td>
+<td class="wp-rep-table-td-ppv">258</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-36.43%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank7">7</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2010/02/21/blackberry-im-for-skype-voip-under-wifi/">Tatsuya Blog » [BlackBerry]IM+ for SkypeのVOIPをWIFI環境下で試してみました</a></td>
+<td class="wp-rep-table-td-pv">140</td>
+<td class="wp-rep-table-td-ppv">140</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-save">+0.00%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank8">8</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2011/04/25/androiddroid-prosv3-8-7のroot化/">Tatsuya Blog » [Android]Droid Pro(sv3.8.7)のroot化</a></td>
+<td class="wp-rep-table-td-pv">132</td>
+<td class="wp-rep-table-td-ppv">85</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+55.29%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank9">9</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/10/06/android-get-serial-number-sim/">Tatsuya Blog » [Android]SIMカードのシリアルナンバーの取得方法</a></td>
+<td class="wp-rep-table-td-pv">125</td>
+<td class="wp-rep-table-td-ppv">122</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+2.46%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank10">10</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2010/05/30/replacement-ear-pad-bose-on-ear-headphones/">Tatsuya Blog » Bose on-ear headphonesのイヤーパッドを交換</a></td>
+<td class="wp-rep-table-td-pv">123</td>
+<td class="wp-rep-table-td-ppv">103</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+19.42%</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>キーワードランキング</h3>
+<table class="wp-rep-table">
+<tbody>
+<tr class="wp-rep-table-header">
+<td class="wp-rep-table-td-rank">順位</td>
+<td class="wp-rep-table-td-page">キーワード</td>
+<td class="wp-rep-table-td-pv">今回<br />Ses</td>
+<td class="wp-rep-table-td-ppv">前回<br />Ses</td>
+<td class="wp-rep-table-td-pvp">増減</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank1">1</span></td>
+<td class="wp-rep-table-td-keyword">eclipse ショートカット</td>
+<td class="wp-rep-table-td-pv">337</td>
+<td class="wp-rep-table-td-ppv">280</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+20.36%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank2">2</span></td>
+<td class="wp-rep-table-td-keyword">アゲサゲ ダウンロード</td>
+<td class="wp-rep-table-td-pv">105</td>
+<td class="wp-rep-table-td-ppv">49</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+114.29%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank3">3</span></td>
+<td class="wp-rep-table-td-keyword">c:\windows\winsxs</td>
+<td class="wp-rep-table-td-pv">77</td>
+<td class="wp-rep-table-td-ppv">0</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-new"></div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank4">4</span></td>
+<td class="wp-rep-table-td-keyword">(not provided)</td>
+<td class="wp-rep-table-td-pv">69</td>
+<td class="wp-rep-table-td-ppv">93</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-25.81%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank5">5</span></td>
+<td class="wp-rep-table-td-keyword">android 着信音 mp3</td>
+<td class="wp-rep-table-td-pv">62</td>
+<td class="wp-rep-table-td-ppv">17</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+264.71%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank6">6</span></td>
+<td class="wp-rep-table-td-keyword">fuelphp</td>
+<td class="wp-rep-table-td-pv">50</td>
+<td class="wp-rep-table-td-ppv">0</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-new"></div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank7">7</span></td>
+<td class="wp-rep-table-td-keyword">android 着信音 設定</td>
+<td class="wp-rep-table-td-pv">47</td>
+<td class="wp-rep-table-td-ppv">12</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+291.67%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank8">8</span></td>
+<td class="wp-rep-table-td-keyword">アゲサゲ</td>
+<td class="wp-rep-table-td-pv">43</td>
+<td class="wp-rep-table-td-ppv">32</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+34.38%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank9">9</span></td>
+<td class="wp-rep-table-td-keyword">windows ワークスペース</td>
+<td class="wp-rep-table-td-pv">39</td>
+<td class="wp-rep-table-td-ppv">36</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+8.33%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank10">10</span></td>
+<td class="wp-rep-table-td-keyword">裏アゲサゲ ダウンロード</td>
+<td class="wp-rep-table-td-pv">37</td>
+<td class="wp-rep-table-td-ppv">39</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-5.13%</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>ブラウザランキング</h3>
+<table class="wp-rep-table">
+<tbody>
+<tr class="wp-rep-table-header">
+<td class="wp-rep-table-td-rank">順位</td>
+<td class="wp-rep-table-td-page">ブラウザ</td>
+<td class="wp-rep-table-td-pv">今回<br />Ses</td>
+<td class="wp-rep-table-td-ppv">前回<br />Ses</td>
+<td class="wp-rep-table-td-pvp">増減</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank1">1</span></td>
+<td class="wp-rep-table-td-browser">Internet Explorer</td>
+<td class="wp-rep-table-td-pv">2253</td>
+<td class="wp-rep-table-td-ppv">2326</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-3.14%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank2">2</span></td>
+<td class="wp-rep-table-td-browser">Chrome</td>
+<td class="wp-rep-table-td-pv">2145</td>
+<td class="wp-rep-table-td-ppv">2030</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+5.67%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank3">3</span></td>
+<td class="wp-rep-table-td-browser">Firefox</td>
+<td class="wp-rep-table-td-pv">1778</td>
+<td class="wp-rep-table-td-ppv">1871</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-4.97%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank4">4</span></td>
+<td class="wp-rep-table-td-browser">Safari</td>
+<td class="wp-rep-table-td-pv">402</td>
+<td class="wp-rep-table-td-ppv">382</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+5.24%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank5">5</span></td>
+<td class="wp-rep-table-td-browser">Opera</td>
+<td class="wp-rep-table-td-pv">120</td>
+<td class="wp-rep-table-td-ppv">154</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-22.08%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank6">6</span></td>
+<td class="wp-rep-table-td-browser">Lunascape</td>
+<td class="wp-rep-table-td-pv">25</td>
+<td class="wp-rep-table-td-ppv">23</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+8.70%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank7">7</span></td>
+<td class="wp-rep-table-td-browser">Mozilla Compatible Agent</td>
+<td class="wp-rep-table-td-pv">12</td>
+<td class="wp-rep-table-td-ppv">10</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+20.00%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank8">8</span></td>
+<td class="wp-rep-table-td-browser">Opera Mini</td>
+<td class="wp-rep-table-td-pv">8</td>
+<td class="wp-rep-table-td-ppv">11</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-27.27%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank9">9</span></td>
+<td class="wp-rep-table-td-browser">SeaMonkey</td>
+<td class="wp-rep-table-td-pv">6</td>
+<td class="wp-rep-table-td-ppv">3</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+100.00%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank10">10</span></td>
+<td class="wp-rep-table-td-browser">Android Browser</td>
+<td class="wp-rep-table-td-pv">5</td>
+<td class="wp-rep-table-td-ppv">10</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-50.00%</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>リファラランキング</h3>
+<table class="wp-rep-table">
+<tbody>
+<tr class="wp-rep-table-header">
+<td class="wp-rep-table-td-rank">順位</td>
+<td class="wp-rep-table-td-page">リファラ</td>
+<td class="wp-rep-table-td-pv">今回<br />Ses</td>
+<td class="wp-rep-table-td-ppv">前回<br />Ses</td>
+<td class="wp-rep-table-td-pvp">増減</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank1">1</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://websearch.rakuten.co.jp/">websearch.rakuten.co.jp</a></td>
+<td class="wp-rep-table-td-pv">45</td>
+<td class="wp-rep-table-td-ppv">31</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+45.16%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank2">2</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://d.hatena.ne.jp/">d.hatena.ne.jp</a></td>
+<td class="wp-rep-table-td-pv">32</td>
+<td class="wp-rep-table-td-ppv">26</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+23.08%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank3">3</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://atnd.org/">atnd.org</a></td>
+<td class="wp-rep-table-td-pv">27</td>
+<td class="wp-rep-table-td-ppv">0</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-new"></div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank4">4</span></td>
+<td class="wp-rep-table-td-referer">googleads.g.doubleclick.net</td>
+<td class="wp-rep-table-td-pv">27</td>
+<td class="wp-rep-table-td-ppv">2</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+1250.00%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank5">5</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://b.hatena.ne.jp/">b.hatena.ne.jp</a></td>
+<td class="wp-rep-table-td-pv">20</td>
+<td class="wp-rep-table-td-ppv">8</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+150.00%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank6">6</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://yamayama.biz/">yamayama.biz</a></td>
+<td class="wp-rep-table-td-pv">20</td>
+<td class="wp-rep-table-td-ppv">0</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-new"></div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank7">7</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://blog.veryposi.info/">blog.veryposi.info</a></td>
+<td class="wp-rep-table-td-pv">17</td>
+<td class="wp-rep-table-td-ppv">15</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+13.33%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank8">8</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://s.luna.tv/">s.luna.tv</a></td>
+<td class="wp-rep-table-td-pv">14</td>
+<td class="wp-rep-table-td-ppv">10</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+40.00%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank9">9</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://bloggingfrom.tv/">bloggingfrom.tv</a></td>
+<td class="wp-rep-table-td-pv">13</td>
+<td class="wp-rep-table-td-ppv">11</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+18.18%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank10">10</span></td>
+<td class="wp-rep-table-td-referer"><a href="https://t.co/">t.co</a></td>
+<td class="wp-rep-table-td-pv">13</td>
+<td class="wp-rep-table-td-ppv">62</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-79.03%</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6725/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[アクセスレポート]2009-01-01 〜 2009-12-31</title>
+		<link>/archives/2030/</link>
+					<comments>/archives/2030/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 01 Jan 2010 14:59:06 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[アクセスレポート]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2030</guid>
+
+					<description><![CDATA[前回：2008-01-01 〜 2008-12-31 ビジター数：4834(前回：0) +0% PV数：10692(前回：0) +0% 順位 ページ 今回 PV 前回 PV 増減 1 【JC】Stru ... <a href="/archives/2030/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<div class="wp-report">
+<div class="wp-rep-prev-title">前回：2008-01-01 〜 2008-12-31</div>
+<p>ビジター数：4834(前回：0) <span class="wp-rep-up">+0%</span><br />
+PV数：10692(前回：0) <span class="wp-rep-up">+0%</span></p>
+<table class="wp-rep-table">
+<tbody>
+<tr class="wp-rep-table-header">
+<td class="wp-rep-table-td-rank">順位</td>
+<td class="wp-rep-table-td-page">ページ</td>
+<td class="wp-rep-table-td-pv">今回<br />
+PV</td>
+<td class="wp-rep-table-td-ppv">前回<br />
+PV</td>
+<td class="wp-rep-table-td-pvp">増減</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank1">1</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/07/jc-session-value-in-struts2-jsp/">【JC】Struts2でjsp内でsessionの値の取得について » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">204</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank2">2</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/30/jc-tag-library-br-tag/">【JC】改行コードをbrタグに置換するタグライブラリを作成しました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">187</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank3">3</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/12/12/install-blackberry-buzzme-pro/">【BlackBerry】BuzzMe Proを入れてみました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">178</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank4">4</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/25/jc-struts2-exception/">【JC】Struts2での例外処理について » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">167</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank5">5</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/05/06/blackberry-bold-9000-icon-2/">Blackberry Boldのアイコンの正体が分かった！ | Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">140</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank6">6</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/05/11/garble-blackberry-bold-im-for-skype/">BlackBerry BoldのIM+ for Skypeが文字化け » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">136</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank7">7</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/20/struts2-chain-when-validate-error/">【Struts2】validateエラー時のchainについて » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">105</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank8">8</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/05/06/review-blackberry-9000/">スマートフォン(Blackberry)を使ってみて分かったこと | Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">92</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank9">9</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/05/06/blackberry-bold-9000-regist-user-dictionary/">Blackberry Boldのユーザ辞書登録について | Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">88</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank10">10</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/07/jc-session-value-in-struts2-jsp/">【JC】Struts2でjsp内でsessionの値の取得について » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">86</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2030/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[アクセスレポート]2009-12-01 〜 2009-12-31</title>
+		<link>/archives/2029/</link>
+					<comments>/archives/2029/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 01 Jan 2010 14:58:47 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[アクセスレポート]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2029</guid>
+
+					<description><![CDATA[前回：2009-11-01 〜 2009-11-30 ビジター数：871(前回：650) +34.00% PV数：1761(前回：1303) +35.15% 順位 ページ 今回 PV 前回 PV 増減 ... <a href="/archives/2029/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<div class="wp-report">
+<div class="wp-rep-prev-title">前回：2009-11-01 〜 2009-11-30</div>
+<p>ビジター数：871(前回：650) <span class="wp-rep-up">+34.00%</span><br />
+PV数：1761(前回：1303) <span class="wp-rep-up">+35.15%</span></p>
+<table class="wp-rep-table">
+<tbody>
+<tr class="wp-rep-table-header">
+<td class="wp-rep-table-td-rank">順位</td>
+<td class="wp-rep-table-td-page">ページ</td>
+<td class="wp-rep-table-td-pv">今回<br />
+PV</td>
+<td class="wp-rep-table-td-ppv">前回<br />
+PV</td>
+<td class="wp-rep-table-td-pvp">増減</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank1">1</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/12/12/install-blackberry-buzzme-pro/">【BlackBerry】BuzzMe Proを入れてみました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">178</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank2">2</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/12/15/install-blackberry-bold-9000-os5-0-leak/">【BlackBerry】Bold 9000に流出版のOS5.0を入れてみました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">75</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank3">3</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/07/jc-session-value-in-struts2-jsp/">【JC】Struts2でjsp内でsessionの値の取得について » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">46</td>
+<td class="wp-rep-table-td-ppv">32</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+43.75%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank4">4</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/25/jc-struts2-exception/">【JC】Struts2での例外処理について » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">36</td>
+<td class="wp-rep-table-td-ppv">34</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+5.88%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank5">5</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/05/11/garble-blackberry-bold-im-for-skype/">BlackBerry BoldのIM+ for Skypeが文字化け » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">33</td>
+<td class="wp-rep-table-td-ppv">31</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+6.45%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank6">6</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/12/09/install-chrome-extensions-1/">Chromeを快適に過ごすためのExtensionsをいくつかインストールしてみました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">28</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank7">7</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/07/30/jc-tag-library-br-tag/">【JC】改行コードをbrタグに置換するタグライブラリを作成しました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">27</td>
+<td class="wp-rep-table-td-ppv">34</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-down">-20.59%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank8">8</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/09/16/order-logicool-1-3-mp-webcam-c500/">「Logicool 1.3-MP Webcam C500」を購入 » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">23</td>
+<td class="wp-rep-table-td-ppv">20</td>
+<td class="wp-rep-table-td-pvp">
+<div class="wp-rep-up">+15.00%</div>
+</td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank9">9</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/12/07/cleaning-x61-fan/">X61のファンを掃除しました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">16</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+<tr class="wp-rep-table-body">
+<td class="wp-rep-table-td-rank"><span class="wp-rep-rank wp-rep-rank10">10</span></td>
+<td class="wp-rep-table-td-page"><a href="https://fukata.org/2009/12/06/xstream-for-android/">【Android】O/XマッパーのXStreamをAndroidで利用できるようにしてみました » Tatsuya Blog</a></td>
+<td class="wp-rep-table-td-pv">14</td>
+<td class="wp-rep-table-td-ppv">&#8211;</td>
+<td class="wp-rep-table-td-pvp"></td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2029/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>GoogleAnalyticsのアクセス解析情報をWordPressに自動投稿するプログラムを作りました</title>
+		<link>/archives/2001/</link>
+					<comments>/archives/2001/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 25 Dec 2009 10:52:23 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Ggoogle Analytics]]></category>
+		<category><![CDATA[xml-rpc]]></category>
+		<category><![CDATA[アクセスレポート]]></category>
+		<category><![CDATA[アクセス解析]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2001</guid>
+
+					<description><![CDATA[当サイトのアクセス解析にはGoogleAnalyticsを使用しているのですが、先月の人気記事ランキングなどを作る場合、一つ一つコピペして作っていたのですが、面倒なので、自動化してみました。 Goog ... <a href="/archives/2001/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>当サイトのアクセス解析にはGoogleAnalyticsを使用しているのですが、先月の人気記事ランキングなどを作る場合、一つ一つコピペして作っていたのですが、面倒なので、自動化してみました。</p>
+<p>GoogleAnalyticsから情報を取得するのには、GData APIという物を使用しました。幸い自分が慣れているJavaのAPIがあったので比較的楽に実装することが出来ました。</p>
+<p>APIやサンプルについては下記のサイトに詳しく載っています。</p>
+<ul>
+<li><a href="https://code.google.com/intl/ja/apis/analytics/docs/gdata/2.0/gdataJava.html#beforeStart">Data Export API &#8211; Java (v2) &#8211; Google Analytics &#8211; Google Code</a></li>
+<li><a href="https://code.google.com/intl/ja/apis/gdata/javadoc/">Google Data APIs Client Library (1.40.1)</a></li>
+</ul>
+<p><del datetime="2010-12-11T09:45:18+00:00">リモート投稿の際にカテゴリを「HPニュース」に設定することはできるのですが、任意のタグを付与することができず完全自動化することができていません。使っているAPIはXML-RPCでMetaWeblogのものです。APIを見てもタグのパラメータがないので、WordPressが独自のAPIを用意してくれるか、もしくは、MTのXML-RPC等も対応してるみたいなので、そちらで対応されるのを待つ感じです。</del></p>
+<p><del datetime="2010-12-11T09:45:18+00:00">もし、リモート投稿にて、タグを付与できるAPIを知っている方がいましたら、コメントいただけると幸いです。</del></p>
+<p>後日、タグの付与についても分かりました。<br />
+<a href="https://fukata.org/2010/01/27/wordpress-xml-rpc-post-attach-tag/">[WordPress]XML-RPCでのリモート投稿時のタグの付与について</a></p>
+<p>現在、アクセスレポートとして、総ビジター数、総PV数、人気記事ランキングを生成しているのですが、ランキングの記事毎のPV数の集計が正常に出来ておりません。というのは、GData APIから集計した段階で、ページタイトルが設定されているものと、空の物が存在するみたいで、現在はページタイトルが空のものは集計対象から除外しています。その為、多少の誤差が生じていると思います。</p>
+<p>そもそも、ページタイトルが空のデータが正しいデータなのか、調べて補正の必要があれば処理に入れたいと思います。</p>
+<p>また、今回作成したプログラムは、自宅の仮想サーバにリリースしました。毎月1日の12時に先月のアクセスレポートと毎年1月1日の12時に前年のアクセスレポートを投稿するように設定していると思うので、早速来週辺りに自動実行されると思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2001/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>docker &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/docker/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:14:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>このサイトにdockerを使ってみた</title>
+		<link>/archives/7969/</link>
+					<comments>/archives/7969/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 27 Dec 2016 15:52:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[docker]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[Redis]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7969</guid>
+
+					<description><![CDATA[前回、h2o+phpのdockerイメージを練習がてらに作ってみたので今回はそれを使ってこの主にWordPressで構成されたサイトをdockerコンテナを使ってみた。 広告 構成 前回とほとんど構成 ... <a href="/archives/7969/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7969/"><img src="https://farm1.staticflickr.com/430/31834794276_e4d08e5f90_c.jpg" alt="PC263121" class="aligncenter"/></a></p>
+<p>前回、h2o+phpのdockerイメージを練習がてらに作ってみたので今回はそれを使ってこの主にWordPressで構成されたサイトをdockerコンテナを使ってみた。</p>
+<p><span id="more-7969"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>構成</h2>
+<p>前回とほとんど構成は変わってない。</p>
+<ul>
+<li>Digital Ocean Singapore 512MB</li>
+<li>Ubuntu 16.04 LTS</li>
+<li>MySQL 5.7</li>
+<li>Redis 3.2</li>
+<li>h2o 2.1.0-beta4</li>
+<li>php 7.0.14</li>
+</ul>
+<h2>dockerイメージ</h2>
+<p>使ったdockerイメージは下記。</p>
+<ul>
+<li><a href="https://hub.docker.com/_/mysql/">mysql:5.7</a></li>
+<li><a href="https://hub.docker.com/_/redis/">redis:3.2</a></li>
+<li><a href="https://hub.docker.com/r/fukata/h2o-php/">fukata/h2o-php</a></li>
+</ul>
+<p>/var/www 以下にあるWordPressやその他のWEBに公開しているファイルは現状はコンテ化出来ていないのでそのままホストに置いている状態となっている。</p>
+<p>これもコンテナ化しようかと思ったんだけどWordPress自身でのアップデートとかもあるしローカルで変更してイメージ化して再アップってのが個人で運営するブログ程度だと面倒くささが勝ちそうだったので良い案が思い浮かぶまでとりあえずホスト側に置くことにした。</p>
+<p>なので、h2o-phpコンテナとはvolumeに指定してマウントしている。</p>
+<h2>wp-config.php</h2>
+<p>h2o-phpコンテナからmysql,redisコンテナにアクセスするために下記のような設定を行っている。</p>
+<p>docker runのlinkオプションに他コンテナを指定することで環境変数に色々定義されるのでそれを使う。</p>
+<pre lang="php">
+/** MySQL hostname */
+define('DB_HOST', getenv('DB_PORT_3306_TCP_ADDR') ?: 'localhost');
+
+// redis
+define('WP_REDIS_HOST', getenv('REDIS_PORT_6379_TCP_ADDR') ?: 'localhost');
+define('WP_REDIS_PORT', getenv('REDIS_PORT_6379_TCP_PORT') ?: '6379');
+</pre>
+<p>今回、初めてphpの <em>?:</em> という演算子を知った。<br />
+いわゆるデフォルト値を定義してあげる時に便利なやつ。</p>
+<h2>ansible</h2>
+<p>ansibleのタスクからdockerコンテナの部分だけ抜粋。</p>
+<pre lang="yaml">
+- name: Create mysql container
+  docker_container:
+    name: db
+    image: mysql:5.7
+    pull: true
+    restart: yes
+    restart_policy: always
+    env:
+      MYSQL_ALLOW_EMPTY_PASSWORD: YES
+      MYSQL_USER: "{{ db_user }}"
+      MYSQL_PASSWORD: "{{ db_password }}"
+    ports:
+      - 127.0.0.1:3306:3306
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+      - /etc/mysql:/etc/mysql
+  tags: mysql
+
+- name: Create redis container
+  docker_container:
+    name: redis
+    image: redis:3.2
+    pull: true
+    restart: yes
+    restart_policy: always
+    ports:
+      - 127.0.0.1:6379:6379
+    volumes:
+      - /etc/redis:/etc/redis
+  tags: redis
+
+- name: Create h2o container
+  docker_container:
+    name: h2o
+    image: fukata/h2o-php
+    pull: true
+    restart: yes
+    restart_policy: always
+    ports:
+      - 0.0.0.0:80:80
+      - 0.0.0.0:443:443
+    links:
+      - db
+      - redis
+    volumes:
+      - /var/www:/var/www
+      - /var/log/h2o:/var/log/h2o
+      - /etc/h2o:/etc/h2o
+      - /etc/letsencrypt:/etc/letsencrypt
+  tags: h2o
+
+</pre>
+<h2>まとめ</h2>
+<p>今回、DigitalOceanのインスタンスを512MBプランに変更してみたんだけど普通に動いてるっぽい。かなりギリギリになってるので何かあるとすぐいっぱいになってしまいそうな不安はあるけど。</p>
+<p>とりあえず、今年中にやりたかったdockerコンテナを使ってサイトを公開出来たのは良かった。</p>
+<p>そろそろEC2に移行しようかな。どうせならterraformなど使って移行したい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7969/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/430/31834794276_e4d08e5f90.jpg</image>
+	</item>
+		<item>
+		<title>練習がてらにh2o(ssl,mruby) + php7なdocker imageを作ってみた</title>
+		<link>/archives/7968/</link>
+					<comments>/archives/7968/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2016 06:21:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[docker]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[mruby]]></category>
+		<category><![CDATA[PHP7]]></category>
+		<category><![CDATA[SSL]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7968</guid>
+
+					<description><![CDATA[海外に居ても日本とほぼ同じ味の牛丼が食べられる幸せ。 週末、このブログサイトをdockerコンテナ使ったものに変えようかと思っていて練習がてらにdocker imageを使ってみた。 広告 表題のh2 ... <a href="/archives/7968/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7968/"><img src="https://farm6.staticflickr.com/5480/30668971073_f3ae78eac1_c.jpg" alt="PC061114" class="aligncenter"/></a></p>
+<p>海外に居ても日本とほぼ同じ味の牛丼が食べられる幸せ。<br />
+週末、このブログサイトをdockerコンテナ使ったものに変えようかと思っていて練習がてらにdocker imageを使ってみた。</p>
+<p><span id="more-7968"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>表題のh2o(ssl,mruby) + php7なdocker imageはこちら。ベースはalpine:edgeになっている。ビルドしていてalpinelinuxのホームページを見てみると22日に3.5が出たらしいのでdocker imageが公開されたらそっちで再度ビルドする。mysql,redisは公式イメージがあったからそれをそのまま使おうかと思ってるんだけどh2oに関しては公式がなかったのと大してDL数がない他人のやつを使うのも怖いので練習がてらに作ってみた。と言ってもほとんど拾ってきたDockerfileの継ぎ接ぎだけど。<br />
+<a href="https://hub.docker.com/r/fukata/h2o-php/">fukata/h2o-php &#8211; Docker Hub</a></p>
+<p>dockerさえ入ってればこれをpullしてrunすればWebサーバとphpの実行が出来る。</p>
+<p>今まで、vagrant + ansibleで環境構築していたんだけど今回docker触ってみて確かに便利だと分かったのでこれから積極的に使っていく。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7968/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5480/30668971073_f3ae78eac1.jpg</image>
+	</item>
+	</channel>
+</rss>

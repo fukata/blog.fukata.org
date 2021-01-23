@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>booking.comアフィリエイトプログラム &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/booking-com%E3%82%A2%E3%83%95%E3%82%A3%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%88%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Wed, 20 Jul 2016 03:00:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>booking.comアフィリエイトプログラムとInvalid bank codeエラーについて</title>
+		<link>/archives/763/</link>
+					<comments>/archives/763/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 20 Jul 2016 03:00:24 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[booking.com]]></category>
+		<category><![CDATA[booking.comアフィリエイトプログラム]]></category>
+		<category><![CDATA[アフィリエイト]]></category>
+		<guid isPermaLink="false">https://travel.fukata.org/?p=763</guid>
+
+					<description><![CDATA[旅してますか？私は90日レポートを出さないと行けないくらい国外に出れていない。先日、booking.comでホテルを検索しているとアフィリエイトプログラムなるものを見つけたので申し込んでみた。 広告  ... <a href="/archives/763/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/763/"><img src="https://farm6.staticflickr.com/5583/15038685772_a55eb37d02_z.jpg" alt="P8111235" class="aligncenter" /></a></p>
+<p>旅してますか？私は90日レポートを出さないと行けないくらい国外に出れていない。先日、booking.comでホテルを検索しているとアフィリエイトプログラムなるものを見つけたので申し込んでみた。</p>
+<p><span id="more-763"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>booking.comアフィリエイトプログラム</h2>
+<p>登録はこちらから。<br />
+<a href="https://secure.booking.com/affiliate-program/register.html?lang=ja">Booking.com: アフィリエイト・パートナー登録</a></p>
+<h2>サイトの認証</h2>
+<p>登録するのは上記フォームから簡単に行えるが、サイトの認証を行うにはDNSに特定のレコードを追加するか、WEBページに認証コードが入ったhtmlを設置する必要がある。<br />
+そのため、もしかしたら無料ブログなどでは認証が難しい可能性がある。</p>
+<p>私の場合は結果が返ってくるのに1週間近く掛かったので辛抱強く待つ必要があるかもしれない。</p>
+<h2>支払い先情報</h2>
+<p>支払い先としてPaypalまたは銀行振込を選べる。今回は銀行振込を使ってみた。</p>
+<p>ただ、何度入力してもInvalid bank codeと表示されてしまい登録ができない。しびれを切らしてサポートにメールで問い合わせたところ1日ですぐに返答が返ってきた。</p>
+<p>どうやら<strong>銀行コード + 支店番号(xxxxyyy)</strong>を入力しないといけなかったらしい。教えてもらった通り入力したら登録できた。これでやっとスタート地点に立てたわけだ。</p>
+<h2>バナー</h2>
+<p>バナーは単純なものからオススメを表示してくれるものまで結構色んな種類のものがある。とりあえず、今はサイドバーにシンプルなバナーのものを表示している。</p>
+<p>実装が面倒くさいのは分かるがGoogle Adsenseのレスポンシブタイプが便利過ぎるので広告を提供している会社は是非レスポンシブタイプのものも提供して欲しい。</p>
+<p>また、バナーだけでなく特定のホテルにアフィリエイトIDを付与することも可能。例えばこんな感じ。</p>
+<p><a href="http://www.booking.com/hotel/sg/big.html?aid=1152648">http://www.booking.com/hotel/sg/big.html?aid=1152648</a></p>
+<h2>まとめ</h2>
+<p>まだ使い始めたばかりなのでこれといって感想はないけど認証がなかなか終わらなくて不安だった。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/763/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5583/15038685772_a55eb37d02.jpg</image>
+	</item>
+	</channel>
+</rss>

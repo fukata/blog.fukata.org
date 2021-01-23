@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PHPspeed &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/phpspeed/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>さくらのVPS 4GでPHPSpeedを動かしてみた</title>
+		<link>/archives/5419/</link>
+					<comments>/archives/5419/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 15 Mar 2011 09:24:52 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[PHPspeed]]></category>
+		<category><![CDATA[ベンチマーク]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5419</guid>
+
+					<description><![CDATA[前回、phper.jpでPHPSpeedを動かしてベンチマークを測定してみたのですが、さくらのVPS 4Gでも動かしてみたので、メモとして残しておきたいと思います。結果的には一部phper.jpよりも ... <a href="/archives/5419/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://fukata.org/2011/03/10/phpspeed-on-phper-jp/">前回</a>、phper.jpでPHPSpeedを動かしてベンチマークを測定してみたのですが、さくらのVPS 4Gでも動かしてみたので、メモとして残しておきたいと思います。結果的には一部phper.jpよりも優れている部分がありました。近いうちにこのブログも移行したいと思います。</p>
+<p>ServersMan@VPSにはなかったスワップがあるのは非常に嬉しいですね。ただ、少し気になったのがハードウェアのところで、クアッドコアではなく、デュアルコアのCPUを利用しているようです。コレの影響でしょうか、読込・書込のベンチマークはphper.jpの方が良い結果となりました。</p>
+<p><del datetime="2011-03-16T15:37:03+00:00">移行する際にメールサーバ作るのだるいなぁと感じたので、Google Appsに移行しました。設定するだけでメールの送受信が出来、今までのメールサーバ構築から考えると格段に楽です。ただ、Business版じゃないので（？）、gmailアカウントとfukata.orgのアカウント両方でgmailにログインするという事が出来ませんでした。コレも何か設定で変更できるんですかね？</del></p>
+<p><strong>追記：20110316 23:44</strong><br />
+先ほど改めてGoogle Appsアカウントでの複数ログインですが、普通に出来ました。</p>
+<p><span id="more-5419"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>ベンチマーク結果</h2>
+<p>Benchmark Summary</p>
+<table>
+<tr>
+<th style="text-align:center;">Tests</th>
+<th style="text-align:center;">さくらのVPS 4G<br />(Best Score/Avg Score)</th>
+</tr>
+<tr>
+<th>Synthetic PHP BenchMark</th>
+<td style="text-align:center;">4,437/4,296</td>
+</tr>
+<tr>
+<th>Synthetic MySQL BenchMark</th>
+<td style="text-align:center;">11,113/10,433</td>
+</tr>
+<tr>
+<th>Synthetic Read/Write BenchMark</th>
+<td style="text-align:center;">2,501/2,374</td>
+</tr>
+<tr>
+<th>Real World PHP BenchMark</th>
+<td style="text-align:center;">7,408/7,067</td>
+</tr>
+<tr>
+<th>Real World PHP &#038; MySQL BenchMark</th>
+<td style="text-align:center;">3,434/3,288</td>
+</tr>
+<tr>
+<th>Server Benchmark</th>
+<td style="text-align:center;">3,499/3,390</td>
+</tr>
+</table>
+<p><a href='https://www.flickr.com/photos/45259648@N06/5528270141'><img src='https://farm6.static.flickr.com/5251/5528270141_687fb9b415.jpg' alt='phpspeed-sakura4g-summary' class='aligncenter' /></a></p>
+<p>PHP Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5528272953'><img src='https://farm6.static.flickr.com/5131/5528272953_c6a766b90f.jpg' alt='phpspeed-sakura4g-phpinfo' class='aligncenter' /></a></p>
+<p>MySQL Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5528859660'><img src='https://farm6.static.flickr.com/5094/5528859660_87982e41a0.jpg' alt='phpspeed-sakura4g-mysqlinfo' class='aligncenter' /></a></p>
+<p>System Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5528859812'><img src='https://farm6.static.flickr.com/5173/5528859812_43da8e81e3.jpg' alt='phpspeed-sakura4g-systeminfo' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5419/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>phpのクラウド環境phper.jpでPHPSpeedを動かしてみた</title>
+		<link>/archives/5411/</link>
+					<comments>/archives/5411/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 10 Mar 2011 15:03:05 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[phper.jp]]></category>
+		<category><![CDATA[PHPspeed]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5411</guid>
+
+					<description><![CDATA[phpのクラウド環境であるphper.jpでベンチマーク計測ソフトウェアのPHPSpeedを動かしてみたので、導入方法の際の注意点とベンチマークの結果を載せておきます。 今回、phper.jpを少し触 ... <a href="/archives/5411/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>phpのクラウド環境である<a href="https://phper.jp/">phper.jp</a>でベンチマーク計測ソフトウェアの<a href="https://www.phpspeed.com/">PHPSpeed</a>を動かしてみたので、導入方法の際の注意点とベンチマークの結果を載せておきます。</p>
+<p>今回、phper.jpを少し触ってみて、デプロイ容易さや使用できる言語もphpということで、ライブラリが揃っている言語なので、mockや個人的なサービスを使う環境としては良いかなと思いました。実際に仕事などで利用するには、有料オプションなどがきちんと実装（現時点ではまだ未実装？のようです）されてからかなと思います。ただ、今回ベンチマークを計測してみて、<a href="https://fukata.org/2010/05/14/heteml-and-servermanvps-benchmarks/">以前にhetemlとServersMan@VPSで同じソフトウェアで計測</a>した場合と比べるとかなり良い結果となりました。</p>
+<p><span id="more-5411"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>PHPSpeedの導入</h2>
+<p>ベンチマーク結果だけを見たい人はこの項目は飛ばしてください。</p>
+<h3>ダウンロード</h3>
+<pre lang="BASH">
+wget https://www.phpspeed.com/download2.php?file=phpspeed_v1_beta3.zip
+unzip phpspeed_v1_beta3.zip
+</pre>
+<h3>phperのプロジェクト用ディレクトリへコピー</h3>
+<pre lang="BASH">
+mv phpspeed/phpspeed/* my-phper-git-repo
+cd my-phper-git-repo
+</pre>
+<h3>DB設定</h3>
+<pre lang="BASH">
+vim config_db.php
+</pre>
+<p>下記の項目について、phper.jpから提供されたDB情報に編集する。</p>
+<pre lang="PHP">
+//Enter your MySQL connection information below
+$dbhost = "localhost";
+$dbuname = "ENTERYOURDBUSERNAME";
+$dbpass = "ENTERYOURPASSWORD";
+
+//This is the DB where all of the config and results data will be stored^M
+$dbname = "phpspeed";
+</pre>
+<h3>デプロイ</h3>
+<pre lang="BASH">
+git add --all
+git commit -m 'initial commit.'
+git push origin master
+</pre>
+<p>この状態でアクセスするとphpコードがそのまま表示されていると思います。phpspeedの内部のソースを見てみるとphpショートタグが沢山あります。。。phper.jpの設定では、デフォルトではphpショートタグは許可されていないので、.htaccessを追加して許可する必要があります。</p>
+<h3>.htaccessを追加</h3>
+<pre lang="BASH">
+echo "php_value short_open_tag 1" > .htaccess
+git add .htaccess
+git commit -m 'add .htaccess'
+git push origin master
+</pre>
+<p>これで、正常に表示されることだと思います。DBの初期化を行えば、各種のベンチマークテストを行えるようになります。ちなみに、自分の場合はサーバを追加して３０分ほどサーバにアクセスしても503が発生していました。</p>
+<h2>ベンチマーク結果</h2>
+<p>Benchmark Summary</p>
+<table>
+<tr>
+<th style="text-align:center;">Tests</th>
+<th style="text-align:center;">phper.jp<br />(Best Score/Avg Score)</th>
+</tr>
+<tr>
+<th>Synthetic PHP BenchMark</th>
+<td style="text-align:center;">5,071/5,043</td>
+</tr>
+<tr>
+<th>Synthetic MySQL BenchMark</th>
+<td style="text-align:center;">3,536/2,650</td>
+</tr>
+<tr>
+<th>Synthetic Read/Write BenchMark</th>
+<td style="text-align:center;">2,604/2,586</td>
+</tr>
+<tr>
+<th>Real World PHP BenchMark</th>
+<td style="text-align:center;">8,597/8,542</td>
+</tr>
+<tr>
+<th>Real World PHP &#038; MySQL BenchMark</th>
+<td style="text-align:center;">4,368/4,341</td>
+</tr>
+<tr>
+<th>Server Benchmark</th>
+<td style="text-align:center;">3,309/3,098</td>
+</tr>
+</table>
+<p><a href='https://www.flickr.com/photos/45259648@N06/5513668785'><br />
+<img src='https://farm6.static.flickr.com/5260/5513668785_3605239513.jpg' alt='phper-benchmark-summary' class='aligncenter' /></a></p>
+<p>PHP Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5514265172'><img src='https://farm6.static.flickr.com/5094/5514265172_489baba06a.jpg' alt='phper-phpinfo' class='aligncenter' /></a></p>
+<p>MySQL Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5513668901'><br />
+<img src='https://farm6.static.flickr.com/5212/5513668901_71b19443cd.jpg' alt='phper-mysqlinfo' class='aligncenter' /></a></p>
+<p>System Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5514265222'><img src='https://farm6.static.flickr.com/5135/5514265222_fb5ee97927.jpg' alt='phper-systeminfo' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5411/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>hetemlとServerMan@VPSでベンチマークを比較</title>
+		<link>/archives/4218/</link>
+					<comments>/archives/4218/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 13 May 2010 20:03:07 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[heteml]]></category>
+		<category><![CDATA[PHPspeed]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[ベンチマーク]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4218</guid>
+
+					<description><![CDATA[最近、色々プラグインなどを詰め込み過ぎているのか、このブログのレスポンスが悪いので移行先のサーバを探していたのですが、先日無料申込を行った激安VPSことServerMan@VPSを思い出し、実際どの程 ... <a href="/archives/4218/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、色々プラグインなどを詰め込み過ぎているのか、このブログのレスポンスが悪いので移行先のサーバを探していたのですが、先日無料申込を行った激安VPSこと<a href="https://dream.jp/vps/">ServerMan@VPS</a>を思い出し、実際どの程度のレスポンスなのか気になったので、現在このサイトが稼働しているhetemlとでApache,PHP,MySQLのベンチマークテストを行ってみました。</p>
+<p>両者の月額料金から言っておきます。ServerManは最低ランクのEntryプランだと<strong>490円(3ヶ月無料)</strong>。一方hetemlは1500円(15日間無料)です。</p>
+<p>今回、Apache,PHP,MySQLのベンチマークテストに使ったソフトウェアは、<a href="https://www.phpspeed.com/">PHPspeed</a>というものです。WEBアプリ上でApache,PHP,MySQLのベンチマークテストを行えるということで、今回の要件にぴったりなソフトウェアです。</p>
+<p>ベンチマークテストの比較の前にまずはサーバの基本スペックから紹介していきたいと思います。</p>
+<h4>System Info</h4>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475556561/"><img loading="lazy" src="https://farm6.static.flickr.com/5220/5475556561_2068efd1fc_m.jpg" alt="" title="heteml-System-Info" width="191" height="300" class="aligncenter size-medium wp-image-4242" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475550433/"><img loading="lazy" src="https://farm6.static.flickr.com/5296/5475550433_53befc03d0_m.jpg" alt="" title="serverman-System-Info" width="300" height="282" class="aligncenter size-medium wp-image-4243" /></a></td>
+</tr>
+</table>
+<h4>PHP Info</h4>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476147480/"><img loading="lazy" src="https://farm6.static.flickr.com/5100/5476147480_eee17ca27e_m.jpg" alt="" title="heteml-PHP-Info" width="45" height="300" class="aligncenter size-medium wp-image-4245" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476145632/"><img loading="lazy" src="https://farm6.static.flickr.com/5257/5476145632_6c165238fd_m.jpg" alt="" title="serverman-PHP-Info" width="40" height="300" class="aligncenter size-medium wp-image-4246" /></a></td>
+</tr>
+</table>
+<h4>MySQL Info</h4>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476146108/"><img loading="lazy" src="https://farm6.static.flickr.com/5255/5476146108_2159e126d6_m.jpg" alt="" title="heteml-MySQL-Info" width="107" height="300" class="aligncenter size-medium wp-image-4247" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476148592/"><img loading="lazy" src="https://farm6.static.flickr.com/5298/5476148592_291c0d6ab8_m.jpg" alt="" title="serverman-MySQL-Info" width="104" height="300" class="aligncenter size-medium wp-image-4248" /></a></td>
+</tr>
+</table>
+<p>hetemlは共用サーバなので、自分の利用可能領域にどれだけのリソース（CPU,記憶容量,メモリ）が割り当てられているか分からないのに対して、ServerMan@VPSの方はそれらが割り当てられているのがしっかりと分かると思います。また、ServerMan@VPSの方は、Apache,PHP,MySQLとyumでインストールしただけの状態となっています。</p>
+<p>それでは、実際にベンチマークの比較をしていきたいと思います。</p>
+<h3>ベンチマーク比較</h3>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476146220/"><img loading="lazy" src="https://farm6.static.flickr.com/5251/5476146220_3ed5045a77_m.jpg" alt="" title="heteml-phpspeed" width="300" height="169" class="aligncenter size-medium wp-image-4249" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476150674/"><img loading="lazy" src="https://farm6.static.flickr.com/5216/5476150674_f09f206c2b_m.jpg" alt="" title="serverman-phpspeed" width="300" height="169" class="aligncenter size-medium wp-image-4250" /></a></td>
+</tr>
+</table>
+<table>
+<tr>
+<th style="text-align:center;">Tests</th>
+<th style="text-align:center;">heteml<br />(Best Score/Avg Score)</th>
+<th style="text-align:center;">ServerMan@VPS<br />(Best Score/Avg Score)</th>
+</tr>
+<tr>
+<th>Synthetic PHP BenchMark</th>
+<td style="text-align:center;">3,225/3168</td>
+<td style="text-align:center;">1,509/1,495</td>
+</tr>
+<tr>
+<th>Synthetic MySQL BenchMark</th>
+<td style="text-align:center;">183/157</td>
+<td style="text-align:center;">1,238/1,231</td>
+</tr>
+<tr>
+<th>Synthetic Read/Write BenchMark</th>
+<td style="text-align:center;">2,109/2,054</td>
+<td style="text-align:center;">999/993</td>
+</tr>
+<tr>
+<th>Real World PHP BenchMark</th>
+<td style="text-align:center;">1,874/1,780</td>
+<td style="text-align:center;">2,326/2,293</td>
+</tr>
+<tr>
+<th>Real World PHP &#038; MySQL BenchMark</th>
+<td style="text-align:center;">2,466/2,361</td>
+<td style="text-align:center;">923/918</td>
+</tr>
+<tr>
+<th>Server Benchmark</th>
+<td style="text-align:center;">532/440</td>
+<td style="text-align:center;">1,132/1,128</td>
+</tr>
+</table>
+<p>パッと見MySQLのベンチマークの値に大きな開きが見えますね。hetemlはWEBサーバとDBサーバが別々になっているのも原因にあるのかもしれません。PHPの実行速度、書込・読込に関してはhetemlの方が勝っているようです。hetemlは共用サーバなのでタイミングによってはCPUリソースの多くを使えるのかもしれません。各テストの内容については下記にまとめました。</p>
+<p>それで、これらの値が実際のWEBアプリのレスポンスとどの程度関係してくるのか、次に、WordPressの表示時間について見ていきます。</p>
+<h4>各テスト内容</h4>
+<table>
+<tr>
+<th style="text-align:center;">Tests</th>
+<th style="text-align:center;">内容</th>
+</tr>
+<tr>
+<th>Synthetic PHP BenchMark</th>
+<td>This set of benchmarks is designed to test various functions within PHP. The tests are synthetic in nature and will test the speed of your PHP install, but not necessarily the &#8216;real world&#8217; performance of your site. Using this test before and after tweaks to the php.ini file and your apache http.conf file will help you determine if your tweaks have enhanced your php performance. You should never rely soley on synthetic tests; you also need to use the page loading test to determine if visitors to your website will see a benefit from your tweaks.</td>
+</tr>
+<tr>
+<th>Synthetic MySQL BenchMark</th>
+<td>This set of benchmarks is designed to test how quickly mysql is reading and writing to your database. The tests are synthetic in nature and will test the speed of your mysql install, but not necessarily the &#8216;real world&#8217; performance of your site. Using this test before and after tweaks to the mysql my.cnf file will help you determine if your tweaks have enhanced your database performance. You should never rely soley on sythetic tests; you also need to use our page loading test to determine if visitors to your website will see a benefit from your tweaks.</td>
+</tr>
+<tr>
+<th>Synthetic Read/Write BenchMark</th>
+<td>This tests measures how fast your server reads and writes to files on the hard drive. This test is a good indicator of the effectiveness of hardware tweaks. This test is also affected by the speed of your CPU, and the amount of memory you have. </td>
+</tr>
+<tr>
+<th>Real World PHP BenchMark</th>
+<td>This benchmark measures the time to load 4 PHP pages of various sizes. There are no database pulls in this benchmark, this test will measure the real world time for someone to load a PHP page on your server. Real World tests are one of the most important ways to measure your server performance as they indicate how long someone has to wait for your server to serve them a page. The test pages vary in detail to simulate a real environment. If you have a cacheing system in place on your site, you will see large fluctuations from the first test to the following tests due to cacheing after the first page load. Depending on your purpose for running this benchmark, you might run tests with cacheing off to see the benefit of some tweaks.</td>
+</tr>
+<tr>
+<th>Real World PHP &#038; MySQL BenchMark</th>
+<td>This benchmark measures the time to load 4 PHP pages of various sizes including MySQL calls in each page. This is a a &#8216;real world&#8217; simulation of a dynamic web page like most of those on the web today. Real World tests are one of the most important ways to measure your server performance as they indicate how long someone has to wait for your server to serve them a page. The test pages vary in detail to simulate a real environment. If you have a cacheing system in place on your site, you will see large fluctuations from the first test to the following tests due to cacheing after the first page load. Depending on your purpose for running this benchmark, you might run tests with cacheing off to see the benefit of some tweaks.</td>
+</tr>
+<tr>
+<th>Server Benchmark</th>
+<td>This benchmark throws everything we&#8217;ve got at your server to find out how fast it really is! This test can be a resource hog, so you should not run this test during your server&#8217;s peak load time. Testing includes synthetic PHP and MySQLn tests, PHP page loading with and without MySQL interaction, and file read/writing within PHP. </td>
+</tr>
+</table>
+<h3>WordPressのベンチマーク</h3>
+<p>WordPressの基本情報</p>
+<table style="width:0%;">
+<tr>
+<th>Version</th>
+<td>2.9.2</td>
+</tr>
+<tr>
+<th>記事数</th>
+<td>665</td>
+</tr>
+<tr>
+<th>コメント数</th>
+<td>90</td>
+</tr>
+<tr>
+<th>ページ数</th>
+<td>20</td>
+</tr>
+<tr>
+<th>カテゴリ数</th>
+<td>78</td>
+</tr>
+<tr>
+<th>タグ数</th>
+<td>696</td>
+</tr>
+<tr>
+<th>テーマ</th>
+<td>デフォルト</td>
+</tr>
+</table>
+<p>クエリ数と表示時間</p>
+<table style="width:0%;">
+<tr>
+<th style="text-align:center;">試行回</th>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td>1</td>
+<td>19 queries. 0.698 seconds.</td>
+<td>20 queries. 0.236 seconds.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>19 queries. 1.029 seconds.</td>
+<td>20 queries. 0.263 seconds.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>19 queries. 0.632 seconds.</td>
+<td>20 queries. 0.252 seconds.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>19 queries. 0.684 seconds.</td>
+<td>20 queries. 0.257 seconds.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>19 queries. 0.861 seconds.</td>
+<td>20 queries. 0.247 seconds.</td>
+</tr>
+</table>
+<p>yumで構築しただけのデフォルトの設定にも関わらず、ServerMan@VPSの方が倍以上速い上に安定していますね。APCなどのPHPアクセラレータやMySQLのチューニングを行えばさらに速くなるでしょう。それに比べてhetemlはDB回りのベンチマークが関係しているのか遅くなっている上にかなり時間にばらつきがあり不安定です。これは、hetemlが共用サーバなため、同じサーバに載っている他のユーザのプロセスがサーバリソースを使用してしまうことで、自分のプロセスが圧迫されてしまうのが原因かと思われます。ですので、この結果がばらつきのある中でのどの程度のランクの結果なのかはもう少し定期的に計測する必要があります。</p>
+<p>今回のベンチマークテストの比較によって、ServerMan@VPSが値段の割に安定していることや、逆に、hetemlが予想以上にばらつきがあったことなどが分かりました。正直、ServerMan@VPSは500円でこのスペックなら申し分ないです。無料期間が3ヶ月もあるので、まだ申し込んでない方は是非ご自身で確かめてみて下さい。</p>
+<p>hetemlとの契約終了が2010/11/30なのですが、近いうちにServerMan@VPSに引っ越そうかと考えています。</p>
+<p>下記は、各テストの5回分の計測結果です。</p>
+<p>Synthetic PHP BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475554869/"><img loading="lazy" src="https://farm6.static.flickr.com/5259/5475554869_20a82400e9_m.jpg" alt="" title="heteml-phpspeed-Synthetic-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4262" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475551207/"><img loading="lazy" src="https://farm6.static.flickr.com/5015/5475551207_edc973dd6d_m.jpg" alt="" title="serverman-phpspeed-Synthetic-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4263" /></a></td>
+</tr>
+</table>
+<p>Synthetic MySQL BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475548661/"><img loading="lazy" src="https://farm6.static.flickr.com/5094/5475548661_ba9026fd7b_m.jpg" alt="" title="heteml-phpspeed-Synthetic-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4264" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476148378/"><img loading="lazy" src="https://farm6.static.flickr.com/5015/5476148378_7718e29c01_m.jpg" alt="" title="serverman-phpspeed-Synthetic-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4265" /></a></td>
+</tr>
+</table>
+<p>Synthetic Read/Write BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475548577/"><img loading="lazy" src="https://farm6.static.flickr.com/5252/5475548577_d372826a2f_m.jpg" alt="" title="heteml-phpspeed-Synthetic-Read-Write-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4266" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475554379/"><img loading="lazy" src="https://farm6.static.flickr.com/5177/5475554379_e4068e8c7c_m.jpg" alt="" title="serverman-phpspeed-Synthetic-Read-Write-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4267" /></a></td>
+</tr>
+</table>
+<p>Real World PHP BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475556447/"><img loading="lazy" src="https://farm6.static.flickr.com/5213/5475556447_cfc2df7ffc_m.jpg" alt="" title="heteml-phpspeed-Real-World-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4268" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475553515/"><img loading="lazy" src="https://farm6.static.flickr.com/5298/5475553515_2a91228360_m.jpg" alt="" title="serverman-phpspeed-Real-World-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4269" /></a></td>
+</tr>
+</table>
+<p>Real World PHP &#038; MySQL BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475555331/"><img loading="lazy" src="https://farm6.static.flickr.com/5091/5475555331_5dfe67f1d0_m.jpg" alt="" title="heteml-phpspeed-Real-World-PHP-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4270" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475553611/"><img loading="lazy" src="https://farm6.static.flickr.com/5017/5475553611_9834f673a4_m.jpg" alt="" title="serverman-phpspeed-Real-World-PHP-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4271" /></a></td>
+</tr>
+</table>
+<p>Server Benchmark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476145526/"><img loading="lazy" src="https://farm6.static.flickr.com/5216/5476145446_1a2e331bab_m.jpg" alt="" title="heteml-phpspeed-Server-Benchmark" width="300" height="163" class="aligncenter size-medium wp-image-4272" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476149814/"><img loading="lazy" src="https://farm6.static.flickr.com/5057/5476149814_a4d6b6021c_m.jpg" alt="" title="serverman-phpspeed-Server-Benchmark" width="300" height="163" class="aligncenter size-medium wp-image-4273" /></a></td>
+</tr>
+</table>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4218/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

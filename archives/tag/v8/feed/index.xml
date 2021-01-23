@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>V8 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/v8/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:05:15 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ServersMan@VPSのプランをEntryからStandardに変更</title>
+		<link>/archives/4351/</link>
+					<comments>/archives/4351/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 21 May 2010 12:14:58 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Flash]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Google TV]]></category>
+		<category><![CDATA[Google Wave]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[V8]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4351</guid>
+
+					<description><![CDATA[昨日の夜にEntry->Standardへプラン変更の申請を行いました。変更後のVPSが提供されるのは1ヶ月以内ということなので、提供される頃には無料期間（2010年6月30日まで）は残り僅かになって ... <a href="/archives/4351/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の夜にEntry->Standardへプラン変更の申請を行いました。変更後のVPSが提供されるのは1ヶ月以内ということなので、提供される頃には無料期間（2010年6月30日まで）は残り僅かになっています。現状としてメモリが常に枯渇状態になっているので、安定性を増させるためには良いと思います。とりあえず、これで少し様子を見ます。</p>
+<p>以下、最近気になった出来事。</p>
+<p><a href="https://googlewave.blogspot.com/2010/05/google-wave-available-for-everyone.html">Google Wave Available for Everyone &#8211; Google Wave Blog</a></p>
+<p>Googleが提供する超リアルタイムディスカッションツールであるGoogle Waveがついに一般公開されました。私は招待制の頃に使ったことがあるのですが、まだ、Chromeでしか利用したことがありませんがレスポンスがだいぶ良くなっています。以前は入力や画面スクロールにイライラしていましたが、今回はそれが解消されています。他人が現在入力している文字はもちろん、漢字変換などもリアルタイムに表示されるので、本当に話しているかのような感覚になります。また、APIなんかも公開されているので、これからさらに盛り上がっていきそうな感じです。</p>
+<p><a href="https://www.atmarkit.co.jp/news/201005/20/vp8.html">グーグルがVP8をOSS化、HTML5のvideo問題が決着か － ＠IT</a></p>
+<p>さすが、Google！<br />
+他にも、Google TVやらiTunesキラーとますます目の離せないGoogleに注目です。</p>
+<p><a href="https://journal.mycom.co.jp/articles/2010/05/20/jonathan_gay/index.html">【レポート】Flashの父、「iPhoneは今後数年でFlashをサポートすることになる」 (1) Flashの歴史 | パソコン | マイコミジャーナル</a></p>
+<p>個人的には、AppleのFlash排除に勢い付けてHTML5の普及し、Flash勢力は弱くなっていくと思うんですけどね・・・。Androidも現在はFlashをサポートしていますけど、それは現在のシェアが高いためでしょうし。Google自体がHTML5の普及に力を入れてることも考えると時代はFlash->HTML5になるんでしょうかね。</p>
+<p>私個人としては、クローズドなFlashよりもオープンなHTML5側の人間です。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4351/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

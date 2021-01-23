@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>error &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/error/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[JC]「Cannot load JDBC driver class」エラーについて</title>
+		<link>/archives/1387/</link>
+					<comments>/archives/1387/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 06 Jul 2009 20:02:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[error]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[jdbc]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1387</guid>
+
+					<description><![CDATA[Spring2 + Struts2 + iBatisの特にiBatis回りの動作確認を行っていたんですが、「Cannot load JDBC driver class」エラーが出ていてハマっていました ... <a href="/archives/1387/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5054/5476240564_78195c1683_m.jpg" target="_blank" title="admin_1246910707127"><img loading="lazy" src="https://farm6.static.flickr.com/5054/5476240564_78195c1683_m.jpg" alt="admin_1246910707127" width="200" height="103" class="attachment wp-att-1389 alignleft" /></a>Spring2 + Struts2 + iBatisの特にiBatis回りの動作確認を行っていたんですが、「Cannot load JDBC driver class」エラーが出ていてハマっていました。いや、Eclipseのビルドパスには、jdbc.jarファイルは登録していたんですよ。それでも、エラーが出続けていたのでしょうがなく、${CATALINA_HOME}/common/libにjdbc.jarファイルを入れたら動くようになりました。以前は、Eclipseのビルドパスに登録するだけで良かったような気がするんだけどなぁ。。。</p>
+<p>とりあえず、何はともあれ、iBatis回りの動作確認が取れましたので、本格的に実装が乗り始めそうな予感がしています。</p>
+<p>struts2での、session内の値の取得方法などについても分かったことがありますので、今度記事に書きたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1387/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

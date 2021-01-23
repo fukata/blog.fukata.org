@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>xml-rpc &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/xml-rpc/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[WordPress]XML-RPCでのリモート投稿時のSlugの付与について</title>
+		<link>/archives/5066/</link>
+					<comments>/archives/5066/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 11 Dec 2010 09:59:22 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[xml-rpc]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5066</guid>
+
+					<description><![CDATA[WordPress › Support » [Plugin: SEO Slugs] Setting post slug when posting via XML-RPC 現在、自動化しているアクセスレ ... <a href="/archives/5066/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://wordpress.org/support/topic/plugin-seo-slugs-setting-post-slug-when-posting-via-xml-rpc">WordPress › Support » [Plugin: SEO Slugs] Setting post slug when posting via XML-RPC</a></p>
+<p>現在、自動化しているアクセスレポートでは、記事投稿に「metaWeblog.newPost」を利用しているのですが、パラメータにwp_slugを指定してみたところ、無事slugを指定することができました。これで、また一つ手動で設定する値が減り、完全自動化に向けて一歩近づきました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5066/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[WordPress]XML-RPCでのリモート投稿時のタグの付与について</title>
+		<link>/archives/2258/</link>
+					<comments>/archives/2258/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 26 Jan 2010 16:29:54 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[xml-rpc]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2258</guid>
+
+					<description><![CDATA[以前、GoogleAnalyticsの集計結果を自動投稿するプログラムを書いたという記事を書いたと思うのですが、その時は記事にタグの付与する方法を見つけられなかったのですが、今日、再度探してみるとあっ ... <a href="/archives/2258/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前、GoogleAnalyticsの集計結果を自動投稿するプログラムを書いたという記事を書いたと思うのですが、その時は記事にタグの付与する方法を見つけられなかったのですが、今日、再度探してみるとあっさり見つかりました。</p>
+<p>どうやら、titleなんかと同じ構造体にmt_keywordsというキーに配列を渡せばよいみたいです。</p>
+<p>これで、また一つ自動投稿後の作業が減りました。</p>
+<p>■参考サイト</p>
+<ul>
+<li><a href="https://efcl.info/2009/1103/res1416/">GreasemonkeyからXMLRPCプロトコルでブログに投稿する | Web scratch</a></li>
+<li><a href="https://www.selflow.com/?p=6">XML-RPC経由の投稿 でタグを登録したい «  Selflow WordPress</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2258/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>GoogleAnalyticsのアクセス解析情報をWordPressに自動投稿するプログラムを作りました</title>
+		<link>/archives/2001/</link>
+					<comments>/archives/2001/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 25 Dec 2009 10:52:23 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Ggoogle Analytics]]></category>
+		<category><![CDATA[xml-rpc]]></category>
+		<category><![CDATA[アクセスレポート]]></category>
+		<category><![CDATA[アクセス解析]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2001</guid>
+
+					<description><![CDATA[当サイトのアクセス解析にはGoogleAnalyticsを使用しているのですが、先月の人気記事ランキングなどを作る場合、一つ一つコピペして作っていたのですが、面倒なので、自動化してみました。 Goog ... <a href="/archives/2001/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>当サイトのアクセス解析にはGoogleAnalyticsを使用しているのですが、先月の人気記事ランキングなどを作る場合、一つ一つコピペして作っていたのですが、面倒なので、自動化してみました。</p>
+<p>GoogleAnalyticsから情報を取得するのには、GData APIという物を使用しました。幸い自分が慣れているJavaのAPIがあったので比較的楽に実装することが出来ました。</p>
+<p>APIやサンプルについては下記のサイトに詳しく載っています。</p>
+<ul>
+<li><a href="https://code.google.com/intl/ja/apis/analytics/docs/gdata/2.0/gdataJava.html#beforeStart">Data Export API &#8211; Java (v2) &#8211; Google Analytics &#8211; Google Code</a></li>
+<li><a href="https://code.google.com/intl/ja/apis/gdata/javadoc/">Google Data APIs Client Library (1.40.1)</a></li>
+</ul>
+<p><del datetime="2010-12-11T09:45:18+00:00">リモート投稿の際にカテゴリを「HPニュース」に設定することはできるのですが、任意のタグを付与することができず完全自動化することができていません。使っているAPIはXML-RPCでMetaWeblogのものです。APIを見てもタグのパラメータがないので、WordPressが独自のAPIを用意してくれるか、もしくは、MTのXML-RPC等も対応してるみたいなので、そちらで対応されるのを待つ感じです。</del></p>
+<p><del datetime="2010-12-11T09:45:18+00:00">もし、リモート投稿にて、タグを付与できるAPIを知っている方がいましたら、コメントいただけると幸いです。</del></p>
+<p>後日、タグの付与についても分かりました。<br />
+<a href="https://fukata.org/2010/01/27/wordpress-xml-rpc-post-attach-tag/">[WordPress]XML-RPCでのリモート投稿時のタグの付与について</a></p>
+<p>現在、アクセスレポートとして、総ビジター数、総PV数、人気記事ランキングを生成しているのですが、ランキングの記事毎のPV数の集計が正常に出来ておりません。というのは、GData APIから集計した段階で、ページタイトルが設定されているものと、空の物が存在するみたいで、現在はページタイトルが空のものは集計対象から除外しています。その為、多少の誤差が生じていると思います。</p>
+<p>そもそも、ページタイトルが空のデータが正しいデータなのか、調べて補正の必要があれば処理に入れたいと思います。</p>
+<p>また、今回作成したプログラムは、自宅の仮想サーバにリリースしました。毎月1日の12時に先月のアクセスレポートと毎年1月1日の12時に前年のアクセスレポートを投稿するように設定していると思うので、早速来週辺りに自動実行されると思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2001/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

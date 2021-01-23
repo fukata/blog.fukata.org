@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ServersMan@VPS &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/serversmanvps/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ServersMan@VPS ProとEC2 micro instanceのベンチマークを比較</title>
+		<link>/archives/5180/</link>
+					<comments>/archives/5180/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 23 Jan 2011 13:45:21 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS EC2]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[ベンチマーク]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5180</guid>
+
+					<description><![CDATA[昨日、EC2からServersMan@VPSに出戻りしたので、早速、両サーバで当サイトのベンチマークを取ってみました。ベンチマークの計測には、ab &#8211; Apache HTTP server ... <a href="/archives/5180/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、<a href="https://fukata.org/2011/01/23/servers-man-vps-pro/">EC2からServersMan@VPSに出戻り</a>したので、早速、両サーバで当サイトのベンチマークを取ってみました。ベンチマークの計測には、<a href="https://httpd.apache.org/docs/2.0/programs/ab.html">ab &#8211; Apache HTTP server benchmarking tool</a>を使用しました。</p>
+<p>abの実行はそれぞれのサーバ上にて行っています。</p>
+<p>今回は、apache,mysql,phpに関して、サーバ固有のチューニングは行わず、EC2で利用していた設定をServersManの方に適用して計測しました。</p>
+<p>思ったよりServersManが頑張っていたので、とりあえずほっとしています。</p>
+<p><span id="more-5180"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>WordPressのコンテンツ状況に多少の違いはありましたが、これほど差が出るとは思いませんでした。</p>
+<p>Failed requestsに関して、EC2は382件あるのに対し、ServersManは0件でした。これは、処理能力の違いによりEC2の方では処理しきれなかったのかもしれません。</p>
+<p>また、Transfer rateに関しても5倍以上の差をつけて、ServersManの方が速い結果となりました。その他の計測値についてもServersManの方が大差で勝っており、サーバの安定性、サポートの質などを考慮しなければ、EC2 micro instanceよりは、ServersMan@VPS Proの方がコストパフォーマンスは高そうです。</p>
+<p>料金についても、ServersMan@VPS Proの方は、1980円に対し、EC2の方は$25程度かかっていたので、多少コストダウンしています。</p>
+<p>EC2、ServersManの両サービスで、割り当てられるインスタンス、プランによって大元のサーバスペック、インフラも違う可能性があるので、同様の結果になるかは不明です。CPUなどは共有なので、この辺は、運の要素もあるかもしれません。</p>
+<p>各、サーバでのabの結果は以下。</p>
+<h2>EC2 micro instance</h2>
+<pre lang="bash">
+$ ab -c10 -n1000 https://fukata.org/
+This is ApacheBench, Version 2.3 < $Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, https://www.zeustech.net/
+Licensed to The Apache Software Foundation, https://www.apache.org/
+
+Benchmarking fukata.org (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        Apache/2.2.16
+Server Hostname:        fukata.org
+Server Port:            80
+
+Document Path:          /
+Document Length:        101894 bytes
+
+Concurrency Level:      10
+Time taken for tests:   2285.760 seconds
+Complete requests:      1000
+Failed requests:        382
+   (Connect: 0, Receive: 0, Length: 382, Exceptions: 0)
+Write errors:           0
+Total transferred:      101632220 bytes
+HTML transferred:       101168220 bytes
+Requests per second:    0.44 [#/sec] (mean)
+Time per request:       22857.601 [ms] (mean)
+Time per request:       2285.760 [ms] (mean, across all concurrent requests)
+Transfer rate:          43.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   12 130.0      1    1535
+Processing:  1663 22823 31178.9   3880  137603
+Waiting:       77 3259 9076.9    423   65292
+Total:       1664 22835 31178.3   3881  137604
+
+Percentage of the requests served within a certain time (ms)
+  50%   3881
+  66%  16392
+  75%  34607
+  80%  58282
+  90%  67163
+  95%  100522
+  98%  111876
+  99%  112836
+ 100%  137604 (longest request)
+</pre>
+<h2>ServersMan@VPS Pro</h2>
+<pre lang="bash">
+$ ab -c10 -n1000 https://fukata.org/
+This is ApacheBench, Version 2.3 < $Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, https://www.zeustech.net/
+Licensed to The Apache Software Foundation, https://www.apache.org/
+
+Benchmarking fukata.org (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        Apache/2.2.14
+Server Hostname:        fukata.org
+Server Port:            80
+
+Document Path:          /
+Document Length:        85413 bytes
+
+Concurrency Level:      10
+Time taken for tests:   297.972 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      85867000 bytes
+HTML transferred:       85413000 bytes
+Requests per second:    3.36 [#/sec] (mean)
+Time per request:       2979.716 [ms] (mean)
+Time per request:       297.972 [ms] (mean, across all concurrent requests)
+Transfer rate:          281.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.8      0      24
+Processing:  1055 2972 1139.9   2768   12319
+Waiting:      149 1153 537.8   1090    8186
+Total:       1055 2973 1139.9   2768   12319
+
+Percentage of the requests served within a certain time (ms)
+  50%   2768
+  66%   3060
+  75%   3269
+  80%   3407
+  90%   4084
+  95%   5404
+  98%   6218
+  99%   6761
+ 100%  12319 (longest request)
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5180/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>EC2からServersMan@VPSに出戻り</title>
+		<link>/archives/5173/</link>
+					<comments>/archives/5173/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 23 Jan 2011 12:12:18 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5173</guid>
+
+					<description><![CDATA[現在、fukata.orgのドメインで利用しているサーバは、DTIから提供されているServersMan@VPS StandardとAmazonのEC2 micro instanceを利用していました ... <a href="/archives/5173/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、fukata.orgのドメインで利用しているサーバは、DTIから提供されているServersMan@VPS StandardとAmazonのEC2 micro instanceを利用していました。</p>
+<p>月額料金が大体3000円程度かかっており、EC2 micro instanceだけで25ドル程度毎月請求があり、安定性などを抜きにしてマシンパワー的に25ドルも価値を見出せず、ずっと割高感を感じており、どうせならUbuntu対応もしたServersMan@VPS Proにまとめた方がお得なんじゃないか思い、今回新たにProを申し込みました。</p>
+<p>前回は申し込んだ後に10分くらいでSSH接続できるようになったと思ったのですが、今回は10分以上経っても繋がらずSSHで繋げるようになったのはTwitterで<a href="https://twitter.com/serversman_vps">@serversman_vps</a>宛にDMを送った翌日に対応されたらしく繋がるようになりました。</p>
+<p>Ubuntuだと安心していたのですが、ServersManの方で設定を色々いじくられていました。</p>
+<p><span id="more-5173"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>rootユーザ</h2>
+<p>CentOSの頃は、開通時はrootユーザのみの提供だったのですが、通常Ubuntuだと直接rootユーザで操作するのではなく、sudoを使って一時的にroot権限を得て実行するというのが標準だと思いますが、Ubuntuの場合もrootユーザのみの提供でした。なので、以下のようにsudoで作業を行うユーザとsudoが実行できるように設定を追加しました。</p>
+<p>作業用ユーザの追加</p>
+<pre lang="bash">
+# adduser ubuntu
+ ... Password等の設定 ...
+# addgroup admin
+# usermod -G ubuntu,admin ubuntu
+</pre>
+<p>sudoコマンドを実行できるように設定</p>
+<pre lang="bash">
+# visudo
+</pre>
+<p>visudoの編集内容</p>
+<pre lang="bash">
+#includedir /etc/sudoers.d
+
++ %admin ALL=(ALL) ALL
+</pre>
+<h2>apache</h2>
+<p>Ubuntuを申し込むとシンプルセットという必要最低限のものしかインストールされていません。それでも、serversmanやapacheなど別に入れてもらわなくても良いものまで入っています。OSインストール後、SSHのみインストールしたものも提供してもらいたいです。</p>
+<p>で、本題のapacheについてですが、Ubuntuでは、環境変数に実行ユーザなどを設定し、apache2.confなどでは、その値を利用するようになっていますが、ServersManの方でインストールされていたapacheには実行ユーザ等が直書きされていました。また、デフォルトのwww-dataではなく、daemonユーザになっていました。</p>
+<p>普段、ローカルで利用しているUbuntuと設定が異なると後々面倒な事になると思ったので、ローカルにあるUbuntuサーバから設定ファイルのみをコピーすることにしました。手元にUbuntuサーバが無い人は、aptで設定ファイルごとpurgeして再度インストールする方法でも良いかもしれません。</p>
+<h2>cpuリソース割り当て</h2>
+<p>/proc/cpuinfoを見てみると、Standardの頃は2つだったCPUが4つに増えていました。また、メモリも1GB->2GB（保証は1GB）に増えているので、ブログ以外のメールサーバ等を一緒に動かしても、今のところは大丈夫なんじゃないかと思います。ベンチマークの結果等については、後日書きたいと思います。</p>
+<h2>まとめ</h2>
+<p>やっぱり、普段使い慣れたUbuntuだと比較的サーバ設定が楽でした。apt最高。</p>
+<p>ただ、上記のapacheの件もあり、他にどの程度、デフォルトの設定と異なる部分が存在するのか調べていないので分かりませんが、環境を通常のUbuntuサーバの設定にリセットするシェルなどがあると助かる人が多いんじゃないかと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5173/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[ServersMan]Apache起動時のapr_sockaddr_info_get() failedの対処法</title>
+		<link>/archives/4757/</link>
+					<comments>/archives/4757/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 21 Sep 2010 17:23:18 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4757</guid>
+
+					<description><![CDATA[Ubuntuの方でphpのアップデートの通知が来ていたので、ServersManの方でもyumのupdateを試みると200個以上のアップデートが・・・^^; 気づくとサーバ構築して一度もyumの更新 ... <a href="/archives/4757/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Ubuntuの方でphpのアップデートの通知が来ていたので、ServersManの方でもyumのupdateを試みると200個以上のアップデートが・・・^^;</p>
+<p>気づくとサーバ構築して一度もyumの更新を行っていませんでした。</p>
+<p>更新後、mysqlやapacheの諸々を再起動してみたところ、apacheの起動時に下記のような<strong>apr_sockaddr_info_get() failed</strong>というのが表示されていました。</p>
+<p>例：）</p>
+<pre lang="SHELL">
+[root@dti-vps-srv1 ~]# /etc/init.d/httpd restart
+Stopping httpd:                                            [  OK  ]
+Starting httpd: httpd: apr_sockaddr_info_get() failed for dti-vps-srv1
+httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1 for ServerName
+</pre>
+<p>どうやら、127.0.0.1に対するdti-vps-srv1というホスト名が見当たらないということらしいので、/etc/hostsに下記のように追記する。</p>
+<pre lang="SHELL">
+127.0.0.1 localhost.localdomain localhost dti-vps-srv1
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4757/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ServersManのメモリが2倍になってた</title>
+		<link>/archives/4687/</link>
+					<comments>/archives/4687/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 02 Sep 2010 02:05:00 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4687</guid>
+
+					<description><![CDATA[昨日、ServersManを運営するDTIから会員向けに機能拡張を行ったというメールが届いていました。 今回行った機能拡張は3点。 利用可能な最大メモリが2倍に！！！ IPv6の逆引き設定もOK in ... <a href="/archives/4687/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、ServersManを運営するDTIから会員向けに機能拡張を行ったというメールが届いていました。<br />
+今回行った機能拡張は3点。</p>
+<ul>
+<li>利用可能な最大メモリが2倍に！！！</li>
+<li>IPv6の逆引き設定もOK</li>
+<li>inodeの上限設定、約3倍！</li>
+</ul>
+<p>個人的に一番嬉しいのは何といってもメモリ容量の増量で、さっそく自分のStandardプランのサーバでも増えているか確認してみました。</p>
+<pre lang="BASH">
+$ free
+             total       used       free     shared    buffers     cached
+Mem:       1048576     340940     707636          0          0          0
+-/+ buffers/cache:     340940     707636
+Swap:            0          0          0
+</pre>
+<p>きちんと1GBになっていますね。ただ、今回増量した分のメモリは保証外ということらしく、サーバの負荷によっては変動するとのことです。</p>
+<p>以下、引用になりますが、メール内容を転載します。</p>
+<blockquote><p>
+====================================================================<br />
+■　メモリ不足解消します！！！<br />
+====================================================================</p>
+<p>ご利用中のお客様から頂いていたご要望の中でも多かった、メモリ不足<br />
+を解消するために、利用可能な最大メモリを2倍に引上げました。</p>
+<p>これまでEntryプラン256MB、Standardプラン512MB、Proプラン1GBでご提供<br />
+していたメモリを、料金はこれまでと変わることなくEntryプラン512MB、<br />
+Standardプラン1GB、Proプラン2GBまでご利用いただくことができます！</p>
+<p> Entryプラン　 256MB⇒　最大　512MB<br />
+Standardプラン  512MB⇒　最大　　1GB<br />
+Proプラン　　   1GB⇒　最大　　2GB</p>
+<p>※保証メモリは従来通りですが、システムの空きに応じてご契約量の倍<br />
+までご利用いただけます。</p>
+<p>====================================================================<br />
+■　IPv6の「逆引き設定」にも対応！！<br />
+====================================================================</p>
+<p>8月10日にAレコード、AAAAレコード、IPv4のPTRレコード編集機能を追加い<br />
+たしまして、サービス開始時には想像を超える反響をいただきました！</p>
+<p>そして本日より、<br />
+『PTRレコードの設定でIPv6の逆引きも可能になりました。』</p>
+<p>IPv4の枯渇問題や、今後加速するIPv6への移行について、いち早く取り組<br />
+んでいたフリービットグループとして、スムーズな移行を支援するための<br />
+ための検証環境として機能についても整備が進めております！</p>
+<p>====================================================================<br />
+■　有言実行！！inodeの上限設定を引き上げました！<br />
+====================================================================</p>
+<p>前回、DTIから出しているプレスリリースをご覧になった方はご存知かもし<br />
+れませんが、予告しておりましたinodeの上限引き上げ、実装です！　</p>
+<p>inodeの上限設定を今までの3倍に！</p>
+<p>Maildir 形式を採用されている方々などファイルを多くご利用される方は、<br />
+ストレージを有効にご活用いただけます！</p>
+<p>Entryプラン　　　 200,000⇒　 600,000<br />
+Standardプラン　　600,000⇒ 1,800,000<br />
+Proプラン　　　 1,000,000⇒ 3,000,000
+</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4687/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ServersMan@VPSにpywebsocketをインストールしてみた</title>
+		<link>/archives/4438/</link>
+					<comments>/archives/4438/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 27 May 2010 15:36:49 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Manual]]></category>
+		<category><![CDATA[pywebsocket]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[websocket]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4438</guid>
+
+					<description><![CDATA[HTML5に加わるwebsoketを使用すると今まで以上にリアルタイム性の高いアプリケーションを作成することができる為個人的に非常に注目しています。 メインで使用しているブラウザのChromeには既に ... <a href="/archives/4438/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>HTML5に加わる<a href="https://www.html5.jp/trans/w3c_websockets.html">websoket</a>を使用すると今まで以上にリアルタイム性の高いアプリケーションを作成することができる為個人的に非常に注目しています。</p>
+<p>メインで使用しているブラウザのChromeには既にWebsocketが実装されており、使用することが可能だということで、簡易的なチャットでも作ってみようかと思い、色々調べていました。</p>
+<p><a href="https://labs.mapion.co.jp/blog/java/jetty7websocket.php">Jetty7でWebSocket開発：マピオンラボ(Java)</a></p>
+<p>サーバ側の実装についてまとめられています。今回私が選択したのは、<a href="https://code.google.com/p/pywebsocket/">pywebsocket</a>というものです。これは、apacheのモジュールとして提供されwsプロトコルの場合はwebsocketハンドラに処理を流すというものです。スタンドアロンで使用することもできるらしいのですが、今回はapacheのモジュールとして使用します。pywebsocketという名前からwebsocketハンドラはプログラム言語Pythonで実装する必要があります。</p>
+<p>インストールした環境は、ServersMan@VPSでOSはCentOs 5.4です。それでは、早速手順の方を書いていきたいと思います。</p>
+<p>手順は以下から<br />
+<span id="more-4438"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>概要</h2>
+<p>ServersMan@VPS上にapacheのwebsocket</p>
+<h2>前提条件</h2>
+<ul>
+<li>環境はServersMan@VPSのEntryプランのものを使用する。</li>
+<li>yumにてhttpdをインストール済みとする。</li>
+<li>下記の手順はユーザ「root」にて行うこと。</li>
+<li>ダウンロードなどの作業ディレクトリは「/root/tmp」とする。</li>
+</ul>
+<h2>作業手順</h2>
+<h3>python-develのインストール</h3>
+<p>mod_pythonをコンパイルする際にPythonのソースが必要な為インストールする。</p>
+<p><strong>ダウンロード、インストール</strong></p>
+<blockquote><p>
+# wget ftp://mirror.switch.ch/pool/3/mirror/centos/5.5/os/x86_64/CentOS/python-devel-2.4.3-27.el5.i386.rpm<br />
+# rpm -ivh python-devel-2.4.3-27.el5.i386.rpm
+</p></blockquote>
+<p>上記のダウンロードURLの接続が悪い場合などは、下記のサイトから他のミラーサイトのURLを使用する。<br />
+RPM Search CentOS 5 python-devel-2.4.3-27.el5.i386.rpm</p>
+<h3>mod_pythonのインストール</h3>
+<p><a href="https://code.google.com/p/pywebsocket/issues/detail?id=42">Issue 42 &#8211; pywebsocket &#8211; Python2.4 Support (CentOS/RHEL) &#8211; Project Hosting on Google Code</a></p>
+<p>mod_python自体はyumでもインストールすることは可能だが、バージョンが3.2.xであり、pywebsocketはmod_pythonの3.3より低いバージョンはサポートしていない為ソースからコンパイルする。</p>
+<p><strong>ダウンロード、インストール</strong></p>
+<blockquote><p>
+# wget https://ftp.kddilabs.jp/infosystems/apache/httpd/modpython/mod_python-3.3.1.tgz<br />
+# tar zxf mod_python-3.3.1.tgz<br />
+# cd mod_python-3.3.1<br />
+# ./configure &#8211;with-apxs=/usr/sbin/apxs &#8211;with-python=/usr/bin/python<br />
+# make<br />
+# make install
+</p></blockquote>
+<p><strong>python.confの作成</strong><br />
+ファイルパス：/etc/httpd/conf.d/python.conf<br />
+ファイル内容</p>
+<blockquote><p>
+LoadModule python_module modules/mod_python.so<br />
+AddHandler mod_python .py
+</p></blockquote>
+<h3>pywebsocketのインストール</h3>
+<p>svnのtrunkを使用しても良いが、安定している可能性が高いバージョンが区切られたものを今回は使用する。今回使用したwebsocketの<a href="https://code.google.com/p/pywebsocket/">本家サイト</a>をチェックし、バージョン0.5よりも新しいものがリリースされている場合は、できる限りそちらを使った方が良い。ただし、正常にインストールできるかは保証しない。</p>
+<p><strong>ダウンロード、インストール</strong></p>
+<blockquote><p>
+# wget https://pywebsocket.googlecode.com/files/mod_pywebsocket-0.5.tar.gz<br />
+# tar zxf mod_pywebsocket-0.5.tar.gz<br />
+# cd pywebsocket-0.5/src<br />
+# python setup.py build<br />
+# python setup.py install
+</p></blockquote>
+<blockquote><p>
+# python setup.py install
+</p></blockquote>
+<p>を実行した際にインストールされたディレクトリが出力されるのでメモを取る。今回は下記のディレクトリ。</p>
+<blockquote><p>
+/usr/lib/python2.4/site-packages/
+</p></blockquote>
+<p><strong>python_mod_pywebsocket.confの作成</strong><br />
+ファイルパス：/etc/httpd/conf.d/python_mod_pywebsocket.conf<br />
+ファイル内容</p>
+<blockquote><p>
+&lt;IfModule python_module&gt;<br />
+  PythonPath &#8220;sys.path+[&#8216;/usr/lib/python2.4/site-packages/&#8217;]&#8221;<br />
+  PythonOption mod_pywebsocket.handler_root /var/www/html/wsh<br />
+  PythonHeaderParserHandler mod_pywebsocket.headerparserhandler<br />
+&lt;/IfModule&gt;
+</p></blockquote>
+<p>設定値の説明は下記の通り。</p>
+<blockquote><p>PythonPath &#8220;sys.path+[&#8216;/usr/lib/python2.4/site-packages/&#8217;]&#8221;</p></blockquote>
+<p>pywebsocketがインストールされているディレクトリパス。</p>
+<blockquote><p>PythonOption mod_pywebsocket.handler_root /var/www/html/wsh</p></blockquote>
+<p>websocketハンドラを格納されているディレクトリ</p>
+<h3>pywebsocketの反映</h3>
+<p>インストールしたpywebsocketを反映させる為にapacheを再起動する。</p>
+<blockquote><p>
+# /etc/init.d/httpd restart
+</p></blockquote>
+<h3>サンプルの配置・動作確認</h3>
+<p>上記でダウンロードしたpywebsocketにはサンプルが含まれているので、それが正常に動作するか動作確認を行う。</p>
+<p><strong>サンプルの配置</strong></p>
+<blockquote><p>
+# cd pywebsocket-0.5/src/example<br />
+# cp echo_wsh.py /var/www/html/wsh/
+</p></blockquote>
+<p><strong>動作確認</strong></p>
+<blockquote><p>
+# python echo_client.py -s localhost -r /echo<br />
+Send: Hello<br />
+Recv: Hello<br />
+Send: 日本<br />
+Recv: 日本<br />
+Closing handshake<br />
+# python echo_client.py -s localhost -r /echo -m &#8216;hoge&#8217;,&#8217;foo&#8217;<br />
+Send: hoge<br />
+Recv: hoge<br />
+Send: foo<br />
+Recv: foo<br />
+Closing handshake
+</p></blockquote>
+<h2>補足</h2>
+<h3>websocketハンドラファイルの命名規則</h3>
+<blockquote><p>PythonOption mod_pywebsocket.handler_root /var/www/html/wsh</p></blockquote>
+<p>上記で設定したmod_pywebsocket.handler_rootから下記のような命名規則でハンドラが実行されます。</p>
+<blockquote><p>
+[{ディレクトリパス}]{リソース名}_wsh.py
+</p></blockquote>
+<p><strong>サンプル</strong><br />
+アクセスURI：ws://localhost:80/echo<br />
+実行されるハンドラパス：/var/www/html/wsh/echo_wsh.py</p>
+<p>アクセスURI：ws://localhost:80/chat/echo<br />
+実行されるハンドラパス：/var/www/html/wsh/chat/echo_wsh.py</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4438/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ServersMan@VPSのプランをEntryからStandardに変更</title>
+		<link>/archives/4351/</link>
+					<comments>/archives/4351/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 21 May 2010 12:14:58 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Flash]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Google TV]]></category>
+		<category><![CDATA[Google Wave]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[V8]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4351</guid>
+
+					<description><![CDATA[昨日の夜にEntry->Standardへプラン変更の申請を行いました。変更後のVPSが提供されるのは1ヶ月以内ということなので、提供される頃には無料期間（2010年6月30日まで）は残り僅かになって ... <a href="/archives/4351/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の夜にEntry->Standardへプラン変更の申請を行いました。変更後のVPSが提供されるのは1ヶ月以内ということなので、提供される頃には無料期間（2010年6月30日まで）は残り僅かになっています。現状としてメモリが常に枯渇状態になっているので、安定性を増させるためには良いと思います。とりあえず、これで少し様子を見ます。</p>
+<p>以下、最近気になった出来事。</p>
+<p><a href="https://googlewave.blogspot.com/2010/05/google-wave-available-for-everyone.html">Google Wave Available for Everyone &#8211; Google Wave Blog</a></p>
+<p>Googleが提供する超リアルタイムディスカッションツールであるGoogle Waveがついに一般公開されました。私は招待制の頃に使ったことがあるのですが、まだ、Chromeでしか利用したことがありませんがレスポンスがだいぶ良くなっています。以前は入力や画面スクロールにイライラしていましたが、今回はそれが解消されています。他人が現在入力している文字はもちろん、漢字変換などもリアルタイムに表示されるので、本当に話しているかのような感覚になります。また、APIなんかも公開されているので、これからさらに盛り上がっていきそうな感じです。</p>
+<p><a href="https://www.atmarkit.co.jp/news/201005/20/vp8.html">グーグルがVP8をOSS化、HTML5のvideo問題が決着か － ＠IT</a></p>
+<p>さすが、Google！<br />
+他にも、Google TVやらiTunesキラーとますます目の離せないGoogleに注目です。</p>
+<p><a href="https://journal.mycom.co.jp/articles/2010/05/20/jonathan_gay/index.html">【レポート】Flashの父、「iPhoneは今後数年でFlashをサポートすることになる」 (1) Flashの歴史 | パソコン | マイコミジャーナル</a></p>
+<p>個人的には、AppleのFlash排除に勢い付けてHTML5の普及し、Flash勢力は弱くなっていくと思うんですけどね・・・。Androidも現在はFlashをサポートしていますけど、それは現在のシェアが高いためでしょうし。Google自体がHTML5の普及に力を入れてることも考えると時代はFlash->HTML5になるんでしょうかね。</p>
+<p>私個人としては、クローズドなFlashよりもオープンなHTML5側の人間です。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4351/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ServersMan@VPSでの無料期間中のプラン変更</title>
+		<link>/archives/4330/</link>
+					<comments>/archives/4330/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 20 May 2010 10:37:00 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4330</guid>
+
+					<description><![CDATA[以前の記事でServersManではなく、ServerManと記述していました。すいません。 現在サーバ上で主にApache(WordPress, Munin)、MySQL、Postfix、Dovec ... <a href="/archives/4330/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前の記事でServersManではなく、ServerManと記述していました。すいません。</p>
+<p>現在サーバ上で主にApache(WordPress, Munin)、MySQL、Postfix、Dovecot、Munin-Nodeを動かしているのですが、メモリが10MB以下になることが多く、さらに、Munin-Nodeのcron設定をしているプロセスから頻繁にOut of Memoryが発生してプロセスが落ちていたのでプラン変更でもしてメモリを増やそうかと思いました。</p>
+<p>そこでふと気になった事があり、無料期間中にプラン変更を行っても無料期間も引き継がれるのだろうか。それともう一つ、Entryプラン->Standardプランに変更した場合、サーバ管理ツールが勝手にインストールされることはないだろうか。というものでした。気になったので早速メールにて問い合わせてみました。</p>
+<p>すると下記のような返信が着ました。</p>
+<blockquote><p>
+【キャンペーンについて】<br />
+<br />
+お客様の場合、無料対象期間が2010年6月30日までとなっております。<br />
+2010年6月までにプラン変更された場合には、最大3カ月無料は引き継がれ<br />
+ます。<br />
+<br />
+●キャンペーン<br />
+<a href="https://dream.jp/vps/faq_01.html#a_15">https://dream.jp/vps/faq_01.html#a_15</a><br />
+<br />
+【アプリケーションについて】<br />
+<br />
+セットパッケージ（ディスクセットなど）につきましては、ご変更いた<br />
+だくことができかねますため、「ServersMan@VPS Entryプラン」のセット<br />
+パッケージを引き継ぐことになります。<br />
+<br />
+サーバ管理ツール「BlueOnyx」はプラン変更によって自動的にはインス<br />
+トールされません。<br />
+<br />
+Standardプランへのセットパッケージ「エンジニアセット」への変更が<br />
+必要となります。<br />
+<br />
+現在はセットパッケージの変更を行うことができませんが、<br />
+5月末から6月初旬をめどにセットパッケージの変更が可能となる<br />
+予定でございます。<br />
+<br />
+下位プランから上位プランへのプラン変更のみの場合、セットパッケージ<br />
+およびデータやアプリケーションのインストール状態はそのまま維持されます。<br />
+<br />
+しかしセットパッケージの変更を行う場合には、サーバの初期化が必要となる<br />
+ため、アプリケーションのインストール状態やサーバ上のデータは維持する<br />
+ことができません。何卒、ご了承ください。<br />
+<br />
+以下のページにて、ServersMan@VPSについてご案内させていただいて<br />
+おりますので、ご参照くださいますようお願いいたします。<br />
+<br />
+●ServersMan@VPS　FAQ<br />
+<a href="https://dream.jp/vps/faq.html">https://dream.jp/vps/faq.html</a>
+</p></blockquote>
+<p>とりあえず、現状を維持したままIPアドレスなど最小限の変更でプラン変更が出来ることが分かったので早速プラン変更を行おうかと思い、MyDTIにアクセスしてStandardプランを選択したのですが、次の画面にこんな表示が。</p>
+<p><span style="color:red;">ご好評につき、<strong>1ヶ月以内のご提供予定</strong>となります。</span></p>
+<p>で、さらに気になりました。この場合、プラン変更後VPS提供までの1ヶ月以内は現在のVPSは使用不可状態になるのか、それとも、プラン変更後VPSの提供と同じくらいに現在のVPSが使用不可になるのかということです。</p>
+<p>これによって、当サイトがどれくらい停止するのかが変わってきます。前者であれば、1ヶ月以内当サイトは閲覧不可状態になります。それは非常にまずいので、またメールにて問い合わせてみました。</p>
+<p>問合せ結果はこんな感じです。</p>
+<blockquote><p>
+下位プランから上位プランへプラン変更いただく場合、上位プランの<br />
+ご契約開始日までは下位プランにてご利用いただけます。<br />
+<br />
+現在ご好評いただいておりますため、上位プランへのプラン変更をお申<br />
+し込み後、上位プランでのご利用開始までにお時間を頂戴いたしており<br />
+ます。<br />
+<br />
+プラン変更をお申し込み後、ご利用可能となりましたら、個別にご案内<br />
+させていただきます。何卒、ご了承ください。
+</p></blockquote>
+<p>プラン変更後のVPSが利用開始になるまでは現在使用しているVPSが利用可能らしいので、早速申し込んでみたいと思います。ただ、プラン変更後のVPSが利用開始になるのは、無料期間が終了間際の6月下旬です。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4330/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[WordPress]ServerMan@VPSでの高速化のためのチューニング</title>
+		<link>/archives/4301/</link>
+					<comments>/archives/4301/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 17 May 2010 19:02:32 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[LAMP]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<category><![CDATA[チューニング]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4301</guid>
+
+					<description><![CDATA[ServerMan@VPSに移行したということもあり、自由にサーバの設定をいじれるようになったので、高速化のためのチューニングを色々試してみました。現在のところどれくらい速くなったかというと、先日のh ... <a href="/archives/4301/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ServerMan@VPSに移行したということもあり、自由にサーバの設定をいじれるようになったので、高速化のためのチューニングを色々試してみました。現在のところどれくらい速くなったかというと、先日の<a href="https://fukata.org/2010/05/16/switch-from-heteml-to-serverman/">hetemlからServerMan@VPSに移行完了</a>で当サイトのトップページの表示速度が0.3s程度まで縮小されたと記述しました。気づけばhetemlの時より半分以下になっていますね。今回のチューニング後は0.23s程度まで短縮されました。なんとか、0.1s台までチューニングしたいところです。</p>
+<p>また、今回チューニングを行ったのはWordPress自身ではなく、WordPressを実行するサーバ側です。行ったのは下記のチューニングです。</p>
+<ul>
+<li>PHPアクセラレータの導入</li>
+<li>MySQLのクエリキャッシュの導入</li>
+<li>Apacheの圧縮転送の導入</li>
+</ul>
+<h2>PHPアクセラレータの導入</h2>
+<p>PHPはインタープリタ言語と言われる、実行時に動的にコンパイルする言語です。そのため、実行毎にコンパイルするのではなく、コンパイル結果をキャッシュする為の役目をPHPアクセラレータが担ってくれます。</p>
+<p>代表的なPHPアクセラレータにはGIGAZINEの下記の記事が詳しいです。</p>
+<p><a href="https://gigazine.net/index.php?/news/comments/20061103_php_accelerator/">PHPアクセラレータで一番高速なのはどれか？ &#8211; GIGAZINE</a></p>
+<p>今回ServerMan@VPSに導入したのは、APCというPHPアクセラレータです。インストールに関しては下記を参考にしました。</p>
+<p><a href="https://2bits.com/articles/installing-php-apc-gnulinux-centos-5.html">Installing PHP APC on GNU/Linux Centos 5 | 2bits.com, Inc. &#8211; Drupal Development, Customization and Consulting</a></p>
+<h2>Apacheの圧縮転送の導入</h2>
+<p>次に行ったのがApacheが配信するデータを圧縮するというもので、Apache1.3まではmod_gzipモジュールが、Apache2.0からはmod_deflateモジュールというのを使用して行います。<br />
+今回使用しているApacheは2.x系なので、mod_deflateを使います。</p>
+<p>導入に関してはCentOSでyumでhttpd-develをインストールすると初期状態でmod_deflateが有効になっているので今回は割愛します。設定方法に関しては下記が参考になります。</p>
+<p><a href="https://www.sssg.org/blogs/naoya/archives/827">mod_deflate を試してみた</a></p>
+<p>ちなみに、mod_cacheとmod_deflateを併用して描画時間が短縮されるか確かめてみたのですが、同程度だった為、単体でより短縮されるmod_deflateを利用しました。ただ、mod_deflateは毎回配信するデータを圧縮するのでCPUに負荷がかかります。回線の使用帯域とCPUリソースを天秤にかけてmod_cacheもしくは、mod_deflateどちらかを使用するか決めると良いかと思います。</p>
+<h2>MySQLのクエリキャッシュの導入</h2>
+<p><a href="https://dev.mysql.com/doc/refman/5.1/ja/query-cache.html">MySQL :: MySQL 5.1 リファレンスマニュアル :: 4.13 MySQL クエリ キャッシュ</a></p>
+<p>最後に行ったのがMySQLで発行されるSQLクエリをキャッシュするというもの。設定方法に関しては下記が参考になります。</p>
+<p>クエリ結果のキャッシュ｜MySQL｜プログラムメモ</p>
+<p>大きな設定に関しては上記の通りです。サーバ監視アプリの<a href="https://munin-monitoring.org/">Munin</a>をサーバにインストールしたので、これから定期的に計測して細かいチューニングを行います。また、改善されるようなチューニングが見つかった時には書きたいと思います。</p>
+<p>今回のチューニングはあくまでもServerMan@VPSの限られたリソース内でのチューニングなので、サーバスペックが変わればチューニング方法も変わる可能性がありますので、各自のサーバスペックと相談の上チューニングを行ってください。また、今回はサーバ側の設定のみでWordPressには依存しないものなので、基本的なLAMP環境のチューニングとしても利用可能です。</p>
+<p>最後に下記は上記のチューニング項目の現在の設定値になります。</p>
+<h3>PHPアクセラレータ(APC)</h3>
+<blockquote><p>
+APC Support	enabled<br />
+Version	3.0.19<br />
+MMAP Support	Enabled<br />
+MMAP File Mask	no value<br />
+Locking type	pthread mutex Locks<br />
+Revision	$Revision: 3.154.2.5 $<br />
+Build Date	May 13 2010 14:20:28</p>
+<p>Directive	Local Value	Master Value<br />
+apc.cache_by_default	On	On<br />
+apc.coredump_unmap	Off	Off<br />
+apc.enable_cli	Off	Off<br />
+apc.enabled	On	On<br />
+apc.file_update_protection	2	2<br />
+apc.filters	no value	no value<br />
+apc.gc_ttl	3600	3600<br />
+apc.include_once_override	Off	Off<br />
+apc.max_file_size	1M	1M<br />
+apc.mmap_file_mask	no value	no value<br />
+apc.num_files_hint	1000	1000<br />
+apc.report_autofilter	Off	Off<br />
+apc.shm_segments	1	1<br />
+apc.shm_size	30	30<br />
+apc.slam_defense	0	0<br />
+apc.stat	On	On<br />
+apc.stat_ctime	Off	Off<br />
+apc.ttl	0	0<br />
+apc.user_entries_hint	4096	4096<br />
+apc.user_ttl	0	0<br />
+apc.write_lock	On	On
+</p></blockquote>
+<h3>MySQLクエリキャッシュ</h3>
+<blockquote><p>
+| have_query_cache                | YES                                                        |<br />
+| query_cache_limit               | 1048576                                                    |<br />
+| query_cache_min_res_unit        | 4096                                                       |<br />
+| query_cache_size                | 33554432                                                   |<br />
+| query_cache_type                | ON                                                         |<br />
+| query_cache_wlock_invalidate    | OFF                                                        |
+</p></blockquote>
+<h3>mod_deflate</h3>
+<blockquote><p>
+SetOutputFilter DEFLATE<br />
+BrowserMatch ^Mozilla/4 gzip-only-text/html<br />
+BrowserMatch ^Mozilla/4\.0[678] no-gzip<br />
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html<br />
+SetEnvIfNoCase Request_URI \<br />
+\.(?:gif|jpe?g|png)$ no-gzip dont-vary<br />
+Header append Vary User-Agent env=!dont-vary
+</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4301/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>hetemlとServerMan@VPSでベンチマークを比較</title>
+		<link>/archives/4218/</link>
+					<comments>/archives/4218/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 13 May 2010 20:03:07 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[heteml]]></category>
+		<category><![CDATA[PHPspeed]]></category>
+		<category><![CDATA[ServersMan@VPS]]></category>
+		<category><![CDATA[ベンチマーク]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4218</guid>
+
+					<description><![CDATA[最近、色々プラグインなどを詰め込み過ぎているのか、このブログのレスポンスが悪いので移行先のサーバを探していたのですが、先日無料申込を行った激安VPSことServerMan@VPSを思い出し、実際どの程 ... <a href="/archives/4218/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、色々プラグインなどを詰め込み過ぎているのか、このブログのレスポンスが悪いので移行先のサーバを探していたのですが、先日無料申込を行った激安VPSこと<a href="https://dream.jp/vps/">ServerMan@VPS</a>を思い出し、実際どの程度のレスポンスなのか気になったので、現在このサイトが稼働しているhetemlとでApache,PHP,MySQLのベンチマークテストを行ってみました。</p>
+<p>両者の月額料金から言っておきます。ServerManは最低ランクのEntryプランだと<strong>490円(3ヶ月無料)</strong>。一方hetemlは1500円(15日間無料)です。</p>
+<p>今回、Apache,PHP,MySQLのベンチマークテストに使ったソフトウェアは、<a href="https://www.phpspeed.com/">PHPspeed</a>というものです。WEBアプリ上でApache,PHP,MySQLのベンチマークテストを行えるということで、今回の要件にぴったりなソフトウェアです。</p>
+<p>ベンチマークテストの比較の前にまずはサーバの基本スペックから紹介していきたいと思います。</p>
+<h4>System Info</h4>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475556561/"><img loading="lazy" src="https://farm6.static.flickr.com/5220/5475556561_2068efd1fc_m.jpg" alt="" title="heteml-System-Info" width="191" height="300" class="aligncenter size-medium wp-image-4242" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475550433/"><img loading="lazy" src="https://farm6.static.flickr.com/5296/5475550433_53befc03d0_m.jpg" alt="" title="serverman-System-Info" width="300" height="282" class="aligncenter size-medium wp-image-4243" /></a></td>
+</tr>
+</table>
+<h4>PHP Info</h4>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476147480/"><img loading="lazy" src="https://farm6.static.flickr.com/5100/5476147480_eee17ca27e_m.jpg" alt="" title="heteml-PHP-Info" width="45" height="300" class="aligncenter size-medium wp-image-4245" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476145632/"><img loading="lazy" src="https://farm6.static.flickr.com/5257/5476145632_6c165238fd_m.jpg" alt="" title="serverman-PHP-Info" width="40" height="300" class="aligncenter size-medium wp-image-4246" /></a></td>
+</tr>
+</table>
+<h4>MySQL Info</h4>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476146108/"><img loading="lazy" src="https://farm6.static.flickr.com/5255/5476146108_2159e126d6_m.jpg" alt="" title="heteml-MySQL-Info" width="107" height="300" class="aligncenter size-medium wp-image-4247" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476148592/"><img loading="lazy" src="https://farm6.static.flickr.com/5298/5476148592_291c0d6ab8_m.jpg" alt="" title="serverman-MySQL-Info" width="104" height="300" class="aligncenter size-medium wp-image-4248" /></a></td>
+</tr>
+</table>
+<p>hetemlは共用サーバなので、自分の利用可能領域にどれだけのリソース（CPU,記憶容量,メモリ）が割り当てられているか分からないのに対して、ServerMan@VPSの方はそれらが割り当てられているのがしっかりと分かると思います。また、ServerMan@VPSの方は、Apache,PHP,MySQLとyumでインストールしただけの状態となっています。</p>
+<p>それでは、実際にベンチマークの比較をしていきたいと思います。</p>
+<h3>ベンチマーク比較</h3>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476146220/"><img loading="lazy" src="https://farm6.static.flickr.com/5251/5476146220_3ed5045a77_m.jpg" alt="" title="heteml-phpspeed" width="300" height="169" class="aligncenter size-medium wp-image-4249" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476150674/"><img loading="lazy" src="https://farm6.static.flickr.com/5216/5476150674_f09f206c2b_m.jpg" alt="" title="serverman-phpspeed" width="300" height="169" class="aligncenter size-medium wp-image-4250" /></a></td>
+</tr>
+</table>
+<table>
+<tr>
+<th style="text-align:center;">Tests</th>
+<th style="text-align:center;">heteml<br />(Best Score/Avg Score)</th>
+<th style="text-align:center;">ServerMan@VPS<br />(Best Score/Avg Score)</th>
+</tr>
+<tr>
+<th>Synthetic PHP BenchMark</th>
+<td style="text-align:center;">3,225/3168</td>
+<td style="text-align:center;">1,509/1,495</td>
+</tr>
+<tr>
+<th>Synthetic MySQL BenchMark</th>
+<td style="text-align:center;">183/157</td>
+<td style="text-align:center;">1,238/1,231</td>
+</tr>
+<tr>
+<th>Synthetic Read/Write BenchMark</th>
+<td style="text-align:center;">2,109/2,054</td>
+<td style="text-align:center;">999/993</td>
+</tr>
+<tr>
+<th>Real World PHP BenchMark</th>
+<td style="text-align:center;">1,874/1,780</td>
+<td style="text-align:center;">2,326/2,293</td>
+</tr>
+<tr>
+<th>Real World PHP &#038; MySQL BenchMark</th>
+<td style="text-align:center;">2,466/2,361</td>
+<td style="text-align:center;">923/918</td>
+</tr>
+<tr>
+<th>Server Benchmark</th>
+<td style="text-align:center;">532/440</td>
+<td style="text-align:center;">1,132/1,128</td>
+</tr>
+</table>
+<p>パッと見MySQLのベンチマークの値に大きな開きが見えますね。hetemlはWEBサーバとDBサーバが別々になっているのも原因にあるのかもしれません。PHPの実行速度、書込・読込に関してはhetemlの方が勝っているようです。hetemlは共用サーバなのでタイミングによってはCPUリソースの多くを使えるのかもしれません。各テストの内容については下記にまとめました。</p>
+<p>それで、これらの値が実際のWEBアプリのレスポンスとどの程度関係してくるのか、次に、WordPressの表示時間について見ていきます。</p>
+<h4>各テスト内容</h4>
+<table>
+<tr>
+<th style="text-align:center;">Tests</th>
+<th style="text-align:center;">内容</th>
+</tr>
+<tr>
+<th>Synthetic PHP BenchMark</th>
+<td>This set of benchmarks is designed to test various functions within PHP. The tests are synthetic in nature and will test the speed of your PHP install, but not necessarily the &#8216;real world&#8217; performance of your site. Using this test before and after tweaks to the php.ini file and your apache http.conf file will help you determine if your tweaks have enhanced your php performance. You should never rely soley on synthetic tests; you also need to use the page loading test to determine if visitors to your website will see a benefit from your tweaks.</td>
+</tr>
+<tr>
+<th>Synthetic MySQL BenchMark</th>
+<td>This set of benchmarks is designed to test how quickly mysql is reading and writing to your database. The tests are synthetic in nature and will test the speed of your mysql install, but not necessarily the &#8216;real world&#8217; performance of your site. Using this test before and after tweaks to the mysql my.cnf file will help you determine if your tweaks have enhanced your database performance. You should never rely soley on sythetic tests; you also need to use our page loading test to determine if visitors to your website will see a benefit from your tweaks.</td>
+</tr>
+<tr>
+<th>Synthetic Read/Write BenchMark</th>
+<td>This tests measures how fast your server reads and writes to files on the hard drive. This test is a good indicator of the effectiveness of hardware tweaks. This test is also affected by the speed of your CPU, and the amount of memory you have. </td>
+</tr>
+<tr>
+<th>Real World PHP BenchMark</th>
+<td>This benchmark measures the time to load 4 PHP pages of various sizes. There are no database pulls in this benchmark, this test will measure the real world time for someone to load a PHP page on your server. Real World tests are one of the most important ways to measure your server performance as they indicate how long someone has to wait for your server to serve them a page. The test pages vary in detail to simulate a real environment. If you have a cacheing system in place on your site, you will see large fluctuations from the first test to the following tests due to cacheing after the first page load. Depending on your purpose for running this benchmark, you might run tests with cacheing off to see the benefit of some tweaks.</td>
+</tr>
+<tr>
+<th>Real World PHP &#038; MySQL BenchMark</th>
+<td>This benchmark measures the time to load 4 PHP pages of various sizes including MySQL calls in each page. This is a a &#8216;real world&#8217; simulation of a dynamic web page like most of those on the web today. Real World tests are one of the most important ways to measure your server performance as they indicate how long someone has to wait for your server to serve them a page. The test pages vary in detail to simulate a real environment. If you have a cacheing system in place on your site, you will see large fluctuations from the first test to the following tests due to cacheing after the first page load. Depending on your purpose for running this benchmark, you might run tests with cacheing off to see the benefit of some tweaks.</td>
+</tr>
+<tr>
+<th>Server Benchmark</th>
+<td>This benchmark throws everything we&#8217;ve got at your server to find out how fast it really is! This test can be a resource hog, so you should not run this test during your server&#8217;s peak load time. Testing includes synthetic PHP and MySQLn tests, PHP page loading with and without MySQL interaction, and file read/writing within PHP. </td>
+</tr>
+</table>
+<h3>WordPressのベンチマーク</h3>
+<p>WordPressの基本情報</p>
+<table style="width:0%;">
+<tr>
+<th>Version</th>
+<td>2.9.2</td>
+</tr>
+<tr>
+<th>記事数</th>
+<td>665</td>
+</tr>
+<tr>
+<th>コメント数</th>
+<td>90</td>
+</tr>
+<tr>
+<th>ページ数</th>
+<td>20</td>
+</tr>
+<tr>
+<th>カテゴリ数</th>
+<td>78</td>
+</tr>
+<tr>
+<th>タグ数</th>
+<td>696</td>
+</tr>
+<tr>
+<th>テーマ</th>
+<td>デフォルト</td>
+</tr>
+</table>
+<p>クエリ数と表示時間</p>
+<table style="width:0%;">
+<tr>
+<th style="text-align:center;">試行回</th>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td>1</td>
+<td>19 queries. 0.698 seconds.</td>
+<td>20 queries. 0.236 seconds.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>19 queries. 1.029 seconds.</td>
+<td>20 queries. 0.263 seconds.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>19 queries. 0.632 seconds.</td>
+<td>20 queries. 0.252 seconds.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>19 queries. 0.684 seconds.</td>
+<td>20 queries. 0.257 seconds.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>19 queries. 0.861 seconds.</td>
+<td>20 queries. 0.247 seconds.</td>
+</tr>
+</table>
+<p>yumで構築しただけのデフォルトの設定にも関わらず、ServerMan@VPSの方が倍以上速い上に安定していますね。APCなどのPHPアクセラレータやMySQLのチューニングを行えばさらに速くなるでしょう。それに比べてhetemlはDB回りのベンチマークが関係しているのか遅くなっている上にかなり時間にばらつきがあり不安定です。これは、hetemlが共用サーバなため、同じサーバに載っている他のユーザのプロセスがサーバリソースを使用してしまうことで、自分のプロセスが圧迫されてしまうのが原因かと思われます。ですので、この結果がばらつきのある中でのどの程度のランクの結果なのかはもう少し定期的に計測する必要があります。</p>
+<p>今回のベンチマークテストの比較によって、ServerMan@VPSが値段の割に安定していることや、逆に、hetemlが予想以上にばらつきがあったことなどが分かりました。正直、ServerMan@VPSは500円でこのスペックなら申し分ないです。無料期間が3ヶ月もあるので、まだ申し込んでない方は是非ご自身で確かめてみて下さい。</p>
+<p>hetemlとの契約終了が2010/11/30なのですが、近いうちにServerMan@VPSに引っ越そうかと考えています。</p>
+<p>下記は、各テストの5回分の計測結果です。</p>
+<p>Synthetic PHP BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475554869/"><img loading="lazy" src="https://farm6.static.flickr.com/5259/5475554869_20a82400e9_m.jpg" alt="" title="heteml-phpspeed-Synthetic-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4262" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475551207/"><img loading="lazy" src="https://farm6.static.flickr.com/5015/5475551207_edc973dd6d_m.jpg" alt="" title="serverman-phpspeed-Synthetic-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4263" /></a></td>
+</tr>
+</table>
+<p>Synthetic MySQL BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475548661/"><img loading="lazy" src="https://farm6.static.flickr.com/5094/5475548661_ba9026fd7b_m.jpg" alt="" title="heteml-phpspeed-Synthetic-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4264" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476148378/"><img loading="lazy" src="https://farm6.static.flickr.com/5015/5476148378_7718e29c01_m.jpg" alt="" title="serverman-phpspeed-Synthetic-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4265" /></a></td>
+</tr>
+</table>
+<p>Synthetic Read/Write BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475548577/"><img loading="lazy" src="https://farm6.static.flickr.com/5252/5475548577_d372826a2f_m.jpg" alt="" title="heteml-phpspeed-Synthetic-Read-Write-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4266" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475554379/"><img loading="lazy" src="https://farm6.static.flickr.com/5177/5475554379_e4068e8c7c_m.jpg" alt="" title="serverman-phpspeed-Synthetic-Read-Write-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4267" /></a></td>
+</tr>
+</table>
+<p>Real World PHP BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475556447/"><img loading="lazy" src="https://farm6.static.flickr.com/5213/5475556447_cfc2df7ffc_m.jpg" alt="" title="heteml-phpspeed-Real-World-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4268" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475553515/"><img loading="lazy" src="https://farm6.static.flickr.com/5298/5475553515_2a91228360_m.jpg" alt="" title="serverman-phpspeed-Real-World-PHP-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4269" /></a></td>
+</tr>
+</table>
+<p>Real World PHP &#038; MySQL BenchMark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5475555331/"><img loading="lazy" src="https://farm6.static.flickr.com/5091/5475555331_5dfe67f1d0_m.jpg" alt="" title="heteml-phpspeed-Real-World-PHP-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4270" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5475553611/"><img loading="lazy" src="https://farm6.static.flickr.com/5017/5475553611_9834f673a4_m.jpg" alt="" title="serverman-phpspeed-Real-World-PHP-MySQL-BenchMark" width="300" height="163" class="aligncenter size-medium wp-image-4271" /></a></td>
+</tr>
+</table>
+<p>Server Benchmark</p>
+<table>
+<tr>
+<th style="text-align:center;">heteml</th>
+<th style="text-align:center;">ServerMan@VPS</th>
+</tr>
+<tr>
+<td><a href="https://www.flickr.com/photos/fukata/5476145526/"><img loading="lazy" src="https://farm6.static.flickr.com/5216/5476145446_1a2e331bab_m.jpg" alt="" title="heteml-phpspeed-Server-Benchmark" width="300" height="163" class="aligncenter size-medium wp-image-4272" /></a></td>
+<td><a href="https://www.flickr.com/photos/fukata/5476149814/"><img loading="lazy" src="https://farm6.static.flickr.com/5057/5476149814_a4d6b6021c_m.jpg" alt="" title="serverman-phpspeed-Server-Benchmark" width="300" height="163" class="aligncenter size-medium wp-image-4273" /></a></td>
+</tr>
+</table>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4218/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

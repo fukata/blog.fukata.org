@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>XCode &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/xcode/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>XCodeでVimのキーバインドが使えるXVimが便利！</title>
+		<link>/archives/7425/</link>
+					<comments>/archives/7425/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 05 May 2013 13:18:47 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[vim]]></category>
+		<category><![CDATA[XCode]]></category>
+		<category><![CDATA[XVim]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7425</guid>
+
+					<description><![CDATA[いつもvimでコーディングをしているので、XCodeでプログラミングしていてキーバインドが異なるのがずっと不便だったのですが、XVimというXCodeでvimのキーバインドが使えるようになる物があるこ ... <a href="/archives/7425/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/8709381811" target="_blank" title="xvim"><img src="https://farm9.staticflickr.com/8130/8709381811_1b91e5608a.jpg" alt="xvim" class="aligncenter"/></a></p>
+<p>いつもvimでコーディングをしているので、XCodeでプログラミングしていてキーバインドが異なるのがずっと不便だったのですが、XVimというXCodeでvimのキーバインドが使えるようになる物があることを知ったので使ってみました。</p>
+<p><span id="more-7425"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>導入方法は簡単で、下記のプロジェクトをcloneしてからxcodeprojectファイルを開いてCtrl + Rでビルド後、XCodeを再起動するのみです。</p>
+<p><a href="https://github.com/JugglerShu/XVim" title="JugglerShu/XVim - GitHub">JugglerShu/XVim · GitHub</a></p>
+<p>するとスクリーンショットにあるようにvimのような感じでキーバインドが使えるようになります。ただし、短形選択はできないみたいで、XCodeの時から困っていた複数行のコメントアウトなどはXVimでも出来ないみたいです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7425/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8130/8709381811_1b91e5608a.jpg</image>
+	</item>
+	</channel>
+</rss>

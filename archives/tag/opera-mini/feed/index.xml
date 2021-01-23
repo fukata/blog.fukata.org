@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Opera Mini &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/opera-mini/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]Bold9000 OS5.0でOpera Mini 5</title>
+		<link>/archives/2741/</link>
+					<comments>/archives/2741/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 18 Mar 2010 05:43:39 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Opera Mini]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2741</guid>
+
+					<description><![CDATA[Opera Mini 5　正式版公開 &#8211; 黒と苺の　BlackBerryBold日記 現在使用しているBlackBerry Bold 9000（OS5.0公式版）にインストールしてみました ... <a href="/archives/2741/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://d.hatena.ne.jp/BlackBerryBold/20100316/1268731247">Opera Mini 5　正式版公開 &#8211; 黒と苺の　BlackBerryBold日記</a></p>
+<p>現在使用しているBlackBerry Bold 9000（OS5.0公式版）にインストールしてみました。インストール直後起動しようとするとExceptionが発生しましたが、何度か起動を試みていると無事起動しました。</p>
+<p>スピードダイアルは以前の方がデザイン的に良かったと思うんですが、なんでこんな中途半端な感じになってるんでしょうか。<br />
+<a href="https://farm6.static.flickr.com/5054/5476140160_269e4bf571_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5054/5476140160_269e4bf571_m.jpg" alt="" title="Capture14_30_55" width="300" height="200" class="aligncenter size-medium wp-image-2745" /></a></p>
+<p><a href="https://d.hatena.ne.jp/BlackBerryBold/20100318/1268884888">OperaMiniが最新版で変わったこと &#8211; 黒と苺の　BlackBerryBold日記</a></p>
+<p>コピペがかなりしやすくなったと思います。Opera Mini 5を使い始めた時はショートカットがわからず（調べろｗ）どうやってコピペをすればいいのかわかりませんでした＾＾；</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2741/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

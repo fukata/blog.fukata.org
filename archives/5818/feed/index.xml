@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: jQueryからFlickrAPIへOAuthアクセスする際の注意	</title>
+	<atom:link href="/archives/5818/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5818/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Foursquare APIをjqueryから使いたい！ &#124; Totto World		</title>
+		<link>/archives/5818/comment-page-1/#comment-851</link>
+
+		<dc:creator><![CDATA[Foursquare APIをjqueryから使いたい！ &#124; Totto World]]></dc:creator>
+		<pubDate>Sun, 21 Jul 2013 10:27:22 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5818#comment-851</guid>
+
+					<description><![CDATA[[...] (http://fukata.org/2011/06/25/caution-oauth-flickr-api-from-jquery/)参考 [...]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] (<a href="http://fukata.org/2011/06/25/caution-oauth-flickr-api-from-jquery/" rel="nofollow ugc">http://fukata.org/2011/06/25/caution-oauth-flickr-api-from-jquery/</a>)参考 [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

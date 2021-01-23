@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>root &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/root/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Droid PRO v2.3.3のRoot権限奪取</title>
+		<link>/archives/6306/</link>
+					<comments>/archives/6306/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 16 Oct 2011 14:56:19 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Droid Pro]]></category>
+		<category><![CDATA[root]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6306</guid>
+
+					<description><![CDATA[先日のアップデートでDroid PROもやっとv2.3.3になりました。 アプリを開発しているとキャプチャを撮る事が多いので、今回も早速取ってみました。結果的に言えば呆気無く取ることが出来ました。 広 ... <a href="/archives/6306/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日のアップデートでDroid PROもやっとv2.3.3になりました。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6249572087"><img src="https://farm7.static.flickr.com/6100/6249572087_bc42ccee37.jpg" alt="DROID PRO v2.3.3システム情報"  class='aligncenter'/></a></p>
+<p>アプリを開発しているとキャプチャを撮る事が多いので、今回も早速取ってみました。結果的に言えば呆気無く取ることが出来ました。</p>
+<p><span id="more-6306"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>ここでは、Widnows向けにRoot権限の取得方法を書いておきます。Linux, Macの方は下記にある引用元の記事を参照してください。</p>
+<ol>
+<li>Motorola端末用のドライバをインストール [<a href="https://www.mediafire.com/?71c12qc4a1svqza">32bit</a>] [<a href="https://www.mediafire.com/?8rb7bpvp2b9vy2f">64bit</a>]</li>
+<li>MotorolaOneClickRoot_psouza4を<a href="https://www.mediafire.com/?g226n7as6cb1y6e">ダウンロード</a>し、展開</li>
+<li>端末の設定 -> アプリケーション -> 開発にあるUSBデバッグをチェック</li>
+<li>PCにCharge Onlyで接続</li>
+<li>MotorolaOneClickRoot.exeを実行</li>
+<li>3回ほど再起動したのち、Root権限が取得できていれば成功</li>
+</ol>
+<p>引用元：<br />
+<a href="https://techflipper.com/root-motorola-droid-3x-x2cliqcliq2-on-android-2-3-4-gingerbread-with-oneclick/">Motorola Droid 3,X, X2,Cliq,Cliq2 On Android 2.3.4 Gingerbread With OneClick [ Windows, Linux and OS x ] | TechFlipper</a></p>
+<h3>スクリーンショット</h3>
+<p>Root権限は無事取得できたのですが、スクリーンショットを撮った時に色がおかしくなってしまうようになりました。多分コレはアプリ側の問題だと思うので、そのうち対応されるんじゃないかと思います。下記のスクリーンショットは<a href="https://market.android.com/details?id=com.edwardkim.android.screenshotitfull&#038;feature=search_result">ScreenshotIt</a>を使っています。</p>
+<p>ちなみに、カメラについては正常な色合いのまま保存出来ることは確認しました。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6251949908"><img src="https://farm7.static.flickr.com/6113/6251949908_c3795c4b13.jpg" alt="20111016232738"  class='aligncenter'/></a></p>
+<p>他のアプリでは正常に撮る事ができるかもしれないので、もし正常に撮ることが出来るアプリがあれば是非教えてもらえると助かります。</p>
+<p><strong>追記：2011-11-17 08:13</strong><br />
+ScreenshotItのオプションにある「<strong>Invert Colors</strong>」にチェックを入れると正常に撮れるようになりました。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251897840"><img src="https://farm7.static.flickr.com/6040/6251897840_c230cbb9e9.jpg" alt="20111017064136"  class='aligncenter'/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6306/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]docomo版 Xperia arc (v2.3.3)のroot化手順</title>
+		<link>/archives/6043/</link>
+					<comments>/archives/6043/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 20 Aug 2011 03:31:27 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[flashtool]]></category>
+		<category><![CDATA[GingerBreak]]></category>
+		<category><![CDATA[root]]></category>
+		<category><![CDATA[xperia arc]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6043</guid>
+
+					<description><![CDATA[最近、あまり個人的な開発を行なってなくて更新ネタもないので、docomo版 Xperia arcのOS 2.3.3のroot化をする機会があったので、それについて手順をまとめておきたいと思います。 ざ ... <a href="/archives/6043/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、あまり個人的な開発を行なってなくて更新ネタもないので、docomo版 Xperia arcのOS 2.3.3のroot化をする機会があったので、それについて手順をまとめておきたいと思います。</p>
+<h2>ざっくり手順</h2>
+<ol>
+<li>OS 2.3.2へダウングレード</li>
+<li>root化</li>
+<li>OS 2.3.3へアップグレード</li>
+</ol>
+<p>と、かなりざっくりした手順ですが、簡単に説明すると、2.3.3でrootを取得する簡単な方法がないため、一旦2.3.2に落として、root取得が確認されているGingerBreakで取得後、2.3.3への公式アップデートを再度受けるというものです。幸い、2.3.2 -> 2.3.3のアップデートではrootの権限は保持されるようです。</p>
+<p><span id="more-6043"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>今回root化に必要なファイル</h2>
+<ul>
+<li><a href="https://forum.xda-developers.com/showthread.php?t=920746">FlashTool v0.3.0</a></li>
+<li><a href="https://www.multiupload.com/34GT5XJH59">docomo版 OS 2.3.2のROM</a></li>
+<li><a href="https://www.multiupload.com/KN7SQNKLQ2">loader.sin</a></li>
+<li><a href="https://forum.xda-developers.com/showthread.php?t=1044765">GingerBreak v1.2.0</a></li>
+</ul>
+<p>とりあえず、これらを全て落とします。</p>
+<h3>焼く前の準備</h3>
+<p>そして、FlashToolを解凍後、docomo版 OS 2.3.2 ROMも解凍し、ftfファイルをFlashToolにあるfirmwaresディレクトリにコピーします。</p>
+<p>ただ、この状態でROMを焼こうとするとエラーになり、正常に焼けません。そこで、7-zip等でftfファイルを開き、loader.sinをコピーします。これで、正常に焼けると思います。ちなみに、xperia arcのドライバーは予めインストールしておかないとドライバーを見つけられずROMを焼けないので予めインストールしておいてください。通常は、xperia arcをパソコンに繋いだら、新しいハードウェアの検出のダイアログが出ると思うので、そこをクリックするとインストール等の項目があると思います。</p>
+<h3>焼いてみる</h3>
+<ol>
+<li>設定 -> アプリケーションから提供元不明のアプリケーションをON</li>
+<li>設定 -> アプリケーション -> 開発からUSBデバッキングをON</li>
+<li>Xperia arcの電源を落とす</li>
+<li>FlashToolを起動、FlashからdocomoのROMを選択し、OKをクリック</li>
+<li>USBで繋ぐようにダイアログが表示されたら、Xperia arcのキャンセルボタンを押しながら、USBを接続</li>
+</ol>
+<p>これで、ROMが焼かれ、自動的に再起動すると思います。再起動後は、起動にかなり時間がかかるので、ちょっと心配になりますが正常に起動すると思います（２，３分かかりました）</p>
+<h3>捕捉</h3>
+<p>FlashToolでdocomoのROMを選択する際に右上の方に「wipe user data」みたいな項目が有るかと思いますが、コレにチェックするとユーザデータが消え、初期化します。チェックを外すとユーザデータは残りますが、2.3.2に戻した時に2.3.3で更新されたアプリ等でエラーが多発します。これは、再度2.3.3へアップデートを行うとエラーは出なくなります。</p>
+<h3>参考ページ</h3>
+<p><a href="https://armalitexyz.jp/archive/2011/04/27/2011042701.php/">Android Info &#038; Custom &#8211; Xperia Arc（SO-01C）SIMロック解除方法</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6043/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]Droid Pro(sv3.8.7)のroot化</title>
+		<link>/archives/5625/</link>
+					<comments>/archives/5625/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 25 Apr 2011 06:24:37 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Droid Pro]]></category>
+		<category><![CDATA[root]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5625</guid>
+
+					<description><![CDATA[先日、Motorola Droid Proの公式アップデートが降ってき、System Version 3.8.7となりました。 DROID Pro Update to Version 3.8.7 is ... <a href="/archives/5625/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日、Motorola Droid Proの公式アップデートが降ってき、System Version 3.8.7となりました。</p>
+<p><a href="https://www.droid-life.com/2011/04/22/droid-pro-update-to-version-3-8-7-is-live/">DROID Pro Update to Version 3.8.7 is Live! &#8211; Droid Life: A Droid Community Blog</a></p>
+<p>その結果、root化のためのアプリであるz4rootがクラッシュするようになり、z4rootによるroot化ができなくなりました。</p>
+<p>今はなんとかroot化に成功しました。かなり久しぶりにWindows7を起動しました。</p>
+<p><span id="more-5625"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>色々調べてみるとSuperOneClickというアプリを使えば、3.8.7のアップデート後でもrootを取得出来たという報告を見つけました。</p>
+<p><a href="https://forum.xda-developers.com/showthread.php?t=1035816">Droid Pro Update &#8230; does it support root? &#8211; xda-developers</a></p>
+<blockquote><p>I used SuperOneClick 1.7 to get root again after apply this update.
+</p></blockquote>
+<p>おぉ。ということで、早速Windowsを起動してSuperOneClickのダウンロードとインストールを行います。ダウンロードは下記から。</p>
+<p><a href="https://forum.xda-developers.com/showthread.php?t=803682">[APP]SuperOneClick v1.9.1 (Root, Unroot, Enable Non-Market App) &#8211; xda-developers</a></p>
+<p>ちなみに今回自分が使ったのは、「SuperOneClickv1.9.1-ShortFuse.Drivers.rar」です。これで、root化も行えました。</p>
+<p>ダウンロード後、SuperOneClickを起動して、Rootボタンを押してみるもWaiting for device&#8230;でフリーズしてしまい、どうしたものかと思ったものの、</p>
+<blockquote><p>adb.exe kill-server<br />
+adb.exe devices<br />
+adb.exe start-server
+</p></blockquote>
+<p>とコマンドプロンプトから直接確認しても表示されなかったので、ドライバ回りなのかなとDroid Proのドライバを探してみたところ、下記にありました。</p>
+<p><a href="https://www.verizon-cellphones.org/motorola-droid-pro-usb-and-pc-drivers-download.html">Motorola Droid Pro USB and PC Drivers download | Verizon Cell Phones</a></p>
+<p>上記の「Motorola Droid Pro USB Driver」のリンクからファイルをダウンロードし、インストールします。Moto Connectというのがインストールされると思います。インストール後、再度先ほどのコマンドで端末が接続されているか確認したところ、無事、認識することができました。</p>
+<p>認識が確認できたところで、もう一度SuperOneClickでroot取得を試みたらあっさり完了しました。完了後は端末の方を再起動すれば全てが完了です。</p>
+<p>下記、今回rootを取得したバージョンとSuperOneClickのログです。</p>
+<p>SuperOneClickのログ</p>
+<blockquote><p>
+SuperOneClick v1.9.1.0<br />
+Checking drivers&#8230;</p>
+<p>Killing ADB Server&#8230;</p>
+<p>OK</p>
+<p>Starting ADB Server&#8230;<br />
+* daemon not running. starting it now on port 5037 *<br />
+* daemon started successfully *</p>
+<p>OK</p>
+<p>Waiting for device&#8230;</p>
+<p>OK</p>
+<p>Getting OS Version&#8230;<br />
+2.2.1<br />
+OK</p>
+<p>2.2.1<br />
+Pushing psneuter&#8230;<br />
+2291 KB/s (585731 bytes in 0.249s)</p>
+<p>OK</p>
+<p>chmod psneuter&#8230;</p>
+<p>OK</p>
+<p>Running psneuter&#8230;<br />
+OK</p>
+<p>***IF IT KEEPS LOOPING, TRY DISABLING USB DEBUGGING NOW***</p>
+<p>Killing ADB Server&#8230;</p>
+<p>OK</p>
+<p>Starting ADB Server&#8230;<br />
+* daemon not running. starting it now on port 5037 *<br />
+* daemon started successfully *</p>
+<p>OK</p>
+<p>Waiting for device&#8230;</p>
+<p>OK</p>
+<p>Running psneuter&#8230;<br />
+ROOTED</p>
+<p>Pushing busybox&#8230;<br />
+1478 KB/s (1062992 bytes in 0.702s)</p>
+<p>OK</p>
+<p>chmod busybox&#8230;</p>
+<p>OK</p>
+<p>Getting mount path&#8230;<br />
+/dev/block/mmcblk1p21<br />
+OK</p>
+<p>Remounting system with read-write access&#8230;</p>
+<p>OK</p>
+<p>Pushing su-v2&#8230;<br />
+548 KB/s (26264 bytes in 0.046s)</p>
+<p>OK</p>
+<p>chmod su&#8230;</p>
+<p>OK</p>
+<p>Pushing Superuser.apk&#8230;<br />
+1025 KB/s (196521 bytes in 0.187s)</p>
+<p>OK</p>
+<p>Creating /system/xbin&#8230;<br />
+mkdir failed for /system/xbin, File exists<br />
+OK</p>
+<p>Checking for busybox</p>
+<p>OK</p>
+<p>Remounting system with read-only access&#8230;</p>
+<p>OK</p>
+<p>Running a SU test&#8230;<br />
+Success!<br />
+Don&#8217;t forget to reboot!
+</p></blockquote>
+<p>DROID PRO sv3.8.7<br />
+<a href="https://www.flickr.com/photos/45259648@N06/5652796276"><img src="https://farm6.static.flickr.com/5063/5652796276_c550d829d3.jpg" alt="DROID PRO 3.8.7" class='aligncenter'/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5625/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

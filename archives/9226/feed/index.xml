@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン2.5.0をリリース	</title>
+	<atom:link href="/archives/9226/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/9226/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 01 Dec 2017 07:21:00 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: けい		</title>
+		<link>/archives/9226/comment-page-1/#comment-975</link>
+
+		<dc:creator><![CDATA[けい]]></dc:creator>
+		<pubDate>Fri, 01 Dec 2017 07:21:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9226#comment-975</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9226/comment-page-1/#comment-974&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+ありがとうございます！これからもお世話になります^^]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9226/comment-page-1/#comment-974">Tatsuya Fukata</a>.</p>
+<p>ありがとうございます！これからもお世話になります^^</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9226/comment-page-1/#comment-974</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Thu, 30 Nov 2017 19:05:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9226#comment-974</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9226/comment-page-1/#comment-973&quot;&gt;けい&lt;/a&gt;.
+
+確認しました。
+
+確かにwp-flickr-pressを有効化した時だけ、WordPressにログインしていない状態でもset-cookieがresponse headerに含まれておりexpires,cache-control,pragmaも同時に付与されていました。
+
+原因を調べたところ、flickrとの接続部分で依存しているライブラリ側で自動的にsession_startを呼び出している箇所があるためでした。
+
+v2.5.5で修正済みですのでご確認ください。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9226/comment-page-1/#comment-973">けい</a>.</p>
+<p>確認しました。</p>
+<p>確かにwp-flickr-pressを有効化した時だけ、WordPressにログインしていない状態でもset-cookieがresponse headerに含まれておりexpires,cache-control,pragmaも同時に付与されていました。</p>
+<p>原因を調べたところ、flickrとの接続部分で依存しているライブラリ側で自動的にsession_startを呼び出している箇所があるためでした。</p>
+<p>v2.5.5で修正済みですのでご確認ください。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: けい		</title>
+		<link>/archives/9226/comment-page-1/#comment-973</link>
+
+		<dc:creator><![CDATA[けい]]></dc:creator>
+		<pubDate>Thu, 30 Nov 2017 11:51:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9226#comment-973</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9226/comment-page-1/#comment-972&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+お返事ありがとうございます！
+
+プラグインを有効化するとwp-flickr-pressのimg,js,cssに対してではなく、コンテンツページ(content-type:html)にキャッシュしない旨のヘッダが出てくるようになります！
+このプラグインを停止するとヘッダのキャッシュが消える状態になっています。
+
+確認していただけるとうれしいです！]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9226/comment-page-1/#comment-972">Tatsuya Fukata</a>.</p>
+<p>お返事ありがとうございます！</p>
+<p>プラグインを有効化するとwp-flickr-pressのimg,js,cssに対してではなく、コンテンツページ(content-type:html)にキャッシュしない旨のヘッダが出てくるようになります！<br />
+このプラグインを停止するとヘッダのキャッシュが消える状態になっています。</p>
+<p>確認していただけるとうれしいです！</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9226/comment-page-1/#comment-972</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Thu, 30 Nov 2017 09:36:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9226#comment-972</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9226/comment-page-1/#comment-971&quot;&gt;けい&lt;/a&gt;.
+
+コメントありがとうございます。
+
+wp-flickr-pressのimg,js,cssに対してということでしょうか？
+具体的にどのファイルへのアクセスでそうなってるのか教えてもらえると助かります。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9226/comment-page-1/#comment-971">けい</a>.</p>
+<p>コメントありがとうございます。</p>
+<p>wp-flickr-pressのimg,js,cssに対してということでしょうか？<br />
+具体的にどのファイルへのアクセスでそうなってるのか教えてもらえると助かります。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: けい		</title>
+		<link>/archives/9226/comment-page-1/#comment-971</link>
+
+		<dc:creator><![CDATA[けい]]></dc:creator>
+		<pubDate>Thu, 30 Nov 2017 09:34:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9226#comment-971</guid>
+
+					<description><![CDATA[はじめまして！いつもプラグインをありがたく利用させてもらっていますkeiです。
+
+このプラグインを有効にしていると一つ問題が起きることがわかったのでフィードバックさせてください！
+
+expires
+cache-control
+pragma
+
+どのヘッダにもキャッシュしない設定が入ってます。
+
+コンテンツの応答ヘッダーにキャッシュしない設定を解除して、キャッシュするようにしていただけると、とても助かります。よろしくお願いします！]]></description>
+			<content:encoded><![CDATA[<p>はじめまして！いつもプラグインをありがたく利用させてもらっていますkeiです。</p>
+<p>このプラグインを有効にしていると一つ問題が起きることがわかったのでフィードバックさせてください！</p>
+<p>expires<br />
+cache-control<br />
+pragma</p>
+<p>どのヘッダにもキャッシュしない設定が入ってます。</p>
+<p>コンテンツの応答ヘッダーにキャッシュしない設定を解除して、キャッシュするようにしていただけると、とても助かります。よろしくお願いします！</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

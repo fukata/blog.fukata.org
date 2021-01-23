@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Google Plus &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/google-plus/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CodeIgniterからGooglePlusAPIを使ってみた</title>
+		<link>/archives/6123/</link>
+					<comments>/archives/6123/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 16 Sep 2011 02:08:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Google Plus]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6123</guid>
+
+					<description><![CDATA[fukata/Study-GooglePlusAPI &#8211; GitHub 公開されたGoogle+ APIをCodeIgniterから簡単に実行してみました。基本的にGoogleのOAuth ... <a href="/archives/6123/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/fukata/Study-GooglePlusAPI">fukata/Study-GooglePlusAPI &#8211; GitHub</a></p>
+<p>公開されたGoogle+ APIをCodeIgniterから簡単に実行してみました。基本的にGoogleのOAuthを使っているだけなので、OAuthのプログラム書いたことのある人なら、すぐに使えるんじゃないかと思います。</p>
+<h2>APIの有効化</h2>
+<p>まずは、Google+ APIを有効化。<br />
+<a href="https://code.google.com/apis/console/b/0/">Google APIs Console</a></p>
+<h2>アプリケーションの作成</h2>
+<p>OAuthで使用するアプリケーション情報を下記から作成。<br />
+<a href="https://code.google.com/apis/console/b/0/#access">Google APIs Console</a></p>
+<p>上記で作成したClient ID, Client Secretを<strong>application/config/google_plus_api.php</strong>に設定すれば、使えるようになると思います。</p>
+<h2>各種クライアント</h2>
+<p>今回はpeclのOAuthを使いましたが、各種言語の公式クライアントがあるみたいなので、普通はそっちを使った方が楽かもしれません。</p>
+<p>各種、Google APIのクライントは下記からDLできます。<br />
+<a href="https://developers.google.com/+/downloads">Downloads &#8211; Google+ Platform — Google Developers</a></p>
+<h2>その他Google+情報</h2>
+<p>APIや各種情報については下記から。<br />
+<a href="https://developers.google.com/+/api/">Google+ API &#8211; Google+ Platform — Google Developers</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6123/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

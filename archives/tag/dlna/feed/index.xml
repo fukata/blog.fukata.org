@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DLNA &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/dlna/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Andorid]DLNAクライアントを使ってみた</title>
+		<link>/archives/5128/</link>
+					<comments>/archives/5128/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 01 Jan 2011 14:05:02 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[`]]></category>
+		<category><![CDATA[DLNA]]></category>
+		<category><![CDATA[mediatomb]]></category>
+		<category><![CDATA[Motorola Droid Pro]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5128</guid>
+
+					<description><![CDATA[Droid Proには標準でDLNAクライアントアプリが付属しているので早速試してみました。 DLNA用のメディアサーバとしては、Ubuntuに下記のアプリをインストールして起動するだけで、WEBの管 ... <a href="/archives/5128/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Droid Proには標準でDLNAクライアントアプリが付属しているので早速試してみました。</p>
+<p>DLNA用のメディアサーバとしては、Ubuntuに下記のアプリをインストールして起動するだけで、WEBの管理画面にアクセスし、メディアとして認識させたいディレクトリを選択するだけで、後は非同期でメディアとして追加してくれます。</p>
+<p><a href="https://wiki.ubuntulinux.jp/UbuntuTips/Server/DLNAserver">DLNAサーバで、動画、音楽を家電で再生 &#8211; Ubuntu Japanese Wiki</a></p>
+<p>詳細は下記から</p>
+<p><span id="more-5128"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://ja.wikipedia.org/wiki/Digital_Living_Network_Alliance">Digital Living Network Alliance &#8211; Wikipedia</a></p>
+<p>DLNAについて詳しい説明はwikipedia等を参照してください。</p>
+<p>簡単に言えば、自宅のサーバ内にある音楽や動画をテレビやDLNAに対応した機器で再生ができるというものです。で、その再生機器としてDroid Proが対応しています。利用方法も本当に簡単なので導入すると寝る前にちょっと布団の中で聞きたいという方には便利だと思います。</p>
+<p>Droid Proでの使い方は至って簡単で、上記の「mediatomb」をサーバで起動するとDroid Pro側で自動的に認識し、メディアサーバ一覧に表示されるので、追加したメディアサーバをクリックするとアルバム一覧、再生可能なファイル一覧が表示されるのでクリックするとすぐに再生されます。</p>
+<p>音声ファイルに関してはストリーミング再生されますが、動画に関しては一旦端末側にコピーが必要です。</p>
+<p>以下、スクリーンショット一覧です。</p>
+<p>DLNAクライアントアプリ<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5311640357'><img src='https://farm6.static.flickr.com/5165/5311640357_b9890ec37d.jpg' alt='DLNAクライアントアプリ' class='aligncenter' /></a></p>
+<p>DLNA メニュー<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230516'><img src='https://farm6.static.flickr.com/5286/5312230516_9084ebd9d3.jpg' alt='DLNA メニュー' class='aligncenter' /></a></p>
+<p>DLNA メディアサーバ一覧<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5311640301'><img src='https://farm6.static.flickr.com/5123/5311640301_c33ccce6da.jpg' alt='DLNA メディアサーバ一覧' class='aligncenter' /></a></p>
+<p>DLNA フォルダ一覧<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230546'><img src='https://farm6.static.flickr.com/5290/5312230546_401514467b.jpg' alt='DLNA フォルダ一覧' class='aligncenter' /></a></p>
+<p>DLNA アルバム選択<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230594'><img src='https://farm6.static.flickr.com/5206/5312230594_7977b40aee.jpg' alt='DLNA アルバム選択' class='aligncenter' /></a></p>
+<p>DLNA 音声再生<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5311640329'><img src='https://farm6.static.flickr.com/5204/5311640329_7627b0b54e.jpg' alt='DLNA 音声再生' class='aligncenter' /></a></p>
+<p>DLNA 動画コピー<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230574'><img src='https://farm6.static.flickr.com/5164/5312230574_8ab48b2946.jpg' alt='DLNA 動画コピー' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5128/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

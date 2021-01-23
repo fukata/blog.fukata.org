@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ansible &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ansible/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:03:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ブログサーバをさくらVPSからDigitalOceanに移行した</title>
+		<link>/archives/7770/</link>
+					<comments>/archives/7770/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 07 Jun 2015 18:32:56 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ansible]]></category>
+		<category><![CDATA[DigitalOcean]]></category>
+		<category><![CDATA[サーバ移行]]></category>
+		<category><![CDATA[さくらVPS]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[このブログを置いてるさくらVPSも一年以上前に契約したもので現在の同プランとではスペックも変わってきていて損しているのでサーバをリプレイスしたいと思っていました。今回はやっと移行出来たのとansibl ... <a href="/archives/7770/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/17722732273" target="_blank" title="P6018675"><img src="https://farm9.staticflickr.com/8857/17722732273_c4244c243f_c.jpg" alt="P6018675" class="aligncenter"/></a></p>
+<p>このブログを置いてるさくらVPSも一年以上前に契約したもので現在の同プランとではスペックも変わってきていて損しているのでサーバをリプレイスしたいと思っていました。今回はやっと移行出来たのとansibleを使ってサーバ構築することも出来たのでその辺について書きたいと思います。</p>
+<p><span id="more-7770"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今回使ったansibleのplaybookは下記です。</p>
+<p><a href="https://gist.github.com/fukata/bc2ba15befde6f5ca0f1" title="ansible playbook for fukata.org">ansible playbook for fukata.org</a></p>
+<p>とりあえず移行するのを先行したので1つのplaybookですがこれからrole別に管理、serverspecもやる予定。</p>
+<p>簡単に使えるので開発用のvagrantのプロビジョニングツールでも使いたい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7770/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8857/17722732273_c4244c243f.jpg</image>
+	</item>
+	</channel>
+</rss>

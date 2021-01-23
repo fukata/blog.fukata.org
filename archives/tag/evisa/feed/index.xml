@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>eVISA &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/evisa/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 04 Sep 2017 19:04:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ミャンマーのヤンゴンに行くので観光ビザをインターネットから申し込んでみた</title>
+		<link>/archives/8844/</link>
+					<comments>/archives/8844/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 03 Sep 2017 08:39:37 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[eVISA]]></category>
+		<category><![CDATA[VISA]]></category>
+		<category><![CDATA[ピザ]]></category>
+		<category><![CDATA[ミャンマー]]></category>
+		<category><![CDATA[東南アジア]]></category>
+		<guid isPermaLink="false">/?p=8844</guid>
+
+					<description><![CDATA[9月16-20日にかけてミャンマーのヤンゴンに行くので観光ビザをインターネットから申し込んでみた。 広告 観光ビザ、ビジネスビザは下記のページから申請することが出来る。 https://evisa.m/ ... <a href="/archives/8844/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8844/"><img src="https://farm5.staticflickr.com/4411/36854886461_020ee32aac_c.jpg" alt="myanmar_evisa" class="aligncenter"/></a></p>
+<p>9月16-20日にかけてミャンマーのヤンゴンに行くので観光ビザをインターネットから申し込んでみた。</p>
+<p><span id="more-8844"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>観光ビザ、ビジネスビザは下記のページから申請することが出来る。<br />
+<a href="https://evisa.moip.gov.mm/NewApplication.aspx" target="_blank">https://evisa.moip.gov.mm/NewApplication.aspx</a></p>
+<p>申請内容は至って簡単で現住所、滞在先の住所、パスポート情報に加えて証明写真(横3.8cm、縦4.6cm)を入力するだけ。証明写真は自分でカメラで撮影してPhotoshopで適当なサイズにリサイズした。費用は観光ビザが50USD、ビジネスビザが70USD。支払いはクレジットカード。</p>
+<p>後は結果がメールで送られてくるのを待つだけ。</p>
+<p>申込後に登録番号がメールで送られてくるのでそれで現在の状態を確認することも可能。</p>
+<p>とりあえず、結果を待とう。</p>
+<h2>追記(2017-09-04 17:35:00)</h2>
+<p>無事に観光ビザの申請が受理されてApproval Letterがpdfで送られてた。</p>
+<p>あとは、これを印刷して持っていけば大丈夫とのこと。</p>
+<p>でも、プリンタがなくて印刷出来ない人はどうすればいいんだろ。普通にこのpdfを見せるだけでも大丈夫だったりするのかな。当日、最初はこのpdfだけを見せて何か言われたらプリントアウトしたものを見せてpdfの状態でも大丈夫か試してみよう。Approval Letterの中にバーコードらしきものがあるのでそれが読み取れれば別に大丈夫なんじゃないかと思う。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8844/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4411/36854886461_020ee32aac.jpg</image>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>iPod &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ipod/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>iPod+Sambaでファイルの同期</title>
+		<link>/archives/1239/</link>
+					<comments>/archives/1239/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 02 Jun 2009 14:51:02 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[iPod]]></category>
+		<category><![CDATA[iTunes]]></category>
+		<category><![CDATA[samba]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1239</guid>
+
+					<description><![CDATA[現在、ipodのデータは自宅のsambaファイルサーバでクライアントマシンと共有しています。 ipodのデータが40GB近くもなってきたので、クライアントマシンには重いので、せっかくファイルサーバ作っ ... <a href="/archives/1239/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5260/5475648917_e5538237dd_m.jpg" target="_blank" title="ipod_itunes"><img loading="lazy" src="https://farm6.static.flickr.com/5260/5475648917_e5538237dd_m.jpg" alt="ipod_itunes" width="200" height="150" class="attachment wp-att-1240 alignleft" /></a>現在、ipodのデータは自宅のsambaファイルサーバでクライアントマシンと共有しています。</p>
+<p>ipodのデータが40GB近くもなってきたので、クライアントマシンには重いので、せっかくファイルサーバ作ったんだし、ファイルサーバから共有ができたら便利だと思い、さっそく移動しました。</p>
+<p>そして、早速同期作業を行ってみると。。。「必要なディスクが見つかりません。」というエラーが毎回表示されるようになりました。</p>
+<p>ググってみると他にも同じような現象になった人がいたみたいですが、その人たちは別に自分と同じようにsambaなどを使用しているわけではなく、突然そうなってしまったらしいです。。</p>
+<p>そして、解決策としては、リセットを行うみたいです。直るかどうか確実ではなかったんですけど、同期できないのはこの先辛いので、試してみると以前のように普通に同期ができるようになりました。</p>
+<p>これで、やっと、sambaファイルサーバのファイルをiTunesを利用してipodにデータを同期することができました。</p>
+<p>めでたし♪めでたし♪</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1239/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

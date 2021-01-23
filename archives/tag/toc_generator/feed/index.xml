@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>toc_generator &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/toc_generator/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[WordPress]目次を作成してくれるプラグイン「toc_generator」</title>
+		<link>/archives/5376/</link>
+					<comments>/archives/5376/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 04 Mar 2011 13:38:32 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[toc_generator]]></category>
+		<category><![CDATA[WordPress Plugin]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5376</guid>
+
+					<description><![CDATA[今回は自分が作成したプラグインではないんですが、非常にシンプルで使い勝手の良いプラグインを導入したので書いておきます。 導入したのはこちらのプラグインです。 Table of Contents Gen ... <a href="/archives/5376/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今回は自分が作成したプラグインではないんですが、非常にシンプルで使い勝手の良いプラグインを導入したので書いておきます。</p>
+<p>導入したのはこちらのプラグインです。</p>
+<p><a href="https://scott.yang.id.au/code/toc-generator/">Table of Contents Generator WordPress plugin | SYP</a></p>
+<p>どういうプラグインかというと、表題にもあるようにページ内に記述されたhタグを検知して再帰的にページ内リンク付きのリストを作ってくれるというものです。一般的なwikiによくあるようなあのリンクを生成してくれます。</p>
+<p>上記の更新が2006年で止まっているようですが、出来れば今も開発が続いているプラグインを使いたいので、現在も開発が続いていて、使い勝手の良い目次生成プラグインを探しています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5376/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

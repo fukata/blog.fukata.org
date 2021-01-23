@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>freebsd &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/freebsd/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:56:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>FreeBSDでLAMP環境を構築してみた。</title>
+		<link>/archives/795/</link>
+					<comments>/archives/795/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 20 Dec 2008 17:20:59 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[freebsd]]></category>
+		<category><![CDATA[LAMP]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=795</guid>
+
+					<description><![CDATA[なぜか、今どきFreeBSDを使ってみたりしてる。 しかも、FreeBSD4.7 色々探し回ってもなかなかisoファイルが見つからなかったよ。。。 色々探し回った結果、以下に古いisoファイルが置いて ... <a href="/archives/795/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>なぜか、今どきFreeBSDを使ってみたりしてる。</p>
+<p>しかも、FreeBSD4.7</p>
+<p>色々探し回ってもなかなかisoファイルが見つからなかったよ。。。</p>
+<p>色々探し回った結果、以下に古いisoファイルが置いてました。<br />
+<a href="ftp://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/i386/ISO-IMAGES/  ">ftp://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/i386/ISO-IMAGES/</a></p>
+<p>一応、ソースパッケージもあるみたいですけど、<br />
+最新版が欲しかったので1年ぶりにソースからコンパイルして、<br />
+各種アプリケーションをインストールすることとなりました。</p>
+<p>今回のLAMP構築手順を簡単にPDFにしたので、もしよければ見てみてください。</p>
+<p><a href="https://fukata.org/media/2008/12/20/freebsd4_7_with_lamp_-_localmemo.pdf">freebsd4_7_with_lamp_-_localmemo</a></p>
+<p>てか、ログインシェルがtcshになっていたので、bashに変更しちゃいましたw邪道ですか？w</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/795/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

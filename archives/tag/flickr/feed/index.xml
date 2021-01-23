@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>flickr &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/flickr/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>jQueryからFlickrAPIへOAuthアクセスする際の注意</title>
+		<link>/archives/5818/</link>
+					<comments>/archives/5818/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 25 Jun 2011 07:48:23 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[flickr]]></category>
+		<category><![CDATA[oauth]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5818</guid>
+
+					<description><![CDATA[以前、wp-flickr-pressでjsからflickrへアクセスするために、jquery-flickr-clientというライブラリに依存していることは書いたのですが、jqueryからflickr ... <a href="/archives/5818/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前、wp-flickr-pressでjsからflickrへアクセスするために、jquery-flickr-clientというライブラリに依存していることは書いたのですが、jqueryからflickr apiにOAuthアクセスする際に少し注意する必要があるので、書いておきたいと思います。</p>
+<p>主にapi_sigパラメータの生成に関する注意点です。</p>
+<p>api_sigというのは、Flickrアプリを登録した際にアプリ毎に提示されるAPI Secretと送信するパラメータをmd5で暗号化した文字列のことです。コレが正しくないと認証が必要なAPIは呼び出すことが出来ません。</p>
+<p><span id="more-5818"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>jQueryでjsonpアクセス</h2>
+<p>今回はjQueryからflickr apiを呼び出し、画面へ表示するので、jsonpで呼び出すことになります。また、jqueryからjsonpを呼び出す際に$.ajaxメソッドを使います。簡単に書くと以下のようになります。</p>
+<pre lang="JavaScript">
+$.ajax({
+  url: [APIのURL],
+  data: [送信パラメータ],
+  dataType: 'jsonp',
+  jsonp: 'jsonpcallback' // flickr apiのcallback関数のキー名
+})
+</pre>
+<p>もう少しapi_sigについて説明しておきたいと思います。</p>
+<p>api_sigとは、API Secretに送信パラメータのキーを昇順にソートし、キーと値を文字列連結したをさらに連結した値をMD5で暗号化した値になります。簡単に書くとこんな感じになります。</p>
+<pre>
+MD5( [API Secret] + [キーと値を文字列連結した値] )
+</pre>
+<p>上記の方法で生成した値を送信パラメータの末尾に付与します。</p>
+<h2>何が問題か？</h2>
+<p>ココまで書いて、何が問題か分かった方はjQueryを普段から使っている方だと思います。具体的には以下の問題があります。</p>
+<ul>
+<li>callback関数名の動的生成</li>
+<li>cache無効化</li>
+</ul>
+<p>これらは全て、jQueryがリクエスト送信時に動的にパラメータに付与する値で、api_sigを生成した時のパラメータと実際に送信した際のパラメータが異なってしまい、flickr側でapi_sigの正当性を検証した時に無効と判断されてしまいます。</p>
+<p>以下、それぞれの問題に対する解決案を書いておきます。</p>
+<h3>callback関数名の動的生成</h3>
+<p>$.ajaxの<a href="https://api.jquery.com/jQuery.ajax/">オプション</a>として「jsonpCallback」というのがあり、callback関数を既に定義されている関数で実行したい場合に関数名を指定する事が出来ます。コレを利用します。</p>
+<p>ただし、jquery内部の処理を見てみると、送信パラメータにjsonpcallback=[関数名]と指定されている場合にもさらに付与しようとします。コレを避ける為に$.ajaxメソッドに指定するパラメータには下記のような形式で指定します。</p>
+<pre lang="JavaScript">
+jsonpcallback=?
+</pre>
+<p>クエスチョンマークを指定すると、jqueryがリクエスト送信時にクエスチョンマークをjsonpCallbackの値で置換してくれます。</p>
+<h3>cache無効化</h3>
+<p>dataTypeにscriptもしくはjsonpを指定した場合には、cacheはfalseになってしまうので、jqueryがリクエスト送信時にリクエスト毎にURLが異なるように_=xxxxxのようなハッシュコードをパラメータに付与します。</p>
+<p>コレを防ぐ場合には、$.ajaxメソッドのオプションにcache:trueを指定することにより、これらの問題は解決できます。</p>
+<p>cacheを有効化しているため、毎回最新の値が欲しい場合には不具合が出てしまうかもしれません。なんとか、標準の方法でcache無効化用のハッシュコードを呼び出し側から指定することが出来ないか、jqueryのソースを追ってみたんですが、提供されていませんでした。hoge=aa&#038;_=&#038;foo=bbのようにアンダースコアをキーに空文字を値に指定することにより、そこが置換されるようです。</p>
+<p>ただ、jQuery.now()をオーバーライドすることにより一応可能といえば、可能みたいですが、確実性は呼び出し側の状況に依存すると思います。</p>
+<p>とまぁ、ココまで調べたりしたのですが、よくよく考えるとcache:trueを指定した上で、flickr apiとして意味のないパラメータ（アンダースコア等）に乱数を指定するようにすれば、cache:falseを指定した時と同じような効果は出せるかと思います。この方法は、現在は大丈夫のようですが、flickr側がapiとして意味のないパラメータを許容していることが前提になります。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5818/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ブログの画像をFlickrへ移行</title>
+		<link>/archives/5315/</link>
+					<comments>/archives/5315/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 25 Feb 2011 13:38:43 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[flickr]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5315</guid>
+
+					<description><![CDATA[今までWordPress標準の画像管理機能を使っていたのですが、サーバの容量などいくつか気になる点があったので、有料アカウントを使用しているFlickrに完全移行しました。一部、PDFやzipなどが自 ... <a href="/archives/5315/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今までWordPress標準の画像管理機能を使っていたのですが、サーバの容量などいくつか気になる点があったので、有料アカウントを使用しているFlickrに完全移行しました。一部、PDFやzipなどが自分のサーバから配信されていますが、これらについても別途配信先を探そうかと思います。</p>
+<p>一部気になる点というのが、一つは配信の際の帯域の節約。もう一つがサーバのマシンパワーの節約です。完全に別サービスに移行したのでこれら2つは達成出来たと思います。ただ、WordPress標準の管理機能が使えなくなったので、自分で作成している<a href="https://fukata.org/dev/wp-plugin/wp-flickr-press/">wp-flickr-press</a>にアップロード機能や簡単な管理機能を追加しようかと検討中です。</p>
+<p>また、画像や動画以外にもPDFやzipファイルなどの配信先に対応するべく、別途それらのサービス用のプラグインを作成するかもしれません。とりあえず、画像に関してはFlickrに完全に移行できたので良かったです。WordPress -> Flickrへの移行スクリプトはPythonで書いたのですが、その際利用したFlickr用ライブラリの<a href="https://stuvel.eu/flickrapi">flickrapi</a>を使用しました。PHPで書く場合には個人的には<a href="https://phpflickr.com/">phpFlickr</a>が使いやすいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5315/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

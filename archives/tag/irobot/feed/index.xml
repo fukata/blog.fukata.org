@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>iRobot &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/irobot/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>iRobot Roomba始めました</title>
+		<link>/archives/6802/</link>
+					<comments>/archives/6802/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 21 Jan 2012 11:19:59 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[iRobot]]></category>
+		<category><![CDATA[Roomba]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6802</guid>
+
+					<description><![CDATA[年明け早々に注文していたルンバがようやく届きました。海外からの発送だったので、3週間近くかかりました。 届いて早々に動かしてみたところ、予想以上にゴミを取ってくれてます。ただ、動作中の音が静かとは言い ... <a href="/archives/6802/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/45259648@N06/6735284123" target="_blank" title="IMG_7010"><img src="https://farm8.staticflickr.com/7163/6735284123_073ca87744.jpg" alt="IMG_7010" class="aligncenter"/></a></p>
+<p>年明け早々に注文していたルンバがようやく届きました。海外からの発送だったので、3週間近くかかりました。</p>
+<p>届いて早々に動かしてみたところ、予想以上にゴミを取ってくれてます。ただ、動作中の音が静かとは言いがたいので、寝てる間に動かすというのは難しそうな感じがします。外出中に動かすのが一番良さそうです。</p>
+<p>スケジュールなど他にも機能があるので、これから徐々に使い込んでいきたいと思います。また、ルンバが掃除しやすい部屋にした方がより効率的だろうなと思って、検索したら既にそういう記事が上がっていました。</p>
+<p><a href="https://rakurakukaiteki.blog22.fc2.com/blog-entry-39.html">[ 自動掃除機ルンバ（３）･･･ルンバが掃除しやすい部屋づくり] by インテリ快適生活術</a></p>
+<p>床に物をなるべく置かず、高さを10cm以上に保つというのが基本っぽいですね。</p>
+<p>あと、ルンバが充電器まで自分で帰還するところはちょっと愛らしいですｗ</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B005DPDZF4" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6802/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7163/6735284123_073ca87744.jpg</image>
+	</item>
+	</channel>
+</rss>

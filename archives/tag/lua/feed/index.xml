@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Lua &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/lua/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>lua-hiredisでcloseしているのにnetstatで確認するとTIME_WAITが大量発生していた件</title>
+		<link>/archives/7452/</link>
+					<comments>/archives/7452/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 12 May 2013 18:45:40 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Lua]]></category>
+		<category><![CDATA[lua-hiredis]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7452</guid>
+
+					<description><![CDATA[lua-hiredisを使っていてcloseしているのにabで30000以上アクセスさせてみるとredisに接続出来なくなるということが発生しました。また、netstatで確認するとredisへのコネ ... <a href="/archives/7452/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/agladysh/lua-hiredis" target="_blank">lua-hiredis</a>を使っていてcloseしているのにabで30000以上アクセスさせてみるとredisに接続出来なくなるということが発生しました。また、netstatで確認するとredisへのコネクションがTIME_WAITが大量に表示されていました。</p>
+<p><span id="more-7452"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<pre lang="lua">
+local redis = require('hiredis')
+local conn = redis.connect('127.0.0.1', 6379)
+
+local hoge_value = conn:command('GET', 'Hoge')
+
+conn:close()
+</pre>
+<p>というような簡単なコードだったんですが、どうもうまくredisとのコネクションが切れていなかったので、lua-hiredisのclose処理を見てみるとredisのquitコマンドは発行していなかったので、試しに、closeの前にquitコマンドを発行してみることにしました。</p>
+<pre lang="lua">
+local redis = require('hiredis')
+local conn = redis.connect('127.0.0.1', 6379)
+
+local hoge_value = conn:command('GET', 'Hoge')
+
+conn:command('QUIT')
+conn:close()
+</pre>
+<p>するとTIME_WAITが大量に発生することなく、abで大量にアクセスしてみてもredisへ接続出来なくなるという現象も発生せず安定するようになりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7452/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>luaでのjsonデコードのオーバーヘッドが無視できないレベルだったのでMessagePackを採用したらスループットが3.6倍になった</title>
+		<link>/archives/7429/</link>
+					<comments>/archives/7429/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 10 May 2013 02:07:29 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Lua]]></category>
+		<category><![CDATA[MessagePack]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7429</guid>
+
+					<description><![CDATA[とあるAPIサーバをluaで実装していたら思うようにスループットが伸びなかったので、デバッグしてみたところ、jsonデコードの部分で遅くなっていた模様。 結果、json4lua -> lua-cjso ... <a href="/archives/7429/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>とあるAPIサーバをluaで実装していたら思うようにスループットが伸びなかったので、デバッグしてみたところ、jsonデコードの部分で遅くなっていた模様。</p>
+<p>結果、json4lua -> lua-cjson -> mpluaという風にライブラリを変えてデバッグしてみたところ、mpluaを使った場合が一番スループットが高かったのでjsonを止めてMessagePackを採用したところリファクタリング始める前に比べると3.6倍までスループットが向上した。</p>
+<p><span id="more-7429"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<ul>
+<li>OS: CentOS 6.3(64bit)</li>
+<li>Lua: 5.1.4</li>
+</ul>
+<h2>インストール</h2>
+<h3>lua-cjson</h3>
+<p>lua4json -> lua-cjsonにするだけでも2.5倍弱程度スループットが向上した。<br />
+<a href="https://github.com/efelix/lua-cjson" title="efelix/lua-cjson · GitHub">efelix/lua-cjson · GitHub</a></p>
+<p>lua-cjsonのインストールはすんなり行くのと、ライブラリのAPI自体もlua4jsonと変わらないので割愛します。</p>
+<h3>mplua</h3>
+<p>libmessagepackのlua bindingであるmpluaを使ってみました。<br />
+<a href="https://github.com/nobu-k/mplua" title="nobu-k/mplua · GitHub">nobu-k/mplua · GitHub</a></p>
+<p>libmsgpack.hppが必要になるので、下記をDLし、コレ自体もインストールしておきます。<br />
+<a href="https://msgpack.org/releases/cpp/msgpack-0.5.7.tar.gz">msgpack-0.5.7.tar.gz</a></p>
+<pre lang="sh">
+./configure && make && make install
+</pre>
+<p>コンパイル、インストールまでは上記でいけるんですが、msgpack.soが/msgpack.soに出来てしまうため（特にreadmeには書いてなかったけど、prefixなどが指定できたんだろうか。。。）、移すのとlibmsgpack.so.3を配置し直す。</p>
+<pre lang="sh">
+# mv /msgpack.so /usr/lib64/lua/5.1/
+# ln -snf /usr/local/lib/libmsgpack.so.3 /usr/lib64/
+</pre>
+<p>これで、lua側から正常に読み込める様になったと思います。</p>
+<pre lang="lua">
+local mp = require('msgpack')
+local packed = mp.pack({ hoge = 'aaa', foo = {1,2} })
+local unpacked = mp.unpack(packed)
+</pre>
+<h2>感想</h2>
+<p>lua-cjsonにすることで元々の2.5倍弱になったが、MessagePackで3.6倍程度まで向上した。</p>
+<p>初めてキャッシュのデータとしてMessagePackを使ってみたけど、キャッシュする側（今回はPerlのData::MessagePackを使用）も利用する側も苦労すること無く利用することができ、jsonからのリプレイスも比較的簡単なのでオススメ。</p>
+<p>ただ、1点ハマったところとして、これはMessagePackが悪いわけではなく、MessagePackのデータをRedisから取ろうとしたところクライアントライブラリがバイナリセーフではなく、うまくデコード出来なかったところ。コレは次回書く。（はず</p>
+<p><strong>追記: 2013.05.10 11:55</strong><br />
+バイナリセーフの問題は、ライブラリ側でオプションで対応されてたので自分が説明をちゃんと読んでいなかったのだ問題だったorz</p>
+<p><strong>追記: 2013.05.10 18:49</strong><br />
+一部jsonデコードしている部分が残っており、全てMessagePackに変更したところ最初から3.6倍まで向上した！</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7429/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

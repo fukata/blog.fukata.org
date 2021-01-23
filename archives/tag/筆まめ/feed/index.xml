@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>筆まめ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E7%AD%86%E3%81%BE%E3%82%81/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 14 Aug 2017 05:56:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>MFC-490CNで封筒印刷</title>
+		<link>/archives/1804/</link>
+					<comments>/archives/1804/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 19 Oct 2009 00:58:28 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[MFC-490CN]]></category>
+		<category><![CDATA[筆まめ]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1804</guid>
+
+					<description><![CDATA[実家の仕事の関係で長形3号の封筒に印刷することになったんですが、MFC-490CNで印刷していると、用紙が詰まること詰まること。2、30枚ほど封筒を入れると85%くらいの確率が詰まります。だんだんイラ ... <a href="/archives/1804/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>実家の仕事の関係で長形3号の封筒に印刷することになったんですが、MFC-490CNで印刷していると、用紙が詰まること詰まること。2、30枚ほど封筒を入れると85%くらいの確率が詰まります。だんだんイライラしてきたので、10枚程度に減らすとほぼ100%の確率で印刷が可能なことが分かりました。</p>
+<p>あと、用紙サイズで長形3号というのがなかったので、しょうがなくユーザ定義で「120mm x 235mm」を追加してなんとか印刷できました。</p>
+<p>また、筆まめのレイアウト表示で郵便番号の部分を1つ下に下げることでちょうど枠内に収まってくれました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1804/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

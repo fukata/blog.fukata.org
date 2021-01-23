@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>sandbar &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/sandbar/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Compojure(Ring)でSessionを使う</title>
+		<link>/archives/6409/</link>
+					<comments>/archives/6409/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 31 Oct 2011 18:11:02 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[Ring]]></category>
+		<category><![CDATA[sandbar]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6409</guid>
+
+					<description><![CDATA[CompojureでSessionに何かデータ保存したいと思ったらまだCompojureでSessionを使ったことがなかったので簡単に使ってみました。 Compojure(Ring)でセッションを使 ... <a href="/archives/6409/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CompojureでSessionに何かデータ保存したいと思ったらまだCompojureでSessionを使ったことがなかったので簡単に使ってみました。</p>
+<p>Compojure(Ring)でセッションを使う場合、handlerにwrap-sessionを指定してあげるとCookieセッションが使える。デフォルトだとデータの保存先はメモリ。</p>
+<p>で、少しSession関連のモジュールを調べてみたところ、sandbarというのがwrap-sessionのラッパーで高機能かつ、インタフェースが使いやすかったので、今回はコレを使うことにしました。</p>
+<p><span id="more-6409"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>Session Wrapper</h3>
+<p>sandbarはwrap-sessionのラッパーというだけでなく、セッションを使ったサイトでよく使われるような、ログインユーザの名前や権限を取得する関数等も提供されています。</p>
+<p><a href="https://github.com/brentonashworth/sandbar">brentonashworth/sandbar &#8211; GitHub</a></p>
+<p>実際に組み込み後のコードはこんな感じになりました。</p>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        ring.middleware.reload-modified
+        somnium.congomongo
+        [ring.util.response :only (response content-type)]
+        fleet
++        (sandbar stateful-session auth))
+
+... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app-routes 
+  (GET "/" {} (tpl/index {})))
+
++(def app
++  (-> app-routes
++    wrap-stateful-session))
+
+;; =============================================
+;; Run Server
+;; =============================================
+;; AutoReload Configuration
+(def app (handler/site app))
+(def handlerApp
+    (wrap-reload-modified #'app ["src"]))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty handlerApp {:port port})))
+</pre>
+<p>これで、Sessionが使えるようになります。Sessionを取り出したり設定したりするAPIは本家のwikiを見るか、行数が少ないのでソースを直接見たほうが早いかもしれません。該当箇所は以下です。</p>
+<p><a href="https://github.com/brentonashworth/sandbar/blob/master/src/sandbar/stateful_session.clj#L94">src/sandbar/stateful_session.clj at master from brentonashworth/sandbar &#8211; GitHub</a></p>
+<h3>保存先</h3>
+<p>上記に書いた通り、標準のSessionの保存先はメモリとなっているので、サーバの再起動等で消えてしまいます。少し不安でもあったので、ファイルかDBに保存するモジュールが無いか調べました。</p>
+<p>その前にwrap-sessionで指定できるSessionの保存先というのはオプションで指定でき、下記の継承したものであれば良いようです。</p>
+<p><a href="https://github.com/mmcgrana/ring/blob/master/ring-core/src/ring/middleware/session/store.clj">ring-core/src/ring/middleware/session/store.clj at master from mmcgrana/ring &#8211; GitHub</a></p>
+<h3>SessionもMongoDBに保存したい！</h3>
+<p>せっかく今回、MongoDBを使っているので、セッションもMongoDBに格納したい！！</p>
+<p><a href="https://clojars.org/">clojars.org</a>で検索してみたところ、下記のモジュールが見つかりました。</p>
+<p><a href="https://github.com/hozumi/mongodb-session">hozumi/mongodb-session &#8211; GitHub</a></p>
+<p>サンプルを見たところ</p>
+<pre lang="clojure">
+(ns hello
+  (:require [ring.middleware.session :as rs]
+            [somnium.congomongo :as congo]
+            [hozumi.mongodb-session :as mongoss]
+        ...))
+
+(congo/mongo! :db "mydb" :host "127.0.0.1")
+
+(defroutes my-routes ....)
+
+(def app (-> my-routes
+           (rs/wrap-session {:store (mongoss/mongodb-store)})))
+</pre>
+<p>とあるので、既に宣言している<strong>mongo!</strong>の周り無視して、wrap-session辺りを修正するだけで大丈夫なようです。mongodb-storeを組み込んだコードはこんな感じになりました。</p>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        ring.middleware.reload-modified
+        somnium.congomongo
+        [ring.util.response :only (response content-type)]
+        fleet
+        (sandbar stateful-session auth))
+  (:require [compojure.route :as route]
+            [compojure.handler :as handl(mongoss/er]
+            [clj-json.core :as json]
+            [clojure.contrib.string :as string]
++            [hozumi.mongodb-session :as mongoss]))
+
+... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app-routes 
+  (GET "/" {} (tpl/index {})))
+
+(def app
+  (-> app-routes
+-    wrap-stateful-session
++    (wrap-stateful-session {:store (mongoss/mongodb-store)})))
+
+;; =============================================
+;; Run Server
+;; =============================================
+;; AutoReload Configuration
+(def app (handler/site app))
+(def handlerApp
+    (wrap-reload-modified #'app ["src"]))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty handlerApp {:port port})))
+</pre>
+<p>この状態で実際にセッションに値を格納するとMongoDBの方に<strong>ring_sessions</strong>というコレクションが出来ていると思います。ちなみに、ring_sessionsのレコードはこんな形式です。</p>
+<pre>
+> db.ring_sessions.find().forEach(printjson);
+{
+	"_id" : "c83528b0-cfce-4e0f-b70b-90adce0c21d5",
+	"_date" : ISODate("2011-10-31T17:34:55.022Z"),
+	"_sandbar_session" : {
+		"name" : "Tatsuya Fukata"
+	}
+}
+</pre>
+<h3>Cookieのオプション</h3>
+<p>wrap-sessionで生成されるCookieはデフォルトではexpires未指定でブラウザを閉じた場合に消去されるものになっています。これらのオプションを指定する場合には、wrap-sessionの引数として下記のように指定します。また、これはwrap-stateful-sessionでも同じ形式の引数で渡すことが出来ます。</p>
+<pre lang="clojure">
+(def app
+  (-> app-routes
+    (wrap-stateful-session
+      {:cookie-attrs {:expires "Thu, 1-Jan-2030 00:00:00 GMT", :path "/"},
+      :cookie-name "compojuretest-session",
+      :store (mongoss/mongodb-store)})))
+</pre>
+<p>上記以外の詳しい指定方法については、下記のソースを参照してみてください。</p>
+<p><a href="https://github.com/mmcgrana/ring/blob/master/ring-core/src/ring/middleware/session.clj#L28">ring-core/src/ring/middleware/session.clj at master from mmcgrana/ring &#8211; GitHub</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6409/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

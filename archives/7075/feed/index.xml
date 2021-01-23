@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: WordPressテーマ「tanzaku」の画像サイズを調整するPHP	</title>
+	<atom:link href="/archives/7075/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/7075/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:55 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Fuminobu Nakamura		</title>
+		<link>/archives/7075/comment-page-1/#comment-849</link>
+
+		<dc:creator><![CDATA[Fuminobu Nakamura]]></dc:creator>
+		<pubDate>Wed, 26 Jun 2013 01:40:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7075#comment-849</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7075/comment-page-1/#comment-848&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+function.phpに書き込んで出来ました！ありがとうございます！]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7075/comment-page-1/#comment-848">Tatsuya Fukata</a>.</p>
+<p>function.phpに書き込んで出来ました！ありがとうございます！</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7075/comment-page-1/#comment-848</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Tue, 25 Jun 2013 17:11:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7075#comment-848</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7075/comment-page-1/#comment-847&quot;&gt;Fuminobu Nakamura&lt;/a&gt;.
+
+はい、function.phpに書けばテンプレートファイル内から呼ぶことが出来ると思うので、そこで大丈夫だと思います。
+
+&#062; 101行目付近で生成しているグリッド用画像のURLというのが分かりません
+
+具体的に何が分からないのでしょうか？]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7075/comment-page-1/#comment-847">Fuminobu Nakamura</a>.</p>
+<p>はい、function.phpに書けばテンプレートファイル内から呼ぶことが出来ると思うので、そこで大丈夫だと思います。</p>
+<p>&gt; 101行目付近で生成しているグリッド用画像のURLというのが分かりません</p>
+<p>具体的に何が分からないのでしょうか？</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Fuminobu Nakamura		</title>
+		<link>/archives/7075/comment-page-1/#comment-847</link>
+
+		<dc:creator><![CDATA[Fuminobu Nakamura]]></dc:creator>
+		<pubDate>Thu, 20 Jun 2013 14:50:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7075#comment-847</guid>
+
+					<description><![CDATA[tanzakuを調べていてこの記事を拝見させていただいています。
+もしよろしければ教えて欲しいのですが、
+
+function replace_flickr_image_size($img, $size=&#039;n&#039;) {
+    $pattern = &quot;/(farm[0-9]+.staticflickr.com/.*_)(m&#124;z&#124;c&#124;l&#124;o).(jpg&#124;gif&#124;png)/&quot;;
+    $replace = &quot;$1$size.$3&quot;;
+    $img = preg_replace($pattern, $replace, $img);
+    return $img;
+}
+
+はfunction.phpに追記しればいいのでしょうか？
+また101行目付近で生成しているグリッド用画像のURLというのが分かりません、、、。
+本当に初心者な質問で申し訳ないのですが、
+教えて頂けるとありがたいです。]]></description>
+			<content:encoded><![CDATA[<p>tanzakuを調べていてこの記事を拝見させていただいています。<br />
+もしよろしければ教えて欲しいのですが、</p>
+<p>function replace_flickr_image_size($img, $size=&#8217;n&#8217;) {<br />
+    $pattern = &#8220;/(farm[0-9]+.staticflickr.com/.*_)(m|z|c|l|o).(jpg|gif|png)/&#8221;;<br />
+    $replace = &#8220;$1$size.$3&#8221;;<br />
+    $img = preg_replace($pattern, $replace, $img);<br />
+    return $img;<br />
+}</p>
+<p>はfunction.phpに追記しればいいのでしょうか？<br />
+また101行目付近で生成しているグリッド用画像のURLというのが分かりません、、、。<br />
+本当に初心者な質問で申し訳ないのですが、<br />
+教えて頂けるとありがたいです。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

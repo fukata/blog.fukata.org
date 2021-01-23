@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>goose &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/goose/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 25 Dec 2017 07:43:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>PHPなプロジェクトにcapistrano+gooseでデプロイとDBマイグレーション機能を追加する</title>
+		<link>/archives/9350/</link>
+					<comments>/archives/9350/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 25 Dec 2017 07:43:00 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[capistrano]]></category>
+		<category><![CDATA[goose]]></category>
+		<guid isPermaLink="false">/?p=9350</guid>
+
+					<description><![CDATA[知り合いのPHPプロジェクトを少し手伝う機会があったので試した時の記録。 広告 環境 PHP: 7.1.11 ruby: ruby 1.8.7 (2011-06-30 patchlevel 352)  ... <a href="/archives/9350/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9350/"><img src="https://farm5.staticflickr.com/4636/39148893112_461211ba7a_c.jpg" alt="PC196557" class="aligncenter"/></a></p>
+<p>知り合いのPHPプロジェクトを少し手伝う機会があったので試した時の記録。</p>
+<p><span id="more-9350"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<ul>
+<li>PHP: 7.1.11</li>
+<li>ruby: ruby 1.8.7 (2011-06-30 patchlevel 352) [x86_64-linux]</li>
+<li>gemコマンドない(インストールできない)</li>
+<li>rakeコマンドない</li>
+</ul>
+<p>みたいな構成のレンサバ。</p>
+<p>gemがインストール出来る環境だったらsinatra-activerecordとcapistranoでデプロイとDBマイグレーションを実現出来たはず。</p>
+<h2>goose</h2>
+<p>当初、あまりVPSだとばかり思ってxbuildでruby入れてsinatra-activerecordとcapistranoで対応しようかと思ったけど、よくよく調べてみると自由にソフトウェアをインストールすることが出来ない環境だった。</p>
+<p>何かソフトウェアをコンパイルするのは難しそうなのでgolangのマイグレーションツールであるgooseを使ってみた。</p>
+<p>シンプルだけど今回の要件を満たしてるので問題ない。</p>
+<h2>deploy.rb</h2>
+<p>大半のコードはcapistrano/railsのmigrationsから拝借したものになった。rake db:migrateの部分を書き換えただけ。</p>
+<p><script src="https://gist.github.com/fukata/bfc63dbcec5d76742323010b7af82461.js"></script></p>
+<h2>まとめ</h2>
+<p>自動デプロイとDBマイグレーションがあるとやっぱり助かる。</p>
+<p>普段、Railsを使ってる事が多いので、capistranoを使った。</p>
+<p>ただ、ある程度の規模のPHPプロジェクトを触ってくてPHPプロジェクトの場合、どういったデプロイツールやDBマイグレーションツールを使うのが流行りなのか知りたい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9350/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4636/39148893112_461211ba7a.jpg</image>
+	</item>
+	</channel>
+</rss>

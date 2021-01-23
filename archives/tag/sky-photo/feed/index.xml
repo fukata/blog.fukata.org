@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>sky-photo &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/sky-photo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:03:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>appiariesというBaasを使ってウェブサービスを作ってみた</title>
+		<link>/archives/7177/</link>
+					<comments>/archives/7177/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 06 Aug 2012 15:44:32 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[appiaries]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[sky-photo]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7177</guid>
+
+					<description><![CDATA[国内初というBaas「appiaries （アピアリーズ）」でキャンペーンをやっていたので課題を達成するのに便乗して、空の写真を集めるウェブサービス「Sky Photo(α)」をリリースしました。 使 ... <a href="/archives/7177/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/45259648@N06/7725829968" target="_blank" title="Sky Photo(α)"><img src="https://farm9.staticflickr.com/8425/7725829968_e012d26b26.jpg" alt="Sky Photo(α)" class="aligncenter"/></a></p>
+<p>国内初というBaas「<a href="https://www.appiaries.com/jp/index.html" target="_blank">appiaries （アピアリーズ）</a>」で<a href="https://appiaries.tumblr.com/post/26876155305/taiken-camp-201207" title="体験したらプレゼントキャンペーン / appiaries (アピアリーズ)" target="_blank">キャンペーン</a>をやっていたので課題を達成するのに便乗して、空の写真を集めるウェブサービス「<a href="https://sky-photo.net/" target="_blank">Sky Photo(α)</a>」をリリースしました。</p>
+<p>使っている技術などについて書いてみたいと思います。</p>
+<p><span id="more-7177"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今回、Sky Photoを作成するのに使ったのはPerlのDancerというフレームワークでController部分は1ファイルでゴリっと作成しました。ゴリッと作成したい時には非常に便利。appiariesとのOAuth2には<a href="https://fukata.org/2012/04/10/google-oauth2-use-net-oauth2/" target="_blank">Net::OAuth2を使ってGoogle OAuth2をやってみた</a>でも使ったNet::OAuth2を使ってサクッと(本当はサクッとじゃない。後述します。)実装出来ました。</p>
+<p>キャンペーンの課題として、OAuthのエンドポイントのURL作成とファイルをアップロードしてそのURLを貼るというのがあったので、ユーザからアップロードされた写真をアピアリーズに保存するということもやってみました。これはLWPを使って単純にアップロードしただけです。コードはこんな感じです。</p>
+<pre lang="perl">
+my $ua = LWP::UserAgent->new;
+my $response = $ua->request(POST(
+    "https://api-datastore.appiaries.com/bin/_sandbox/sky_photo/photos/_new?get=true&access_token=$application_token",
+    Content_Type => 'form-data',
+    Content => {
+        _type => 'image/jpeg',
+        _filename => $filename,
+        _file => [ $filepath ],
+    },  
+));
+</pre>
+<p>すごい簡単ですね。</p>
+<p>写真を短冊状に並べるのに<a href="https://blog.xlune.com/2009/09/jqueryvgrid.html" target="_blank">jquery.vgrid.js</a>を使いました。非常に使いやすくて便利なので、同じように画像を並べるようなサービスではどんどん使っていきたい感じ。</p>
+<p>デザインについては、Bootswatchから<a href="https://bootswatch.com/cerulean/" target="_blank">Bootswatch: Cerulean</a>を使っています。</p>
+<h2>ハマった点</h2>
+<p>まずは、OAuthでのこと。全くリファレンスを読まずに実装していたらOAuthでInvalid ClientIDが連発。。。結局、アプリのClient TypeがPublicになっていたのに認証方法として<a href="https://www.appiaries.com/jp/docs/api-profiles/oauth-api.html#api-pf-oauth-oauth-auth-code-grant-auth" target="_blank">認可コードグラント</a>を利用していたというオチ。Client TypeをConfidentialに変更してあっさり成功。</p>
+<p>次に、ファイルのアップロードについて、今度はリファレンスを読んでみるとファイルをアップロードする際に認証したユーザのアクセストークンが必要とのこと。ただ、どのユーザにも属さないようなデータでの利用がしたかったので探してみると他のドキュメントにアクセスレベルについてありました。アクセスレベルをALLにすると参照以外についてはアプリケーショントークンでの認証が行えるとのことだったので、上記のコードでファイルをアップロードすることが出来ました。</p>
+<h2>Sky Photoについて</h2>
+<p>空の写真を個人的に集めたかったので作ってみたんですが、せっかくサービスとしてリリースしたのはいいんですが、ログイン認証にまだ利用者が多いとは言えないアピアリーズのみということで、少しでも多くの人に利用してもらえるようにTwitter, FacebookでのOAuthもつけようかと思います。また、スマホから気軽にアップロードができるようにクライアントアプリについても作成予定です。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7177/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8425/7725829968_e012d26b26.jpg</image>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [GAE/P]独自のValidationManagerを作ってみました	</title>
+	<atom:link href="/archives/1887/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/1887/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:08 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: tatsuya		</title>
+		<link>/archives/1887/comment-page-1/#comment-565</link>
+
+		<dc:creator><![CDATA[tatsuya]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2009 14:03:49 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=1887#comment-565</guid>
+
+					<description><![CDATA[&gt;&gt;tukasa-reaさん
+
+お久しぶりです。
+自分は普通自動車免許しか持ってません＾＾；
+福岡の方でのんびりと仕事をしてますよw]]></description>
+			<content:encoded><![CDATA[<p>>>tukasa-reaさん</p>
+<p>お久しぶりです。<br />
+自分は普通自動車免許しか持ってません＾＾；<br />
+福岡の方でのんびりと仕事をしてますよw</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: tukasa-rea		</title>
+		<link>/archives/1887/comment-page-1/#comment-564</link>
+
+		<dc:creator><![CDATA[tukasa-rea]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2009 13:36:12 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=1887#comment-564</guid>
+
+					<description><![CDATA[専門的すぎて、もはや素人の僕にはわからんょ（＾＾；
+いちおう、通産省国家2種って資格は持ってるんだけどね。。
+もはや化石となってしまったなぁ。
+元気そうで何よりです。]]></description>
+			<content:encoded><![CDATA[<p>専門的すぎて、もはや素人の僕にはわからんょ（＾＾；<br />
+いちおう、通産省国家2種って資格は持ってるんだけどね。。<br />
+もはや化石となってしまったなぁ。<br />
+元気そうで何よりです。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

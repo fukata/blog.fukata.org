@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>トリプルディスプレイ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%88%E3%83%AA%E3%83%97%E3%83%AB%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>モニタアーム、トリプルディスプレイにしてみた</title>
+		<link>/archives/7709/</link>
+					<comments>/archives/7709/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 19 Nov 2014 19:19:14 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[トリプルディスプレイ]]></category>
+		<category><![CDATA[モニタアーム]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7709</guid>
+
+					<description><![CDATA[動画を垂れ流す用のディスプレイが欲しかったのでトリプルディスプレイにしてみました。あと、机のスペース的にトリプルディスプレイにできる余裕が無かったのでモニタアームも設置してみました。 広告 材料 とり ... <a href="/archives/7709/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/15643209797" target="_blank" title="PB190004"><img src="https://farm8.staticflickr.com/7490/15643209797_d85992ce7e_c.jpg" alt="PB190004" class="aligncenter"/></a></p>
+<p>動画を垂れ流す用のディスプレイが欲しかったのでトリプルディスプレイにしてみました。あと、机のスペース的にトリプルディスプレイにできる余裕が無かったのでモニタアームも設置してみました。</p>
+<p><span id="more-7709"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>材料</h2>
+<p>とりあえず、今回買ったもの。</p>
+<table>
+<tr>
+<td><iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B00DCGO2PS" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></td>
+<td><iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B00HQP3RSE" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></td>
+<td><iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B0052GQ498" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></td>
+<td><iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B00HQY7W2M" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></td>
+<td><iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B005WZ2C0E" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></td>
+<td><iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B00FZTNQFM" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></td>
+</tr>
+</table>
+<h2>モニタアーム</h2>
+<p>モニタアームの設置具合。アームが2つ付いている<a href="https://www.amazon.co.jp/gp/product/B00NFELXSQ/ref=as_li_ss_tl?ie=UTF8&#038;camp=247&#038;creative=7399&#038;creativeASIN=B00NFELXSQ&#038;linkCode=as2&#038;tag=fukata-22">GH-AMCA03</a><img loading="lazy" src="https://ir-jp.amazon-adsystem.com/e/ir?t=fukata-22&#038;l=as2&#038;o=9&#038;a=B00NFELXSQ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />もあるんですが、配置の自由度が高いと思って単体のものを2つ買いました。</p>
+<p><a href="https://www.flickr.com/photos/fukata/15642556409" target="_blank" title="PB190009"><img src="https://farm8.staticflickr.com/7504/15642556409_3008f0777a_c.jpg" alt="PB190009" class="aligncenter"/></a></p>
+<h2>配線</h2>
+<p>コンセントが机の左側から来ていたのでOAタップとUSBを全部左にまとめてみました。USBハブはマグネットが付いてたのでそのままで付きました。タップの方は強めの両面テープでくっつけました。</p>
+<p><a href="https://www.flickr.com/photos/fukata/15642959148" target="_blank" title="PB190011"><img src="https://farm8.staticflickr.com/7545/15642959148_de1872a9e8_c.jpg" alt="PB190011" class="aligncenter"/></a></p>
+<p>空きが2つ。多分、それほど増えないと思うので大丈夫でしょう。<br />
+<a href="https://www.flickr.com/photos/fukata/15829930042" target="_blank" title="PB190019"><img src="https://farm8.staticflickr.com/7568/15829930042_f1df6d1fbe_c.jpg" alt="PB190019" class="aligncenter"/></a></p>
+<p>マグネット付きのUSB3.0対応ハブ。HHKB Type-SとAndroid,iPhoneそれぞれのケーブルを付けてます。コレも当面他に付ける予定がないので空きが2つもあれば十分でしょう。<br />
+<a href="https://www.flickr.com/photos/fukata/15208939153" target="_blank" title="PB190013"><img src="https://farm8.staticflickr.com/7516/15208939153_fb917352b1_c.jpg" alt="PB190013" class="aligncenter"/></a></p>
+<p>現状、こんな感じになってます。ヘッドフォンを着けている事が多いのでスピーカーを設置していません。</p>
+<p>モニタアームにしたことによってベッドの方にディスプレイを向ける事が出来るようになって寝ながらhuluが見放題になりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7709/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7490/15643209797_d85992ce7e.jpg</image>
+	</item>
+		<item>
+		<title>トリプルディスプレイへの道 〜その2〜</title>
+		<link>/archives/1198/</link>
+					<comments>/archives/1198/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 14 May 2009 17:17:12 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[トリプルディスプレイ]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1198</guid>
+
+					<description><![CDATA[24インチのディスプレイが置けるかどうか机の上を計ってみました。現在使用している机自体は横幅140cmあるので、なんとか大丈夫そうです。ただ、スピーカーの場所とかが若干変えないときついかもしれないです ... <a href="/archives/1198/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>24インチのディスプレイが置けるかどうか机の上を計ってみました。現在使用している机自体は横幅140cmあるので、なんとか大丈夫そうです。ただ、スピーカーの場所とかが若干変えないときついかもしれないです。</p>
+<p>あとは、まだあまり動作報告がない、Linuxでのトリプルディスプレイの設定方法についてですね。まだ、こちらは調査が進んでいません。サインはDVIなどを利用すればwindowsでは何なく使えそうですけど、Linuxの場合、デバイスの認識という壁がまずあるので、その辺の動作保証を探したいと思います。</p>
+<p>もし既に、何らかの方法でトリプルディスプレイを実現させている方がいましたら、教えていただきたいです。</p>
+<p>なんというか、ワクワクしますね。</p>
+<p>とりあえず、注文する前に一度現物を見たいので、ヨドバシカメラなどで現物を見てきます。ヨドバシカメラへ行けるのはいつになるだろうか・・・</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1198/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>トリプルディスプレイへの道 〜その1〜</title>
+		<link>/archives/1195/</link>
+					<comments>/archives/1195/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 14 May 2009 11:16:01 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[トリプルディスプレイ]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1195</guid>
+
+					<description><![CDATA[今、猛烈にトリプルディスプレイにしたいです。 今からトリプルディスプレイにするんだったら19インチとかケチってないで思い切ってもっと解像度の高い奴を買ってやろうと思い、価格.comで検索してみました。 ... <a href="/archives/1195/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今、猛烈にトリプルディスプレイにしたいです。</p>
+<p>今からトリプルディスプレイにするんだったら19インチとかケチってないで思い切ってもっと解像度の高い奴を買ってやろうと思い、価格.comで検索してみました。</p>
+<p>コストパフォーマンス的に下記の商品が良さげ。<br />
+<a href="https://kakaku.com/spec/K0000023792/">https://kakaku.com/spec/K0000023792/</a></p>
+<p>24インチでフルHD。さらに光沢パネルじゃないとキタ。光沢パネルだと論外なので、これに対応してくれてて嬉しい。光沢パネルって電気とか写り込んで邪魔なんですよね。</p>
+<p>そして、自分はThinkpad X61を使用しているので、デュアルディスプレイまでは簡単に設定ができるんですが、トリプルディスプレイとなるとマルチディスプレイアダプタを接続する必要があり、さらにそのデバイスがubuntu上で動作確認できないといけない。</p>
+<p>買おうとしているディスプレイの接続方法は下記の三つなんですが、これに対応しているマルチディスプレイアダプタの動作確認済機種、設定方法を現在調査中です。</p>
+<p>そもそも、24インチのディスプレイを二つなんて今のデスクに置けるかな・・・</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B001U65S0U&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1195/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

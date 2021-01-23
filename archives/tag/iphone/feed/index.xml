@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>iphone &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/iphone/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Macでトラベルキーボード</title>
+		<link>/archives/1215/</link>
+					<comments>/archives/1215/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 21 May 2009 15:43:11 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[iphone]]></category>
+		<category><![CDATA[トラベルキーボード]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1215</guid>
+
+					<description><![CDATA[ただいま、会社でmac+トラベルキーボードを使用しています。やっぱり、マウスが無いって狭いデスクでは非常に大きい。 これで、少しはmacでの開発が楽しくなるかも♪macを使うのは嫌なんですけどね＾＾； ... <a href="/archives/1215/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5096/5476247264_a7f1b5097c_m.jpg" target="_blank" title="cimg0978"><img loading="lazy" src="https://farm6.static.flickr.com/5096/5476247264_a7f1b5097c_m.jpg" alt="cimg0978" width="200" height="150" class="attachment wp-att-1214 alignleft" /></a>ただいま、会社でmac+トラベルキーボードを使用しています。やっぱり、マウスが無いって狭いデスクでは非常に大きい。</p>
+<p>これで、少しはmacでの開発が楽しくなるかも♪macを使うのは嫌なんですけどね＾＾；</p>
+<p>とりあえず、iPhoneアプリの開発スキルを身につけれると思って、毎日葛藤していことうと誓いました。そして、最終的には自分でも・・・まぁ、iPhoneアプリのクライアントアプリだけならインフラのバックボーンが無い個人ユーザでも作成できるでしょうからね。</p>
+<p>iPhoneアプリは市場は、アイディア次第では非常に大きな存在だと思う。特に個人ユーザには。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1215/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

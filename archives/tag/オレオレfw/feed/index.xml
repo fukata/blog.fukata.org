@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>オレオレFW &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%AA%E3%83%AC%E3%82%AA%E3%83%ACfw/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Mojoliciousを使ってオレオレFW化への道 〜ModelとLogicの分離〜</title>
+		<link>/archives/7219/</link>
+					<comments>/archives/7219/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 23 Sep 2012 15:01:52 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[オレオレFW]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7219</guid>
+
+					<description><![CDATA[前回、Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜で、MojoliciousにCLI機能を追加したことを書いたんですが、今回はModelとLogicを分離します。 中規模程 ... <a href="/archives/7219/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>前回、<a href="https://fukata.org/2012/07/08/mojolicious-oreore-fw-add-cli/" title="Tatsuya Blog » Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜" target="_blank">Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜</a>で、MojoliciousにCLI機能を追加したことを書いたんですが、今回はModelとLogicを分離します。</p>
+<p>中規模程度のサイトになってくるとそれなりに処理を共通化させないと自分の頭ではどこに何があるか分からなくなるので、これらは必須です。</p>
+<p>現在作成中のサービスでMojoliciousを初めて使っており、今回作成した構造がうまく機能しない可能性もあります。とりあえず、第1弾として実装してみました。また、今回ModelとLogicを分離するのにあたって、Mojoliciousプラグインも一緒に作ってみました。</p>
+<p><span id="more-7219"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>ディレクトリ構造</h2>
+<p>lib以下のディレクトリ構造は下記のようになっています。CliとWebでModel, Logicを共通化したかったので、同じ階層に持ってきています。また、分離するのにMojoliciousプラグインとして実装したので、MyApp::Mojolicious::Pluginにプラグインとして置いています。全然大したプラグインではないのと、ほとんど重複しているので1つのプラグインとして実装できると思います。</p>
+<pre>
+lib/
+├── MyApp
+│   ├── Cli
+│   │   └── Example.pm
+│   ├── Cli.pm
+│   ├── Logic
+│   │   └── Example.pm
+│   ├── Logic.pm
+│   ├── Model
+│   │   └── Example.pm
+│   ├── Model.pm
+│   ├── Mojolicious
+│   │   └── Plugin
+│   │       ├── Logic.pm
+│   │       └── Model.pm
+│   ├── Web
+│   │   └── Controller
+│   │       └── Root.pm
+│   └── Web.pm
+└── MyApp.pm
+</pre>
+<h2>MyApp::Mojolicious::Plugin::Model</h2>
+<p>Logicの方はModelの部分がLogicに変わっただけです。今回アプリを実際に作ってみて共通化して問題なさげだったらModelとLogic用のプラグインを1つにまとめた方が良いかもしれません。</p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Mojolicious-Plugin-Model.pm"></script></p>
+<h2>MyApp::Modelとその子クラス</h2>
+<p>ModelのベースとなるMyApp::Modelとその子クラスになります。まだ、Model共通で使うORMなどは定義していないんですが、ここに定義すればいいのかなと思っています。</p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Model.pm"></script></p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Model-Example.pm"></script></p>
+<h2>プラグインの登録、呼び出し</h2>
+<p>Mojoliciousプラグインは通常Mojolicious::Pluginから検索するんですが、今回はプロジェクト内にアプリ固有のネームスペース配下にプラグインを設置したのでネームスペースを追加する必要があります。<br />
+<script src="https://gist.github.com/3771718.js?file=Web.pm"></script></p>
+<p>実際にアプリ内から呼び出してみたところ。無名関数なのでアロー演算子があるが、出来ればコレが無い形で提供できれば呼び出しも綺麗になる。もしくは、こんな感じでも良い。</p>
+<pre lang="perl">
+// コレがベスト
+my $model = $self->app->model("Example");
+// コレでもいい
+my $model = $self->app->model->load("Example");
+</pre>
+<p>まぁ、オレオレで使うだけなので、極力文字数が少ない方に越したこと無い。</p>
+<p><script src="https://gist.github.com/3771718.js?file=MyApp-Web-Controller-Root.pm"></script></p>
+<p>ということで、とりあえずModelとLogicを分離してみました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7219/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mojoliciousを使ってオレオレFW化への道 〜CLI機能の追加〜</title>
+		<link>/archives/7136/</link>
+					<comments>/archives/7136/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 08 Jul 2012 07:52:58 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[オレオレFW]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7136</guid>
+
+					<description><![CDATA[最近、自分の中で中規模（WEBとちょっとしたバッチ数本）サイトを作成する時に以前はPHPを使用していたんですが、本業でPerlを触りだしたというのとCPANの便利さに慣れてしまって今ではPerlで作る ... <a href="/archives/7136/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、自分の中で中規模（WEBとちょっとしたバッチ数本）サイトを作成する時に以前はPHPを使用していたんですが、本業でPerlを触りだしたというのとCPANの便利さに慣れてしまって今ではPerlで作ることが多くなりました。 スタートアップを早めるために個人的に使いやすいFWを使ってプロジェクトのひな形を作っています。</p>
+<p>プロジェクトのひな形を作る前にどのFWを使おうか迷ったんですが、MVCベースで依存性の低いものが欲しかったのとちょうど<a href="https://mojolicio.us/" target="_blank">Mojolicious3.0</a>のリリース記事を見かけたのでMojoliciousを使うことにしました。ちなみにMojoliciousを使うのは今回が初めてです。</p>
+<p>今回はMojoliciousにCLI機能を追加してみます。</p>
+<p><span id="more-7136"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>まず、最終的にこんな感じで実行したいです。</p>
+<pre lang="bash">
+./script/cli Hoge
+</pre>
+<p>Hogeはファイル単位に分割されたcli用モジュール名です。</p>
+<p>Mojoliciousにcil機能を追加した結果、下記のようなファイル構成になりました。mojo generate app MyApp::WebとすることでWeb用のネームスペースを確保しています。</p>
+<pre>
+my_app/
+├── lib
+│   └── MyApp
+│       ├── Cli
+│       │   └── Hoge.pm
+│       ├── Cli.pm
+│       ├── Web
+│       │   └── Example.pm
+│       └── Web.pm
+├── log
+├── public
+│   └── index.html
+├── script
+│   ├── cli
+│   └── my_app
+├── t
+│   └── basic.t
+└── templates
+    ├── example
+    │   └── welcome.html.ep
+    └── layouts
+        └── default.html.ep
+</pre>
+<p>新たに追加したファイルはこんな感じになっています。</p>
+<h2>追加したファイル</h2>
+<h3>MyApp/Cli.pm</h3>
+<pre lang="perl">
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+
+package MyApp::Cli;
+use Mojo::Base 'Mojo::Command';
+
+use FindBin;
+use File::Basename 'dirname';
+use File::Spec::Functions qw(catdir splitdir);
+
+sub development_mode {
+    my $self = shift;
+}
+
+sub production_mode {
+    my $self = shift;
+}
+
+sub setup {
+    my $self = shift;
+    my $app  = $self->app;
+    my $mode = $app->mode;
+
+    # setup each mode
+    eval {
+        my $method = "${mode}_mode";
+        $self->$method;
+    };
+}
+
+1;
+</pre>
+<h3>MyApp/Cli/Hoge.pm</h3>
+<pre lang="perl">
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+
+package MyApp::Cli::Hoge;
+use Mojo::Base 'MyApp::Cli';
+
+sub run {
+    my $self = shift;
+    local @ARGV = @_; 
+
+    $self->setup;
+}
+
+1;
+</pre>
+<h3>script/cli</h3>
+<pre lang="perl">
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+
+use UNIVERSAL::require;
+use File::Basename 'dirname';
+use File::Spec::Functions qw(catdir splitdir);
+
+# Source directory has precedence
+my @base = (splitdir(dirname(__FILE__)), '..');
+my $lib = join('/', @base, 'lib');
+-e catdir(@base, 't') ? unshift(@INC, $lib) : push(@INC, $lib);
+
+my $cmd = shift @ARGV;
+my $module = "MyApp::Cli::$cmd";
+$module->require;
+$module->run( @ARGV );
+</pre>
+<h2>まとめ</h2>
+<p>とりあえず、./script/cli Hogeの形でモジュールを実行することが出来るようになりました。cli側で$app->pluginメソッドも使えるので、web側と同じようにconfigやdatabase、その他のpluginをロードして利用することが出来るようになっています。</p>
+<p>database周りと入力値の検証用ライブラリ、ロジックの分離ができたら実際にアプリを作ってみたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7136/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

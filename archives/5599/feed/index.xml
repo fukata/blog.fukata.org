@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン0.3.0をリリース	</title>
+	<atom:link href="/archives/5599/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5599/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5599/comment-page-1/#comment-704</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Fri, 24 Jun 2011 03:11:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5599#comment-704</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5599/comment-page-1/#comment-703&quot;&gt;深田 達也(Tatsuya Fukata)&lt;/a&gt;.
+
+検証して、原因だとも思われる部分が特定できました。
+
+依存しているPHPFlickrというライブラリで、OAuth認証後にセッションにOAuthトークンを保存しているのでセッションが残っている間、OAuthトークンの指定がなければ、そちらを使用するようでした。
+
+設定画面でOAuthトークンの更新後、一番下にある更新ボタンを押してもらうと、ログアウト後も正常に表示されるかと思います。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5599/comment-page-1/#comment-703">深田 達也(Tatsuya Fukata)</a>.</p>
+<p>検証して、原因だとも思われる部分が特定できました。</p>
+<p>依存しているPHPFlickrというライブラリで、OAuth認証後にセッションにOAuthトークンを保存しているのでセッションが残っている間、OAuthトークンの指定がなければ、そちらを使用するようでした。</p>
+<p>設定画面でOAuthトークンの更新後、一番下にある更新ボタンを押してもらうと、ログアウト後も正常に表示されるかと思います。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5599/comment-page-1/#comment-703</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Fri, 24 Jun 2011 02:12:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5599#comment-703</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5599/comment-page-1/#comment-702&quot;&gt;ゲスト&lt;/a&gt;.
+
+コメントありがとうございます。
+
+すいません、私の方が非公開の画像を使用していなかったので、気づきませんでした。依存しているライブラリの影響かもしれませんので、こちらで検証してみます。
+
+ちなみに、利用しているwp-flickr-pressのバージョンはv1.2.2でしょうか？
+
+指摘ありがとうございます。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5599/comment-page-1/#comment-702">ゲスト</a>.</p>
+<p>コメントありがとうございます。</p>
+<p>すいません、私の方が非公開の画像を使用していなかったので、気づきませんでした。依存しているライブラリの影響かもしれませんので、こちらで検証してみます。</p>
+<p>ちなみに、利用しているwp-flickr-pressのバージョンはv1.2.2でしょうか？</p>
+<p>指摘ありがとうございます。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ゲスト		</title>
+		<link>/archives/5599/comment-page-1/#comment-702</link>
+
+		<dc:creator><![CDATA[ゲスト]]></dc:creator>
+		<pubDate>Fri, 24 Jun 2011 02:04:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5599#comment-702</guid>
+
+					<description><![CDATA[とても便利に使わせていただいています。
+特に、非公開にしているファイルを選択できる所が助かっています。
+
+ありがとうございます。
+
+
+主に、Opera11.*、FireFox4.*で使用していますが、
+ブラウザを閉じる、もしくはwordpressからログアウトすると
+次回の投稿時に非公開ファイルが選択肢に表示されなくなります。
+(cookieやキャッシュなどは毎回削除しています。)
+ OAuthの認証(と設定の更新)は毎回行わなければいけないのでしょうか?
+
+こちらの設定で不備などあるようでしたら教えていただけると嬉しく思います。 ]]></description>
+			<content:encoded><![CDATA[<p>とても便利に使わせていただいています。<br />
+特に、非公開にしているファイルを選択できる所が助かっています。</p>
+<p>ありがとうございます。</p>
+<p>主に、Opera11.*、FireFox4.*で使用していますが、<br />
+ブラウザを閉じる、もしくはwordpressからログアウトすると<br />
+次回の投稿時に非公開ファイルが選択肢に表示されなくなります。<br />
+(cookieやキャッシュなどは毎回削除しています。)<br />
+ OAuthの認証(と設定の更新)は毎回行わなければいけないのでしょうか?</p>
+<p>こちらの設定で不備などあるようでしたら教えていただけると嬉しく思います。 </p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

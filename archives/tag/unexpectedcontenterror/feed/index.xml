@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>UnexpectedContentError &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/unexpectedcontenterror/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:44:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Cupertino gemでUnexpectedContentErrorが発生したのでSpaceship gemに切り替えた</title>
+		<link>/archives/7950/</link>
+					<comments>/archives/7950/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 07 Apr 2016 23:49:04 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Cupertino]]></category>
+		<category><![CDATA[Spaceship]]></category>
+		<category><![CDATA[UnexpectedContentError]]></category>
+		<guid isPermaLink="false">https://fukata.org/?p=7950</guid>
+
+					<description><![CDATA[現在もタイなので関係ないが、花見の季節が過ぎた。今回は表題の通りでSpaceship gemを使って証明書のDL処理を書いたのでメモ。 広告 下記のような感じのファイルをゴリった。idによる抽出しか出 ... <a href="/archives/7950/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7950/"><img src="https://farm2.staticflickr.com/1455/26074881452_c066f0a99f_c.jpg" alt="S__29278216" class="aligncenter"/></a></p>
+<p>現在もタイなので関係ないが、花見の季節が過ぎた。今回は表題の通りでSpaceship gemを使って証明書のDL処理を書いたのでメモ。</p>
+<p><span id="more-7950"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>下記のような感じのファイルをゴリった。idによる抽出しか出来ないので使い勝手はちょっと悪いかもしれない。</p>
+<p><script src="https://gist.github.com/fukata/12a193bcfae3514b465e20e120c6f705.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7950/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1455/26074881452_c066f0a99f.jpg</image>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CIUnit &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ciunit/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CIUnit-for-CI2のメンテをNEKOGETさんがやってくれることになりました</title>
+		<link>/archives/7511/</link>
+					<comments>/archives/7511/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 31 Jul 2013 15:58:28 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7511</guid>
+
+					<description><![CDATA[皆さん、CodeIgniter(以下、CI)覚えていますか？FuelPHPに変わられた終わったFWと思っている方も多いかもしれませんが、使われているところには使われています。(私自身は業務で使用する言 ... <a href="/archives/7511/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>皆さん、CodeIgniter(以下、CI)覚えていますか？FuelPHPに変わられた終わったFWと思っている方も多いかもしれませんが、使われているところには使われています。(私自身は業務で使用する言語がphpからperlに変わったので使っていません)</p>
+<p>自分で使っていないのでPull Requestとか来てもそれが有効なものなのか判断がすぐにつかず、取り込むのが遅れてしまったり大丈夫だろうという軽い気持ちで取り込んでしまったりする恐れがあるため、誰かCIを現役で使っていてメンテやってくれる人いないかな〜とtwitterでつぶやいてみたところ、@<a href="https://twitter.com/NEKOGET">NEKOGET</a>さんが快くやってくれることになりました。</p>
+<p><span id="more-7511"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>NEKOGETさんとは一度も会ったことはありませんが、twitter上では何度かやり取りしたことがあり、FuelPHPのドキュメントの日本語訳をこまめにやってるなぁ〜とずっと思っていました。NEKOGETさんは現役でCI、CIUnitを使っているらしく、これからも必然的にメンテが必要になるようでしたので、メンテをしてもらえないかとお願いしたところあっさり引き受けてもらえました。</p>
+<p><strong>NEKOGETさんありがとうございます！</strong></p>
+<p><a href="https://github.com/fukata/CIUnit-for-CI2">CIUnit-for-CI2</a>は、まだ自分が業務でCI2を使っている時にCIUnitのコードを見てなんとなく動くんじゃないかと思って修正したものが実際にCI2でも動作したのでgithub上で公開したわけですけど、コレまでいくつかPull Requestもいただいていて実際に使ってもらえてるようです。</p>
+<p>自分の作ったコードを他人が使ってくれているというのは凄い励みになりますし、使ってくれるだけでなく、メンテまでやってもらえるなんて作った甲斐があります。これでCIUnit-for-CI2もメンテしてくれない自分じゃなく、メンテしてくれる（はず）のNEKOGETさんの手に渡って嬉しく思っていることでしょう。</p>
+<p><a href="https://github.com/fukata/CIUnit-for-CI2">CIUnit-for-CI2</a>をこれからもよろしくお願いします。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7511/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]CIUnitのインストールスクリプトを書いてみた</title>
+		<link>/archives/6088/</link>
+					<comments>/archives/6088/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 05 Sep 2011 05:55:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6088</guid>
+
+					<description><![CDATA[CodeIgniter 2.0.3 に PHPUnit/CIUnit をインストールする &#8211; A Day in Serenity @ Kenji 自分も度々CIUnitをCIに適用している ... <a href="/archives/6088/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://d.hatena.ne.jp/Kenji_s/20110905/1315190819">CodeIgniter 2.0.3 に PHPUnit/CIUnit をインストールする &#8211; A Day in Serenity @ Kenji</a></p>
+<p>自分も度々CIUnitをCIに適用しているとdatabase.phpの編集が特にめんどくさく感じていました。</p>
+<p>で、簡単なインストールスクリプトを書いてみました。今のところ、CI v2.0.3を解凍した段階のプロジェクトには適用できると思います。</p>
+<p><a href="https://gist.github.com/1194192">CIUnit Install Script — Gist</a></p>
+<p>今回のインストールスクリプトについては、個人的にメンテナンスしているCIUnitのプロジェクトの方にも追加しておきました。</p>
+<p><a href="https://github.com/fukata/CIUnit-for-CI2">fukata/CIUnit-for-CI2 &#8211; GitHub</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6088/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>CodeIgniter2 + CIUnit2 + Jenkinsで継続的インテグレーションをやってみた</title>
+		<link>/archives/5991/</link>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 27 Jul 2011 03:37:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[Continuous Integration]]></category>
+		<category><![CDATA[Jenkins]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5991</guid>
+
+					<description><![CDATA[なんか、色々と意気消沈気味だったので、東京から上海に戻ってくる時にVMの構築を途中まで行っていたJenkinsを少し触ってみることにしました。とりあえず、目的としては、表題にも書いている通り、Code ... <a href="/archives/5991/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>なんか、色々と意気消沈気味だったので、東京から上海に戻ってくる時にVMの構築を途中まで行っていたJenkinsを少し触ってみることにしました。とりあえず、目的としては、表題にも書いている通り、CodeIgniter2(2.0.2), CIUnit2(カスタム版）, Jenkinsを使って、ビルドからテスト、コードチェックまで行える環境を作ることです。</p>
+<p>また、今回使用したソースは下記のリポジトリにアップしています。</p>
+<p><a href="https://github.com/fukata/ciunit2_and_jenkins">fukata/ciunit2_and_jenkins &#8211; GitHub</a></p>
+<p>PHPによるJenkinsのインストールなどについては、下記のサイトがとても参考になりました。</p>
+<p><a href="https://d.hatena.ne.jp/Yamashiro0217/20110619/1308491991">PHPでTDD&#038;CIワークショップ、Jenkins + PHP の各種プラグインパート資料 &#8211; Yamashiro0217の日記</a><br />
+<a href="https://blog.symfony.jp/2011/03/19/307">Symfony2でJenkinsを使ってCI « symfonyで開発日記</a></p>
+<p>今回はUbuntu 10.04 Server版を使ったため、Jenkinsはapt版を入れています。インストール方法は<a href="https://pkg.jenkins-ci.org/debian/" target="_blank">ここに</a>書かれている通りです。</p>
+<pre lang="BASH">
+wget -q -O - https://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo vim /etc/apt/sources.list
+> 末尾に追加: deb https://pkg.jenkins-ci.org/debian binary/
+sudo apt-get update
+sudo apt-get install jenkins
+</pre>
+<h3>build.xml作成</h3>
+<p>Jenkinsからプロジェクトをビルドする際に使用するbuild.xmlは上記のサイトでも行われているppwコマンドを利用しました。今回のプロジェクトだと下記のようになりました。</p>
+<pre lang="BASH">
+cd ciunit2_and_jenkins
+ppw --name ciunit2_and_jenkins --source ./src/application/ --tests ./src/application/tests/ --bootstrap ./src/application/third_party/CIUnit/bootstrap_phpunit.php --phpcs PEAR .
+</pre>
+<p>ただ、CIUnitの場合、sourceで指定したディレクトリ内にCIUnitやtestsコードが含まれている為、これらを解析対象から除外したい場合には下記のように、生成されたbuild.xmlを修正します。</p>
+<pre lang="DIFF">
+--- build.xml	2011-07-27 10:41:01.164477818 +0800
++++ build.xml.new	2011-07-27 10:40:51.814477818 +0800
+@@ -49,7 +49,8 @@
+    <arg line="${source}
+               xml
+               codesize,design,naming,unusedcode
+-              --reportfile ${basedir}/build/logs/pmd.xml"></arg>
++              --reportfile ${basedir}/build/logs/pmd.xml
++              --exclude third_party/CIUnit/" />
+   
+  
+ 
+@@ -61,7 +62,7 @@
+ 
+  <target name="phploc" description="Generate phploc.csv">
+   <exec executable="phploc">
+-   <arg line="--log-csv ${basedir}/build/logs/phploc.csv ${source}"></arg>
++   <arg line="--log-csv ${basedir}/build/logs/phploc.csv --exclude ${source}third_party/CIUnit ${source}"></arg>
+   </exec>
+  </target>
+ 
+@@ -70,13 +71,14 @@
+    <arg line="--report=checkstyle
+               --report-file=${basedir}/build/logs/checkstyle.xml
+               --standard=PEAR
++              --ignore=tests/,third_party/CIUnit
+               ${source}"></arg>
+   
+  
+ 
+  <target name="phpdoc" description="Generate API documentation using PHPDocumentor">
+   <exec executable="phpdoc">
+-   <arg line="-d ${source} -t ${basedir}/build/api"></arg>
++   <arg line="-d ${source} -t ${basedir}/build/api -i third_party/CIUnit/"></arg>
+   </exec>
+  </target>
+</pre>
+<h3>CodeIgniter用のCodeSniffer</h3>
+<p>ppwコマンドの&#8211;phpcsオプションでコードのスタイルチェックのモジュールを選べます。先ほどのコマンドではPEARを選択（デフォルトでもPEAR）したのですが、PEARのコード規約とCodeIgniterのコード規約がところどころ異なっており、CodeIgniterの規約的には正しいのに間違ってると警告されます。</p>
+<p>上記のページを参考にphpcsをインストールした場合、linuxの場合、下記のディレクトリにインストールされていると思います。</p>
+<pre lang="BASH">
+/usr/share/php/PHP/CodeSniffer/Standards
+</pre>
+<p>初期でインストールされているのは、下記のみです。</p>
+<pre lang="BASH">
+phpcs -i
+The installed coding standards are PEAR, MySource, PHPCS, Squiz and Zend
+</pre>
+<p>インストールされているものを参考にCodeIgniter用のCodeSnifferを作成すれば、コードチェックについても正常に行えるようになります。</p>
+<p>で、少し探してみたのですが、CodeIgniter用のCodeSnifferが見つからなかったので、作る必要があるかもしません。とりあえず、先走り気味にリポジトリだけ作成しました。</p>
+<p><del datetime="2011-07-27T06:13:08+00:00">fukata/codesniffer_codeigniter &#8211; GitHub</del></p>
+<p>@<a href="https://twitter.com/#!/yterajima">yterajima</a>さんから下記のリポジトリを教えてもらったので、これをforkすることにしました。<br />
+<a href="https://github.com/thomas-ernest/CodeIgniter-for-PHP_CodeSniffer">thomas-ernest/CodeIgniter-for-PHP_CodeSniffer &#8211; GitHub</a></p>
+<h3>おまけ：githubのプライベートリポジトリを利用する</h3>
+<p>jenkinsのgit pluginからgithubのプライベートリポジトリを利用する機会があったので、その時にはまったことについて書いておきます。</p>
+<p>はまったのは、gitへ接続する際に利用するssh keyの設定についてです。</p>
+<p>apt版jenkinsの場合、jenkinsの実行にはjenkinsユーザが行っているかと思います。そのjenkinsユーザのホームディレクトリが/var/lib/jenkinsに設定されており、/var/lib/jenkins/.sshがあるので、そこに必要な鍵等を入れます。で、次にjenkinsユーザでログインし、下記のコマンドでgithubに一度繋いでおきます。</p>
+<pre lang="BASH">
+ssh git@github.com
+</pre>
+<p>これで、jenkinsで、githubのプライベートリポジトリに対してgit cloneを正常に行えるようになります。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]CIUnitをCI2.0.2へ対応させるために行ったこと</title>
+		<link>/archives/5791/</link>
+					<comments>/archives/5791/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 20 Jun 2011 01:59:56 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5791</guid>
+
+					<description><![CDATA[rafsoaken / CIUnit / overview – Bitbucket CIUnit本家の更新が３ヶ月ほど行われておらず、CodeIgniter 2.0.2への対応がされていなかったので、 ... <a href="/archives/5791/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://bitbucket.org/rafsoaken/ciunit">rafsoaken / CIUnit / overview – Bitbucket</a></p>
+<p>CIUnit本家の更新が３ヶ月ほど行われておらず、CodeIgniter 2.0.2への対応がされていなかったので、対応版として下記にアップしました。</p>
+<p><a href="https://github.com/fukata/CIUnit-for-CI2">fukata/CIUnit-for-CI2 &#8211; GitHub</a></p>
+<p>まだ、完全に対応しきれているのか不明点はありますが、fixtureのロードやcontrollerやmodelのインスタンスは正常に取得できており、サンプルのテストコードは動作しています。</p>
+<p>今回は、2.0.2へ対応した際に行ったこと（修正箇所）を書いておきます。</p>
+<p><span id="more-5791"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>ディレクトリ構成の変更</h2>
+<p>本家のリポジトリをcloneして中身を確認したところ、applicationとtestsが同じディレクトリに存在していましたが、testsはapplication毎に書くだろうと思い、applicationの直下に移動しました。通常applicationは１つしかありませんが、場合によっては複数のapplicationからsystemを共有するような構成を取る場合もあると思ったからです。</p>
+<p>ただ、これはCIUnitの動作に関係なく、私個人の好みが強く含まれているので、もしapplicationと同じディレクトリにtestsを置きたい場合はtestsディレクトリへのパスやphpunit.xml内に記載されているbootstrap_phpunit.phpへのパス等を修正してください。</p>
+<h2>CIUnit_Versionへの統一</h2>
+<p>本家のコードを見た時にCIUnitとCIUnit_Versionという二つの定数が定義されており、どちらも同じような意味で利用されていたので、CIUnit_Versionに全て統一しました。phpunit.xml内に定義されたCIUnitの値を見ても0.17とバージョンと思われる値だったのと、CIUnitはクラス名として定義されていたので紛らわしいと思い、CIUnit_Versionに統一しました。</p>
+<h2>phpunit.xmlの使用に限らずテスト実行</h2>
+<p>CIUnit定数がphpunit.xml内で定義されている為、本家のコードだとphpunit.xmlを使用して実行された場合にしか正しくテストが実行されませんでしが、phpunit.xmlの使用に関係なくテストが実行されるように変更しました。</p>
+<p>コレは意図的にこのような実装を行っていたのかそれとも単なるバグなのか、実はよく分かっていません。テスト用のbootstrap経由で画面表示の確認（テスト用DBだけを使用等）などを行っていたという方居ればこの修正は、以前のものに変更したいと思います。</p>
+<h2>絶対パスの使用</h2>
+<p>third_party/CIUnit/bootstrap_phpunit.php内に相対パスで定義された場所があったので、dirname(__FILE__)を使用する形に変更しました。相対パスだと実行場所が限られてしまう可能性があるためです。</p>
+<h2>その他いくつかバグ修正</h2>
+<p>その他、戻り値が参照渡しになっていなかったり、変数名が間違っていた箇所を修正しています。</p>
+<h2>まとめ</h2>
+<ul>
+<li>本家コードの大部分が動いたので良かった</li>
+<li>PHPUnit最高</li>
+<li>早く本家のメンテナンスが再開されて欲しい</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5791/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]CIUnit for CI2をEclipseから利用する場合の設定</title>
+		<link>/archives/5784/</link>
+					<comments>/archives/5784/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 19 Jun 2011 07:46:31 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[PHPUnit]]></category>
+		<category><![CDATA[Tips]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5784</guid>
+
+					<description><![CDATA[fukata/CIUnit-for-CI2 &#8211; GitHub をコマンドラインからテストする際はphpunitコマンドを叩けば良いのですが、Eclipseから利用する場合には「外部ツール」 ... <a href="/archives/5784/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/fukata/CIUnit-for-CI2">fukata/CIUnit-for-CI2 &#8211; GitHub</a></p>
+<p>をコマンドラインからテストする際はphpunitコマンドを叩けば良いのですが、Eclipseから利用する場合には「外部ツール」を設定します。<a href="https://marketplace.eclipse.org/content/makegood">MakeGood</a>というのがCIUnitにも対応している（設定項目は有）ようなのですが、動かなかったので、今回は外部ツールの設定を書いておきます。</p>
+<p><span id="more-5784"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>外部ツール設定</h2>
+<p>[実行] -> [外部ツール] -> [外部ツールの設定]から以下の2つを設定します。</p>
+<p>phpunitコマンドのパスについては、各自の環境で合わせてください。</p>
+<h3>CIUnit AllTests</h3>
+<p>phpunit.xmlを利用し、全テストを行います。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/5847466967" ><img src="https://farm3.static.flickr.com/2589/5847466967_be828bd800.jpg" alt="CIUnit-AllTests"  class='aligncenter'/></a></p>
+<h3>CIUnit UnitTest</h3>
+<p>選択中リソースのテストを行います。選択中リソースとは、PHPExplorerで選択しているフォルダやファイルのこと。フォルダを選択していれば、フォルダ内のファイルを全てテストします。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/5848025028" ><img src="https://farm4.static.flickr.com/3452/5848025028_d5ce7618cf.jpg" alt="CIUnit-UnitTest"  class='aligncenter'/></a></p>
+<p>CIUnit AllTestsを実行した時にコンソールに表示された文字が文字化けする可能性があります。その時は、phpunit.xml内にあるcolors=&#8221;true&#8221;をfalseに変更してみてください。多分これで文字化けは解消すると思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5784/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]CIUnitのCI2.x対応について</title>
+		<link>/archives/5781/</link>
+					<comments>/archives/5781/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 19 Jun 2011 03:12:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[PHPUnit]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5781</guid>
+
+					<description><![CDATA[CodeIgniterとPHPUnitのブリッジとしてCIUnitというのがありますが、３ヶ月ほど更新されていないようです。なので、なんとかCI2.x系でも動かせないかと思い、色々いじくり回してなんと ... <a href="/archives/5781/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CodeIgniterとPHPUnitのブリッジとして<a href="https://bitbucket.org/rafsoaken/ciunit">CIUnit</a>というのがありますが、３ヶ月ほど更新されていないようです。なので、なんとかCI2.x系でも動かせないかと思い、色々いじくり回してなんとかデフォルトのテストコードが動作する程度までになりました。本家の更新が再開されたらフィードバックしたいと思います。</p>
+<p>ソースコードは下記に置いています。</p>
+<p><a href="https://github.com/fukata/CIUnit-for-CI2">fukata/CIUnit-for-CI2 &#8211; GitHub</a></p>
+<p>本家をforkした方が良いかなと思ったのですが、個人的にMercurialは使いにくいのでgithubに作りました。本家が2.xへの対応をしてくれると信じ、とりあえずのリポジトリ程度にしか考えていません。</p>
+<p>冒頭にも書いたようにデフォルトのテストコードが動作する（一部モデルの追加が必要）程度に修正したところです。なので、まだ全機能のテストが出来るとは思えません。自分自身も未検証状態です。実用的なソリューションなので、少しずつ修正していきたいと思います。</p>
+<p>あと、自分自身が本家のCIUnitのコードをあまり理解しておらず、2.xへの対応として本家の意図しないコードが混じっている可能性もありますので、ご了承下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5781/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

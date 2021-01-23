@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [メモ]j2objcでHello Worldやってみた	</title>
+	<atom:link href="/archives/7206/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/7206/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: shuichi hiramatsu		</title>
+		<link>/archives/7206/comment-page-1/#comment-832</link>
+
+		<dc:creator><![CDATA[shuichi hiramatsu]]></dc:creator>
+		<pubDate>Thu, 22 Nov 2012 12:42:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7206#comment-832</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7206/comment-page-1/#comment-831&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+返信ありがとうございます。
+お教え頂きましたjdkをインストールして実施したところ変換することができました。
+なお、-classpathは、
+/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home/jre/lib/rt. jar
+となり、jdk1.7.0_07.jdkというパッケージ名となっておりました。
+当方も最近macをやりはじめたばかりで、
+基礎知識のない状態で、iOS向けアプリを作成しております。
+初歩的な質問で申し訳ありませんでしたが、
+時間を節約することができ、とても助かりました。
+ありがとうございました。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7206/comment-page-1/#comment-831">Tatsuya Fukata</a>.</p>
+<p>返信ありがとうございます。<br />
+お教え頂きましたjdkをインストールして実施したところ変換することができました。<br />
+なお、-classpathは、<br />
+/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home/jre/lib/rt. jar<br />
+となり、jdk1.7.0_07.jdkというパッケージ名となっておりました。<br />
+当方も最近macをやりはじめたばかりで、<br />
+基礎知識のない状態で、iOS向けアプリを作成しております。<br />
+初歩的な質問で申し訳ありませんでしたが、<br />
+時間を節約することができ、とても助かりました。<br />
+ありがとうございました。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7206/comment-page-1/#comment-831</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Sun, 18 Nov 2012 08:01:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7206#comment-831</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7206/comment-page-1/#comment-830&quot;&gt;shuichi hiramatsu&lt;/a&gt;.
+
+僕もmacを使い始めてそんなに経っていないので詳しくないんですが、
+appleから提供されているものではなく、oracleから提供されている「jdk-7u4-macosx-x64.dmg」を使用しています。
+
+下記からMac OS X x64向けの最新版のJDKがDL出来ます。http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html
+
+もし、バージョンにこだわりが無ければ試してみてはどうでしょうか？ただ、OSX 10.8.2には入れたことがないので、自己責任でお願いします。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7206/comment-page-1/#comment-830">shuichi hiramatsu</a>.</p>
+<p>僕もmacを使い始めてそんなに経っていないので詳しくないんですが、<br />
+appleから提供されているものではなく、oracleから提供されている「jdk-7u4-macosx-x64.dmg」を使用しています。</p>
+<p>下記からMac OS X x64向けの最新版のJDKがDL出来ます。http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html</p>
+<p>もし、バージョンにこだわりが無ければ試してみてはどうでしょうか？ただ、OSX 10.8.2には入れたことがないので、自己責任でお願いします。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: shuichi hiramatsu		</title>
+		<link>/archives/7206/comment-page-1/#comment-830</link>
+
+		<dc:creator><![CDATA[shuichi hiramatsu]]></dc:creator>
+		<pubDate>Sun, 18 Nov 2012 07:19:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7206#comment-830</guid>
+
+					<description><![CDATA[はじめまして。ひらまつと言います。
+突然で申し訳ありません。
+こちらのページを参考にj2objcを実施したのですが、
+変換時のクラスパスで指定しているrt.jarがなく、
+コンパイルエラーのような形でobjctive-cのコードが生成できない状況になっております。
+mac用 javaはインストールしており、1.6.0.jdkまではあるのですが、
+その中にあるはずのrt.jarが見つかりません。
+なお、Java for OS X 2012-006をインストールしております。
+
+初歩的なもののように思いますので、確認すべき事項および気をつける点等がございましたら、
+お手数ですが、アドバイスをお願いします。
+
+申し訳ありませんが、よろしくお願いします。
+
+なお、以下のような変換となります。
+~/J2objC/j2objc/build_result/j2objc &#062; -classpath /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/jre/lib/rt.jar &#062; ~/Test/testj2objc/hello.javatranslating /Test/testj2objc/hello.javaエラーメッセージは以下のものが出力されます。error: /Test/testj2objc/hello.java:1: The type java.lang.Object cannot be resolved. It is indirectly referenced from required .class fileserror: /Test/testj2objc/hello.java:1: The type java.lang.String cannot be resolved. It is indirectly referenced from required .class fileserror: /Test/testj2objc/hello.java:3: Implicit super constructor Object() is undefined for default constructor. Must define an explicit constructorerror: /Test/testj2objc/hello.java:4: String cannot be resolved to a typeerror: /Test/testj2objc/hello.java:5: System cannot be resolvedTranslated 1 file: 5 errors, 0 warnings
+
+使用バージョン：OSX 10.8.2]]></description>
+			<content:encoded><![CDATA[<p>はじめまして。ひらまつと言います。<br />
+突然で申し訳ありません。<br />
+こちらのページを参考にj2objcを実施したのですが、<br />
+変換時のクラスパスで指定しているrt.jarがなく、<br />
+コンパイルエラーのような形でobjctive-cのコードが生成できない状況になっております。<br />
+mac用 javaはインストールしており、1.6.0.jdkまではあるのですが、<br />
+その中にあるはずのrt.jarが見つかりません。<br />
+なお、Java for OS X 2012-006をインストールしております。</p>
+<p>初歩的なもののように思いますので、確認すべき事項および気をつける点等がございましたら、<br />
+お手数ですが、アドバイスをお願いします。</p>
+<p>申し訳ありませんが、よろしくお願いします。</p>
+<p>なお、以下のような変換となります。<br />
+~/J2objC/j2objc/build_result/j2objc &gt; -classpath /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/jre/lib/rt.jar &gt; ~/Test/testj2objc/hello.javatranslating /Test/testj2objc/hello.javaエラーメッセージは以下のものが出力されます。error: /Test/testj2objc/hello.java:1: The type java.lang.Object cannot be resolved. It is indirectly referenced from required .class fileserror: /Test/testj2objc/hello.java:1: The type java.lang.String cannot be resolved. It is indirectly referenced from required .class fileserror: /Test/testj2objc/hello.java:3: Implicit super constructor Object() is undefined for default constructor. Must define an explicit constructorerror: /Test/testj2objc/hello.java:4: String cannot be resolved to a typeerror: /Test/testj2objc/hello.java:5: System cannot be resolvedTranslated 1 file: 5 errors, 0 warnings</p>
+<p>使用バージョン：OSX 10.8.2</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

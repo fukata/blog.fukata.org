@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ibatis &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ibatis/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[JC]DWR2+Spring2の連携とTwitter4Jに対応しました</title>
+		<link>/archives/1402/</link>
+					<comments>/archives/1402/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 18 Jul 2009 16:34:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[dwr]]></category>
+		<category><![CDATA[ibatis]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[spring]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1402</guid>
+
+					<description><![CDATA[タイトルからも分かる通り、SNS内から、Twitterを通じて発言できるようにしてみました。さらに、Ajaxのライブラリとして、DWR2を採用。同ライブラリは元々Springとの連携も考慮されているの ... <a href="/archives/1402/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5219/5476239644_56ac4fb8d3_m.jpg" target="_blank" title="home_1247931392419"><img loading="lazy" src="https://farm6.static.flickr.com/5219/5476239644_56ac4fb8d3_m.jpg" alt="home_1247931392419" width="200" height="152" class="attachment wp-att-1401 alignleft" /></a>タイトルからも分かる通り、SNS内から、Twitterを通じて発言できるようにしてみました。さらに、Ajaxのライブラリとして、DWR2を採用。同ライブラリは元々Springとの連携も考慮されているので、比較的連携は簡単でした。</p>
+<p>また、Twitterのライブラリとしてfaff.jpの作成者でもあるHaruyoshiさんから「<a href="https://yusuke.homeip.net/twitter4j/ja/index.html">Twitter4J</a>」が便利だと聞いて採用しました。Javaオブジェクトで操作が出来るため、自分でXMLなどの面倒なパースをしなくて済むのが一番の大きな点です。</p>
+<p>JavaでTwitterと連携したいのであれば、一番簡単なんじゃないかと思います。注意として、ライブラリを最新版(2.0.8)にしないと、Twitter側のAPIとの絡みでExceptionは発生します。なので、使用する際は、最新版を利用してください。</p>
+<p>まぁ、今回の連携について、コードを残しておきますので、何かの役に立てばと思います。</p>
+<p>DWR2+Spring2の連携により、dwr.xmlの記述が必要なくなり、applicationContext.xmlに記述するだけでよくなり、Springに慣れている人は設定しやすいと思います。</p>
+<p>自分メモですが、今回のタグは「MileStone_008」にDWR2+Spring2の連動までの確認を含めたソースをコミットしています。</p>
+<p><span id="more-1402"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>■applicationContext.xml</p>
+<pre lang="XML" line="1">
+< ?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="false"
+	xmlns="https://www.springframework.org/schema/beans" 
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dwr="https://www.directwebremoting.org/schema/spring-dwr"
+	xmlns:aop="https://www.springframework.org/schema/aop" 
+	xmlns:tx="https://www.springframework.org/schema/tx"
+	xsi:schemaLocation="https://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+	https://www.springframework.org/schema/tx 
+	https://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+	https://www.springframework.org/schema/aop 
+	https://www.springframework.org/schema/aop/spring-aop.xsd
+	https://www.directwebremoting.org/schema/spring-dwr
+	https://www.directwebremoting.org/schema/spring-dwr-2.0.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driver}"></property>
+		<property name="url" value="${jdbc.url}"></property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<bean id="transactionAttributeSource"
+		class="org.springframework.transaction.interceptor.NameMatchTransactionAttributeSource">
+		<property name="properties">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<!-- <prop key="*">PROPAGATION_REQUIRED,readOnly -->
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager"></property>
+		<property name="transactionAttributeSource" ref="transactionAttributeSource"></property>
+	</bean>
+
+	<bean id="beanNameAutoProxy"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames">
+			<list>
+				<value>*Service</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- Model -->
+	<bean id="loginModel" class="org.fukata.jc_front.model.LoginModel">
+	</bean>
+
+	<!-- Dao -->
+	<bean id="customerDao" class="org.fukata.jc_front.dao.impl.CustomerDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+	<bean id="communityDao" class="org.fukata.jc_front.dao.impl.CommunityDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+	<bean id="informationDao" class="org.fukata.jc_front.dao.impl.InformationDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient"></property>
+	</bean>
+
+	<!-- Service -->
+	<bean id="customerService" class="org.fukata.jc_front.service.impl.CustomerServiceImpl">
+		<property name="customerDao" ref="customerDao"></property>
+		<property name="communityDao" ref="communityDao"></property>
+	</bean>
+	<bean id="informationService" class="org.fukata.jc_front.service.impl.InformationServiceImpl">
+		<property name="informationDao" ref="informationDao"></property>
+	</bean>
+	<bean id="twitterService" class="org.fukata.jc_front.service.impl.TwitterServiceImpl">
+	</bean>
+
+	<!-- Action -->
+	<bean id="loginAction" class="org.fukata.jc_front.action.LoginAction"
+		scope="prototype">
+	</bean>
+	<bean id="loginWithValidationAction" class="org.fukata.jc_front.action.LoginWithValidationAction"
+		scope="prototype">
+		<property name="loginModel" ref="loginModel"></property>
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+	<bean id="indexAction" class="org.fukata.jc_front.action.IndexAction"
+		scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+		<property name="informationService" ref="informationService"></property>
+	</bean>
+	<bean id="logoutAction" class="org.fukata.jc_front.action.LogoutAction"
+		scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+
+	<!-- DWR Manager -->
+	<dwr :configuration>
+		</dwr><dwr :convert type="bean" class="org.fukata.jc_front.dwr.bean.TwitterBean"></dwr>
+		<dwr :convert type="bean" class="twitter4j.Status"></dwr>
+		<dwr :convert type="bean" class="twitter4j.User"></dwr>
+	
+	<bean id="twitterManager" class="org.fukata.jc_front.dwr.manager.TwitterManager">
+		<property name="customerService" ref="customerService"></property>
+		<property name="twitterService" ref="twitterService"></property>
+
+		<dwr :remote javascript="TwitterManager">
+			</dwr><dwr :include method="echo"></dwr>
+			<dwr :include method="getFriendsTimeline"></dwr>
+			<dwr :include method="setCustomerService"></dwr>
+			<dwr :include method="setTwitterService"></dwr>
+		
+	</bean>
+
+
+	<!-- Interceptor -->
+	<bean id="loginInterceptor" class="org.fukata.jc_front.interceptor.LoginInterceptor"
+		scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+
+	<!-- Advice -->
+	<aop :config>
+		</aop><aop :advisor pointcut="execution(* org.fukata.jc_front.service.*Service.*(..))"
+			advice-ref="loggingAdvice"></aop>
+	
+	<bean id="loggingAdvice" class="org.fukata.jc_common.advice.LoggingAdvice"
+		scope="prototype">
+	</bean>
+</beans>
+</pre>
+<p>■web.xml</p>
+<pre lang="XML" line="1">
+< !DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "https://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web -app>
+	<display -name>jc-front</display>
+	<!-- Setting for Spring2 listner. -->
+	<context -param>
+		<param -name/>contextConfigLocation
+		<param -value/>/WEB-INF/applicationContext.xml
+	</context>
+
+	<filter>
+		</filter><filter -name>jc-front</filter>
+		<filter -class>org.apache.struts2.dispatcher.FilterDispatcher</filter>
+		<init -param>
+			<param -name/>actionPackages
+			<param -value/>org.fukata.jc_front.action
+		</init>
+	
+
+	<filter -mapping>
+		</filter><filter -name>jc-front</filter>
+		<url -pattern>/*</url>
+	
+
+	<listener>
+		</listener><listener -class>org.springframework.web.context.ContextLoaderListener</listener>
+	
+
+
+	<!-- DWR -->
+	<servlet>
+		</servlet><servlet -name>dwr-invoker</servlet>
+		<servlet -class>org.directwebremoting.spring.DwrSpringServlet</servlet>
+		<init -param>
+			<!-- (1)デバッグモードの有効化 -->
+			<param -name/>debug
+			<param -value/>true
+		</init>
+		<init -param>
+			<param -name/>activeReverseAjaxEnabled
+			<param -value/>true
+		</init>
+		<load -on-startup>1</load>
+	
+
+	<servlet -mapping>
+		</servlet><servlet -name>dwr-invoker</servlet>
+		<!-- (1)DwrServletからJavaScriptを自動生成するための設定 -->
+		<url -pattern>/dwr/*</url>
+	
+
+</web>
+</pre>
+<p>■TwitterManager.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_front.dwr.manager;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.directwebremoting.WebContext;
+import org.directwebremoting.WebContextFactory;
+import org.fukata.jc_common.utils.beanutils.JcBeanUtils;
+import org.fukata.jc_front.dto.CustomerDto;
+import org.fukata.jc_front.dto.SessionUserDto;
+import org.fukata.jc_front.dto.TwitterDto;
+import org.fukata.jc_front.dwr.bean.TwitterBean;
+import org.fukata.jc_front.service.CustomerService;
+import org.fukata.jc_front.service.TwitterService;
+
+import twitter4j.Status;
+
+public class TwitterManager {
+	
+	private CustomerService customerService;
+	private TwitterService twitterService;
+	
+	/**
+	 * 発言用メソッド
+	 * @param status
+	 */
+	public TwitterBean echo(String status) {
+		WebContext dwrContext = WebContextFactory.get();
+		HttpServletRequest request = dwrContext .getHttpServletRequest();
+		TwitterDto twitterDto = generateTwitterDto(request);
+		// status
+		twitterDto.setStatus(status);
+		
+		Status updateStatus = this.twitterService.updateStatus(twitterDto);
+		
+		// beanの生成
+		TwitterBean bean = new TwitterBean();
+		bean.setLatestStatus(updateStatus);
+		
+		return bean;
+	}
+
+	private TwitterDto generateTwitterDto(HttpServletRequest request) {
+		SessionUserDto sessionUserDto = this.customerService.getSessionUserDto(request);
+		CustomerDto customerDto = this.customerService.selectByCustomerId(sessionUserDto.getCustomerId());
+		
+		TwitterDto twitterDto = new TwitterDto();
+		JcBeanUtils.copyProperties(twitterDto, customerDto);
+		
+		return twitterDto;
+	}
+
+	/**
+	 * フレンドタイムライン取得用メソッド
+	 * @param value
+	 */
+	public TwitterBean getFriendsTimeline() {
+		WebContext dwrContext = WebContextFactory.get();
+		HttpServletRequest request = dwrContext .getHttpServletRequest();
+		TwitterDto twitterDto = generateTwitterDto(request);
+		
+		List<status> friendsTimeline = this.twitterService.getFriendsTimeline(twitterDto);
+		
+		// beanの生成
+		TwitterBean bean = new TwitterBean();
+		bean.setFriendsTimeline(friendsTimeline);
+		
+		return bean;
+	}
+
+	public CustomerService getCustomerService() {
+		return customerService;
+	}
+
+	public void setCustomerService(CustomerService customerService) {
+		this.customerService = customerService;
+	}
+
+	public TwitterService getTwitterService() {
+		return twitterService;
+	}
+
+	public void setTwitterService(TwitterService twitterService) {
+		this.twitterService = twitterService;
+	}
+	
+}
+</status></pre>
+<p>■TwitterBean.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_front.dwr.bean;
+
+import java.io.Serializable;
+import java.util.List;
+
+import twitter4j.Status;
+
+public class TwitterBean implements Serializable {
+	private Status latestStatus;
+	private List<status> friendsTimeline;
+	
+	public Status getLatestStatus() {
+		return latestStatus;
+	}
+	public void setLatestStatus(Status latestStatus) {
+		this.latestStatus = latestStatus;
+	}
+	public List</status><status> getFriendsTimeline() {
+		return friendsTimeline;
+	}
+	public void setFriendsTimeline(List</status><status> friendsTimeline) {
+		this.friendsTimeline = friendsTimeline;
+	}
+	
+}
+</status></pre>
+<p>■twitter.js(jquery.jsに依存しています)</p>
+<pre lang="JavaScript" line="1">
+// 発言用
+function echo() {
+	// HTMLからデータを取得
+	var status = dwr.util.getValue("twitter_status");
+	// 入力値が空の場合は発言しない。
+	if (status.trim=="") {
+		return false;
+	}
+	
+	// リモートオブジェクトの実行（第二引数はコールバック関数）
+	TwitterManager.echo(status, _echo);
+
+	return false;
+}
+
+// 発言用コールバック
+function _echo(twitterBean) {
+	// 入力値の初期化
+	dwr.util.setValue("twitter_status", "");
+}
+
+// 返信
+function reply(to) {
+	var status = dwr.util.getValue("twitter_status");
+	status = '@' + to + " " + status;
+	dwr.util.setValue("twitter_status", status);
+}
+
+// 初期ロード時実行用
+function init() {
+	dwr.engine.setActiveReverseAjax(true);
+	
+	getFriendsTimeline();
+}
+
+// フレンドタイムライン取得用
+function getFriendsTimeline() {
+	TwitterManager.getFriendsTimeline({
+        callback: _getFriendsTimeline
+    });
+}
+
+// フレンドタイムライン取得用コールバック
+function _getFriendsTimeline(twitterBean) {
+	var options = {};
+	options.escapeHtml = false;
+	
+	// 初期化
+	dwr.util.setValue("twitter_timeline", "", options);
+	var html = "";
+	for (var i = 0; i < twitterBean.friendsTimeline.length; i++) {
+		var status = twitterBean.friendsTimeline[i];
+		var _html = "";
+		_html += '<div class="timeline_row clearfix">';
+		_html += '<div class="twitter_img">';
+		_html += '<img loading="lazy" src="https://fukata.org/2009/07/19/jc-dwr2-spring2-and-twitter4j/" width="48" height="48"/>';
+		_html += '</div>';
+		_html += '<div class="twitter_message">';
+		_html += status.user.screenName + "<br />";
+		_html += status.text;
+		_html += '</div>';
+		_html += '<div class="twitter_action">';
+		_html += '<a href="javascript:reply(\''+status.user.screenName+'\')"></a>';
+		_html += '</div>';
+		_html += '';
+		
+		html += _html;
+		dwr.util.setValue("twitter_timeline", html, options);
+	}
+	
+	// ポーリング
+	setTimeout(getFriendsTimeline, 60000);
+}
+
+$(document).ready(init);
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1402/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

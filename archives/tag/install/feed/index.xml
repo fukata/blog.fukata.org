@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>install &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/install/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Ubuntu Jeos 8.04.3にRedmine+Passengerをインストールしてみました</title>
+		<link>/archives/1837/</link>
+					<comments>/archives/1837/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2009 06:29:13 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[install]]></category>
+		<category><![CDATA[pdf]]></category>
+		<category><![CDATA[redmine]]></category>
+		<category><![CDATA[プロジェクト管理]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1837</guid>
+
+					<description><![CDATA[自宅のマシンにプロジェクト管理ツールである「Redmine」をインストールした時のインストールログです。今まで、Railsのアプリを使う時はFastCGIを利用していたのですが、設定が多少面倒くさかっ ... <a href="/archives/1837/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>自宅のマシンにプロジェクト管理ツールである「Redmine」をインストールした時のインストールログです。今まで、Railsのアプリを使う時はFastCGIを利用していたのですが、設定が多少面倒くさかったりしたので、最近知ったPassengerの方を利用してみました。Passengerの方は一度設定してしまえば、アプリ毎に個別に設定するようなことはないので、そういう意味ではFastCGIよりも簡単かもしれません。</p>
+<p>問題のレスポンスの方は、ベンチマークをとったわけではないので、あくまでも体感速度的にですが、今のところFastCGIとさほど変わらない感じがします。</p>
+<p>今回使用したRedmineのインストール手順書は、下記にアップしておきます。<br />
+<a href='https://fukata.org/media/2009/11/Tutorial_Install_Redmine_on_Ubuntu8.043.pdf'>Tutorial_Install_Redmine_on_Ubuntu8.043</a></p>
+<p>Passengerについては、<a href="https://lab.koshigoe.jp/en2ja/passenger/Architectural%20overview.html">こちら</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1837/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Red5-0.8.0のtar版をUbuntu Jeos 8.04.3にインストールしてみました</title>
+		<link>/archives/1578/</link>
+					<comments>/archives/1578/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 15 Oct 2009 01:07:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[install]]></category>
+		<category><![CDATA[pdf]]></category>
+		<category><![CDATA[red5]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1578</guid>
+
+					<description><![CDATA[ちょっと、Live配信に興味があって、Red5を自宅のサーバにインストールした時の簡単な手順書を作ったので置いておきたいと思います。 環境は、タイトルにも書いている通り、OSがUbuntu Jeos  ... <a href="/archives/1578/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ちょっと、Live配信に興味があって、Red5を自宅のサーバにインストールした時の簡単な手順書を作ったので置いておきたいと思います。</p>
+<p>環境は、タイトルにも書いている通り、OSがUbuntu Jeos 8.04.3で、インストールしたRed5のバージョンは0.8.0のtar版となっています。当初、0.7 finalのdeb版をインストールしたんですけど、admin画面が真っ白になってうまく動かなかったので、0.8.0を入れてみました。すると意外とすんなり動いてくれました。</p>
+<p><a href='https://fukata.org/media/2009/10/Tutorial_Install_Red5_on_Ubuntu.pdf'>Tutorial_Install_Red5_on_Ubuntu</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1578/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>トラックポイント &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ThinkPad X201sを使ってみた</title>
+		<link>/archives/4540/</link>
+					<comments>/archives/4540/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 20 Jun 2010 14:48:28 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ThinkPad X201]]></category>
+		<category><![CDATA[トラックポイント]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4540</guid>
+
+					<description><![CDATA[先週末にやっとThinkPad X201sが届きました。というか、6月末まで我慢できずに福岡の実家に届いたのを出張先のホテルに送ってもらいました。 注文したスペックについてはこちらを参照してください。 ... <a href="/archives/4540/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先週末にやっとThinkPad X201sが届きました。というか、6月末まで我慢できずに福岡の実家に届いたのを出張先のホテルに送ってもらいました。</p>
+<p>注文したスペックについては<a href="https://fukata.org/2010/04/17/order-thinkpad-x201s/">こちら</a>を参照してください。</p>
+<p>CPUについてもそうなんですけど、一番大きく変わったのはなんと言っても解像度です。1024&#215;768から1440&#215;900なのでこの違いはかなり大きいです。HootSuiteもFix HootSuiteを入れることで5カラムも表示できますし、Eclipseも3カラム表示しても全然余裕です。</p>
+<p>X61を買った時は、当時の最新スペックで20万越えてたと思いますし、日本語キーボードしか選べなかったのを考えると今は本当に良い時代になりました。</p>
+<p>OSの構成は、Windows7とUbuntu 10.04 LTSのデュアルブートにしました。ThinkPadの場合、工場出荷状態で既に3パーティション使用されているので、残り1つを拡張パーティションとし、そこにUbuntuをインストールします。Ubuntuのインストーラからでは基本、または論理パーティションしか作成できないため、UbuntuをCDから起動し、GPartedなどで論理パーティションを作成するとよいです。</p>
+<p><a href="https://d.hatena.ne.jp/hiro_nemu/20100421/1271859786">ThinkPad X61 + Ubuntu 10.04 トラックポイントでスクロールできるようにする &#8211; ありの日記</a></p>
+<p>ThinkPadのトラックポインタでのスクロールについてはこちらを参考にしました。</p>
+<p>また、マウスの感度についてですが、/etc/rc.localに下記のように追記しました。これで、再起動後も設定が維持されます。自分はスピード、感度ともにMAXに設定しています。繊細なタッチは要求されますが、最小限の力でトラックポインタを扱うことが可能になります。</p>
+<blockquote><p>
+#trackpoint<br />
+echo 255 > /sys/devices/platform/i8042/serio1/speed<br />
+echo 255 > /sys/devices/platform/i8042/serio1/sensitivity
+</p></blockquote>
+<p>ThinkPadネタなので、ついでに書くと、出張先のオフィスで使うためにThinkPad USB トラックポイントキーボードを購入しました。</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;m=amazon&#038;f=ifr&#038;md=1X69VDGQCMF7Z30FM082&#038;asins=B002NSDWPM" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+<p>打鍵感覚はトラベルキーボードの方がThinkPadに似ていて好きなんですが、こちらはwinキーが付いているのでどちらも捨てがたいです。なんでトラベルキーボードにwinキーが付いていないのかよくわかりませんが。トラベルキーボードのUSBポートなんて必要ないからwinキーを付けて欲しいところ。</p>
+<p>でも、USBトラックポイントキーボード良いですよ。値段もキーボードとマウスということを考えるとかなり安い部類に入ります。たしかに、東プレのRealforce、PFUのHHKB何かに比べれば打鍵感覚は安っぽいですが、コストパフォーマンスはかなり高いです。なにより、トラックポイントが使えるのは赤ポッチャーの私としてはかなり助かります。</p>
+<p>福岡に戻ったら自宅でも使いたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4540/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

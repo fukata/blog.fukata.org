@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HLI-9000XL &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/hli-9000xl/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]Bold 9000用超大容量バッテリMugenPower HLI-9000XL(3600mAh)を購入</title>
+		<link>/archives/2867/</link>
+					<comments>/archives/2867/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 07 Apr 2010 13:10:05 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry Bold 9000]]></category>
+		<category><![CDATA[HLI-9000XL]]></category>
+		<category><![CDATA[MugenPower]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2867</guid>
+
+					<description><![CDATA[昨日予約した記事「 [BlackBerry]Bold 9000用超大容量バッテリMugenPower HLI-9000XL(3600mAh)を予約」を書きましたが、なんと今日届きました。昨日の夕方に楽 ... <a href="/archives/2867/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日予約した記事「<a href="https://fukata.org/2010/04/07/reservation-blackberrybold-9000-mugenpower-hli-9000xl3600mah/"> [BlackBerry]Bold 9000用超大容量バッテリMugenPower HLI-9000XL(3600mAh)を予約</a>」を書きましたが、なんと今日届きました。昨日の夕方に楽天に出店されているMobilePlazaさんの方で購入したのですが、今日届くとはMobilePlazaさんの素早い対応と日本の物流に感謝します。</p>
+<p>さてと、それでは早速HLI-9000XLをBBB9000に装着してみたいと思います。</p>
+<p>パッケージ</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5298/5476134972_6598357235_m.jpg" title="IMG_2575" width="499" height="333" class="aligncenter size-large wp-image-2870" /></p>
+<p>専用バッテリドア(CVR-9000XL)とバッテリ(HLI-9000XL)</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5180/5476134362_56a66c05ed_m.jpg" title="IMG_2576" width="499" height="333" class="aligncenter size-large wp-image-2872" /></p>
+<p>標準バッテリとの比較</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5219/5475538031_7cacd52378_m.jpg" title="IMG_2577" width="499" height="333" class="aligncenter size-large wp-image-2873" /></p>
+<p>標準サイズのバッテリドアとの比較</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5133/5476134132_02a7d3ec4e_m.jpg" title="IMG_2578" width="499" height="333" class="aligncenter size-large wp-image-2874" /></p>
+<p>実際に装着してみました</p>
+<p><img loading="lazy" src="https://farm6.static.flickr.com/5179/5475538213_5b1b3b0e16_m.jpg" title="IMG_2580" width="499" height="333" class="aligncenter size-large wp-image-2871" /></p>
+<p>実際に装着してみた感じは、思っていた以上に厚みがあるなと感じました。ただ、1週間ほど使い続ければ慣れる程度の厚みではあります。重さも気になっていたのですが、そこまで重くなった感じはありません。</p>
+<p>専用バッテリドアの質感ですが見た目は標準バッテリドアと同じフェイクレザーのような感じなのですが、こちらは模様は似ていますが、質感はプラスチックなので標準バッテリドアのように汗を吸ってしまったりする心配はありません。</p>
+<p>同梱されていた取扱説明書にバッテリを効率良く使うには、2～3回程度コンディショニングした方がよいとの事なので、現在は動画をリピート再生してます。また、取扱説明書によると月に1回程度は満充電と完全放電のリコンディショニングを行った方がよいみたいです。</p>
+<p>今週末にでもフル充電して一日外出してバッテリの持ちを確かめたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2867/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

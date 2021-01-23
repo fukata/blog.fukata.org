@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>terraform &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/terraform/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>terraformを使ってこのブログをAWSへ移行した</title>
+		<link>/archives/7977/</link>
+					<comments>/archives/7977/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 25 Feb 2017 12:19:05 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[terraform]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7977</guid>
+
+					<description><![CDATA[去年、年末付近に書いた記事の中でterraformを使ってみたいと書いたのがやっと実現出来た。 広告 とりあえず、今回使ったterraformの設定ファイルはこちら。初めて試してみたのでまずい所とかが ... <a href="/archives/7977/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7977/"><img src="https://farm1.staticflickr.com/608/32860429821_718c991e53_c.jpg" alt="P2164104" class="aligncenter"/></a></p>
+<p>去年、年末付近に書いた記事の中でterraformを使ってみたいと書いたのがやっと実現出来た。</p>
+<p><span id="more-7977"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>とりあえず、今回使ったterraformの設定ファイルはこちら。初めて試してみたのでまずい所とかがあるかもしれない。<br />
+<a href="https://gist.github.com/fukata/81e35c862262d896017135acfbbcab49">main.tf</a></p>
+<p>大部分をクラスメソッドさんの記事を参考にさせてもらった。<br />
+<a href="http://dev.classmethod.jp/cloud/terraform-getting-started-with-aws/">AWSでTerraformに入門 ｜ Developers.IO</a></p>
+<p>これを機にちゃんとterraform使って環境構築もコードに落としていこうと思う。</p>
+<p>VPCやらInternetGatewayやら手動で設定しなくて良くなったのは非常に良い。新たなサービスを作る時に毎回の作業だったのでこれだけでも簡略化されるのは非常にありがたい。早速次のプロジェクトから使っていこう。tfstateファイルのバックアップ先としてs3を選べるのも面白い。</p>
+<p>homebrewでインストールされるterraformが0.6系でimportコマンドとかがなかったので<a href="https://www.terraform.io/downloads.html">本家</a>から0.8.7を落としてインストールすることにした。</p>
+<p>既にDigital Oceanでこのブログを公開していたのでRoute53周りはimportコマンドを使って既存の物を取り込んだ。</p>
+<p>マップのアクセス方法が変わってたり多少書き換える箇所があったけどほぼ問題なく動作した。</p>
+<p>一つハマったのは <code>aws_instance</code> の <code>associate_public_ip_address</code> に <code>false</code> を指定してもなぜかtfstate内でtrueになっていて再度applyを行った際にインスタンスが再作成されてしまうこと。 <code>associate_public_ip_address</code> の行ごと削除したら解消した。ただ、解消したと言ってもfalseになったわけじゃなくtfstateもmain.tfもtrueの状態になってるというだけ。</p>
+<p>さて、次は何を試そう。とりあえず、「ゼロから作るDeep Learning」を読み終えないと。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7977/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/608/32860429821_718c991e53.jpg</image>
+	</item>
+	</channel>
+</rss>

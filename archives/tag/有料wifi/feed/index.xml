@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>有料wifi &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E6%9C%89%E6%96%99wifi/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Tue, 10 Nov 2015 06:06:02 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>タイのStarbucksで有料Wi-Fi「KSC Hotspot」を使ってみた</title>
+		<link>/archives/8001/</link>
+					<comments>/archives/8001/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2015 06:06:02 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[KSC Hotspot]]></category>
+		<category><![CDATA[Starbucks]]></category>
+		<category><![CDATA[wifi]]></category>
+		<category><![CDATA[タイ]]></category>
+		<category><![CDATA[有料wifi]]></category>
+		<category><![CDATA[東南アジア]]></category>
+		<guid isPermaLink="false">http://travel.fukata.org/?p=480</guid>
+
+					<description><![CDATA[自宅のネット環境が不調で昨日の夜から繋がらず今朝になっても頻繁に繋がらなくない。仕方ないので最寄りのスタバで仕事することに。 広告 有料Wi-Fiのみしか提供されておらず、「KSC Hotspot」と ... <a href="/archives/8001/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/22916634681" title="I0000037"><img src="https://farm6.staticflickr.com/5805/22916634681_44d60468f0_z.jpg" alt="I0000037" class="aligncenter" /></a></p>
+<p>自宅のネット環境が不調で昨日の夜から繋がらず今朝になっても頻繁に繋がらなくない。仕方ないので最寄りのスタバで仕事することに。</p>
+<p><span id="more-8001"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>有料Wi-Fiのみしか提供されておらず、「KSC Hotspot」というのが使える。今回買ったのは3日で150Bのプラン。利用可能なのは初ログインから3日間。また30日が経過すると無効になる。<br />
+<a href="https://www.flickr.com/photos/fukata/22916634681" title="I0000037"><img src="https://farm6.staticflickr.com/5805/22916634681_44d60468f0_z.jpg" alt="I0000037" class="aligncenter" /></a></p>
+<p>中にログイン情報が記載されたカードが入っている。<br />
+<a href="https://www.flickr.com/photos/fukata/22892057742" title="I0000040"><img src="https://farm6.staticflickr.com/5743/22892057742_9992cda74e_z.jpg" alt="I0000040" class="aligncenter" /></a></p>
+<p>裏面のUsername, Passwordの部分を削る。<br />
+<a href="https://www.flickr.com/photos/fukata/22916614091" title="I0000041"><img src="https://farm6.staticflickr.com/5726/22916614091_351fcd24c5_z.jpg" alt="I0000041" class="aligncenter" /></a></p>
+<p>「kschotspot」というSSIDがあるはずなので接続後、ブラウザでアクセスするとログイン画面が表示されるのでカードに記載されている情報でログインし、次に名前やパスポート、メールアドレスを登録すればやっと利用可能になる。</p>
+<p>Youtubeを見ながら普通に仕事も出来たし割りと良かった。ただ、APにたまに繋がらなくなることがあったのが気になる。</p>
+<p>また、同じログイン情報で複数端末でも利用可能なようなので複数人でシェアすることも可能。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8001/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5805/22916634681_44d60468f0.jpg</image>
+	</item>
+	</channel>
+</rss>

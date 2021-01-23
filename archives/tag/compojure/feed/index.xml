@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Compojure &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/compojure/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Compojureのroutesで前処理を行う</title>
+		<link>/archives/6498/</link>
+					<comments>/archives/6498/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 14 Nov 2011 18:03:12 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6498</guid>
+
+					<description><![CDATA[Noirでは各、ルーティング後の処理の前に行う前処理をpre-routeとして定義できるようですが、Compojure自体にはその機能は無さそうだったので、sandbarのstateful-sessi ... <a href="/archives/6498/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Noirでは各、ルーティング後の処理の前に行う前処理をpre-routeとして定義できるようですが、Compojure自体にはその機能は無さそうだったので、sandbarのstateful-sessionを参考にして、下記の様なコードで実現しました。</p>
+<p><span id="more-6498"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<pre lang="clojure">
+(defroutes app-routes
+  (GET "/" {}
+    "Hello World"))
+
+(defn wrap-pre*
+  [handler]
+  (fn [request]
+    (let [response (handler request)]
+      (when response
+        ;; ==========
+        ;; 前処理
+        ;; ==========
+        response))))
+
+(defn wrap-pre
+  ([handler]
+   (wrap-pre handler {}))
+  ([handler options]
+   (-> handler
+     wrap-pre*)))
+
+(def app
+  (-> app-routes
+    (wrap-pre)
+    (wrap-stateful-session)))
+    
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty (handler/site app) {:port port})))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6498/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Compojure(Ring)でSessionを使う</title>
+		<link>/archives/6409/</link>
+					<comments>/archives/6409/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 31 Oct 2011 18:11:02 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[Ring]]></category>
+		<category><![CDATA[sandbar]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6409</guid>
+
+					<description><![CDATA[CompojureでSessionに何かデータ保存したいと思ったらまだCompojureでSessionを使ったことがなかったので簡単に使ってみました。 Compojure(Ring)でセッションを使 ... <a href="/archives/6409/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CompojureでSessionに何かデータ保存したいと思ったらまだCompojureでSessionを使ったことがなかったので簡単に使ってみました。</p>
+<p>Compojure(Ring)でセッションを使う場合、handlerにwrap-sessionを指定してあげるとCookieセッションが使える。デフォルトだとデータの保存先はメモリ。</p>
+<p>で、少しSession関連のモジュールを調べてみたところ、sandbarというのがwrap-sessionのラッパーで高機能かつ、インタフェースが使いやすかったので、今回はコレを使うことにしました。</p>
+<p><span id="more-6409"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>Session Wrapper</h3>
+<p>sandbarはwrap-sessionのラッパーというだけでなく、セッションを使ったサイトでよく使われるような、ログインユーザの名前や権限を取得する関数等も提供されています。</p>
+<p><a href="https://github.com/brentonashworth/sandbar">brentonashworth/sandbar &#8211; GitHub</a></p>
+<p>実際に組み込み後のコードはこんな感じになりました。</p>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        ring.middleware.reload-modified
+        somnium.congomongo
+        [ring.util.response :only (response content-type)]
+        fleet
++        (sandbar stateful-session auth))
+
+... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app-routes 
+  (GET "/" {} (tpl/index {})))
+
++(def app
++  (-> app-routes
++    wrap-stateful-session))
+
+;; =============================================
+;; Run Server
+;; =============================================
+;; AutoReload Configuration
+(def app (handler/site app))
+(def handlerApp
+    (wrap-reload-modified #'app ["src"]))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty handlerApp {:port port})))
+</pre>
+<p>これで、Sessionが使えるようになります。Sessionを取り出したり設定したりするAPIは本家のwikiを見るか、行数が少ないのでソースを直接見たほうが早いかもしれません。該当箇所は以下です。</p>
+<p><a href="https://github.com/brentonashworth/sandbar/blob/master/src/sandbar/stateful_session.clj#L94">src/sandbar/stateful_session.clj at master from brentonashworth/sandbar &#8211; GitHub</a></p>
+<h3>保存先</h3>
+<p>上記に書いた通り、標準のSessionの保存先はメモリとなっているので、サーバの再起動等で消えてしまいます。少し不安でもあったので、ファイルかDBに保存するモジュールが無いか調べました。</p>
+<p>その前にwrap-sessionで指定できるSessionの保存先というのはオプションで指定でき、下記の継承したものであれば良いようです。</p>
+<p><a href="https://github.com/mmcgrana/ring/blob/master/ring-core/src/ring/middleware/session/store.clj">ring-core/src/ring/middleware/session/store.clj at master from mmcgrana/ring &#8211; GitHub</a></p>
+<h3>SessionもMongoDBに保存したい！</h3>
+<p>せっかく今回、MongoDBを使っているので、セッションもMongoDBに格納したい！！</p>
+<p><a href="https://clojars.org/">clojars.org</a>で検索してみたところ、下記のモジュールが見つかりました。</p>
+<p><a href="https://github.com/hozumi/mongodb-session">hozumi/mongodb-session &#8211; GitHub</a></p>
+<p>サンプルを見たところ</p>
+<pre lang="clojure">
+(ns hello
+  (:require [ring.middleware.session :as rs]
+            [somnium.congomongo :as congo]
+            [hozumi.mongodb-session :as mongoss]
+        ...))
+
+(congo/mongo! :db "mydb" :host "127.0.0.1")
+
+(defroutes my-routes ....)
+
+(def app (-> my-routes
+           (rs/wrap-session {:store (mongoss/mongodb-store)})))
+</pre>
+<p>とあるので、既に宣言している<strong>mongo!</strong>の周り無視して、wrap-session辺りを修正するだけで大丈夫なようです。mongodb-storeを組み込んだコードはこんな感じになりました。</p>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        ring.middleware.reload-modified
+        somnium.congomongo
+        [ring.util.response :only (response content-type)]
+        fleet
+        (sandbar stateful-session auth))
+  (:require [compojure.route :as route]
+            [compojure.handler :as handl(mongoss/er]
+            [clj-json.core :as json]
+            [clojure.contrib.string :as string]
++            [hozumi.mongodb-session :as mongoss]))
+
+... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app-routes 
+  (GET "/" {} (tpl/index {})))
+
+(def app
+  (-> app-routes
+-    wrap-stateful-session
++    (wrap-stateful-session {:store (mongoss/mongodb-store)})))
+
+;; =============================================
+;; Run Server
+;; =============================================
+;; AutoReload Configuration
+(def app (handler/site app))
+(def handlerApp
+    (wrap-reload-modified #'app ["src"]))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty handlerApp {:port port})))
+</pre>
+<p>この状態で実際にセッションに値を格納するとMongoDBの方に<strong>ring_sessions</strong>というコレクションが出来ていると思います。ちなみに、ring_sessionsのレコードはこんな形式です。</p>
+<pre>
+> db.ring_sessions.find().forEach(printjson);
+{
+	"_id" : "c83528b0-cfce-4e0f-b70b-90adce0c21d5",
+	"_date" : ISODate("2011-10-31T17:34:55.022Z"),
+	"_sandbar_session" : {
+		"name" : "Tatsuya Fukata"
+	}
+}
+</pre>
+<h3>Cookieのオプション</h3>
+<p>wrap-sessionで生成されるCookieはデフォルトではexpires未指定でブラウザを閉じた場合に消去されるものになっています。これらのオプションを指定する場合には、wrap-sessionの引数として下記のように指定します。また、これはwrap-stateful-sessionでも同じ形式の引数で渡すことが出来ます。</p>
+<pre lang="clojure">
+(def app
+  (-> app-routes
+    (wrap-stateful-session
+      {:cookie-attrs {:expires "Thu, 1-Jan-2030 00:00:00 GMT", :path "/"},
+      :cookie-name "compojuretest-session",
+      :store (mongoss/mongodb-store)})))
+</pre>
+<p>上記以外の詳しい指定方法については、下記のソースを参照してみてください。</p>
+<p><a href="https://github.com/mmcgrana/ring/blob/master/ring-core/src/ring/middleware/session.clj#L28">ring-core/src/ring/middleware/session.clj at master from mmcgrana/ring &#8211; GitHub</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6409/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ring-reload-modifiedで自動リロード</title>
+		<link>/archives/6383/</link>
+					<comments>/archives/6383/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2011 17:01:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<category><![CDATA[ring-reload-modified]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6383</guid>
+
+					<description><![CDATA[weavejester/ring-reload-modified &#8211; GitHub WEB開発を行っていると編集した内容をすぐに確認したいですよね。以前までは、編集してはサーバプログラムを ... <a href="/archives/6383/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/weavejester/ring-reload-modified">weavejester/ring-reload-modified &#8211; GitHub</a></p>
+<p>WEB開発を行っていると編集した内容をすぐに確認したいですよね。以前までは、編集してはサーバプログラムを一度停止して再度起動するということをやっており、毎回手動で再起動処理を行うのが非常に面倒で、さらには再起動を忘れ、動作確認時に「あれ？」みたいな事がたまにあったので、解決策を探しているとRingのMiddlewareとして上記がありました。</p>
+<p>これは、指定したソースディレクトリのClojureファイルが修正されたらリロードしてくれるというものです。設定は簡単で、こんな感じにします。</p>
+<p>ただ、一つ難点があり、Fleetのテンプレートファイルのみを編集した場合には変更を検出してくれず、正常に変更を表示できません。まだ、ring-reload-modifiedのソースを見れていないので、もしかすると簡単に対応できるかもしれません。</p>
+<p>とりあえず、設定方法は下記のようになります。</p>
+<p><span id="more-6383"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>設定方法</h2>
+<p>project.cljの:dependenciesに<code>[ring-reload-modified "0.1.1"]</code>を追加後、下記の設定を行えば自動リロードするようになります。</p>
+<h3>変更前</h3>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]
+            [compojure.handler :as handler]))
+
+;; ... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty (handler/site app) {:port port})))
+</pre>
+<h3>変更後</h3>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
++       ring.middleware.reload-modified
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]
+            [compojure.handler :as handler]))
+
+;; ... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
++ ;; AutoReload Configuration
++ (def app (handler/site app))
++ (def handlerApp 
++     (wrap-reload-modified #'app ["src"]))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+-     (run-jetty (handler/site app) {:port port})))
++     (run-jetty handlerApp {:port port})))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6383/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Compojure + Fleetで文字化け</title>
+		<link>/archives/6297/</link>
+					<comments>/archives/6297/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 16 Oct 2011 05:31:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6297</guid>
+
+					<description><![CDATA[久しぶりにCompojure + Fleetな環境を触っていて何気なく日本語が記載されたテンプレートを表示してみようかと思い、早速テンプレートに日本語を追加して表示してみたところ、「??」という風に見 ... <a href="/archives/6297/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>久しぶりにCompojure + Fleetな環境を触っていて何気なく日本語が記載されたテンプレートを表示してみようかと思い、早速テンプレートに日本語を追加して表示してみたところ、「??」という風に見事に文字化けが発生してしまいました。</p>
+<p><span id="more-6297"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>その時のコードはこんな感じです。</p>
+<p><strong>core.clj</strong></p>
+<pre lang="Clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]))
+
+;; =============================================
+;; Fleet Setup 
+;; =============================================
+(def filters [ 
+  "js" :str
+  "html" :xml
+  "fleet" :bypass])
+
+(fleet-ns tpl "templates" filters)
+
+(extend-protocol Renderable
+  fleet.util.CljString
+  (render [this _] (response (.toString this))))
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app 
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty app {:port port})))
+</pre>
+<p><strong>index.html.fleet</strong></p>
+<pre lang="HTML">
+< !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>テスト</title>
+</head>
+<body>
+<h1>テスト</h1>
+</body>
+</html>       
+</pre>
+<p>何がおかしいのか調べていて、通常のサイトとのレスポンスヘッダーを見比べてみると、Content-Typeのヘッダーがありませんでした。そこで、下記のようにしてあげると正常にContent-Typeヘッダーも生成されるようになり、文字化けが解消されました。</p>
+<pre lang="Clojure">
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] {:headers {"Content-Type" "text/html; charset=utf8"}
+               :body (str (tpl/index {}))}))
+</pre>
+<p>毎回headersを書くのが怠いという方は、下記だけでも大丈夫のようです。まだ、Compojureの中身を見ていないので、変なやり方かもしれませんが。</p>
+<pre lang="Clojure">
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (str (tpl/index {}))))
+</pre>
+<p>上記の<strong>Fleet Setup</strong>で行っているextend-protocol部分でうまいこと纏め上げられるんじゃないかとも思いますがとりあえず、ベタであろうやり方を書いてみました。</p>
+<p><strong>追記：2011-11-17 10:31</strong><br />
+Compojureのresponse.cljを見たところ、Stringの場合はContent-Typeを指定しているのでstr関数を挟む場合に手動で指定する必要はないようです。</p>
+<p><strong>src/compojure/response.clj</strong></p>
+<pre lang="Clojure">
+(extend-protocol Renderable
+  nil
+  (render [_ _] nil)   
+  String
+  (render [body _]
+    (-> (response body)
+        (content-type "text/html; charset=utf-8")))
+  APersistentMap
+  (render [resp-map _]
+    (merge (response "") resp-map))
+  IFn
+  (render [func request]
+    (render (func request) request))
+  IDeref  
+  (render [ref request]
+    (render (deref ref) request)) 
+  File      
+  (render [file _] (response file))
+  ISeq
+  (render [coll _] (-> (response coll)
+                       (content-type "text/html; charset=utf-8")))
+  InputStream
+  (render [stream _] (response stream))
+  URL
+  (render [url _]
+    (if (= "file" (.getProtocol url))
+      (response (io/as-file url))
+      (response (io/input-stream url)))))
+</pre>
+<p><strong>追記：2011-11-17 10:39</strong><br />
+extend-protocolを下記のように編集することで、str関数を挟まなくても正常に表示されるようになりました。</p>
+<pre lang="Clojure">
+(extend-protocol Renderable
+  fleet.util.CljString
+  (render [this _] (-> (response (.toString this))
+                       (content-type "text/html; charset=utf-8"))))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6297/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Compojureで静的ファイルを配信</title>
+		<link>/archives/6218/</link>
+					<comments>/archives/6218/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 04 Oct 2011 15:08:09 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6218</guid>
+
+					<description><![CDATA[前回、DB接続、テンプレート利用まで書いたんですが、静的ファイルを配信する仕組みがまだなかったので、調べてみると下記が簡単でした。 Clojureの入門がてら、Herokuに自分のプロフィールサイトを ... <a href="/archives/6218/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>前回、DB接続、テンプレート利用まで書いたんですが、静的ファイルを配信する仕組みがまだなかったので、調べてみると下記が簡単でした。</p>
+<p><a href="https://bugrammer.g.hatena.ne.jp/nisemono_san/20110929/1317382291">Clojureの入門がてら、Herokuに自分のプロフィールサイトを作ってみる そのいち &#8211; 蟲！虫！蟲！ &#8211; #!/usr/bin/bugrammer</a></p>
+<h2>静的ファイルの配置場所</h2>
+<p>project.cljに「<strong>web-content</strong>」という項目を追加し、静的コンテンツのディレクトリがどこかを指定します。今回の場合は、プロジェクトディレクトリ直下の<strong>public</strong>ディレクトリに配置するものとします。</p>
+<pre lang="Clojure">
+(defproject compojureexample "1.0.0-SNAPSHOT"
+  :description "Compojure Example"
+  :dependencies [[org.clojure/clojure "1.2.0"]
+                 [org.clojure/clojure-contrib "1.2.0"]
+                 [compojure "0.6.5"]
+                 [ring/ring-jetty-adapter "0.3.9"]]
+;; 静的コンテンツの配置ディレクトリ
+  :web-content "public")
+</pre>
+<h2>ルーティング</h2>
+<p>次に、静的ファイルを配信するためにルーティングの設定を行います。<br />
+今回は、public直下に配置したファイルを、URLとしては、static以下がpublic直下を参照する感じで、「https://localhost:8080/static/***」のようにアクセスさせたいと思います。</p>
+<p><strong>src/compojureexample/core.clj</strong></p>
+<pre lang="Clojure">
+(ns compojureexample.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty)
+  (:require [compojure.route :as route]))
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" _ "Hello World")
+;; https://localhost:8080/***としてアクセスさせたい場合は、「/」だけでよい。
+  (route/files "/static/"))
+
+;; =============================================
+;; Run Server
+;; =============================================
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty app {:port port})))
+</pre>
+<p>以上となります。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6218/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Compojure + CongoMongo + Fleetを使ってみる</title>
+		<link>/archives/6161/</link>
+					<comments>/archives/6161/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 01 Oct 2011 06:42:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[CongoMongo]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6161</guid>
+
+					<description><![CDATA[今回はDBにMongoDBを使うということで、検索してみたところ、CongoMongoが使いやすそうだったので、少し試しに使ってみたところ、今回の要件はそこまで複雑でないので採用ということに。 参考に ... <a href="/archives/6161/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今回はDBにMongoDBを使うということで、検索してみたところ、CongoMongoが使いやすそうだったので、少し試しに使ってみたところ、今回の要件はそこまで複雑でないので採用ということに。</p>
+<p>参考にしたのはこの辺です。</p>
+<ul>
+<li><a href="https://d.hatena.ne.jp/asakawajunya/20101218/1292667201">ClojureでMongoDBにアクセスしてみる &#8211; asakawajunyaの日記</a></li>
+<li><a href="https://thechangelog.com/post/344418038/congomongo-use-mongodb-from-clojure">congomongo: Use MongoDB from Clojure &#8211; The Changelog &#8211; Open Source moves fast. Keep up.</a></li>
+<li><a href="https://github.com/aboekhoff/congomongo">aboekhoff/congomongo &#8211; GitHub</a></li>
+</ul>
+<p>また、テンプレートエンジンについては、前回は<a href="https://github.com/cgrand/enlive">Enlive</a>を利用しようかと思ったんですが、実際に使ってみたところEnliveはスクレイピングしたHTMLからデータを抽出するのに適していて、今回のように既にテンプレート、データは用意されていてコントローラからテンプレート内で利用する変数のハッシュを渡して後はテンプレート側で適当に処理してくれるような軽量なものが望ましかったので、今回は諦めました。</p>
+<p>そこで、もう少し検索したところFleetというのがあり、使ってみたところ上記の使い方が出来そうだったのでこっちを使ってみることにしました。</p>
+<p>基本的な使い方は公式のページに書いています。</p>
+<p><a href="https://github.com/Flamefork/fleet">Flamefork/fleet &#8211; GitHub</a></p>
+<p>また、今回はCompojureと組み合わせたところ、現バージョンではエラーになるので、下記のページを参考に修正すると正常に動作するようになりました。</p>
+<p><a href="https://www.nofluffjuststuff.com/blog/michael_nygard/2011/01/glue_fleet_and_compojure_together_using_protocols">Glue Fleet and Compojure Together Using Protocols &#8211; No Fluff Just Stuff</a></p>
+<p>ということで、今のところCompojure + CongoMongo + Fleetで開発してみたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6161/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>HerokuでClojure(Compojure)を動かすまで</title>
+		<link>/archives/6150/</link>
+					<comments>/archives/6150/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 25 Sep 2011 06:51:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[Heroku]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6150</guid>
+
+					<description><![CDATA[最近、あるアプリを作るためにHeroku上でClojureを動かしてみました。 その際参考にしたサイトは下記です。 HerokuでClojure(Compojure)を使う &#8211; komag ... <a href="/archives/6150/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、あるアプリを作るためにHeroku上でClojureを動かしてみました。</p>
+<p>その際参考にしたサイトは下記です。</p>
+<ul>
+<li><a href="https://docs.komagata.org/4816">HerokuでClojure(Compojure)を使う &#8211; komagata</a></li>
+<li><a href="https://devcenter.heroku.com/articles/clojure">Heroku | Dev Center | Getting Started With Clojure on Heroku/Cedar</a></li>
+</ul>
+<p>で、いつものようにまともに説明を読まずにやっていたらherokuにpushして、heroku psコマンドでプロセスを確認したところ一向に立ち上がっていませんでした。で、もう一度公式の手順を一から順に観てるとProcfileを作成していないことに気づき、Procfileを作成し、pushしたところ、正常にプロセスが立ち上がりました。</p>
+<p>たいてい動かない時というのは、自分が手順をすっぽかしてる事が多いですね・・・気を付けないと。</p>
+<p><a href="https://devcenter.heroku.com/articles/procfile">Heroku | Dev Center | Declaring and Scaling Process Types with Procfile</a></p>
+<p>一応今のところ、Clojure(Compojure) + MongoDBという構成（テンプレートエンジンは模索中）で作ろうかと思っているので、また何かあったら書こうかと思います。それにしてもherokuコマンドだけでも色々なことができるんですね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6150/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

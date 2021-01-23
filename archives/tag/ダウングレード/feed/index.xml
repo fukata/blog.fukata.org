@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ダウングレード &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]Bold 9000のOSを5.0から4.6にダウングレードでエラー</title>
+		<link>/archives/2755/</link>
+					<comments>/archives/2755/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 20 Mar 2010 02:17:13 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ダウングレード]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2755</guid>
+
+					<description><![CDATA[BlackBerry Bold 9000にOS5.0はメモリ使用量的に厳しいみたいで、放置しているだけでフリーズすることが何度か重なって不便に感じたので、Docomo公式版のOS4.6にダウングレード ... <a href="/archives/2755/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>BlackBerry Bold 9000にOS5.0はメモリ使用量的に厳しいみたいで、放置しているだけでフリーズすることが何度か重なって不便に感じたので、Docomo公式版のOS4.6にダウングレードしようと思い、通常の再インストール手順を踏むとAppLoader\Loader.exeを実行中に下記のようなエラーが出てしまい先に進めない状態になりました。エラー画面をキャプチャしていなかったので、詳しいエラー番号などは後ほど調べて載せたいと思います。</p>
+<blockquote><p>新しいローダーが必要です。</p></blockquote>
+<p>まだ２年縛りの４分の１くらいが残っているので、今ぶっ壊れると洒落になりません。しかも、今は出張中で手元に別のパソコンもありません。なんとか再インストール作業ができないかと思い、思いついたのがネットカフェでした。ネットカフェならもちろん使ったことのないパソコンですし、再起動すれば元の設定に戻してくれるように設定されているので、他の人にも影響はないだろうと思います。</p>
+<p>ただ、一つ懸念点が。パソコンの再起動しなくてもインストール作業できたっけ？試したことがないので、一か八か現在再インストール作業をしています。</p>
+<p>OS4.6に戻らなくても最悪、元のOS5.0がインストールできればそれでいいです。</p>
+<p>行った簡単な手順を残しておきたいと思います。</p>
+<ol>
+<li>BlackBerry Desktop Software 5.0のインストール</li>
+<li>BlackBerry Device Software 4.6のインストール</li>
+<li>AppLoader\Vendor.xmlの削除</li>
+<li>AppLoader\Loader.exeの実行</li>
+<li>既存のデータを削除を選択</li>
+</ol>
+<p>上記の手順でなんとかOS4.6にダウングレードに成功しました。ふぅ、本当にぶっ壊れたのかと少し焦りましたｗ</p>
+<p>あとで考えると、スナップショットを取ったVM上でBBのインストール作業をすれば、同じパソコンでインストールできなくなるというような不具合は回避できるんじゃないでしょうか？これは一度帰ってから試してみる価値がありそうですね。と言っても現在のパソコンには要領が1GB程度しかないので、まずは掃除をしないと。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2755/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

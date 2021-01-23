@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Release &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/release/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 20 Jan 2018 17:16:15 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.6.1をリリース</title>
+		<link>/archives/9407/</link>
+					<comments>/archives/9407/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 20 Jan 2018 17:15:12 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">/?p=9407</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.1をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/9407/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.flickr.com/photos/fukata/25849587578" target="_blank" title="I0002191"><img loading="lazy" src="https://farm5.staticflickr.com/4648/25849587578_992859aa01_c.jpg" alt="I0002191" class="aligncenter" width="800" height="600"/></a></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.1をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>img templateにwidth/heightオプションを追加</li>
+</ul>
+<p><span id="more-9407"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>img templateにwidth/heightオプションを追加</h3>
+<p>現在、挿入時のテンプレートで <code>[img]</code> の部分がimgタグに置き換わっていますがオプションを指定出来るようになりました。具体的には下記のようになります。</p>
+<p><code>[img width="1 or 0" height="1 or 0"]</code></p>
+<p>width,heightのデフォルトは1なので何も指定しない今までの指定の場合にはwidth,heightがimgタグに指定されて出力されます。もし、何らかの理由でオフにしたい場合は0を指定してください。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9407/feed/</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4648/25849587578_992859aa01.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.6.0をリリース</title>
+		<link>/archives/9261/</link>
+					<comments>/archives/9261/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 15 Dec 2017 05:30:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">/?p=9261</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.0をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/9261/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9261/"><img src="https://farm5.staticflickr.com/4533/27285991059_6ce8d4decb_c.jpg" alt="Screen_Shot_2017-12-15_at_11_19_45" class="aligncenter"/></a></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.0をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>デバッグ情報を表示</li>
+</ul>
+<p><span id="more-9261"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>デバッグ情報を表示</h3>
+<p>設定画面の最下部付近にデバッグ情報を表示するようにしました。</p>
+<p>バグ報告時にこちらの情報をコピペしてもらえると調査が楽になるのでよろしくお願いします。<br />
+<a href="/archives/9261/"><img src="https://farm5.staticflickr.com/4533/27285991059_6ce8d4decb_c.jpg" alt="Screen_Shot_2017-12-15_at_11_19_45" class="aligncenter"/></a></p>
+<p>今後、必要な情報があれば増やしていくつもりです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9261/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4533/27285991059_6ce8d4decb.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.5.0をリリース</title>
+		<link>/archives/9226/</link>
+					<comments>/archives/9226/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 23 Nov 2017 08:16:25 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">/?p=9226</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.5.0をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/9226/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4502/26459449979_6f307e9deb_c.jpg" alt="PB044626" class="aligncenter"/></a></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.5.0をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>スマートフォン対応</li>
+</ul>
+<p><span id="more-9226"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>スマートフォン対応</h3>
+<p>簡単ではありますが、新UIに関してスマートフォンの対応を行いました。</p>
+<p>「メディアの挿入」から表示<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4521/24722985878_009a06e57e_c.jpg" alt="blog.fukata.org_wp-admin_post.php_post=9226&amp;action=edit(Nexus 6P)" class="aligncenter"/></a></p>
+<p>使える機能はPCの時とほぼ同じ。<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4578/38595311701_4cb1aac0aa_c.jpg" alt="blog.fukata.org_wp-admin_post.php_post=9226&amp;action=edit(Nexus 6P) (1)" class="aligncenter"/></a></p>
+<p>プロパティの変更も可能。<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4564/24722987458_0fde9c36f2_c.jpg" alt="blog.fukata.org_wp-admin_post.php_post=9226&amp;action=edit(Nexus 6P) (2)" class="aligncenter"/></a></p>
+<p>現状、多くのスマートフォンで画像が2列表示になっていると思います。画像を選択すると右列の画像が表示されなくなって選べなくなりますが一番下にある「クリア」ボタンを押すことでプロパティの変更用の右サイドバーが非表示になるのでその後再度選択してください。</p>
+<p>また、PCの時と基本的には同じ機能が使えますが唯一使えないのが<strong>複数挿入</strong>です。</p>
+<p>複数挿入に関してはいずれ時間を作って実装しようかと思っていますのでしばらくお待ち下さい。</p>
+<h2>追記: 2017-11-25 03:00:00</h2>
+<p>スマホの場合に複数選択モードにするボタンを表示するようにしました。これを押すことでスマホでも複数挿入が可能になります。v2.5.2から利用可能です。<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4543/37903454704_0b20e2948e_c.jpg" alt="Screen Shot 2017-11-25 at 0.56.31" class="aligncenter"/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9226/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4502/26459449979_6f307e9deb.jpg</image>
+	</item>
+		<item>
+		<title>[重要][WordPress]wp-flickr-pressのバージョン2.4.0をリリース</title>
+		<link>/archives/8803/</link>
+					<comments>/archives/8803/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 19 Aug 2017 16:46:32 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">/?p=8803</guid>
+
+					<description><![CDATA[今回リリースした2.4.0には下位互換性を壊す変更点が含まれています。既にお使いの方も今回のバージョンを適用した場合、必ず行って頂く必要がある作業がありますので是非変更点をご確認ください。 WordP ... <a href="/archives/8803/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8803/"><img src="https://farm5.staticflickr.com/4323/36100614282_8a9f15aa28_c.jpg" alt="P7301870" class="aligncenter"/></a></p>
+<p>今回リリースした2.4.0には下位互換性を壊す変更点が含まれています。既にお使いの方も今回のバージョンを適用した場合、必ず行って頂く必要がある作業がありますので是非変更点をご確認ください。</p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.4.0をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>FlickrのOAuthトークンが取得できないバグを修正</li>
+</ul>
+<p><span id="more-8803"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>FlickrのOAuthトークンが取得できないバグを修正</h3>
+<p>何度かこちらのサイトのコメントでも頂いていた問題をようやく解決しました。長いこと時間を掛けてしまって非常に申し訳ありませんでした。</p>
+<p>下記のflickrの開発者グループでも以前に話し合われていたのを見逃していました。</p>
+<p><a href="https://www.flickr.com/groups/api/discuss/72157682498177221/#comment72157684743388675" target="_blank">https://www.flickr.com/groups/api/discuss/72157682498177221/#comment72157684743388675</a></p>
+<p>従来の認証方式が廃止になったため、wp-flickr-pressの管理画面からOAuthトークンの取得時にflickrのトップページへ飛ばされるという現象が発生しておりました。今回の修正で新しい認証方式に切り替えましたので正常にトークンの取得ができるようになっているかと思います。</p>
+<p>また、既にwp-flickr-pressをお使いの方も今回のバージョンにアップグレードした際にOAuthトークンの再取得を行って下さい。でないと検索等が正常に動作しません。</p>
+<p>面倒ですがよろしくお願いします。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8803/feed/</wfw:commentRss>
+			<slash:comments>18</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4323/36100614282_8a9f15aa28.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.3.0をリリース</title>
+		<link>/archives/7954/</link>
+					<comments>/archives/7954/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 20 May 2016 05:46:02 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7954</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.3.0をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/7954/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7954/"><img src="https://farm2.staticflickr.com/1662/26400494216_38164413c7_c.jpg" alt="P4142331" class="aligncenter"/></a></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.3.0をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>テンプレート変数にdescriptionを追加</li>
+</ul>
+<p><span id="more-7954"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>挿入テンプレートにdescription変数を追加</h3>
+<p>これで、タイトル以外にもdescriptionを挿入することが可能になりました。</p>
+<p>個人的にタイトルはオリジナルのファイル名のままでdescriptionに写真の説明なんかを入れて運用しているのでdescriptionが挿入できるようになって記事を書く時に写真の説明を追加するのが非常に楽になった。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7954/feed/</wfw:commentRss>
+			<slash:comments>12</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1662/26400494216_38164413c7.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.2.0をリリース</title>
+		<link>/archives/7868/</link>
+					<comments>/archives/7868/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 01 Jan 2016 11:29:43 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">https://fukata.org/?p=7868</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.2.0をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/7868/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7868/"><img src="https://farm2.staticflickr.com/1637/24102216015_8caff8f9b2_c.jpg" alt="P1011667" class="aligncenter"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.2.0をリリースしました。<br />
+プラグインの詳細については<a href="https://fukata.org/dev/wp-plugin/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>埋め込みオプションの対応</li>
+</ul>
+<p><span id="more-7868"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>埋め込みオプションの対応</h3>
+<p>flickrで埋め込みタグを取得しようとするとHeader、Footer、Slideshowというオプションがありますがそれに対応しました。</p>
+<p>Header、Footerを有効にした場合はこんな感じになります。<br />
+<a data-flickr-embed="true" data-header="true" data-footer="true" href="http://www.flickr.com/photos/fukata/24102216015" target="_blank" title="P1011667"><img src="https://farm2.staticflickr.com/1637/24102216015_8caff8f9b2_c.jpg" alt="P1011667" class="aligncenter"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>ちなみにこのオプションは新UIでのみ対応してます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7868/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1637/24102216015_8caff8f9b2.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.1.0をリリース</title>
+		<link>/archives/7749/</link>
+					<comments>/archives/7749/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 14 Feb 2015 09:57:16 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7749</guid>
+
+					<description><![CDATA[タイのバンコクに1ヶ月ほど滞在しています。写真は先々週くらいに行ってきたシンガポールで飲んだハルビンビールです。 WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「w ... <a href="/archives/7749/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/16284253948" target="_blank" title=""><img src="https://farm8.staticflickr.com/7293/16284253948_00cc41c1ee_c.jpg" alt="" class="aligncenter"/></a></p>
+<p>タイのバンコクに1ヶ月ほど滞在しています。写真は先々週くらいに行ってきたシンガポールで飲んだハルビンビールです。</p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.1.0をリリースしました。<br />
+プラグインの詳細については<a href="https://fukata.org/dev/wp-plugin/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>アイキャッチ画像機能</li>
+</ul>
+<p><span id="more-7749"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>アイキャッチ画像機能</h3>
+<p><a href="https://fukata.org/2015/01/24/wordpresswp-flickr-press-thumbnail/" title="Tatsuya Blog » [WordPress]wp-flickr-pressでアイキャッチ画像を使えるようにしてみた">[WordPress]wp-flickr-pressでアイキャッチ画像を使えるようにしてみた</a>を書いてからずいぶん日にちが経ってしまいました。自分のブログに組み込んでテストしていてその後修正とかしなかったのですっかり忘れてしまっていました。</p>
+<p>設定画面にThumbnail(beta)というセクションがあるのでそこから有効にしてもらえば使えるようになります。</p>
+<p>ただし、やれることは少ないです。</p>
+<p>記事の最初に登場するflickr画像をthe_post_thumbnail関数で表示できるというものです。使い方は下記のような感じです。</p>
+<p><script src="https://gist.github.com/fukata/de690b83d1330a57a899.js"></script></p>
+<pre lang="php">FlickrPress::isExtractThumbnailByPostID</pre>
+<p>はその記事の最初に登場するflickr画像をサムネイルとして利用するかを返します。なのでこれで分岐して通常のアイキャッチ画像を使うということもできます。</p>
+<p>また、サムネイル機能を有効にすると記事の編集画面にサムネイルを利用するかどうかのチェックボックスも追加されます。例えば、既にアイキャッチ画像を使っていて途中からflickr画像をアイキャッチ画像として使うということも出来ます。</p>
+<p>アイキャッチ画像と記事の最初に登場する画像が異なるケースには今のところ対応してない（cssで消せば可能）ので、要望として上がればそういう機能も設けようかと思います。wp-flickr-pressを使っていてアイキャッチ画像を使っている方は是非検討してみてください。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7749/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7293/16284253948_00cc41c1ee.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.0.0をリリース</title>
+		<link>/archives/7681/</link>
+					<comments>/archives/7681/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 04 Aug 2014 09:48:41 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7681</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.0.0をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/7681/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.0.0をリリースしました。<br />
+プラグインの詳細については<a href="https://fukata.org/dev/wp-plugin/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>1.9.19からの変更点</h2>
+<ul>
+<li>新UIの追加</li>
+</ul>
+<p><span id="more-7681"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>新UIの追加</h3>
+<p>長いことv2の実装が滞ってましたがやっとやる気が出たのでとりあえず動く物を実装しました。新UIを追加したからといって今までのUIがなくなっているわけではありません。ただ、将来的には新UIのみにする予定です（たぶん、v2.1.0あたりで）</p>
+<p>大画面やタブレットで操作する場合に以前のUIよりも使いやすくなったんじゃないでしょうか。WP自体のUIがタブレットの場合どうなるのかよく分かっていませんが。</p>
+<p>早速ですが新UIのスクリーンショットになります。</p>
+<p><a href="https://www.flickr.com/photos/fukata/14825532962" target="_blank" title="screenshot-10"><img src="https://farm3.staticflickr.com/2910/14825532962_7c02879987_c.jpg" alt="screenshot-10" class="aligncenter"/></a></p>
+<p><a href="https://www.flickr.com/photos/fukata/14639193680" target="_blank" title="screenshot-11"><img src="https://farm4.staticflickr.com/3896/14639193680_a92d39b52a_c.jpg" alt="screenshot-11" class="aligncenter"/></a></p>
+<p>バグなど見つけたら<a href="https://github.com/fukata/wp-flickr-press/issues">GH Issues</a>までお願いします。</p>
+<h2>追記: 2014.08.04 18:00</h2>
+<p>プラグインの公式ディレクトリにアップロードしたまではよかったものの1時間ほど経っても反映されないので色々チェックしてたらどうやらScreenshotsセクションに指定できるのは9枚までのようで、11枚指定してしまっていたので9枚に減らして再度commitしたら無事反映されました。その際、一度svnのtagsから削除して再度作成しなおしました。</p>
+<p>何度もリリースしているはずなのに未だによくハマる。。。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7681/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<image>https://farm3.staticflickr.com/2910/14825532962_7c02879987.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン1.9.19をリリース</title>
+		<link>/archives/7678/</link>
+					<comments>/archives/7678/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 24 Jul 2014 15:50:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7678</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン1.9.19をリリースしました。 プラグインの詳細についてはこちらより参 ... <a href="/archives/7678/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン1.9.19をリリースしました。<br />
+プラグインの詳細については<a href="https://fukata.org/dev/wp-plugin/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>1.9.18からの変更点</h2>
+<ul>
+<li>curlのSSLサポート有無チェックのバグ修正</li>
+</ul>
+<p><span id="more-7678"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>curlのSSLサポート有無チェックのバグ修正</h3>
+<p>CORESERVERを使っている人たちからflickrとのoauth部分でエラーになってしまうというコメントを幾つかもらっていたんですが、現在タイで仕事していて忙しいというのもあってなかなか調査出来ていませんでした。</p>
+<p>ただ、今回少し時間が出来たので調べてみたところ初歩的なバグでした。</p>
+<p>とりあえず、これでCORESERVERでも動作すると思いますので今まで動かなかった人は試してみてください。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7678/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン1.9.18をリリース</title>
+		<link>/archives/7667/</link>
+					<comments>/archives/7667/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 15 May 2014 01:44:07 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7667</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン1.9.18をリリースしました。 プラグインの詳細についてはこちらより参 ... <a href="/archives/7667/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン1.9.18をリリースしました。<br />
+プラグインの詳細については<a href="https://fukata.org/dev/wp-plugin/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>1.9.16からの変更点</h2>
+<ul>
+<li>Flickr APIのSSL対応</li>
+</ul>
+<p><span id="more-7667"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>Flickr APIのSSL対応</h3>
+<p><a href="https://code.flickr.net/2014/04/30/flickr-api-going-ssl-only-on-june-27th-2014/" title="Flickr API Going SSL-Only on June 27th, 2014 | code.flickr.com">Flickr API Going SSL-Only on June 27th, 2014 | code.flickr.com</a></p>
+<p>Flickr APIがSSLに完全移行するそうなのでwp-flickr-pressで利用しているAPIを今までは環境に合わせてhttp(s)を切り替えていましたがhttpsのみを利用するように修正。</p>
+<p>phpFlickr.php内でこんな感じでチェックしています。</p>
+<pre lang="php">
+function isSupportCurl () {
+    $cv = curl_version();
+    return function_exists('curl_init') && $cv['features'] & CURL_VERSION_SSL === CURL_VERSION_SSL;
+}
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7667/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

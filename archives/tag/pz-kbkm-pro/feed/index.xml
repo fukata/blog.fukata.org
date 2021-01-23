@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PZ-KBKM-PRO &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/pz-kbkm-pro/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Wed, 18 Oct 2017 16:12:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>バード電子 HHKB吸振マット(Professional用) KM-Pro2 PZ-KBKM-PROをHHKB Pro2 Type-Sに付けてみた</title>
+		<link>/archives/9013/</link>
+					<comments>/archives/9013/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 13 Oct 2017 11:09:25 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[HHKB]]></category>
+		<category><![CDATA[HHKB Professional2 Type-S]]></category>
+		<category><![CDATA[KM-Pro2]]></category>
+		<category><![CDATA[PZ-KBKM-PRO]]></category>
+		<guid isPermaLink="false">/?p=9013</guid>
+
+					<description><![CDATA[TwitterでHHKB用の吸振マットというのがあるのを知ったので買って取り付けてみた。 広告 キーボードの裏面全体に貼り付けるタイプなので横幅はキーボードとほぼ同じ。 マットを貼るとシリアル番号など ... <a href="/archives/9013/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9013/"><img src="https://farm5.staticflickr.com/4467/37619805226_bee5dab5a4_c.jpg" alt="HHKB用の吸振マット" class="aligncenter"/></a></p>
+<p>TwitterでHHKB用の吸振マットというのがあるのを知ったので買って取り付けてみた。</p>
+<p><span id="more-9013"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>キーボードの裏面全体に貼り付けるタイプなので横幅はキーボードとほぼ同じ。<br />
+<a href="/archives/9013/"><img src="https://farm5.staticflickr.com/4467/37619805226_bee5dab5a4_c.jpg" alt="HHKB用の吸振マット" class="aligncenter"/></a></p>
+<p>マットを貼るとシリアル番号などが見えなくなるのでメモしておくための用紙まで付いていた。<br />
+<a href="/archives/9013/"><img src="https://farm5.staticflickr.com/4464/37669138651_e2141b262e_c.jpg" alt="HHKB用の吸振マット" class="aligncenter"/></a></p>
+<p>実際に貼ってみた感じ。マットは少し粘着力があり机に軽く張り付く。<br />
+<a href="/archives/9013/"><img src="https://farm5.staticflickr.com/4454/37410943080_e896059ddf_c.jpg" alt="HHKB用の吸振マット" class="aligncenter"/></a></p>
+<p>少し厚みがあるのでパームレストを使っている人は高さが変わって違和感を覚える人もいるかもしれない。<br />
+<a href="/archives/9013/"><img src="https://farm5.staticflickr.com/4450/37410943550_6d2146f8a1_c.jpg" alt="HHKB用の吸振マット" class="aligncenter"/></a></p>
+<p>普段からHHKB Pro2 Type-Sでプログラミングしているので少しでも環境が良くなるのは良い。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9013/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4467/37619805226_bee5dab5a4.jpg</image>
+	</item>
+	</channel>
+</rss>

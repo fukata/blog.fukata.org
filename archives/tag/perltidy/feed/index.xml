@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Perltidy &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/perltidy/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>vim保存時にperltidyを実行するための設定</title>
+		<link>/archives/6359/</link>
+					<comments>/archives/6359/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2011 02:44:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Perltidy]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6359</guid>
+
+					<description><![CDATA[メモ .vimrcに下記を追加すれば、保存時にperltidyを適用してくれる。 " Perltidy function! s:Perltidy() %! perltidy -q endfunctio ... <a href="/archives/6359/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>メモ</p>
+<p>.vimrcに下記を追加すれば、保存時にperltidyを適用してくれる。</p>
+<pre lang="BASH">
+" Perltidy
+function! s:Perltidy()
+    %! perltidy -q
+endfunction
+autocmd BufWritePre *.pl silent :call s:Perltidy() 
+autocmd BufWritePre *.pm silent :call s:Perltidy()
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6359/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

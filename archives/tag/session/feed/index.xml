@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>session &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/session/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[JC]Struts2でjsp内でsessionの値の取得について</title>
+		<link>/archives/1392/</link>
+					<comments>/archives/1392/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 06 Jul 2009 20:43:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[jsp]]></category>
+		<category><![CDATA[session]]></category>
+		<category><![CDATA[struts2]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1392</guid>
+
+					<description><![CDATA[セッションにキー「user」としてUserクラスのインスタンスを格納して、jsp内で、Userクラスのnameフィールドを表示したい。というようなシナリオがあるとします。今回はそのようなシナリオでやっ ... <a href="/archives/1392/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>セッションにキー「user」としてUserクラスのインスタンスを格納して、jsp内で、Userクラスのnameフィールドを表示したい。というようなシナリオがあるとします。今回はそのようなシナリオでやっていこうと思います。</p>
+<p>■User.java</p>
+<pre lang="JAVA" line="1">
+public class User {
+	private String name;
+	
+	public String getName(){
+		return this.name;
+	}
+
+	public String setName(String name){
+		return this.name = name;
+	}
+}
+</pre>
+<p>■Hoge.jsp</p>
+<pre lang="html" line="1">
+Hello <s :property value="#session.user.name"></s>
+</pre>
+<p>簡単に書きましたが、以下のフォーマットでアクセスできるようです。</p>
+<pre lang="html">
+<s :property value="#session.[キー名].[フィールド名]"></s>
+</pre>
+<p>ちなみに、Mapなんかでも同じようにアクセスできるので、試してみて下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1392/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

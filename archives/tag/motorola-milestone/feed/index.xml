@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Motorola Milestone &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/motorola-milestone/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]CyanogenMod 6.1.0 RC5 for Milestoneの使用感</title>
+		<link>/archives/5025/</link>
+					<comments>/archives/5025/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 05 Dec 2010 05:19:33 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[CyanogenMod]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5025</guid>
+
+					<description><![CDATA[昨日、エントリ「Tatsuya Blog » [Android]CyanogenMod 6.1.0 RC5 for Milestoneを適用」を書いたわけですが、1日ほど使ってみたので簡単に使用感につ ... <a href="/archives/5025/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、エントリ「<a href="https://fukata.org/2010/12/05/android-cyanogenmod-6-1-0-rc5-for-milestone/">Tatsuya Blog » [Android]CyanogenMod 6.1.0 RC5 for Milestoneを適用</a>」を書いたわけですが、1日ほど使ってみたので簡単に使用感について書きたいと思います。</p>
+<h3>使用感</h3>
+<ul>
+<li>起動が速い</li>
+<li>基本的な動作は軽い（ただし、ホーム画面の再描画に引っかかる時がある）</li>
+<li>カメラ（オートフォーカス含む）も正常に動作する</li>
+<li>OpenVPNが標準で利用可能</li>
+</ul>
+<p>オートフォーカスも動作していますし、きちんと写真も撮れますし、基本的には満足しているのですが、一点、ADWLauncherの影響だと思っているのですが、ホーム画面に戻る際にホームの再描画が若干引っかかる場合があり、大体２、３秒ほど掛かっています。些細な問題かと言えばそうかもしれませんが、機会が多いだけにイラッとします。12vpnを既に契約していてOpenVPN目的で利用したい人にとっては良いかもしれません。また、他のカスタムROMの場合には、特定の機能が動作しなかったりするので、その点では動作するCyanogenModは良いです。</p>
+<p>ただ、カメラを利用しない人にとっては「<a href="https://fukata.org/2010/11/12/android-milestone-motofrenzy-0-52/">[Android]MilestoneにMotoFrenzy 0.52を適用</a>」で書いたMotoFrenzyの方が標準に近く、動作も軽快です。ただ、現状のバージョン0.52ではカメラのオートフォーカスが全く利用できないのでその点だけ考慮する必要があります。</p>
+<p>あと、現在使用している12vpn.comのOpenVPNは一瞬繋がったかのようにステータスバーにはConnectedと流れるのですが、settingsのVPNメニューの方には以前Connecting&#8230;のまま。それだけであれば良いのですが、すぐ切れてしまい、不安定なようです。これは、OpenVPN側の問題なのか12vpn側の問題なのかは微妙なところです。あと、接続時間の表示も下記のようにバグっていました。HTC DesireにCyanogenMod 6.0の安定版を入れた方によればOpenVPNも正常に使えているそうです。自分も6.1安定版に期待します。</p>
+<p>OpenVPN接続時の接続時間<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5230840711'><img src='https://farm6.static.flickr.com/5127/5230840711_00e6520bd7.jpg' alt='12VPN OpenVPN on CyanogenMod-6.1.0-RC5-Milestone' class='aligncenter' /></a></p>
+<p>デフォルト（900Mhzにオーバークロック済み）でのベンチマーク<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5231997525'><img src='https://farm6.static.flickr.com/5202/5231997525_4683aa9f23.jpg' alt='BenchmarkPi CyanogenMod-6.1.0-RC5-Mlilestone OC-900Mhz' class='aligncenter' /></a></p>
+<p>1200Mhzにオーバークロック済みでのベンチマーク<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5232591546'><img src='https://farm6.static.flickr.com/5125/5232591546_152571c214.jpg' alt='BenchmarkPi CyanogenMod-6.1.0-RC5-Mlilestone OC-1200Mhz' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5025/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]CyanogenMod 6.1.0 RC5 for Milestoneを適用</title>
+		<link>/archives/5011/</link>
+					<comments>/archives/5011/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 04 Dec 2010 20:49:00 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[CyanogenMod]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5011</guid>
+
+					<description><![CDATA[以下、wikipediaより引用 CyanogenModはオープンソースのオペレーティングシステムであるAndroidのディストリビューションであり、コミュニティにおいて人気が高い。 GoogleやT ... <a href="/archives/5011/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以下、<a href="https://ja.wikipedia.org/wiki/CyanogenMod">wikipedia</a>より引用</p>
+<blockquote><p>
+CyanogenModはオープンソースのオペレーティングシステムであるAndroidのディストリビューションであり、コミュニティにおいて人気が高い。<br />
+GoogleやT-Mobile、HTCなどのベンダがリリースする公式なAndroidファームウェアを上回る性能と信頼性をめざしてデザインされており、公式ファームウェアにはない、いくつかの機能をもサポートしている。FLACロスレス音楽形式、マルチタッチ、アプリケーションのmicroSDへのインストール及び実行、compcache、多くのAPNのリスト、リブート、Wi-Fi・Bluetooth・USB接続でのテザリングなどである[2]。CyanogenModは、BFSをタスクスケジューラとして組み込んだ最初のモバイルOSであり、この変更はAndroidの公式なソースツリーの実験的ブランチにマージされた[3]。
+</p></blockquote>
+<p>そんな<a href="https://www.cyanogenmod.com/">CyanogenMod</a>をMilestoneに適用してみました。</p>
+<p>インストール手順等は長いので以下からどうぞ</p>
+<p><span id="more-5011"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://wiki.cyanogenmod.com/index.php?title=Motorola_Droid:_Full_Update_Guide#Before_you_do_anything_.E2.80.94_Make_a_backup">Motorola Droid: Full Update Guide &#8211; CyanogenMod Wiki</a></p>
+<p>Droidのインストール手順に関しては掲載されていたのですが、自分のやり方がまずかったのか、Milestoneには上記の手順では適用できないのかうまくいきませんでした。なので、今回メモとしてインストール手順等を残しておきたいと思います。</p>
+<p>ちなみに、Droid用のROMに関しては公式サイトからダウンロード可能なのですが、Milestoneに関しては下記のサイトからダウンロードできます。</p>
+<p><a href="https://code.google.com/p/cyanogenmod4milestone/">cyanogenmod4milestone &#8211; Project Hosting on Google Code</a></p>
+<h3>今回行った手順</h3>
+<ol>
+<li>OpenRecoveryのインストール</li>
+<li>G.O.T 2.2.1のインストール</li>
+<li>update-0.04-10.12.04-cm-6.1.0-RC5-Milestone-signed.zipの適用</li>
+<li>update-bpsw-MSG39UPEU_A1.19_0.90.zipの適用</li>
+<li>update-adb_during_boot_enabler.zipの適用</li>
+<li>gapps-hdpi-20101114-signed.zipの適用</li>
+</ol>
+<h3>各種ファイルのダウンロード先</h3>
+<ul>
+<li>OpenRecovery</li>
+<li>G.O.T 2.2.1</li>
+</ul>
+<p>に関しては、以前のエントリ「<a href="https://fukata.org/2010/11/10/android-milestone-got-2-2-1/">[Android]MilestoneにG.O.T 2.2.1を適用</a>」を参照して下さい。</p>
+<ul>
+<li>update-0.04-10.12.04-cm-6.1.0-RC5-Milestone-signed.zip</li>
+<li>update-bpsw-MSG39UPEU_A1.19_0.90.zip</li>
+<li>update-adb_during_boot_enabler.zip</li>
+</ul>
+<p>ダウンロード先：<a href="https://code.google.com/p/cyanogenmod4milestone/downloads/list">Downloads &#8211; cyanogenmod4milestone &#8211; Project Hosting on Google Code</a></p>
+<ul>
+<li>gapps-hdpi-20101114-signed.zip</li>
+</ul>
+<p>ダウンロード先：<a href="https://wiki.cyanogenmod.com/index.php?title=Latest_Version#Google_Apps">Latest Version &#8211; CyanogenMod Wiki</a></p>
+<h3>インストール手順</h3>
+<p>まず、リ「<a href="https://fukata.org/2010/11/10/android-milestone-got-2-2-1/">[Android]MilestoneにG.O.T 2.2.1を適用</a>」を元にG.O.T 2.2.1の状態にする。</p>
+<p>次に、ダウンロードした下記のファイルを/sdcard/OpenRecovery/updates/直下に格納し、リカバリモードからOpenRecoveryを起動し、下記の順に適用。</p>
+<ol>
+<li>update-0.04-10.12.04-cm-6.1.0-RC5-Milestone-signed.zip</li>
+<li>update-bpsw-MSG39UPEU_A1.19_0.90.zip</li>
+<li>update-adb_during_boot_enabler.zip</li>
+<li>gapps-hdpi-20101114-signed.zip</li>
+</ol>
+<p>最後にData, CacheのWipeを行い、再起動すれば無事CyanogenModが起動すると思います。</p>
+<p>モデル名など<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5231368258'><img src='https://farm6.static.flickr.com/5049/5231368258_abbe3d7a93.jpg' alt='CyanogenMod-6.1.0-RC5-Milestone' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5011/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]MilestoneにMotoFrenzy 0.52を適用</title>
+		<link>/archives/4899/</link>
+					<comments>/archives/4899/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2010 15:58:34 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Custom ROM]]></category>
+		<category><![CDATA[MotoFrenzy]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4899</guid>
+
+					<description><![CDATA[下記のサイトで配布されているMotoFrenzy 0.52をMilestoneに適用してみました。 Dexter&#8217;s Mod&#8217;s G.O.T 2.2.1の時にマルチバイトのSM ... <a href="/archives/4899/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>下記のサイトで配布されているMotoFrenzy 0.52をMilestoneに適用してみました。<br />
+Dexter&#8217;s Mod&#8217;s</p>
+<p>G.O.T 2.2.1の時にマルチバイトのSMSが送信できなかった問題は解消したのですが、カメラのオートフォーカスについてはこちらも対応していません。５００万画素もあるので、オートフォーカスに対応したバージョンが出てほしいものです。</p>
+<p>また、今回試したMotoFrenzy以外にもHTC SenseをMilestoneでも利用できるようにしたMotoFroyoSenseやCharmなどで採用されているMotoBlurをMilestoneで利用できるようにしたMotoBlur(そのまま)などと言ったカスタムROMも使ってみました。ただ、どちらもまだバグが残っていたり動作が不安定だったりしたので今回は諦めました。</p>
+<p>MotoBlurが触れたのはちょっと嬉しかったです。今回使用したカスタムROMがどこまで最新のMotoBlurを再現しているのかはわかりませんが、印象的にはHTC Senseに比べるとそこまで作り込みは少ないのかなと感じました。ただ、ソーシャル関連のウィジェットだったりがデフォルトで豊富に入っていたのは魅力的でした。中国ではVPNを経由しないと使えないでしょうけど＾＾；</p>
+<p>カスタムROMをいくつか使って全てに共通することはタッチパネルの精度が純正に比べてかなり劣ることです。大きくずれたり、ドラッグがうまくいかなかったりと割と酷い状態なんじゃないかなと。カスタムROMを利用する以上、自己責任なので仕方ありませんが普段使用していて一番イラッとする部分ですので改善されると非常に助かる人が多いのではないでしょうか。</p>
+<p>一昨日から4つほどカスタムROMを試してみている中で一つ気に入ったアプリがありました。それは下記のGalleryアプリです。正式名があるのかどうか分かりませんが、システムのアプリケーション一覧にもGalleryとだけ記載されていました。何が気に入ったかというと、まず、UIがかっこいい。それからPicasaにアップした画像も閲覧可能なところです。個人的にウェブアルバムはPicasaを主に利用しているので標準で対応していることは結構大きいです。また、Picasaにアップしている画像もBluetooth通信や壁紙設定が可能でした。また、これは2.1までの標準Galleryにはなかった（と思います）機能ですが、複数ファイルを一括操作することが出来、ホワイトボードやちょっとした画像を撮る私としては、今まで一つずつチマチマ送信していた手間が省けて非常にありがたいです。</p>
+<p>写真がずれてしまっているのは、このGalleryアプリが角度によって写真が傾くのですが、使っていたスクリーンキャプチャソフトがシェイクして撮るというもので、その時にずれてしまったようです。本当はなめらかに動作します。オーバークロックしていないMilestoneでも普通に動作するので最新端末では軽快に動作すると思います。</p>
+<p>というわけで、今はMotoFrenzyに落ち着いています。とりあえず、大きなバグがない限りこれを使い続けてみようかと思います。</p>
+<p>バージョン、Galleryアプリの画像は下記から</p>
+<p><span id="more-4899"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>バージョン等<br />
+<a href="https://farm6.static.flickr.com/5051/5476154470_621ecb7be1_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5051/5476154470_621ecb7be1_m.jpg" alt="" title="CAP201011111142" width="281" height="500" class="aligncenter size-large wp-image-4900" /></a></p>
+<p>フォルダ一覧<br />
+<a href="https://farm6.static.flickr.com/5136/5475557519_d5f86e48fe_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5136/5475557519_d5f86e48fe_m.jpg" alt="" title="CAP201011112108" width="281" height="500" class="aligncenter size-large wp-image-4901" /></a></p>
+<p>写真一覧<br />
+<a href="https://farm6.static.flickr.com/5251/5475557833_68205a7cf0_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5251/5475557833_68205a7cf0_m.jpg" alt="" title="CAP2010111121101" width="281" height="500" class="aligncenter size-large wp-image-4904" /></a></p>
+<p>Picasaのアルバムも閲覧可能<br />
+<a href="https://farm6.static.flickr.com/5140/5475557045_78f90b6ba0_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5140/5475557045_78f90b6ba0_m.jpg" alt="" title="CAP201011112110" width="281" height="500" class="aligncenter size-large wp-image-4902" /></a></p>
+<p>Picasaに上げた写真<br />
+<a href="https://farm6.static.flickr.com/5095/5476154258_8420ea2407_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5095/5476154258_8420ea2407_m.jpg" alt="" title="CAP201011112111" width="281" height="500" class="aligncenter size-large wp-image-4903" /></a></p>
+<p>複数ファイルを一括でBluetooth経由で送信することも可能<br />
+<a href="https://farm6.static.flickr.com/5300/5476154040_e7f83ff36f_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5300/5476154040_e7f83ff36f_m.jpg" alt="" title="CAP201011112343" width="281" height="500" class="aligncenter size-large wp-image-4907" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4899/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]MilestoneにG.O.T 2.2.1を適用</title>
+		<link>/archives/4887/</link>
+					<comments>/archives/4887/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 10 Nov 2010 06:45:24 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[G.O.T]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4887</guid>
+
+					<description><![CDATA[やっとという感じですが、カスタムROMに手を出してみました。 そして、念願のfroyo(非公式)です。いやぁやっぱりGMailアプリが格段に使いやすくなっていますね。ラベルはきちんと色が反映されますし ... <a href="/archives/4887/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>やっとという感じですが、カスタムROMに手を出してみました。<br />
+そして、念願のfroyo(非公式)です。いやぁやっぱりGMailアプリが格段に使いやすくなっていますね。ラベルはきちんと色が反映されますし、前後のメールへの移動も改善されてます。</p>
+<p>Root権限に関しても下記のページで紹介されているRoot取得用update.zipをOSのバージョンアップ後に適用するだけで取得することができました。オーバークロックに関しても動作確認済みです。<br />
+<a href="https://laugh-labo.blogspot.com/2010/07/milestoneblackdroid.html">LaughLife: Motorola MilestoneにBlackDroidのテーマを導入してみた。</a></p>
+<p>手順や必要なファイルに関しては下記のページからダウンロードすることができます。<br />
+<a href="https://groupoften.wordpress.com/2010/10/16/g-o-t-2-2-1-released/">G.O.T 2.2.1 released « G.O.T.&#8217;s Blog</a></p>
+<p>今回私は、UK RETAIL (RTUK)を使用しました。</p>
+<p>日本語でのインストール手順はこちらのサイトが分かりやすいと思います。<br />
+<a href="https://d.hatena.ne.jp/kai09/20101022/1287767495">Motorola Milestone &#8211; Android 2.2 Froyo test leak ROM をインストールして使ってみた &#8211; kai09の日記</a></p>
+<p>sbfの書き込みはすんなり終わったのですが、OpenRecoveryで「launch 2.2.1 menu」を押下すると必ずハングアップしてしまい、その後の手順を実行することができませんでした。それでも動くかなぁと思い、リブートしてみると立ち上がりました。OSのバージョンもきっちり2.2.1に変更されていることを確認。<br />
+<a href="https://farm6.static.flickr.com/5092/5475556669_3ba027d542_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5092/5475556669_3ba027d542_m.jpg" alt="" title="CAP201011100021" width="281" height="500" class="aligncenter size-large wp-image-4890" /></a></p>
+<p>で、昨日半日ほど使ってみて2.1 update-1と比べると</p>
+<ul>
+<li>動作は軽くなった（JITの改善）</li>
+<li>カメラの画質が悪くなった</li>
+<li>カメラのオートフォーカスが効かない</li>
+<li>SMSでマルチバイト文字が送信できない（受信は可能）</li>
+</ul>
+<p>ざっとこんな感じです。<br />
+一番大きいのがなんと言ってもSMSの件ですね。日本だとSMSってほとんど使ったことがなかったんですが、中国ではSMSが一般的に使用されているので日本語が使えないのはかなり痛いです。また、カメラの画質とオートフォーカスの件についてもせっかく５００万画素でそれなりに綺麗な写真が撮れる端末なので積極的に使っていたので残念です。パッチか何かがないか調べたいと思います。</p>
+<p>もしかしたら、ハングアップせずに正常にセットアップが完了すればいくつかは改善される？<br />
+もし、ご存知の方がいましたらコメントなりで教えていただけると幸いです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4887/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]Milestoneで再起動後もオーバークロック状態にする</title>
+		<link>/archives/4879/</link>
+					<comments>/archives/4879/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 09 Nov 2010 10:31:26 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<category><![CDATA[Overclock]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4879</guid>
+
+					<description><![CDATA[手持ちのMilestoneをオーバークロック状態にする際に使用しているアプリがこちら。milestone-overclock &#8211; Project Hosting on Google Cod ... <a href="/archives/4879/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>手持ちのMilestoneをオーバークロック状態にする際に使用しているアプリがこちら。<a href="https://code.google.com/p/milestone-overclock/">milestone-overclock &#8211; Project Hosting on Google Code</a></p>
+<p>Rootを取得していることが条件ですが、Rootの取得方法については少し探せば見つかると思います。で、Rootさえ取得していれば後は簡単で、設定したいCPU Hzに設定するだけです。</p>
+<p>で、このアプリ。再起動後も設定を維持してもらいたいところなのですが、デフォルトだと毎回設定し直さないといけません。それは非常に面倒なので調べた結果、以下のような手順で再起動後も設定を維持することができました。</p>
+<h2>1. AutoStart(Root)のインストール</h2>
+<p>AutoStart(Root)のダウンロードは以下からどうぞ。<br />
+<a href="https://www.androidzoom.com/android_applications/tools/autostart-root_bacu_download.html">Autostart (Root) (Android) &#8211; Download</a></p>
+<p>これは単純にインストールするだけです。<br />
+このアプリをインストールすることで、起動後にroot権限で/data/opt/autostart.shを実行してくれるというものです。なので、今回はこのshellにオーバークロック状態にするスクリプトを仕込みます。</p>
+<h2>2. /data/opt/autostart.shの設置</h2>
+<p>その仕込む内容は以下になります。</p>
+<pre lang="BASH">
+insmod /data/data/pt.com.darksun.milestoneoverclock/files/overclock.ko
+echo 80 > /proc/overclock/max_vsel
+echo 1200000 > /proc/overclock/max_rate
+</pre>
+<p>設定する値については下記のページを参照下さい。<br />
+<a href="https://code.google.com/p/milestone-overclock/wiki/KernelModule">KernelModule &#8211; milestone-overclock &#8211; How to use the kernel module &#8211; Project Hosting on Google Code</a></p>
+<p>作成したファイルは下記のようにしてUSB接続したMilestoneへ転送します。</p>
+<pre lang="BASH">
+adb push autostart.sh /opt/data/
+</pre>
+<p>以上で、再起動後にもオーバークロックの設定が反映されるようになります。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4879/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]Mugen Power HLI-A855XLの使用感</title>
+		<link>/archives/4875/</link>
+					<comments>/archives/4875/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 07 Nov 2010 15:29:43 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<category><![CDATA[MugenPower]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4875</guid>
+
+					<description><![CDATA[先日購入したHLI-A855XLですが、昨日今日とみっちり使ってみました。 バッテリー残量表示に関しては先日の記事を参照してください。今もこの現象は続いています。実際どれくらい保つのかというと、今日、 ... <a href="/archives/4875/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日購入した<a href="https://www.mugen-power-batteries.com/mugen-power-extended-battery-for-motorola-a855-milestone-with-battery-in-black-3300mah.html">HLI-A855XL</a>ですが、昨日今日とみっちり使ってみました。</p>
+<p>バッテリー残量表示に関しては<a href="https://fukata.org/2010/11/05/order-mugen-power-extended-battery-for-motorola-a855-milestone-with-battery-in-black-3300mah-hli-a855xl/">先日の記事</a>を参照してください。今もこの現象は続いています。実際どれくらい保つのかというと、今日、12時頃から主に以下の機能を常にONにした状態で22時までノンストップで稼働しました。</p>
+<ul>
+<li>VPN</li>
+<li>オーバークロック（1Ghz）</li>
+<li>Twidroid(更新間隔1分間)</li>
+<li>ディスプレイ光量50%</li>
+</ul>
+<p>１０時間以上ノンストップで稼働していたということで、普段こんなに使わないのでバッテリーが無くなる心配は不要なようです。また、これだけバッテリーが保つのであれば現在、音楽プレイヤーとして使用しているiPodをMilestoneに移しても大丈夫かもしれません。これはまた別の日にでも試してみたいと思います。それにしても、予想以上に保ってくれています。実用量は1300mAh -> 3300mAhなので約2.5倍ですが保ちの感覚としてはもっとあるように感じます。</p>
+<p>ただ、このバッテリを装着すると厚みが2倍になるので正直ジーンズのポケットなどに入れるのはきついです。。。自分は上着のポケットに入れるようにしています。そうしないと引っかかって取り出せないので＾＾；</p>
+<p>一日フルにスマートフォンを使いたいという人に是非使ってもらいたいバッテリーです。先日の記事にも書きましたが、個人的には今のスマートフォンのバッテリーの保ちだと拡張バッテリーは必須だと思っています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4875/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]Mugen Power Extended Battery for Motorola A855 Milestone with battery in Black 3300mAh [HLI-A855XL]を購入</title>
+		<link>/archives/4864/</link>
+					<comments>/archives/4864/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 05 Nov 2010 02:05:49 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<category><![CDATA[MugenPower]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4864</guid>
+
+					<description><![CDATA[スマートフォンと言えば拡張バッテリーというくらい、スマートフォンには必須のアイテムだと思っています。 以前使っていたBlackBerry Bold 9000にもこちらを装備していました。スマートフォン ... <a href="/archives/4864/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>スマートフォンと言えば拡張バッテリーというくらい、スマートフォンには必須のアイテムだと思っています。<br />
+以前使っていたBlackBerry Bold 9000にも<a href="https://goo.gl/mKLsX">こちら</a>を装備していました。スマートフォンながら、普通に使用して2日間ほど保っていました。</p>
+<p>今回もそれくらい持ってほしいと思って購入したのですが、標準バッテリーと同じくらいの勢いでバッテリーのパーセンテージが減っていきます。<br />
+変だと思い、一度完全放電するために動画をずっと再生していたところ、途中で再起動することになり再起動が完了。この時、バッテリー残量は5%。</p>
+<p>ん？</p>
+<p>再起動後、バッテリ残量を確認すると60%。</p>
+<p>・・・</p>
+<p>！？</p>
+<p>挙動的にMilestoneでの計算用バッテリー最大容量が決まっており、その値で計算されているように見えます。再起動せずに使いつづけると5%を保ち、一応使用することは可能なようです。（バッテリーが少なくなってるからチャージしてね。という警告は出ます。）オーバークロック、3Dベンチマークを実行し続けて５、６時間は持つことを確認しました。</p>
+<p>オーバークロックせずにそんなに酷使しなければ普通に一日程度は持ちそうです。ちなみに、今回試したのはMilestone 2.1 update-1なので、OSのバージョンが変わればバッテリー残量表示は正常になるかもしれません。</p>
+<p>標準バッテリーとの比較<br />
+<a href="https://farm6.static.flickr.com/5296/5476154598_4654ab871f_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5296/5476154598_4654ab871f_m.jpg" alt="" title="IMAG0026" width="500" height="299" class="aligncenter size-large wp-image-4865" /></a></p>
+<p>横にしてみた感じ<br />
+<a href="https://farm6.static.flickr.com/5179/5476153722_cb9e798792_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5179/5476153722_cb9e798792_m.jpg" alt="" title="IMAG0028" width="500" height="299" class="aligncenter size-large wp-image-4867" /></a></p>
+<p>持ってみた感じ<br />
+<a href="https://farm6.static.flickr.com/5171/5475556927_5474df3d4e_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5171/5475556927_5474df3d4e_m.jpg" alt="" title="IMAG0027" width="299" height="500" class="aligncenter size-large wp-image-4866" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4864/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Motorola Milestone + b-mobile SIM</title>
+		<link>/archives/4723/</link>
+					<comments>/archives/4723/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 10 Sep 2010 15:33:57 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[b-mobile SIM]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4723</guid>
+
+					<description><![CDATA[昨日の記事でも書いたとおり、b-mobile SIMが届いていました。 さっそく、Motorola Milestoneに挿入してAPNの設定をしました。 ・・・ 電話番号や通信方法については適切な値が ... <a href="/archives/4723/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5257/5476136424_95305c6e81_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5255/5476136910_58fe329a36_m.jpg" alt="" title="2010-09-10_20-47-49_754" width="150" height="150" class="alignleft size-thumbnail wp-image-4725" /></a>昨日の記事でも書いたとおり、b-mobile SIMが届いていました。</p>
+<p>さっそく、Motorola Milestoneに挿入してAPNの設定をしました。</p>
+<p>・・・</p>
+<p>電話番号や通信方法については適切な値が設定されているのですが、Mobile NetworkでNTT DOCOMOとSoftbankが出てき、NTT DOCOMOを選択するも、登録作業が一向に終わらない状態でした。</p>
+<p><a href="https://miledemairu.blogspot.com/2010/04/registering-b-mobile-sim-u300.html">MILESTONEで参る: Registering がとまらない ～b-mobile SIM U300～</a></p>
+<p>現象としては、上記のページで説明されているのと同様で、事前に一応調べてはいたのですが、やはりダメなようでした。素直に現在使っているdocomoのSIMのプランを変更するか、MilestoneのOSが2.2にアップグレードされるのを待ちます。ちなみに、下記の記事によるとdocomoの定額プランはMilestoneでも利用可能なようです。</p>
+<p><a href="https://d.hatena.ne.jp/sgrmatha/20100716/1279249561">ドコモ定額データSIMはMilestoneで使えるみたい &#8211; モバイルをバックパックにつめこんで</a></p>
+<p>もう少しWiFiのみでがんばってみようかと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4723/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Motorola Milestoneをいただきました</title>
+		<link>/archives/4717/</link>
+					<comments>/archives/4717/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 09 Sep 2010 16:30:13 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4717</guid>
+
+					<description><![CDATA[いろんな偶然が重なり、@JiangboさんからAndroid端末のMotorola Milestoneをいただきました。 今まで仕事ではAndroid端末を持っていましたが、私物としては初めてです。な ... <a href="/archives/4717/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5051/5476136582_e0133efd72_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5051/5476136582_e0133efd72_m.jpg" alt="" title="CAP201009100117" width="150" height="150" class="alignleft size-thumbnail wp-image-4718" /></a>いろんな偶然が重なり、<a href="https://twitter.com/Jiangbo">@Jiangbo</a>さんからAndroid端末のMotorola Milestoneをいただきました。</p>
+<p>今まで仕事ではAndroid端末を持っていましたが、私物としては初めてです。なので実際にはあまり深く触ったことがなく、悪戦苦闘中です＾＾；</p>
+<p>一応、XStream for AndroidなどAndroid用のライブラリなども作っていますので、何かアプリでも作ってみようかと思います。基本的にJavaのコードが実行できるのは大きいですね。これがiPhoneだと動かすのにも一苦労です。というか、MacBook持ってないですし。</p>
+<p>また、BBで使用していたSIMしか現在持っていないので、b-mobile SIMも注文しました。talking SIMにしようか迷ったんですが、通話はまだしないだろうということで、外でも使えるようにとb-mobile SIMの方にしました。</p>
+<p>Androidの使い勝手、Milestoneの使い勝手に関してはこれから使用して確かめたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4717/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

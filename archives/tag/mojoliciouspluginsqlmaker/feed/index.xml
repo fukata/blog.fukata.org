@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mojolicious::Plugin::SQLMaker &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mojoliciouspluginsqlmaker/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Mojolicious::Plugin::SQLMakerをリリースしました</title>
+		<link>/archives/7317/</link>
+					<comments>/archives/7317/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Nov 2012 08:54:20 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[Mojolicious::Plugin::SQLMaker]]></category>
+		<category><![CDATA[Release]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7317</guid>
+
+					<description><![CDATA[SQL::MakerのMojoliciousプラグインが無さそうだったので作りました。 Mojolicious::Plugin::SQLMaker &#8211; search.cpan.org ソー ... <a href="/archives/7317/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>SQL::MakerのMojoliciousプラグインが無さそうだったので作りました。</p>
+<p><a href="https://search.cpan.org/~fukata/Mojolicious-Plugin-SQLMaker/lib/Mojolicious/Plugin/SQLMaker.pm" title="Mojolicious::Plugin::SQLMaker - search.cpan.org" target="_blank">Mojolicious::Plugin::SQLMaker &#8211; search.cpan.org</a></p>
+<p>ソースはこちら。<br />
+<a href="https://github.com/fukata/Mojolicious-Plugin-SQLMaker" title="fukata/Mojolicious-Plugin-SQLMaker" target="_blank">fukata/Mojolicious-Plugin-SQLMaker</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7317/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

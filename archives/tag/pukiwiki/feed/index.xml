@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>pukiwiki &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/pukiwiki/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>pukiwikiでのファイル名の最大文字数って？</title>
+		<link>/archives/678/</link>
+					<comments>/archives/678/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 30 Sep 2008 17:53:58 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[pukiwiki]]></category>
+		<category><![CDATA[wiki]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=678</guid>
+
+					<description><![CDATA[自分は、ローカルにメモ用としてapacheというウェブサーバを起動させ、その上でpukiwikiを動かしているんですが、先日したファイルのファイル名を変更しようとしたら「権限がないか、ファイル名が長す ... <a href="/archives/678/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>自分は、ローカルにメモ用としてapacheというウェブサーバを起動させ、その上でpukiwikiを動かしているんですが、先日したファイルのファイル名を変更しようとしたら「権限がないか、ファイル名が長すぎる」というエラーが出た。</p>
+<p>他のファイルは正常通り操作可能だから多分ファイル名の最大文字列長を越えたのだろうと思っています。たしか40文字くらい設定していたような気が・・・＾＾；</p>
+<p>あまり長すぎるファイル名はダメってことですね；；</p>
+<p>でも、変更できないだけで、作成できるのってバグじゃね？w</p>
+<p>それか、OSの最大文字列長を越えたのかな・・・</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/678/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CongoMongo &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/congomongo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>congomongoのjsonを正しい形式にする</title>
+		<link>/archives/6394/</link>
+					<comments>/archives/6394/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 29 Oct 2011 18:34:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CongoMongo]]></category>
+		<category><![CDATA[json]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6394</guid>
+
+					<description><![CDATA[MongoDB, Clojure, JSON and PHP &#8211; CongoMongo issues and solutions &#124; ProDevTips &#8211; Web Deve ... <a href="/archives/6394/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.prodevtips.com/2010/12/31/mongodb-clojure-json-and-php-congomongo-issues-and-solutions/">MongoDB, Clojure, JSON and PHP &#8211; CongoMongo issues and solutions | ProDevTips &#8211; Web Development Tutorials</a></p>
+<p>congomongoはfetchした結果をjson形式にしてくれる機能が存在するのでJSON APIを作成する時に楽なのですが、このjsonは各行オブジェクトをjson形式に展開するというだけで、複数だったら配列のjson形式にしてくれるというような気が利いた形式で返してくれず、こんな感じになります。</p>
+<pre lang="json">
+{...1行目...}{...2行目...}
+</pre>
+<p>せっかく便利な機能があるので、下記のように括弧で閉じて、各行をカンマで区切って欲しいなぁと思い、探したところ上記のページを見つけました。</p>
+<pre lang="json">
+[{...1行目...},{...2行目...}]
+</pre>
+<p>ページ内に書いてあるとおり、fix-strを定義し、fetchの戻り値を引数として渡すと上記のように正しいjson形式にしてくれます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6394/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Compojure + CongoMongo + Fleetを使ってみる</title>
+		<link>/archives/6161/</link>
+					<comments>/archives/6161/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 01 Oct 2011 06:42:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[CongoMongo]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6161</guid>
+
+					<description><![CDATA[今回はDBにMongoDBを使うということで、検索してみたところ、CongoMongoが使いやすそうだったので、少し試しに使ってみたところ、今回の要件はそこまで複雑でないので採用ということに。 参考に ... <a href="/archives/6161/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今回はDBにMongoDBを使うということで、検索してみたところ、CongoMongoが使いやすそうだったので、少し試しに使ってみたところ、今回の要件はそこまで複雑でないので採用ということに。</p>
+<p>参考にしたのはこの辺です。</p>
+<ul>
+<li><a href="https://d.hatena.ne.jp/asakawajunya/20101218/1292667201">ClojureでMongoDBにアクセスしてみる &#8211; asakawajunyaの日記</a></li>
+<li><a href="https://thechangelog.com/post/344418038/congomongo-use-mongodb-from-clojure">congomongo: Use MongoDB from Clojure &#8211; The Changelog &#8211; Open Source moves fast. Keep up.</a></li>
+<li><a href="https://github.com/aboekhoff/congomongo">aboekhoff/congomongo &#8211; GitHub</a></li>
+</ul>
+<p>また、テンプレートエンジンについては、前回は<a href="https://github.com/cgrand/enlive">Enlive</a>を利用しようかと思ったんですが、実際に使ってみたところEnliveはスクレイピングしたHTMLからデータを抽出するのに適していて、今回のように既にテンプレート、データは用意されていてコントローラからテンプレート内で利用する変数のハッシュを渡して後はテンプレート側で適当に処理してくれるような軽量なものが望ましかったので、今回は諦めました。</p>
+<p>そこで、もう少し検索したところFleetというのがあり、使ってみたところ上記の使い方が出来そうだったのでこっちを使ってみることにしました。</p>
+<p>基本的な使い方は公式のページに書いています。</p>
+<p><a href="https://github.com/Flamefork/fleet">Flamefork/fleet &#8211; GitHub</a></p>
+<p>また、今回はCompojureと組み合わせたところ、現バージョンではエラーになるので、下記のページを参考に修正すると正常に動作するようになりました。</p>
+<p><a href="https://www.nofluffjuststuff.com/blog/michael_nygard/2011/01/glue_fleet_and_compojure_together_using_protocols">Glue Fleet and Compojure Together Using Protocols &#8211; No Fluff Just Stuff</a></p>
+<p>ということで、今のところCompojure + CongoMongo + Fleetで開発してみたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6161/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

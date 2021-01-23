@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Tips &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/tips/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>メッセンジャーバッグ + BlackRapid SnapR20</title>
+		<link>/archives/356/</link>
+					<comments>/archives/356/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 09 Mar 2014 02:18:29 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackRapid]]></category>
+		<category><![CDATA[Tips]]></category>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=356</guid>
+
+					<description><![CDATA[スペイン旅行の時はメッセンジャーバッグで観光してたんですが、BlackRapidのストラップとメッセンジャーのストラップがそれぞれ独立していたのでまとまりが悪く、気持ち悪かったのでなんとか快適に出来な ... <a href="/archives/356/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/11310366413" target="_blank" title="I0005121"><img src="https://farm3.staticflickr.com/2874/11310366413_4b21a9a007_z.jpg" alt="I0005121" class="aligncenter" /></a></p>
+<p>スペイン旅行の時はメッセンジャーバッグで観光してたんですが、BlackRapidのストラップとメッセンジャーのストラップがそれぞれ独立していたのでまとまりが悪く、気持ち悪かったのでなんとか快適に出来ないかと施策した時のメモです。</p>
+<p><span id="more-356"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>メッセンジャーバッグの肩掛けにBlackRapidも一緒に通すことによってまとまりが良くなる。<br />
+<a href="https://www.flickr.com/photos/fukata/11310366413" target="_blank" title="I0005121"><img src="https://farm3.staticflickr.com/2874/11310366413_4b21a9a007_z.jpg" alt="I0005121" class="aligncenter" /></a></p>
+<p>写真の通りなんですが、BlackRapidのショルダーパッドを外して、メッセンジャーバッグのショルダーパッドに一緒に通してしまいます。これでまとまりも良く撮影しながら観光しやすくなりました。</p>
+<p>使っているBlackRapidはスナップR20です。バッグ部分とショルダーパッドを外してます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/356/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm3.staticflickr.com/2874/11310366413_4b21a9a007.jpg</image>
+	</item>
+		<item>
+		<title>[CodeIgniter2.x]CIUnit for CI2をEclipseから利用する場合の設定</title>
+		<link>/archives/5784/</link>
+					<comments>/archives/5784/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 19 Jun 2011 07:46:31 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[PHPUnit]]></category>
+		<category><![CDATA[Tips]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5784</guid>
+
+					<description><![CDATA[fukata/CIUnit-for-CI2 &#8211; GitHub をコマンドラインからテストする際はphpunitコマンドを叩けば良いのですが、Eclipseから利用する場合には「外部ツール」 ... <a href="/archives/5784/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/fukata/CIUnit-for-CI2">fukata/CIUnit-for-CI2 &#8211; GitHub</a></p>
+<p>をコマンドラインからテストする際はphpunitコマンドを叩けば良いのですが、Eclipseから利用する場合には「外部ツール」を設定します。<a href="https://marketplace.eclipse.org/content/makegood">MakeGood</a>というのがCIUnitにも対応している（設定項目は有）ようなのですが、動かなかったので、今回は外部ツールの設定を書いておきます。</p>
+<p><span id="more-5784"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>外部ツール設定</h2>
+<p>[実行] -> [外部ツール] -> [外部ツールの設定]から以下の2つを設定します。</p>
+<p>phpunitコマンドのパスについては、各自の環境で合わせてください。</p>
+<h3>CIUnit AllTests</h3>
+<p>phpunit.xmlを利用し、全テストを行います。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/5847466967" ><img src="https://farm3.static.flickr.com/2589/5847466967_be828bd800.jpg" alt="CIUnit-AllTests"  class='aligncenter'/></a></p>
+<h3>CIUnit UnitTest</h3>
+<p>選択中リソースのテストを行います。選択中リソースとは、PHPExplorerで選択しているフォルダやファイルのこと。フォルダを選択していれば、フォルダ内のファイルを全てテストします。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/5848025028" ><img src="https://farm4.static.flickr.com/3452/5848025028_d5ce7618cf.jpg" alt="CIUnit-UnitTest"  class='aligncenter'/></a></p>
+<p>CIUnit AllTestsを実行した時にコンソールに表示された文字が文字化けする可能性があります。その時は、phpunit.xml内にあるcolors=&#8221;true&#8221;をfalseに変更してみてください。多分これで文字化けは解消すると思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5784/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Git]誤ってmaster上で作業していた場合の対処方法</title>
+		<link>/archives/5766/</link>
+					<comments>/archives/5766/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 18 Jun 2011 03:20:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Tips]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5766</guid>
+
+					<description><![CDATA[普段からsvnではなくgitを使う事が多くなってきたのですが、新機能開発を行う場合にもbranchを作るのを忘れてmasterブランチ上で作業していたり、作業対象のbranch上に居ると思っていたのに ... <a href="/archives/5766/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>普段からsvnではなくgitを使う事が多くなってきたのですが、新機能開発を行う場合にもbranchを作るのを忘れてmasterブランチ上で作業していたり、作業対象のbranch上に居ると思っていたのに実はmasterブランチ上だったりという事がたまにあります。</p>
+<p>誤ってmasterもしくは別ブランチ上で作業していた時の対処法をメモ代わりに書いておきたいと思います。</p>
+<p><span id="more-5766"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>ブランチを新たに作成する予定だった場合</h2>
+<pre lang="BASH">
+git stash save 'mistake working branch'
+git stash branch [ブランチ名]
+</pre>
+<h2>既存ブランチで作業する予定だった場合</h2>
+<pre lang="BASH">
+git stash save 'mistake working branch'
+git checkout [ブランチ名]
+git stash pop
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5766/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>NAT &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/nat/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>VirtualBoxのNATによるネットワーク設定メモ</title>
+		<link>/archives/5574/</link>
+					<comments>/archives/5574/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 11 Apr 2011 06:44:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[NAT]]></category>
+		<category><![CDATA[VirtualBox]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5574</guid>
+
+					<description><![CDATA[ローカルの開発環境でDBサーバなどをVirtualBox上に構築する事が多いのですが、その際、ネットワークが変わってもクライアント側の設定を変更しなくて良いようにブリッジではなく、NATで構築します。 ... <a href="/archives/5574/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ローカルの開発環境でDBサーバなどをVirtualBox上に構築する事が多いのですが、その際、ネットワークが変わってもクライアント側の設定を変更しなくて良いようにブリッジではなく、NATで構築します。最初、VMWareからVirtualBoxに移行した際に、NAT環境の構築に手間取ったのを覚えていたので、とりあえず、メモっておきます。</p>
+<p>具体的には、VirtualBoxのNICでNATを選んだ場合、Guest -> Hostへの接続はOKでもHost -> Guestの接続は出来ません。これじゃSSHなどで接続できずに不便なので、NATとHost-only Adapterを併用して構築します。</p>
+<p>Adapter1: NAT<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5608630995'><img src='https://farm6.static.flickr.com/5269/5608630995_3eafde9d76.jpg' alt='Screenshot-VirtualBox-Adapter1' class='aligncenter' /></a></p>
+<p>Adapter2: Host-only Adapter<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5608631215'><img src='https://farm6.static.flickr.com/5270/5608631215_9d852ea825.jpg' alt='Screenshot-VirtualBox-Adapter2' class='aligncenter' /></a></p>
+<p>Ubuntuの場合、下記のように/etc/network/interfaceを編集します。<br />
+eth1はdhcp,staticに合わせて適当にコメントを解除してください。また、staticの場合はIPも環境で合わせてください。</p>
+<pre lang="BASH">
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+
+# The secondary network interface
+auto eth1
+# if use dhcp network
+#iface eth1 inet dhcp
+# if use static network
+#iface eth1 inet static
+#address 192.168.56.110
+#netmask 255.255.255.0
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5574/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

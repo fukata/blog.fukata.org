@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [Andorid]DLNAクライアントを使ってみた	</title>
+	<atom:link href="/archives/5128/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5128/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5128/comment-page-1/#comment-673</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Thu, 06 Jan 2011 10:28:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5128#comment-673</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5128/comment-page-1/#comment-672&quot;&gt;佐藤麗司朗&lt;/a&gt;.
+
+明けましておめでとうございます！
+こちらこそよろしくお願いします。
+
+中国はまだ正月ではないですけど、
+僕は一足お先に福岡の実家に戻りました。
+いやぁ～上海は寒いですよ。
+日本に戻ってきてちょっと暖かく感じましたしw]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5128/comment-page-1/#comment-672">佐藤麗司朗</a>.</p>
+<p>明けましておめでとうございます！<br />
+こちらこそよろしくお願いします。</p>
+<p>中国はまだ正月ではないですけど、<br />
+僕は一足お先に福岡の実家に戻りました。<br />
+いやぁ～上海は寒いですよ。<br />
+日本に戻ってきてちょっと暖かく感じましたしw</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 佐藤麗司朗		</title>
+		<link>/archives/5128/comment-page-1/#comment-672</link>
+
+		<dc:creator><![CDATA[佐藤麗司朗]]></dc:creator>
+		<pubDate>Thu, 06 Jan 2011 09:53:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5128#comment-672</guid>
+
+					<description><![CDATA[明けましておめでとう！今年も宜しくね。
+そっちはまだ正月じゃないんだっけ？
+風邪引かないでね！]]></description>
+			<content:encoded><![CDATA[<p>明けましておめでとう！今年も宜しくね。<br />
+そっちはまだ正月じゃないんだっけ？<br />
+風邪引かないでね！</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

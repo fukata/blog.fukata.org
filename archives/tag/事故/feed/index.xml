@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>事故 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E4%BA%8B%E6%95%85/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 13 Mar 2017 03:00:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ルアンパバーンでバイクに乗っていたら死にかけた</title>
+		<link>/archives/799/</link>
+					<comments>/archives/799/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 13 Mar 2017 03:00:07 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[バイク]]></category>
+		<category><![CDATA[ラオス]]></category>
+		<category><![CDATA[ルアンパバーン]]></category>
+		<category><![CDATA[事故]]></category>
+		<category><![CDATA[東南アジア]]></category>
+		<guid isPermaLink="false">https://travel.fukata.org/?p=799</guid>
+
+					<description><![CDATA[(写真のバイクはUtopiaに飾ってあったもの) クアンシーの滝へ行く途中に事故りそうになった。 広告 動画では対向車線のトラックの積み荷が落ちた直後で終わっているけど、なんとかブレーキをかけることが ... <a href="/archives/799/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/799/"><img src="https://farm4.staticflickr.com/3952/33241263026_acc7129c93_z.jpg" alt="P3034627" class="aligncenter" /></a><br />
+(写真のバイクはUtopiaに飾ってあったもの)</p>
+<p>クアンシーの滝へ行く途中に事故りそうになった。</p>
+<p><span id="more-799"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>動画では対向車線のトラックの積み荷が落ちた直後で終わっているけど、なんとかブレーキをかけることが出来て間一髪で避ける事が出来た。</p>
+<p>万が一直撃でもしていれば死んでいてもおかしくなかった。</p>
+<p>普段、バイクは好んで乗らないのにたまに乗った時に今回のような目に遭って非常に付いていない。やはり移動は車に限る。</p>
+<p>あと、ルアンパバーンで人生で初めて原付きを運転するということもやった。10分程度だったけど正直怖かった。やっぱり自分は後部座席が良い。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/799/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm4.staticflickr.com/3952/33241263026_acc7129c93.jpg</image>
+	</item>
+	</channel>
+</rss>

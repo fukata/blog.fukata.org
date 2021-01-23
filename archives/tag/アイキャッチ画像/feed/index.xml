@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>アイキャッチ画像 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E7%94%BB%E5%83%8F/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>flickrユーザのためのWordPressのアイキャッチ画像について</title>
+		<link>/archives/7562/</link>
+					<comments>/archives/7562/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 14 Dec 2013 14:16:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<category><![CDATA[アイキャッチ画像]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7562</guid>
+
+					<description><![CDATA[このブログで表示している画像は全てflickrにアップしたものを使用しているんですが、記事内に挿入するのはwp-flickr-pressという自分で作っているプラグインを使うことで簡単に利用できるんで ... <a href="/archives/7562/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/11367060124" target="_blank" title="Screen Shot 2013-12-14 at 10.01.25 PM"><img src="https://farm4.staticflickr.com/3741/11367060124_779d621a86.jpg" alt="Screen Shot 2013-12-14 at 10.01.25 PM" class="aligncenter"/></a></p>
+<p>このブログで表示している画像は全てflickrにアップしたものを使用しているんですが、記事内に挿入するのはwp-flickr-pressという自分で作っているプラグインを使うことで簡単に利用できるんですが、Twenty Fourteenを少し使ってみてアイキャッチ画像を使ったデザインも良いなと思いました。そこで、今までアイキャッチ画像というものを使ったことがなかったのでWordPress内でどういう風に管理されているのかもよく分かっていませんでした。</p>
+<p><span id="more-7562"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>そんな中、先走り気味にwordpress + flickr + アイキャッチ画像みたいなキーワードでプラグインを検索していると通常のアイキャッチ画像設定画面にflickrの画像選択画面が出てきて選択するとWPをインストールしたサーバにダウンロード、サムネイル生成し、その後は通常のアイキャッチ画像と同じように扱えるというものが幾つかありました。</p>
+<p>ただ、個人的にはせっかく画像配信にflickrを使っているのでアイキャッチ画像もflickrを経由して行いたいものです。そこからWordPressのソースを読みました。するとアイキャッチ画像の情報はpostmetaテーブルに管理されており、記事に紐付いている画像のIDや画像サイズ？alt情報も同様に管理されているようでした。</p>
+<p>で、postmetaテーブルを使わずにとりあえず記事内に最初に出現するflickr画像をそのままアイキャッチ画像として使用するようなものを書いてみました。ただ、postmetaテーブルなどを介さずに毎回、記事内容からアイキャッチ画像を作り出しているのでアイキャッチ画像を設定しない場合やサイズはもちろんのこと、他アイキャッチ画像を設定することも出来ません。</p>
+<p>と、ここまで書いてて気づいたんですが、基本的には記事内の最初に出現するflickr画像をアイキャッチ画像に設定することで問題ないんですが、投稿や更新時に今まで毎回行っていたアイキャッチ画像の抜き出しをして、さらにそれをpostmetaテーブルに格納してやれば問題なさそうですね。</p>
+<p>ちょっと実装できるか検討してみよう。wp-flickr-pressユーザでアイキャッチ画像を使っている人いたら、今までどういう風に運用していたか教えてもらえると助かります。</p>
+<p><strong>追記: 2013.12.15 00:32</strong><br />
+wp_postmetaにMedia Library情報を管理しているが既にMedia Libraryを使っていた場合、既存の画面で表示がおかしくなったりする可能性は多いにあるかもしれない。また、それらを回避して、アイキャッチ画像に独自のCDNを考慮するようなコードは今のところ見られないので検証も大変そうな気がする。</p>
+<p><strong>追記: 2013.12.15 00:59</strong><br />
+なんで気づかなかったのか分からないが、<strong>post_thumbnail_html</strong>フィルターでサムネイル用HTMLタグの整形を行うが、ココで記事内から画像を取ってきて、、、全部やらせるという手もある。なんか行けそうな気がしてきた。独自のサムネイルに関してはプラグイン個別で管理機能を実装する必要があるけどココは仕方ない気がする。ただ、カスタムフィールドを使えばさほど難しくないんじゃないかと思っている。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7562/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm4.staticflickr.com/3741/11367060124_779d621a86.jpg</image>
+	</item>
+	</channel>
+</rss>

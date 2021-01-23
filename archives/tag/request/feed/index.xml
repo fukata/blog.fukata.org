@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>request &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/request/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>node.jsのrequestモジュールからPOSTでデータが送信できない時の注意点</title>
+		<link>/archives/6258/</link>
+					<comments>/archives/6258/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 12 Oct 2011 19:58:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[request]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6258</guid>
+
+					<description><![CDATA[node.jsのhttpclientとして使いやすいrequestモジュールですが、少しハマったのでメモしておきます。 何をやりたいかというと、単純にPOSTでどっかにデータを送りたいわけです。 受け ... <a href="/archives/6258/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>node.jsのhttpclientとして使いやすいrequestモジュールですが、少しハマったのでメモしておきます。</p>
+<p>何をやりたいかというと、単純にPOSTでどっかにデータを送りたいわけです。</p>
+<p>受け口は今回はペライチのPHPプログラムです。</p>
+<p>最初、こんな感じのコードを書いていました。</p>
+<pre lang="NodeJS">
+var request = require('request');
+request.post({
+  uri: 'https://localhost/dump.php',
+  body: 'hoge=foo&aaa=bbb'
+});
+</pre>
+<p>ただし、PHP側の$_POST変数には一向に入る気配がありません。</p>
+<p>それを下記のように送信ヘッダのcontent-typeを明示的に指定してあげれば正常に受け取ることが出来ました。</p>
+<pre lang="NodeJS">
+var request = require('request');
+request.post({
+  uri: 'https://localhost/dump.php',
+  body: 'hoge=foo&aaa=bbb',
+  headers: {
+    'content-type': 'application/x-www-form-urlencoded'
+  }
+});
+</pre>
+<p>とりあえず、簡単にメモ。</p>
+<p><strong>追記：2011.11.13 12:38</strong><br />
+PHPのソースを直接見たところ、POSTの場合、下記の二つのcontent-typeの場合のみ変数に格納しているようでした。</p>
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6258/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

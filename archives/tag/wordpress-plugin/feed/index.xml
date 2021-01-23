@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WordPress Plugin &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/wordpress-plugin/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>リリース記事書くのに便利プラグイン「Duplicate Post」</title>
+		<link>/archives/6055/</link>
+					<comments>/archives/6055/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 27 Aug 2011 08:13:23 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[WordPress Plugin]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6055</guid>
+
+					<description><![CDATA[毎回リリース記事を書く時には、前回のリリース記事の内容をコピーして新規記事内容として貼り付けているのですが、タイトル、内容、パーマリンク、カテゴリ、タグなど色々あるので、回数が増えてくると若干面倒だっ ... <a href="/archives/6055/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>毎回リリース記事を書く時には、前回のリリース記事の内容をコピーして新規記事内容として貼り付けているのですが、タイトル、内容、パーマリンク、カテゴリ、タグなど色々あるので、回数が増えてくると若干面倒だったりします。</p>
+<p>そんな作業をボタン一発でほとんど解決してくれる良いプラグインを見つけました。</p>
+<p><a href="https://wordpress.org/extend/plugins/duplicate-post/">WordPress › Duplicate Post « WordPress Plugins</a></p>
+<p>プラグインのタイトルから分かるように、既存の記事をコピーして新規記事として作成してくれるというものです。コレを使えば、タイトルや内容はコピー元のが維持されるので一部コピーされない、パーマリンクなどをコピーして後は、リリース毎の情報に書き換えれば良いのでだいぶ作業が減ります。</p>
+<p>以下、簡単な使い方です。</p>
+<p><span id="more-6055"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>コピー元の記事<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6085087314"><img src="https://farm7.static.flickr.com/6209/6085087314_6d7267e7e9.jpg" alt="duplicate-post-01"  class='aligncenter'/></a></p>
+<p>「Copy a new draft」リンクをクリックするとコピー元記事を元に新規記事作成画面へ遷移します。post_idが変わっているのが分かると思います。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6084538795"><img src="https://farm7.static.flickr.com/6198/6084538795_ee08d87cb4.jpg" alt="duplicate-post-02"  class='aligncenter'/></a></p>
+<p>「パーマリンク」は維持されないのでコピー元の内容をコピーもしくは新たに入力してください。</p>
+<p>投稿日時などは新たにコピーした日時が適用されるので新着記事として表示されますし、記事を投稿した段階でTwitterへ投稿するようなプラグインを併用している場合は、コピーした記事を投稿した場合にもTwitter側へ投稿されるようです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6055/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[WordPress]目次を作成してくれるプラグイン「toc_generator」</title>
+		<link>/archives/5376/</link>
+					<comments>/archives/5376/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 04 Mar 2011 13:38:32 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[toc_generator]]></category>
+		<category><![CDATA[WordPress Plugin]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5376</guid>
+
+					<description><![CDATA[今回は自分が作成したプラグインではないんですが、非常にシンプルで使い勝手の良いプラグインを導入したので書いておきます。 導入したのはこちらのプラグインです。 Table of Contents Gen ... <a href="/archives/5376/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今回は自分が作成したプラグインではないんですが、非常にシンプルで使い勝手の良いプラグインを導入したので書いておきます。</p>
+<p>導入したのはこちらのプラグインです。</p>
+<p><a href="https://scott.yang.id.au/code/toc-generator/">Table of Contents Generator WordPress plugin | SYP</a></p>
+<p>どういうプラグインかというと、表題にもあるようにページ内に記述されたhタグを検知して再帰的にページ内リンク付きのリストを作ってくれるというものです。一般的なwikiによくあるようなあのリンクを生成してくれます。</p>
+<p>上記の更新が2006年で止まっているようですが、出来れば今も開発が続いているプラグインを使いたいので、現在も開発が続いていて、使い勝手の良い目次生成プラグインを探しています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5376/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>リンク切れを発見してくれるWordPressプラグイン「Broken Link Checker」</title>
+		<link>/archives/4015/</link>
+					<comments>/archives/4015/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 02 May 2010 13:10:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Broken Link Checker]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress Plugin]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4015</guid>
+
+					<description><![CDATA[パーマリンクの形式を変更したことにより記事内から他の記事に参照しているリンクでリンク切れを起こしているものが大量にあり、探すのが大変だったので何かないかと探してみたところBroken Link Che ... <a href="/archives/4015/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>パーマリンクの形式を変更したことにより記事内から他の記事に参照しているリンクでリンク切れを起こしているものが大量にあり、探すのが大変だったので何かないかと探してみたところBroken Link Checkerがありました。</p>
+<p>一定期間毎に全記事をチェックし、リンク切れ一覧を下記のように表示されます。また、個別の記事を開いて編集する必要はなく、同じ画面で対象のURLのみ編集することができます。これにより作業時間が大幅に軽減されます。</p>
+<p><a href="https://farm6.static.flickr.com/5219/5476145988_0ed0d93ffc_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5219/5476145988_0ed0d93ffc_m.jpg" title="broken_link_checker-02" width="500" height="289" class="aligncenter size-large wp-image-4017" /></a></p>
+<p>定期的にチェックを実行する時間、リンク切れURLに適用するCSS、チェック対象外のURL、メール通知、サーバが高負加時に処理を一時停止するしきい値の設定など様々な機能があります。</p>
+<p><a href="https://farm6.static.flickr.com/5211/5476146548_dd2964bce1_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5211/5476146548_dd2964bce1_m.jpg" title="broken_link_checker-01" width="346" height="500" class="aligncenter size-large wp-image-4018" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4015/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

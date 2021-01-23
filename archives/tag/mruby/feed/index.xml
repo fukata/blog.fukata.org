@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mruby &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mruby/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 28 Oct 2017 16:43:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>h2o+mrubyで移行前のブログURLを正常にリダイレクトするようにした</title>
+		<link>/archives/9053/</link>
+					<comments>/archives/9053/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 28 Oct 2017 13:43:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[mruby]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/?p=9053</guid>
+
+					<description><![CDATA[WordPressのインポート機能で取り込んだ時にIDが変わってしまったものがあったのでリダイレクタを作った。 広告 プログラムから生成したmrubyのリダイレクタは下記。 blog_redirect ... <a href="/archives/9053/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9053/"><img src="https://farm5.staticflickr.com/4514/37588929851_6344b9140a_c.jpg" alt="PA083776" class="aligncenter"/></a></p>
+<p>WordPressのインポート機能で取り込んだ時にIDが変わってしまったものがあったのでリダイレクタを作った。</p>
+<p><span id="more-9053"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>プログラムから生成したmrubyのリダイレクタは下記。</p>
+<p><a href="https://gist.github.com/fukata/a7c13342d4057b0567fb0fc6ded3c804" title="blog_redirect_handler.rb" target="_blank">blog_redirect_handler.rb</a></p>
+<p>あとは、これをh2oの設定ファイルで <code>mruby.handler-file</code> に指定すれば正常に動作する。</p>
+<p>WordPressのプラグインとして書こうかとも思ったけど既に以前のドメインでアクセスが来た際にblog.fukata.orgにリダイレクトしていたのでフローを変えずに処理するのはこれが最も楽だったと思う。</p>
+<p>プログラムから吐き出したmrubyスクリプトは<a href="https://github.com/erniebrodeur/ruby-beautify" title="erniebrodeur/ruby-beautify: a cli tool to beautify ruby output to screen." target="_blank">erniebrodeur/ruby-beautify</a>で整形した。簡単に整形出来て良い。なんならsyntaxチェックまでやってくれるので便利。</p>
+<p>久々にRailsじゃなくてruby書いた気がする。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9053/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4514/37588929851_6344b9140a.jpg</image>
+	</item>
+		<item>
+		<title>練習がてらにh2o(ssl,mruby) + php7なdocker imageを作ってみた</title>
+		<link>/archives/7968/</link>
+					<comments>/archives/7968/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2016 06:21:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[docker]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[mruby]]></category>
+		<category><![CDATA[PHP7]]></category>
+		<category><![CDATA[SSL]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7968</guid>
+
+					<description><![CDATA[海外に居ても日本とほぼ同じ味の牛丼が食べられる幸せ。 週末、このブログサイトをdockerコンテナ使ったものに変えようかと思っていて練習がてらにdocker imageを使ってみた。 広告 表題のh2 ... <a href="/archives/7968/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7968/"><img src="https://farm6.staticflickr.com/5480/30668971073_f3ae78eac1_c.jpg" alt="PC061114" class="aligncenter"/></a></p>
+<p>海外に居ても日本とほぼ同じ味の牛丼が食べられる幸せ。<br />
+週末、このブログサイトをdockerコンテナ使ったものに変えようかと思っていて練習がてらにdocker imageを使ってみた。</p>
+<p><span id="more-7968"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>表題のh2o(ssl,mruby) + php7なdocker imageはこちら。ベースはalpine:edgeになっている。ビルドしていてalpinelinuxのホームページを見てみると22日に3.5が出たらしいのでdocker imageが公開されたらそっちで再度ビルドする。mysql,redisは公式イメージがあったからそれをそのまま使おうかと思ってるんだけどh2oに関しては公式がなかったのと大してDL数がない他人のやつを使うのも怖いので練習がてらに作ってみた。と言ってもほとんど拾ってきたDockerfileの継ぎ接ぎだけど。<br />
+<a href="https://hub.docker.com/r/fukata/h2o-php/">fukata/h2o-php &#8211; Docker Hub</a></p>
+<p>dockerさえ入ってればこれをpullしてrunすればWebサーバとphpの実行が出来る。</p>
+<p>今まで、vagrant + ansibleで環境構築していたんだけど今回docker触ってみて確かに便利だと分かったのでこれから積極的に使っていく。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7968/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5480/30668971073_f3ae78eac1.jpg</image>
+	</item>
+	</channel>
+</rss>

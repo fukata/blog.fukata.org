@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>elastic-mapreduce-ruby &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/elastic-mapreduce-ruby/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>elastic-mapreduce-rubyで&#8211;inputを複数指定する方法</title>
+		<link>/archives/7490/</link>
+					<comments>/archives/7490/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 10 Jul 2013 21:20:30 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[elastic-mapreduce-ruby]]></category>
+		<category><![CDATA[EMR]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7490</guid>
+
+					<description><![CDATA[最近、仕事でEMRを使うようになって調べていたことがあったのでメモっておきます。 タイトルの通りなんですけど、elastic-mapreduce-rubyで&#8211;inputを複数指定する方法が ... <a href="/archives/7490/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、仕事でEMRを使うようになって調べていたことがあったのでメモっておきます。</p>
+<p>タイトルの通りなんですけど、<a href="https://aws.amazon.com/developertools/2264">elastic-mapreduce-ruby</a>で&#8211;inputを複数指定する方法が分からなかったんですが、解決しました。まぁ、こんな感じで単純にカンマ区切りに指定すればよかったというオチでした。</p>
+<pre lang="bash">
+elastic-mapreduce --create --stream \
+--mapper s3n://bucket/path/to/mapper \
+--reducer s3n://bucket/path/to/reducer \
+--master-instance-type m1.small \
+--slave-instance-type m1.small \
+--num-instances 3 \
+--input s3n://bucket/path/to/dir1/*,s3n://bucket/path/to/dir2/*
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7490/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

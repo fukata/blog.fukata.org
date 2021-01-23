@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>IM+ Talk &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/im-talk/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]IM+ Talkの通話設定</title>
+		<link>/archives/2822/</link>
+					<comments>/archives/2822/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 30 Mar 2010 16:11:40 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry Bold 9000]]></category>
+		<category><![CDATA[IM+ for Skype]]></category>
+		<category><![CDATA[IM+ Talk]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2822</guid>
+
+					<description><![CDATA[ver4.0になってからIM+ for SkypeからIM+ Talkに名前が変わったみたいですね。 前回の記事「[BlackBerry]IM+ for SkypeのVOIPをWIFI環境下で試してみ ... <a href="/archives/2822/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ver4.0になってからIM+ for SkypeからIM+ Talkに名前が変わったみたいですね。</p>
+<p>前回の記事「<a href="https://fukata.org/2010/02/21/blackberry-im-for-skype-voip-under-wifi/">[BlackBerry]IM+ for SkypeのVOIPをWIFI環境下で試してみました</a>」では、自分の音声が相手に伝わらなかったという風に書いたのですが、giiさんからコメントをいただき、再度設定項目をきちんと読むと通話用の設定がありました。</p>
+<p>下記がその設定部分になります。</p>
+<p>上の項目は、サイドボタンを押下中のみ自分の音声が相手側に送信される。下の項目は、最初に一度押すともう一度、サイドボタンを押すまで自分の音声が相手側に送信される。</p>
+<p><a href="https://farm6.static.flickr.com/5098/5476142028_451e6ea5f6_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5098/5476142028_451e6ea5f6_m.jpg" title="Capture0_37_56" width="480" height="320" class="aligncenter size-full wp-image-2823" /></a></p>
+<p>左サイドボタンもしくは、右サイドボタンのどちらかに割り当て</p>
+<p><a href="https://farm6.static.flickr.com/5013/5476140700_30d1099651_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5013/5476140700_30d1099651_m.jpg" title="Capture0_40_38" width="480" height="320" class="aligncenter size-full wp-image-2824" /></a>以上の設定をするとこちら側の音声も無事相手側に送信されました。</p>
+<p>実際にWiFi環境下でVOIP通話を試した音質はそこそこ良く、多少ラグがありましたけど3G回線でも同じくらいのラグなら有りかなという感じです。個人的には十分耐えられる音質だったので、使う機会があれば使いたいと思います。そんなにないんですけどね＾＾；</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2822/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

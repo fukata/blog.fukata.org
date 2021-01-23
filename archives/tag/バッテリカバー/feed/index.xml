@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>バッテリカバー &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%82%AB%E3%83%90%E3%83%BC/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]Bold 9000のメタルバッテリドアを着けるとGPSの感度激落ち</title>
+		<link>/archives/2038/</link>
+					<comments>/archives/2038/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 08 Jan 2010 07:24:59 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[パーツ]]></category>
+		<category><![CDATA[バッテリカバー]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2038</guid>
+
+					<description><![CDATA[以前の記事「blackberryのバッテリカバーを金属製のものに変更しました」にて、現在使用しているBlackBerry Bold 9000のバッテリドアを金属製の物に変更したと書いたのですが、それ以 ... <a href="/archives/2038/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前の記事「<a href="https://fukata.org/2009/11/13/change-metal-batery-door-blackberry-bold-9000/">blackberryのバッテリカバーを金属製のものに変更しました</a>」にて、現在使用しているBlackBerry Bold 9000のバッテリドアを金属製の物に変更したと書いたのですが、それ以来GPSの感度がえらく悪いなぁと思ってBBB9000のGPS感度についてぐぐっているとメタルバッテリドアを着けるとGPSの感度やBluetoothにノイズが乗ったりと弊害が出ているという情報が結構見つかりました。</p>
+<p>まさかなと思い、メタルバッテリドアを外してGPS情報を更新してみるとなんと衛星情報をBBB9000を使っていて初めて取得することができました。また、外でGPSLoggerなどを使用してみても今までとは比べ物にならないくらい感度が上がっていました。</p>
+<p>自分が使用しているアプリでGPS連携の機能は多いので、メタルバッテリドアは見た目はいいですけど、他の物を着ける事にしました。とりあえず、帰ったらデフォルトのバッテリドアに変更しようと思います。</p>
+<p>あと、<a href="https://www.gaugau.jp/">モバイルガジェットショップ がうがう</a>で下記のバッテリドアを購入しました。<br />
+<a href="https://www.gaugau.jp/?pid=13820235">BlackBerry Bold Battery Door, Carbon Fiber Black A &#8211; モバイルガジェットショップ がうがう！ ～ BlackBerry, Nokia, HTC, iPhone etc&#8230; items!</a></p>
+<p>皆さんも、パーツ選びは慎重に。。。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2038/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[BlackBerry]Bold 9000のバッテリカバーを金属製のものに変更しました</title>
+		<link>/archives/1848/</link>
+					<comments>/archives/1848/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2009 16:56:46 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[パーツ]]></category>
+		<category><![CDATA[バッテリカバー]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1848</guid>
+
+					<description><![CDATA[先日、MobilePLAZAさんから「メタルバッテリーカバー for Bold 9000 ブラックミラー」を購入しました。いろいろネットで探してみたんですがどこも在庫切れのところが多く、MobileP ... <a href="/archives/1848/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5099/5475652567_51e8ed52fb_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5099/5475652567_51e8ed52fb_m.jpg" alt="IMG_0754" title="IMG_0754" width="150" height="150" class="alignleft size-thumbnail wp-image-1849" /></a>先日、MobilePLAZAさんから「<a href="https://www.mobileplaza.co.jp/online/list.php?id=7393">メタルバッテリーカバー for Bold 9000 ブラックミラー</a>」を購入しました。いろいろネットで探してみたんですがどこも在庫切れのところが多く、MobilePLAZAさんのところに在庫があったので早速購入♪</p>
+<p>届いてみて早速つけてみたんですが、やはり金属製ということもあり、通常のバッテリカバーよりも若干重いです。ただ、個人的には、そこまで気にするほどではないかなと思います。また、金属製ということもあり、レザーのものより汚れなどには強いのではないかと思います。</p>
+<p>ちょっと高級感が増した感じがちょっと嬉しいですｗ</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1848/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

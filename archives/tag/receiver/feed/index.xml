@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Receiver &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/receiver/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]インストール時のリファラを取得する</title>
+		<link>/archives/5674/</link>
+					<comments>/archives/5674/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 10 May 2011 12:17:52 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Receiver]]></category>
+		<category><![CDATA[Referrer]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5674</guid>
+
+					<description><![CDATA[Google Analytics SDK for Android &#8211; Google Analytics for Mobile &#8211; Google Code Google Anal ... <a href="/archives/5674/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://code.google.com/mobile/analytics/docs/android/#referrals">Google Analytics SDK for Android &#8211; Google Analytics for Mobile &#8211; Google Code</a></p>
+<p>Google Analytics for Androidで利用されているように、インストール時のリファラ情報を活用したい場合の簡単な説明とサンプルコードを書いておきたいと思います。</p>
+<p>やることは、以下のようになります。今回は既にアプリが存在するものとして進めます。</p>
+<ul>
+<li>BroadcastReceiverを継承したクラスの定義</li>
+<li>AndroidManifest.xmlの修正</li>
+</ul>
+<p><span id="more-5674"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>BroadcastReceiverを継承したクラスの定義</h2>
+<p>まずは、リファラ情報を受け取る為のReceiverを定義します。</p>
+<h3>org.fukata.andorid.example.receiver.ExampleReceiver</h3>
+<pre lang="java">
+package org.fukata.android.example.receiver;
+
+import java.net.URLDecoder;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+
+public class ExampleReceiver extends BroadcastReceiver {
+	static String TAG = ExampleReceiver.class.getSimpleName();
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		// get referrer
+		String referrer = URLDecoder.decode( intent.getStringExtra("referrer") );
+		Log.d(TAG, String.format("referrer: %s", referrer));
+	}
+
+}
+</pre>
+<h2>AndroidManifest.xmlの修正</h2>
+<p>定義したExampleReceiverでハンドリングするために、AndroidManifest.xmlに<receiver>を追加します。</p>
+<h3>AndroidManifest.xml</h3>
+<pre lang="xml">
+< ?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="https://schemas.android.com/apk/res/android"
+	package="org.fukata.android.example" android:versionName="1" android:versionCode="1">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+
+		...
+
+		<receiver android:exported="true" android:name=".receiver.ExampleReceiver">
+			<intent -filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER"></action>
+			</intent>
+		</receiver>
+	</application>
+</manifest> 
+</pre>
+<p>一つ注意として、ExampleReceiver内でリファラ情報等をサーバに送信したりする場合は、</receiver><receiver>タグに適切なPermissionを付与してください。でないと怒られます。android.permission.INTERNETを付与したい場合はこんな感じです。</p>
+<pre lang="xml">
+<receiver android:exported="true" android:name=".receiver.ExampleReceiver" android:permission="android.permission.INTERNET">
+	<intent -filter>
+		<action android:name="com.android.vending.INSTALL_REFERRER"></action>
+	</intent>
+</receiver>
+</pre>
+<p></receiver></p>
+<h2>INSTALL_REFERRERを擬似的に行う</h2>
+<p>INSTALL_REFERRERのブロードキャストはAndroid Marketアプリを経由してインストールされた場合にしか発行されないので、通常通りパソコンからアプリを端末にインストールした場合などは発行されません。</p>
+<p>そういう場合に、INSTALL_REFERRERレシーバーの挙動だけを確認したい場合は下記のようにコマンドラインからブロードキャストを発行します。</p>
+<pre lang="bash">
+adb shell am broadcast -a com.android.vending.INSTALL_REFERRER --es referrer hogehoge
+</pre>
+<p><strong>追記：2011.05.23</strong><br />
+android marketのURLにreferrerというキーが存在しない場合、com.android.vending.INSTALL_REFERRERのブロードキャストが呼ばれないので、そもそもReceiverの処理が実行されません。ということに気づかず多くの時間を無駄にしてしまいました。</p>
+<p><strong>追記：2011.10.31</strong><br />
+<a href="https://groups.google.com/group/android-group-japan/browse_thread/thread/65bc6a88b71e4940/86ba1804a64be03a?lnk=raot&#038;pli=1">【質問】Android Marketの新バージョンで、INSTALL_REFERRERが取得されない。 &#8211; 日本Androidの会 | Google Groups</a></p>
+<p>マーケットアプリが新バージョンになってからINSTALL_REFERRERの値が正常に取れなくなったみたいです。</p>
+<p><strong>追記：2012.11.05</strong><br />
+<a href="https://groups.google.com/group/android-group-japan/browse_thread/thread/65bc6a88b71e4940/86ba1804a64be03a?lnk=raot&#038;pli=1">【質問】Android Marketの新バージョンで、INSTALL_REFERRERが取得されない。 &#8211; 日本Androidの会 | Google Groups</a>で報告されていたバグが修正されて、INSTALL_REFERRERが取得できるようになりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5674/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

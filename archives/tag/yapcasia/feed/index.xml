@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>YAPC::Asia &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/yapcasia/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:06:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>初めてのYAPC::Asia 2011に行ってきた</title>
+		<link>/archives/6269/</link>
+					<comments>/archives/6269/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2011 15:23:26 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[YAPC]]></category>
+		<category><![CDATA[YAPC::Asia]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6269</guid>
+
+					<description><![CDATA[初めてYAPC::Asiaに参加してきました。場所は東工大 大岡山キャンパスでした。 ブログを書くまでがYAPC。ってことで初めてのYAPCについて書いてみたいと思います。 今回、聴いたセッションは下 ... <a href="/archives/6269/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>初めて<a href="https://yapcasia.org/2011/">YAPC::Asia</a>に参加してきました。場所は<a href="https://g.co/maps/ay4yz">東工大 大岡山キャンパス</a>でした。</p>
+<p>ブログを書くまでがYAPC。ってことで初めてのYAPCについて書いてみたいと思います。</p>
+<p>今回、聴いたセッションは下記です。</p>
+<ul>
+<li>12:00 &#8211; 12:20: <a href="https://yapcasia.org/2011/talk/92">Webアプリケーション高速化</a> [ja] [intermediate][app] mala</li>
+<li>12:20 &#8211; 12:30: <a href="https://yapcasia.org/2011/talk/77">SmartPhone development guide with Node/CoffeeScript and HTML5 technologies, for Perl programmers</a> [ja] [any][app] Naoya Ito</li>
+<li>14:40 &#8211; 15:20: <a href="https://yapcasia.org/2011/talk/41">Perlで構築された中規模サイトのDC引っ越し記録</a> [ja] [any][infra] FUJIWARA Shunichiro</li>
+<li>15:20 &#8211; 15:40: <a href="https://yapcasia.org/2011/talk/75">Mobage オープンプラットフォームの事件簿</a> [ja] [any][app] Toru Yamaguchi</li>
+<li>16:00 &#8211; 16:40: <a href="https://yapcasia.org/2011/talk/20">Mobageソーシャルゲームにおける大規模サーバ運用 with Perl</a> [ja] [intermediate][infra] りーお＠DeNA</li>
+</ul>
+<p>個別のセッションの感想については、他のブログなどで細かく述べられるでしょうし、ビデオについても後ほどアップロードされるかもしれませんからそちらを参照してもらうとして、ココでは初めてYAPCに参加した個人的な感想を書いておきたいと思います。</p>
+<p><span id="more-6269"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>場所の確認</h2>
+<p>今回は東工大大岡山キャンパスで行われたとあり、各LT会場が独立しており、少し離れており、また、LT会場とは関係ない建物も多く建っており、事前に建物を確認していなかったので、他の建物まで歩いてしまう羽目に。。。</p>
+<h2>水分補給</h2>
+<p>今回の東工大キャンパスでのLTホールでは基本的に飲食禁止でした。LTによっては１時間以上あるものもあるので、LT中に喉が渇いて集中力が切れないようにLT前にしっかり補給しておきましょう。</p>
+<p>ただ、YAPCの常連なのか、LTホール内で平気で飲み物を飲んでいる人マナーの悪いも居た。いい歳したおっさんにいちいち言うのも嫌だろうけど、運営スタッフの人は注意した方がよいんじゃないかな。</p>
+<h2>タイムテーブルの確認</h2>
+<p>上記でも書いていますが、LT会場が独立しており、会場の移動に５分程度かかってしまうため、その日聴きたいLTを予め決めておき、場所の確認もしておいた方が良かったです。</p>
+<h2>まとめ</h2>
+<p>こんだけ大きなカンファレンスに参加したのは何年か前に東京ミッドタウンで開催されたJavaOne以来でした。JavaOneではベンダーが多く、YAPCとはまた違った雰囲気だったので今回は新鮮なカンファレンスでした。</p>
+<p>スライドはパワポやKeynoteで行っている人が多かったんですが、HTML+JSでスライドっぽい物で発表している人も結構見受けられました。皆独自で作成してるのかな？それともそういうFWを使用してるとか？ちょっと気になりました。</p>
+<p>発表の内容はPerl自体のことではなく、Perlで作成されたシステムの運用だったりチューニングだったりと、「Perlが出てくるのはココだけです」みたいな、何でも良いからPerlが関わっていれば良いみたいのが多い印象でした。</p>
+<p>１時間程度のLTもあれば、20分程度と短いLTもあり、20分程度のLTだと説明も足早でスライドを飛ばす場面もありました。個人的にはしっかり内容を聞きたかったので全体のLT数を減らして、もう少し余裕のあるスケジュールの方が良かったかな。（雰囲気を味わうためであれば、キツキツのスケジュールも有りかも？）</p>
+<p>あと、最後のLTはやっぱりネタ尽くでした。</p>
+<p>色んなセッションを聞いて自分でもプログラミングしたくなったので、今作成しているシステムについて完成までペース上げて走りたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6269/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

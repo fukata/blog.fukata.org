@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>文字化け &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:46:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Chrome Extensions]Background Pageでマルチバイト文字を利用する場合の注意（Chrome 13未満）</title>
+		<link>/archives/5749/</link>
+					<comments>/archives/5749/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 14 Jun 2011 16:19:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[文字化け]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5749</guid>
+
+					<description><![CDATA[Chrome Extensionで、下記のAPIを利用してコンテキストメニューの表示を行ったところ、文字化けが発生したので、調べてみました。 Context Menus &#8211; Google  ... <a href="/archives/5749/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Chrome Extensionで、下記のAPIを利用してコンテキストメニューの表示を行ったところ、文字化けが発生したので、調べてみました。</p>
+<p><a href="https://code.google.com/chrome/extensions/contextMenus.html">Context Menus &#8211; Google Chrome Extensions &#8211; Google Code</a></p>
+<p>ちなみに今回利用したソースは下記にアップしています。</p>
+<p><a href="https://github.com/fukata/chrome-ja-test">fukata/chrome-ja-test &#8211; GitHub</a></p>
+<p><span id="more-5749"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>前提として、全てUTF-8のファイルだとします。</p>
+<p>chrome.i18n.getMessageやローカルストレージ、ajaxによりロードしたUTF-8の文字列は文字化けせずに正常に表示されます。文字化けするのは、直書きしたデータでした。少し検証してみたところ、Chrome 13未満の場合、background_pageに下記のようにmetaタグによる文字コード指定をきちんと行わないと文字化けするようです。</p>
+<pre lang="html">
+< !doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="background.js"></script>
+</head>
+<body>
+</body>
+</html>
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5749/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

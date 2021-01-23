@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>G.O.T &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/g-o-t/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]MilestoneにG.O.T 2.2.1を適用</title>
+		<link>/archives/4887/</link>
+					<comments>/archives/4887/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 10 Nov 2010 06:45:24 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[G.O.T]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4887</guid>
+
+					<description><![CDATA[やっとという感じですが、カスタムROMに手を出してみました。 そして、念願のfroyo(非公式)です。いやぁやっぱりGMailアプリが格段に使いやすくなっていますね。ラベルはきちんと色が反映されますし ... <a href="/archives/4887/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>やっとという感じですが、カスタムROMに手を出してみました。<br />
+そして、念願のfroyo(非公式)です。いやぁやっぱりGMailアプリが格段に使いやすくなっていますね。ラベルはきちんと色が反映されますし、前後のメールへの移動も改善されてます。</p>
+<p>Root権限に関しても下記のページで紹介されているRoot取得用update.zipをOSのバージョンアップ後に適用するだけで取得することができました。オーバークロックに関しても動作確認済みです。<br />
+<a href="https://laugh-labo.blogspot.com/2010/07/milestoneblackdroid.html">LaughLife: Motorola MilestoneにBlackDroidのテーマを導入してみた。</a></p>
+<p>手順や必要なファイルに関しては下記のページからダウンロードすることができます。<br />
+<a href="https://groupoften.wordpress.com/2010/10/16/g-o-t-2-2-1-released/">G.O.T 2.2.1 released « G.O.T.&#8217;s Blog</a></p>
+<p>今回私は、UK RETAIL (RTUK)を使用しました。</p>
+<p>日本語でのインストール手順はこちらのサイトが分かりやすいと思います。<br />
+<a href="https://d.hatena.ne.jp/kai09/20101022/1287767495">Motorola Milestone &#8211; Android 2.2 Froyo test leak ROM をインストールして使ってみた &#8211; kai09の日記</a></p>
+<p>sbfの書き込みはすんなり終わったのですが、OpenRecoveryで「launch 2.2.1 menu」を押下すると必ずハングアップしてしまい、その後の手順を実行することができませんでした。それでも動くかなぁと思い、リブートしてみると立ち上がりました。OSのバージョンもきっちり2.2.1に変更されていることを確認。<br />
+<a href="https://farm6.static.flickr.com/5092/5475556669_3ba027d542_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5092/5475556669_3ba027d542_m.jpg" alt="" title="CAP201011100021" width="281" height="500" class="aligncenter size-large wp-image-4890" /></a></p>
+<p>で、昨日半日ほど使ってみて2.1 update-1と比べると</p>
+<ul>
+<li>動作は軽くなった（JITの改善）</li>
+<li>カメラの画質が悪くなった</li>
+<li>カメラのオートフォーカスが効かない</li>
+<li>SMSでマルチバイト文字が送信できない（受信は可能）</li>
+</ul>
+<p>ざっとこんな感じです。<br />
+一番大きいのがなんと言ってもSMSの件ですね。日本だとSMSってほとんど使ったことがなかったんですが、中国ではSMSが一般的に使用されているので日本語が使えないのはかなり痛いです。また、カメラの画質とオートフォーカスの件についてもせっかく５００万画素でそれなりに綺麗な写真が撮れる端末なので積極的に使っていたので残念です。パッチか何かがないか調べたいと思います。</p>
+<p>もしかしたら、ハングアップせずに正常にセットアップが完了すればいくつかは改善される？<br />
+もし、ご存知の方がいましたらコメントなりで教えていただけると幸いです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4887/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

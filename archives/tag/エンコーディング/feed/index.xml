@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>エンコーディング &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>jsで現在ページの文字コード取得／各ブラウザでの値の違い</title>
+		<link>/archives/4694/</link>
+					<comments>/archives/4694/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 02 Sep 2010 03:38:29 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[エンコーディング]]></category>
+		<category><![CDATA[文字コード]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4694</guid>
+
+					<description><![CDATA[ひょんなことから、jsから現在のページで設定されている文字コードを取得する必要が出たので、現在主要なブラウザでの値を調べてみました。 ちなみに、取得するのに使用したコードは下記になります。 if (d ... <a href="/archives/4694/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ひょんなことから、jsから現在のページで設定されている文字コードを取得する必要が出たので、現在主要なブラウザでの値を調べてみました。</p>
+<p>ちなみに、取得するのに使用したコードは下記になります。</p>
+<pre lang="javascript">
+if (document.all) {
+	alert(document.charset);
+} else {
+	alert(document.characterSet);
+}
+</pre>
+<p>前提条件として、metaタグとして下記のように指定された文字コードとファイルの文字コードは一致させています。</p>
+<pre lang="HTML">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</pre>
+<p>各ブラウザの結果は下記になります。</p>
+<table>
+<tr>
+<th>Browser/<br />
+Charset</th>
+<th>UTF-8</th>
+<th>utf-8</th>
+<th>utf8</th>
+<th>Shift_JIS</th>
+<th>shift_jis</th>
+<th>sjis</th>
+<th>EUC-JP</th>
+<th>euc-jp</th>
+<th>euc_jp</th>
+</tr>
+<tr>
+<th>Win<br />
+IE8</th>
+<td>utf-8</td>
+<td>utf-8</td>
+<td>shift_jis</td>
+<td>shift_jis</td>
+<td>shift_jis</td>
+<td>shift_jis</td>
+<td>euc-jp</td>
+<td>euc-jp</td>
+<td>shift_jis</td>
+</tr>
+<tr>
+<th>Win<br />
+FF3.6</th>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+<td>Shift_JIS</td>
+</tr>
+<tr>
+<th>Win<br />
+Chrome</th>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+</tr>
+<tr>
+<th>Win<br />
+Opera 10.61</th>
+<td>utf-8</td>
+<td>utf-8</td>
+<td>utf-8</td>
+<td>shift_jis</td>
+<td>shift_jis</td>
+<td>shift_jis</td>
+<td>euc-jp</td>
+<td>euc-jp</td>
+<td>shift_jis</td>
+</tr>
+<tr>
+<th>Win<br />
+Safari 5.0.1</th>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+</tr>
+<tr>
+<th>Ubuntu<br />
+Chrome</th>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+</tr>
+<tr>
+<th>Ubuntu<br />
+FF3.6</th>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>UTF-8</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>Shift_JIS</td>
+<td>EUC-JP</td>
+<td>EUC-JP</td>
+<td>Shift_JIS</td>
+</tr>
+<tr>
+<th>Ubuntu<br />
+Opera 10.61</th>
+<td>utf-8</td>
+<td>utf-8</td>
+<td>utf-8</td>
+<td>shift_jis</td>
+<td>shift_jis</td>
+<td>shift_jis</td>
+<td>euc-jp</td>
+<td>euc-jp</td>
+<td>shift_jis</td>
+</tr>
+</table>
+<p>euc_jpを指定した場合に若干ブラウザ間で挙動が異なるようですね。<br />
+また、IE8でのutf8を指定した際にshift_jisが戻ってきたのも気になります。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4694/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

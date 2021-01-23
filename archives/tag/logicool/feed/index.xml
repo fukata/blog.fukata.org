@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>logicool &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/logicool/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>「Logicool 1.3-MP Webcam C500」を購入</title>
+		<link>/archives/1528/</link>
+					<comments>/archives/1528/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 15 Sep 2009 18:17:54 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[logicool]]></category>
+		<category><![CDATA[webcam]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1528</guid>
+
+					<description><![CDATA[会社でスカイプ会議を行う際にと思って購入しました。 写真の後ろにあるのは、今まで普段使っていたウェブカメラの「Qcam Orbit MP」です。現在は、形状はほぼ同じでスペックが上がった「Qcam O ... <a href="/archives/1528/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5258/5476242166_5486264328_m.jpg" target="_blank" title="IMG_0327"><img loading="lazy" src="https://farm6.static.flickr.com/5258/5476242166_5486264328_m.jpg" alt="IMG_0327" width="200" height="133" class="attachment wp-att-1529 alignleft" /></a>会社でスカイプ会議を行う際にと思って購入しました。</p>
+<p>写真の後ろにあるのは、今まで普段使っていたウェブカメラの「Qcam Orbit MP」です。現在は、形状はほぼ同じでスペックが上がった「<a href="https://www.logitech.com/index.cfm/webcam_communications/webcams/devices/3480&#038;cl=jp,ja">Qcam Orbit AF</a>」というのが2年くらい前に発売されているみたいです。</p>
+<p>最近、このQcam Orbit MPの調子が悪く、ビデオ通話していてもすぐに動画が止まってしまうらしいのです。まだ、本当にウェブカメラが原因なのかはわかりませんが、もし、カメラが原因だとしたらこの機会に新調しようかなと思っています。MPは、自分が東京へ行く前から使っているので、4,5年は経っています。</p>
+<p>マイク機能自体は全然普通に使えているんですけどね。本当にカメラ部分だけ故障したのかしら・・・＾＾；もう少し使ってみてやっぱりだめだったら新調しようと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1528/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

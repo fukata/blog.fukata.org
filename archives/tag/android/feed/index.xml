@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Android &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/android/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 01 May 2010 10:29:16 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]SIMカードのシリアルナンバーの取得方法</title>
+		<link>/archives/1564/</link>
+					<comments>/archives/1564/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 06 Oct 2009 00:49:20 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[sim]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1564</guid>
+
+					<description><![CDATA[現在、ちょっとAndroidをいじっているのですが、シリアルナンバーとなりうる値を取得しようと思い、ググってみたところ、SIMカードの取得方法はあっさり見つかりました。下記が、サンプルコードとなります ... <a href="/archives/1564/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、ちょっとAndroidをいじっているのですが、シリアルナンバーとなりうる値を取得しようと思い、ググってみたところ、SIMカードの取得方法はあっさり見つかりました。下記が、サンプルコードとなります。</p>
+<pre lang="JAVA">
+TelephonyManager manager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+String serialNumber = manager.getSimSerialNumber();
+</pre>
+<p>懸念点としては、SIMカードを搭載していない端末での返り値ですかね。まだ、手元にはHT-03Aしかないので、実際に試せないのが残念。一応、エミュレータでは、ダミー値は返しているようです。まぁ、この辺はSDKの中身見れば何を返すのかはっきりするんでしょうけどね。今の所は、表面的なことで止めておきたいと思います。</p>
+<p>ちなみに、下記のコマンドで接続されているハードのシリアルナンバーを取得することも可能です。ただ、このシリアルナンバーがどういう意味のシリアルナンバーなのかは分からないですけど。</p>
+<pre lang="SHELL">
+adb get-serialno
+</pre>
+<p>SDK調べてみた方が早いかな。。。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1564/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

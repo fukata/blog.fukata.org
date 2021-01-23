@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>携帯 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E6%90%BA%E5%B8%AF/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 15 Jan 2016 01:00:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>60Mbps超え！？タイのプロバイダ「AIS」のLTEが速くて快適</title>
+		<link>/archives/8003/</link>
+					<comments>/archives/8003/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 15 Jan 2016 01:00:31 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[タイ]]></category>
+		<category><![CDATA[携帯]]></category>
+		<category><![CDATA[東南アジア]]></category>
+		<guid isPermaLink="false">https://travel.fukata.org/?p=557</guid>
+
+					<description><![CDATA[外で作業していてふと携帯の電波部分を見てみるといつもはハイスピードだったのがLTEという表記が！ 広告 BANGKOK SINGAPORE TOKYO(テザリング) TOKYO(自宅 ケーブルTV回線 ... <a href="/archives/8003/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8003/"><img src="https://farm6.staticflickr.com/5636/24149993465_a2eae2c8f7_z.jpg" alt="P1032038" class="aligncenter" /></a></p>
+<p>外で作業していてふと携帯の電波部分を見てみるといつもはハイスピードだったのがLTEという表記が！</p>
+<p><span id="more-8003"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>BANGKOK<br />
+<a href="http://www.speedtest.net/my-result/a/1675954089"><img src="http://www.speedtest.net/android/1675954089.png" /></a></p>
+<p>SINGAPORE<br />
+<a href="http://www.speedtest.net/my-result/a/1675958694"><img src="http://www.speedtest.net/android/1675958694.png" /></a></p>
+<p>TOKYO(テザリング)<br />
+<a href="http://www.speedtest.net/my-result/a/4996083570"><img src="http://www.speedtest.net/result/4996083570.png" /></a></p>
+<p>TOKYO(自宅 ケーブルTV回線)<br />
+<a href="http://www.speedtest.net/my-result/4998399232"><img src="http://www.speedtest.net/result/4998399232.png" /></a></p>
+<p>ちなみにいつもお世話になっているカフェのWiFiだとこんな感じ。<br />
+<a href="http://www.speedtest.net/my-result/4996096737"><img src="http://www.speedtest.net/result/4996096737.png" /></a></p>
+<p>ずっとテザリングに出来ると良いけど今のプランだと2GB/月なのであっという間に使いきってしまう。</p>
+<p>でも、デプロイとか速度が気になる時だけテザリングに切り替えても良いかもしれない。</p>
+<p>自分の地域が対応してるかどうかは下記のサイトを参考にしても良いかもしれない。ただ、公式ではないのでどこまで信用できるのかは不明。</p>
+<p><a href="http://opensignal.com/networks/thailand/ais-coverage">AIS coverage maps &#8211; OpenSignal</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8003/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5636/24149993465_a2eae2c8f7.jpg</image>
+	</item>
+	</channel>
+</rss>

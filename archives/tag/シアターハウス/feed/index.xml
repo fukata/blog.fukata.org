@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>シアターハウス &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%B7%E3%82%A2%E3%82%BF%E3%83%BC%E3%83%8F%E3%82%A6%E3%82%B9/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>QP-100Sに電動紙を使って部屋にプロジェクタを設置してみた</title>
+		<link>/archives/7186/</link>
+					<comments>/archives/7186/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 12 Aug 2012 10:55:13 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[QP-100S]]></category>
+		<category><![CDATA[シアターハウス]]></category>
+		<category><![CDATA[スクリーン]]></category>
+		<category><![CDATA[電動紙]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7186</guid>
+
+					<description><![CDATA[先日、ペーパースクリーンを購入したので部屋に設置しようと思ったんですが、壁にうまくネジが止まらなかったのでスクリーンポールを探していたところ、安さと設置のしやすさでQP-100S｜スクリーン設置用ポー ... <a href="/archives/7186/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日、<a href="https://www.pigeonnet.co.jp/screen.html" title="ペーパースクリーン | アルバム製造のピジョン株式会社" target="_blank">ペーパースクリーン</a>を購入したので部屋に設置しようと思ったんですが、壁にうまくネジが止まらなかったのでスクリーンポールを探していたところ、安さと設置のしやすさで<a href="https://theaterhouse.co.jp/products/QP-100S.html" title="QP-100S｜スクリーン設置用ポール｜クイックボール(2本セット) | プロジェクタースクリーン専門店" target="_blank">QP-100S｜スクリーン設置用ポール｜クイックボール(2本セット)</a>を追加購入しました。</p>
+<p>QP-100Sとしては自社製品にしか対応しておらず、他社製品の場合は止まるかどうか分からないという返信をもらっていたんですが、まぁ、最悪どうにかすれば止められるだろうという軽い気持ちで買ってみました。すると、QP-100Sに付属していたネジが電動紙のネジ穴とぴったりですんなり止める事が出来ました。</p>
+<p>QP-100Sなら壁を傷つけずに設置できるのと、低い位置で取り付けた後に少しずつ上に上げる事ができるので一人でも楽に設置することが出来ます。この点は一人暮らしの自分的には非常に助かりました。</p>
+<p><span id="more-7186"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://www.flickr.com/photos/45259648@N06/7763169004" target="_blank" title="R0011451"><img src="https://farm9.staticflickr.com/8435/7763169004_d9ed0ffca6.jpg" alt="R0011451" class="aligncenter"/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/7763161750" target="_blank" title="R0011454"><img src="https://farm9.staticflickr.com/8308/7763161750_3d4ed66506.jpg" alt="R0011454" class="aligncenter"/></a></p>
+<p><center><br />
+スクリーンを降ろす際の音。リモコンで自由に調整できるのも楽。<br />
+<iframe width="420" height="315" src="https://www.youtube.com/embed/RzmV_qR4uL4" frameborder="0" allowfullscreen></iframe><br />
+</center></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7186/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8435/7763169004_d9ed0ffca6.jpg</image>
+	</item>
+	</channel>
+</rss>

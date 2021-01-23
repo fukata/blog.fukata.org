@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>log4php &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/log4php/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[CodeIgniter2.x]log4phpと連携してみた</title>
+		<link>/archives/5770/</link>
+					<comments>/archives/5770/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 18 Jun 2011 11:43:14 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[log4php]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5770</guid>
+
+					<description><![CDATA[CodeIgniterのロギング部分は最小限の機能しか提供されていないため、有名なlog4phpと連携させてみました。 今回は、log4phpのフル機能をサポートというわけではなく、最小限の機能だけに ... <a href="/archives/5770/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CodeIgniterのロギング部分は最小限の機能しか提供されていないため、有名な<a href="https://logging.apache.org/log4php/">log4php</a>と連携させてみました。</p>
+<p>今回は、log4phpのフル機能をサポートというわけではなく、最小限の機能だけに抑えました。log4phpの機能をフルに使いたければ、phpですし、CodeIgniterですし、直に使っちゃえばいいんじゃない？という風に考えています。</p>
+<p><span id="more-5770"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>ソースは下記のgithubにおいています。インストール方法などについても下記のページに書いていますので、そちらを参照してください。</p>
+<p><a href="https://github.com/fukata/ci-log4php">fukata/ci-log4php &#8211; GitHub</a></p>
+<p>今のところ出来ることと言えば、ルートロガーを使ってロギングすることくらいです。あと、前々からlog_message関数は入力しにくい上にロギングレベルを毎回指定しないといけないのは怠いと感じていたので、log4php_helper.phpとしていくつか簡易メソッドを追加しています。</p>
+<p>一応、CodeIgniter 2系をターゲットに作りましたが、ci_log4phpの配置先とlog4php.propertiesファイルパスをENVIRONMENTを考慮した形に実装しているので、検証はしていませんが、その辺を変更すれば1系でも動くんじゃないかと思います。</p>
+<p>CodeIgniterのlog_messageからでも呼び出し元情報を正常に取得できるように、log4php自体も少し修正しています。なので、直に使いたい場合には、ci_log4phpは使わずに別途公式から提供されているものを使ってください。</p>
+<p>application/config/config.php内のlog_pathを利用していなかったりしますし、まだまだ連携していない部分も多々あります。可能であれば、log4phpの機能をフルに提供したいところではありますが、冒頭にも書いたとおりそんなにフルで使いたければ直に使っても良いのかなと思っているので迷っているところではあります。</p>
+<p>また、近いうちに勉強がてらにこれを<a href="https://getsparks.org/">sparks</a>のパッケージとして構築しようかと思っています。</p>
+<p><strong>追記：2011-06-18 22:49</strong><br />
+sparksだと読み込みタイミングがCodeIgniterの初期化が終わった後なので、起動時のログを出力する時には利用できないので、今のところは諦めました。読み込みタイミングがシビアなものは数少ないでしょうから、そういうのはapplication配下に置いて、標準の拡張方法を適用する方が良さそうです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5770/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>log4phpでプロセスを終了しないとファイル名が変わらない件について</title>
+		<link>/archives/5500/</link>
+					<comments>/archives/5500/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 03 Apr 2011 13:21:14 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[log4php]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5500</guid>
+
+					<description><![CDATA[log4jのPHP移植版で、phpのloggerとして有名なlog4phpがあります。ログファイルの形式としても利用者が多いであろう日付形式のファイルでのログの記録。もちろん、log4phpでも利用可 ... <a href="/archives/5500/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>log4jのPHP移植版で、phpのloggerとして有名なlog4phpがあります。ログファイルの形式としても利用者が多いであろう日付形式のファイルでのログの記録。もちろん、log4phpでも利用可能です。その際に利用するAppenderがLoggerAppenderDailyFileになります。</p>
+<p>このLoggerAppenderDailyFileですが、日付のフォーマット（デフォルトはYmd）を指定することができ、ログファイルにYmd.logなどの形式で記録することが出来ます。ただ、1つ注意する必要があり、ファイル名の決定が初期化時にしか行われないということで、バッチなど、1つのプロセスで日付をまたいで実行されるようなプログラムでは、常に同じファイルに書き込まれるということになります。</p>
+<p>で、コレを解消するためには、Logger::resetConfigurationを実行し、再度Logger::configureメソッドを実行する必要があります。ただ、このLogger::resetConfigurationですが、1万回実行した結果、呼ばなかった場合と比べ、かなり遅くなりました。（一番下にベンチマークの結果を載せています）</p>
+<p>そこで、LoggerAppenderRollingFileを参考にLoggerAppenderRollingDailyFileというのを作成しました。やっている事は簡単で、ログを書き出す前に現在書き込んでいるファイルの日付と現在日付を比較して異なっていれば書込対象のファイルを更新するというものです。</p>
+<p>ただ、apacheなどのように標準のlogrotate機構が使えるようなプログラムについてはそちらで行ったほうが楽かつ安全かと思います。</p>
+<p>一つの実装として下記のようなものを作成してみました。</p>
+<p><span id="more-5500"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>log4php/appenders/LoggerAppenderRollingDailyFile.php</h2>
+<pre lang="PHP">
+< ?php
+class LoggerAppenderRollingDailyFile extends LoggerAppenderDailyFile {
+        protected $_logFilePath = false;
+        protected $_nowDate = false;
+
+        public function setFile() {
+                $numargs = func_num_args();
+                $args = func_get_args();
+
+                if (!$this->_logFilePath && is_string($args[0])) {
+                        $this->_logFilePath = $args[0];
+                }
+
+                if($numargs == 1 and is_string($args[0])) {
+                        parent::setFile( $args[0] );
+                } else if ($numargs == 2 and is_string($args[0]) and is_bool($args[1])) {
+                        parent::setFile( $args[0], $args[1] );
+                }
+        }
+
+        private function updateFile() {
+                $_now = date($this->datePattern);
+                if ($_now != $this->_nowDate) {
+                        $this->_nowDate = $_now;
+                        $this->setFile($this->_logFilePath);
+                        $this->close();
+                        $this->activateOptions();
+                }
+        }
+
+        /**
+         * @param LoggerLoggingEvent $event
+         */
+        public function append(LoggerLoggingEvent $event) {
+                $this->updateFile();
+                parent::append($event);
+        }
+}
+</pre>
+<h2>log4php/Logger.php</h2>
+<p>新たに追加したAppenderを有効にするために、クラス一覧に追加します。</p>
+<pre lang="BASH">
+@@ -77,6 +77,7 @@
+ 		'LoggerAppenderMailEvent' => '/appenders/LoggerAppenderMailEvent.php',
+ 		'LoggerAppenderNull' => '/appenders/LoggerAppenderNull.php',
+ 		'LoggerAppenderPhp' => '/appenders/LoggerAppenderPhp.php',
++		'LoggerAppenderRollingDailyFile' => '/appenders/LoggerAppenderRollingDailyFile.php',
+ 		'LoggerAppenderRollingFile' => '/appenders/LoggerAppenderRollingFile.php',
+ 		'LoggerAppenderSocket' => '/appenders/LoggerAppenderSocket.php',
+ 		'LoggerAppenderSyslog' => '/appenders/LoggerAppenderSyslog.php',
+</pre>
+<p>これらを使い、再度ベンチマークを計測してみたところ、下記のようになりました。</p>
+<p><script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"chartType":"LineChart","chartName":"\u30b0\u30e9\u30d5 1","dataSourceUrl":"//spreadsheets.google.com/tq?key=0AsI5RvKROGWBdFUtR2gwU3JlQ2lCZ2wxcVZDdWYwOVE&transpose=0&headers=1&range=A1%3AJ10&gid=0&pub=1","options":{"reverseCategories":false,"fontColor":"#fff","midColor":"#36c","pointSize":"0","headerColor":"#3d85c6","headerHeight":40,"is3D":false,"logScale":true,"hAxis":{"maxAlternation":1},"wmode":"opaque","title":"benchmark log4php","mapType":"hybrid","isStacked":false,"showTip":true,"displayAnnotations":true,"titleY":"second","dataMode":"markers","colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395"],"smoothLine":false,"maxColor":"#222","lineWidth":"2","labelPosition":"right","fontSize":"14px","hasLabelsColumn":true,"maxDepth":2,"interpolateNulls":false,"legend":"bottom","allowCollapse":true,"cht":"bhg","minColor":"#ccc","reverseAxis":false,"width":600,"height":371},"refreshInterval":5} </script></p>
+<p>グラフの詳細は<a href="https://spreadsheets.google.com/ccc?key=0AsI5RvKROGWBdFUtR2gwU3JlQ2lCZ2wxcVZDdWYwOVE&#038;hl=ja">こちら</a>から。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5500/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

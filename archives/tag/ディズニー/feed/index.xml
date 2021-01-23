@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ディズニー &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>2010年 博多どんたく 2日目</title>
+		<link>/archives/4060/</link>
+					<comments>/archives/4060/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 04 May 2010 13:44:08 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ディズニー]]></category>
+		<category><![CDATA[博多どんたく]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4060</guid>
+
+					<description><![CDATA[博多どんたく2日目を少し見に今日も天神の方に行ってきました。 １４時頃天神の方に行ったのですが、午後の部なのかちょうど先頭から見ることができました。10分ほどするとなんとディズニーのパレードもやってい ... <a href="/archives/4060/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>博多どんたく2日目を少し見に今日も天神の方に行ってきました。</p>
+<p>１４時頃天神の方に行ったのですが、午後の部なのかちょうど先頭から見ることができました。10分ほどするとなんとディズニーのパレードもやっていました。博多どんたくにディズニーが来るなんてなんか不思議な感じでした。自分は今年からしか見たことが無いので分からないですが、いつ頃からディズニーが来てるんでしょうかね。</p>
+<p>下記のスライドショーを見てもらえば分かるかと思いますが、本当に人が多かったです。</p>
+<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="267" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="flashvars" value="host=picasaweb.google.com&amp;captions=1&amp;hl=ja&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=http%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2Ftatsuya.fukata%2Falbumid%2F5467398479957716097%3Falt%3Drss%26kind%3Dphoto%26hl%3Dja" /><param name="src" value="https://picasaweb.google.com/s/c/bin/slideshow.swf" /><embed type="application/x-shockwave-flash" width="400" height="267" src="https://picasaweb.google.com/s/c/bin/slideshow.swf" flashvars="host=picasaweb.google.com&amp;captions=1&amp;hl=ja&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=http%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2Ftatsuya.fukata%2Falbumid%2F5467398479957716097%3Falt%3Drss%26kind%3Dphoto%26hl%3Dja"/></object></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4060/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>BetterTouchTool &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/bettertouchtool/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 09 Sep 2017 05:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>BetterTouchToolを使ってキーボードショートカットでマウスカーソルをモニタ間で移動させる設定</title>
+		<link>/archives/8868/</link>
+					<comments>/archives/8868/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2017 04:51:49 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BetterTouchTool]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<guid isPermaLink="false">/?p=8868</guid>
+
+					<description><![CDATA[モニタが余っていたのでトリプルディスプレイにしてみたけど、マウスカーソルの移動が大変な場面があるのでBetterTouchToolを使って瞬時にカーソルを移動させてみた。 広告 「Move Mouse ... <a href="/archives/8868/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4399/36302210293_e23ea231a0_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>モニタが余っていたのでトリプルディスプレイにしてみたけど、マウスカーソルの移動が大変な場面があるのでBetterTouchToolを使って瞬時にカーソルを移動させてみた。</p>
+<p><span id="more-8868"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>「Move Mouse To Position」というアクションがあるのでそれで移動させたい位置を指定すれば完了。</p>
+<p>具体的な設定手順は下記の通り。</p>
+<ol>
+<li>Add New Shortcut or Key Sequence</li>
+<li>Shortcutを設定して、任意のキーを入力。今回は Shift + Control + 1(2,3) に設定</li>
+<li>Trigger Predefined Actionに「Other Mouse Actions」-> 「Move Mouse To Position」</li>
+<li>移動させたい任意の位置を指定</li>
+</ol>
+<p><a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4399/36302210293_e23ea231a0_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>一番右にMBP15inch(3が一番右)を置いて左に2つフルHDのモニタを置いた状態の設定。<br />
+<a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4388/37114952655_940a545454_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>これで、左のモニタから右に移動させたい時にもショートカットですぐに移動できる。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8868/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4399/36302210293_e23ea231a0.jpg</image>
+	</item>
+	</channel>
+</rss>

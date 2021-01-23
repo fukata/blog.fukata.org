@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>フリーウェア &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%A6%E3%82%A7%E3%82%A2/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>マウスカーソルをモニター間で移動する「MultiMonitorMouse」</title>
+		<link>/archives/2337/</link>
+					<comments>/archives/2337/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 02 Feb 2010 20:44:16 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[フリーウェア]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2337</guid>
+
+					<description><![CDATA[自宅の環境がトリプルディスプレイになったので、トラックポインタでは移動が大変だということで、モニター間でマウスカーソルをショートカットで移動できるユーティリティソフトはないものかと思い探してみたところ ... <a href="/archives/2337/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>自宅の環境がトリプルディスプレイになったので、トラックポインタでは移動が大変だということで、モニター間でマウスカーソルをショートカットで移動できるユーティリティソフトはないものかと思い探してみたところ良さそうなのが見つかりました。</p>
+<p>MultiMonitorMouseというアプリで、ショートカットは「キーボード」と「マウス」を使用する2通りサポートされています。</p>
+<p><a href="https://farm6.static.flickr.com/5171/5476138278_2561387923_m.jpg"><img loading="lazy" class="aligncenter size-medium wp-image-2338" title="multi-monitor-mouse" src="https://farm6.static.flickr.com/5171/5476138278_2561387923_m.jpg" alt="" width="300" height="216" /></a></p>
+<p>ディスプレイの並び順もディスプレイの識別番号と依存しておらず、自分で変更可能なので便利です。</p>
+<p>単にマウスカーソルを移動するだけではなく、ウィンドウを選択した状態でショートカットを実行すると選択しているウィンドウも一緒に移動してくれます。</p>
+<p>ディスプレイが2枚、3枚ある方は是非一度使ってみてはいかがでしょうか？</p>
+<p><a href="https://graphics.cs.columbia.edu/projects/m3/index.html">Multi Monitor Mouse</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2337/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

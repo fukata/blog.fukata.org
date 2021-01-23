@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>S31HW &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/s31hw/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>IDEOS(S31HW)をChinaUnicomのSIMで使ってみた</title>
+		<link>/archives/5268/</link>
+					<comments>/archives/5268/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 07 Feb 2011 12:53:03 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[IDEOS]]></category>
+		<category><![CDATA[Pocket Wifi]]></category>
+		<category><![CDATA[S31HW]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5268</guid>
+
+					<description><![CDATA[上海に戻ってすぐに、今までDROID PROに挿していたChina UnicomのSIMをIDEOSに挿してみました。するとあっさり無線LANルータとして機能しました。Pocket Wifi用のアプリ ... <a href="/archives/5268/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>上海に戻ってすぐに、今までDROID PROに挿していたChina UnicomのSIMをIDEOSに挿してみました。するとあっさり無線LANルータとして機能しました。Pocket Wifi用のアプリをONにするだけです。</p>
+<p>DROID PROだと通常はAPNを手動で設定しないといけない（HiAPNである程度自動化してます）のですが、IDEOSの場合は、SIMを挿すだけで自動的にAPNを設定してくれるようでChina UnicomのSIMでネット接続を行うための設定などを特にする必要はありませんでした。これは非常にありがたい。もう一つメジャーなChina Mobileでは試していませんが、多分サポートしているんじゃないでしょうか。</p>
+<p>China Unicom接続時のスピードを参考までに貼っておきます。</p>
+<p><a href='https://www.flickr.com/photos/45259648@N06/5424400237'><img src='https://farm6.static.flickr.com/5051/5424400237_65acfca00b.jpg' alt='IDEOS(ChinaUnicom SIM) WIFI SPEED TEST' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5268/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>IDEOS(S31HW)を使ってみた</title>
+		<link>/archives/5254/</link>
+					<comments>/archives/5254/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 04 Feb 2011 05:31:20 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[emobile]]></category>
+		<category><![CDATA[IDEOS]]></category>
+		<category><![CDATA[S31HW]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5254</guid>
+
+					<description><![CDATA[今回の帰省した際にどうしてもやりたかったこと、散髪、そして、イー・モバイル版IDEOSことS31HWの入手。今日、10時に博多のヨドバシに行き、その場でdocomoのインフォメーションセンターに連絡し ... <a href="/archives/5254/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今回の帰省した際にどうしてもやりたかったこと、散髪、そして、イー・モバイル版IDEOSことS31HWの入手。今日、10時に博多のヨドバシに行き、その場でdocomoのインフォメーションセンターに連絡し、MNP予約番号を発行してもらい、イー・モバイルでPocket Wifi Sを契約してきました。メインはDROID PROなので、基本的に無線LANルーターとして使うので、端末は貧弱なもので構わないので、今回はHTC Ariaではなく、Huawei IDEOS。</p>
+<p>実際に持った感じでは、ht-03aよりも小さく感じ、従来のPocket Wifiルーターよりも一回り大きいと言った感じではないでしょうか。IDEOS用のバスタブも注文済みなので、到着次第、写真をアップしたいと思います。</p>
+<p><span id="more-5254"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今まで、イー・モバイルはずっと使っていたのですが、Pocket Wifiというものを使った事がなかったので、安定性などに不安があったのですが、今日軽く使ってみた感じでは、安定しており、非常に使い勝手が良く感じました。Android標準のTethering機能ではなく、Pocket Wifiというアプリを使っていました。Pocket Wifiというのはインタフェースのみで、機能自体は、2.2から搭載されているTethering機能を使っているんでしょうかね・・・。上海に戻った時にChina UnicomのSIMを使って同様のアプリで繋げられるか試してみたいと思います。</p>
+<p>また、無線LANルーターということで、他のスマホ以外にもパソコンを繋げる事も可能です。</p>
+<p>とりあえず、最低限のアプリを入れ、root化もしておきました。root化には、DROID PROの時にもお世話になった、z4rootで一発でした。いやぁ、Androidのroot化がアプリ一発で出来る時代になって嬉しいですね。以前は確かAndroid Marketからz4rootをダウンロード出来たと思ったのですが、今回検索してみても引っかかりません。（日本のMarketのみ？）ネットを検索してみるとAndroid Marketから消えたというような情報もあったので、下記から直接ダウンロードしました。</p>
+<p><a href="https://handheld.softpedia.com/get/System-Utilities/Enhancements/z4root-110178.shtml">Download z4root 1.3.0 for Android Free &#8211; z4root will root your device and enable you to supply system level access to applications that request it. &#8211; Softpedia</a></p>
+<p>最新版の1.4ではありませんが、IDEOSのroot化には成功しています。</p>
+<p>これで、自分も歩く無線LANルータとなりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5254/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

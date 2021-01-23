@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Steam &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/steam/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Wed, 20 Jun 2018 19:13:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Windows10でSteamが突然落ちる問題を解決する方法</title>
+		<link>/archives/9595/</link>
+					<comments>/archives/9595/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 20 Jun 2018 19:13:18 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Steam]]></category>
+		<guid isPermaLink="false">/?p=9595</guid>
+
+					<description><![CDATA[New XPS 13でSteamを立ち上げてSFVをプレイしていたら数十分くらいで落ちるので少し検索してみると解決できそうだったのでメモ。 広告 環境 とりあえず、自分の環境はこんな感じ。 Windo ... <a href="/archives/9595/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/29052599738" target="_blank" title="Steam：Street Fighter V_ Arcade Edition - Google Chrome 2018-06-21 02.38.49"><img loading="lazy" src="https://farm2.staticflickr.com/1782/29052599738_09568333bd_c.jpg" alt="Steam：Street Fighter V_ Arcade Edition - Google Chrome 2018-06-21 02.38.49" class="aligncenter" width="800" height="416"/></a></p>
+<p>New XPS 13でSteamを立ち上げてSFVをプレイしていたら数十分くらいで落ちるので少し検索してみると解決できそうだったのでメモ。</p>
+<p><span id="more-9595"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<p>とりあえず、自分の環境はこんな感じ。</p>
+<ul>
+<li>Windows 10(64bit)</li>
+<li>New XPS 13(9370)</li>
+<li>Steam(2018.06.21時点最新版)</li>
+</ul>
+<h2>修正方法</h2>
+<p>原因は「Touch Keyboard and Handwriting Panel Service」というものらしい。</p>
+<p>とりあえず、こいつをOFFにすれば同様の現象は発生しなくなった。</p>
+<h2>Touch Keyboard and Handwriting Panel Serviceの停止方法</h2>
+<p>Windowsキーを押して検索からサービスを入力。サービス一覧が表示されるのでそこから該当の行を探す。<br />
+<a href="https://www.flickr.com/photos/fukata/28055974687" target="_blank" title="Services 2018-06-21 02.40.48"><img loading="lazy" src="https://farm2.staticflickr.com/1805/28055974687_47d3ca982b_c.jpg" alt="Services 2018-06-21 02.40.48" class="aligncenter" width="800" height="409"/></a></p>
+<p>該当行を右クリック->プロパティ。起動時の設定があるので無効を選択。<br />
+<a href="https://www.flickr.com/photos/fukata/42206719014" target="_blank" title="Touch Keyboard and Handwriting Panel Service Properties (Local Computer) 2018-06-21 02.43.27"><img loading="lazy" src="https://farm2.staticflickr.com/1784/42206719014_aaa3b5287a_c.jpg" alt="Touch Keyboard and Handwriting Panel Service Properties (Local Computer) 2018-06-21 02.43.27" class="aligncenter" width="800" height="412"/></a></p>
+<p>一応、無効に変更後に再起動して該当のプロセスが起動していないかタスクマネージャー等で見て表示されていなければ問題ない。</p>
+<p>とりあえず、これでプレイ中に突然落ちるということはなくなった。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9595/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1782/29052599738_09568333bd.jpg</image>
+	</item>
+	</channel>
+</rss>

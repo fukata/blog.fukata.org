@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Golang &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/golang/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>撮影データの転送ツール「ghoto」を書いた</title>
+		<link>/archives/7935/</link>
+					<comments>/archives/7935/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 19 Mar 2016 06:37:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ghoto]]></category>
+		<category><![CDATA[Golang]]></category>
+		<guid isPermaLink="false">https://fukata.org/?p=7935</guid>
+
+					<description><![CDATA[perlで実装していた撮影データを転送するスクリプトをゴリッとgolangに書き換えた。 広告 fukata/ghoto: Photo manage cli command. 使い方等はgithubで ... <a href="/archives/7935/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7935/"><img src="https://farm2.staticflickr.com/1716/25057265961_9f4f40e288_c.jpg" alt="P2204562" class="aligncenter"/></a></p>
+<p>perlで実装していた撮影データを転送するスクリプトをゴリッとgolangに書き換えた。</p>
+<p><span id="more-7935"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://github.com/fukata/ghoto">fukata/ghoto: Photo manage cli command.</a></p>
+<p>使い方等はgithubで。</p>
+<p>撮影したファイルを <strong>/path/to/raw/yyyy/mm/dd/filename</strong> という形式で保存するためのもの。</p>
+<p>自分でディレクトリを作成したり撮影旅行などで複数日になると転送だけでも面倒なのでEXIFデータから撮影した日付毎にディレクトリを作成して適当に転送してくれる。</p>
+<p>テストはこれから使いながらやっていく。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7935/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1716/25057265961_9f4f40e288.jpg</image>
+	</item>
+	</channel>
+</rss>

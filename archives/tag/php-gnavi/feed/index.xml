@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>php-gnavi &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/php-gnavi/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ぐるなびAPIクライアント「php-gnavi」を作ってみた</title>
+		<link>/archives/7200/</link>
+					<comments>/archives/7200/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 07 Sep 2012 06:28:23 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[php-gnavi]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[ぐるなび]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7200</guid>
+
+					<description><![CDATA[かなり今さら感ありますが、php製のぐるなびAPIクライアントをリリースしました。 なんで今さらぐるなびのクライアントを作ろうかと思ったのは、最近食べたものを記録するためにブログを書いてるんですが、お ... <a href="/archives/7200/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>かなり今さら感ありますが、php製のぐるなびAPIクライアントをリリースしました。</p>
+<p>なんで今さらぐるなびのクライアントを作ろうかと思ったのは、最近食べたものを記録するためにブログを書いてるんですが、お店情報の引用作業が割りと怠いのでどうせならWordPressのプラグインとして実装しちゃおうと思い、更にその中でぐるなびのAPIを使うしこの部分だけでも別途モジュールできるじゃん。というのがきっかけです。</p>
+<p>おかげでWordPressプラグインの方はまだほとんど何も進んでおりません。これから作成します。</p>
+<p><span id="more-7200"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>とりあえず、今のところは全APIがサポートされているかと思います。テストパターンがあまり多くないので実際に使っているとバグ等も出る可能性も高いです。その時はPullRequestしてもらえればありがたいです。</p>
+<p>cpanモジュールをアップする用になってから公開するモジュールのテストコードをとりあえず書こうという気持ちになれました。今まであまりテストコードは書いていませんでしが、cpanモジュールを作ってみて一番大きな収穫だったかも。</p>
+<p>ということで、下記からダウンロード出来ます。</p>
+<p><a href="https://github.com/fukata/php-gnavi" title="fukata/php-gnavi" target="_blank">fukata/php-gnavi</a></p>
+<p>食べログのお店情報を引用していたので、当初はぐるなびではなく食べログのクライアントを作ろうかと思っていたんですが、APIリファレンスを見ると名前やIDでの検索が出来ないし、今回の要件とは合わないかなと思い、ぐるなびにしました。</p>
+<p>あと、これからプラグインの方を作ろうと思っているんですが、既にぐるなびからお店情報を引用するようなプラグインがあれば作る手間が省けるので是非教えてもらいたいです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7200/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>plugins &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/plugins/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>リンク切れを発見してくれるWordPressプラグイン「Broken Link Checker」</title>
+		<link>/archives/4015/</link>
+					<comments>/archives/4015/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 02 May 2010 13:10:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Broken Link Checker]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress Plugin]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4015</guid>
+
+					<description><![CDATA[パーマリンクの形式を変更したことにより記事内から他の記事に参照しているリンクでリンク切れを起こしているものが大量にあり、探すのが大変だったので何かないかと探してみたところBroken Link Che ... <a href="/archives/4015/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>パーマリンクの形式を変更したことにより記事内から他の記事に参照しているリンクでリンク切れを起こしているものが大量にあり、探すのが大変だったので何かないかと探してみたところBroken Link Checkerがありました。</p>
+<p>一定期間毎に全記事をチェックし、リンク切れ一覧を下記のように表示されます。また、個別の記事を開いて編集する必要はなく、同じ画面で対象のURLのみ編集することができます。これにより作業時間が大幅に軽減されます。</p>
+<p><a href="https://farm6.static.flickr.com/5219/5476145988_0ed0d93ffc_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5219/5476145988_0ed0d93ffc_m.jpg" title="broken_link_checker-02" width="500" height="289" class="aligncenter size-large wp-image-4017" /></a></p>
+<p>定期的にチェックを実行する時間、リンク切れURLに適用するCSS、チェック対象外のURL、メール通知、サーバが高負加時に処理を一時停止するしきい値の設定など様々な機能があります。</p>
+<p><a href="https://farm6.static.flickr.com/5211/5476146548_dd2964bce1_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5211/5476146548_dd2964bce1_m.jpg" title="broken_link_checker-01" width="346" height="500" class="aligncenter size-large wp-image-4018" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4015/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>wordpress上でソースコードを綺麗に表示できる「WP-Styntax」をインストール</title>
+		<link>/archives/750/</link>
+					<comments>/archives/750/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 21 Nov 2008 14:29:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=750</guid>
+
+					<description><![CDATA[以前の記事で、PHPで10進数&#60;-&#62;32進数のソースコードを表示したんですけど、その時に「WP-Syntax」というプラグインを使ってみました。 ブログ上にも関わらず、綺麗に色分けされたプ ... <a href="/archives/750/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以前の記事で、PHPで10進数&lt;-&gt;32進数のソースコードを表示したんですけど、その時に「<a href="https://wordpress.org/extend/plugins/wp-syntax/">WP-Syntax</a>」というプラグインを使ってみました。</p>
+<p>ブログ上にも関わらず、綺麗に色分けされたプログラムコードが表示されてます。</p>
+<p>wordpressを使用していて、プログラムコードを表示することが多い方は入れてみてはいかがでしょうか？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/750/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>WP Super Cacheをアンインストール</title>
+		<link>/archives/745/</link>
+					<comments>/archives/745/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 20 Nov 2008 02:11:15 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=745</guid>
+
+					<description><![CDATA[今朝インストールした、「WP Super Cache」を早速アンインストールしました。 なぜかというと、現在、ブログのモバイル対応に「Ktai Style」というプラグインを使用していたんですが、どう ... <a href="/archives/745/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今朝インストールした、「WP Super Cache」を早速アンインストールしました。</p>
+<p>なぜかというと、現在、ブログのモバイル対応に「Ktai Style」というプラグインを使用していたんですが、どうやらモバイル用のテンプレートを読み込まないといけないのに、PC用のテンプレートを読み込んでしまい、PC用テンプレートで表示されてしまっていました。</p>
+<p>別段速度的にも劇的に変わるほどでもないので、アンインストールしました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/745/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>youtubeの動画を簡単にエディタに貼り付けることができるWordPressプラグイン「Noembedder」</title>
+		<link>/archives/276/</link>
+					<comments>/archives/276/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 14 Feb 2008 15:20:28 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[plugins]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/02/15/276/</guid>
+
+					<description><![CDATA[今回は、youtubeの動画をwordpressのリッチエディタに貼り付けることが出来るプラグインNoembedderの紹介です。 簡単にというか、分かりやすくなります。 今までだとコードモードにして ... <a href="/archives/276/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5292/5475569869_edc76b15dd_m.jpg" target="_blank" title="noembedder_02.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5292/5475569869_edc76b15dd_m.jpg" alt="noembedder_02.jpg" class="imageframe imgalignleft" align="left" height="150" width="200" /></a>今回は、youtubeの動画をwordpressのリッチエディタに貼り付けることが出来るプラグイン<a href="https://blog.slaven.net.au/wordpress-plugins/noembedder-wordpress-plugin/" target="_blank">Noembedder</a>の紹介です。</p>
+<p>簡単にというか、分かりやすくなります。</p>
+<p>今までだとコードモードにしてタグを貼り付けて、ビジュアルモードにしたときにyoutubeの動画が実際にはあるのですが、見えていませんでした。それを分かりやすく表示してくれるというものです。</p>
+<p>分かりやすくなりましたかな？ｗ</p>
+<p>ということで、使い方は以下からどうぞ</p>
+<p><span id="more-276"></span>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>インストール作業は今まで同じで以下のような手順になります。</p>
+<ol>
+<li>プラグインのダウンロード</li>
+<li>解凍</li>
+<li>プラグインフォルダにアップ</li>
+<li>管理画面のプラグインメニューで有効化</li>
+</ol>
+<p><a href="https://farm6.static.flickr.com/5178/5475569761_31ba45e230_m.jpg" target="_blank" title="noembedder_01.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5178/5475569761_31ba45e230_m.jpg" alt="noembedder_01.jpg" class="imageframe imgalignright" align="right" height="116" width="200" /></a>早速、有効化して各種設定画面からNoembedderを選択し、右のような画面が出ていれば無事成功（らしい）</p>
+<p>試しに、本当に貼り付けるだけでyoutubeの動画を記事に挿入することが出来るのか試してみます。</p>
+<p>今回、使用する動画はこちら。</p>
+<p>さぁ、貼り付けますよ。</p>
+<p width="425" height="355">ぽちっとな。</p>
+<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="425" height="355"><param name="width" value="425" /><param name="height" value="355" /><param name="wmode" value="transparent" /><param name="src" value="https://www.youtube.com/v/Pw65mwmCRO8&amp;rel=1" /><embed type="application/x-shockwave-flash" width="425" height="355" wmode="transparent" src="https://www.youtube.com/v/Pw65mwmCRO8&amp;rel=1"/></object></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/276/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>リッチエディタにボタンを追加できるWordPressプラグイン「TinyMCE Advanced」</title>
+		<link>/archives/274/</link>
+					<comments>/archives/274/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 14 Feb 2008 15:01:47 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[plugins]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/02/15/274/</guid>
+
+					<description><![CDATA[movable typeからwordpressに移行した時、速度面でかなり驚いたのですが、リッチエディタはそれほど違いが無くあまり驚くことが無かったのですが、今回紹介するプラグインで解消されるかと思い ... <a href="/archives/274/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5300/5475569627_83457daf10_m.jpg" target="_blank" title="tinymce_advanced.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5300/5475569627_83457daf10_m.jpg" alt="tinymce_advanced.jpg" class="imageframe imgalignright" align="right" height="116" width="200" /></a>movable typeからwordpressに移行した時、速度面でかなり驚いたのですが、リッチエディタはそれほど違いが無くあまり驚くことが無かったのですが、今回紹介するプラグインで解消されるかと思います。</p>
+<p>それは<a href="https://wordpress.org/extend/plugins/tinymce-advanced/" target="_blank">TinyMCE Advanced</a>というプラグインで、wordpressのリッチエディタに自由にボタンを追加できるというもの。</p>
+<p>今まで何で付いていなかったよく使うボタンが使えるようになったので重宝しています。</p>
+<p>使い方に関しては以下からどうぞ</p>
+<p><span id="more-274"></span>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>使い方は簡単で公式サイトからダウンロードし、解凍したものをwordpressのプラグインフォルダに入れるというもの。</p>
+<p>後は、管理画面を開き、メニューのプラグインから対象のプラグインを有効化にするだけ。</p>
+<p>これだけです。</p>
+<p>このプラグインを有効化したばかり記事投稿の画面に行くとボタンが何もなくなっていたのでちょっと驚きましたが、 メニューの「管理」から表示するボタンを設定することが出来ます。</p>
+<p>このプラグインを使えば、デフォルトで付いていなかった<span style="color: #ff0000">フォント色</span>や<span style="font-size: 24pt">フォントサイズ</span>の指定なども簡単に行うことができるようになります。また、簡単なアイコン  <img src="https://s.w.org/images/core/emoji/13.0.1/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;" />  なども使えるようになります。</p>
+<p>ただ、一つだけちょっと不満な部分もあります。今までなかった単なる貼り付けにもポップアップが出るようになり若干邪魔なような気がします。それでも、総合的にいろんなボタンが使えるようになるので記事投稿が楽になるかと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/274/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

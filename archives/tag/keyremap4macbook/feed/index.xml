@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>KeyRemap4MacBook &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/keyremap4macbook/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:56:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>MacOSX+HHKB Type-SでDeleteをForward Delete, Fn+DeleteをBackSpaceとして認識させる</title>
+		<link>/archives/7273/</link>
+					<comments>/archives/7273/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 02 Nov 2012 16:27:56 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[KeyRemap4MacBook]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7273</guid>
+
+					<description><![CDATA[mac miniを買って、HHKB Type-Sを繋いでみたところ、DeleteがBackSpaceとして認識されており、普段会社やMBAで使っているのはDeleteはForward Delete,  ... <a href="/archives/7273/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>mac miniを買って、HHKB Type-Sを繋いでみたところ、DeleteがBackSpaceとして認識されており、普段会社やMBAで使っているのはDeleteはForward Delete, Fn+DeleteがBackSpaceだったので違和感があり、どうやって設定するのか少し探してみました。</p>
+<p><span id="more-7273"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>KeyRemap4MacBookというアプリを使って設定するんですが、肝はClearを無効化するところでした。</p>
+<p><a href="https://www.flickr.com/photos/fukata/8147970294" target="_blank" title="DeleteをForward Delete, Fn+DeleteをBSに設定する"><img src="https://farm9.staticflickr.com/8329/8147970294_8c5d6b9acf.jpg" alt="DeleteをForward Delete, Fn+DeleteをBSに設定する" class="aligncenter"/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7273/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8329/8147970294_8c5d6b9acf.jpg</image>
+	</item>
+	</channel>
+</rss>

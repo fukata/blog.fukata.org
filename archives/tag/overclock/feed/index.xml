@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Overclock &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/overclock/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]Milestoneで再起動後もオーバークロック状態にする</title>
+		<link>/archives/4879/</link>
+					<comments>/archives/4879/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 09 Nov 2010 10:31:26 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<category><![CDATA[Overclock]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4879</guid>
+
+					<description><![CDATA[手持ちのMilestoneをオーバークロック状態にする際に使用しているアプリがこちら。milestone-overclock &#8211; Project Hosting on Google Cod ... <a href="/archives/4879/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>手持ちのMilestoneをオーバークロック状態にする際に使用しているアプリがこちら。<a href="https://code.google.com/p/milestone-overclock/">milestone-overclock &#8211; Project Hosting on Google Code</a></p>
+<p>Rootを取得していることが条件ですが、Rootの取得方法については少し探せば見つかると思います。で、Rootさえ取得していれば後は簡単で、設定したいCPU Hzに設定するだけです。</p>
+<p>で、このアプリ。再起動後も設定を維持してもらいたいところなのですが、デフォルトだと毎回設定し直さないといけません。それは非常に面倒なので調べた結果、以下のような手順で再起動後も設定を維持することができました。</p>
+<h2>1. AutoStart(Root)のインストール</h2>
+<p>AutoStart(Root)のダウンロードは以下からどうぞ。<br />
+<a href="https://www.androidzoom.com/android_applications/tools/autostart-root_bacu_download.html">Autostart (Root) (Android) &#8211; Download</a></p>
+<p>これは単純にインストールするだけです。<br />
+このアプリをインストールすることで、起動後にroot権限で/data/opt/autostart.shを実行してくれるというものです。なので、今回はこのshellにオーバークロック状態にするスクリプトを仕込みます。</p>
+<h2>2. /data/opt/autostart.shの設置</h2>
+<p>その仕込む内容は以下になります。</p>
+<pre lang="BASH">
+insmod /data/data/pt.com.darksun.milestoneoverclock/files/overclock.ko
+echo 80 > /proc/overclock/max_vsel
+echo 1200000 > /proc/overclock/max_rate
+</pre>
+<p>設定する値については下記のページを参照下さい。<br />
+<a href="https://code.google.com/p/milestone-overclock/wiki/KernelModule">KernelModule &#8211; milestone-overclock &#8211; How to use the kernel module &#8211; Project Hosting on Google Code</a></p>
+<p>作成したファイルは下記のようにしてUSB接続したMilestoneへ転送します。</p>
+<pre lang="BASH">
+adb push autostart.sh /opt/data/
+</pre>
+<p>以上で、再起動後にもオーバークロックの設定が反映されるようになります。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4879/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

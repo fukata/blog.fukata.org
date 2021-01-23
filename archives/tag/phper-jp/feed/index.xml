@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>phper.jp &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/phper-jp/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:02:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>phpのクラウド環境phper.jpでPHPSpeedを動かしてみた</title>
+		<link>/archives/5411/</link>
+					<comments>/archives/5411/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 10 Mar 2011 15:03:05 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[phper.jp]]></category>
+		<category><![CDATA[PHPspeed]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5411</guid>
+
+					<description><![CDATA[phpのクラウド環境であるphper.jpでベンチマーク計測ソフトウェアのPHPSpeedを動かしてみたので、導入方法の際の注意点とベンチマークの結果を載せておきます。 今回、phper.jpを少し触 ... <a href="/archives/5411/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>phpのクラウド環境である<a href="https://phper.jp/">phper.jp</a>でベンチマーク計測ソフトウェアの<a href="https://www.phpspeed.com/">PHPSpeed</a>を動かしてみたので、導入方法の際の注意点とベンチマークの結果を載せておきます。</p>
+<p>今回、phper.jpを少し触ってみて、デプロイ容易さや使用できる言語もphpということで、ライブラリが揃っている言語なので、mockや個人的なサービスを使う環境としては良いかなと思いました。実際に仕事などで利用するには、有料オプションなどがきちんと実装（現時点ではまだ未実装？のようです）されてからかなと思います。ただ、今回ベンチマークを計測してみて、<a href="https://fukata.org/2010/05/14/heteml-and-servermanvps-benchmarks/">以前にhetemlとServersMan@VPSで同じソフトウェアで計測</a>した場合と比べるとかなり良い結果となりました。</p>
+<p><span id="more-5411"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>PHPSpeedの導入</h2>
+<p>ベンチマーク結果だけを見たい人はこの項目は飛ばしてください。</p>
+<h3>ダウンロード</h3>
+<pre lang="BASH">
+wget https://www.phpspeed.com/download2.php?file=phpspeed_v1_beta3.zip
+unzip phpspeed_v1_beta3.zip
+</pre>
+<h3>phperのプロジェクト用ディレクトリへコピー</h3>
+<pre lang="BASH">
+mv phpspeed/phpspeed/* my-phper-git-repo
+cd my-phper-git-repo
+</pre>
+<h3>DB設定</h3>
+<pre lang="BASH">
+vim config_db.php
+</pre>
+<p>下記の項目について、phper.jpから提供されたDB情報に編集する。</p>
+<pre lang="PHP">
+//Enter your MySQL connection information below
+$dbhost = "localhost";
+$dbuname = "ENTERYOURDBUSERNAME";
+$dbpass = "ENTERYOURPASSWORD";
+
+//This is the DB where all of the config and results data will be stored^M
+$dbname = "phpspeed";
+</pre>
+<h3>デプロイ</h3>
+<pre lang="BASH">
+git add --all
+git commit -m 'initial commit.'
+git push origin master
+</pre>
+<p>この状態でアクセスするとphpコードがそのまま表示されていると思います。phpspeedの内部のソースを見てみるとphpショートタグが沢山あります。。。phper.jpの設定では、デフォルトではphpショートタグは許可されていないので、.htaccessを追加して許可する必要があります。</p>
+<h3>.htaccessを追加</h3>
+<pre lang="BASH">
+echo "php_value short_open_tag 1" > .htaccess
+git add .htaccess
+git commit -m 'add .htaccess'
+git push origin master
+</pre>
+<p>これで、正常に表示されることだと思います。DBの初期化を行えば、各種のベンチマークテストを行えるようになります。ちなみに、自分の場合はサーバを追加して３０分ほどサーバにアクセスしても503が発生していました。</p>
+<h2>ベンチマーク結果</h2>
+<p>Benchmark Summary</p>
+<table>
+<tr>
+<th style="text-align:center;">Tests</th>
+<th style="text-align:center;">phper.jp<br />(Best Score/Avg Score)</th>
+</tr>
+<tr>
+<th>Synthetic PHP BenchMark</th>
+<td style="text-align:center;">5,071/5,043</td>
+</tr>
+<tr>
+<th>Synthetic MySQL BenchMark</th>
+<td style="text-align:center;">3,536/2,650</td>
+</tr>
+<tr>
+<th>Synthetic Read/Write BenchMark</th>
+<td style="text-align:center;">2,604/2,586</td>
+</tr>
+<tr>
+<th>Real World PHP BenchMark</th>
+<td style="text-align:center;">8,597/8,542</td>
+</tr>
+<tr>
+<th>Real World PHP &#038; MySQL BenchMark</th>
+<td style="text-align:center;">4,368/4,341</td>
+</tr>
+<tr>
+<th>Server Benchmark</th>
+<td style="text-align:center;">3,309/3,098</td>
+</tr>
+</table>
+<p><a href='https://www.flickr.com/photos/45259648@N06/5513668785'><br />
+<img src='https://farm6.static.flickr.com/5260/5513668785_3605239513.jpg' alt='phper-benchmark-summary' class='aligncenter' /></a></p>
+<p>PHP Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5514265172'><img src='https://farm6.static.flickr.com/5094/5514265172_489baba06a.jpg' alt='phper-phpinfo' class='aligncenter' /></a></p>
+<p>MySQL Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5513668901'><br />
+<img src='https://farm6.static.flickr.com/5212/5513668901_71b19443cd.jpg' alt='phper-mysqlinfo' class='aligncenter' /></a></p>
+<p>System Info<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5514265222'><img src='https://farm6.static.flickr.com/5135/5514265222_fb5ee97927.jpg' alt='phper-systeminfo' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5411/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

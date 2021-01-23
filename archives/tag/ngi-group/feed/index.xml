@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ngi group &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ngi-group/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:14:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ngi group 学生対象エンジニア体験ワークショップに行ってきた</title>
+		<link>/archives/6581/</link>
+					<comments>/archives/6581/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 30 Nov 2011 05:26:10 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ngi group]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6581</guid>
+
+					<description><![CDATA[ngi group 学生対象　エンジニア体験ワークショップ @渋谷 : ATND 以前、atndなどで告知していた学生向けのエンジニア体験ワークショップにお手伝いとして参加してきました。今回のワークシ ... <a href="/archives/6581/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://atnd.org/events/22144">ngi group 学生対象　エンジニア体験ワークショップ @渋谷 : ATND</a></p>
+<p>以前、atndなどで告知していた学生向けのエンジニア体験ワークショップにお手伝いとして参加してきました。今回のワークショップは、プログラミング経験のない学生を対象にしていたのですが、1/3くらいプログラミング経験のある人が居て、その方達には少し物足りなかったかもしれません。</p>
+<p>発表は、<a href="https://tech.blog.hisaju.org/2011/11/16/engneta/" target="_blank">例のエントリ</a>を書いた@<a href="https://www.facebook.com/hisaju">hisasju</a>でした。</p>
+<p><span id="more-6581"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>途中、急いた部分があり、よく分からなかったという人や自分でもう少しソースコードをいじってみたいという人は今回使用した開発用サーバに関して1年間開放するそうなので、ワークショップ内では出来なかったdotCloudへのデプロイや、その他の分からない事に関しては、@<a href="https://www.facebook.com/hisaju">hisasju</a>に直接聞いてくれれば教えてくれるらしいので是非聞いてみてください！</p>
+<p>リハの結果、中止になったdotCloudへのデプロイ以外は、コマンド等を全く触ったことのない方も多かったですが、時間内で皆マッシュアップサイトの作成まで出来たのは良かったです。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6428950263" target='_blank'><img src="https://farm8.staticflickr.com/7146/6428950263_06b511caea.jpg" alt="IMG_20111129_180818"  class='aligncenter'/></a></p>
+<p>マッシュアップサイト作りが終わった後は皆で立食。<br />
+あまり学生と話す機会もないので新鮮で楽しかったです！</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6428950155" target='_blank'><img src="https://farm8.staticflickr.com/7021/6428950155_5112fb1cfa.jpg" alt="IMG_20111129_200430"  class='aligncenter'/></a></p>
+<p>会場の撤収も終わった後にスタッフと反省会兼打ち上げで渋谷の居酒屋に行ったわけですが、飲み過ぎて気が付いたら<strong>秋葉原のネカフェ（和み）</strong>で寝てました。</p>
+<p>自宅のある豪徳寺にも普通に帰れる時間帯だったのですが、酔い過ぎててこの辺の記憶があまり無く、何故か秋葉原に移動したようです。普段お酒の量はセーブしてて、最近は酔い過ぎるということはなかったのですが、寝不足も相まってやばかったようです。</p>
+<p>あと、財布の中がすごく散らかっていてお札が普段入れない箇所に収まっていたり、よくわからない状態になっていました。。。</p>
+<p>皆さんもお酒には気を付けましょう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6581/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7146/6428950263_06b511caea.jpg</image>
+	</item>
+		<item>
+		<title>ngi groupに入社しました</title>
+		<link>/archives/4797/</link>
+					<comments>/archives/4797/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 04 Oct 2010 15:02:06 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ngi group]]></category>
+		<category><![CDATA[上海]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4797</guid>
+
+					<description><![CDATA[今月の1日からngi group株式会社に入社しました。 ngi groupの開発拠点は上海にあり、当然私も上海勤務になります。既に上海に来て4日が経過しようとしています。 福岡のオフィスで一人（本当 ... <a href="/archives/4797/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今月の1日から<a href="https://www.ngigroup.com/jp/index.html">ngi group株式会社</a>に入社しました。</p>
+<p>ngi groupの開発拠点は上海にあり、当然私も上海勤務になります。既に上海に来て4日が経過しようとしています。</p>
+<p>福岡のオフィスで一人（本当に一人）細々とプログラミングしていた自分がいきなり上海に出てきたきっかけはTwitterで、以前、Milestoneの件でも書いた@<a href="https://twitter.com/jiangbo">Jiangbo</a>さんからダイレクトメッセージをいただき、何度か食事をしているうちにいつの間にか拉致られていましたw</p>
+<p>拉致られたというのは冗談ですが、ngi groupのビジョンには強く共感するものがあったのでお受けすることにしました。今回、自分が社会人1年生の頃からずっとではないですが、期間を空けながらも一緒に仕事をしている@fm021さんとも一緒に仕事をすることになります。既に上海での生活支援で色々お世話になっていますが、これからもまたお世話になると思いますw</p>
+<p>今は、<a href="https://www.socialgraphmarketing.net/">ngi social connect</a>を中心に活動しており、自分がngi groupに入社したのも<a href="https://twitter.com/">Twitter</a>というソーシャルサービスのおかげだと思っているので、自分もネット上での人と人との繋がりをより強くできるようなサービス作りに注力していきたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4797/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

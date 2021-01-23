@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>norikra &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/norikra/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:47:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>norikra + fluentd + mongodbで遊んだ</title>
+		<link>/archives/7651/</link>
+					<comments>/archives/7651/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 24 Mar 2014 05:24:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[fluentd]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[norikra]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7651</guid>
+
+					<description><![CDATA[去年からずっと導入したい導入したいと思っているnorikra。未だに導入できていないわけですが、norikraがどういったものなのか感覚だけでも社内の人たちに分かってもらえればと思い、社内勉強会でデモ ... <a href="/archives/7651/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>去年からずっと導入したい導入したいと思っているnorikra。未だに導入できていないわけですが、norikraがどういったものなのか感覚だけでも社内の人たちに分かってもらえればと思い、社内勉強会でデモを行った時の環境をvagrantで残したのでメモしておきたいと思います。</p>
+<p><span id="more-7651"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://github.com/fukata/vagrant-norikra-fluentd-mongodb" title="fukata/vagrant-norikra-fluentd-mongodb">fukata/vagrant-norikra-fluentd-mongodb</a></p>
+<p>fluentd経由でnorikraに送られたログをストリームで処理してくれている感じが分かるかと思います。</p>
+<p>何かで遊んだ環境をvagrantで残しておけば環境構築ログも残せるしすぐ手元で動かせるしで便利なので次回からもvagrantで残していこうと思った。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7651/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

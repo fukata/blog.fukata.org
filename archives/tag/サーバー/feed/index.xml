@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>サーバー &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:43 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ルミナスのラックを注文しました</title>
+		<link>/archives/1191/</link>
+					<comments>/archives/1191/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 13 May 2009 17:48:14 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[サーバ]]></category>
+		<category><![CDATA[サーバー]]></category>
+		<category><![CDATA[ラック]]></category>
+		<category><![CDATA[ルミナス]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1191</guid>
+
+					<description><![CDATA[現在、新しいサーバを置く場所がないので、ラックを新たに購入しました。 ルミナスのメタルラックです。 結構ラック業界（？）では有名な会社らしく、作りも丈夫らしいです。 一応買ったのは、下記の商品です。  ... <a href="/archives/1191/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、新しいサーバを置く場所がないので、ラックを新たに購入しました。</p>
+<p>ルミナスのメタルラックです。</p>
+<p>結構ラック業界（？）では有名な会社らしく、作りも丈夫らしいです。</p>
+<p>一応買ったのは、下記の商品です。<br />
+<a href="https://www.atmarket.jp/shop/shopdetail.html?brandcode=023001000018&#038;search=%A5%DB%A1%BC%A5%E0%A5%E9%A5%C3%A5%AF+4%C3%CA90&#038;sort=">https://www.atmarket.jp/shop/shopdetail.html?brandcode=023001000018&#038;search=%A5%DB%A1%BC%A5%E0%A5%E9%A5%C3%A5%AF+4%C3%CA90&#038;sort=</a></p>
+<p>ただ、奥行きが46cmしかないので、多分サーバを正面向けて置くとはみ出しそうな感じ。まぁ、横にすればいいんですけど。というか、斜め？</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B000BHHQ2W&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1191/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>js-CI_Validation &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/js-ci_validation/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CodeIgniterライクなForm ValidationをJavaScriptで実装してみた</title>
+		<link>/archives/6110/</link>
+					<comments>/archives/6110/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 12 Sep 2011 12:03:18 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[js-CI_Validation]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6110</guid>
+
+					<description><![CDATA[jquery.validate.jsなど既にバリデーション周りはあるのですが、設定したらバーンっとライブラリ側でやってくれる的な物が多かったので、 CodeIgniterのForm_validatio ... <a href="/archives/6110/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://bassistance.de/jquery-plugins/jquery-plugin-validation/">jquery.validate.js</a>など既にバリデーション周りはあるのですが、設定したらバーンっとライブラリ側でやってくれる的な物が多かったので、<br />
+CodeIgniterの<a href="https://codeigniter.jp/user_guide_ja/libraries/form_validation.html">Form_validation</a>のゆるさを持ったバリデーションライブラリがあれば良いなぁと思って、実装してみました。</p>
+<p><a href="https://github.com/fukata/js-CI_Validation">fukata/js-CI_Validation &#8211; GitHub</a></p>
+<p>使い方に関しても上記のページに載せていますので、そちらを参照ください。</p>
+<p>基本的にCIのForm_validationと同じように利用することが出来るかと思います。悩んだのが、検証用の入力値をどのタイミングで取得しようかということで、現在はset_rules時に第2引数として渡しています。</p>
+<p>set_rulesの時に設定出来たほうが便利かなと思ったのですが、phpと違って同じvalidationインスタンスを使い回す機会も多いでしょうから、別のタイミングで設定できても良いのかなと思っています。例えば、チェーンメソッド形式にして、下記のようにするとか。</p>
+<pre lang="javascript">
+validator.set_rules('email', ...).set_value('email', 'input value');
+</pre>
+<p>もしくは、set_rulesに対するチェーンメソッドの場合、項目は指定しなくて良いようにするなど。この場合、項目の指定が必要なvalidator.set_valueメソッドを作る必要もありそうですね。</p>
+<pre lang="javascript">
+validator.set_rules('email', ...).set_value('input value');
+</pre>
+<p>set_rulesに関して、CIとほぼ同じ引数で済むので、チェーンメソッドの方が綺麗だなぁ。</p>
+<p>ということで、まだまだ開発中ですが、少しずつ通常のバリデーターなど追加していきたいと思います。</p>
+<p>&#8230;これ、別にjQueryのプラグインじゃなくてもよくね？</p>
+<p><strong>追記： 2011-09-12 22:25</strong><br />
+jQueryに依存しない形に変更しました。<br />
+また、上記で説明していたように、チェインメソッドで入力値を設定できるようにしました。<br />
+詳しくはリポジトリのREADME.mdを参照下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6110/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

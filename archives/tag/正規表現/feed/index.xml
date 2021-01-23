@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>正規表現 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[JC]コメント投稿機能追加とJSでtrimメソッド</title>
+		<link>/archives/1424/</link>
+					<comments>/archives/1424/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 22 Jul 2009 17:43:28 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[正規表現]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1424</guid>
+
+					<description><![CDATA[やっとコメント投稿機能を追加しました。 そして、その際、空白コメントや、改行しかないコメントの場合にJSでエラーを出すようにしてみたのですが、その際作成したtrimメソッドのコードを公開したいと思いま ... <a href="/archives/1424/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5091/5475643361_918a47fe12_m.jpg" target="_blank" title="ArticleDetail_1248284312768"><img loading="lazy" src="https://farm6.static.flickr.com/5091/5475643361_918a47fe12_m.jpg" alt="ArticleDetail_1248284312768" width="200" height="154" class="attachment wp-att-1425 alignleft" /></a>やっとコメント投稿機能を追加しました。</p>
+<p>そして、その際、空白コメントや、改行しかないコメントの場合にJSでエラーを出すようにしてみたのですが、その際作成したtrimメソッドのコードを公開したいと思います。まぁ、と言っても簡単な正規表現を繰り替えしているだけなんですけどね＾＾；</p>
+<p>正規表現を考えるのがだるかったので、パワーコードになっているので利用する際は注意してください。</p>
+<p>■string.js</p>
+<pre lang="javascript" line="1">
+String.prototype.trim = function() {
+	var _str = this;
+	var length = 0;
+	do {
+		length = _str.length;
+		// 先頭、末尾の半角空白文字の削除
+		_str = _str.replace(/^[ ]+|[ ]+$/g, '');
+		// 先頭、末尾の全角空白文字の削除
+		_str = _str.replace(/^[　]+|[　]+$/g, '');
+		// 先頭、末尾の改行コードの削除
+		_str = _str.replace(/^[\r\n]+|[\r\n]+$/g, '');
+	} while (length!=_str.length)
+	
+	return _str;
+}
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1424/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

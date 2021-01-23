@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Fleet &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/fleet/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ring-reload-modifiedで自動リロード</title>
+		<link>/archives/6383/</link>
+					<comments>/archives/6383/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2011 17:01:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<category><![CDATA[ring-reload-modified]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6383</guid>
+
+					<description><![CDATA[weavejester/ring-reload-modified &#8211; GitHub WEB開発を行っていると編集した内容をすぐに確認したいですよね。以前までは、編集してはサーバプログラムを ... <a href="/archives/6383/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/weavejester/ring-reload-modified">weavejester/ring-reload-modified &#8211; GitHub</a></p>
+<p>WEB開発を行っていると編集した内容をすぐに確認したいですよね。以前までは、編集してはサーバプログラムを一度停止して再度起動するということをやっており、毎回手動で再起動処理を行うのが非常に面倒で、さらには再起動を忘れ、動作確認時に「あれ？」みたいな事がたまにあったので、解決策を探しているとRingのMiddlewareとして上記がありました。</p>
+<p>これは、指定したソースディレクトリのClojureファイルが修正されたらリロードしてくれるというものです。設定は簡単で、こんな感じにします。</p>
+<p>ただ、一つ難点があり、Fleetのテンプレートファイルのみを編集した場合には変更を検出してくれず、正常に変更を表示できません。まだ、ring-reload-modifiedのソースを見れていないので、もしかすると簡単に対応できるかもしれません。</p>
+<p>とりあえず、設定方法は下記のようになります。</p>
+<p><span id="more-6383"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>設定方法</h2>
+<p>project.cljの:dependenciesに<code>[ring-reload-modified "0.1.1"]</code>を追加後、下記の設定を行えば自動リロードするようになります。</p>
+<h3>変更前</h3>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]
+            [compojure.handler :as handler]))
+
+;; ... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty (handler/site app) {:port port})))
+</pre>
+<h3>変更後</h3>
+<pre lang="clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
++       ring.middleware.reload-modified
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]
+            [compojure.handler :as handler]))
+
+;; ... 省略 ...
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
++ ;; AutoReload Configuration
++ (def app (handler/site app))
++ (def handlerApp 
++     (wrap-reload-modified #'app ["src"]))
+
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+-     (run-jetty (handler/site app) {:port port})))
++     (run-jetty handlerApp {:port port})))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6383/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Compojure + Fleetで文字化け</title>
+		<link>/archives/6297/</link>
+					<comments>/archives/6297/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 16 Oct 2011 05:31:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6297</guid>
+
+					<description><![CDATA[久しぶりにCompojure + Fleetな環境を触っていて何気なく日本語が記載されたテンプレートを表示してみようかと思い、早速テンプレートに日本語を追加して表示してみたところ、「??」という風に見 ... <a href="/archives/6297/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>久しぶりにCompojure + Fleetな環境を触っていて何気なく日本語が記載されたテンプレートを表示してみようかと思い、早速テンプレートに日本語を追加して表示してみたところ、「??」という風に見事に文字化けが発生してしまいました。</p>
+<p><span id="more-6297"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>その時のコードはこんな感じです。</p>
+<p><strong>core.clj</strong></p>
+<pre lang="Clojure">
+(ns compojuretest.core
+  (:use compojure.core
+        compojure.response
+        ring.adapter.jetty
+        [ring.util.response :only (response content-type)]
+        fleet)
+  (:require [compojure.route :as route]))
+
+;; =============================================
+;; Fleet Setup 
+;; =============================================
+(def filters [ 
+  "js" :str
+  "html" :xml
+  "fleet" :bypass])
+
+(fleet-ns tpl "templates" filters)
+
+(extend-protocol Renderable
+  fleet.util.CljString
+  (render [this _] (response (.toString this))))
+
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app 
+  (GET "/" [] (tpl/index {})))
+
+;; =============================================
+;; Run Server
+;; =============================================
+(defn -main []
+  (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
+    (run-jetty app {:port port})))
+</pre>
+<p><strong>index.html.fleet</strong></p>
+<pre lang="HTML">
+< !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>テスト</title>
+</head>
+<body>
+<h1>テスト</h1>
+</body>
+</html>       
+</pre>
+<p>何がおかしいのか調べていて、通常のサイトとのレスポンスヘッダーを見比べてみると、Content-Typeのヘッダーがありませんでした。そこで、下記のようにしてあげると正常にContent-Typeヘッダーも生成されるようになり、文字化けが解消されました。</p>
+<pre lang="Clojure">
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] {:headers {"Content-Type" "text/html; charset=utf8"}
+               :body (str (tpl/index {}))}))
+</pre>
+<p>毎回headersを書くのが怠いという方は、下記だけでも大丈夫のようです。まだ、Compojureの中身を見ていないので、変なやり方かもしれませんが。</p>
+<pre lang="Clojure">
+;; =============================================
+;; Routes
+;; =============================================
+(defroutes app
+  (GET "/" [] (str (tpl/index {}))))
+</pre>
+<p>上記の<strong>Fleet Setup</strong>で行っているextend-protocol部分でうまいこと纏め上げられるんじゃないかとも思いますがとりあえず、ベタであろうやり方を書いてみました。</p>
+<p><strong>追記：2011-11-17 10:31</strong><br />
+Compojureのresponse.cljを見たところ、Stringの場合はContent-Typeを指定しているのでstr関数を挟む場合に手動で指定する必要はないようです。</p>
+<p><strong>src/compojure/response.clj</strong></p>
+<pre lang="Clojure">
+(extend-protocol Renderable
+  nil
+  (render [_ _] nil)   
+  String
+  (render [body _]
+    (-> (response body)
+        (content-type "text/html; charset=utf-8")))
+  APersistentMap
+  (render [resp-map _]
+    (merge (response "") resp-map))
+  IFn
+  (render [func request]
+    (render (func request) request))
+  IDeref  
+  (render [ref request]
+    (render (deref ref) request)) 
+  File      
+  (render [file _] (response file))
+  ISeq
+  (render [coll _] (-> (response coll)
+                       (content-type "text/html; charset=utf-8")))
+  InputStream
+  (render [stream _] (response stream))
+  URL
+  (render [url _]
+    (if (= "file" (.getProtocol url))
+      (response (io/as-file url))
+      (response (io/input-stream url)))))
+</pre>
+<p><strong>追記：2011-11-17 10:39</strong><br />
+extend-protocolを下記のように編集することで、str関数を挟まなくても正常に表示されるようになりました。</p>
+<pre lang="Clojure">
+(extend-protocol Renderable
+  fleet.util.CljString
+  (render [this _] (-> (response (.toString this))
+                       (content-type "text/html; charset=utf-8"))))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6297/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Compojure + CongoMongo + Fleetを使ってみる</title>
+		<link>/archives/6161/</link>
+					<comments>/archives/6161/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 01 Oct 2011 06:42:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Compojure]]></category>
+		<category><![CDATA[CongoMongo]]></category>
+		<category><![CDATA[Fleet]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6161</guid>
+
+					<description><![CDATA[今回はDBにMongoDBを使うということで、検索してみたところ、CongoMongoが使いやすそうだったので、少し試しに使ってみたところ、今回の要件はそこまで複雑でないので採用ということに。 参考に ... <a href="/archives/6161/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今回はDBにMongoDBを使うということで、検索してみたところ、CongoMongoが使いやすそうだったので、少し試しに使ってみたところ、今回の要件はそこまで複雑でないので採用ということに。</p>
+<p>参考にしたのはこの辺です。</p>
+<ul>
+<li><a href="https://d.hatena.ne.jp/asakawajunya/20101218/1292667201">ClojureでMongoDBにアクセスしてみる &#8211; asakawajunyaの日記</a></li>
+<li><a href="https://thechangelog.com/post/344418038/congomongo-use-mongodb-from-clojure">congomongo: Use MongoDB from Clojure &#8211; The Changelog &#8211; Open Source moves fast. Keep up.</a></li>
+<li><a href="https://github.com/aboekhoff/congomongo">aboekhoff/congomongo &#8211; GitHub</a></li>
+</ul>
+<p>また、テンプレートエンジンについては、前回は<a href="https://github.com/cgrand/enlive">Enlive</a>を利用しようかと思ったんですが、実際に使ってみたところEnliveはスクレイピングしたHTMLからデータを抽出するのに適していて、今回のように既にテンプレート、データは用意されていてコントローラからテンプレート内で利用する変数のハッシュを渡して後はテンプレート側で適当に処理してくれるような軽量なものが望ましかったので、今回は諦めました。</p>
+<p>そこで、もう少し検索したところFleetというのがあり、使ってみたところ上記の使い方が出来そうだったのでこっちを使ってみることにしました。</p>
+<p>基本的な使い方は公式のページに書いています。</p>
+<p><a href="https://github.com/Flamefork/fleet">Flamefork/fleet &#8211; GitHub</a></p>
+<p>また、今回はCompojureと組み合わせたところ、現バージョンではエラーになるので、下記のページを参考に修正すると正常に動作するようになりました。</p>
+<p><a href="https://www.nofluffjuststuff.com/blog/michael_nygard/2011/01/glue_fleet_and_compojure_together_using_protocols">Glue Fleet and Compojure Together Using Protocols &#8211; No Fluff Just Stuff</a></p>
+<p>ということで、今のところCompojure + CongoMongo + Fleetで開発してみたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6161/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

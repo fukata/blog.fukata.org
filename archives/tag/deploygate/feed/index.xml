@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Deploygate &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/deploygate/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:03:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Pull Requestをmergeする前にテストアプリを実機で確認する</title>
+		<link>/archives/7903/</link>
+					<comments>/archives/7903/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 18 Feb 2016 08:48:59 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CircleCI]]></category>
+		<category><![CDATA[Deploygate]]></category>
+		<category><![CDATA[Pull Request]]></category>
+		<guid isPermaLink="false">https://fukata.org/?p=7903</guid>
+
+					<description><![CDATA[Pull Request(以下、PR)をmergeする前に実機で動作確認したかったのでCircleCIの設定と戯れた時のメモ。 広告 やりたいこと Pull Requestをmergeする前にテストア ... <a href="/archives/7903/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7903/"><img src="https://farm2.staticflickr.com/1494/24711075612_5204d87f9d_c.jpg" alt="P2023594" class="aligncenter"/></a></p>
+<p>Pull Request(以下、PR)をmergeする前に実機で動作確認したかったのでCircleCIの設定と戯れた時のメモ。</p>
+<p><span id="more-7903"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>やりたいこと</h2>
+<p>Pull Requestをmergeする前にテストアプリを実機で確認する。</p>
+<h2>branch名</h2>
+<p>BTSにJIRAを使っており、branch名にチケットID(<strong>XXX-[0-9]+</strong>)を採用している。</p>
+<h2>Android</h2>
+<p>現在は、Staging環境で動作確認をしているのでbuild.gradleのbuildType=Stagingのsuffixを環境変数にCIRCLE_BRANCHがあればそれを、なければデフォルトの.stagingを使用する。</p>
+<p><script src="https://gist.github.com/fukata/8940ab87aa3fe9311891.js?file=build.gradle"></script></p>
+<h2>iOS</h2>
+<p>shenzhenを使っているのでシェルスクリプトでbuild.gradle内で行っていたようなことをやればいける。</p>
+<h2>ciecle.yml</h2>
+<p>branch名がXXX-[0-9]+であればDeploygateにアップしている。</p>
+<p><script src="https://gist.github.com/fukata/8940ab87aa3fe9311891.js?file=circle.yml"></script></p>
+<h2>改善したい点</h2>
+<p>これで、PR時に実機で確認できるようになったがPRをmergeした時(またはbranchを削除した時)にDeploygate側からは削除されないので、別途Deploygate側からも削除しないといけないという点。アプリを削除するAPIがないのでAPIによる連携は今のところは出来無さそう。</p>
+<p>仮にテストアプリ配布サービスをOSSのものを使用すればそういうAPIがあったりするんだろうか。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7903/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1494/24711075612_5204d87f9d.jpg</image>
+	</item>
+	</channel>
+</rss>

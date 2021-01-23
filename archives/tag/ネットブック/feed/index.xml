@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ネットブック &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%8D%E3%83%83%E3%83%88%E3%83%96%E3%83%83%E3%82%AF/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:43 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>イー・モバイルを再契約しました</title>
+		<link>/archives/2017/</link>
+					<comments>/archives/2017/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 31 Dec 2009 09:04:04 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[emobile]]></category>
+		<category><![CDATA[ideapad s10-2]]></category>
+		<category><![CDATA[lenovo]]></category>
+		<category><![CDATA[windows 7]]></category>
+		<category><![CDATA[ネットブック]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2017</guid>
+
+					<description><![CDATA[東京にいた頃に契約したイー・モバイルですが、気づいたら2年経過していたので、再契約しました。なんで、再契約かというと、イー・モバイルには機種変と言うのがなく、データカードの本体を新しくしようとすると一 ... <a href="/archives/2017/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>東京にいた頃に契約したイー・モバイルですが、気づいたら2年経過していたので、再契約しました。なんで、再契約かというと、イー・モバイルには機種変と言うのがなく、データカードの本体を新しくしようとすると一度解約して、再度新規契約する必要があります。ちなみに、個人で同時に契約できるのは2回線までらしいです。</p>
+<p>前回は、<a href="https://emobile.jp/products/hw/d02hw/">D02HW</a>というのを使っていたのですが、今回は<a href="https://emobile.jp/products/hw/d22hw/">D22HW</a>になりました。D02HWは大きいのと固定させるには別途アダプタを買わないといけなかったので、今回は小型化されましたし、USBメモリみたいな感じなので、付けたまま移動するのにも楽そうです。</p>
+<p>肝心の転送スピードは前回と変わってないそうです。まぁ、自分が住んでいるところは田舎なので、そんなにスピードは出ないでしょうけど。</p>
+<p>また、現在イー・モバイルを新規契約するとパソコンを3万円から4万円ほど値引いてくれるサービスを行っているお店が結構あります。どうせ、契約するなら便乗しようと思い、どこがサービスが充実しているのか調べてみるとビックカメラが値引き対応機種も豊富でよさげだったので、ビックカメラにしました。</p>
+<p>最初は、ヨドバシカメラで契約しようかと思っていたのですが、自分が欲しかったLenovo Ideapad S10-2 2957-KKJという機種がありませんでした。</p>
+<p>Lenovo Ideapad S10-2 2957-KKJは、ネットブックには珍しく解像度が高く1280&#215;720あり、さらにメモリも最大２GBまで対応しています。あとは、Lenovo製なので、パーツを取り外したりが楽です。OSはWindows 7 Starterというエディションのもので、ネットブック専用OSということらしいです。Starterの制限として認識するメモリ上限が1GBということらしいです。Starterお制限について詳しくは下記の記事を参照して下さい。</p>
+<p><a href="https://ascii.jp/elem/000/000/456/456926/">ネットブック専用？ Windows 7 Starterは何が違う</a></p>
+<p>ideapad S10-2を使ってみた感じですが、自分の指が一般的に比べ大きいというのもありますが、キーボードが小さくて打ちにくいです。あとは、全体的にもっさりしてる感じがあります。</p>
+<p>パソコンを滅多に使わなく、インターネット程度しかしないのであれば合ってるんじゃないかと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2017/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

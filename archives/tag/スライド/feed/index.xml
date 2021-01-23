@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>スライド &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 14 Aug 2017 05:55:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>プログラマ向けLT資料管理方法</title>
+		<link>/archives/6434/</link>
+					<comments>/archives/6434/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 03 Nov 2011 22:00:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Dropbox]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[vim]]></category>
+		<category><![CDATA[スライド]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6434</guid>
+
+					<description><![CDATA[現在務めている会社で社内勉強会があるらしく、毎回数人LTをすることになったのですが、今までLTをやったことなど無かったので、とりあえず資料の管理法法から考えてみました。 パソコン間共有 資料を作成して ... <a href="/archives/6434/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在務めている会社で社内勉強会があるらしく、毎回数人LTをすることになったのですが、今までLTをやったことなど無かったので、とりあえず資料の管理法法から考えてみました。</p>
+<h3>パソコン間共有</h3>
+<p>資料を作成している間にネカフェや別のパソコンでもふと思い付いた時に資料を書けた方が良いですよね。ということで資料は全てDropboxに置いておきます。</p>
+<p>個人的にはサブ機など持っておらず、常に持ち歩いている（持ち歩いていない時の方が少ない）ので、こういう場面に遭遇することは滅多に無いですが。</p>
+<h3>履歴管理</h3>
+<p>以前書いた文章の方が良いと思ったら、すぐに昔の文章を見たいですよね。あと、diffなんかもしたいですよね。</p>
+<p>また、複数の文章を試し書きし、人にどちらが良いか見てもらいたい時もあったりするだろうと思い、履歴管理にはgitを使ってます。</p>
+<p>ローカルでbranch切ったりcommit(ストレス無く)行えたりするのは便利。</p>
+<h3>エディタ</h3>
+<p>vim</p>
+<h3>プレゼンテーションツール</h3>
+<p><a href="https://github.com/fukata/Presentation">オレオレプレゼンテーションツール</a></p>
+<h3>即時反映</h3>
+<p>作ったらすぐに反映して確認したいので、.vimrcに下記を追加して保存時に自動的に必要なファイルが生成されるようにしてます。</p>
+<pre lang="bash">
+" Presentation
+autocmd BufWritePost main.txt silent exec "!presen neet"
+</pre>
+<p>皆さんやってますよね？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6434/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

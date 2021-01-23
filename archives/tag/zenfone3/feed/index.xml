@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ZenFone3 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/zenfone3/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 22 Mar 2018 14:43:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ZenFone 3 (ZE520KL)を手動でAndroid Oreo(8.0)までアップグレードした</title>
+		<link>/archives/9547/</link>
+					<comments>/archives/9547/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Mar 2018 09:37:16 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ZenFone]]></category>
+		<category><![CDATA[ZenFone3]]></category>
+		<category><![CDATA[スマホ]]></category>
+		<guid isPermaLink="false">/?p=9547</guid>
+
+					<description><![CDATA[FOTA通知が来なかったので手動でファームウェアのアップグレードをしたらNougatまでしか適用できないと思っていたけどOreoにできてしまった。 広告 初期状態 届いた直後の状態。 更新方法 まずは ... <a href="/archives/9547/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/40873908682" target="_blank" title="ZenFone3"><img loading="lazy" src="https://farm5.staticflickr.com/4777/40873908682_d8e583f25d_c.jpg" alt="ZenFone3" class="aligncenter" width="800" height="600"/></a></p>
+<p>FOTA通知が来なかったので手動でファームウェアのアップグレードをしたらNougatまでしか適用できないと思っていたけどOreoにできてしまった。</p>
+<p><span id="more-9547"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>初期状態</h2>
+<p>届いた直後の状態。<br />
+<a href="https://www.flickr.com/photos/fukata/40893402112" target="_blank" title="Screenshot_20180320-150813"><img loading="lazy" src="https://farm1.staticflickr.com/816/40893402112_101dce2940_c.jpg" alt="Screenshot_20180320-150813" class="aligncenter" width="450" height="800"/></a></p>
+<h2>更新方法</h2>
+<p>まずは、ファームウェアの適用方法。後述するファームウェアを配布先からDLし、USB経由で端末にコピーすれば後は端末側の通知欄にシステムアップデートが表示されているのでそれに従って行うだけ。注意点としてはファームウェアを端末にコピーした後にUSBケーブルを抜かないと通知欄に表示されない。<br />
+<a href="https://www.asus.com/jp/support/faq/1009748" title="Phone のファームウェアのアップデート方法に関して | サポート 公式 | ASUS 日本" target="_blank">Phone のファームウェアのアップデート方法に関して | サポート 公式 | ASUS 日本</a></p>
+<p>問題のファームウェアの配布先。対象のファームウェアをPCにDLする。日本国内版を使っている人はJPが付いているものをそうでない人はWWが付いているものを使うと良いと思われる。<br />
+<a href="https://www.asus.com/jp/Phone/ZenFone-3-ZE520KL/HelpDesk_BIOS/" title="ZenFone 3 (ZE520KL) BIOS &#038; FIRMWARE | スマートフォン | ASUS 日本" target="_blank">ZenFone 3 (ZE520KL) BIOS &amp; FIRMWARE | スマートフォン | ASUS 日本</a></p>
+<p>自分のZenFone3は初期のファームウェアだったようで、いきなり最新版を適用しようとすると一定のファームウェアのバージョン以上ではないとインストールできないと言われエラーになった。そのエラーメッセージに記載されているファームウェアのバージョン情報を元に対象のファームウェアをDLし、コピーしインストールを繰り返せば最新版が適用できるようになる。</p>
+<h2>Oreo!!</h2>
+<p>Android 8までアップグレードされているのが確認できる。<br />
+<a href="https://www.flickr.com/photos/fukata/40041193635" target="_blank" title="Screenshot_20180321-154847"><img loading="lazy" src="https://farm1.staticflickr.com/791/40041193635_48960dabf9_c.jpg" alt="Screenshot_20180321-154847" class="aligncenter" width="450" height="800"/></a></p>
+<p>ビルドバージョン等。<br />
+<a href="https://www.flickr.com/photos/fukata/40041193495" target="_blank" title="Screenshot_20180321-160446"><img loading="lazy" src="https://farm1.staticflickr.com/803/40041193495_1b6f257bb8_c.jpg" alt="Screenshot_20180321-160446" class="aligncenter" width="450" height="800"/></a></p>
+<h2>まとめ</h2>
+<p>ファームウェアが古すぎたためかFOTAの通知がなぜか来なかったのかので手動でアップデートを行ったのが幸いしNougatまでしか上げられないと思っていたのにOreoまで上げられてよかった。</p>
+<p>6.0.1 -> 8.0にアップグレードした感想としてはZenUIが更に見やすくなったのと動作が軽くなったような気がする。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9547/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4777/40873908682_d8e583f25d.jpg</image>
+	</item>
+		<item>
+		<title>ZenFone 3 (ZE520KL)の新品を約1.6万円でゲットした</title>
+		<link>/archives/9540/</link>
+					<comments>/archives/9540/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Mar 2018 09:37:06 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ZenFone]]></category>
+		<category><![CDATA[ZenFone3]]></category>
+		<category><![CDATA[スマホ]]></category>
+		<guid isPermaLink="false">/?p=9540</guid>
+
+					<description><![CDATA[現在、メインのスマホにNexus6Pを使っていて、ガジェット欲が出てサブ機が欲しくなったのでZenfone3を探していたら1.6万円のやつを見つけたのでポチった。 広告 箱。しっかりしていて高級感があ ... <a href="/archives/9540/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/26043412717" target="_blank" title="ZenFone3"><img loading="lazy" src="https://farm1.staticflickr.com/811/26043412717_ec898edbd8_c.jpg" alt="ZenFone3" class="aligncenter" width="800" height="600"/></a></p>
+<p>現在、メインのスマホにNexus6Pを使っていて、ガジェット欲が出てサブ機が欲しくなったのでZenfone3を探していたら1.6万円のやつを見つけたのでポチった。</p>
+<p><span id="more-9540"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>箱。しっかりしていて高級感がある。<br />
+<a href="https://www.flickr.com/photos/fukata/26043412717" target="_blank" title="ZenFone3"><img loading="lazy" src="https://farm1.staticflickr.com/811/26043412717_ec898edbd8_c.jpg" alt="ZenFone3" class="aligncenter" width="800" height="600"/></a></p>
+<p>iPhone6のような感じ。<br />
+<a href="https://www.flickr.com/photos/fukata/40873908682" target="_blank" title="ZenFone3"><img loading="lazy" src="https://farm5.staticflickr.com/4777/40873908682_d8e583f25d_c.jpg" alt="ZenFone3" class="aligncenter" width="800" height="600"/></a></p>
+<p>背面もガラスになっている。あと、カメラが出っ張っているのもiPhoneと同じ。出っ張らないようにしてくれるとありがたいんだけど。。。<br />
+<a href="https://www.flickr.com/photos/fukata/26043410717" target="_blank" title="ZenFone3"><img loading="lazy" src="https://farm1.staticflickr.com/809/26043410717_31e216860f_c.jpg" alt="ZenFone3" class="aligncenter" width="800" height="600"/></a></p>
+<p>SIMトレイ。SIMを挿す予定がなく、調べてなかったけどどうやらデュアルSIMらしい。しかしこのSIMトレイ、作りが安っぽい。まぁ、本体が1.6万円なので文句は言えない。microSDカードによる容量拡張もできるのは地味に嬉しいかもしれない。多分使わないけど。<br />
+<a href="https://www.flickr.com/photos/fukata/39106349930" target="_blank" title="ZenFone3"><img loading="lazy" src="https://farm1.staticflickr.com/811/39106349930_a8c7b61d2d_c.jpg" alt="ZenFone3" class="aligncenter" width="800" height="600"/></a></p>
+<p>その他付属品、説明書、カナル型イヤホン、イヤーキャップ、USB Type-Cケーブル、USB Type-Cとコンセントのアダプタ。ちょうどテキトーなイヤホンが欲しかったのでカナル型のイヤホンが付いてきたのは嬉しかった。<br />
+<a href="https://www.flickr.com/photos/fukata/39106350070" target="_blank" title="ZenFone3"><img loading="lazy" src="https://farm1.staticflickr.com/811/39106350070_a67bd02107_c.jpg" alt="ZenFone3" class="aligncenter" width="800" height="600"/></a></p>
+<h2>まとめ</h2>
+<p>ZenFone3のandroidのバージョンが6.0.1だったのでNougat(andorid 7)までアップグレードしようとしているけど、オンラインアップデートが来ないので手動でのアップグレードを試みてる。それはまた後日書きたいと思う。</p>
+<p>まだ数日しか使っていないけど、動作的にはもっさりしたところもなく今のところ好調。カメラの画質はそこまで良くないと言った感じ。それでも光が十分にある環境であればそれなりに観れる写真が撮れる。</p>
+<p>今回、タイ版lazadaで手に入れたZenFone3はキャンペーンだったとはいえ、これが約1.6万円で手に入れられたのは良かった。他の販売業者を調べてみても2.5万円前後なところが多かった。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9540/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/811/26043412717_ec898edbd8.jpg</image>
+	</item>
+	</channel>
+</rss>

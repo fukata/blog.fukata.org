@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ロリポップ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%AD%E3%83%AA%E3%83%9D%E3%83%83%E3%83%97/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ロリポップが新構成サーバ移設でPHPエラー</title>
+		<link>/archives/4536/</link>
+					<comments>/archives/4536/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 13 Jun 2010 12:07:47 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ロリポップ]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4536</guid>
+
+					<description><![CDATA[https://lolipop.jp/newsletter/2010/20100527/ 何やらロリポップがサーバ移設を行なったのが原因なのか、以前作成したPHPの注文フォームが動かなくなったので修正 ... <a href="/archives/4536/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://lolipop.jp/newsletter/2010/20100527/">https://lolipop.jp/newsletter/2010/20100527/</a></p>
+<p>何やらロリポップがサーバ移設を行なったのが原因なのか、以前作成したPHPの注文フォームが動かなくなったので修正して欲しいという依頼がありました。</p>
+<p>挙動から言うと入力画面でセッションにあるクラスのインスタンスを格納して各画面で利用しているのですが、初期表示以降、画面を描画しようとするとセッション内に入れたはずのインスタンスがNULLになっていて落ちていました。</p>
+<p>php.iniの設定がユーザの管理画面から行なえるようになったらしいので、その辺が怪しいんじゃないかと見てみるとsession.auto_start=1という設定が。</p>
+<p><a href="https://manual.xwd.jp/ref.session.html">セッション処理関数(session)</a></p>
+<p>クラス定義をロードする前にセッションが開始され、内部に保持していたクラスがうまくデシリアライズされないのが原因らしいです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4536/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

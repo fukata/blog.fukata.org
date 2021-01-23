@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Memcache &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/memcache/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ClojureでMemcachedを使う「clj-xmemcached」</title>
+		<link>/archives/6518/</link>
+					<comments>/archives/6518/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 23 Nov 2011 10:40:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Memcache]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6518</guid>
+
+					<description><![CDATA[killme2008/clj-xmemcached &#8211; GitHub そろそろキャッシュ化しないとなぁと考えてclojars.orgで検索してみたところ、上記のライブラリが非常にシンプルで ... <a href="/archives/6518/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/killme2008/clj-xmemcached">killme2008/clj-xmemcached &#8211; GitHub</a></p>
+<p>そろそろキャッシュ化しないとなぁと考えてclojars.orgで検索してみたところ、上記のライブラリが非常にシンプルで使いやすそうだったので、使ってみました。</p>
+<p>使い方に関してもGithubのページを見れば分かるのですが、その通りに設定するとLogger周りでエラーになるので、それの回避方法だけ書いておきます。</p>
+<p>log4j.propetiesの設定を追加していない場合、警告が表示されますが、classpath上にlog4j.propetiesを置けば大丈夫です。</p>
+<p>project.cljに下記を追加します。</p>
+<pre lang="clojure">
+[clj-xmemcached "0.1.1"]
+[org.slf4j/slf4j-log4j12 "1.5.6"]
+[log4j/log4j "1.2.13"]
+</pre>
+<p>以上です。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6518/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

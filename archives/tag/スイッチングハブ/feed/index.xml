@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>スイッチングハブ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0%E3%83%8F%E3%83%96/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>拡張バッテリーとスイッチングハブを購入してみた</title>
+		<link>/archives/1168/</link>
+					<comments>/archives/1168/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 10 May 2009 04:42:57 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ibm]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<category><![CDATA[x61]]></category>
+		<category><![CDATA[スイッチングハブ]]></category>
+		<category><![CDATA[バッテリー]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1168</guid>
+
+					<description><![CDATA[現在、自分が使っているThinkpad X61は開発を行っていると1時間弱程度しか持たないのと、最近、外出先や会議でパソコンを使うことが多くなってきた為、思い切って拡張バッテリーを買ってみました。 拡 ... <a href="/archives/1168/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、自分が使っているThinkpad X61は開発を行っていると1時間弱程度しか持たないのと、最近、外出先や会議でパソコンを使うことが多くなってきた為、思い切って拡張バッテリーを買ってみました。</p>
+<p>拡張バッテリーの場合、最大４，５時間くらいは持ちそうなので全然外出先での作業にも支障があありません。まぁ、バッテリーが大きくなってしまうので、必然的に重量が1.5kg以上になっています。</p>
+<p>まぁ、それでもバッテリーが持たないよりはいいので、今のところ満足しています。</p>
+<p>また、自宅のルータは最大4ポートしか使えないのですが、既に3ポート埋まっていたり、これからネットワーク機器が増える予定もあるので、PLANEXのギガビットスイッチングハブを購入しました。最近はネットワークに対応した家電も増えてきているので必要かなと思いました。マグネットが付いているので、ラックの裏にでもつけていれば場所も特に取られることがないので良い感じです。</p>
+<p>それに、今までルーターから3m位離れたサーバにLANケーブルを這わせていたので邪魔になっていたのですが、それもハブまでの1本だけに絞られるのでケーブル周りもすっきりして一石二鳥♪</p>
+<p>拡張バッテリーについては、秋葉原の<a href="https://www.nisshinpal.jp/">ニッシンパル</a>で購入したのですが、14000円弱とamazonで購入するよりも結構安かったです。ハブの方は、ヨドバシカメラで購入したのでamazonの価格よりも1000円程度高かったです。</p>
+<div style="margin:5px 0;padding:5px 0;">
+<div style="float:left;margin:0 5px 0 0;">
+<iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B000ENC57O&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+</div>
+<div style="float:left;margin:0 0 0 5px;">
+<iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B001VA2OXY&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+</div>
+</div>
+<div style="clear:both;"></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1168/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

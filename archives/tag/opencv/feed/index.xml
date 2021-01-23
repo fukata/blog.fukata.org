@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OpenCV &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/opencv/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:56:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Mac 10.7 LionにOpenCVをインストールするまで</title>
+		<link>/archives/6965/</link>
+					<comments>/archives/6965/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 24 Feb 2012 06:31:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[OpenCV]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6965</guid>
+
+					<description><![CDATA[Ubuntu 10.04にOpenCVをインストールはやったんですが、MBAを買ったことということで、MBAにも入れてみました。 基本的にはUbuntuとやり方は同じなんですが、大きく違うところとして ... <a href="/archives/6965/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://fukata.org/2012/02/07/ubuntu-10-04-install-opencv/">Ubuntu 10.04にOpenCVをインストール</a>はやったんですが、MBAを買ったことということで、MBAにも入れてみました。</p>
+<p>基本的にはUbuntuとやり方は同じなんですが、大きく違うところとして、パッケージでインストールするモジュールが違います。パッケージ管理ソフトもHomebrewを使っており、インストール方法も異なります。</p>
+<p>MBAでOpenCVのインストールに必要なのは下記のモジュール群になります。</p>
+<pre lang="bash">
+brew install cmake
+brew install jasper
+brew install jpeg
+brew install libtiff
+brew install qt
+brew install tbb
+</pre>
+<p>コンパイル方法やダウンロードするソースについては、Ubuntuの時と同じで大丈夫でした。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6965/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Ubuntu 10.04にOpenCVをインストールするまで</title>
+		<link>/archives/6839/</link>
+					<comments>/archives/6839/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 07 Feb 2012 01:07:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[OpenCV]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6839</guid>
+
+					<description><![CDATA[最近、OpenCVを学ぼうと思い、開発マシンにインストールした時のログを載せておきたいと思います。 必要モジュールのインストール コンパイルに必要なモジュール群です。 sudo apt-get ins ... <a href="/archives/6839/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、OpenCVを学ぼうと思い、開発マシンにインストールした時のログを載せておきたいと思います。</p>
+<h2>必要モジュールのインストール</h2>
+<p>コンパイルに必要なモジュール群です。</p>
+<pre lang="bash">
+sudo apt-get install build-essential \
+pkg-config \
+cmake \
+libtiff4-dev \
+libjasper-dev \
+libjasper1 \
+libjasper-runtime \
+libtbb-dev \
+ffmpeg \
+libqt4-dev \
+libv4l-dev
+</pre>
+<p><span id="more-6839"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>OpenCVのダウンロード</h2>
+<p><a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.2/">Open Computer Vision Library &#8211; Browse /opencv-unix/2.2 at SourceForge.net</a></p>
+<p>上記のページからOpenCV-2.2.0をDLします。</p>
+<p>今回は、ホームディレクトリ以下にインストールしたいので、とりあえず、~/usr/local/srcにダウンロードします。</p>
+<pre lang="bash">cd ~/usr/local/src
+wget -O OpenCV-2.2.0.tar.bz2 "https://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.2/OpenCV-2.2.0.tar.bz2?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fopencvlibrary%2Ffiles%2Fopencv-unix%2F2.2%2F&amp;ts=1328574902&amp;use_mirror=jaist"
+tar jxf OpenCV-2.2.0.tar.bz2</pre>
+<h2>インストール</h2>
+<p>インストール先として、~/usr/local/opencv-2.2.0を指定します。</p>
+<pre lang="bash">cd OpenCV-2.2.0
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=~/usr/local/opencv-2.2.0 \
+-D BUILD_PYTHON_SUPPORT=ON -D WITH_TBB=ON -D WITH_QT=ON \
+./</pre>
+<p>すると、下記のような<strong><span style="color: #ff0000;">エラーが発生</span></strong>すると思います。</p>
+<h3>linux/videodev.h : no such file or directory</h3>
+<p><a href="https://code.ros.org/trac/opencv/attachment/ticket/862/OpenCV-2.2-nov4l1.patch">Ticket #862: OpenCV-2.2-nov4l1.patch</a><br />
+を参考にファイルを編集します。</p>
+<p>ここまでやったら、改めて<strong>cmake</strong>からやり直してみてください。今度は正常に動作すると思います。</p>
+<h3>コンパイルパスの設定</h3>
+<p>~/.bashrcに下記を追加</p>
+<pre lang="bash">
+# OpenCV 2.2.0
+export PKG_CONFIG_PATH=~/usr/local/opencv-2.2.0/lib/pkgconfig:$PKG_CONFIG_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=~/usr/local/opencv-2.2.0/lib:$DYLD_FALLBACK_LIBRARY_PATH
+</pre>
+<p>設定を反映するために、下記も一緒に行います。</p>
+<pre lang="bash">
+source ~/.bashrc
+</pre>
+<h2>インストール確認</h2>
+<p>インストールが終わったことなので、早速サンプルプログラムを動かしてみます。<br />
+サンプルは下記を使用します。</p>
+<p><script src="https://gist.github.com/1756286.js"> </script></p>
+<p>ファイルをダウンロードし、下記のコマンドを実行することで、コンパイル・実行することができます。<br />
+Windowが立ち上がるので実行する場合は、デスクトップ環境の存在するところで実行してみてください。</p>
+<pre lang="bash">
+wget https://gist.github.com/raw/1756286/299ea0b336323a1633c5021369223a5c698e7d74/put_text_sample.c
+gcc put_text_sample.c -o put_text_sample `pkg-config --libs --cflags opencv` && ./put_text_sample
+</pre>
+<p>すると、下記のようなエラーが発生するかもしれません。</p>
+<h3>../../lib/libopencv_highgui.so.2.2.0: undefined reference to `cvCreateCameraCapture_V4L(int)&#8217;</h3>
+<p>もし、このエラーが発生したら、~/.bashrcに下記を追加します。</p>
+<pre lang="bash">
+export LD_LIBRARY_PATH=~/usr/local/opencv-2.2.0/lib:$LD_LIBRARY_PATH
+</pre>
+<h2>参考ページ</h2>
+<ul>
+<li><a href="https://d.hatena.ne.jp/ser1zw/20110904/1315083776">OpenCVをホームディレクトリ以下にインストールする -Mac OS X Lion編- &#8211; ser1zw::diary</a></li>
+<li><a href="https://stackoverflow.com/questions/5842235/linux-videodev-h-no-such-file-or-directory-opencv-on-ubuntu-11-04">linux/videodev.h : no such file or directory &#8211; OpenCV on ubuntu 11.04 &#8211; Stack Overflow</a></li>
+<li><a href="https://w.livedoor.jp/nuko/d/Arch%20Linux%20-%20OpenCV%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB">Arch Linux &#8211; OpenCVのインストール &#8211; 本当に小さな小さな備忘録 &#8211; livedoor Wiki（ウィキ）</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6839/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

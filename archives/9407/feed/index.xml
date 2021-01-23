@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン2.6.1をリリース	</title>
+	<atom:link href="/archives/9407/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/9407/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 05 Feb 2018 23:48:00 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: KazuHiro		</title>
+		<link>/archives/9407/comment-page-1/#comment-999</link>
+
+		<dc:creator><![CDATA[KazuHiro]]></dc:creator>
+		<pubDate>Mon, 05 Feb 2018 23:48:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-999</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-998&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+ご返事ありがとうございます。
+
+すでにあるブログ以外でも、新しいブログでプラグインを新規インストールしてみても、同様な現象が発生してしまいました。
+具体的には、
+1，Add Flickrボタンをクリック
+2，画像選択、
+右メニューは上からファイルURL、無し、無し、midium(640x426）、チェックなし
+3，そして、Wordpress上で画像の詳細を開き、リンク先を確認すると
+このようになっていまいた。
+http://www.flickr.com/photos/null/25234650587
+本来であれば、nullではなく、UserIDが挿入されるかと思います。
+手動でUserIDに置き換えた所、問題なく写真のページに飛ぶことが出来ました。
+
+このままでも、Wordpress上にはサムネイルとして画像が表示されておりますが、クリックして拡大した写真を見れるようにしたいので、出来れば前と同じ状態で使いたいです＞＜
+
+----
+また、Flickrのアイコン・ボタンから同じ画像を挿入した場合は、画像の直接URLが表示されていました。
+https://farm5.staticflickr.com/4705/25234650587_b64bfef37c_o.jpg
+
+実際の私のブログのテストページURLを貼らせていただきますので、ご確認頂ければ幸いです。
+https://geek-kazu-next.com/wp-flickr-press-test/
+
+お時間があるときで構いませんので、アドバイスよろしくお願いいたします。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-998">Tatsuya Fukata</a>.</p>
+<p>ご返事ありがとうございます。</p>
+<p>すでにあるブログ以外でも、新しいブログでプラグインを新規インストールしてみても、同様な現象が発生してしまいました。<br />
+具体的には、<br />
+1，Add Flickrボタンをクリック<br />
+2，画像選択、<br />
+右メニューは上からファイルURL、無し、無し、midium(640&#215;426）、チェックなし<br />
+3，そして、Wordpress上で画像の詳細を開き、リンク先を確認すると<br />
+このようになっていまいた。<br />
+<a href="http://www.flickr.com/photos/null/25234650587" rel="nofollow ugc">http://www.flickr.com/photos/null/25234650587</a><br />
+本来であれば、nullではなく、UserIDが挿入されるかと思います。<br />
+手動でUserIDに置き換えた所、問題なく写真のページに飛ぶことが出来ました。</p>
+<p>このままでも、Wordpress上にはサムネイルとして画像が表示されておりますが、クリックして拡大した写真を見れるようにしたいので、出来れば前と同じ状態で使いたいです＞＜</p>
+<p>&#8212;-<br />
+また、Flickrのアイコン・ボタンから同じ画像を挿入した場合は、画像の直接URLが表示されていました。<br />
+<a href="https://farm5.staticflickr.com/4705/25234650587_b64bfef37c_o.jpg" rel="nofollow ugc">https://farm5.staticflickr.com/4705/25234650587_b64bfef37c_o.jpg</a></p>
+<p>実際の私のブログのテストページURLを貼らせていただきますので、ご確認頂ければ幸いです。<br />
+<a href="https://geek-kazu-next.com/wp-flickr-press-test/" rel="nofollow ugc">https://geek-kazu-next.com/wp-flickr-press-test/</a></p>
+<p>お時間があるときで構いませんので、アドバイスよろしくお願いいたします。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9407/comment-page-1/#comment-998</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Sun, 04 Feb 2018 15:38:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-998</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-997&quot;&gt;KazuHiro&lt;/a&gt;.
+
+コメントありがとうございます。
+
+v2.5.3より前からアップデートされた場合、認証方式が変わっているので、OAuthトークンの再取得を管理画面から行ってみてください。
+それでも検索エラーが出る場合、ブラウザのキャッシュ等を削除してみてください。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-997">KazuHiro</a>.</p>
+<p>コメントありがとうございます。</p>
+<p>v2.5.3より前からアップデートされた場合、認証方式が変わっているので、OAuthトークンの再取得を管理画面から行ってみてください。<br />
+それでも検索エラーが出る場合、ブラウザのキャッシュ等を削除してみてください。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: KazuHiro		</title>
+		<link>/archives/9407/comment-page-1/#comment-997</link>
+
+		<dc:creator><![CDATA[KazuHiro]]></dc:creator>
+		<pubDate>Sun, 04 Feb 2018 15:22:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-997</guid>
+
+					<description><![CDATA[いつも快適に使わせていただいております。
+ありがとうございます。
+
+古いバージョンからアップデートして使おうと思ったのですが、こちらのブログで書かれている現象が発生して、以前と同じように使うことが出来ない状態です。
+https://weblog.sh-rainbow.net/hatenablog-wordpress-vol1
+
+今までは、小さなサムネイル(150x150px)でたくさんの画像を載せて、クリックして拡大して見れる様にしていたのですが、アップデート後はクリックすると、Flickrの404ページに飛んでしまうようになりました。
+URL内のユーザーIDがnullに変わってしまう現象です。
+※以前に貼り付けた画像は問題なく表示されていますが、アップデート後に貼り付けた画像は404ページに行ってしまいます。
+
+お時間がございましたら、ご確認頂ければ幸いです＞＜
+
+WordPress version: 4.9.2
+wp-flickr-press version: 2.6.1
+PHP version: 7.0.18
+ ├ safe_mode: OFF
+ └ curl: ENABLED]]></description>
+			<content:encoded><![CDATA[<p>いつも快適に使わせていただいております。<br />
+ありがとうございます。</p>
+<p>古いバージョンからアップデートして使おうと思ったのですが、こちらのブログで書かれている現象が発生して、以前と同じように使うことが出来ない状態です。<br />
+<a href="https://weblog.sh-rainbow.net/hatenablog-wordpress-vol1" rel="nofollow ugc">https://weblog.sh-rainbow.net/hatenablog-wordpress-vol1</a></p>
+<p>今までは、小さなサムネイル(150x150px)でたくさんの画像を載せて、クリックして拡大して見れる様にしていたのですが、アップデート後はクリックすると、Flickrの404ページに飛んでしまうようになりました。<br />
+URL内のユーザーIDがnullに変わってしまう現象です。<br />
+※以前に貼り付けた画像は問題なく表示されていますが、アップデート後に貼り付けた画像は404ページに行ってしまいます。</p>
+<p>お時間がございましたら、ご確認頂ければ幸いです＞＜</p>
+<p>WordPress version: 4.9.2<br />
+wp-flickr-press version: 2.6.1<br />
+PHP version: 7.0.18<br />
+ ├ safe_mode: OFF<br />
+ └ curl: ENABLED</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: けい		</title>
+		<link>/archives/9407/comment-page-1/#comment-996</link>
+
+		<dc:creator><![CDATA[けい]]></dc:creator>
+		<pubDate>Sun, 28 Jan 2018 07:32:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-996</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-995&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+ありがとうございます。お騒がせしました。どうもキャッシュが悪さをしているようでした！
+
+また、ずっと旧UIを使っていたので気付かなかったんですがLink URL Type「Link To」を「無し」にしても&lt;a&gt;タグが挿入されてしまいます。
+
+flicker上では友人まで公開にしているので、404がでてしまうので出来れば&lt;/a&gt;&lt;a&gt;タグが出ないようにしたいです！
+よろしくお願いします。&lt;/a&gt;]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-995">Tatsuya Fukata</a>.</p>
+<p>ありがとうございます。お騒がせしました。どうもキャッシュが悪さをしているようでした！</p>
+<p>また、ずっと旧UIを使っていたので気付かなかったんですがLink URL Type「Link To」を「無し」にしても<a>タグが挿入されてしまいます。</p>
+<p>flicker上では友人まで公開にしているので、404がでてしまうので出来れば</a><a>タグが出ないようにしたいです！<br />
+よろしくお願いします。</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9407/comment-page-1/#comment-995</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Fri, 26 Jan 2018 20:37:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-995</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-994&quot;&gt;けい&lt;/a&gt;.
+
+報告ありがとうございます。
+
+キャッシュ等を消して再度試していただけますか？
+また、それでも同様のエラーが出る場合、下記のやり方でGoogle Chromeのコンソールログに何かエラーが表示されているか見ていただけますか。
+
+https://developers.google.com/web/tools/chrome-devtools/console/?hl=ja]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-994">けい</a>.</p>
+<p>報告ありがとうございます。</p>
+<p>キャッシュ等を消して再度試していただけますか？<br />
+また、それでも同様のエラーが出る場合、下記のやり方でGoogle Chromeのコンソールログに何かエラーが表示されているか見ていただけますか。</p>
+<p><a href="https://developers.google.com/web/tools/chrome-devtools/console/?hl=ja" rel="nofollow ugc">https://developers.google.com/web/tools/chrome-devtools/console/?hl=ja</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: けい		</title>
+		<link>/archives/9407/comment-page-1/#comment-994</link>
+
+		<dc:creator><![CDATA[けい]]></dc:creator>
+		<pubDate>Fri, 26 Jan 2018 07:53:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-994</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-993&quot;&gt;けい&lt;/a&gt;.
+
+報告です。
+
+新UIのほうですと、このような表記がでて使えない状態になりました。
+
+「SEARCH ERROR. Please retry.」
+
+旧UIでは問題なく画像挿入できます。
+
+以下デバッグ情報です。
+WordPress version: 4.9.2
+wp-flickr-press version: 2.6.1
+PHP version: 7.2.0
+ ├ safe_mode: OFF
+ └ curl: ENABLED]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-993">けい</a>.</p>
+<p>報告です。</p>
+<p>新UIのほうですと、このような表記がでて使えない状態になりました。</p>
+<p>「SEARCH ERROR. Please retry.」</p>
+<p>旧UIでは問題なく画像挿入できます。</p>
+<p>以下デバッグ情報です。<br />
+WordPress version: 4.9.2<br />
+wp-flickr-press version: 2.6.1<br />
+PHP version: 7.2.0<br />
+ ├ safe_mode: OFF<br />
+ └ curl: ENABLED</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: けい		</title>
+		<link>/archives/9407/comment-page-1/#comment-993</link>
+
+		<dc:creator><![CDATA[けい]]></dc:creator>
+		<pubDate>Mon, 22 Jan 2018 16:40:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-993</guid>
+
+					<description><![CDATA[早速対応していただき、ありがとうございます！
+使ってみて、バグなどがあれば報告させていただきますね。
+これからもよろしくお願いします！]]></description>
+			<content:encoded><![CDATA[<p>早速対応していただき、ありがとうございます！<br />
+使ってみて、バグなどがあれば報告させていただきますね。<br />
+これからもよろしくお願いします！</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9407/comment-page-1/#comment-992</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Mon, 22 Jan 2018 10:23:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-992</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-991&quot;&gt;shinjiman0101&lt;/a&gt;.
+
+ご確認ありがとうございます。
+
+私の方でもfirefoxで試してみましたが正常に動作しました。
+もしかしたらキャッシュが残っていて正常に動作していないのかもしれません。
+
+firefoxでのキャッシュの削除は下記のページから参照できます。
+https://support.mozilla.org/ja/kb/how-clear-firefox-cache
+
+以上、よろしくお願い致します。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-991">shinjiman0101</a>.</p>
+<p>ご確認ありがとうございます。</p>
+<p>私の方でもfirefoxで試してみましたが正常に動作しました。<br />
+もしかしたらキャッシュが残っていて正常に動作していないのかもしれません。</p>
+<p>firefoxでのキャッシュの削除は下記のページから参照できます。<br />
+<a href="https://support.mozilla.org/ja/kb/how-clear-firefox-cache" rel="nofollow ugc">https://support.mozilla.org/ja/kb/how-clear-firefox-cache</a></p>
+<p>以上、よろしくお願い致します。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: shinjiman0101		</title>
+		<link>/archives/9407/comment-page-1/#comment-991</link>
+
+		<dc:creator><![CDATA[shinjiman0101]]></dc:creator>
+		<pubDate>Mon, 22 Jan 2018 08:28:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-991</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-990&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+迅速な対応ありがとうございました。検索がエラーになったのは、新しいUIです。
+
+先程報告させていただいたエラーが発生したブラウザは、FIrefoxでしたが、Chromeで試してみたところ、問題なくプラグインが動作しました。投稿記事内への写真挿入も問題ありませんでした。
+
+しかし、いただいた情報でChromeのコンソールを確認してみたところ、以下のエラーメッセージが赤文字で出力されていました。
+
+(index):7 WebSocket connection to &#039;wss://public-api.wordpress.com/pinghub/wpcom/me/newest-note-data&#039; failed: Error during WebSocket handshake: Unexpected response code: 403
+T @ (index):7
+
+上記エラーは、Wordpressの新規投稿時にFlickrPressプラグインを新UIで起動させた際に、Ctrl + Shift + Jでコンソールを表示させた際に2か所同じメッセージで出力されていました。
+
+
+Firefoxでは現時点でもエラーで検索できない状態です。
+
+
+取り急ぎ以上になります。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-990">Tatsuya Fukata</a>.</p>
+<p>迅速な対応ありがとうございました。検索がエラーになったのは、新しいUIです。</p>
+<p>先程報告させていただいたエラーが発生したブラウザは、FIrefoxでしたが、Chromeで試してみたところ、問題なくプラグインが動作しました。投稿記事内への写真挿入も問題ありませんでした。</p>
+<p>しかし、いただいた情報でChromeのコンソールを確認してみたところ、以下のエラーメッセージが赤文字で出力されていました。</p>
+<p>(index):7 WebSocket connection to &#8216;wss://public-api.wordpress.com/pinghub/wpcom/me/newest-note-data&#8217; failed: Error during WebSocket handshake: Unexpected response code: 403<br />
+T @ (index):7</p>
+<p>上記エラーは、Wordpressの新規投稿時にFlickrPressプラグインを新UIで起動させた際に、Ctrl + Shift + Jでコンソールを表示させた際に2か所同じメッセージで出力されていました。</p>
+<p>Firefoxでは現時点でもエラーで検索できない状態です。</p>
+<p>取り急ぎ以上になります。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/9407/comment-page-1/#comment-990</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Mon, 22 Jan 2018 04:27:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=9407#comment-990</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/9407/comment-page-1/#comment-989&quot;&gt;shinjiman0101&lt;/a&gt;.
+
+コメントありがとうございます。
+
+検索がエラーになったのは新UIでしょうか？
+もし可能なら、Chromeで試していただき、コンソールログに何かエラーログが出ていないか見てもらえないでしょうか。
+
+コンソールログの見方は下記から参照出来ます。
+https://developers.google.com/web/tools/chrome-devtools/console/?hl=ja
+
+以上、よろしくお願い致します。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/9407/comment-page-1/#comment-989">shinjiman0101</a>.</p>
+<p>コメントありがとうございます。</p>
+<p>検索がエラーになったのは新UIでしょうか？<br />
+もし可能なら、Chromeで試していただき、コンソールログに何かエラーログが出ていないか見てもらえないでしょうか。</p>
+<p>コンソールログの見方は下記から参照出来ます。<br />
+<a href="https://developers.google.com/web/tools/chrome-devtools/console/?hl=ja" rel="nofollow ugc">https://developers.google.com/web/tools/chrome-devtools/console/?hl=ja</a></p>
+<p>以上、よろしくお願い致します。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

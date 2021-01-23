@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>cache &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/cache/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>WP Super Cacheをアンインストール</title>
+		<link>/archives/745/</link>
+					<comments>/archives/745/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 20 Nov 2008 02:11:15 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=745</guid>
+
+					<description><![CDATA[今朝インストールした、「WP Super Cache」を早速アンインストールしました。 なぜかというと、現在、ブログのモバイル対応に「Ktai Style」というプラグインを使用していたんですが、どう ... <a href="/archives/745/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今朝インストールした、「WP Super Cache」を早速アンインストールしました。</p>
+<p>なぜかというと、現在、ブログのモバイル対応に「Ktai Style」というプラグインを使用していたんですが、どうやらモバイル用のテンプレートを読み込まないといけないのに、PC用のテンプレートを読み込んでしまい、PC用テンプレートで表示されてしまっていました。</p>
+<p>別段速度的にも劇的に変わるほどでもないので、アンインストールしました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/745/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

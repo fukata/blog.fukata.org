@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>wp-gmaps-entry &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/wp-gmaps-entry/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[WordPress]WP-GMaps-Entryのv0.3をリリースしました。</title>
+		<link>/archives/2070/</link>
+					<comments>/archives/2070/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Jan 2010 10:39:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-gmaps-entry]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2070</guid>
+
+					<description><![CDATA[今回のリリースで、Wordpress 2.5から導入されたショートコードというのを使うように変更しました。なので、当プラグインの動作基準というのがWordpress 2.5以上という制限が加わりました ... <a href="/archives/2070/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今回のリリースで、Wordpress 2.5から導入されたショートコードというのを使うように変更しました。なので、当プラグインの動作基準というのがWordpress 2.5以上という制限が加わりました。</p>
+<p>また、ショートコードを使用するにあたり、構文が若干変更になりました。以前は各パラメータをカンマで区切っていたのですが、半角スペースで区切るようになりました。</p>
+<p>また、当ブログサイトに<a href="https://fukata.org/dev/wp-plugin/wp-gmaps-entry/">専用ページ</a>を設けましたので、そちらからもダウンロードサイトに行けるようになっています。ダウンロードはプロジェクトサイトの方から行えるようになっていますので、そちらからどうぞ。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2070/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

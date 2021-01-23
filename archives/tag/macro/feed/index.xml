@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>macro &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/macro/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>切り替え可能なシート一覧</title>
+		<link>/archives/1040/</link>
+					<comments>/archives/1040/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 12 Apr 2009 15:30:52 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[excel]]></category>
+		<category><![CDATA[macro]]></category>
+		<category><![CDATA[sheet]]></category>
+		<category><![CDATA[VBA]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1040</guid>
+
+					<description><![CDATA[仕事で利用しているテーブル一覧のエクセルがあるんですけど、肥大化しすぎて目的のテーブルを探す為に右に行ったり左に行ったりと一苦労だったので、シート切り替え機能の付いたシート一覧を作成してみました。 作 ... <a href="/archives/1040/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="sheet_list_macro" href="https://farm6.static.flickr.com/5092/5476237002_09cfd531d5_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-1042 alignleft" src="https://farm6.static.flickr.com/5092/5476237002_09cfd531d5_m.jpg" alt="sheet_list_macro" width="200" height="137" /></a>仕事で利用しているテーブル一覧のエクセルがあるんですけど、肥大化しすぎて目的のテーブルを探す為に右に行ったり左に行ったりと一苦労だったので、シート切り替え機能の付いたシート一覧を作成してみました。</p>
+<p>作成してみました。と言ってもコードはどれもネットに転がっていた物を流用しただけのアドホックなコードです。</p>
+<p>参考になるかどうかわからないですけど、以下に貼り付けておきます。以下のコードを対象のシートのマクロとして登録します。</p>
+<p>ちなみに、下記に表示しているコードなんですけど、WP-Syntaxというプラグインを利用しているんですが、それの対応言語を以前調べたことがあったんですが忘れてしまったんで、再度調べました。URLをはっつけておきます。</p>
+<p>https://qbnz.com/highlighter/</p>
+<p>上記ページの左にある「Supported Languages」というのがサポートしている言語一覧になるそうです。</p>
+<p>補足ですけど、下記のコードはVBなんですけど、上記のサイトを見るとVB.NETはサポートしているんですが、lang属性に「VB.NET」を指定しても効かなかったので、「VB」と指定すると無事効くようになりました。長くなりましたが、切り替え可能なシート一覧のスクリプトです。</p>
+<p>各シートにテーブル名の物理名や、MySQLならDBエンジンなどを記載していると一覧で同様に生成できそうですね。</p>
+<pre lang="VB" line="1">
+
+Option Explicit
+
+Sub SheetList()
+    Dim i As Integer
+   
+    'テーブル一覧の開始位置
+    Dim x As Integer
+    Dim y As Integer
+    x = 4
+    y = 4
+   
+    'テーブル一覧のシートが何枚目から始まるか
+    Dim offset As Integer
+    offset = 2
+   
+    For i = 1 To Sheets.Count - offset
+        Hyperlinks.Add Anchor:=Cells(y + (i - 1), x), Address:="", SubAddress:= _
+        Sheets(i + offset).Name + "!A1", TextToDisplay:=Sheets(i + offset).Name
+    Next
+    ActiveCell.EntireColumn.AutoFit
+End Sub
+
+
+Private Sub Worksheet_Activate()
+    Call SheetList
+End Sub
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1040/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

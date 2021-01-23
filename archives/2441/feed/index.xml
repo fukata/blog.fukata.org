@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [BlackBerry]Bold 9000に公式版OS5.0をインストールしました	</title>
+	<atom:link href="/archives/2441/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/2441/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:19 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/2441/comment-page-1/#comment-611</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Thu, 18 Mar 2010 06:20:58 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=2441#comment-611</guid>
+
+					<description><![CDATA[度々貴重な情報をありがとうございます。&lt;br&gt;&lt;br&gt;なるほど、もう少し調べてみると何か回避策などが見つかるかもしれませんね。&lt;br&gt;少し、私の方でも調べてみたいと思います。]]></description>
+			<content:encoded><![CDATA[<p>度々貴重な情報をありがとうございます。</p>
+<p>なるほど、もう少し調べてみると何か回避策などが見つかるかもしれませんね。<br />少し、私の方でも調べてみたいと思います。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 台湾的日本人		</title>
+		<link>/archives/2441/comment-page-1/#comment-610</link>
+
+		<dc:creator><![CDATA[台湾的日本人]]></dc:creator>
+		<pubDate>Wed, 17 Mar 2010 21:24:49 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=2441#comment-610</guid>
+
+					<description><![CDATA[深田様&lt;br&gt;すみません、連投でコメントいたします。&lt;br&gt;私もプログラミングのことはそれほど明るい訳ではないんですが、自分なりに原因を調査してみました。&lt;br&gt;どうやらインストールしたプログラムは消えたのではなく、「Loader.exe」に検出されないだけかもしれません。私のPCで「C:Program FilesCommon FilesResearch In MotionSharedLoader Files9000AllLang_v5.0.0.464_P5.2.0.41Java」を見ると、「SlideToGo」や「sudoku」などのファイル名が見られますが、拡張子が本来アプリに適用される「.ali」や「.alx」ではなく、すべて「.cod」となっています。もしかしたら、「.alx」や「.ali」が「.cod」になんらかのはずみで変化したから、検出されなくなったのかもしれません。どうして拡張子が変化したのは良く分かりませんが。&lt;br&gt;参考になりましたら、幸いです。]]></description>
+			<content:encoded><![CDATA[<p>深田様<br />すみません、連投でコメントいたします。<br />私もプログラミングのことはそれほど明るい訳ではないんですが、自分なりに原因を調査してみました。<br />どうやらインストールしたプログラムは消えたのではなく、「Loader.exe」に検出されないだけかもしれません。私のPCで「C:Program FilesCommon FilesResearch In MotionSharedLoader Files9000AllLang_v5.0.0.464_P5.2.0.41Java」を見ると、「SlideToGo」や「sudoku」などのファイル名が見られますが、拡張子が本来アプリに適用される「.ali」や「.alx」ではなく、すべて「.cod」となっています。もしかしたら、「.alx」や「.ali」が「.cod」になんらかのはずみで変化したから、検出されなくなったのかもしれません。どうして拡張子が変化したのは良く分かりませんが。<br />参考になりましたら、幸いです。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/2441/comment-page-1/#comment-609</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Wed, 17 Mar 2010 18:22:33 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=2441#comment-609</guid>
+
+					<description><![CDATA[コメントありがとうございます。&lt;br&gt;&lt;br&gt;貴重な情報をありがとうございます。&lt;br&gt;やはりそうですよね。&lt;br&gt;&lt;br&gt;&#062;&#062;パソコンに何らかのログが残って、それが阻止しているように思います。完全初期化したのに、そのblackberryですら同じ現象が出ましたから。&lt;br&gt;レジストリか何かにゴミが残ってる可能性はありますね。]]></description>
+			<content:encoded><![CDATA[<p>コメントありがとうございます。</p>
+<p>貴重な情報をありがとうございます。<br />やはりそうですよね。</p>
+<p>&gt;&gt;パソコンに何らかのログが残って、それが阻止しているように思います。完全初期化したのに、そのblackberryですら同じ現象が出ましたから。<br />レジストリか何かにゴミが残ってる可能性はありますね。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 台湾的日本人		</title>
+		<link>/archives/2441/comment-page-1/#comment-608</link>
+
+		<dc:creator><![CDATA[台湾的日本人]]></dc:creator>
+		<pubDate>Wed, 17 Mar 2010 16:19:42 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=2441#comment-608</guid>
+
+					<description><![CDATA[はじめまして。私も同じ現象に悩んでいます。&lt;br&gt;&lt;br&gt;先日Bold 9000を購入して、OS5.0(All Langage)をインストールしましたが、Loaderやデスクトップマネージャーに出てくるのは4.6だけで、5.0をインストールできませんでした。&lt;br&gt;&lt;br&gt;何か間違えたかと思って、違う会社のOS5.0(All Langage)をダウンロードして、最初のをアンインストールしてからインストールしました。そして、Loaderをはしらせたら、例の「Blackberry Device Softwareがありません」が出てきてアプリケーションを全く動かせない状態になりました。しかし、深田様がおっしゃった通り、まったくアンインストールしていない別のPCで行ったら、問題なくできました。&lt;br&gt;&lt;br&gt;パソコンに何らかのログが残って、それが阻止しているように思います。完全初期化したのに、そのblackberryですら同じ現象が出ましたから。&lt;br&gt;&lt;br&gt;現在はサブPCのLoaderを使ってアプリケーションを調整しています。]]></description>
+			<content:encoded><![CDATA[<p>はじめまして。私も同じ現象に悩んでいます。</p>
+<p>先日Bold 9000を購入して、OS5.0(All Langage)をインストールしましたが、Loaderやデスクトップマネージャーに出てくるのは4.6だけで、5.0をインストールできませんでした。</p>
+<p>何か間違えたかと思って、違う会社のOS5.0(All Langage)をダウンロードして、最初のをアンインストールしてからインストールしました。そして、Loaderをはしらせたら、例の「Blackberry Device Softwareがありません」が出てきてアプリケーションを全く動かせない状態になりました。しかし、深田様がおっしゃった通り、まったくアンインストールしていない別のPCで行ったら、問題なくできました。</p>
+<p>パソコンに何らかのログが残って、それが阻止しているように思います。完全初期化したのに、そのblackberryですら同じ現象が出ましたから。</p>
+<p>現在はサブPCのLoaderを使ってアプリケーションを調整しています。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

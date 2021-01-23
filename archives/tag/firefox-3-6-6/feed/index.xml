@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>firefox 3.6.6 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/firefox-3-6-6/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Ubuntu 10.04 LTS 64bitにVMware Server 2.0.2をインストールしてみた</title>
+		<link>/archives/4592/</link>
+					<comments>/archives/4592/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 13 Jul 2010 18:20:09 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[firefox 3.6.6]]></category>
+		<category><![CDATA[Ubuntu 10.04 LTS]]></category>
+		<category><![CDATA[vmware]]></category>
+		<category><![CDATA[vmware server 2]]></category>
+		<category><![CDATA[仮想化]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4592</guid>
+
+					<description><![CDATA[あの壷はいいものだ: Ubuntu Linux 10.04 にVMware Server 2.02をインストール → ド嵌った 上記のサイトを参考にUbuntu 10.04 LTS 64bitにVMw ... <a href="/archives/4592/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://anotsubo.blogspot.com/2010/05/ubuntu-linux-1004-vmware-server-202.html">あの壷はいいものだ: Ubuntu Linux 10.04 にVMware Server 2.02をインストール → ド嵌った</a></p>
+<p>上記のサイトを参考にUbuntu 10.04 LTS 64bitにVMware Server 2.0.2をインストールしてみました。</p>
+<p>実は、サーバマシン以外にVMware Server 2をインストールするのは初めてでした。</p>
+<p>Ubuntu 10.04 LTSにはFirefox 3.6.6がインストールされていたのですが、どうやらVMware Server 2.0.2とFirefox 3.6.6の相性が悪いらしく、リモートコンソールがタイムアウトしてしまい、一向に開きませんでした。</p>
+<p><a href="https://mozilla.jp/firefox/download/older/">次世代ブラウザ Firefox – 旧バージョンのダウンロード</a></p>
+<p>Firefox 3.5をダウンロードし、Firefox 3.5で再度vmware server 2のWEBコンソール画面へアクセスすれば正常にリモートコンソールを開くことができます。</p>
+<p>これでローカルを汚さずに開発環境が構築できます。仮想環境って素晴らしい！</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4592/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

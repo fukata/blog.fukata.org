@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ECS &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ecs/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ClojureからECSにアクセスする「clj-aws-ecs」</title>
+		<link>/archives/6480/</link>
+					<comments>/archives/6480/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 13 Nov 2011 05:48:09 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[ECS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6480</guid>
+
+					<description><![CDATA[making/clj-aws-ecs &#8211; GitHub 今作っているサービスで少し使ってみたので、メモしておきます。 広告 使い方は至って簡単で、 (use 'am.ik.clj-aws- ... <a href="/archives/6480/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/making/clj-aws-ecs">making/clj-aws-ecs &#8211; GitHub</a></p>
+<p>今作っているサービスで少し使ってみたので、メモしておきます。</p>
+<p><span id="more-6480"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>使い方は至って簡単で、</p>
+<pre lang="clojure">
+(use 'am.ik.clj-aws-ecs)
+(def requester (make-requester "ecs.amazonaws.jp" "YOUR-ACCESS-KEY-ID" "YOUR-ACCESS-SECRET-KEY"))
+(item-search-map requester "SearchIndex" "KEYWORD")
+</pre>
+<p><a href="https://www.ajaxtower.jp/ecs/itemsearch/index2.html">商品カテゴリーの指定(SearchIndex) &#8211; 商品検索(ItemSearch) &#8211; Amazon Web サービス</a></p>
+<p>SearchIndex一覧については上記のページに書いています。</p>
+<p><a href="https://clojars.org/am.ik/clj-aws-ecs">clj-aws-ecs | Clojars</a></p>
+<p>clojars.orgにも登録されているので、project.cljに下記のように登録すれば簡単に使えるようになります。</p>
+<pre lang="clojure">
+[am.ik/clj-aws-ecs "0.1.0"]
+</pre>
+<p>ただ、ECSの戻り値がXMLで、<strong>item-search-map</strong>の構造はXMLをそのままMapに変換した構造になっているため、その値を使って何かに利用する時に面倒なので、簡易的ですが、下記のようなコードを書いてXMLベースのMapから値を抜き出す処理を書きました。</p>
+<pre lang="clojure">
+(defn ecs-attr-value
+  ([attrs tag] (ecs-attr-value attrs tag true))
+  ([attrs tag first-only]
+   (if (empty? attrs)
+     nil 
+     (let [attr (first attrs)
+           attr-tag (:tag (first attrs))]
+       (if (= tag attr-tag)
+         (if first-only
+           (first (:content attr))
+           (:content attr))
+         (recur (next attrs) tag first-only))))))
+
+(defn ecs-item-attrs-parse
+  [item attrs]
+  (if (empty? attrs)
+    item
+    (let [attr (first attrs)]
+      (def attr-value
+        (cond
+          (= (:tag attr) :ASIN) {:ASIN (first (:content attr))} 
+          (= (:tag attr) :ItemAttributes) {:Title (ecs-attr-value (:content attr) :Title)} 
+          (= (:tag attr) :SmallImage) {:SmallImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :MediumImage) {:MediumImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :LargeImage) {:LargeImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :DetailPageURL) {:DetailPageURL (first (:content attr))}))
+      (recur (if (nil? attr-value) item (conj item attr-value)) (next attrs)))))
+
+(defn ecs-item-parse [items xml-items] 
+  (if (empty? xml-items)
+    items
+    (recur 
+      (conj items (ecs-item-attrs-parse {} (:content (first xml-items)))) 
+      (next xml-items))))
+
+(defn ecs-item-search [search-index keywords]
+  (ecs-item-parse [] (filter 
+                       #(= :Item (% :tag))
+                       (:content 
+                         (first 
+                           (filter 
+                             #(= :Items (% :tag))
+                             (:content (item-search-map 
+                                         requester 
+                                         search-index 
+                                         keywords 
+                                         {"AssociateTag" "example-22"
+                                          "ResponseGroup" "Medium"}))))))))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6480/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

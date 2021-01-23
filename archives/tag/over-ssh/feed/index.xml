@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>over ssh &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/over-ssh/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:55:58 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>UbuntuでDAAP over SSHをやってみました</title>
+		<link>/archives/1812/</link>
+					<comments>/archives/1812/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 26 Oct 2009 02:20:50 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[daap]]></category>
+		<category><![CDATA[over ssh]]></category>
+		<category><![CDATA[Rhythmbox]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1812</guid>
+
+					<description><![CDATA[現在、自宅でiTunesやRhythmboxで音楽を聞く場合は、自宅内にあるDAAPサーバに繋げて音楽を聞いています。それで、外出先からも聞けないかと思い、やってみました。 sshで自宅ネットワークに ... <a href="/archives/1812/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、自宅でiTunesやRhythmboxで音楽を聞く場合は、自宅内にあるDAAPサーバに繋げて音楽を聞いています。それで、外出先からも聞けないかと思い、やってみました。</p>
+<p>sshで自宅ネットワークに繋げることは成功していたので、とりあえず、ポートフォワードの設定に[daapサーバのIP]:3689への転送設定を追加し、RhythmboxでDAAPサーバを追加・・・うん、楽曲が取得できませんでした。というよりも、接続できてない感じですね。</p>
+<p>そこで、ググってみると意外と情報が多く、あっさり見つけられました。</p>
+<p>まず、上記にも書いている通り、sshのポート転送設定にdaapサーバへの転送設定を追加します。</p>
+<pre lang="SHELL">
+ssh -o GatewayPorts=yes -C -N -f \
+-L [転送元ポート]:[DAAPサーバIP]:3689 \
+[接続先ホスト] -p [接続ポート] -l [接続ユーザ名]
+</pre>
+<p>sshにて、接続を確立した後に、下記のコマンドを実行し、DAAPサーバへマッピングを行います。これにより、DAAPサーバが検出されるようになります。</p>
+<pre lang="SHELL">
+avahi-publish-address -v -H [自マシンのホスト名].local -s "myhome firefly" _daap._tcp. [転送元ポート] &
+</pre>
+<p>とまぁ、大雑把にはこの様な感じになります。詳細については、下記の参考サイトを参照ください。まぁ、自分がすべて管理しているサーバなどであれば、この様なことをせずとも、ssh接続後に対象ディレクトリをマウントして音楽を聞けばいいとも思うんですけどね^^;まぁ、興味本位ということで。</p>
+<p>あ、ただ、DAAPサーバにパスワード（管理画面ではなく）をかけていると、Rhythmboxでは、パスワードを聞かれることなく、接続中になったまま反応がありませんでした。これは、クライアントの問題かもしれないので、後ほど色々試したいと思います。</p>
+<p>参考サイト：</p>
+<ul>
+<li><a href="https://nozell.com/blog/2006/11/29/access-a-remote-daap-share-by-tunneling-over-ssh-ubuntuedgy/">https://nozell.com/blog/2006/11/29/access-a-remote-daap-share-by-tunneling-over-ssh-ubuntuedgy/</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1812/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

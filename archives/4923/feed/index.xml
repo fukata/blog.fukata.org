@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン0.0.1をリリース	</title>
+	<atom:link href="/archives/4923/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/4923/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:55 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Odysseygate.com		</title>
+		<link>/archives/4923/comment-page-1/#comment-691</link>
+
+		<dc:creator><![CDATA[Odysseygate.com]]></dc:creator>
+		<pubDate>Wed, 13 Apr 2011 14:27:42 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=4923#comment-691</guid>
+
+					<description><![CDATA[&lt;strong&gt;「WordPress Media Flickr」が動かなくて困ってるらしいカイさんを救えるかもしれない「wp-flickr-press」...&lt;/strong&gt;
+
+WordPress 3.1 にしたカイさんが困っているみたい。 WordPressを3.1に更新したら愛用プラグイン「WordPress Media Flickr」がうまく動かない- カイ士伝 WordPressでFlickrの写真を連続で挿入できる「WordPress Media Flickr」は、これまでブログで何度も紹介しているし、イベントでもちょいちょい案内させてもらっているくらい愛用のプラグインなのですが、WordPress 3.1をインストールしたら挙動が変わってしまいました。 ぼくもカ...]]></description>
+			<content:encoded><![CDATA[<p><strong>「WordPress Media Flickr」が動かなくて困ってるらしいカイさんを救えるかもしれない「wp-flickr-press」&#8230;</strong></p>
+<p>WordPress 3.1 にしたカイさんが困っているみたい。 WordPressを3.1に更新したら愛用プラグイン「WordPress Media Flickr」がうまく動かない- カイ士伝 WordPressでFlickrの写真を連続で挿入できる「WordPress Media Flickr」は、これまでブログで何度も紹介しているし、イベントでもちょいちょい案内させてもらっているくらい愛用のプラグインなのですが、WordPress 3.1をインストールしたら挙動が変わってしまいました。 ぼくもカ&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

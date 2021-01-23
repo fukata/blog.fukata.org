@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>jude &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/jude/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>UbuntuでJUDEを動かしてみた</title>
+		<link>/archives/568/</link>
+					<comments>/archives/568/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 06 Aug 2008 17:33:07 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[jude]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[uml]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=568</guid>
+
+					<description><![CDATA[今作っているSNSのUMLをUbuntu上で起動しているJUDEで動かしてみました。 別にこれと言って動かない機能などは今のところなかったです。 いやぁ、それにしてもUMLって難しい。 視点をずらさな ... <a href="/archives/568/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="screenshot-jude-home-tatsuya-jobs-projects-alone-yomikaki-workspace-trunk1-docs-uml-umljude" href="https://farm6.static.flickr.com/5060/5476162978_ccd5e3578f_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-569 alignright" src="https://farm6.static.flickr.com/5060/5476162978_ccd5e3578f_m.jpg" alt="screenshot-jude-home-tatsuya-jobs-projects-alone-yomikaki-workspace-trunk1-docs-uml-umljude" width="200" height="138" /></a>今作っているSNSのUMLをUbuntu上で起動しているJUDEで動かしてみました。</p>
+<p>別にこれと言って動かない機能などは今のところなかったです。</p>
+<p>いやぁ、それにしてもUMLって難しい。</p>
+<p>視点をずらさないとようにしないと何を作ってるのかさっぱりわからなくなる＾＾；とりあえずフロント側と管理側のUMLを作成したので明日見せてみよう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/568/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

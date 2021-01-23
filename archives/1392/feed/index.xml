@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [JC]Struts2でjsp内でsessionの値の取得について	</title>
+	<atom:link href="/archives/1392/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/1392/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: tatsuya		</title>
+		<link>/archives/1392/comment-page-1/#comment-536</link>
+
+		<dc:creator><![CDATA[tatsuya]]></dc:creator>
+		<pubDate>Tue, 14 Jul 2009 22:42:16 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=1392#comment-536</guid>
+
+					<description><![CDATA[@&lt;a href=&quot;#comment-535&quot; rel=&quot;nofollow&quot;&gt;tukasa-reaさんへ&lt;/a&gt;: 
+
+そうそう、麗さんに言われて調べてみたら日にちが近かったんですよ。
+自分も他に予定（主に仕事ですけど＾＾；）がなければ行ってみようかな。]]></description>
+			<content:encoded><![CDATA[<p>@<a href="#comment-535" rel="nofollow">tukasa-reaさんへ</a>: </p>
+<p>そうそう、麗さんに言われて調べてみたら日にちが近かったんですよ。<br />
+自分も他に予定（主に仕事ですけど＾＾；）がなければ行ってみようかな。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: tukasa-rea		</title>
+		<link>/archives/1392/comment-page-1/#comment-535</link>
+
+		<dc:creator><![CDATA[tukasa-rea]]></dc:creator>
+		<pubDate>Tue, 14 Jul 2009 08:41:17 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=1392#comment-535</guid>
+
+					<description><![CDATA[この前言ってた「光が丘公園」のお祭り。
+18日からみたいだょ。
+↓
+http://www.tokyo-park.or.jp/park/format/info023.html
+俺も行ってみるかな。]]></description>
+			<content:encoded><![CDATA[<p>この前言ってた「光が丘公園」のお祭り。<br />
+18日からみたいだょ。<br />
+↓<br />
+<a href="http://www.tokyo-park.or.jp/park/format/info023.html" rel="nofollow ugc">http://www.tokyo-park.or.jp/park/format/info023.html</a><br />
+俺も行ってみるかな。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

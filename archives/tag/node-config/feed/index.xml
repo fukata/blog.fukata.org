@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>node-config &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/node-config/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>node.jsで環境別設定を行う「node-config」</title>
+		<link>/archives/6536/</link>
+					<comments>/archives/6536/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 26 Nov 2011 19:29:31 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[node-config]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6536</guid>
+
+					<description><![CDATA[lorenwest/node-config &#8211; GitHub node.jsのプログラムでも環境の切り分け設定が全然出来ていなかったので、今回は上記のnode-configというモジュール ... <a href="/archives/6536/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/lorenwest/node-config">lorenwest/node-config &#8211; GitHub</a></p>
+<p>node.jsのプログラムでも環境の切り分け設定が全然出来ていなかったので、今回は上記のnode-configというモジュールを使ってみる事にします。</p>
+<p>設定ファイルは、js, json, yamlで記述することができるようです。</p>
+<p>では、インストールから。モジュール名と違うので注意してください。</p>
+<pre lang="bash">
+$ npm install config
+</pre>
+<p>実際に環境別の設定ファイルを格納する場所ですが、nodeコマンドを実行したディレクトリにある「config」というディレクトリの中に格納する必要があります。</p>
+<p>例として、expressを使ったディレクトリ構成だと以下のようになります。</p>
+<pre>
+.
+├── app.js
+├── config # 環境別設定ファイル用ディレクトリ
+│   ├── default.js # デフォルト用
+│   ├── development.js # 開発環境用
+│   ├── test.js # テスト環境用
+│   └── production.js # 本番環境用
+├── node_modules
+├── package.json
+├── public
+├── routes
+└── views
+</pre>
+<p>上記の例では、設定ファイルの拡張子が「js」になっていますが、jsonまたはymlでも大丈夫です。</p>
+<p>ちなみに、各環境別設定ファイルの中身はjsの場合は下記のようになります。</p>
+<pre lang="javascript">
+module.exports = {
+  "DB": {
+    "name": "example_dev",
+    "host": "localhost"
+  }
+};
+</pre>
+<p>json, yamlの場合は、単にそれぞれのデータ形式で書けば良いだけです。</p>
+<p>実際に使う側では、こんな感じで使えます。</p>
+<pre lang="javascript">
+var config = require('config');
+console.log(config.DB.name);
+console.log(config.DB.host);
+</pre>
+<p>node-configは環境変数「NODE_ENV」の値を見て読み込む設定ファイルを決めています。ワンライナーで環境の指定と実行をする場合は、以下のようになります。</p>
+<pre lang="bash">
+$ NODE_ENV=development node app.js
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6536/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

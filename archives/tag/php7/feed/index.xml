@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PHP7 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/php7/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:14:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>練習がてらにh2o(ssl,mruby) + php7なdocker imageを作ってみた</title>
+		<link>/archives/7968/</link>
+					<comments>/archives/7968/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2016 06:21:33 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[docker]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[mruby]]></category>
+		<category><![CDATA[PHP7]]></category>
+		<category><![CDATA[SSL]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7968</guid>
+
+					<description><![CDATA[海外に居ても日本とほぼ同じ味の牛丼が食べられる幸せ。 週末、このブログサイトをdockerコンテナ使ったものに変えようかと思っていて練習がてらにdocker imageを使ってみた。 広告 表題のh2 ... <a href="/archives/7968/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7968/"><img src="https://farm6.staticflickr.com/5480/30668971073_f3ae78eac1_c.jpg" alt="PC061114" class="aligncenter"/></a></p>
+<p>海外に居ても日本とほぼ同じ味の牛丼が食べられる幸せ。<br />
+週末、このブログサイトをdockerコンテナ使ったものに変えようかと思っていて練習がてらにdocker imageを使ってみた。</p>
+<p><span id="more-7968"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>表題のh2o(ssl,mruby) + php7なdocker imageはこちら。ベースはalpine:edgeになっている。ビルドしていてalpinelinuxのホームページを見てみると22日に3.5が出たらしいのでdocker imageが公開されたらそっちで再度ビルドする。mysql,redisは公式イメージがあったからそれをそのまま使おうかと思ってるんだけどh2oに関しては公式がなかったのと大してDL数がない他人のやつを使うのも怖いので練習がてらに作ってみた。と言ってもほとんど拾ってきたDockerfileの継ぎ接ぎだけど。<br />
+<a href="https://hub.docker.com/r/fukata/h2o-php/">fukata/h2o-php &#8211; Docker Hub</a></p>
+<p>dockerさえ入ってればこれをpullしてrunすればWebサーバとphpの実行が出来る。</p>
+<p>今まで、vagrant + ansibleで環境構築していたんだけど今回docker触ってみて確かに便利だと分かったのでこれから積極的に使っていく。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7968/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm6.staticflickr.com/5480/30668971073_f3ae78eac1.jpg</image>
+	</item>
+		<item>
+		<title>PHP7.0.2にアップグレードした</title>
+		<link>/archives/7871/</link>
+					<comments>/archives/7871/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 13 Jan 2016 08:11:04 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[PHP7]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://fukata.org/?p=7871</guid>
+
+					<description><![CDATA[以前、サイトをSSL化したが今回は使用しているPHPのバージョンを5.5.9から7.0.2にアップグレードした。 広告 環境 Ubuntu 14.04 PHP 5.5.9-1ubuntu4.14 PH ... <a href="/archives/7871/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7871/"><img src="https://farm2.staticflickr.com/1707/24189587091_3c413258e0_c.jpg" alt="P1092544" class="aligncenter"/></a></p>
+<p>以前、サイトをSSL化したが今回は使用しているPHPのバージョンを5.5.9から7.0.2にアップグレードした。</p>
+<p><span id="more-7871"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<ul>
+<li>Ubuntu 14.04</li>
+<li>PHP 5.5.9-1ubuntu4.14</li>
+</ul>
+<h2>PHP7インストール</h2>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-upgrade-to-php-7-on-ubuntu-14-04">How To Upgrade to PHP 7 on Ubuntu 14.04 | DigitalOcean</a></p>
+<p>基本的には上記のページに書かれている方法でPHP7にアップグレードする事が出来る。</p>
+<p>下記はメモとしてphp5の時に使っていたパッケージのphp7版をインストールした時のログ。</p>
+<p><script src="https://gist.github.com/fukata/e04bb98ea96c97e9b3a8.js?file=install_php7.sh"></script></p>
+<h2>WordPress</h2>
+<p>ここまででデフォルトのWordPressであれば動いているはず。</p>
+<p>自分の環境ではWP_Cache_Objectでpecl-memcacheに依存している部分があり、pecl-memcacheのメンテナンスが長い事行われてなかったりphp7対応するのがめんどくさそうだったので下記のプラグインを使ってキャッシュストアをRedisに変更した。</p>
+<p><a href="https://wordpress.org/plugins/redis-cache/installation/">WordPress › Redis Object Cache « WordPress Plugins</a></p>
+<p>上記プラグインはphpredisに対応しているのでphpredisを下記の要領でビルドすれば使えるようになった。</p>
+<p><script src="https://gist.github.com/fukata/e04bb98ea96c97e9b3a8.js?file=install_phpredis.sh"></script></p>
+<p>再移動も忘れずにしておこう。</p>
+<h2>まとめ</h2>
+<p><a href="https://fukata.org/2015/12/31/https-by-lets-encrypt/">Let’s Encryptを使ってサイトをSSL(http2)化した | Tatsuya Blog</a></p>
+<p>前回は、下記の記事でサイトのSSL化を行ったが、やっと今回PHP7化を行うことが出来た。</p>
+<p>と言っても自分のサイトくらいであれば大したアクセスもなければ基本的にはnginxのキャッシュを返している事が多いのであまり目に見えてるような恩恵は受けられていないかもしれない。とりあえず、PHP7でサイトを動かせたのは良かった。</p>
+<p>次はなんだろう。。。ログを可視化とかしてみたいかな。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7871/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1707/24189587091_3c413258e0.jpg</image>
+	</item>
+	</channel>
+</rss>

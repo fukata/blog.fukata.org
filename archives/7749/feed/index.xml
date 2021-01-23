@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン2.1.0をリリース	</title>
+	<atom:link href="/archives/7749/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/7749/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:12 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7749/comment-page-1/#comment-935</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Wed, 02 Nov 2016 11:30:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7749#comment-935</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7749/comment-page-1/#comment-934&quot;&gt;ナツオカ&lt;/a&gt;.
+
+解決してよかったです。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7749/comment-page-1/#comment-934">ナツオカ</a>.</p>
+<p>解決してよかったです。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ナツオカ		</title>
+		<link>/archives/7749/comment-page-1/#comment-934</link>
+
+		<dc:creator><![CDATA[ナツオカ]]></dc:creator>
+		<pubDate>Wed, 02 Nov 2016 08:32:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7749#comment-934</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7749/comment-page-1/#comment-933&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+ご返信いただきありがとうございます。
+左上の空白について、理解いたしました。
+
+そして申し訳ありません…！
+いただいた返信を見て気づいたのですが、肝心のコードを入れておりませんでした。
+コードを入れたところ、きちんと表示されるようになりました。
+
+使用テーマの関係で少し元の形から変えていますが、以下のページです。
+https://mnpk.jp/
+
+そして「Use Post Thumbnail」の意味についても「NoのときはFlickr画像を使い、投稿画面で設定したサムネイルは使わない」という真逆の勘違いをしておりました。
+
+お騒がせしてしまい、またお手数をおかけしてしまい、大変申し訳ありませんでした。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7749/comment-page-1/#comment-933">Tatsuya Fukata</a>.</p>
+<p>ご返信いただきありがとうございます。<br />
+左上の空白について、理解いたしました。</p>
+<p>そして申し訳ありません…！<br />
+いただいた返信を見て気づいたのですが、肝心のコードを入れておりませんでした。<br />
+コードを入れたところ、きちんと表示されるようになりました。</p>
+<p>使用テーマの関係で少し元の形から変えていますが、以下のページです。<br />
+<a href="https://mnpk.jp/" rel="nofollow ugc">https://mnpk.jp/</a></p>
+<p>そして「Use Post Thumbnail」の意味についても「NoのときはFlickr画像を使い、投稿画面で設定したサムネイルは使わない」という真逆の勘違いをしておりました。</p>
+<p>お騒がせしてしまい、またお手数をおかけしてしまい、大変申し訳ありませんでした。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7749/comment-page-1/#comment-933</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Wed, 02 Nov 2016 04:34:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7749#comment-933</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7749/comment-page-1/#comment-931&quot;&gt;ナツオカ&lt;/a&gt;.
+
+現在調査中で何点か質問させてください。
+
+1. サムネイルはどのように表示していますか。この記事内にある下記のようなコードでしょうか？
+
+
+もし、可能であればサムネイルが正常に表示されなかった記事のURLまたは記事部分のhtml等をいただく事は可能でしょうか？もし頂けるようであれば、
+tatsuya.fukata@gmail.com 宛まで送っていただけると非常に助かります。
+
+&#062; もう一度サムネイル画像設定画面を見てみると、一番左上の空白の画像(?)を選択した状態になります。
+こちらですが、無理矢理flickrの画像をサムネイルとして使用しているので正常な挙動になります。
+
+&#062; また、「Use Post Thumbnail」がNoの際に、wp-flickr-pressが記事内で最初の画像であったとしても、その後にメディアから挿入した画像がある場合はそちらがサムネイル画像として優先されてしまいます。
+修正したものを v2.3.7 としてリリースしましたので、こちらで再度試していただけますでしょうか。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7749/comment-page-1/#comment-931">ナツオカ</a>.</p>
+<p>現在調査中で何点か質問させてください。</p>
+<p>1. サムネイルはどのように表示していますか。この記事内にある下記のようなコードでしょうか？</p>
+<p>もし、可能であればサムネイルが正常に表示されなかった記事のURLまたは記事部分のhtml等をいただく事は可能でしょうか？もし頂けるようであれば、<br />
+<a href="mailto:tatsuya.fukata@gmail.com">tatsuya.fukata@gmail.com</a> 宛まで送っていただけると非常に助かります。</p>
+<p>&gt; もう一度サムネイル画像設定画面を見てみると、一番左上の空白の画像(?)を選択した状態になります。<br />
+こちらですが、無理矢理flickrの画像をサムネイルとして使用しているので正常な挙動になります。</p>
+<p>&gt; また、「Use Post Thumbnail」がNoの際に、wp-flickr-pressが記事内で最初の画像であったとしても、その後にメディアから挿入した画像がある場合はそちらがサムネイル画像として優先されてしまいます。<br />
+修正したものを v2.3.7 としてリリースしましたので、こちらで再度試していただけますでしょうか。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7749/comment-page-1/#comment-932</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Mon, 31 Oct 2016 05:03:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7749#comment-932</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7749/comment-page-1/#comment-931&quot;&gt;ナツオカ&lt;/a&gt;.
+
+貴重な報告ありがとうございます！
+
+検証してみますので少々お待ち下さい。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7749/comment-page-1/#comment-931">ナツオカ</a>.</p>
+<p>貴重な報告ありがとうございます！</p>
+<p>検証してみますので少々お待ち下さい。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ナツオカ		</title>
+		<link>/archives/7749/comment-page-1/#comment-931</link>
+
+		<dc:creator><![CDATA[ナツオカ]]></dc:creator>
+		<pubDate>Sat, 29 Oct 2016 04:46:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7749#comment-931</guid>
+
+					<description><![CDATA[はじめまして、natsuocaと申します。
+wp-flickr-pressが手放せないほどいつも便利に使わせていただいています。
+
+本記事のアイキャッチ画像機能についてご報告ですが、「Feature ON/OFF」がONで「Extract Thumbnail in Post」を有効にしているとき、投稿画面の「Use Post Thumbnail」をYesにしてサムネイル画像を設定してもサムネイルが表示されませんでした。もう一度サムネイル画像設定画面を見てみると、一番左上の空白の画像(?)を選択した状態になります。
+
+また、「Use Post Thumbnail」がNoの際に、wp-flickr-pressが記事内で最初の画像であったとしても、その後にメディアから挿入した画像がある場合はそちらがサムネイル画像として優先されてしまいます。
+WordPressのバージョンは4.6.1です。
+
+サムネイル画像機能もとても素晴らしい機能なので、有り難く活用しております。
+このあたりが気になったので、ご報告させていただきました。
+もし、私の設定ミスや仕様の認識違いであったら申し訳ありません。]]></description>
+			<content:encoded><![CDATA[<p>はじめまして、natsuocaと申します。<br />
+wp-flickr-pressが手放せないほどいつも便利に使わせていただいています。</p>
+<p>本記事のアイキャッチ画像機能についてご報告ですが、「Feature ON/OFF」がONで「Extract Thumbnail in Post」を有効にしているとき、投稿画面の「Use Post Thumbnail」をYesにしてサムネイル画像を設定してもサムネイルが表示されませんでした。もう一度サムネイル画像設定画面を見てみると、一番左上の空白の画像(?)を選択した状態になります。</p>
+<p>また、「Use Post Thumbnail」がNoの際に、wp-flickr-pressが記事内で最初の画像であったとしても、その後にメディアから挿入した画像がある場合はそちらがサムネイル画像として優先されてしまいます。<br />
+WordPressのバージョンは4.6.1です。</p>
+<p>サムネイル画像機能もとても素晴らしい機能なので、有り難く活用しております。<br />
+このあたりが気になったので、ご報告させていただきました。<br />
+もし、私の設定ミスや仕様の認識違いであったら申し訳ありません。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

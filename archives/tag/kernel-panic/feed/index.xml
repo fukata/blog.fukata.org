@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>kernel panic &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/kernel-panic/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>RAID10復旧中にkernel panic発生</title>
+		<link>/archives/4369/</link>
+					<comments>/archives/4369/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 22 May 2010 17:31:33 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[kernel panic]]></category>
+		<category><![CDATA[RAID1]]></category>
+		<category><![CDATA[RAID10]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4369</guid>
+
+					<description><![CDATA[今日の福岡はあいにくの雨だったため、一日自宅にこもって映画観たりVMいじったりしていました。そして、昨日もファイルサーバの容量が1GB程度になり不要なファイルを削除したのですが、そろそろ本当に増築作業 ... <a href="/archives/4369/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今日の福岡はあいにくの雨だったため、一日自宅にこもって映画観たりVMいじったりしていました。そして、昨日もファイルサーバの容量が1GB程度になり不要なファイルを削除したのですが、そろそろ本当に増築作業をする必要がありそうなので、次回ファイルサーバを組む時にはRAID1ではなくRAID10(1+0)にする予定なのでVM上で構築手順の確認と記録を行っていました。</p>
+<p>構築自体は出来て、復旧をするために一度VMを停止してHDDを一つ削除して新たにHDDを追加しなおしてRAID1のMDデバイスのresyncを行っていると突然コンソールが切れて一向に立ち上がらない。何か起きたのかと思ってVMWareコンソールにて確認すると下記の文字が。</p>
+<blockquote><p>Kernel Panic not syncing: Out of memory and no killable processes</p></blockquote>
+<p>お！？</p>
+<p>会社のマシンがkernel panicを起こしたのは見たことがありましたが、実際に自分のパソコンで見るのは今回が初めてです。</p>
+<p>対象のVMにはメモリを256MBしか割り当ててなかったのでメモリが足りなかったようです。500MBに上げて再起動するも同じ。1024MBでもだめ。結局2048MBまで上げてやっと立ち上がりました。RAID1のMDデバイスのresyncってこんなにメモリを使うの？初めて復旧作業を行なったので少し驚きました。たかだか20GBのHDDをresyncするのにこんなにメモリが必要だなんて・・・。</p>
+<p>結局、メモリを2048MBまで上げて正常にresyncも終わり、ファイルも正常に復旧されていました。手順等は、実際にファイルサーバを増築した際に一緒に載せたいと思います。</p>
+<p>でも、kernel panicを起こしたのがVMで良かったです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4369/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

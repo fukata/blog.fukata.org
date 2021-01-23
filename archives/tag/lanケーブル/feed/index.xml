@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>LANケーブル &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/lan%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>和を感じるLANケーブル「BRAID LAN CABLE」</title>
+		<link>/archives/4649/</link>
+					<comments>/archives/4649/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 04 Aug 2010 14:51:31 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Harmonet]]></category>
+		<category><![CDATA[LANケーブル]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4649</guid>
+
+					<description><![CDATA[最近、ウィークリーマンションやホテルに泊まることが多く、宿泊先では大体LANケーブルの有線接続が可能なのですが、LANケーブルが異常に短かったり、変な位置にLANケーブルの差込口が付いていたりするので ... <a href="/archives/4649/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、ウィークリーマンションやホテルに泊まることが多く、宿泊先では大体LANケーブルの有線接続が可能なのですが、LANケーブルが異常に短かったり、変な位置にLANケーブルの差込口が付いていたりするので、ちょっと長めLANケーブルを買うことにしました。</p>
+<p>持ち運ぶLANケーブルと言えば、巻き取り式のものがありますが、どうも耐久性に不安があるので今回はこれらは避けます。</p>
+<p>で、巻き取り式以外のLANケーブルだと細いやつもありますけど、表面の素材がビニールなので絡みやすいのが気になっていて絡みにくいイヤホン的な素材のものはないものかと探していたら見つけました。</p>
+<p>BRAID LANケーブル</p>
+<p>両端のLANのコネクタ以外は本当に紐かと間違うくらいの出来です。また、素材もビニールではないので絡みにくいです。また、かなり柔らかいのでコンパクトにまとめることもできます。</p>
+<p>カバンの中に入れて持ち運ぶ時の心配事で絡みやすさともう一つあるのが、コネクタ部分のツメが折れてしまうことです。LANケーブルのコネクタ部分のツメというのは非常に無防備で仕事でパソコンを使うことがある人はよく、ツメが折れたLANケーブルを見たことがあるのではないでしょうか。</p>
+<p>そんな折れやすいツメを守るためにBRAID LANケーブルにはSTRACAPというコネクタにはめるキャップのようなものが付いています。これを挿していればカバンの中に入れていてもツメが引っかかったりすることもないので折れる可能性がかなり低くなります。また、キャップはストラップのような感じでケーブルに付いているので失くすということも少ないと思います。</p>
+<p>値段も通常のLANケーブルに比べてそこまで高くないので普段持ち歩くLANケーブルとしては良いのではないでしょうか。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4649/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

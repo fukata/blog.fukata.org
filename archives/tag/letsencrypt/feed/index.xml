@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Let&#8217;sEncrypt &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/letsencrypt/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:03:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Let&#8217;s Encryptを使ってサイトをSSL(http2)化した</title>
+		<link>/archives/7823/</link>
+					<comments>/archives/7823/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 31 Dec 2015 06:36:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[http2]]></category>
+		<category><![CDATA[Let'sEncrypt]]></category>
+		<category><![CDATA[SSL]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7823</guid>
+
+					<description><![CDATA[http2化を試したいなと思っていたもののなかなか時間が取れずに遅れてしまったが、ちょっと時間が出来たのでLet&#8217;s Encryptを使ってサイト(WordPress)をSSL化した。また ... <a href="/archives/7823/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7823/"><img src="https://farm1.staticflickr.com/635/22565589480_2feb7a0d57_c.jpg" alt="PB031432" class="aligncenter"/></a></p>
+<p>http2化を試したいなと思っていたもののなかなか時間が取れずに遅れてしまったが、ちょっと時間が出来たのでLet&#8217;s Encryptを使ってサイト(WordPress)をSSL化した。また、nginxも1.9.9にアップグレードしてhttp2対応した。</p>
+<p><span id="more-7823"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<ul>
+<li>Ubuntu 14.04 LTS</li>
+<li>nginx 1.9.9</li>
+<li>PHP 5.5.9-1ubuntu4.14</li>
+</ul>
+<h2>Let&#8217;s Encrypt</h2>
+<p><a href="https://letsencrypt.org/" title="Let's Encrypt - Free SSL/TLS Certificates">Let&#8217;s Encrypt &#8211; Free SSL/TLS Certificates</a></p>
+<p>Let&#8217;s Encrypt自体の設定は非常に簡単だった。</p>
+<p>証明書を作成する際にport 80を使うようなので80番ポートをlistenしてるプロセス(apacheやnginxなど)は停止しておく必要がある。</p>
+<p><script src="https://gist.github.com/fukata/77d025e95a83235dbc0c.js?file=letsencrypt_new.sh"></script></p>
+<p>すると、 <strong>/etc/letsencrypt/live/fukata.org/</strong> 以下に <strong>cert.pem、chain.pem、fullchain.pem、privkey.pem</strong> が生成されるので後はコレをnginxに設定すればいい。本番環境はAWSばっかり使っていたのでSSLの設定方法を忘れていた。</p>
+<p>こんな感じに設定するだけでいい。http2を有効にするにはnginx 1.9.5以上で <strong>&#8211;with-http_v2_module</strong> を有効にしてコンパイルしないといけない。サイトで使っているnginxもコレを機に1.9.7から1.9.9にアップグレードしておいた。</p>
+<p>ansibleでplaybook作っておいたのでコンパイルオプション変えて再実行するだけで完了するのはやっぱり楽。</p>
+<p><script src="https://gist.github.com/fukata/77d025e95a83235dbc0c.js?file=nginx-site.conf"></script></p>
+<p>これで、nginxを再起動すればSSL(http2)に対応しているはずだ。</p>
+<h2>WordPress</h2>
+<p>Let&#8217;s Encryptより手間取ったのがWordPressのSSL化。結論から言えば、プラグインなどをあまり入れてないシンプルな環境であれば難なく動作すると思う。</p>
+<h3>記事本文中のリンクのhttps化</h3>
+<p>こんな感じのスクリプトを書いてゴリッと対応した。個人のブログだしhttps化して表示されなくなったものに関しては無視！マルチサイトを使っていたので複数のwp_postsにも対応してる。</p>
+<p>超久しぶりにFW無しでmysql接続するphp書いた。</p>
+<p><script src="https://gist.github.com/fukata/77d025e95a83235dbc0c.js?file=convert_https.php"></script></p>
+<h3>is_ssl関数</h3>
+<p>当初、X-Forwarded-Proto &#8220;https&#8221;をphp側に渡せば良いかと思って設定した所、管理画面に入ろうとすると無限ループに。。。そこでやっと調べ始めるとどうやらis_ssl関数に問題があるようでWordPress v4.4時点の実装は下記のようになっている。</p>
+<p><script src="https://gist.github.com/fukata/77d025e95a83235dbc0c.js?file=functions-is_ssl.php"></script></p>
+<p>ということで、nginxのphp-fpm部分の設定に <strong>fastcgi_param  HTTPS &#8220;on&#8221;;</strong> を追加して無事成功。</p>
+<p>ネットを調べるとis_sslをいじって解決している人が何人かいるが可能ならhttpサーバからHTTPS情報なりを渡してあげたほうが将来functions.phpが更新されて困らないのでオススメ。</p>
+<p><script src="https://gist.github.com/fukata/77d025e95a83235dbc0c.js?file=nginx-php-fpm.conf"></script></p>
+<h3>Memcached</h3>
+<p>すっかり使ってるのを忘れていたMemcached。DBの内容を削除してもnginxのキャッシュを削除しても内容が変わらなかったをしばらく考えてそういえばこいつがいたと思い出し再起動することで無事、記事内容が変更したものに変わった。</p>
+<h3>謎のhttps -> httpリダイレクト</h3>
+<p>なぜか、php側からhttps -> httpへリダイレクトしておりどこからリダイレクトされてるのか分からなかったので <strong>wp-config.php</strong> にて <strong>WP_DEBUG, WP_DEBUG_DISPLAY</strong> を有効にし、さらに <strong>wp-includes/pluggable.php</strong> にある wp_redirect関数に <strong>print_r(debug_backtrace());</strong> を仕込んでどこから呼ばれてるのかを調査。</p>
+<p>その結果、別に必要そうじゃなかったプラグインから呼ばれてたのでそのプラグインを無効化した。</p>
+<p>無事リダイレクトされなくなった！</p>
+<h2>まとめ</h2>
+<p>Let&#8217;s Encryptで非常に手軽にSSL化出来るので皆もSSL(http2)対応やろう！</p>
+<p>SSL証明書の有効期間が90日しかないので次回は無事更新出来るか試す。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7823/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/635/22565589480_2feb7a0d57.jpg</image>
+	</item>
+	</channel>
+</rss>

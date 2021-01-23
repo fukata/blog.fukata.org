@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>NAS &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/nas/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>IO-DATAから鍵が届いた</title>
+		<link>/archives/7328/</link>
+					<comments>/archives/7328/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 29 Nov 2012 17:36:31 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[HDL-GT]]></category>
+		<category><![CDATA[IO-DATA]]></category>
+		<category><![CDATA[NAS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7328</guid>
+
+					<description><![CDATA[HDL-GT4.0というNASをもらったんですが、HDDを取り替える際に必要な鍵が紛失していたので、IO-DATAのサポートセンターにその旨を伝えたところ、なんと無償で提供してくれるとのこと。 太っ腹 ... <a href="/archives/7328/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.iodata.jp/product/hdd/lanhdd/hdl-gt/" title="HDL-GT4.0">HDL-GT4.0</a>というNASをもらったんですが、HDDを取り替える際に必要な鍵が紛失していたので、IO-DATAのサポートセンターにその旨を伝えたところ、なんと無償で提供してくれるとのこと。</p>
+<p>太っ腹だなIO-DATA</p>
+<p><a href="https://www.flickr.com/photos/fukata/8229366205" target="_blank" title="鍵"><img src="https://farm9.staticflickr.com/8057/8229366205_c5db634ff2.jpg" alt="鍵" class="aligncenter"/></a></p>
+<p>そして、その鍵が今日到着しました！</p>
+<p>コレで自宅のファイルサーバ事情が一気に改善します（たぶん）</p>
+<p>予定では2TB*4でRAID5を作成して6TBのファイルサーバにします。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7328/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8057/8229366205_c5db634ff2.jpg</image>
+	</item>
+	</channel>
+</rss>

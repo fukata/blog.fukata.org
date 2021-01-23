@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Motorola Droid Pro &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/motorola-droid-pro/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Droid PRO 4.6.8.XT610.Verizon.en.USの変更点</title>
+		<link>/archives/6315/</link>
+					<comments>/archives/6315/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 16 Oct 2011 23:54:36 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Droid Pro]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6315</guid>
+
+					<description><![CDATA[Motorola DROID Pro Gingerbread update changelog posted on Verizon support site &#124; PhoneDog 詳しい変更点について ... <a href="/archives/6315/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.phonedog.com/2011/10/12/motorola-droid-pro-gingerbread-update-changelog-posted-on-verizon-support-site/">Motorola DROID Pro Gingerbread update changelog posted on Verizon support site | PhoneDog</a></p>
+<p>詳しい変更点については上記のページを参照してもらうとして、ここではいくつか気になった機能のスクリーンショットを載せておきます。</p>
+<p><span id="more-6315"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>Dock Iconのカスタマイズ<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251969878"><img src="https://farm7.static.flickr.com/6104/6251969878_d2afccbe01.jpg" alt="20111017083943"  class='aligncenter'/></a></p>
+<p>ホーム一覧<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251897720"><img src="https://farm7.static.flickr.com/6047/6251897720_27d5e92080.jpg" alt="20111017064636"  class='aligncenter'/></a></p>
+<p>アプリ一覧<br />
+マーケットへのアイコンとグループが追加されました。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251897516"><img src="https://farm7.static.flickr.com/6214/6251897516_97f7266e19.jpg" alt="20111017064443"  class='aligncenter'/></a></p>
+<p>アプリをグループに分ける事ができるようになりました。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251371113"><img src="https://farm7.static.flickr.com/6093/6251371113_f5db9d27d5.jpg" alt="20111017064531"  class='aligncenter'/></a></p>
+<p>「直近にしようしたアプリ」グループの表示<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251371065"><img src="https://farm7.static.flickr.com/6239/6251371065_9e9c730315.jpg" alt="20111017064558"  class='aligncenter'/></a></p>
+<p>テキストのコピー<br />
+以前は単に選択した範囲が表示されるだけでしたが、カーソルが表示されるようになり、より選択がしやすくなりました。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251996952"><img src="https://farm7.static.flickr.com/6115/6251996952_ab328a11ab.jpg" alt="20111017084432"  class='aligncenter'/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6315/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Droid PRO v2.3.3のRoot権限奪取</title>
+		<link>/archives/6306/</link>
+					<comments>/archives/6306/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 16 Oct 2011 14:56:19 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Droid Pro]]></category>
+		<category><![CDATA[root]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6306</guid>
+
+					<description><![CDATA[先日のアップデートでDroid PROもやっとv2.3.3になりました。 アプリを開発しているとキャプチャを撮る事が多いので、今回も早速取ってみました。結果的に言えば呆気無く取ることが出来ました。 広 ... <a href="/archives/6306/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日のアップデートでDroid PROもやっとv2.3.3になりました。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6249572087"><img src="https://farm7.static.flickr.com/6100/6249572087_bc42ccee37.jpg" alt="DROID PRO v2.3.3システム情報"  class='aligncenter'/></a></p>
+<p>アプリを開発しているとキャプチャを撮る事が多いので、今回も早速取ってみました。結果的に言えば呆気無く取ることが出来ました。</p>
+<p><span id="more-6306"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>ここでは、Widnows向けにRoot権限の取得方法を書いておきます。Linux, Macの方は下記にある引用元の記事を参照してください。</p>
+<ol>
+<li>Motorola端末用のドライバをインストール [<a href="https://www.mediafire.com/?71c12qc4a1svqza">32bit</a>] [<a href="https://www.mediafire.com/?8rb7bpvp2b9vy2f">64bit</a>]</li>
+<li>MotorolaOneClickRoot_psouza4を<a href="https://www.mediafire.com/?g226n7as6cb1y6e">ダウンロード</a>し、展開</li>
+<li>端末の設定 -> アプリケーション -> 開発にあるUSBデバッグをチェック</li>
+<li>PCにCharge Onlyで接続</li>
+<li>MotorolaOneClickRoot.exeを実行</li>
+<li>3回ほど再起動したのち、Root権限が取得できていれば成功</li>
+</ol>
+<p>引用元：<br />
+<a href="https://techflipper.com/root-motorola-droid-3x-x2cliqcliq2-on-android-2-3-4-gingerbread-with-oneclick/">Motorola Droid 3,X, X2,Cliq,Cliq2 On Android 2.3.4 Gingerbread With OneClick [ Windows, Linux and OS x ] | TechFlipper</a></p>
+<h3>スクリーンショット</h3>
+<p>Root権限は無事取得できたのですが、スクリーンショットを撮った時に色がおかしくなってしまうようになりました。多分コレはアプリ側の問題だと思うので、そのうち対応されるんじゃないかと思います。下記のスクリーンショットは<a href="https://market.android.com/details?id=com.edwardkim.android.screenshotitfull&#038;feature=search_result">ScreenshotIt</a>を使っています。</p>
+<p>ちなみに、カメラについては正常な色合いのまま保存出来ることは確認しました。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6251949908"><img src="https://farm7.static.flickr.com/6113/6251949908_c3795c4b13.jpg" alt="20111016232738"  class='aligncenter'/></a></p>
+<p>他のアプリでは正常に撮る事ができるかもしれないので、もし正常に撮ることが出来るアプリがあれば是非教えてもらえると助かります。</p>
+<p><strong>追記：2011-11-17 08:13</strong><br />
+ScreenshotItのオプションにある「<strong>Invert Colors</strong>」にチェックを入れると正常に撮れるようになりました。<br />
+<a href="https://www.flickr.com/photos/45259648@N06/6251897840"><img src="https://farm7.static.flickr.com/6040/6251897840_c230cbb9e9.jpg" alt="20111017064136"  class='aligncenter'/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6306/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]Droid Pro(sv3.8.7)のroot化</title>
+		<link>/archives/5625/</link>
+					<comments>/archives/5625/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 25 Apr 2011 06:24:37 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Motorola Droid Pro]]></category>
+		<category><![CDATA[root]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5625</guid>
+
+					<description><![CDATA[先日、Motorola Droid Proの公式アップデートが降ってき、System Version 3.8.7となりました。 DROID Pro Update to Version 3.8.7 is ... <a href="/archives/5625/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日、Motorola Droid Proの公式アップデートが降ってき、System Version 3.8.7となりました。</p>
+<p><a href="https://www.droid-life.com/2011/04/22/droid-pro-update-to-version-3-8-7-is-live/">DROID Pro Update to Version 3.8.7 is Live! &#8211; Droid Life: A Droid Community Blog</a></p>
+<p>その結果、root化のためのアプリであるz4rootがクラッシュするようになり、z4rootによるroot化ができなくなりました。</p>
+<p>今はなんとかroot化に成功しました。かなり久しぶりにWindows7を起動しました。</p>
+<p><span id="more-5625"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>色々調べてみるとSuperOneClickというアプリを使えば、3.8.7のアップデート後でもrootを取得出来たという報告を見つけました。</p>
+<p><a href="https://forum.xda-developers.com/showthread.php?t=1035816">Droid Pro Update &#8230; does it support root? &#8211; xda-developers</a></p>
+<blockquote><p>I used SuperOneClick 1.7 to get root again after apply this update.
+</p></blockquote>
+<p>おぉ。ということで、早速Windowsを起動してSuperOneClickのダウンロードとインストールを行います。ダウンロードは下記から。</p>
+<p><a href="https://forum.xda-developers.com/showthread.php?t=803682">[APP]SuperOneClick v1.9.1 (Root, Unroot, Enable Non-Market App) &#8211; xda-developers</a></p>
+<p>ちなみに今回自分が使ったのは、「SuperOneClickv1.9.1-ShortFuse.Drivers.rar」です。これで、root化も行えました。</p>
+<p>ダウンロード後、SuperOneClickを起動して、Rootボタンを押してみるもWaiting for device&#8230;でフリーズしてしまい、どうしたものかと思ったものの、</p>
+<blockquote><p>adb.exe kill-server<br />
+adb.exe devices<br />
+adb.exe start-server
+</p></blockquote>
+<p>とコマンドプロンプトから直接確認しても表示されなかったので、ドライバ回りなのかなとDroid Proのドライバを探してみたところ、下記にありました。</p>
+<p><a href="https://www.verizon-cellphones.org/motorola-droid-pro-usb-and-pc-drivers-download.html">Motorola Droid Pro USB and PC Drivers download | Verizon Cell Phones</a></p>
+<p>上記の「Motorola Droid Pro USB Driver」のリンクからファイルをダウンロードし、インストールします。Moto Connectというのがインストールされると思います。インストール後、再度先ほどのコマンドで端末が接続されているか確認したところ、無事、認識することができました。</p>
+<p>認識が確認できたところで、もう一度SuperOneClickでroot取得を試みたらあっさり完了しました。完了後は端末の方を再起動すれば全てが完了です。</p>
+<p>下記、今回rootを取得したバージョンとSuperOneClickのログです。</p>
+<p>SuperOneClickのログ</p>
+<blockquote><p>
+SuperOneClick v1.9.1.0<br />
+Checking drivers&#8230;</p>
+<p>Killing ADB Server&#8230;</p>
+<p>OK</p>
+<p>Starting ADB Server&#8230;<br />
+* daemon not running. starting it now on port 5037 *<br />
+* daemon started successfully *</p>
+<p>OK</p>
+<p>Waiting for device&#8230;</p>
+<p>OK</p>
+<p>Getting OS Version&#8230;<br />
+2.2.1<br />
+OK</p>
+<p>2.2.1<br />
+Pushing psneuter&#8230;<br />
+2291 KB/s (585731 bytes in 0.249s)</p>
+<p>OK</p>
+<p>chmod psneuter&#8230;</p>
+<p>OK</p>
+<p>Running psneuter&#8230;<br />
+OK</p>
+<p>***IF IT KEEPS LOOPING, TRY DISABLING USB DEBUGGING NOW***</p>
+<p>Killing ADB Server&#8230;</p>
+<p>OK</p>
+<p>Starting ADB Server&#8230;<br />
+* daemon not running. starting it now on port 5037 *<br />
+* daemon started successfully *</p>
+<p>OK</p>
+<p>Waiting for device&#8230;</p>
+<p>OK</p>
+<p>Running psneuter&#8230;<br />
+ROOTED</p>
+<p>Pushing busybox&#8230;<br />
+1478 KB/s (1062992 bytes in 0.702s)</p>
+<p>OK</p>
+<p>chmod busybox&#8230;</p>
+<p>OK</p>
+<p>Getting mount path&#8230;<br />
+/dev/block/mmcblk1p21<br />
+OK</p>
+<p>Remounting system with read-write access&#8230;</p>
+<p>OK</p>
+<p>Pushing su-v2&#8230;<br />
+548 KB/s (26264 bytes in 0.046s)</p>
+<p>OK</p>
+<p>chmod su&#8230;</p>
+<p>OK</p>
+<p>Pushing Superuser.apk&#8230;<br />
+1025 KB/s (196521 bytes in 0.187s)</p>
+<p>OK</p>
+<p>Creating /system/xbin&#8230;<br />
+mkdir failed for /system/xbin, File exists<br />
+OK</p>
+<p>Checking for busybox</p>
+<p>OK</p>
+<p>Remounting system with read-only access&#8230;</p>
+<p>OK</p>
+<p>Running a SU test&#8230;<br />
+Success!<br />
+Don&#8217;t forget to reboot!
+</p></blockquote>
+<p>DROID PRO sv3.8.7<br />
+<a href="https://www.flickr.com/photos/45259648@N06/5652796276"><img src="https://farm6.static.flickr.com/5063/5652796276_c550d829d3.jpg" alt="DROID PRO 3.8.7" class='aligncenter'/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5625/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Andorid]DLNAクライアントを使ってみた</title>
+		<link>/archives/5128/</link>
+					<comments>/archives/5128/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 01 Jan 2011 14:05:02 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[`]]></category>
+		<category><![CDATA[DLNA]]></category>
+		<category><![CDATA[mediatomb]]></category>
+		<category><![CDATA[Motorola Droid Pro]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5128</guid>
+
+					<description><![CDATA[Droid Proには標準でDLNAクライアントアプリが付属しているので早速試してみました。 DLNA用のメディアサーバとしては、Ubuntuに下記のアプリをインストールして起動するだけで、WEBの管 ... <a href="/archives/5128/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Droid Proには標準でDLNAクライアントアプリが付属しているので早速試してみました。</p>
+<p>DLNA用のメディアサーバとしては、Ubuntuに下記のアプリをインストールして起動するだけで、WEBの管理画面にアクセスし、メディアとして認識させたいディレクトリを選択するだけで、後は非同期でメディアとして追加してくれます。</p>
+<p><a href="https://wiki.ubuntulinux.jp/UbuntuTips/Server/DLNAserver">DLNAサーバで、動画、音楽を家電で再生 &#8211; Ubuntu Japanese Wiki</a></p>
+<p>詳細は下記から</p>
+<p><span id="more-5128"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://ja.wikipedia.org/wiki/Digital_Living_Network_Alliance">Digital Living Network Alliance &#8211; Wikipedia</a></p>
+<p>DLNAについて詳しい説明はwikipedia等を参照してください。</p>
+<p>簡単に言えば、自宅のサーバ内にある音楽や動画をテレビやDLNAに対応した機器で再生ができるというものです。で、その再生機器としてDroid Proが対応しています。利用方法も本当に簡単なので導入すると寝る前にちょっと布団の中で聞きたいという方には便利だと思います。</p>
+<p>Droid Proでの使い方は至って簡単で、上記の「mediatomb」をサーバで起動するとDroid Pro側で自動的に認識し、メディアサーバ一覧に表示されるので、追加したメディアサーバをクリックするとアルバム一覧、再生可能なファイル一覧が表示されるのでクリックするとすぐに再生されます。</p>
+<p>音声ファイルに関してはストリーミング再生されますが、動画に関しては一旦端末側にコピーが必要です。</p>
+<p>以下、スクリーンショット一覧です。</p>
+<p>DLNAクライアントアプリ<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5311640357'><img src='https://farm6.static.flickr.com/5165/5311640357_b9890ec37d.jpg' alt='DLNAクライアントアプリ' class='aligncenter' /></a></p>
+<p>DLNA メニュー<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230516'><img src='https://farm6.static.flickr.com/5286/5312230516_9084ebd9d3.jpg' alt='DLNA メニュー' class='aligncenter' /></a></p>
+<p>DLNA メディアサーバ一覧<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5311640301'><img src='https://farm6.static.flickr.com/5123/5311640301_c33ccce6da.jpg' alt='DLNA メディアサーバ一覧' class='aligncenter' /></a></p>
+<p>DLNA フォルダ一覧<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230546'><img src='https://farm6.static.flickr.com/5290/5312230546_401514467b.jpg' alt='DLNA フォルダ一覧' class='aligncenter' /></a></p>
+<p>DLNA アルバム選択<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230594'><img src='https://farm6.static.flickr.com/5206/5312230594_7977b40aee.jpg' alt='DLNA アルバム選択' class='aligncenter' /></a></p>
+<p>DLNA 音声再生<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5311640329'><img src='https://farm6.static.flickr.com/5204/5311640329_7627b0b54e.jpg' alt='DLNA 音声再生' class='aligncenter' /></a></p>
+<p>DLNA 動画コピー<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5312230574'><img src='https://farm6.static.flickr.com/5164/5312230574_8ab48b2946.jpg' alt='DLNA 動画コピー' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5128/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

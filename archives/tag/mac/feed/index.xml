@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mac &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mac/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 09 Sep 2017 06:03:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Mac標準のスクリーンショットで特定のウィンドウだけを指定する方法</title>
+		<link>/archives/8874/</link>
+					<comments>/archives/8874/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2017 05:49:58 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<category><![CDATA[スクリーンショット]]></category>
+		<guid isPermaLink="false">/?p=8874</guid>
+
+					<description><![CDATA[誰かに画面をシェアする際に適当に範囲選択してスクリーンショットを取っていたけど特定のウィンドウだけを指定する方法を最近知ったのでメモ。 広告 Mac標準のスクリーンショットのショートカットは下記の通り ... <a href="/archives/8874/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8874/"><img src="https://farm5.staticflickr.com/4406/36719048610_fecef1d3e4_c.jpg" alt="Screenshot only Active Window" class="aligncenter"/></a></p>
+<p>誰かに画面をシェアする際に適当に範囲選択してスクリーンショットを取っていたけど特定のウィンドウだけを指定する方法を最近知ったのでメモ。</p>
+<p><span id="more-8874"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>Mac標準のスクリーンショットのショートカットは下記の通り。</p>
+<ul>
+<li>全画面: Shift + Command + 3</li>
+<li>範囲選択: Shfit + Command + 4</li>
+<li>特定のウィンドウのみ:
+<ol>
+<li>Shift + Command + 4</li>
+<li>Space</li>
+<li>スクリーンショットしたいウィンドウにカーソルを合わせクリック</li>
+</ol>
+</li>
+</ul>
+<p>範囲選択モードにした後にスペースを押すとカーソルがカメラマークになり、対象のウィンドウが分かるようになる。その状態でクリックをするとそのウィンドウだけのスクリーンショットを保存することが出来るようになる。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8874/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4406/36719048610_fecef1d3e4.jpg</image>
+	</item>
+		<item>
+		<title>BetterTouchToolを使ってキーボードショートカットでマウスカーソルをモニタ間で移動させる設定</title>
+		<link>/archives/8868/</link>
+					<comments>/archives/8868/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2017 04:51:49 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BetterTouchTool]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<guid isPermaLink="false">/?p=8868</guid>
+
+					<description><![CDATA[モニタが余っていたのでトリプルディスプレイにしてみたけど、マウスカーソルの移動が大変な場面があるのでBetterTouchToolを使って瞬時にカーソルを移動させてみた。 広告 「Move Mouse ... <a href="/archives/8868/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4399/36302210293_e23ea231a0_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>モニタが余っていたのでトリプルディスプレイにしてみたけど、マウスカーソルの移動が大変な場面があるのでBetterTouchToolを使って瞬時にカーソルを移動させてみた。</p>
+<p><span id="more-8868"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>「Move Mouse To Position」というアクションがあるのでそれで移動させたい位置を指定すれば完了。</p>
+<p>具体的な設定手順は下記の通り。</p>
+<ol>
+<li>Add New Shortcut or Key Sequence</li>
+<li>Shortcutを設定して、任意のキーを入力。今回は Shift + Control + 1(2,3) に設定</li>
+<li>Trigger Predefined Actionに「Other Mouse Actions」-> 「Move Mouse To Position」</li>
+<li>移動させたい任意の位置を指定</li>
+</ol>
+<p><a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4399/36302210293_e23ea231a0_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>一番右にMBP15inch(3が一番右)を置いて左に2つフルHDのモニタを置いた状態の設定。<br />
+<a href="/archives/8868/"><img src="https://farm5.staticflickr.com/4388/37114952655_940a545454_c.jpg" alt="BetterTouchTool" class="aligncenter"/></a></p>
+<p>これで、左のモニタから右に移動させたい時にもショートカットですぐに移動できる。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8868/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4399/36302210293_e23ea231a0.jpg</image>
+	</item>
+		<item>
+		<title>MBP2011のHDDをSSDに換装した</title>
+		<link>/archives/7468/</link>
+					<comments>/archives/7468/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 03 Jun 2013 17:26:25 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[MBP]]></category>
+		<category><![CDATA[SSD]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7468</guid>
+
+					<description><![CDATA[なんで今さらMBP2011なのかというと、会社で使っている開発マシンがMBP2011だったので、それの調子が悪くSSDに換装したのでその時の記録を残しておきたいと思います。もう二度とMBP2011をS ... <a href="/archives/7468/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/8901743479" target="_blank" title="R0014343"><img src="https://farm9.staticflickr.com/8551/8901743479_f45bc9d1b9.jpg" alt="R0014343" class="aligncenter"/></a></p>
+<p>なんで今さらMBP2011なのかというと、会社で使っている開発マシンがMBP2011だったので、それの調子が悪くSSDに換装したのでその時の記録を残しておきたいと思います。もう二度とMBP2011をSSDへの換装作業をすることはないだろうけど。</p>
+<p><span id="more-7468"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>とりあえず、裏側のネジを全て取り外します。<br />
+<a href="https://www.flickr.com/photos/fukata/8902356530" target="_blank" title="R0014342"><img src="https://farm9.staticflickr.com/8408/8902356530_f854f6307c.jpg" alt="R0014342" class="aligncenter"/></a></p>
+<p>すると蓋が取れるので、写真の左下の方に見えるHDDを止めている黒いネジを4つ外します。<br />
+<a href="https://www.flickr.com/photos/fukata/8901743001" target="_blank" title="R0014344"><img src="https://farm9.staticflickr.com/8125/8901743001_19971b62e0.jpg" alt="R0014344" class="aligncenter"/></a></p>
+<p>あとは簡単に外れます。<br />
+<a href="https://www.flickr.com/photos/fukata/8901742321" target="_blank" title="R0014346"><img src="https://farm4.staticflickr.com/3796/8901742321_5388c22553.jpg" alt="R0014346" class="aligncenter"/></a></p>
+<p>SSDに載せ替えて完了。<br />
+<a href="https://www.flickr.com/photos/fukata/8901741431" target="_blank" title="R0014349"><img src="https://farm8.staticflickr.com/7344/8901741431_dddc22e7e1.jpg" alt="R0014349" class="aligncenter"/></a></p>
+<p>インターネットリカバリって素晴らしいですね。<br />
+<a href="https://www.flickr.com/photos/fukata/8901740789" target="_blank" title="R0014350"><img src="https://farm6.staticflickr.com/5456/8901740789_af13e5ca59.jpg" alt="R0014350" class="aligncenter"/></a></p>
+<p>今回載せ替えたSSD。</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B009SIJ7G8" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+<p>やっぱり、SSDにしたら起動が早くなるので日々のストレスが無くなります。今なら240GBのSSDが2万円以下で買えるのと8GB x 2で16GBのメモリも1万円程度で買えるので3万ちょいで快適な環境が作れるなら安いものだと思います。みなさんも是非試してみて下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7468/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8551/8901743479_f45bc9d1b9.jpg</image>
+	</item>
+	</channel>
+</rss>

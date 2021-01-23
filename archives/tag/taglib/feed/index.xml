@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>taglib &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/taglib/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[JC]改行コードをbrタグに置換するタグライブラリを作成しました</title>
+		<link>/archives/1444/</link>
+					<comments>/archives/1444/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2009 16:10:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[JCommunity]]></category>
+		<category><![CDATA[struts2]]></category>
+		<category><![CDATA[taglib]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1444</guid>
+
+					<description><![CDATA[はい。タイトル通りのタグライブラリを作成してみました。当初普通のJSPのタグライブラリを作成したのですが、下記のように値を渡す予定だったのですが、これじゃ渡せないじゃんということに作成し終わった後に気 ... <a href="/archives/1444/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>はい。タイトル通りのタグライブラリを作成してみました。当初普通のJSPのタグライブラリを作成したのですが、下記のように値を渡す予定だったのですが、これじゃ渡せないじゃんということに作成し終わった後に気づいて作成しなおしました。というか、デバッグの始まりでしたw</p>
+<pre lang="JSP">
+<jc :txt2br value="%{messageDto.body}"></jc>
+</pre>
+<p>今回作成したのは下記の4点です。</p>
+<ul>
+<li>Text2BrTag.java：タグライブラリクラス</li>
+<li>Text2Br.java：タグライブラリコンポーネント</li>
+<li>HtmlUtils.java：HTML出力用ユーティリティ</li>
+<li>jcommunity.tld：カスタムタグ定義ファイル</li>
+</ul>
+<p>また今回も醜いかとは思いますが、何かの役に立てばと思い、ソースを貼り付けておきます。</p>
+<p><span id="more-1444"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>■Text2BrTag.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_common.view.taglib;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.components.Component;
+import org.apache.struts2.views.jsp.ComponentTagSupport;
+import org.fukata.jc_common.view.component.Text2Br;
+
+import com.opensymphony.xwork2.util.ValueStack;
+
+/**
+ * テキストの改行コードを<br />に置換する
+ * 
+ * @author tatsuya
+ *
+ */
+public class Text2BrTag extends ComponentTagSupport {
+	
+	private static final long serialVersionUID = 1L;
+	
+	// 置換する文字列
+	private String value;
+	
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public Component getBean(ValueStack stack, HttpServletRequest req,
+			HttpServletResponse res) {
+		return new Text2Br(stack);
+	}
+	
+	@Override
+	protected void populateParams() {
+		super.populateParams();
+		
+		Text2Br text2Br = (Text2Br) component;
+		text2Br.setValue(this.value);
+	}
+
+	
+}
+</pre>
+<p>■Text2Br.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_common.view.component;
+
+import java.io.IOException;
+import java.io.Writer;
+
+import org.apache.struts2.components.Component;
+import org.fukata.jc_common.utils.HtmlUtils;
+
+import com.opensymphony.xwork2.util.ValueStack;
+
+public class Text2Br extends Component {
+
+	private String value;
+	
+	public Text2Br(ValueStack stack) {
+		super(stack);
+	}
+	
+	@Override
+	public boolean start(Writer writer) {
+		boolean result = super.start(writer);
+		
+		if (this.value!=null) {
+			this.value = findString(this.value);
+			// 改行コードをbrタグに置換
+			this.value = HtmlUtils.getTxt2Br(this.value);
+		}
+		
+		return result;
+	}
+	
+	@Override
+	protected boolean end(Writer writer, String body, boolean popComponentStack) {
+		boolean result = super.end(writer, body, popComponentStack);
+		
+		try {
+			// 画面に書き出す
+			writer.write(this.value);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	
+}
+</pre>
+<p>■HtmlUtils.java</p>
+<pre lang="JAVA" line="1">
+package org.fukata.jc_common.utils;
+
+public class HtmlUtils {
+	
+	private static final String BKREAK_REGEX = "(\r\n|\r|\n)"; 
+	private static final String HTML_BREAK = "<br />"; 
+	
+	private HtmlUtils() {
+	}
+	
+	public static String getTxt2Br(String txt) {
+		return txt.replaceAll(BKREAK_REGEX, HTML_BREAK);
+	}
+}
+</pre>
+<p>■jcommunity.tld</p>
+<pre lang="XML" line="1">
+< ?xml version="1.0" ?>
+< !DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "https://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib xmlns="https://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://java.sun.com/xml/ns/j2eeweb-jsptaglibrary_2_0.xsd"
+        version="2.0">
+  <tlibversion>1.0</tlibversion>
+  <jspversion>2.0</jspversion>
+  <shortname>jcommunity</shortname>
+  <info>JCommunity tab library</info>
+
+  <tag>
+    <name>txt2br</name>
+    <tagclass>org.fukata.jc_common.view.taglib.Text2BrTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <info>text to html br tag</info>
+    <attribute>
+    	<name>value</name>
+    	<required>true</required>
+    	<rtexprvalue>true</rtexprvalue>
+    	<description>< ![CDATA[Value expression for Parameter to set]]&gt;</description>
+    </attribute>
+  </tag>
+</taglib>
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1444/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

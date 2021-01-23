@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>gist &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/gist/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>gitのbranchの最終コミッター一覧を表示するスクリプトを書いた</title>
+		<link>/archives/7375/</link>
+					<comments>/archives/7375/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 06 Feb 2013 02:44:07 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[gist]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7375</guid>
+
+					<description><![CDATA[仕事でgitを使ってるんですが、ゴミブランチがリモートに残ったままになるので、各リモートブランチの最終コミッター一覧を表示するスクリプトを書いてみました。 これ、月1とかでメールしてもいいし、最終コミ ... <a href="/archives/7375/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>仕事でgitを使ってるんですが、ゴミブランチがリモートに残ったままになるので、各リモートブランチの最終コミッター一覧を表示するスクリプトを書いてみました。</p>
+<p>これ、月1とかでメールしてもいいし、最終コミット日時なんかも表示しても良いかもしれない。</p>
+<p><span id="more-7375"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><script src="https://gist.github.com/fukata/4719609.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7375/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

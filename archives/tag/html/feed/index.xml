@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HTML &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/html/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:49:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Zen-Codingしようぜ！！</title>
+		<link>/archives/6376/</link>
+					<comments>/archives/6376/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 27 Oct 2011 23:56:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[Zen-Coding]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6376</guid>
+
+					<description><![CDATA[zen-coding &#8211; Set of plugins for HTML and CSS hi-speed coding &#8211; Google Project Hosting 今更 ... <a href="/archives/6376/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://code.google.com/p/zen-coding/">zen-coding &#8211; Set of plugins for HTML and CSS hi-speed coding &#8211; Google Project Hosting</a></p>
+<p>今更？という感じですが、本日初めてZen-Coding体験しました。素晴らしいです！何が素晴らしいかというと、基本的にCSSセレクタのような構文なので、サンプルの構文見ただけである程度できちゃうので、とっつきやすい。</p>
+<p><a href="https://mattn.kaoriya.net/software/vim/20100306021632.htm">Big Sky :: zen-codingの殆どの機能をzencoding.vimに取り込んだ。</a></p>
+<p>最近はコードを書く時にvimを使っているので、@<a href="https://twitter.com/#!/mattn_jp">mattn_jp</a>さんが作成した、zencoding.vimを使いました。非常に使いやすいです。タグの展開意外にも色々な機能があり非常に面白いです。</p>
+<p>私は普段、仕事ではフルスクラッチでHTMLを書くということは滅多にないのですが、それ以外では趣味でサイトを作ったりするので、その時にフルスクラッチでHTMLコードを書くということが結構ありました。今までは、ちまちまとタグを書いていたので正直疲れていた部分もあったのですが、それがZen-Codingのおかげでだいぶ疲れが減りそうです。</p>
+<p>また、HTMLコーダーの人はCSSセレクタを知らない人が多いと思いますが、Zen-Codingを使うようになればCSSセレクタが何かというのを感覚的に分かるんじゃないかなも思いました。</p>
+<p>何にしてもHTMLをちまちま入力するのは指が疲れるのでZen-Coding良いです！</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6376/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

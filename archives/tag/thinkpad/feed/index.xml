@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ThinkPad &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/thinkpad/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>X200用ウルトラベースの内蔵ドライブ</title>
+		<link>/archives/4651/</link>
+					<comments>/archives/4651/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 08 Aug 2010 03:33:29 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<category><![CDATA[Thinkpad UltraBase]]></category>
+		<category><![CDATA[ThinkPad X201]]></category>
+		<category><![CDATA[ThinkPad x61]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4651</guid>
+
+					<description><![CDATA[昨日の25時頃に福岡の実家に帰宅して、東京で手に入れたX200ウルトラベースにX60ウルトラベースで使用していた内蔵ドライブを入れ替えようとしたのですが、どうも入らない。調べてみると規格が違いました。 ... <a href="/archives/4651/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の25時頃に福岡の実家に帰宅して、東京で手に入れたX200ウルトラベースにX60ウルトラベースで使用していた内蔵ドライブを入れ替えようとしたのですが、どうも入らない。調べてみると規格が違いました。</p>
+<ul>
+<li>X60ウルトラベース：Enhanced ATA</li>
+<li>X200ウルトラベース：Serial ATA</li>
+</ul>
+<p>参考URL</p>
+<ul>
+<li><a href="https://www-307.ibm.com/pc/support/site.wss/MIGR-70299.html">Lenovo Support &#038; downloads &#8211; ThinkPad X200 UltraBase &#8211; Overview</a></li>
+<li>Lenovo Support &#038; downloads &#8211; ThinkPad X6 UltraBase &#8211; Overview</li>
+</ul>
+<p>どうやらそのまま使うことは無理のようです。<br />
+しょうがないので汎用的に使える外付けのDVDドライブでも購入しようかと思います。最近は何が良いんでしょうかね・・・。</p>
+<p>価格.comで<a href="https://kakaku.com/pc/dvd-drive/ma_0/s1=2/">検索</a>してみたところ、外付けDVDドライブで大体1万円弱で買えるみたいです。そんなに安かったでしたっけ？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4651/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ThinkPad X201s注文</title>
+		<link>/archives/2949/</link>
+					<comments>/archives/2949/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 17 Apr 2010 05:36:38 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<category><![CDATA[ThinkPad X201]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2949</guid>
+
+					<description><![CDATA[物欲に負けて注文しました！納期は4週間程度ということで、来月の今頃にいは届いてるんじゃないかと思います。今から楽しみです。注文した構成は下記のような感じです。 また、ノートPCはいつも2年周期で買い換 ... <a href="/archives/2949/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>物欲に負けて注文しました！納期は4週間程度ということで、来月の今頃にいは届いてるんじゃないかと思います。今から楽しみです。注文した構成は下記のような感じです。</p>
+<p>また、ノートPCはいつも2年周期で買い換えているのですが、今回は3年ほど使おうと思って引取りサービスも3年付けておきました。X61の時は引取りサービスに意外とお世話になりましたからね＾＾；（だいたい、2年で3回ほど）</p>
+<p>メモリは本体購入した後に8GBにしようか迷っていたのですが、4GBとの価格差が3万ちょっとあったので現時点では諦めました。メモリの価格が１万円になってくれば拡張するかと思います。キーボードはいつも通り英語。OSはメモリのことも考えて64bit。ポインティングデバイスはトラックポイントのみしか使っていないので一番安いやつで。ワイヤレスLANアダプターにWiMAXが付いたやつもあったのですが、オフィスでまともに電波が入らなかったので却下。また、4/22までキャンペーンでウルトラベースX200も付いてきました。デュアルディスプレイなどを構成するVGAケーブルをウルトラベースに装着することができるので、帰宅して本体をウルトラベースに挿すだけで良いので非常に便利で今も重宝しています。現在ウルトラベースX60を使用していてDVDドライブを装着しているのですが、このドライブがウルトラベースX200に装着できなければ普通のUSBタイプのドライブを買おうかと思います。ウルトラベースに装着するタイプのやつは省スペースで良いのですが、他のパソコンで利用できないと言うのが大きな欠点でもあるので＾＾；</p>
+<blockquote>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>プロセッサー</td>
+<td>インテル Core i7-640LM プロセッサー (2.13GHz 4MBL3 1066MHz)</td>
+</tr>
+<tr>
+<td>初期導入OS</td>
+<td>Windows 7 Home Premium 64 <a>正規版</a></td>
+</tr>
+<tr>
+<td>初期導入OS及び言語</td>
+<td valign="bottom">Windows 7 Home Premium 64 <a>正規版</a> &#8211; 日本語</td>
+</tr>
+<tr>
+<td>ディスプレイ</td>
+<td>12.1型液晶 WXGA+ LEDバックライト 3&#215;3 WWAN</td>
+</tr>
+<tr>
+<td>グラフィックス</td>
+<td>インテル HD グラフィックス, AMT対応</td>
+</tr>
+<tr>
+<td>Total memory</td>
+<td>4GB PC3-8500 DDR3 (2スロット使用)</td>
+</tr>
+<tr>
+<td>Keyboard</td>
+<td>英語キーボード</td>
+</tr>
+<tr>
+<td>ポインティング・デバイス</td>
+<td>TrackPointのみ</td>
+</tr>
+<tr>
+<td>ハード・ディスク・ドライブ</td>
+<td>320GB ハード・ディスク・ドライブ (7200rpm)</td>
+</tr>
+<tr>
+<td>ドッキングデバイス</td>
+<td>ThinkPad ウルトラベース X200</td>
+</tr>
+<tr>
+<td>カード・スロット</td>
+<td>5-1 メディア･カード・リーダー/ モデム</td>
+</tr>
+<tr>
+<td>バッテリー</td>
+<td>X200 6セル拡張バッテリー</td>
+</tr>
+<tr>
+<td>電源アダプター</td>
+<td>65W ACアダプター(標準添付)</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>内蔵Bluetooth</td>
+</tr>
+<tr>
+<td>ワイヤレスLAN アダプター</td>
+<td>インテル Centrino Ultimate-N 6300</td>
+</tr>
+<tr>
+<td>言語内容</td>
+<td>日本語</td>
+</tr>
+<tr>
+<td>引取り修理サービス</td>
+<td>ThinkPad 3年間 引取り修理サービス (1年保証モデル向け)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2949/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>SSDはじめました</title>
+		<link>/archives/1576/</link>
+					<comments>/archives/1576/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 13 Oct 2009 14:22:03 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[SSD]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<category><![CDATA[x61]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1576</guid>
+
+					<description><![CDATA[先週末にやっとSSDに乗り換えました。バックアップも無事終わり、とりあえずは一安心です＾＾； 今回買ったのは、下記の商品になります。 X25-M Mainstream SATA SSD SSDSA2M ... <a href="/archives/1576/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5098/5476246878_9af04a7cec_m.jpg" target="_blank" title="crystaldiskmark"><img loading="lazy" src="https://farm6.static.flickr.com/5098/5476246878_9af04a7cec_m.jpg" alt="crystaldiskmark" width="200" height="169" class="attachment wp-att-1575 alignleft" /></a>先週末にやっとSSDに乗り換えました。バックアップも無事終わり、とりあえずは一安心です＾＾；</p>
+<p>今回買ったのは、下記の商品になります。<br />
+<a href="https://kakaku.com/spec/K0000046440/">X25-M Mainstream SATA SSD SSDSA2MH080G2R5</a></p>
+<p>買う前に気になっていたプチフリですが、今のところまったく起こっていません。また、速度ですが、Ubuntu 9.04の起動速度がかなり速くて驚いています。自分は以前までUbuntu 8.04 LTSを使用していたので、9.04自体が元々早いのかSSDの力なのかいまひとつわからない状態です。また、vistaの方はというと、起動が5～10秒くらい早くなった感じがします。ただ、やはり、インストールにかかる時間などはかなり短縮されてるんじゃないかと思います。</p>
+<p>写真に載っているベンチマークですが、どうなんでしょう？ベンチマークというのを今までまったく気にしていなかったので結果的にどうなのか微妙な感じです。</p>
+<p>今回、VistaとUbuntu 9.04のデュアルブートにしたんですが、インストール後の個々のパーティションが20GB程度しか余っておらず、以前250GBのHDDを使用していた者としてはかなり不安な容量となっています＾＾；なので、なるべくネットに繋がっている時はダウンロードしたデータなどについては、自宅のファイルサーバに保存するようにしています。また、ローカルで展開などした場合も利用後にすぐに消すように心がけています。</p>
+<p>とりあえず、言えることは、無事にX61が戻ってきてくれて良かった。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1576/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>拡張バッテリーとスイッチングハブを購入してみた</title>
+		<link>/archives/1168/</link>
+					<comments>/archives/1168/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 10 May 2009 04:42:57 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ibm]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<category><![CDATA[x61]]></category>
+		<category><![CDATA[スイッチングハブ]]></category>
+		<category><![CDATA[バッテリー]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1168</guid>
+
+					<description><![CDATA[現在、自分が使っているThinkpad X61は開発を行っていると1時間弱程度しか持たないのと、最近、外出先や会議でパソコンを使うことが多くなってきた為、思い切って拡張バッテリーを買ってみました。 拡 ... <a href="/archives/1168/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、自分が使っているThinkpad X61は開発を行っていると1時間弱程度しか持たないのと、最近、外出先や会議でパソコンを使うことが多くなってきた為、思い切って拡張バッテリーを買ってみました。</p>
+<p>拡張バッテリーの場合、最大４，５時間くらいは持ちそうなので全然外出先での作業にも支障があありません。まぁ、バッテリーが大きくなってしまうので、必然的に重量が1.5kg以上になっています。</p>
+<p>まぁ、それでもバッテリーが持たないよりはいいので、今のところ満足しています。</p>
+<p>また、自宅のルータは最大4ポートしか使えないのですが、既に3ポート埋まっていたり、これからネットワーク機器が増える予定もあるので、PLANEXのギガビットスイッチングハブを購入しました。最近はネットワークに対応した家電も増えてきているので必要かなと思いました。マグネットが付いているので、ラックの裏にでもつけていれば場所も特に取られることがないので良い感じです。</p>
+<p>それに、今までルーターから3m位離れたサーバにLANケーブルを這わせていたので邪魔になっていたのですが、それもハブまでの1本だけに絞られるのでケーブル周りもすっきりして一石二鳥♪</p>
+<p>拡張バッテリーについては、秋葉原の<a href="https://www.nisshinpal.jp/">ニッシンパル</a>で購入したのですが、14000円弱とamazonで購入するよりも結構安かったです。ハブの方は、ヨドバシカメラで購入したのでamazonの価格よりも1000円程度高かったです。</p>
+<div style="margin:5px 0;padding:5px 0;">
+<div style="float:left;margin:0 5px 0 0;">
+<iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B000ENC57O&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+</div>
+<div style="float:left;margin:0 0 0 5px;">
+<iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B001VA2OXY&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+</div>
+</div>
+<div style="clear:both;"></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1168/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ThinkPad X61に英字キーボードを取り付けてみました</title>
+		<link>/archives/518/</link>
+					<comments>/archives/518/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 17 Jul 2008 06:15:00 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ibm]]></category>
+		<category><![CDATA[keyboard]]></category>
+		<category><![CDATA[lenovo]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<category><![CDATA[x61]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=518</guid>
+
+					<description><![CDATA[一昨日、ノートパーツで注文したThinkPad X61用の英字キーボードが届きましたので早速取り替えてみました。取り替えるのには特に説明書も必要なく、ThinkPad本体の裏にあるキーボードアイコンが ... <a href="/archives/518/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="cimg0477" href="https://farm6.static.flickr.com/5097/5476161238_9201346945_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-522 alignleft" src="https://farm6.static.flickr.com/5097/5476161238_9201346945_m.jpg" alt="cimg0477" width="200" height="150" /></a>一昨日、ノートパーツで注文したThinkPad X61用の英字キーボードが届きましたので早速取り替えてみました。取り替えるのには特に説明書も必要なく、ThinkPad本体の裏にあるキーボードアイコンが書かれている部分のネジを外せば簡単にキーボードだけが外れるようになります。</p>
+<p>そして、届いた英字キーボードを取り付けた後にPC起動してからキーボードの配列を日本語から英語に変更します。英字キーボードには「半角/全角」キーは存在しないため、別なキーに割り当てる必要があります。ちなみに、自分はAlt+grave(`)にしています。ほとんどのアプリにはこの組み合わせで英語入力と日本語入力を切り替えれるのですが、skypeだけなぜか切り替わりません。</p>
+<p>skypeに関しては以前から一切キー入力を受け付けなくなるなど不具合が出ていたのでこれも多分その一部なんじゃないかと思っています。現に同じように英字キーボードを使用している人はskypeでも正常に使用できているみたいなので。</p>
+<p>英字キーボードに取り替えてみて率直に思ったのがキーにひらがなが無くてすっきりしていて良い。スペースキー回りなんかはほんとにすっきりしています。日本語キーボードにある「無変換」キーなんか一度も使ったことがないですし。あとは、graveにしてもそうですが、記号入力が日本語配列より楽な配置になっています。今日はデジカメを忘れてしまったので写真は載せれませんが、帰ってから載せます。</p>
+<p>ちょっと、まだ慣れていないので打ちにくい部分としてはEnterキーが小さいことでしょうか。多分日本語キーボードの2分の1くらい。まだ、新しいキー配置に慣れていませんが、英字の部分に関しては日本語キーボードと同じなので著しく業務に支障が出るということはないです。1ヶ月くらい普通に使っていて新しいキー配置に慣れてくれると助かるんですがw</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/518/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ThinkPad X61が届きました</title>
+		<link>/archives/500/</link>
+					<comments>/archives/500/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 14 Jul 2008 17:41:43 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ibm]]></category>
+		<category><![CDATA[lenovo]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=500</guid>
+
+					<description><![CDATA[22歳の誕生日に（？）という名目でThinkPad X61を買っちゃいました＾＾前から欲しかったモデルなので実際に使ってみてさらに良さを実感しています。 なんとも、プログラマ向けのPCになっています。 ... <a href="/archives/500/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a title="cimg0460" href="https://farm6.static.flickr.com/5211/5476160984_1c6ec68c50_m.jpg" target="_blank"><img loading="lazy" class="attachment wp-att-501 alignleft" src="https://farm6.static.flickr.com/5211/5476160984_1c6ec68c50_m.jpg" alt="cimg0460" width="200" height="150" /></a>22歳の誕生日に（？）という名目でThinkPad X61を買っちゃいました＾＾前から欲しかったモデルなので実際に使ってみてさらに良さを実感しています。</p>
+<p>なんとも、プログラマ向けのPCになっています。トラックポイントのおかげで常にキーボードに手が触れている状態になり、無駄な手の動きがなくなります。また、タイピングが好きな自分としてはノートPCでは珍しくキーピッチが深いので結構嬉しいです。他のノートPCはキーピッチが浅くて打ってるのかどうか分かりにくいんですよね。</p>
+<p>あと、前使っていたdell m1210に比べて本体サイズも小さくなりましたし重量も500gほど軽くなっています。これでカバンの中が軽くなって通勤が楽になってます＾＾あとあと、電車の中とかでも普通に開けるようになりましたねw</p>
+<p>dellを使っている時は「dellて（笑）」みたいな視線が気になってなかなか開けませんでしたが、今は大丈夫b開けます＾＾ってほとんど電車の中で開いたことないけどw</p>
+<p>まぁ、何といっても拡張性が高いですし、自分で拡張しやすいですね。メモリを増やすにしてもHDDを換装するにしても。</p>
+<p>写真は、パソコンが届いた直後に並べて撮ったものです。トリプルディスプレイ！！</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/500/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

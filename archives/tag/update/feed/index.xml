@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>update &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/update/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:57:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Generic Host Process for Win32 Servicesの解決法</title>
+		<link>/archives/379/</link>
+					<comments>/archives/379/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 23 Apr 2008 15:08:46 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[firefox]]></category>
+		<category><![CDATA[mobile]]></category>
+		<category><![CDATA[update]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/04/24/379/</guid>
+
+					<description><![CDATA[こんばんは。 １週間ぶりの更新となります。 仕事でWindowsが必要になった為、急遽XPをインストールしたのですが、なぜか、OSを起動してから数十分してから「Generic Host Process ... <a href="/archives/379/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>こんばんは。</p>
+<p>１週間ぶりの更新となります。</p>
+<p>仕事でWindowsが必要になった為、急遽XPをインストールしたのですが、なぜか、OSを起動してから数十分してから「Generic Host Process for Win32 Services」というエラーが出るようになりました。Linuxを使う前はずっとWindowsを使っていましたが、このようなエラーは一度も見たことがありませんでした。</p>
+<p>そして、ネットで調べてみると他にも同じように苦しんでいる方々がいらっしゃるようで、色々わかりました。</p>
+<p>詳細は以下から&#8230;</p>
+<p><span id="more-379"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>最初に私のPCの常時起動しているアプリまた環境は以下のような感じです。</p>
+<ul>
+<li>Windowsの自動更新なし</li>
+<li>Javaの自動更新なし</li>
+<li>ブラウザはFirefox</li>
+<li>MSNメッセ使用</li>
+<li>Skype使用</li>
+<li>EMOBILE HWユーティリティ使用</li>
+<li>Apache2.063使用（ポート10080）</li>
+<li>プリンタ不使用</li>
+</ul>
+<p>で、ネットで色々調べた結果、結局原因が何か特定できていないみたいですね。</p>
+<p>普段使っていて、エラーが出ない時もあるので何が違うのか考えてみたところ、<span style="color: #ff0000"><strong>ネットの接続方法が違う</strong></span>ことに気づきました。</p>
+<p>内臓の無線または有線で接続している時はこのエラーは出たことがなかったんです。なので、それ以外の時。そうEMOBILE HWユーティリティを使用してD02HWでネットに接続している時にこのエラーがよく出てたんです。</p>
+<p>しかし、自宅ではD02HWしかネットへの接続方法がない為、とりあえず、ユーティリティをアップデートしました。</p>
+<p>最新のユーティリティにアップデートしたところ、現在エラーは起きていません。</p>
+<p>結局直接的な原因は何かわからないままでした。。。</p>
+<blockquote><p>2008.04.24追記：</p>
+<p>昨日寝るまではエラーは出なかったのですが、朝起きたら同じエラーが出ていましたorz</p>
+<p>どうやら、原因はユーティリティではなかったみたいで、とりあえずWindows Updateをして様子見と言う感じです。</p>
+<p>Webカメラとか音声通話をする場合はデバイスのサポートが強いWindowsの方が強いので是非使いたいので早く直ってもらいたいものです。</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/379/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

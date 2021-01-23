@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>All in One SEO Pack &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/all-in-one-seo-pack/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>TwentyTwelve + CUSTOM OPTIONS PLUS POST INを使ってサブ・ブログを管理</title>
+		<link>/archives/7367/</link>
+					<comments>/archives/7367/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 03 Feb 2013 07:50:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[All in One SEO Pack]]></category>
+		<category><![CDATA[CUSTOM OPTIONS PLUS POST IN]]></category>
+		<category><![CDATA[TwentyTwelve]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7367</guid>
+
+					<description><![CDATA[今持ってるサブ・ブログ「食べ歩記」「写真記」。 あまりデザインに拘っているわけではないので、出来ればテンプレートなど同じ物を使って管理コストを下げたいと思っていました。最近、サブ・ブログのデザインがあ ... <a href="/archives/7367/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今持ってるサブ・ブログ「<a href="https://tabearuki.fukata.org/" title="食べ歩記" target="_blank">食べ歩記</a>」「<a href="https://camera.fukata.org/" title="写真記" target="_blank">写真記</a>」。</p>
+<p>あまりデザインに拘っているわけではないので、出来ればテンプレートなど同じ物を使って管理コストを下げたいと思っていました。最近、サブ・ブログのデザインがあまり気に入ってなかったのでこの機会に変更してみました。</p>
+<p><span id="more-7367"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>テンプレートは標準で付いている「TwentyTwelve」を使います。シンプルで結構良い感じです。タイトル文字色や背景色はWordPress上ですぐにカスタマイズ出来、ブログ毎に保存してくれるので同じテンプレートを使いまわす事が出来ます。</p>
+<p>テンプレートはTwentyTwelveを使うことで個人的な要望は満たせました。あとは<strong>Google Adsense</strong>、<strong>Google Analytics</strong>、<strong>Zenback</strong>など各ブログ毎に異なるものを管理する必要があります。</p>
+<h2>All in One SEO Pack</h2>
+<p><a href="https://wordpress.org/extend/plugins/all-in-one-seo-pack/" title="WordPress › All in One SEO Pack « WordPress Plugins" target="_blank">WordPress › All in One SEO Pack « WordPress Plugins</a></p>
+<p>本来はSEOの最適化を行なってくれるプラグインなのですが、Google AnalyticsのIDを指定すると自動的にheadにGoogle Analyticsのコードを挿入してくれるのでこれを使います。これで、Google Analyticsのブログ毎の管理は完了です。</p>
+<h2>CUSTOM OPTIONS PLUS POST IN</h2>
+<p>Google Analyticsの管理は終わったので次に、それ以外のGoogle Adsense、Zenbackの管理をします。</p>
+<p>All in One SEO Packの場合はプラグインの設定画面から設定すれば完了でしたが、Google Adsense、Zenbackに関してはテーマファイル自体も少し編集することにします。もしかしたら既にそういうプラグインが存在したり、挿入箇所によってはプラグインだけで完結する場合もあるかもしれません。今回は私の場合は直接テーマファイルを編集することにしました。</p>
+<p>まずは、ブログ毎に異なるコードを<a href="https://wordpress.org/extend/plugins/custom-options-plus-post-in/other_notes/" title="WordPress › CUSTOM OPTIONS PLUS POST IN « WordPress Plugins" target="_blank">WordPress › CUSTOM OPTIONS PLUS POST IN « WordPress Plugins</a>を使って下記のように設定します。</p>
+<p><a href="https://www.flickr.com/photos/fukata/8440699096" target="_blank" title="wp_option_customize"><img src="https://farm9.staticflickr.com/8353/8440699096_9844332ba5.jpg" alt="wp_option_customize" class="aligncenter"/></a></p>
+<p>あとは、これらをテンプレート内に書くだけです。</p>
+<p>ウィジェット内でも使いたいという場合は<a href="https://wordpress.org/extend/plugins/exec-php/" title="WordPress › Exec-PHP « WordPress Plugins" target="_blank">WordPress › Exec-PHP « WordPress Plugins</a>を使っても良いでしょう。</p>
+<p>と、ここまで書いて別にサブ・ブログについてではなく、メインブログの管理にも十分使える内容になりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7367/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8353/8440699096_9844332ba5.jpg</image>
+	</item>
+	</channel>
+</rss>

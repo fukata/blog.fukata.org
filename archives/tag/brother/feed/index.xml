@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>brother &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/brother/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:20:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>MFC-490CNを購入しました</title>
+		<link>/archives/1542/</link>
+					<comments>/archives/1542/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 27 Sep 2009 16:55:52 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[brother]]></category>
+		<category><![CDATA[MFC-490CN]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1542</guid>
+
+					<description><![CDATA[以前、記事でも書いたように、「MFC-490CN」を購入しました。 ADF、FAX、スキャナ、コピー、カラープリント、無線LAN、有線LAN、ネットワーク機能などが付いて、18500円でした。値段の割 ... <a href="/archives/1542/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5055/5475644733_c5af2bdc3f_m.jpg" target="_blank" title="IMG_0725"><img loading="lazy" src="https://farm6.static.flickr.com/5055/5475644733_c5af2bdc3f_m.jpg" alt="IMG_0725" width="200" height="133" class="attachment wp-att-1543 alignleft" /></a>以前、記事でも書いたように、「<a href="https://www.brother.co.jp/product/mymio/info/mfc490cn/index.htm">MFC-490CN</a>」を購入しました。</p>
+<p>ADF、FAX、スキャナ、コピー、カラープリント、無線LAN、有線LAN、ネットワーク機能などが付いて、18500円でした。値段の割りにはスペックは結構よさげかなと思いました。ただ、給紙が120枚というのがちょっと少ないかなと感じるくらいで、あとは満足するスペックです。</p>
+<p>セットアップ自体は、付属のインストールディスクから簡単にできます。まだ、Ubuntuでの設定はしていませんので、設定がややこしくあれば、載せたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1542/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Ubuntuで「Brother HL-2170W」を使ってみました</title>
+		<link>/archives/1327/</link>
+					<comments>/archives/1327/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 21 Jun 2009 00:31:43 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[brother]]></category>
+		<category><![CDATA[hl-2170w]]></category>
+		<category><![CDATA[printer]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<category><![CDATA[買い物]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1327</guid>
+
+					<description><![CDATA[ついに自宅にプリンタを買っちゃいましたw プリンタって見た目以上に重く、今回買った「Brother HL-2170W」も6キロ以上あるみたいです；；新宿から光が丘まで持ってくるの結構大変でした；； 現 ... <a href="/archives/1327/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5015/5475648807_32c1b638cd_m.jpg" target="_blank" title="CIMG1023"><img loading="lazy" src="https://farm6.static.flickr.com/5015/5475648807_32c1b638cd_m.jpg" alt="CIMG1023" width="200" height="150" class="attachment wp-att-1328 alignleft" /></a>ついに自宅にプリンタを買っちゃいましたw</p>
+<p>プリンタって見た目以上に重く、今回買った「<a href="https://www.brother.co.jp/product/printer/info/hl2170w/index.htm">Brother HL-2170W</a>」も6キロ以上あるみたいです；；新宿から光が丘まで持ってくるの結構大変でした；；</p>
+<p>現在使用しているメインOSがUbuntuなので、Ubuntu上で動作することが必須条件でした。適当にググってみたら動作報告もあるみたいで、ネットワーク対応のモノクロレーザにしては結構安かったのでHL-2170Wを選んだのですが、実際にプリンタの設定をしてみると、すんなり追加できない。。。orz</p>
+<p>会社で使用しているHL-5250DNなんかは、簡単に設定ができるんですが、HL-2170Wの項目は見当たりません。。。ググってみると、こちらからPPDファイルをダウンロードして、PPDファイル指定でインストールすると、無事インストールでき、綺麗に印刷できています。</p>
+<p>ふぅ。。よかったwちょっと一安心w</p>
+<p>何枚か印刷してみたんですけど、ネットワーク印刷の為か、使い始めなのか印刷速度が遅いです。まぁ、この辺はもうちょっと使ってみて反応を見たいと思います。</p>
+<p>まぁ、無事、自宅でもプリンタが使えるようになったので良かったです。</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;asins=B00194T818&#038;md=1X69VDGQCMF7Z30FM082&#038;fc1=000000&#038;IS2=1&#038;lt1=_blank&#038;m=amazon&#038;lc1=0000FF&#038;bc1=000000&#038;bg1=FFFFFF&#038;f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1327/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

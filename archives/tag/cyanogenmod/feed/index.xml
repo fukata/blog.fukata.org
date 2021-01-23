@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CyanogenMod &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/cyanogenmod/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]CyanogenMod 6.1.0 RC5 for Milestoneの使用感</title>
+		<link>/archives/5025/</link>
+					<comments>/archives/5025/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 05 Dec 2010 05:19:33 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[CyanogenMod]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5025</guid>
+
+					<description><![CDATA[昨日、エントリ「Tatsuya Blog » [Android]CyanogenMod 6.1.0 RC5 for Milestoneを適用」を書いたわけですが、1日ほど使ってみたので簡単に使用感につ ... <a href="/archives/5025/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、エントリ「<a href="https://fukata.org/2010/12/05/android-cyanogenmod-6-1-0-rc5-for-milestone/">Tatsuya Blog » [Android]CyanogenMod 6.1.0 RC5 for Milestoneを適用</a>」を書いたわけですが、1日ほど使ってみたので簡単に使用感について書きたいと思います。</p>
+<h3>使用感</h3>
+<ul>
+<li>起動が速い</li>
+<li>基本的な動作は軽い（ただし、ホーム画面の再描画に引っかかる時がある）</li>
+<li>カメラ（オートフォーカス含む）も正常に動作する</li>
+<li>OpenVPNが標準で利用可能</li>
+</ul>
+<p>オートフォーカスも動作していますし、きちんと写真も撮れますし、基本的には満足しているのですが、一点、ADWLauncherの影響だと思っているのですが、ホーム画面に戻る際にホームの再描画が若干引っかかる場合があり、大体２、３秒ほど掛かっています。些細な問題かと言えばそうかもしれませんが、機会が多いだけにイラッとします。12vpnを既に契約していてOpenVPN目的で利用したい人にとっては良いかもしれません。また、他のカスタムROMの場合には、特定の機能が動作しなかったりするので、その点では動作するCyanogenModは良いです。</p>
+<p>ただ、カメラを利用しない人にとっては「<a href="https://fukata.org/2010/11/12/android-milestone-motofrenzy-0-52/">[Android]MilestoneにMotoFrenzy 0.52を適用</a>」で書いたMotoFrenzyの方が標準に近く、動作も軽快です。ただ、現状のバージョン0.52ではカメラのオートフォーカスが全く利用できないのでその点だけ考慮する必要があります。</p>
+<p>あと、現在使用している12vpn.comのOpenVPNは一瞬繋がったかのようにステータスバーにはConnectedと流れるのですが、settingsのVPNメニューの方には以前Connecting&#8230;のまま。それだけであれば良いのですが、すぐ切れてしまい、不安定なようです。これは、OpenVPN側の問題なのか12vpn側の問題なのかは微妙なところです。あと、接続時間の表示も下記のようにバグっていました。HTC DesireにCyanogenMod 6.0の安定版を入れた方によればOpenVPNも正常に使えているそうです。自分も6.1安定版に期待します。</p>
+<p>OpenVPN接続時の接続時間<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5230840711'><img src='https://farm6.static.flickr.com/5127/5230840711_00e6520bd7.jpg' alt='12VPN OpenVPN on CyanogenMod-6.1.0-RC5-Milestone' class='aligncenter' /></a></p>
+<p>デフォルト（900Mhzにオーバークロック済み）でのベンチマーク<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5231997525'><img src='https://farm6.static.flickr.com/5202/5231997525_4683aa9f23.jpg' alt='BenchmarkPi CyanogenMod-6.1.0-RC5-Mlilestone OC-900Mhz' class='aligncenter' /></a></p>
+<p>1200Mhzにオーバークロック済みでのベンチマーク<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5232591546'><img src='https://farm6.static.flickr.com/5125/5232591546_152571c214.jpg' alt='BenchmarkPi CyanogenMod-6.1.0-RC5-Mlilestone OC-1200Mhz' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5025/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Android]CyanogenMod 6.1.0 RC5 for Milestoneを適用</title>
+		<link>/archives/5011/</link>
+					<comments>/archives/5011/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 04 Dec 2010 20:49:00 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[CyanogenMod]]></category>
+		<category><![CDATA[Motorola Milestone]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5011</guid>
+
+					<description><![CDATA[以下、wikipediaより引用 CyanogenModはオープンソースのオペレーティングシステムであるAndroidのディストリビューションであり、コミュニティにおいて人気が高い。 GoogleやT ... <a href="/archives/5011/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>以下、<a href="https://ja.wikipedia.org/wiki/CyanogenMod">wikipedia</a>より引用</p>
+<blockquote><p>
+CyanogenModはオープンソースのオペレーティングシステムであるAndroidのディストリビューションであり、コミュニティにおいて人気が高い。<br />
+GoogleやT-Mobile、HTCなどのベンダがリリースする公式なAndroidファームウェアを上回る性能と信頼性をめざしてデザインされており、公式ファームウェアにはない、いくつかの機能をもサポートしている。FLACロスレス音楽形式、マルチタッチ、アプリケーションのmicroSDへのインストール及び実行、compcache、多くのAPNのリスト、リブート、Wi-Fi・Bluetooth・USB接続でのテザリングなどである[2]。CyanogenModは、BFSをタスクスケジューラとして組み込んだ最初のモバイルOSであり、この変更はAndroidの公式なソースツリーの実験的ブランチにマージされた[3]。
+</p></blockquote>
+<p>そんな<a href="https://www.cyanogenmod.com/">CyanogenMod</a>をMilestoneに適用してみました。</p>
+<p>インストール手順等は長いので以下からどうぞ</p>
+<p><span id="more-5011"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://wiki.cyanogenmod.com/index.php?title=Motorola_Droid:_Full_Update_Guide#Before_you_do_anything_.E2.80.94_Make_a_backup">Motorola Droid: Full Update Guide &#8211; CyanogenMod Wiki</a></p>
+<p>Droidのインストール手順に関しては掲載されていたのですが、自分のやり方がまずかったのか、Milestoneには上記の手順では適用できないのかうまくいきませんでした。なので、今回メモとしてインストール手順等を残しておきたいと思います。</p>
+<p>ちなみに、Droid用のROMに関しては公式サイトからダウンロード可能なのですが、Milestoneに関しては下記のサイトからダウンロードできます。</p>
+<p><a href="https://code.google.com/p/cyanogenmod4milestone/">cyanogenmod4milestone &#8211; Project Hosting on Google Code</a></p>
+<h3>今回行った手順</h3>
+<ol>
+<li>OpenRecoveryのインストール</li>
+<li>G.O.T 2.2.1のインストール</li>
+<li>update-0.04-10.12.04-cm-6.1.0-RC5-Milestone-signed.zipの適用</li>
+<li>update-bpsw-MSG39UPEU_A1.19_0.90.zipの適用</li>
+<li>update-adb_during_boot_enabler.zipの適用</li>
+<li>gapps-hdpi-20101114-signed.zipの適用</li>
+</ol>
+<h3>各種ファイルのダウンロード先</h3>
+<ul>
+<li>OpenRecovery</li>
+<li>G.O.T 2.2.1</li>
+</ul>
+<p>に関しては、以前のエントリ「<a href="https://fukata.org/2010/11/10/android-milestone-got-2-2-1/">[Android]MilestoneにG.O.T 2.2.1を適用</a>」を参照して下さい。</p>
+<ul>
+<li>update-0.04-10.12.04-cm-6.1.0-RC5-Milestone-signed.zip</li>
+<li>update-bpsw-MSG39UPEU_A1.19_0.90.zip</li>
+<li>update-adb_during_boot_enabler.zip</li>
+</ul>
+<p>ダウンロード先：<a href="https://code.google.com/p/cyanogenmod4milestone/downloads/list">Downloads &#8211; cyanogenmod4milestone &#8211; Project Hosting on Google Code</a></p>
+<ul>
+<li>gapps-hdpi-20101114-signed.zip</li>
+</ul>
+<p>ダウンロード先：<a href="https://wiki.cyanogenmod.com/index.php?title=Latest_Version#Google_Apps">Latest Version &#8211; CyanogenMod Wiki</a></p>
+<h3>インストール手順</h3>
+<p>まず、リ「<a href="https://fukata.org/2010/11/10/android-milestone-got-2-2-1/">[Android]MilestoneにG.O.T 2.2.1を適用</a>」を元にG.O.T 2.2.1の状態にする。</p>
+<p>次に、ダウンロードした下記のファイルを/sdcard/OpenRecovery/updates/直下に格納し、リカバリモードからOpenRecoveryを起動し、下記の順に適用。</p>
+<ol>
+<li>update-0.04-10.12.04-cm-6.1.0-RC5-Milestone-signed.zip</li>
+<li>update-bpsw-MSG39UPEU_A1.19_0.90.zip</li>
+<li>update-adb_during_boot_enabler.zip</li>
+<li>gapps-hdpi-20101114-signed.zip</li>
+</ol>
+<p>最後にData, CacheのWipeを行い、再起動すれば無事CyanogenModが起動すると思います。</p>
+<p>モデル名など<br />
+<a href='https://www.flickr.com/photos/45259648@N06/5231368258'><img src='https://farm6.static.flickr.com/5049/5231368258_abbe3d7a93.jpg' alt='CyanogenMod-6.1.0-RC5-Milestone' class='aligncenter' /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5011/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>xperia arc &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/xperia-arc/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Android]docomo版 Xperia arc (v2.3.3)のroot化手順</title>
+		<link>/archives/6043/</link>
+					<comments>/archives/6043/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 20 Aug 2011 03:31:27 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[flashtool]]></category>
+		<category><![CDATA[GingerBreak]]></category>
+		<category><![CDATA[root]]></category>
+		<category><![CDATA[xperia arc]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6043</guid>
+
+					<description><![CDATA[最近、あまり個人的な開発を行なってなくて更新ネタもないので、docomo版 Xperia arcのOS 2.3.3のroot化をする機会があったので、それについて手順をまとめておきたいと思います。 ざ ... <a href="/archives/6043/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、あまり個人的な開発を行なってなくて更新ネタもないので、docomo版 Xperia arcのOS 2.3.3のroot化をする機会があったので、それについて手順をまとめておきたいと思います。</p>
+<h2>ざっくり手順</h2>
+<ol>
+<li>OS 2.3.2へダウングレード</li>
+<li>root化</li>
+<li>OS 2.3.3へアップグレード</li>
+</ol>
+<p>と、かなりざっくりした手順ですが、簡単に説明すると、2.3.3でrootを取得する簡単な方法がないため、一旦2.3.2に落として、root取得が確認されているGingerBreakで取得後、2.3.3への公式アップデートを再度受けるというものです。幸い、2.3.2 -> 2.3.3のアップデートではrootの権限は保持されるようです。</p>
+<p><span id="more-6043"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>今回root化に必要なファイル</h2>
+<ul>
+<li><a href="https://forum.xda-developers.com/showthread.php?t=920746">FlashTool v0.3.0</a></li>
+<li><a href="https://www.multiupload.com/34GT5XJH59">docomo版 OS 2.3.2のROM</a></li>
+<li><a href="https://www.multiupload.com/KN7SQNKLQ2">loader.sin</a></li>
+<li><a href="https://forum.xda-developers.com/showthread.php?t=1044765">GingerBreak v1.2.0</a></li>
+</ul>
+<p>とりあえず、これらを全て落とします。</p>
+<h3>焼く前の準備</h3>
+<p>そして、FlashToolを解凍後、docomo版 OS 2.3.2 ROMも解凍し、ftfファイルをFlashToolにあるfirmwaresディレクトリにコピーします。</p>
+<p>ただ、この状態でROMを焼こうとするとエラーになり、正常に焼けません。そこで、7-zip等でftfファイルを開き、loader.sinをコピーします。これで、正常に焼けると思います。ちなみに、xperia arcのドライバーは予めインストールしておかないとドライバーを見つけられずROMを焼けないので予めインストールしておいてください。通常は、xperia arcをパソコンに繋いだら、新しいハードウェアの検出のダイアログが出ると思うので、そこをクリックするとインストール等の項目があると思います。</p>
+<h3>焼いてみる</h3>
+<ol>
+<li>設定 -> アプリケーションから提供元不明のアプリケーションをON</li>
+<li>設定 -> アプリケーション -> 開発からUSBデバッキングをON</li>
+<li>Xperia arcの電源を落とす</li>
+<li>FlashToolを起動、FlashからdocomoのROMを選択し、OKをクリック</li>
+<li>USBで繋ぐようにダイアログが表示されたら、Xperia arcのキャンセルボタンを押しながら、USBを接続</li>
+</ol>
+<p>これで、ROMが焼かれ、自動的に再起動すると思います。再起動後は、起動にかなり時間がかかるので、ちょっと心配になりますが正常に起動すると思います（２，３分かかりました）</p>
+<h3>捕捉</h3>
+<p>FlashToolでdocomoのROMを選択する際に右上の方に「wipe user data」みたいな項目が有るかと思いますが、コレにチェックするとユーザデータが消え、初期化します。チェックを外すとユーザデータは残りますが、2.3.2に戻した時に2.3.3で更新されたアプリ等でエラーが多発します。これは、再度2.3.3へアップデートを行うとエラーは出なくなります。</p>
+<h3>参考ページ</h3>
+<p><a href="https://armalitexyz.jp/archive/2011/04/27/2011042701.php/">Android Info &#038; Custom &#8211; Xperia Arc（SO-01C）SIMロック解除方法</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6043/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

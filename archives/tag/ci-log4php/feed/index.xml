@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ci-log4php &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/ci-log4php/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[CodeIgniter 2.x]ci-log4phpに新たにLoggerConfiguratorPhpVariableを追加</title>
+		<link>/archives/7134/</link>
+					<comments>/archives/7134/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 07 Jul 2012 06:43:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[ci-log4php]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7134</guid>
+
+					<description><![CDATA[最近、全くCodeIgniterを触っていません。最近の動向についても全く追っていないので分かっていませんが今もCodeIgniter 3系から適用されると言われていた独自ライセンス問題は残っているん ... <a href="/archives/7134/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>最近、全くCodeIgniterを触っていません。最近の動向についても全く追っていないので分かっていませんが今もCodeIgniter 3系から適用されると言われていた独自ライセンス問題は残っているんでしょうか？</p>
+<p>そんな先行き不安なCodeIgniterのライブラリである「<a href="https://github.com/fukata/ci-log4php" target="_blank" title="Integration CodeIgniter and log4php">ci-log4php</a>」に新たに機能を追加しました。</p>
+<p><span id="more-7134"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="https://github.com/fukata/ci-log4php/issues/2">Issue #2: Allow array config params · fukata/ci-log4php</a></p>
+<p>目的はlog4phpの動的な設定。</p>
+<p>LoggerConfiguratorPhpを使えば、指定したphpファイルの設定を適用できるが、その中で利用できる値については、呼び出し元とスコープが異なるため、グローバルなどに変数を展開しておかないと利用できないと思われる。そこで、直に設定用変数をconfigureメソッドに渡せるようにLoggerconfiguratorPhpVariableというのを新たに追加しました。</p>
+<p>コード自体もLoggerConfiguratorPhpとほぼ同じで、phpファイルから値を取得する部分がなくなっているだけです。</p>
+<p>Issueでlog4php自体はPEARからインストールしたものを使いたいという要望があるが、log4php自体も修正しているので、コレは今のところスルーしようと思っています。確かにPEARのものをそのまま使えた方がバグフィックスなどに対応できるので良いのだけど、自分自身が既に使わなくなってしまっているので、それに対応しようという気が起きない。誰か熱心に使ってくれている人が居れば、forkしてそういう修正を加えてくれると嬉しいです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7134/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

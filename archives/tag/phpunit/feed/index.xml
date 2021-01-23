@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PHPUnit &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/phpunit/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[CodeIgniter2.x]CIUnit for CI2をEclipseから利用する場合の設定</title>
+		<link>/archives/5784/</link>
+					<comments>/archives/5784/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 19 Jun 2011 07:46:31 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[PHPUnit]]></category>
+		<category><![CDATA[Tips]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5784</guid>
+
+					<description><![CDATA[fukata/CIUnit-for-CI2 &#8211; GitHub をコマンドラインからテストする際はphpunitコマンドを叩けば良いのですが、Eclipseから利用する場合には「外部ツール」 ... <a href="/archives/5784/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/fukata/CIUnit-for-CI2">fukata/CIUnit-for-CI2 &#8211; GitHub</a></p>
+<p>をコマンドラインからテストする際はphpunitコマンドを叩けば良いのですが、Eclipseから利用する場合には「外部ツール」を設定します。<a href="https://marketplace.eclipse.org/content/makegood">MakeGood</a>というのがCIUnitにも対応している（設定項目は有）ようなのですが、動かなかったので、今回は外部ツールの設定を書いておきます。</p>
+<p><span id="more-5784"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>外部ツール設定</h2>
+<p>[実行] -> [外部ツール] -> [外部ツールの設定]から以下の2つを設定します。</p>
+<p>phpunitコマンドのパスについては、各自の環境で合わせてください。</p>
+<h3>CIUnit AllTests</h3>
+<p>phpunit.xmlを利用し、全テストを行います。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/5847466967" ><img src="https://farm3.static.flickr.com/2589/5847466967_be828bd800.jpg" alt="CIUnit-AllTests"  class='aligncenter'/></a></p>
+<h3>CIUnit UnitTest</h3>
+<p>選択中リソースのテストを行います。選択中リソースとは、PHPExplorerで選択しているフォルダやファイルのこと。フォルダを選択していれば、フォルダ内のファイルを全てテストします。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/5848025028" ><img src="https://farm4.static.flickr.com/3452/5848025028_d5ce7618cf.jpg" alt="CIUnit-UnitTest"  class='aligncenter'/></a></p>
+<p>CIUnit AllTestsを実行した時にコンソールに表示された文字が文字化けする可能性があります。その時は、phpunit.xml内にあるcolors=&#8221;true&#8221;をfalseに変更してみてください。多分これで文字化けは解消すると思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5784/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]CIUnitのCI2.x対応について</title>
+		<link>/archives/5781/</link>
+					<comments>/archives/5781/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 19 Jun 2011 03:12:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CIUnit]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<category><![CDATA[PHPUnit]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5781</guid>
+
+					<description><![CDATA[CodeIgniterとPHPUnitのブリッジとしてCIUnitというのがありますが、３ヶ月ほど更新されていないようです。なので、なんとかCI2.x系でも動かせないかと思い、色々いじくり回してなんと ... <a href="/archives/5781/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CodeIgniterとPHPUnitのブリッジとして<a href="https://bitbucket.org/rafsoaken/ciunit">CIUnit</a>というのがありますが、３ヶ月ほど更新されていないようです。なので、なんとかCI2.x系でも動かせないかと思い、色々いじくり回してなんとかデフォルトのテストコードが動作する程度までになりました。本家の更新が再開されたらフィードバックしたいと思います。</p>
+<p>ソースコードは下記に置いています。</p>
+<p><a href="https://github.com/fukata/CIUnit-for-CI2">fukata/CIUnit-for-CI2 &#8211; GitHub</a></p>
+<p>本家をforkした方が良いかなと思ったのですが、個人的にMercurialは使いにくいのでgithubに作りました。本家が2.xへの対応をしてくれると信じ、とりあえずのリポジトリ程度にしか考えていません。</p>
+<p>冒頭にも書いたようにデフォルトのテストコードが動作する（一部モデルの追加が必要）程度に修正したところです。なので、まだ全機能のテストが出来るとは思えません。自分自身も未検証状態です。実用的なソリューションなので、少しずつ修正していきたいと思います。</p>
+<p>あと、自分自身が本家のCIUnitのコードをあまり理解しておらず、2.xへの対応として本家の意図しないコードが混じっている可能性もありますので、ご了承下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5781/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

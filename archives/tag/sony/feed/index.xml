@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SONY &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/sony/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>一眼レフなどで撮影した写真に位置情報を埋め込む「GPS-CS3K」</title>
+		<link>/archives/2367/</link>
+					<comments>/archives/2367/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 06 Feb 2010 16:03:03 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[CANON EOS KISS X3]]></category>
+		<category><![CDATA[GPS-CS3K]]></category>
+		<category><![CDATA[SONY]]></category>
+		<category><![CDATA[ジオタグ]]></category>
+		<category><![CDATA[一眼レフ]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2367</guid>
+
+					<description><![CDATA[現在、Canon EOS Kiss X3というデジタル一眼レフを使っているのですが、標準では位置情報（ジオタグ）を写真や動画に埋め込む事ができません。 それが、「GPS-CS3K」というGPSユニット ... <a href="/archives/2367/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5054/5476136986_4f6c0a78e4_m.jpg"><img loading="lazy" class="alignleft size-thumbnail wp-image-2369" title="GPS-CS3K" src="https://farm6.static.flickr.com/5054/5476136986_4f6c0a78e4_m.jpg" alt="" width="150" height="150" /></a>現在、Canon EOS Kiss X3というデジタル一眼レフを使っているのですが、標準では位置情報（ジオタグ）を写真や動画に埋め込む事ができません。</p>
+<p>それが、「<a href="https://www.sony.jp/gps/products/GPS-CS3K/">GPS-CS3K</a>」というGPSユニットを使えば、撮影した写真や動画に計測した位置情報を埋め込む事ができます。ただ、これはSONY製ということもあり、一眼レフは「α」シリーズ、コンパクトデジカメはサイバーショットの上位機種と制限があります。</p>
+<p>一応、ネットで調べてみるとSONY製以外の一眼レフで試されている方もおり、機種によっては動作しているとのことです。肝心の自分の使っている機種はというと、まだ動作確認情報を見つけられていません。</p>
+<p>写真に位置情報を簡単に埋め込む事ができれば、旅行に行った時の写真の整理などが非常に楽になります。また、初めて行った場所で撮影した写真でも、どの辺だったのか後で位置を確認することもできます。</p>
+<p>最初は、<a href="https://www.wildtramper.com/sw/cr2/cr2.html">Canon CR2 Specification</a>などを参考に自分でCR2のデータフォーマットを調べて、別アプリから出力されたGPSログと写真の撮影時刻を照らし合わせて位置情報を埋め込もうかと考えていました。</p>
+<p>ただ、もう少し調査してみてEOS Kiss X3の生データへの位置情報の埋め込みに対応していなければ、自作も再検討したいと思います。</p>
+<p><strong>追記：2010-02-07 13:03</strong></p>
+<p><a href="https://plaza.rakuten.co.jp/makPPP/">Makの日記 &#8211; 楽天ブログ（Blog）</a>の管理人さんによれば、GPS-CS3K単体でEOS Kiss X3のRAWデータに対してマッチングさせる機能は使えないとのことです。サポート通りとのことでした。ただ、Windowsの付属ソフトを使えば、マッチングできるようです。これからどうするか検討したいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2367/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

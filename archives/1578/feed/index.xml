@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Red5-0.8.0のtar版をUbuntu Jeos 8.04.3にインストールしてみました	</title>
+	<atom:link href="/archives/1578/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/1578/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: tatsuya		</title>
+		<link>/archives/1578/comment-page-1/#comment-550</link>
+
+		<dc:creator><![CDATA[tatsuya]]></dc:creator>
+		<pubDate>Thu, 15 Oct 2009 05:16:50 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=1578#comment-550</guid>
+
+					<description><![CDATA[@&lt;a href=&quot;#comment-549&quot; rel=&quot;nofollow&quot;&gt;yousukeさんへ&lt;/a&gt;: 
+
+面白いおもちゃを見つけた感覚でRed5に興味を持ちましたw
+これから、少しずつ中身のソースでも追って、いずれはアプリでも作りたいなと思っています。
+
+yousukeさんが持っている情報も是非是非アップしてください。]]></description>
+			<content:encoded><![CDATA[<p>@<a href="#comment-549" rel="nofollow">yousukeさんへ</a>: </p>
+<p>面白いおもちゃを見つけた感覚でRed5に興味を持ちましたw<br />
+これから、少しずつ中身のソースでも追って、いずれはアプリでも作りたいなと思っています。</p>
+<p>yousukeさんが持っている情報も是非是非アップしてください。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: yousuke		</title>
+		<link>/archives/1578/comment-page-1/#comment-549</link>
+
+		<dc:creator><![CDATA[yousuke]]></dc:creator>
+		<pubDate>Thu, 15 Oct 2009 04:31:59 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=1578#comment-549</guid>
+
+					<description><![CDATA[URLはダミーです。
+
+おお、素晴らしいですね。
+私もRed5を扱っておりますが、いかんせん情報がまだまだ少ないです。この様に情報をUPして頂けるとすごくうれしいです。今後のUPDATEに期待しています！
+頑張ってください。]]></description>
+			<content:encoded><![CDATA[<p>URLはダミーです。</p>
+<p>おお、素晴らしいですね。<br />
+私もRed5を扱っておりますが、いかんせん情報がまだまだ少ないです。この様に情報をUPして頂けるとすごくうれしいです。今後のUPDATEに期待しています！<br />
+頑張ってください。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

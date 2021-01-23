@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>AWS &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/aws/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>terraformを使ってこのブログをAWSへ移行した</title>
+		<link>/archives/7977/</link>
+					<comments>/archives/7977/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 25 Feb 2017 12:19:05 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[terraform]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7977</guid>
+
+					<description><![CDATA[去年、年末付近に書いた記事の中でterraformを使ってみたいと書いたのがやっと実現出来た。 広告 とりあえず、今回使ったterraformの設定ファイルはこちら。初めて試してみたのでまずい所とかが ... <a href="/archives/7977/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7977/"><img src="https://farm1.staticflickr.com/608/32860429821_718c991e53_c.jpg" alt="P2164104" class="aligncenter"/></a></p>
+<p>去年、年末付近に書いた記事の中でterraformを使ってみたいと書いたのがやっと実現出来た。</p>
+<p><span id="more-7977"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>とりあえず、今回使ったterraformの設定ファイルはこちら。初めて試してみたのでまずい所とかがあるかもしれない。<br />
+<a href="https://gist.github.com/fukata/81e35c862262d896017135acfbbcab49">main.tf</a></p>
+<p>大部分をクラスメソッドさんの記事を参考にさせてもらった。<br />
+<a href="http://dev.classmethod.jp/cloud/terraform-getting-started-with-aws/">AWSでTerraformに入門 ｜ Developers.IO</a></p>
+<p>これを機にちゃんとterraform使って環境構築もコードに落としていこうと思う。</p>
+<p>VPCやらInternetGatewayやら手動で設定しなくて良くなったのは非常に良い。新たなサービスを作る時に毎回の作業だったのでこれだけでも簡略化されるのは非常にありがたい。早速次のプロジェクトから使っていこう。tfstateファイルのバックアップ先としてs3を選べるのも面白い。</p>
+<p>homebrewでインストールされるterraformが0.6系でimportコマンドとかがなかったので<a href="https://www.terraform.io/downloads.html">本家</a>から0.8.7を落としてインストールすることにした。</p>
+<p>既にDigital Oceanでこのブログを公開していたのでRoute53周りはimportコマンドを使って既存の物を取り込んだ。</p>
+<p>マップのアクセス方法が変わってたり多少書き換える箇所があったけどほぼ問題なく動作した。</p>
+<p>一つハマったのは <code>aws_instance</code> の <code>associate_public_ip_address</code> に <code>false</code> を指定してもなぜかtfstate内でtrueになっていて再度applyを行った際にインスタンスが再作成されてしまうこと。 <code>associate_public_ip_address</code> の行ごと削除したら解消した。ただ、解消したと言ってもfalseになったわけじゃなくtfstateもmain.tfもtrueの状態になってるというだけ。</p>
+<p>さて、次は何を試そう。とりあえず、「ゼロから作るDeep Learning」を読み終えないと。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7977/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/608/32860429821_718c991e53.jpg</image>
+	</item>
+		<item>
+		<title>AWSのBilling ReferenceにあるProgrammatic Accessが急にDisabledになった件</title>
+		<link>/archives/7535/</link>
+					<comments>/archives/7535/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 04 Sep 2013 05:42:39 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7535</guid>
+
+					<description><![CDATA[AWSには料金レポートをS3にアップしてくれる便利な機能がある。 うちでも4月からAWSを使うようにしたのでBilling ReferenceにあるProgrammatic Accessを有効にしてレ ... <a href="/archives/7535/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>AWSには料金レポートをS3にアップしてくれる便利な機能がある。</p>
+<p>うちでも4月からAWSを使うようにしたのでBilling ReferenceにあるProgrammatic Accessを有効にしてレポートを社内システムに取り込んでいたんだけど、それが急に更新されなくなり、何かと調べたらS3にアップされなくなっていた。</p>
+<p><span id="more-7535"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>気づいたのは8/21。</p>
+<p>レポートが更新されないので何かと調べてみたところ、S3のレポートの最終更新日時が8/20 19時過ぎで止まっていた。更に調べてみると、Billing ReferenceにあるProgrammatic AccessがDisabledになっていた。今まで初回に設定してから特に弄っていないのでAWS側の問題かもしれないので問い合わせてみると、バケット名にドットを含んでいる場合、ドットを含めずに試してみてくれという風に言われた。</p>
+<p>まさかなと思い、ドットを含めない名前でバケットを作成し、ポリシーも設定し直すとEnabledになった。</p>
+<p>AWS側で何か変わったのかな・・・。</p>
+<p>とりあえず、今はドット含めないパターンで運用してる。</p>
+<p><strong>追記: 2013.09.06 11:30</strong><br />
+AWSのバグだったらしく、現在は修正済みとのことです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7535/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Windows, Mac, Linux対応「Simple Amazon Glacier Uploader」</title>
+		<link>/archives/7314/</link>
+					<comments>/archives/7314/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Nov 2012 04:39:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[AWS Glacier]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7314</guid>
+
+					<description><![CDATA[AWS Glacierへmacからアップロードしたかったんですが、良さげなクライアントがなかったので少し探してみたところ、下記がシンプルでよさそうでした。しかも、Windows, Mac, Linux ... <a href="/archives/7314/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>AWS Glacierへmacからアップロードしたかったんですが、良さげなクライアントがなかったので少し探してみたところ、下記がシンプルでよさそうでした。しかも、Windows, Mac, Linuxとマルチプラットフォームにも対応しています。</p>
+<p><a href="https://simpleglacieruploader.brianmcmichael.com/" title="Simple Amazon Glacier Uploader" target="_blank">Simple Amazon Glacier Uploader</a></p>
+<p>一応、これを使って先ほど6GBのzipファイルをアップしてみました。</p>
+<p>明日くらいにダウンロードしてみます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7314/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ClojureからECSにアクセスする「clj-aws-ecs」</title>
+		<link>/archives/6480/</link>
+					<comments>/archives/6480/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 13 Nov 2011 05:48:09 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[ECS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6480</guid>
+
+					<description><![CDATA[making/clj-aws-ecs &#8211; GitHub 今作っているサービスで少し使ってみたので、メモしておきます。 広告 使い方は至って簡単で、 (use 'am.ik.clj-aws- ... <a href="/archives/6480/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/making/clj-aws-ecs">making/clj-aws-ecs &#8211; GitHub</a></p>
+<p>今作っているサービスで少し使ってみたので、メモしておきます。</p>
+<p><span id="more-6480"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>使い方は至って簡単で、</p>
+<pre lang="clojure">
+(use 'am.ik.clj-aws-ecs)
+(def requester (make-requester "ecs.amazonaws.jp" "YOUR-ACCESS-KEY-ID" "YOUR-ACCESS-SECRET-KEY"))
+(item-search-map requester "SearchIndex" "KEYWORD")
+</pre>
+<p><a href="https://www.ajaxtower.jp/ecs/itemsearch/index2.html">商品カテゴリーの指定(SearchIndex) &#8211; 商品検索(ItemSearch) &#8211; Amazon Web サービス</a></p>
+<p>SearchIndex一覧については上記のページに書いています。</p>
+<p><a href="https://clojars.org/am.ik/clj-aws-ecs">clj-aws-ecs | Clojars</a></p>
+<p>clojars.orgにも登録されているので、project.cljに下記のように登録すれば簡単に使えるようになります。</p>
+<pre lang="clojure">
+[am.ik/clj-aws-ecs "0.1.0"]
+</pre>
+<p>ただ、ECSの戻り値がXMLで、<strong>item-search-map</strong>の構造はXMLをそのままMapに変換した構造になっているため、その値を使って何かに利用する時に面倒なので、簡易的ですが、下記のようなコードを書いてXMLベースのMapから値を抜き出す処理を書きました。</p>
+<pre lang="clojure">
+(defn ecs-attr-value
+  ([attrs tag] (ecs-attr-value attrs tag true))
+  ([attrs tag first-only]
+   (if (empty? attrs)
+     nil 
+     (let [attr (first attrs)
+           attr-tag (:tag (first attrs))]
+       (if (= tag attr-tag)
+         (if first-only
+           (first (:content attr))
+           (:content attr))
+         (recur (next attrs) tag first-only))))))
+
+(defn ecs-item-attrs-parse
+  [item attrs]
+  (if (empty? attrs)
+    item
+    (let [attr (first attrs)]
+      (def attr-value
+        (cond
+          (= (:tag attr) :ASIN) {:ASIN (first (:content attr))} 
+          (= (:tag attr) :ItemAttributes) {:Title (ecs-attr-value (:content attr) :Title)} 
+          (= (:tag attr) :SmallImage) {:SmallImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :MediumImage) {:MediumImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :LargeImage) {:LargeImage (ecs-attr-value (:content attr) :URL)} 
+          (= (:tag attr) :DetailPageURL) {:DetailPageURL (first (:content attr))}))
+      (recur (if (nil? attr-value) item (conj item attr-value)) (next attrs)))))
+
+(defn ecs-item-parse [items xml-items] 
+  (if (empty? xml-items)
+    items
+    (recur 
+      (conj items (ecs-item-attrs-parse {} (:content (first xml-items)))) 
+      (next xml-items))))
+
+(defn ecs-item-search [search-index keywords]
+  (ecs-item-parse [] (filter 
+                       #(= :Item (% :tag))
+                       (:content 
+                         (first 
+                           (filter 
+                             #(= :Items (% :tag))
+                             (:content (item-search-map 
+                                         requester 
+                                         search-index 
+                                         keywords 
+                                         {"AssociateTag" "example-22"
+                                          "ResponseGroup" "Medium"}))))))))
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6480/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[AWS]サービスの見直し</title>
+		<link>/archives/5005/</link>
+					<comments>/archives/5005/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 04 Dec 2010 20:35:56 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5005</guid>
+
+					<description><![CDATA[今月のAWS利用料金52.07ドル。 ？？？ micro instance一台しか起動していないのにどうして？そういえば、先月も30ドル程度請求が来てました。先月はsmall instanceなど色々 ... <a href="/archives/5005/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今月のAWS利用料金52.07ドル。</p>
+<p>？？？</p>
+<p>micro instance一台しか起動していないのにどうして？そういえば、先月も30ドル程度請求が来てました。先月はsmall instanceなど色々試しに使っていたのでそれで高くなったのかなと思っていたのですが、今月はそれを上回る金額でした。</p>
+<p>先月のAWS利用明細はこちら。</p>
+<p><a href='https://www.flickr.com/photos/fukata/5228799215/sizes/o/'>AWS Billing 201011</a></p>
+<p>micro instanceを1ヶ月間維持するのに約17ドル。それに対してCloudWatchとEC2 EBSを合わせて約23ドル。EBSに関しては容量がそれだけあれば仕方ないのですが、自分の場合は１GB程度しか利用していなかったので、かなり無駄に課金されていました。ちなみに、EBSの容量は１００GBです。CloudWatchに関してはそれほど情報の粒度が細かいわけではないので、モニタリングしたいだけであれば、独自でmuninやらnagiosなりを入れた方がモニタリングできる値も多いですし良いかなと思います。</p>
+<p>CloudWatchとEBSでmicro instanceの維持費よりもかかっていたわけですから、これらを止めればもう一台micro instanceが増やせるわけです。そうすれば、現在、WEBとDBが同一サーバ内にあるので分離すれば多少は速くなるんじゃないかと。もう少し広告収入が増えたら2台構成を考えたいと思います。</p>
+<p>料金とは関係ありませんが、micro instanceは32bit, 64bit両方に対応しているのにsmall instannceのみ32bitのみ対応というのは64bitでmicroを構築していた場合、smallではなくいきなりlargeにスケールアップしないといけません。また、smallで構築しているサーバをlargeにスケールアップすることもできません。現在、うちのサイトはmicro(64bit)で運用していますが、うちのような小さなサイトでlarge instanceが必要になる頃には標準のWordPressをそのまま利用している可能性は低いと思うので、無理に64bit版を利用する必要はないかもしれません。むしろまだsmallにスケールアップが可能なmicro(32bit)を選択しておいた方が賢いのかもしれません。</p>
+<p>まぁ、早いところsmall instanceでも64bit環境がサポートされるようになってほしいところです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5005/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>EC2にブログを移行しました</title>
+		<link>/archives/4815/</link>
+					<comments>/archives/4815/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 19 Oct 2010 20:16:46 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[AWS EC2]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4815</guid>
+
+					<description><![CDATA[中国の壁越え用としてAmazonのEC２(Micro Instance)を使用していたのですが、マシンパワーが余っていたので当サイトを移行してみました。 また、その際、以前言っていた中国国内からアクセ ... <a href="/archives/4815/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>中国の壁越え用としてAmazonのEC２(Micro Instance)を使用していたのですが、マシンパワーが余っていたので当サイトを移行してみました。<br />
+また、その際、以前言っていた中国国内からアクセスされた場合には、FacebookやTwitterなどの表示を切り替えるようにもしました。これで、中国国内からのアクセス時に不要なウィジェットを配信することがなくなったと思います。</p>
+<p>自分は回線の弱い中国にいるので実際にどれくらい早くなったのかいまいちわかりませんが、それでも前より描画が早くなったような気がします。</p>
+<p>これで、自分のサイトが急激に大きくなってもスケーラビリティのあるEC２やその他のサービスを利用することが可能になります。まぁ、当分はMicro Instanceのみで充分だと思いますが＾＾；</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4815/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[AWS]EC2を使ってみた</title>
+		<link>/archives/4734/</link>
+					<comments>/archives/4734/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 16 Sep 2010 03:42:50 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[EC2]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4734</guid>
+
+					<description><![CDATA[Amazon EC2が新メニュー「Micro Instance」を追加－1時間あたり2セントから &#8211; クラウド Watch 仕事でEC2を使っていることもあり、個人でも使いたかったのですが ... <a href="/archives/4734/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://cloud.watch.impress.co.jp/docs/news/20100910_392901.html">Amazon EC2が新メニュー「Micro Instance」を追加－1時間あたり2セントから &#8211; クラウド Watch</a></p>
+<p>仕事でEC2を使っていることもあり、個人でも使いたかったのですが、常に使う分にはSmallインスタンスでも利用料金が7000円程度／月と割と高いので、躊躇していたのですが1500円程度／月のMicroインスタンスが追加されたので、早速使ってみました。</p>
+<p><a href="https://aws.amazon.com/jp/">Amazon Web Services (日本語)</a></p>
+<p>まだ、AWSのアカウントすら持っていなかったのですが、Amazonのアカウントを持っていれば利用することができるようなので特にアカウント作成などはありませんでした。</p>
+<p>ログインすると、AWS Management Consoleに繋げるようになり、EC2や、S3などAWSの各サービスの設定や監視などが行なえます。今のところインタフェースは英語のみとなっているようですが、解説サイトや書籍も数多く出回っているのでそれらを読めばとくに苦労することはないと思います。</p>
+<p>Microインスタンスは、Smallインスタンスと違い、64bitOSもサポートしていますが、個人で、Largeインスタンス以上を利用することは基本的にないだろうと思ったので32bitのUbuntuを使用。鍵ファイル、セキュリティグループをあらかじめ設定しておけば、サーバの用意自体は1分程度で行なえます。また、実際の運用時には、これらに加え、EBSの設定や、Elastic IPなどを使用することになると思いますが今回は省略します。</p>
+<p>Ubuntuを選択したので、サーバへは鍵ファイル認証または、パスワード認証でのSSH接続となります。デフォルトでは、rootユーザのパスワードが「root」となっており、IPさえ分かればすぐにログインすることができてしまうので、SSHの設定はすぐに変更した方が良いかと思います。</p>
+<p>EBSなど特徴がありますが（今回は省略）ログイン後は、基本的に通常のサーバと同様なので、aptでLAMP環境を作成して、現状の設定をAMIとして作成しました。AMIとは、スナップショットした仮想イメージのようなもので、次から同じようなインスタンスを立ち上げたい時は今作成したAMIを指定すれば、既にLAMP環境が整ったサーバを用意することができます。また、これらの他に魅力的なAWSのサービスがありますが、また後ほど個人で使用した際に書きたいと思います。</p>
+<p>とりあえず、いくつかあるブログサーバをEC2上に移行しようかと考えています。もう少し負荷が高くなれば、当サイトも移行を考えています。</p>
+<p>今回、EC2を利用するにあたり、下記の書籍を参考にしました。今まで自分たちでサーバを用意していた時のサーバ構成をどうやってAWS上で構成するか、またその際の注意点やAWSの紹介、基本的な使い方なども書かれており、非常に良書でした。</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as1&#038;m=amazon&#038;f=ifr&#038;md=1X69VDGQCMF7Z30FM082&#038;asins=4822234371" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4734/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>フジプリ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%95%E3%82%B8%E3%83%97%E3%83%AA/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 27 Jun 2013 13:52:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>フジプリで写真を現像してみた</title>
+		<link>/archives/298/</link>
+					<comments>/archives/298/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 27 Jun 2013 13:52:09 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ネットプリント]]></category>
+		<category><![CDATA[フジプリ]]></category>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=298</guid>
+
+					<description><![CDATA[フォトコンテストに応募するためにflickrにアップしていた写真からいくつかフジプリを使って現像してみました。 広告 ネットプリントを注文して2,3日で届きました フォトアルバムというサービスもあるよ ... <a href="/archives/298/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/45259648@N06/9149818711" target="_blank" title="I0001461"><img src="https://farm4.staticflickr.com/3710/9149818711_e8b86c6fdc_z.jpg" alt="I0001461" class="aligncenter" /></a></p>
+<p>フォトコンテストに応募するためにflickrにアップしていた写真からいくつか<a href="https://www.fujipri.net/">フジプリ</a>を使って現像してみました。</p>
+<p><span id="more-298"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>ネットプリントを注文して2,3日で届きました<br />
+<a href="https://www.flickr.com/photos/45259648@N06/9152069698" target="_blank" title="I0001454"><img src="https://farm3.staticflickr.com/2856/9152069698_e0f7e574d3_z.jpg" alt="I0001454" class="aligncenter" /></a></p>
+<p>フォトアルバムというサービスもあるようです<br />
+<a href="https://www.flickr.com/photos/45259648@N06/9152046824" target="_blank" title="I0001456"><img src="https://farm4.staticflickr.com/3782/9152046824_8674c4b6a2_z.jpg" alt="I0001456" class="aligncenter" /></a></p>
+<p>旅行の時の写真たち<br />
+<a href="https://www.flickr.com/photos/45259648@N06/9149818711" target="_blank" title="I0001461"><img src="https://farm4.staticflickr.com/3710/9149818711_e8b86c6fdc_z.jpg" alt="I0001461" class="aligncenter" /></a></p>
+<p>今回、<a href="https://www.fujipri.net/">フジプリ</a>を使いましたが、本当はflickrから連携されていたネットプリント機能を使ってみたかったんですが、日本国内向けには今年で終わっていたようで利用することが出来ませんでした。で、他に探してみたらフジプリントがあったので今回利用してみました。</p>
+<p>使ってみての感想は、flickrと連携していないので個別写真をアップロードするのが面倒なのと、フジプリントではユーザ登録機能がない（？）ので毎回入力しないといけないということになっています。（一応cookieには保存できるようです）</p>
+<p>今回現像した写真を持って週末にでもフォトコンテストの応募をしてきたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/298/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm4.staticflickr.com/3710/9149818711_e8b86c6fdc.jpg</image>
+	</item>
+	</channel>
+</rss>

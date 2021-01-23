@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン2.0.0をリリース	</title>
+	<atom:link href="/archives/7681/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/7681/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:12 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/7681/comment-page-1/#comment-892</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Sat, 30 Aug 2014 09:24:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7681#comment-892</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/7681/comment-page-1/#comment-891&quot;&gt;ish&lt;/a&gt;.
+
+今までモバイルで利用したいという声がなかったので特に考慮していませんでした。ちょっと時間が出来たらモバイル向けのUIも考えてみたいと思います。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/7681/comment-page-1/#comment-891">ish</a>.</p>
+<p>今までモバイルで利用したいという声がなかったので特に考慮していませんでした。ちょっと時間が出来たらモバイル向けのUIも考えてみたいと思います。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ish		</title>
+		<link>/archives/7681/comment-page-1/#comment-891</link>
+
+		<dc:creator><![CDATA[ish]]></dc:creator>
+		<pubDate>Fri, 29 Aug 2014 16:00:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=7681#comment-891</guid>
+
+					<description><![CDATA[ver1.9.19アップデートの際にはお世話になりました。おかげさまでWPを快適に使っています。さて、もしこれができればいいなと思った点をお伝えしておきます。iPhoneでsafariを使ってWPの投稿画面を表示させた場合、flickr-pressのflickrアイコン？をクリックするとファイル選択画面が出てきますが、スクロールできないため画像挿入できないのです。iPhoneでもflickr-pressが使えればすごく便利なので、今後ご検討いただければ幸いです。(枚数少ないのであれば、挿入ボタンを一番上に移動させるだけでも使えるんですが…)]]></description>
+			<content:encoded><![CDATA[<p>ver1.9.19アップデートの際にはお世話になりました。おかげさまでWPを快適に使っています。さて、もしこれができればいいなと思った点をお伝えしておきます。iPhoneでsafariを使ってWPの投稿画面を表示させた場合、flickr-pressのflickrアイコン？をクリックするとファイル選択画面が出てきますが、スクロールできないため画像挿入できないのです。iPhoneでもflickr-pressが使えればすごく便利なので、今後ご検討いただければ幸いです。(枚数少ないのであれば、挿入ボタンを一番上に移動させるだけでも使えるんですが…)</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

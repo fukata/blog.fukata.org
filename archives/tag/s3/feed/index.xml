@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>S3 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/s3/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>写真のRAWデータ用にバックアップスクリプトを書いた</title>
+		<link>/archives/7576/</link>
+					<comments>/archives/7576/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 26 Dec 2013 15:51:48 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Net::Amazon::S3]]></category>
+		<category><![CDATA[S3]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7576</guid>
+
+					<description><![CDATA[カメラで撮影したRAWデータを自宅のファイルサーバに/nas/photos/yyyy/mm/dd/みたいな感じで日付別で保存しているのですが、いつHDDが吹っ飛ぶか分からないのでS3へも日単位でtar ... <a href="/archives/7576/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>カメラで撮影したRAWデータを自宅のファイルサーバに/nas/photos/yyyy/mm/dd/みたいな感じで日付別で保存しているのですが、いつHDDが吹っ飛ぶか分からないのでS3へも日単位でtarでまとめてアップロードしていました。</p>
+<p>手動で固めてアップロードしていたんですが面倒になったのでバックアップスクリプトを書きました。</p>
+<p><span id="more-7576"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>year,monthまで指定された場合はその月の日をバックアップ対象にします。ただし、毎回S3へアップロードしていたのでは時間もかかるので、S3へアップロードしたファイルの一覧を取得して差分だけを対象にするようにしています。これで、何回指定しても安心です。</p>
+<p>また、dry-runオプションも付けており実際にはS3へアップロードせずにバックアップ対象一覧を表示する事もできます。全部Smart::Commentsで表示しているところや、linuxのコマンドを直に叩いていたりするのがイケてない感じではありますけど、個人で使う分にはこれくらいで十分かな。</p>
+<p>ただ、multipartアップロードに対応しないと5GB以上のファイルがアップロードできませんね。。。コレは後日対応することにしよう。1日5GBって250枚弱なんで普通にありえる。</p>
+<p><script src="https://gist.github.com/fukata/8135101.js"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7576/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Memory &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/memory/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ThinkPad X201sのメモリを8GBに増量</title>
+		<link>/archives/5618/</link>
+					<comments>/archives/5618/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 20 Apr 2011 07:34:08 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Memory]]></category>
+		<category><![CDATA[ThinkPad X200]]></category>
+		<category><![CDATA[ThinkPad X201]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5618</guid>
+
+					<description><![CDATA[Ubuntu上にVirtualBoxで2つほどVMを立ち上げる事が多く、4GBのメモリでも足りない事がしばしばあったので、昨日ついに4GBx2のメモリを注文しました。 早速、ThinkPad X201 ... <a href="/archives/5618/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Ubuntu上にVirtualBoxで2つほどVMを立ち上げる事が多く、4GBのメモリでも足りない事がしばしばあったので、昨日ついに4GBx2のメモリを注文しました。</p>
+<p>早速、ThinkPad X201sに装着して、起動してみたところ、</p>
+<blockquote><p>             total       used       free     shared    buffers     cached<br />
+Mem:       7987164    7821164     166000          0     133720    4568448<br />
+-/+ buffers/cache:    3118996    4868168<br />
+Swap:      2094084         76    2094008
+</p></blockquote>
+<p>と、正常に認識しているようです。<br />
+ちなみに、ThinkPad X200sを使用している方も一緒に注文したのですが、そちらも正常に8GB認識できたみたいです。</p>
+<p>SAMSUNG DDR3 PC3-8500<br />
+<a href="https://www.flickr.com/photos/45259648@N06/5636921130"><img src="https://farm6.static.flickr.com/5110/5636921130_8c3b04ffc7.jpg" alt="SAMSUNG DDR3 PC3-8500" class='aligncenter'/></a></p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B0040IU242" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5618/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

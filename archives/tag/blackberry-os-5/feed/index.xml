@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>BlackBerry OS 5 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/blackberry-os-5/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]OSの再インストール手順</title>
+		<link>/archives/2451/</link>
+					<comments>/archives/2451/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 17 Feb 2010 02:10:14 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry OS 5]]></category>
+		<category><![CDATA[Manual]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2451</guid>
+
+					<description><![CDATA[昨日の記事「[BlackBerry]Bold 9000に公式版OS5.0をインストールしました」の中でも再インストール手順について少し明記しましたが、wikiの方にまとめましたので、URLを貼っておき ... <a href="/archives/2451/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の記事「<a href="https://fukata.org/2010/02/17/blackberry-bold-9000-os5-0-install-official-version/">[BlackBerry]Bold 9000に公式版OS5.0をインストールしました</a>」の中でも再インストール手順について少し明記しましたが、wikiの方にまとめましたので、URLを貼っておきたいと思います。</p>
+<p><a href="https://sites.google.com/site/tatsuyafukata/tutorial/bb-os-reinstall">ReInstall BlackBerry OS (Tatsuya Wiki)</a></p>
+<p>多少不明確な部分がありますが、何かわかり次第、上記のページを更新していきたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2451/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[BlackBerry]Bold 9000に公式版OS5.0をインストールしました</title>
+		<link>/archives/2441/</link>
+					<comments>/archives/2441/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 16 Feb 2010 16:46:50 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry Bold 9000]]></category>
+		<category><![CDATA[BlackBerry OS 5]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2441</guid>
+
+					<description><![CDATA[先日、記事「[BlackBerry]Bold 9000用のOS5.0公式リリース」にした Bold 9000用のOS5.0公式版ですが、以前OS5.0をインストールしたパソコンでずっと下記のような手順 ... <a href="/archives/2441/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5019/5476137258_d236e72b6a_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5019/5476137258_d236e72b6a_m.jpg" title="Capture0_38_17" width="150" height="150" class="alignleft size-thumbnail wp-image-2442" /></a>先日、記事「<a href="https://fukata.org/2010/02/16/release-blackberry-bold-9000-os5-0-official-version/">[BlackBerry]Bold 9000用のOS5.0公式リリース</a>」にした Bold 9000用のOS5.0公式版ですが、以前OS5.0をインストールしたパソコンでずっと下記のような手順を何回も繰り返しても「<strong>Blackberry Device Softwareがありません</strong>」というエラーが発生してインストールできなかったのですが、今まで一度も接続したことのないパソコンで同様のインストール作業を行なったところすんなりインストールすることができました。</p>
+<p>JDEなどは関係ないと思ってアンインストールしなかったのですが、BlackBerry関連のプログラムは全部アンインストールした方が良かったんですかね・・・。それか、レジストリにノイズが残ってしまうとか？だとしたらバグですよね。。。</p>
+<p>自分が行なったインストール手順です。</p>
+<ol>
+<li>BlackBerry Device Softwareのアンインストール</li>
+<li>BlackBerry Desktop Softwareのアンインストール</li>
+<li>PCの再起動</li>
+<li>BlackBerry Desktop Software version 5.0をインストール</li>
+<li>BlackBerry Device Software（9000jEastAsia_PBr5.0.0_rel661_PL5.2.0.33_A5.0.0.41 1_Bell_Mobility_Inc.exe）をインストール</li>
+<li>PCの再起動</li>
+<li>Vender.xmlの削除</li>
+<li>Loader.exeの実行</li>
+</ol>
+<p>という感じです。</p>
+<p>それで、今回どうにもこうにもインストール作業が正常に終了しなかったので、一度OSを抹消したところ、インストールアプリの情報も失ってしまったので、再度必要なアプリを一通りインストールしたので、メモ代わりに残しておきたいと思います。</p>
+<ul>
+<li>MobiHand App Store</li>
+<li>BeamExplorer</li>
+<li>CaptureIt</li>
+<li>Gmail</li>
+<li>Google Maps</li>
+<li>Google Mobile App</li>
+<li>Google Sync</li>
+<li>GPSLogger</li>
+<li>IM+ Skype</li>
+<li>MilkSync</li>
+<li>NAVITIME</li>
+<li>Opera Mini 5 beta 2</li>
+<li>QuickPull</li>
+<li>StartMeUp</li>
+<li>UberTwitter</li>
+</ul>
+<p>今回使用したテーマは「<a href="https://www.catsberry.com/2009/06/12-1809628.php">CatsBerry.com | ブラックベリーをいじり倒そう？  » xTheme001 BETA 1.0.5 for Bold</a>」さんの物を使用させていただいております。非常に出来がよくて満足しています。いずれ有料になるかもしれないとのことなので、DLできる方は今のうちにしておいた方が良いと思います。</p>
+<p>次に、今回のOS5.0を使ってみた感想です。</p>
+<p>ゴジックも標準で使えます。</p>
+<p><a href="https://farm6.static.flickr.com/5177/5475542203_bc3d5e6698_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5177/5475542203_bc3d5e6698_m.jpg" title="Capture0_33_17" width="480" height="320" class="size-full wp-image-2445 alignnone" /></a></p>
+<p>絵文字の入力も出来ます。ただ、au、softbankの携帯に送っても表示はされませんでした。</p>
+<p><a href="https://farm6.static.flickr.com/5253/5475542563_67d6f52da3_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5253/5475542563_67d6f52da3_m.jpg" title="Capture0_41_10" width="480" height="320" class="alignnone size-full wp-image-2447" /></a></p>
+<p><a href="https://farm6.static.flickr.com/5253/5476138036_b80a118061_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5253/5476138036_b80a118061_m.jpg" title="Capture0_41_17" width="480" height="320" class="alignnone size-full wp-image-2448" /></a></p>
+<p>その他に関しては、OS4.6に比べるとメモリの消費量が多いのか、4.6の頃よりもすぐにメモリ不足のダイアログが表示されます。また、ブラウザに関しては、読み込みスピードと動作も軽くなっているような気がします。</p>
+<p>不具合かとうかわかりませんが、メール作成時に入力文字切り替えで日本語と半角の切り替え表示が遅いことです。まぁ、実際にはすぐに変わるので、個人的にはあまり気にしていません。</p>
+<p>また、前回は変換後の文字列がループするような不具合があったのですが、今回に関しては、そのような不具合はほとんど見られません。他のサイトでは、たまに発生するとの報告がありますが、今のところ自分の端末では発生していません。</p>
+<p>今回のOS5.0は前回に比べるとかなり実用的じゃないかと思います。とりあえず、自分はもう少し使おうかと思います。OS5.0を使用してみてさらにBold 9700が欲しくなりました＾＾；</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2441/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[BlackBerry]Bold 9000に流出版のOS5.0を入れてみました</title>
+		<link>/archives/1947/</link>
+					<comments>/archives/1947/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 15 Dec 2009 02:18:03 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry OS 5]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1947</guid>
+
+					<description><![CDATA[先日、BlackBerry Bold 9700のOS5.0の新機能などを見ていると面白そうな機能があったので、9000でも入れれないかと探していると流出版というのがあるみたいで、日本語版というのもあり ... <a href="/archives/1947/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>先日、BlackBerry Bold 9700のOS5.0の新機能などを見ていると面白そうな機能があったので、9000でも入れれないかと探していると流出版というのがあるみたいで、日本語版というのもありました。</p>
+<p>それで、インストール手順を載せているサイトを頼りに入れてみました。ちなみにその時入れたOSは下記になります。</p>
+<p>9000jAllLang_PBr5.0.0_rel157_PL5.2.0.3_A5.0.0.130</p>
+<p>ダウンロードについては下記などのサイトから行えるようです。流出版なので、もしかすると長い間同じサイトからダウンロードできるかは分かりません。もしリンク切れなどが発生している場合には、改めて上記のパッケージ名で検索してみてください。</p>
+<p>RapidShare: 1-CLICK Web hosting &#8211; Easy Filehosting</p>
+<p>インストールの手順については、下記のサイトが非常に参考になりました。</p>
+<p><a href="https://telecommunication-memorandum.blogspot.com/2009/01/blackberry-bold-9000os.html">通信事業おぼえがき: BlackBerry Bold 9000用OS入れ替え方法</a></p>
+<p>インストールして、少し触ってみたのですが、とりあえず自分が正常に動作しないことを確認できたものを上げたいと思います。</p>
+<ul>
+<li>MSN Live Messenger：アイコンが出現しない。</li>
+<li>GoogleTalk：インストール後、アイコンが出現しない。</li>
+<li>予測変換：候補が何も出ない。</li>
+<li>絵文字：文字化け。</li>
+<li>ブラウザ：メールのリンク等からブラウザが起動しても対象のURLに飛ばない。</li>
+<li>着信音とバイブの同期：プロファイル上では、ONになっているにも関わらず何も反応しない。メールなどで着信音が鳴っている最中にメールを開いても着信音が鳴り続ける場合がある。</li>
+<li>メール：宛先にアドレス帳から引用しようとして選択するが、反映されない場合がある。</li>
+</ul>
+<p>とまぁ、ざっとこんな感じです。まだ、個人的な感想としてはまだ実用レベルではないです。ここは大人しく正式な物が出るかBlackBerry Bold 9700を買うまで我慢したいと思います。</p>
+<p>もし、OS5からOS4.6にダウングレードされる方は下記からdocomo版のOSをダウンロードして再インストールを行って下さい。</p>
+<p>ソフトウェアダウンロード | BlackBerry Bold | サポート | ドコモスマートフォンサイト | NTTドコモ</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1947/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

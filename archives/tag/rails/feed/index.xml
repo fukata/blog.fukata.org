@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Rails &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/rails/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 06 Dec 2018 05:39:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Nuxt.js(@nuxtjs/auth)とRails(omniauth)でTwitterとOAuth認証を行う方法</title>
+		<link>/archives/9605/</link>
+					<comments>/archives/9605/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 14 Nov 2018 15:43:17 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Nuxt.js]]></category>
+		<category><![CDATA[oauth]]></category>
+		<category><![CDATA[Rails]]></category>
+		<guid isPermaLink="false">/?p=9605</guid>
+
+					<description><![CDATA[背景 トラハ は現在ものすごくシンプルな作りになっている。 そこで以前使ったことがあるnuxt.jsで置き換えてみようと思って作り変えていてやっと認証周りの部分まで実装が進んできた。 Omniauth ... <a href="/archives/9605/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<h2>背景</h2>
+<p><a href="https://traha.org/">トラハ</a> は現在ものすごくシンプルな作りになっている。</p>
+<p>そこで以前使ったことがあるnuxt.jsで置き換えてみようと思って作り変えていてやっと認証周りの部分まで実装が進んできた。</p>
+<p>Omniauthを使った現在のフローは極力崩さずに@nuxtjs/authを使えないかと思い試行錯誤した結果が今回の方法である。</p>
+<p>基本的にOmniauthの時に行っていたコールバック時の処理などには全く手を付けていないのでその辺を再実装する手間は省けた。</p>
+<h2>シーケンス図</h2>
+<p>Nuxt.js(@nuxtjs/auth)とRails(omniauth)でTwitterとOAuth認証を行うシーケンス図<br />
+<a href="https://www.flickr.com/photos/fukata/45878003031" target="_blank" title="01_oauth_twitter_sequence"><img loading="lazy" src="https://farm5.staticflickr.com/4852/45878003031_1eb761f194_c.jpg" alt="01_oauth_twitter_sequence" class="aligncenter" width="800" height="567"/></a></p>
+<h2>説明</h2>
+<p>ポイントはTwitterからRoRにコールバックが返ってきた時に有効期限の短い(ここでは1分)のJWTを付与してNuxt.js側にリダイレクトしている。</p>
+<p>Nuxt.js側は受け取ったトークンを元に <code>this.$auth.loginWith('local', { data: this.$route.query })</code> でログイン用APIにJWTを渡し、その値をもってログイン処理をし、有効期限が長いまたは無しのJWTを発行することによってログインを完了としている。</p>
+<p>既にOmniauthの設定、コールバック時のユーザー登録等の処理を実装済みだったのでこのような設計になっている。</p>
+<p>フロントエンドとバックエンドで基本的に同じドメインを使うようにしているので適宜nginx等で適切な方へプロキシしてあげる必要がある。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9605/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4852/45878003031_1eb761f194.jpg</image>
+	</item>
+	</channel>
+</rss>

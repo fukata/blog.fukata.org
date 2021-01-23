@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>退職 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E9%80%80%E8%81%B7/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:15:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>ユナイテッド株式会社を退職します</title>
+		<link>/archives/7657/</link>
+					<comments>/archives/7657/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 28 Apr 2014 10:00:29 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ユナイテッド株式会社]]></category>
+		<category><![CDATA[退職]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7657</guid>
+
+					<description><![CDATA[2010年10月1日からjoinしたユナイテッド株式会社（当時はngi group株式会社）を退職することとなりました。本日4月28日が最終出社で、退職日は有休の関係で5月末となります。 広告 201 ... <a href="/archives/7657/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/14032012805" target="_blank" title="P4251325"><img src="https://farm3.staticflickr.com/2912/14032012805_c14c0f2ce9_c.jpg" alt="P4251325" class="aligncenter"/></a></p>
+<p>2010年10月1日からjoinしたユナイテッド株式会社（当時はngi group株式会社）を退職することとなりました。本日4月28日が最終出社で、退職日は有休の関係で5月末となります。</p>
+<p><span id="more-7657"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>2010年10月1日にjoinしたので3年半以上お世話になりました。今まで毎年のように会社を移っていたので自分の中では一番長く同じ会社に務めた事になります。</p>
+<p>ただ、会社名は入社してから2回も変わりましたが。</p>
+<p>入社した当時は上海にしか開発拠点が無かったので必然的に上海に移って8ヶ月ほどnscというプロジェクトに参加していて、その後フラクタリストと合併して少し経ったくらいに東京に戻ってきました。</p>
+<p>戻ってきてから初めて広告のシステムに関わるようになり、adstaというアドネットワークの機能追加や保守を行っていました。その後、色々あってadstaが終わり、<a href="https://www.ad-stir.com/" target="_blank">adstir</a>というSSPの開発に携わるようになりました。</p>
+<p>adstirでは、管理画面、バッチ、配信エンジンとSDK以外はほぼ開発に携わり、オンプレミスからEC2への移行やfluentd、EMRの導入といった貴重な経験もすることが出来ました。最近ではもっぱらRTBエンジン(SSP side)をリプレイスするというプロジェクトを行っており、無事、サーバ台数を半減させる事ができました。この頃からユニットテストを書くようになり、他メンバーでもテストコードを書くという事が他メンバーにも広まってくれたのはやってよかったと思います。</p>
+<p>まだまだ課題は沢山あり大変だと思いますが更なる成長を期待しています。</p>
+<p>僕は5月下旬くらいに福岡に戻りますが、今後の予定は全く立てていません。しばらくふらふらして考えようかと思います。</p>
+<p>それでは。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7657/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm3.staticflickr.com/2912/14032012805_c14c0f2ce9.jpg</image>
+	</item>
+	</channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Broken Link Checker &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/broken-link-checker/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>リンク切れを発見してくれるWordPressプラグイン「Broken Link Checker」</title>
+		<link>/archives/4015/</link>
+					<comments>/archives/4015/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 02 May 2010 13:10:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Broken Link Checker]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[WordPress Plugin]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4015</guid>
+
+					<description><![CDATA[パーマリンクの形式を変更したことにより記事内から他の記事に参照しているリンクでリンク切れを起こしているものが大量にあり、探すのが大変だったので何かないかと探してみたところBroken Link Che ... <a href="/archives/4015/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>パーマリンクの形式を変更したことにより記事内から他の記事に参照しているリンクでリンク切れを起こしているものが大量にあり、探すのが大変だったので何かないかと探してみたところBroken Link Checkerがありました。</p>
+<p>一定期間毎に全記事をチェックし、リンク切れ一覧を下記のように表示されます。また、個別の記事を開いて編集する必要はなく、同じ画面で対象のURLのみ編集することができます。これにより作業時間が大幅に軽減されます。</p>
+<p><a href="https://farm6.static.flickr.com/5219/5476145988_0ed0d93ffc_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5219/5476145988_0ed0d93ffc_m.jpg" title="broken_link_checker-02" width="500" height="289" class="aligncenter size-large wp-image-4017" /></a></p>
+<p>定期的にチェックを実行する時間、リンク切れURLに適用するCSS、チェック対象外のURL、メール通知、サーバが高負加時に処理を一時停止するしきい値の設定など様々な機能があります。</p>
+<p><a href="https://farm6.static.flickr.com/5211/5476146548_dd2964bce1_m.jpg"><img loading="lazy" src="https://farm6.static.flickr.com/5211/5476146548_dd2964bce1_m.jpg" title="broken_link_checker-01" width="346" height="500" class="aligncenter size-large wp-image-4018" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4015/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

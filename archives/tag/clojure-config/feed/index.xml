@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>clojure-config &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/clojure-config/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Clojureで環境別設定の切り分けを行う「clojure-config」</title>
+		<link>/archives/6527/</link>
+					<comments>/archives/6527/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 25 Nov 2011 18:42:39 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[clojure-config]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6527</guid>
+
+					<description><![CDATA[YouSee/clojure-config &#8211; GitHub 自分でjson書いて、パースしてってやれば、簡単な物はできるので、作っても良かったのですが、だるかったので、既にライブラリがあ ... <a href="/archives/6527/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/YouSee/clojure-config">YouSee/clojure-config &#8211; GitHub</a></p>
+<p>自分でjson書いて、パースしてってやれば、簡単な物はできるので、作っても良かったのですが、だるかったので、既にライブラリがあるだろうから、探してみたところやっぱりありました。</p>
+<p>名前がかなり分かりづらいですけど、clojure-configというライブラリです。</p>
+<p>これは、環境識別の設定を環境変数「ENV」に設定されている環境識別子、ホスト名またはユーザ名に基づいて設定することが出来ます。</p>
+<p>まずは、project.cljに下記を追加します。</p>
+<pre lang="clojure">
+[clojure-config "1.0.5"]
+</pre>
+<p>使い方はこんな感じになります。</p>
+<pre lang="clojure">
+(ns hoge.environment_test
+  (:use clojure-config.core))
+
+(set-properties [
+  ;; ===============================
+  ;; GLOBAL Settings
+  ;; ===============================
+  {:name "global"
+   :properties {:port 8080
+                :db-name "example_development"
+                :db-host "localhost"}}
+  ;; ===============================
+  ;; DEVELOPMENT Settings
+  ;; ===============================
+  {:name "development" :type "user" :value "ubuntu"}
+  ;; ===============================
+  ;; TEST Settings
+  ;; ===============================
+  {:name "test" 
+   :type "user" 
+   :value "ubuntu"
+   :properties {:db-name "example_test"}}
+  ;; ===============================
+  ;; PRODUCTION Settings
+  ;; ===============================
+  {:name "production" 
+   :type "user" 
+   :value "ubuntu"
+   :properties {:db-name "example_production"}}
+  ;; ===============================
+  ;; LOCAL Settings
+  ;; ===============================
+  {:name "local" :type "user" :value "tatsuya" :parent "dev"}])
+  
+(defn -main []
+  ;; プロパティの値をキーを基に取得
+  (println (property :db-name))
+  ;; プロパティのマップを取得
+  (println (properties))
+</pre>
+<p>で、これを実行する場合、下記のようにENVに各環境の識別子を指定して実行します。</p>
+<pre lang="bash">
+$ ENV=development lein run -m hoge.environment_test
+$ ENV=test lein run -m hoge.environment_test
+$ ENV=production lein run -m hoge.environment_test
+$ ENV=local lein run -m hoge.environment_test
+</pre>
+<p>この、clojure-configですが、:typeに&#8221;host&#8221;または&#8221;user&#8221;を指定していますが、hostの場合は実行環境のホスト名が:valueの値と一致しないといけません。同じように:typeに&#8221;user&#8221;を指定した場合には、:valueの値が実行ユーザ名と一致しないといけません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6527/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

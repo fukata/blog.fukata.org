@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>LT &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/lt/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 14 Aug 2017 05:55:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[LT]Git Hooksを使ってみよう</title>
+		<link>/archives/7060/</link>
+					<comments>/archives/7060/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 25 Apr 2012 00:06:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7060</guid>
+
+					<description><![CDATA[社内勉強会にて、GitのHooks機能について簡単にLTした時のスライドを下記に載せておきます。 Git Hooks View more presentations from Tatsuya Fuka ... <a href="/archives/7060/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>社内勉強会にて、GitのHooks機能について簡単にLTした時のスライドを下記に載せておきます。</p>
+<div style="width:425px" id="__ss_12666385"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/fukata0711/git-hooks-12666385" title="Git Hooks" target="_blank">Git Hooks</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/12666385" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </p>
+<div style="padding:5px 0 12px"> View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/fukata0711" target="_blank">Tatsuya Fukata</a> </div>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7060/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[LT]jQuery Custom Selector</title>
+		<link>/archives/7013/</link>
+					<comments>/archives/7013/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 18 Mar 2012 09:37:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7013</guid>
+
+					<description><![CDATA[社内勉強会にて、jQueryのCustom Selector(Filter)について少し話しました。次回はライブコーディングを行おうかと思っています。ただし、内容が内容なだけに外部にはどれくらいの情報 ... <a href="/archives/7013/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>社内勉強会にて、jQueryのCustom Selector(Filter)について少し話しました。次回はライブコーディングを行おうかと思っています。ただし、内容が内容なだけに外部にはどれくらいの情報を載せられるかわかりません。。。非常に残念です。</p>
+<p>今回は、Custom Selectorとして独自データ属性用の簡易的なフィルタを実装してみました。実際に利用する方は、もっと有名な下記をお使いください。</p>
+<p><a href="https://code.google.com/p/jquerypluginsblog/source/browse/trunk/dataSelector/jquery.dataSelector.js">jquery.dataSelector.js &#8211; jquerypluginsblog &#8211; A whole range of plugins &#8211; Google Project Hosting</a></p>
+<div style="width:425px" id="__ss_12017376"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/fukata0711/jquery-custom-selector" title="Jquery custom selector" target="_blank">Jquery custom selector</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/12017376" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </p>
+<div style="padding:5px 0 12px"> View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/fukata0711" target="_blank">Tatsuya Fukata</a> </div>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7013/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[LT]テストもDRY</title>
+		<link>/archives/6818/</link>
+					<comments>/archives/6818/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 03 Feb 2012 07:46:59 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6818</guid>
+
+					<description><![CDATA[昨日、今年初めての社内勉強会でエニグモさんと合同で行いました。 個人的な今年の抱負として、会社のテスト環境を充実させたいというのがあり、 今回は、それの布教用のLTを行いました。メインはDEMOだった ... <a href="/archives/6818/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、今年初めての社内勉強会で<a href="https://www.enigmo.co.jp/">エニグモ</a>さんと合同で行いました。</p>
+<p>個人的な今年の抱負として、会社のテスト環境を充実させたいというのがあり、<br />
+今回は、それの布教用のLTを行いました。メインはDEMOだったので、資料だけ見てもわかりにくいところがあるかもしれません。</p>
+<p><a href="https://dl.dropbox.com/u/2020396/presen/dry_testing/index.html#0">テストもDRY</a></p>
+<p>せっかく、AndroidアプリやiPhoneアプリも作成しているので、ネイティブアプリのテスト環境も整えていきたいところ。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6818/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[LT]Presentationツールの導入とTips</title>
+		<link>/archives/6515/</link>
+					<comments>/archives/6515/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 22 Nov 2011 15:05:34 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[社内勉強会]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6515</guid>
+
+					<description><![CDATA[今日は社内勉強会だったのでLTしてきました。 ただ、先週の金曜に急遽、今日ということになったのでネタが間に合わず、LTの時に使っているオレオレPresentationツールのセットアップとTipsの紹 ... <a href="/archives/6515/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今日は社内勉強会だったのでLTしてきました。</p>
+<p>ただ、先週の金曜に急遽、今日ということになったのでネタが間に合わず、LTの時に使っているオレオレPresentationツールのセットアップとTipsの紹介ということになりました。</p>
+<p><a href="https://dl.dropbox.com/u/2020396/presen/presentation_tool/index.html#0">Presentation</a></p>
+<p>エフェクトが好きな人には興味ないかもしれないツールになっています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6515/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[LT]Clojure on Heroku 〜Hello World〜</title>
+		<link>/archives/6445/</link>
+					<comments>/archives/6445/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 04 Nov 2011 12:24:42 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Heroku]]></category>
+		<category><![CDATA[LT]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6445</guid>
+
+					<description><![CDATA[社内勉強会で「Clojure on Heroku」をやりました。 下記、スライドです。 Clojure on Heroku スライド置き場が欲しいです。 なんで、Clojure on Herokuなの ... <a href="/archives/6445/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>社内勉強会で「Clojure on Heroku」をやりました。</p>
+<p>下記、スライドです。</p>
+<p><a href="https://dl.dropbox.com/u/2020396/presen/clojure_on_heroku/index.html">Clojure on Heroku</a></p>
+<p>スライド置き場が欲しいです。</p>
+<p>なんで、Clojure on Herokuなのかというと、最近ちょうどClojure使ってWEBアプリ作ってるからですね。まだまだ、Clojureの基礎も分かっていませんが、他言語にないイディオムが多くて日々新鮮な気持ちでプログラミング出来ています。</p>
+<p>そうえいば、こういうスライドを使って何かを発表するというのは、社会人になって初めてだったかもしれない。LTの場数も踏みたい。</p>
+<p><span id="more-6445"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>勉強会の反省点を少し。</p>
+<p>持ち時間は一人１５分程度でスライド数が28だったので、1枚30秒程度で話す予定だったのですが、慣れていないのも相まって思いっきりオーバーして25分弱話してました。</p>
+<p>質疑応答が5分だとして、LT10分である程度きちんと話す事を考えるとスライドの枚数は10枚程度かなと感じています。この辺は場数を踏めば経験的に分かってくるのかな（分かってきてほしい）</p>
+<p>ということで、次があれば10枚程度でやりたいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6445/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>プログラマ向けLT資料管理方法</title>
+		<link>/archives/6434/</link>
+					<comments>/archives/6434/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 03 Nov 2011 22:00:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Dropbox]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[vim]]></category>
+		<category><![CDATA[スライド]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6434</guid>
+
+					<description><![CDATA[現在務めている会社で社内勉強会があるらしく、毎回数人LTをすることになったのですが、今までLTをやったことなど無かったので、とりあえず資料の管理法法から考えてみました。 パソコン間共有 資料を作成して ... <a href="/archives/6434/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在務めている会社で社内勉強会があるらしく、毎回数人LTをすることになったのですが、今までLTをやったことなど無かったので、とりあえず資料の管理法法から考えてみました。</p>
+<h3>パソコン間共有</h3>
+<p>資料を作成している間にネカフェや別のパソコンでもふと思い付いた時に資料を書けた方が良いですよね。ということで資料は全てDropboxに置いておきます。</p>
+<p>個人的にはサブ機など持っておらず、常に持ち歩いている（持ち歩いていない時の方が少ない）ので、こういう場面に遭遇することは滅多に無いですが。</p>
+<h3>履歴管理</h3>
+<p>以前書いた文章の方が良いと思ったら、すぐに昔の文章を見たいですよね。あと、diffなんかもしたいですよね。</p>
+<p>また、複数の文章を試し書きし、人にどちらが良いか見てもらいたい時もあったりするだろうと思い、履歴管理にはgitを使ってます。</p>
+<p>ローカルでbranch切ったりcommit(ストレス無く)行えたりするのは便利。</p>
+<h3>エディタ</h3>
+<p>vim</p>
+<h3>プレゼンテーションツール</h3>
+<p><a href="https://github.com/fukata/Presentation">オレオレプレゼンテーションツール</a></p>
+<h3>即時反映</h3>
+<p>作ったらすぐに反映して確認したいので、.vimrcに下記を追加して保存時に自動的に必要なファイルが生成されるようにしてます。</p>
+<pre lang="bash">
+" Presentation
+autocmd BufWritePost main.txt silent exec "!presen neet"
+</pre>
+<p>皆さんやってますよね？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6434/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

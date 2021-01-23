@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MakeGood PHPUnit CIUnit &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/makegood-phpunit-ciunit/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Eclipse Indigo PDTでMakeGoodを動かしてみた</title>
+		<link>/archives/6021/</link>
+					<comments>/archives/6021/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 10 Aug 2011 02:51:18 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Eclipse]]></category>
+		<category><![CDATA[MakeGood PHPUnit CIUnit]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6021</guid>
+
+					<description><![CDATA[Eclipse IndigoにPDTを入れた環境に下記を参考にMakeGoodの実行環境を整えてみました。 Eclipse/PDT から PHPUnit/CIUnit のテストを自動実行する &#82 ... <a href="/archives/6021/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Eclipse IndigoにPDTを入れた環境に下記を参考にMakeGoodの実行環境を整えてみました。</p>
+<p><a href="https://d.hatena.ne.jp/Kenji_s/20110722/1311314734">Eclipse/PDT から PHPUnit/CIUnit のテストを自動実行する &#8211; A Day in Serenity @ Kenji</a></p>
+<p>MakeGoodのPerspectiveに「まだ、設定が完了してないよ」というメッセージが表示されっぱなしで、少しハマったのですが、include pathに/usr/share/phpが含まれておらず、PHPUnitが使えていなかっただけだったという事もありましたが、最終的には正常に動作させることができました。（もしかして、前回利用できなかったのが同じ原因かもしれません）</p>
+<h2>MakeGoodでよく使うコマンド一覧</h2>
+<ul>
+<li><strong>Alt+M A</strong>: 全テスト実行</li>
+<li><strong>Alt+M F</strong>: ファイル内のテスト実行</li>
+<li><strong>Alt+M L</strong>: クラス内のテスト実行</li>
+<li><strong>Alt+M C</strong>: 現在カーソル位置にあるコンテキストのテスト実行</li>
+<li><strong>Alt+M S</strong>: テストの中止</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6021/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

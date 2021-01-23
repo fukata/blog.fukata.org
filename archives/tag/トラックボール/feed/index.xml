@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>トラックボール &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%9C%E3%83%BC%E3%83%AB/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:52:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[BlackBerry]トラックボールの感度が落ちてきた</title>
+		<link>/archives/2492/</link>
+					<comments>/archives/2492/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 22 Feb 2010 17:12:50 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[BlackBerry]]></category>
+		<category><![CDATA[BlackBerry Bold 9000]]></category>
+		<category><![CDATA[トラックボール]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=2492</guid>
+
+					<description><![CDATA[BlackBerry Bold 9000（以下、BBB9000）を使い始めて一年弱になりましたが、トラックボールの感度が落ちてきました。具体的にいうと、空回りすることが多くなりました。幸い、BBB90 ... <a href="/archives/2492/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>BlackBerry Bold 9000（以下、BBB9000）を使い始めて一年弱になりましたが、トラックボールの感度が落ちてきました。具体的にいうと、空回りすることが多くなりました。幸い、BBB9000のトラックボールは交換可能なので、下記のようなパーツを買って自分で交換する事ができます。</p>
+<p><a href="https://www.pocketgames.jp/item_detail/itemId,328/">pocketgames PDA秘宝館 BlackBerry Bold 交換パーツ：トラックボール</a></p>
+<p>秋葉原モバイル ＞ ドコモ BlackBerry ＞ BlackBerry Bold 交換パーツ：トラックボール</p>
+<p>新機種のBBB9700にはまだ変更する予定がないので、交換しようか考えています。</p>
+<p>BBB9700への機種変はとりあえず今リークされているBlackBerry Magnumのリリースを待ってから考えようと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/2492/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

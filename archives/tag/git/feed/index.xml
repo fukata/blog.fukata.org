@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>git &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/git/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 14 Aug 2017 05:55:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>gitのtagを日付順で並び替えるtag-date</title>
+		<link>/archives/7155/</link>
+					<comments>/archives/7155/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 18 Jul 2012 12:01:25 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[実用git]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7155</guid>
+
+					<description><![CDATA[git tagでタグの一覧を出力すると名前順に出力されるので、コレを日付順でソートして出力するスクリプトを作成してみました。 広告 以前、実用gitを読んで内部構造に興味を持った時に作成したスクリプト ... <a href="/archives/7155/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>git tagでタグの一覧を出力すると名前順に出力されるので、コレを日付順でソートして出力するスクリプトを作成してみました。</p>
+<p><span id="more-7155"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><script src="https://gist.github.com/1586585.js?file=tag-date"></script></p>
+<p>以前、実用gitを読んで内部構造に興味を持った時に作成したスクリプトです。</p>
+<p><iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=4873114403" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7155/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>プログラマ向けLT資料管理方法</title>
+		<link>/archives/6434/</link>
+					<comments>/archives/6434/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 03 Nov 2011 22:00:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Dropbox]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[LT]]></category>
+		<category><![CDATA[vim]]></category>
+		<category><![CDATA[スライド]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6434</guid>
+
+					<description><![CDATA[現在務めている会社で社内勉強会があるらしく、毎回数人LTをすることになったのですが、今までLTをやったことなど無かったので、とりあえず資料の管理法法から考えてみました。 パソコン間共有 資料を作成して ... <a href="/archives/6434/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在務めている会社で社内勉強会があるらしく、毎回数人LTをすることになったのですが、今までLTをやったことなど無かったので、とりあえず資料の管理法法から考えてみました。</p>
+<h3>パソコン間共有</h3>
+<p>資料を作成している間にネカフェや別のパソコンでもふと思い付いた時に資料を書けた方が良いですよね。ということで資料は全てDropboxに置いておきます。</p>
+<p>個人的にはサブ機など持っておらず、常に持ち歩いている（持ち歩いていない時の方が少ない）ので、こういう場面に遭遇することは滅多に無いですが。</p>
+<h3>履歴管理</h3>
+<p>以前書いた文章の方が良いと思ったら、すぐに昔の文章を見たいですよね。あと、diffなんかもしたいですよね。</p>
+<p>また、複数の文章を試し書きし、人にどちらが良いか見てもらいたい時もあったりするだろうと思い、履歴管理にはgitを使ってます。</p>
+<p>ローカルでbranch切ったりcommit(ストレス無く)行えたりするのは便利。</p>
+<h3>エディタ</h3>
+<p>vim</p>
+<h3>プレゼンテーションツール</h3>
+<p><a href="https://github.com/fukata/Presentation">オレオレプレゼンテーションツール</a></p>
+<h3>即時反映</h3>
+<p>作ったらすぐに反映して確認したいので、.vimrcに下記を追加して保存時に自動的に必要なファイルが生成されるようにしてます。</p>
+<pre lang="bash">
+" Presentation
+autocmd BufWritePost main.txt silent exec "!presen neet"
+</pre>
+<p>皆さんやってますよね？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6434/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>git pre-commit時に自動的にPerltidyを実行する</title>
+		<link>/archives/6367/</link>
+					<comments>/archives/6367/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2011 05:54:12 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[git]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6367</guid>
+
+					<description><![CDATA[前回の記事でvim保存時に自動的にPerltidyを適用する設定を書きましたが、毎回Perltidyが適用されると若干ラグがあるので開発効率が落ちそうで嫌だなぁと思い、どうせならpre-commit時 ... <a href="/archives/6367/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>前回の記事でvim保存時に自動的にPerltidyを適用する設定を書きましたが、毎回Perltidyが適用されると若干ラグがあるので開発効率が落ちそうで嫌だなぁと思い、どうせならpre-commit時にperltidyかけてコミットしたいということで作りました。</p>
+<p>使い方は各自ローカルリポジトリの.git/hooks/pre-commitに下記の内容を貼り付けてください。</p>
+<pre lang="BASH">
+#!/bin/bash
+
+CURRENT_DIR="$(pwd)/$(dirname $0)"
+PJ="${CURRENT_DIR%/.}/../.."
+ORIG_IFS=$IFS
+IFS=$'\n'
+
+for f in $(git diff --cached --name-only --diff-filter=A,M)
+do
+	# file is perl and exits
+	if [[ "$f" =~ ^.+\.(pl|pm)$ && -e "$PJ/$f" ]]; then
+		perltidy -q -b "$PJ/$f"
+		if [ $? -eq 0 ]; then
+			git add "$PJ/$f"
+			rm -f "$PJ/$f.bak"
+		fi
+	fi
+done
+
+IFS=$ORIG_IFS
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6367/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Eclipse]EGitで追加したリポジトリをリストから消す方法</title>
+		<link>/archives/5733/</link>
+					<comments>/archives/5733/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 08 Jun 2011 08:37:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Eclipse]]></category>
+		<category><![CDATA[EGit]]></category>
+		<category><![CDATA[git]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5733</guid>
+
+					<description><![CDATA[ローカルのリポジトリをEGitに認識させた後に、やっぱり不要になり、リストから削除しようと思っても削除のやり方が分からなかったので、かなり強引ですがメモ程度に書いておきます。EGitのGUIとしては存 ... <a href="/archives/5733/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ローカルのリポジトリをEGitに認識させた後に、やっぱり不要になり、リストから削除しようと思っても削除のやり方が分からなかったので、かなり強引ですがメモ程度に書いておきます。EGitのGUIとしては存在しないようで、下記のファイルを直接編集しました。</p>
+<blockquote><p>[ワークスペース]/.metadata/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs</p></blockquote>
+<p>上記のファイルにはリポジトリのパスなどが記載されているので、不要なリポジトリのパスを削除してやれば、大丈夫です。念の為、このファイルを編集する際は、Eclipseは閉じておいた方が良いと思います。</p>
+<p>また、Linux版Eclipseでの話なので、Windows版の場合は若干異なったりするかもしれません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5733/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

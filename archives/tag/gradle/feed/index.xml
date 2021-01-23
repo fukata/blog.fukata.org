@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>gradle &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/gradle/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:50:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CircleCIからGoogle Playにapkを登録する</title>
+		<link>/archives/7958/</link>
+					<comments>/archives/7958/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 04 Jun 2016 12:00:45 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[apk]]></category>
+		<category><![CDATA[Google Play]]></category>
+		<category><![CDATA[gradle]]></category>
+		<category><![CDATA[Triple-T/gradle-play-publisher]]></category>
+		<guid isPermaLink="false">https://dev.fukata.org/?p=7958</guid>
+
+					<description><![CDATA[最近、いくら寝ても疲れが取れず、一日の活動可能時間がどんどん短くなってきてる。そんな中、毎週、リリース作業をしているがその時間がもったいないので1つ自動化した。 広告 理由 今まで、github re ... <a href="/archives/7958/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/7958/"><img src="https://farm8.staticflickr.com/7484/26289591774_d47ea6ae2c_c.jpg" alt="I0000361" class="aligncenter"/></a></p>
+<p>最近、いくら寝ても疲れが取れず、一日の活動可能時間がどんどん短くなってきてる。そんな中、毎週、リリース作業をしているがその時間がもったいないので1つ自動化した。</p>
+<p><span id="more-7958"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>理由</h2>
+<p>今まで、github releasesにapkを登録していて、それを手動でダウンロードし、Google Playへアップロードしていたが、今日、カフェからリリースしないといけない状況があり、同じようにapkをDLしようとするとDL完了まで1時間という表示が。。。</p>
+<h2>Alphaとして登録する</h2>
+<p>Google PlayにはAlpha、BetaとしてProductionに上げる前にテストする環境が用意されている。</p>
+<p>そこで、masterにpushされたものがCircleCIで無事ビルド成功したらAlphaとしてapkを登録するようにしてみた。</p>
+<h2>Triple-T/gradle-play-publisher</h2>
+<p>普通にこちらのプラグインを使わせてもらっただけ。特別なことは一切やっていない。</p>
+<p><a href="https://github.com/Triple-T/gradle-play-publisher">Triple-T/gradle-play-publisher: Gradle Plugin to upload your APK and metadata to the Google Play Store</a></p>
+<p>build.gradleにgradle-play-publisherの設定をしたら、あとはcircle.ymlにpublishApkReleaseなど適当なタスクを追加するだけ。</p>
+<h2>Google Playへの反映時間</h2>
+<p>Alphaとして登録した時にそれがDLできるようになるまで1時間くらいかかった。まだ1度しか試していないので初回だったからそれだけ掛かっていただけかもしれないけど毎回だとちょっと辛い気もする。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7958/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7484/26289591774_d47ea6ae2c.jpg</image>
+	</item>
+	</channel>
+</rss>

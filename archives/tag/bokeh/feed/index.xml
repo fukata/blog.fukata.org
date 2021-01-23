@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Bokeh &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/bokeh/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 19 Feb 2015 11:35:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Photoshopで写真をぼかしてみる</title>
+		<link>/archives/426/</link>
+					<comments>/archives/426/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 19 Feb 2015 11:35:11 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Bokeh]]></category>
+		<category><![CDATA[Photoshop]]></category>
+		<category><![CDATA[ボケ]]></category>
+		<guid isPermaLink="false">http://camera.fukata.org/?p=426</guid>
+
+					<description><![CDATA[ちょっとぼかしたい写真があったのでBokeh &#8211; Alien Skin Softwareを使ってみたんですが、よくよく考えたらPhotoshopもインストールしているのでそれで出来るんじゃ ... <a href="/archives/426/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/16391668798" target="_blank" title="16389540698_e27cb50b65_k-edit"><img src="https://farm8.staticflickr.com/7390/16391668798_1ee19345b3_z.jpg" alt="16389540698_e27cb50b65_k-edit" class="aligncenter" /></a></p>
+<p>ちょっとぼかしたい写真があったので<a href="https://www.alienskin.com/bokeh/">Bokeh &#8211; Alien Skin Software</a>を使ってみたんですが、よくよく考えたらPhotoshopもインストールしているのでそれで出来るんじゃないかと思い知り合いに教えてもらいながら試したのでメモとして残しておきます。頻繁に使わないのできっと次使うときに忘れていると思うので。。。</p>
+<p><span id="more-426"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>この写真の手前の女性以外をぼけさせてみたいと思います。<br />
+<a href="https://www.flickr.com/photos/fukata/16389540698" target="_blank" title="P2151875"><img src="https://farm8.staticflickr.com/7322/16389540698_34ca7e7afd_z.jpg" alt="P2151875" class="aligncenter" /></a></p>
+<h2>環境</h2>
+<ul>
+<li>Mac 10.10.2</li>
+<li>Photoshop CC 2014</li>
+</ul>
+<h2>手順</h2>
+<p>クイック選択を選ぶ (ショートカット: w)<br />
+<a href="https://www.flickr.com/photos/fukata/16578862625" target="_blank" title="ps_blur-01"><img src="https://farm9.staticflickr.com/8587/16578862625_c2e45f6425_z.jpg" alt="ps_blur-01" class="aligncenter" /></a></p>
+<p>手前の女性を選択します (ちょっと見えにくいですが選択してます)<br />
+<a href="https://www.flickr.com/photos/fukata/15956715824" target="_blank" title="ps_blur-02"><img src="https://farm9.staticflickr.com/8572/15956715824_e406b7d7b4_z.jpg" alt="ps_blur-02" class="aligncenter" /></a></p>
+<p>選択範囲を反転 (ショートカット: Shift + Command + I)<br />
+<a href="https://www.flickr.com/photos/fukata/16578865335" target="_blank" title="ps_blur-03"><img src="https://farm9.staticflickr.com/8654/16578865335_b9ecdb5c92_z.jpg" alt="ps_blur-03" class="aligncenter" /></a></p>
+<p>Lens Blurを選択<br />
+<a href="https://www.flickr.com/photos/fukata/15959076973" target="_blank" title="ps_blur-04"><img src="https://farm8.staticflickr.com/7418/15959076973_d5ee7739da_z.jpg" alt="ps_blur-04" class="aligncenter" /></a></p>
+<p>適当に数値をいじる<br />
+<a href="https://www.flickr.com/photos/fukata/16391814250" target="_blank" title="ps_blur-05"><img src="https://farm9.staticflickr.com/8667/16391814250_f91589155f_z.jpg" alt="ps_blur-05" class="aligncenter" /></a></p>
+<p>保存して出来上がり<br />
+<a href="https://www.flickr.com/photos/fukata/16391668798" target="_blank" title="16389540698_e27cb50b65_k-edit"><img src="https://farm8.staticflickr.com/7390/16391668798_1ee19345b3_z.jpg" alt="16389540698_e27cb50b65_k-edit" class="aligncenter" /></a></p>
+<p>Bokehの方が色々なエフェクトがかけられて良いんですがてっとり早くぼかしたい場合はコレでもいいかも。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/426/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7390/16391668798_1ee19345b3.jpg</image>
+	</item>
+	</channel>
+</rss>

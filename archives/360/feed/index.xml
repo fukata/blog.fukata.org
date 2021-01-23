@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: GRの47mmクロップで料理の写真を撮ってみる	</title>
+	<atom:link href="/archives/360/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/360/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 15 Mar 2014 15:41:57 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+</channel>
+</rss>

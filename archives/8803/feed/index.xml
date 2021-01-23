@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [重要][WordPress]wp-flickr-pressのバージョン2.4.0をリリース	</title>
+	<atom:link href="/archives/8803/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/8803/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 07 Jun 2018 06:53:24 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 直リンクOK！無料で使える画像アップローダー「flickr」のカスタマイズ決定版 &#124; アクロプレス		</title>
+		<link>/archives/8803/comment-page-1/#comment-1000</link>
+
+		<dc:creator><![CDATA[直リンクOK！無料で使える画像アップローダー「flickr」のカスタマイズ決定版 &#124; アクロプレス]]></dc:creator>
+		<pubDate>Thu, 07 Jun 2018 06:53:24 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-1000</guid>
+
+					<description><![CDATA[[&#8230;] &#160;blog.fukata.org&#160;[重要][WordPress]wp-flickr-pressのバージョン2.4.0をリリースh&#8230;       あくろ   既に修正されておりますので安心してご利用くださいね！ [&#8230;]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] &nbsp;blog.fukata.org&nbsp;[重要][WordPress]wp-flickr-pressのバージョン2.4.0をリリースh&#8230;       あくろ   既に修正されておりますので安心してご利用くださいね！ [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: あやがね		</title>
+		<link>/archives/8803/comment-page-1/#comment-983</link>
+
+		<dc:creator><![CDATA[あやがね]]></dc:creator>
+		<pubDate>Wed, 13 Dec 2017 22:44:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-983</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-982&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+早速のご対応ありがとうございます。
+今確認したところ直りました。
+本当にありがとうございます！
+
+今後とも宜しくお願い致します。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-982">Tatsuya Fukata</a>.</p>
+<p>早速のご対応ありがとうございます。<br />
+今確認したところ直りました。<br />
+本当にありがとうございます！</p>
+<p>今後とも宜しくお願い致します。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/8803/comment-page-1/#comment-982</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Wed, 13 Dec 2017 17:18:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-982</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-980&quot;&gt;あやがね&lt;/a&gt;.
+
+修正版のv2.5.6を先程リリースしましたので、こちらで試してもらえますか。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-980">あやがね</a>.</p>
+<p>修正版のv2.5.6を先程リリースしましたので、こちらで試してもらえますか。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/8803/comment-page-1/#comment-981</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Wed, 13 Dec 2017 16:51:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-981</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-980&quot;&gt;あやがね&lt;/a&gt;.
+
+遅くなりましたが、同様のエラーを自分の環境でも再現することが出来たので修正までもうしばらくお待ち下さい。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-980">あやがね</a>.</p>
+<p>遅くなりましたが、同様のエラーを自分の環境でも再現することが出来たので修正までもうしばらくお待ち下さい。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: あやがね		</title>
+		<link>/archives/8803/comment-page-1/#comment-980</link>
+
+		<dc:creator><![CDATA[あやがね]]></dc:creator>
+		<pubDate>Tue, 12 Dec 2017 11:03:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-980</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-979&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+「OAuthトークンを更新」ボタンを押しますと、新規ウィンドウが起動し、エラーメッセージが一行だけ表示されている状態です。
+その際のウィンドウに書かれているアドレスが「http://~~/wp-admin/admin.php?action=wpfp_flickr_oauth」となっております。
+
+Flickrでログアウトしてからも同様でして、OAuthトークンのリセット→「まだ、更新が完了していません。更新を行ってください。（赤文字）」→「更新」ボタンを押してから実施しても状況が変わりませんでした。
+
+念のためEdgeやFirefoxなどの別ブラウザでも実施しましたが同様でありました。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-979">Tatsuya Fukata</a>.</p>
+<p>「OAuthトークンを更新」ボタンを押しますと、新規ウィンドウが起動し、エラーメッセージが一行だけ表示されている状態です。<br />
+その際のウィンドウに書かれているアドレスが「http://~~/wp-admin/admin.php?action=wpfp_flickr_oauth」となっております。</p>
+<p>Flickrでログアウトしてからも同様でして、OAuthトークンのリセット→「まだ、更新が完了していません。更新を行ってください。（赤文字）」→「更新」ボタンを押してから実施しても状況が変わりませんでした。</p>
+<p>念のためEdgeやFirefoxなどの別ブラウザでも実施しましたが同様でありました。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/8803/comment-page-1/#comment-979</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Mon, 11 Dec 2017 16:29:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-979</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-978&quot;&gt;あやがね&lt;/a&gt;.
+
+「OAuthトークンを更新」のボタンを押した直後に上記のエラーメッセージが表示されますか？
+一度、flickr上でログアウト、または、wp-flickr-pressの設定画面でOAuthトークンのリセットを行っても結果は同じでしょうか？]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-978">あやがね</a>.</p>
+<p>「OAuthトークンを更新」のボタンを押した直後に上記のエラーメッセージが表示されますか？<br />
+一度、flickr上でログアウト、または、wp-flickr-pressの設定画面でOAuthトークンのリセットを行っても結果は同じでしょうか？</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: あやがね		</title>
+		<link>/archives/8803/comment-page-1/#comment-978</link>
+
+		<dc:creator><![CDATA[あやがね]]></dc:creator>
+		<pubDate>Mon, 11 Dec 2017 14:59:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-978</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-977&quot;&gt;Tatsuya Fukata&lt;/a&gt;.
+
+早速のご連絡ありがとうございます。
+
+PHP:Ver 5.5.38
+Wordpress:Ver 4.9.1
+wp-flickr-press:Ver 2.5.4
+
+と、なります。
+
+以上、宜しくお願い致します。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-977">Tatsuya Fukata</a>.</p>
+<p>早速のご連絡ありがとうございます。</p>
+<p>PHP:Ver 5.5.38<br />
+Wordpress:Ver 4.9.1<br />
+wp-flickr-press:Ver 2.5.4</p>
+<p>と、なります。</p>
+<p>以上、宜しくお願い致します。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/8803/comment-page-1/#comment-977</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Mon, 11 Dec 2017 11:40:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-977</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-976&quot;&gt;あやがね&lt;/a&gt;.
+
+ご報告ありがとうございます。
+
+下記の情報を教えていただけますか。
+
+- PHPのバージョン
+- WordPressのバージョン
+- wp-flickr-pressのバージョン
+
+以上、よろしくお願いします。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-976">あやがね</a>.</p>
+<p>ご報告ありがとうございます。</p>
+<p>下記の情報を教えていただけますか。</p>
+<p>&#8211; PHPのバージョン<br />
+&#8211; WordPressのバージョン<br />
+&#8211; wp-flickr-pressのバージョン</p>
+<p>以上、よろしくお願いします。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: あやがね		</title>
+		<link>/archives/8803/comment-page-1/#comment-976</link>
+
+		<dc:creator><![CDATA[あやがね]]></dc:creator>
+		<pubDate>Mon, 11 Dec 2017 09:31:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-976</guid>
+
+					<description><![CDATA[fukata様
+
+久方にblogを更新しようとしたところプラグインが動かないことに気づき
+こちらのページにたどり着きました。
+私が契約しているホスティングサーバの問題かもしれませんが、
+Flickr側の手続きの中でコールバックURLを入力して正常に確認がとれた後、
+プラグイン設定画面で一度「更新」ボタンを押してから「OAuthトークンを更新」ボタンを押したあと以下のメッセージが表示されます。
+
+”　The web service endpoint returned a &quot;HTTP/1.1 401 Unauthorized&quot; response　”
+
+Googleで同様の現象を探しましたがたどり着けず、再度こちらのページにアクセスしました次第です。
+
+お手数をおかけいたしますが何卒宜しくお願いいたします。]]></description>
+			<content:encoded><![CDATA[<p>fukata様</p>
+<p>久方にblogを更新しようとしたところプラグインが動かないことに気づき<br />
+こちらのページにたどり着きました。<br />
+私が契約しているホスティングサーバの問題かもしれませんが、<br />
+Flickr側の手続きの中でコールバックURLを入力して正常に確認がとれた後、<br />
+プラグイン設定画面で一度「更新」ボタンを押してから「OAuthトークンを更新」ボタンを押したあと以下のメッセージが表示されます。</p>
+<p>”　The web service endpoint returned a &#8220;HTTP/1.1 401 Unauthorized&#8221; response　”</p>
+<p>Googleで同様の現象を探しましたがたどり着けず、再度こちらのページにアクセスしました次第です。</p>
+<p>お手数をおかけいたしますが何卒宜しくお願いいたします。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Tatsuya Fukata		</title>
+		<link>/archives/8803/comment-page-1/#comment-964</link>
+
+		<dc:creator><![CDATA[Tatsuya Fukata]]></dc:creator>
+		<pubDate>Tue, 21 Nov 2017 12:53:00 +0000</pubDate>
+		<guid isPermaLink="false">/?p=8803#comment-964</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/8803/comment-page-1/#comment-962&quot;&gt;ish&lt;/a&gt;.
+
+先程、v2.4.8をリリースしました。
+こちらのバージョンで直っていると思いますのでお試しください。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/8803/comment-page-1/#comment-962">ish</a>.</p>
+<p>先程、v2.4.8をリリースしました。<br />
+こちらのバージョンで直っていると思いますのでお試しください。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

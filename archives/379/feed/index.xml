@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Generic Host Process for Win32 Servicesの解決法	</title>
+	<atom:link href="/archives/379/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/379/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:57:44 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: tatsuya		</title>
+		<link>/archives/379/comment-page-1/#comment-476</link>
+
+		<dc:creator><![CDATA[tatsuya]]></dc:creator>
+		<pubDate>Wed, 05 Nov 2008 17:47:21 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/2008/04/24/379/#comment-476</guid>
+
+					<description><![CDATA[&#062;&#062; EeePC 4G+D02HWさん
+
+ほぉ、EeePCでも同じような現象が起きていたんですね。
+エラーが起きていた時のBIOSのバージョンなんかはわかりますか？もし、わかれば書いていただければ他の方への良い情報となるかと思います。
+今は自分はほとんどUbuntuに移行してしまって、Windows環境もXP ProからVista Ultimateに変わったので、今はこのエラーは起きていません。また、同じエラーが起きるようになったらBIOSのアップデートも視野に入れて考えてみたいと思います。
+
+良い情報をありがとうございました！]]></description>
+			<content:encoded><![CDATA[<p>&gt;&gt; EeePC 4G+D02HWさん</p>
+<p>ほぉ、EeePCでも同じような現象が起きていたんですね。<br />
+エラーが起きていた時のBIOSのバージョンなんかはわかりますか？もし、わかれば書いていただければ他の方への良い情報となるかと思います。<br />
+今は自分はほとんどUbuntuに移行してしまって、Windows環境もXP ProからVista Ultimateに変わったので、今はこのエラーは起きていません。また、同じエラーが起きるようになったらBIOSのアップデートも視野に入れて考えてみたいと思います。</p>
+<p>良い情報をありがとうございました！</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: EeePC+D02HW		</title>
+		<link>/archives/379/comment-page-1/#comment-475</link>
+
+		<dc:creator><![CDATA[EeePC+D02HW]]></dc:creator>
+		<pubDate>Wed, 05 Nov 2008 07:42:07 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/2008/04/24/379/#comment-475</guid>
+
+					<description><![CDATA[EeePC 4G+D02HWでこれに悩まされていました。
+何度再インストールしてもNG。
+ネットで探した解決法を試してもダメ…。
+もう諦めかけていたのですが、BIOSのアップデートをかけたところ、なんとイケたようです。
+3日経過しましたが、まだあのエラーは出ていません。
+なんか寂しいような…笑
+WLANでは症状が再現しなかったので、D02HWとの衝突かなにか…？だったのかと思います。
+ただ、以前はD02HWとの組み合わせでも全くエラーは出なかったのですが、ある日(2-3ヶ月前？)から突然発症しました。
+なんだったんだろう。
+EMOBILE…？]]></description>
+			<content:encoded><![CDATA[<p>EeePC 4G+D02HWでこれに悩まされていました。<br />
+何度再インストールしてもNG。<br />
+ネットで探した解決法を試してもダメ…。<br />
+もう諦めかけていたのですが、BIOSのアップデートをかけたところ、なんとイケたようです。<br />
+3日経過しましたが、まだあのエラーは出ていません。<br />
+なんか寂しいような…笑<br />
+WLANでは症状が再現しなかったので、D02HWとの衝突かなにか…？だったのかと思います。<br />
+ただ、以前はD02HWとの組み合わせでも全くエラーは出なかったのですが、ある日(2-3ヶ月前？)から突然発症しました。<br />
+なんだったんだろう。<br />
+EMOBILE…？</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

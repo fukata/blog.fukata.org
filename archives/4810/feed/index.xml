@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [Android]年間30USDのVPNサービス「12vpn.com」	</title>
+	<atom:link href="/archives/4810/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/4810/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:50 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/4810/comment-page-1/#comment-689</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Sun, 03 Apr 2011 13:42:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=4810#comment-689</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/4810/comment-page-1/#comment-688&quot;&gt;Hoge&lt;/a&gt;.
+
+どうもです。
+私は現在、StrongVPNというものを利用しているのですが、確認くん（http://www.ugtop.com/spill.shtml）で確認したところ、接続元IPはVPN接続元になっていました。
+
+取得するIPというのは、どこで確認する値のことでしょうか？]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/4810/comment-page-1/#comment-688">Hoge</a>.</p>
+<p>どうもです。<br />
+私は現在、StrongVPNというものを利用しているのですが、確認くん（http://www.ugtop.com/spill.shtml）で確認したところ、接続元IPはVPN接続元になっていました。</p>
+<p>取得するIPというのは、どこで確認する値のことでしょうか？</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Hoge		</title>
+		<link>/archives/4810/comment-page-1/#comment-688</link>
+
+		<dc:creator><![CDATA[Hoge]]></dc:creator>
+		<pubDate>Wed, 30 Mar 2011 14:54:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=4810#comment-688</guid>
+
+					<description><![CDATA[中国のvpnですが、android上では接続が張れていることになっているのに、実際に取得するipはチャイナテレコムのまま…という状況に苦しんでます。
+＃PCは問題ないんですが。]]></description>
+			<content:encoded><![CDATA[<p>中国のvpnですが、android上では接続が張れていることになっているのに、実際に取得するipはチャイナテレコムのまま…という状況に苦しんでます。<br />
+＃PCは問題ないんですが。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: u6df1u7530 u9054u4e5f(Tatsuya Fukata)		</title>
+		<link>/archives/4810/comment-page-1/#comment-661</link>
+
+		<dc:creator><![CDATA[u6df1u7530 u9054u4e5f(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Thu, 14 Oct 2010 19:23:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=4810#comment-661</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/4810/comment-page-1/#comment-660&quot;&gt;tukasa-rea&lt;/a&gt;.
+
+u3054u7121u6c99u6c70u3067u3059uff01nu3042u308au304cu3068u3046u3054u3056u3044u307eu3059u3002u793eu4f1au4eba4u5e74u76eeu306bu3057u3066u65e9u304fu30824u793eu76eeu3067u3054u3056u3044u307eu3059uff3euff3euff1bnu4e2du56fdu8a9eu3082u8a71u305bu305au306bu4e0au6d77u306bu6765u3061u3083u3044u307eu3057u305fu304cu3001u65e9u304fu8a71u305bu308bu3088u3046u306bu9811u5f35u308au307eu3059u3088wnu3042u3001u3042u3068u98dfu4e8bu306eu5199u771fu3082u8f09u305bu305fu3044u3068u601du3044u307eu3059u3002]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/4810/comment-page-1/#comment-660">tukasa-rea</a>.</p>
+<p>u3054u7121u6c99u6c70u3067u3059uff01nu3042u308au304cu3068u3046u3054u3056u3044u307eu3059u3002u793eu4f1au4eba4u5e74u76eeu306bu3057u3066u65e9u304fu30824u793eu76eeu3067u3054u3056u3044u307eu3059uff3euff3euff1bnu4e2du56fdu8a9eu3082u8a71u305bu305au306bu4e0au6d77u306bu6765u3061u3083u3044u307eu3057u305fu304cu3001u65e9u304fu8a71u305bu308bu3088u3046u306bu9811u5f35u308au307eu3059u3088wnu3042u3001u3042u3068u98dfu4e8bu306eu5199u771fu3082u8f09u305bu305fu3044u3068u601du3044u307eu3059u3002</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: tukasa-rea		</title>
+		<link>/archives/4810/comment-page-1/#comment-660</link>
+
+		<dc:creator><![CDATA[tukasa-rea]]></dc:creator>
+		<pubDate>Thu, 14 Oct 2010 10:36:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=4810#comment-660</guid>
+
+					<description><![CDATA[u3054u7121u6c99u6c70u3057u3066u307eu3059u3002rnu5c31u8077u304au3081u3067u3068u3046uff01rnu4e0au6d77u304bu3041uff5eu3002u65e8u3044u3082u306eu60c5u5831u697du3057u307fu306bu3057u3066u308bu305cu3087u3002]]></description>
+			<content:encoded><![CDATA[<p>u3054u7121u6c99u6c70u3057u3066u307eu3059u3002rnu5c31u8077u304au3081u3067u3068u3046uff01rnu4e0au6d77u304bu3041uff5eu3002u65e8u3044u3082u306eu60c5u5831u697du3057u307fu306bu3057u3066u308bu305cu3087u3002</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>db.Model &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/db-model/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[GAE/P]db.ModelのValidtionを任意のタイミングで行えるように変更</title>
+		<link>/archives/1846/</link>
+					<comments>/archives/1846/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2009 02:06:06 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[db.Model]]></category>
+		<category><![CDATA[GAE]]></category>
+		<category><![CDATA[GAE/P]]></category>
+		<category><![CDATA[validation]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1846</guid>
+
+					<description><![CDATA[GAE の Model の バリデーションの動作を変えてみた &#8211; 幸せプールさんの記事を元に任意のタイミングでvalidationが行えるようにしました。まだ、コードが参照元のソースをコピ ... <a href="/archives/1846/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://d.hatena.ne.jp/hipuri/20091022/1256217975">GAE の Model の バリデーションの動作を変えてみた &#8211; 幸せプール</a>さんの記事を元に任意のタイミングでvalidationが行えるようにしました。まだ、コードが参照元のソースをコピっただけなので、、自分流にカスタマイズをしましたら、ソースを載せたいと思います。</p>
+<p>それにしても、まだ、Pythonのコードをちゃんと理解していないんだなと感じさせられました。あぁ、早く好きなようにカスタマイズできるようになりたいw</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1846/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

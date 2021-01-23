@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [WordPress]wp-flickr-pressのバージョン1.3.2をリリース	</title>
+	<atom:link href="/archives/5860/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5860/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:13 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5860/comment-page-1/#comment-713</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Sun, 10 Jul 2011 03:09:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-713</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5860/comment-page-1/#comment-712&quot;&gt;Octo Tako&lt;/a&gt;.
+
+Oh, OK. 
+
+I&#039;ll add when the next release.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5860/comment-page-1/#comment-712">Octo Tako</a>.</p>
+<p>Oh, OK. </p>
+<p>I&#8217;ll add when the next release.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Octo Tako		</title>
+		<link>/archives/5860/comment-page-1/#comment-712</link>
+
+		<dc:creator><![CDATA[Octo Tako]]></dc:creator>
+		<pubDate>Sun, 10 Jul 2011 02:55:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-712</guid>
+
+					<description><![CDATA[u forgot to mention it here ^^
+
+http://wordpress.org/extend/plugins/wp-flickr-press/installation/
+
+
+		Download the plugin, unpack it and upload the &#039;wp-flickr-press&#039; folder to your wp-content/plugins directory.
+
+To grant write access to wp-content/plugins/wp-flickr-press/cache.
+Activate the plugin through the &#039;Plugins&#039; menu in WordPress.
+Go to [Settings] -&#062; [FlickrPress] to configure the options.
+
+this is the best flickr plugin i found after tantan flickr discontinued. ^^]]></description>
+			<content:encoded><![CDATA[<p>u forgot to mention it here ^^</p>
+<p><a href="http://wordpress.org/extend/plugins/wp-flickr-press/installation/" rel="nofollow ugc">http://wordpress.org/extend/plugins/wp-flickr-press/installation/</a></p>
+<p>		Download the plugin, unpack it and upload the &#8216;wp-flickr-press&#8217; folder to your wp-content/plugins directory.</p>
+<p>To grant write access to wp-content/plugins/wp-flickr-press/cache.<br />
+Activate the plugin through the &#8216;Plugins&#8217; menu in WordPress.<br />
+Go to [Settings] -&gt; [FlickrPress] to configure the options.</p>
+<p>this is the best flickr plugin i found after tantan flickr discontinued. ^^</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5860/comment-page-1/#comment-711</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Sat, 09 Jul 2011 15:59:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-711</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5860/comment-page-1/#comment-710&quot;&gt;Octo Tako&lt;/a&gt;.
+
+Yeah!! Congratulation!!!
+
+&#062; you should mention that in installation guide. 
+It&#039;s already exists, but I will add screenshots.
+
+Thank you]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5860/comment-page-1/#comment-710">Octo Tako</a>.</p>
+<p>Yeah!! Congratulation!!!</p>
+<p>&gt; you should mention that in installation guide.<br />
+It&#8217;s already exists, but I will add screenshots.</p>
+<p>Thank you</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Octo Tako		</title>
+		<link>/archives/5860/comment-page-1/#comment-710</link>
+
+		<dc:creator><![CDATA[Octo Tako]]></dc:creator>
+		<pubDate>Sat, 09 Jul 2011 15:36:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-710</guid>
+
+					<description><![CDATA[oh.. i need to set that in Flickr http://www.flickr.com/services/apps/.
+you should mention that in installation guide. 
+
+thanks . it&#039;s working now  . arigato gozaimasu]]></description>
+			<content:encoded><![CDATA[<p>oh.. i need to set that in Flickr <a href="http://www.flickr.com/services/apps/" rel="nofollow ugc">http://www.flickr.com/services/apps/</a>.<br />
+you should mention that in installation guide. </p>
+<p>thanks . it&#8217;s working now  . arigato gozaimasu</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5860/comment-page-1/#comment-709</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Sat, 09 Jul 2011 13:56:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-709</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5860/comment-page-1/#comment-708&quot;&gt;Octo Tako&lt;/a&gt;.
+
+
+Hi, Octo Tako
+
+Did you set the OAuth callback URL to the Flickr app?
+
+In addition, URL&#039;s management screen below is your blog?
+http://[Your/ Blog Domain]/wp-admin/
+
+If, http://[Your/ Blog Domain]/[XXX]/wp-admin/, callback URL, please set as follows.
+
+http://[Your/ Blog Domain]/[XXX]/wp-content/plugins/wp-flickr-press/flickr_oauth_callback.php
+
+Thank you]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5860/comment-page-1/#comment-708">Octo Tako</a>.</p>
+<p>Hi, Octo Tako</p>
+<p>Did you set the OAuth callback URL to the Flickr app?</p>
+<p>In addition, URL&#8217;s management screen below is your blog?<br />
+<a href="http://[Your/" rel="nofollow ugc">http://[Your/</a> Blog Domain]/wp-admin/</p>
+<p>If, <a href="http://[Your/" rel="nofollow ugc">http://[Your/</a> Blog Domain]/[XXX]/wp-admin/, callback URL, please set as follows.</p>
+<p><a href="http://[Your/" rel="nofollow ugc">http://[Your/</a> Blog Domain]/[XXX]/wp-content/plugins/wp-flickr-press/flickr_oauth_callback.php</p>
+<p>Thank you</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Octo Tako		</title>
+		<link>/archives/5860/comment-page-1/#comment-708</link>
+
+		<dc:creator><![CDATA[Octo Tako]]></dc:creator>
+		<pubDate>Sat, 09 Jul 2011 11:32:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-708</guid>
+
+					<description><![CDATA[api key and secret is already inserted.
+when i click http://domain/wp-content/plugins/wp-flickr-press/flickr_oauth_callback.php 
+it gives me blank page.
+
+when i click update oath token still error Oops! Flickr can&#039;t find a valid callback URL.
+
+
+      ]]></description>
+			<content:encoded><![CDATA[<p>api key and secret is already inserted.<br />
+when i click <a href="http://domain/wp-content/plugins/wp-flickr-press/flickr_oauth_callback.php" rel="nofollow ugc">http://domain/wp-content/plugins/wp-flickr-press/flickr_oauth_callback.php</a><br />
+it gives me blank page.</p>
+<p>when i click update oath token still error Oops! Flickr can&#8217;t find a valid callback URL.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5860/comment-page-1/#comment-707</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Fri, 08 Jul 2011 15:15:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-707</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5860/comment-page-1/#comment-706&quot;&gt;Octo Tako&lt;/a&gt;.
+
+Hi,
+
+First, I created a Flickr app for yourself from the following URL?
+
+http://www.flickr.com/services/apps/create/apply
+
+Then I created the app was set CallbackURL?
+URL should be set as follows.
+
+http://[Your/ Blog Domain]/wp-content/plugins/wp-flickr-press/flickr_oauth_callback.php]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5860/comment-page-1/#comment-706">Octo Tako</a>.</p>
+<p>Hi,</p>
+<p>First, I created a Flickr app for yourself from the following URL?</p>
+<p><a href="http://www.flickr.com/services/apps/create/apply" rel="nofollow ugc">http://www.flickr.com/services/apps/create/apply</a></p>
+<p>Then I created the app was set CallbackURL?<br />
+URL should be set as follows.</p>
+<p><a href="http://[Your/" rel="nofollow ugc">http://[Your/</a> Blog Domain]/wp-content/plugins/wp-flickr-press/flickr_oauth_callback.php</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Octo Tako		</title>
+		<link>/archives/5860/comment-page-1/#comment-706</link>
+
+		<dc:creator><![CDATA[Octo Tako]]></dc:creator>
+		<pubDate>Fri, 08 Jul 2011 14:50:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5860#comment-706</guid>
+
+					<description><![CDATA[when i try to update oath token , flickr give me this error
+
+
+            	Oops! Flickr can&#039;t find a valid callback URL.
+      	
+      
+
+
+            	An external application has requested your login 
+credentials and permission to perform certain actions on your behalf, 
+but has failed to include all the required data. 
+]]></description>
+			<content:encoded><![CDATA[<p>when i try to update oath token , flickr give me this error</p>
+<p>            	Oops! Flickr can&#8217;t find a valid callback URL.</p>
+<p>            	An external application has requested your login<br />
+credentials and permission to perform certain actions on your behalf,<br />
+but has failed to include all the required data. </p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

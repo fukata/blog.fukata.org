@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>開発 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/category/dev/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Thu, 06 Dec 2018 05:39:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Vue.jsでbeforeunloadを正しく実装する</title>
+		<link>/archives/9613/</link>
+					<comments>/archives/9613/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Nov 2018 10:57:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Vue.js]]></category>
+		<guid isPermaLink="false">/?p=9613</guid>
+
+					<description><![CDATA[トラハをnuxtjsで書き換えて多少バグがあるものの概ねうまく動いている。記事の作成、編集をする時にページから離脱する際に警告を出しているがVueで実装する際に少し調べたのでメモしておく。 広告 現状 ... <a href="/archives/9613/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/31044568317" target="_blank" title="Screenshot from 2018-11-21 17-45-02"><img loading="lazy" src="https://farm5.staticflickr.com/4893/31044568317_469b6428e4_c.jpg" alt="Screenshot from 2018-11-21 17-45-02" class="aligncenter" width="800" height="588"/></a></p>
+<p><a href="https://traha.org/" title="トップページ | トラハ 旅の記録をするなら！" target="_blank">トラハ</a>をnuxtjsで書き換えて多少バグがあるものの概ねうまく動いている。記事の作成、編集をする時にページから離脱する際に警告を出しているがVueで実装する際に少し調べたのでメモしておく。</p>
+<p><span id="more-9613"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>現状は下記のコードをpagesに定義することで実現している。 <code>beforeRouteLeave</code> のみだとリロードや戻るボタンなどに対応出来なかったので通常の <code>beforeunload</code> イベントもフックするようにしている。</p>
+<pre><code>  created() {
+    if (process.browser) {
+      // ページを消そうとしたりリロードした場合などに対応
+      $(window)
+        .off('beforeunload')
+        .on('beforeunload', () =&gt; {
+          if (!this.pageState.saving) {
+            return '編集中のデータがあります！'
+          }
+        })
+    }
+  },
+  beforeRouteLeave(to, from, next) {
+    // フォームを送信した場合などに離脱とみなさないようにするため。
+    if (this.pageState.saving) {
+      $(window).off('beforeunload')
+      return next()
+    }
+
+    this.$swal({
+      title: '編集中のデータがあります！',
+      text: 'ページを移動すると編集中のデータが失くなります。',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'はい、移動します',
+      cancelButtonText: 'キャンセル'
+    }).then(result =&gt; {
+      if (result.value) {
+        $(window).off('beforeunload')
+        next()
+      } else {
+        next(false)
+      }
+    })
+  }
+}
+</code></pre>
+<p>今回使用したメソッドについては下記のページを参考にした。</p>
+<p><a href="https://router.vuejs.org/guide/advanced/navigation-guards.html#per-route-guard" title="Navigation Guards | Vue Router" target="_blank">Navigation Guards | Vue Router</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9613/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4893/31044568317_469b6428e4.jpg</image>
+	</item>
+		<item>
+		<title>Nuxt.js(@nuxtjs/auth)とRails(omniauth)でTwitterとOAuth認証を行う方法</title>
+		<link>/archives/9605/</link>
+					<comments>/archives/9605/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 14 Nov 2018 15:43:17 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Nuxt.js]]></category>
+		<category><![CDATA[oauth]]></category>
+		<category><![CDATA[Rails]]></category>
+		<guid isPermaLink="false">/?p=9605</guid>
+
+					<description><![CDATA[背景 トラハ は現在ものすごくシンプルな作りになっている。 そこで以前使ったことがあるnuxt.jsで置き換えてみようと思って作り変えていてやっと認証周りの部分まで実装が進んできた。 Omniauth ... <a href="/archives/9605/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<h2>背景</h2>
+<p><a href="https://traha.org/">トラハ</a> は現在ものすごくシンプルな作りになっている。</p>
+<p>そこで以前使ったことがあるnuxt.jsで置き換えてみようと思って作り変えていてやっと認証周りの部分まで実装が進んできた。</p>
+<p>Omniauthを使った現在のフローは極力崩さずに@nuxtjs/authを使えないかと思い試行錯誤した結果が今回の方法である。</p>
+<p>基本的にOmniauthの時に行っていたコールバック時の処理などには全く手を付けていないのでその辺を再実装する手間は省けた。</p>
+<h2>シーケンス図</h2>
+<p>Nuxt.js(@nuxtjs/auth)とRails(omniauth)でTwitterとOAuth認証を行うシーケンス図<br />
+<a href="https://www.flickr.com/photos/fukata/45878003031" target="_blank" title="01_oauth_twitter_sequence"><img loading="lazy" src="https://farm5.staticflickr.com/4852/45878003031_1eb761f194_c.jpg" alt="01_oauth_twitter_sequence" class="aligncenter" width="800" height="567"/></a></p>
+<h2>説明</h2>
+<p>ポイントはTwitterからRoRにコールバックが返ってきた時に有効期限の短い(ここでは1分)のJWTを付与してNuxt.js側にリダイレクトしている。</p>
+<p>Nuxt.js側は受け取ったトークンを元に <code>this.$auth.loginWith('local', { data: this.$route.query })</code> でログイン用APIにJWTを渡し、その値をもってログイン処理をし、有効期限が長いまたは無しのJWTを発行することによってログインを完了としている。</p>
+<p>既にOmniauthの設定、コールバック時のユーザー登録等の処理を実装済みだったのでこのような設計になっている。</p>
+<p>フロントエンドとバックエンドで基本的に同じドメインを使うようにしているので適宜nginx等で適切な方へプロキシしてあげる必要がある。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9605/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4852/45878003031_1eb761f194.jpg</image>
+	</item>
+		<item>
+		<title>JavaScriptからGoogle Adsenseを動的に表示する方法</title>
+		<link>/archives/9601/</link>
+					<comments>/archives/9601/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 08 Nov 2018 15:26:03 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Google Adsense]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/?p=9601</guid>
+
+					<description><![CDATA[最近、チェンマイに引っ越した。バンコクほど暑くなくて快適に過ごせるので非常に居心地が良い。 今までJavaScriptから動的にGoogle Adsenseの広告を表示したことがなかったのでメモを残し ... <a href="/archives/9601/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/31825100798" target="_blank" title="PB029211"><img loading="lazy" src="https://farm5.staticflickr.com/4892/31825100798_3ab5afff3a_c.jpg" alt="PB029211" class="aligncenter" width="800" height="600"/></a></p>
+<p>最近、チェンマイに引っ越した。バンコクほど暑くなくて快適に過ごせるので非常に居心地が良い。</p>
+<p>今までJavaScriptから動的にGoogle Adsenseの広告を表示したことがなかったのでメモを残しておく。</p>
+<p><span id="more-9601"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>最近主に記事をアップしている<a href="https://traha.org/" rel="noopener" target="_blank">トラハ</a>では目次をJSで動的に作成している。で、その下に広告を表示できないかと思い試してみたら普通に出来たので今後のためにメモを残しておこうと思う。</p>
+<p>と言ってもやることは簡単だ。</p>
+<p>下記のadsenseで共通で利用するJSをどこでもいいので読み込まれるようにしておく。今回はheadタグ内に追加した。</p>
+<pre><code>&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>今回はjsrenderを使っているので下記のようなadsenseで使い回せるテンプレートを定義する。</p>
+<pre><code>&lt;script type="text/x-jsrender" id="adsense-template"&gt;
+&lt;ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="{{:layout}}"
+     data-ad-format="{{:format}}"
+     data-ad-client="{{:client}}"
+     data-ad-slot="{{:slot}}"&gt;&lt;/ins&gt;
+&lt;/script&gt;
+</code></pre>
+<p>最後に表示したい箇所に追加して終わり。</p>
+<pre><code>var $contaienr = $('#adsense-container');
+var data = {layout: '', format: '', client: '', slot: ''};
+$container.append($.templates('#adsense-template').render(data));
+(adsbygoogle = window.adsbygoogle || []).push({});
+</code></pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9601/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4892/31825100798_3ab5afff3a.jpg</image>
+	</item>
+		<item>
+		<title>旅行時に役立つ便利グッズを紹介するサイト「トラハ」を作りました</title>
+		<link>/archives/9470/</link>
+					<comments>/archives/9470/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 26 Feb 2018 07:01:53 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[トラハ]]></category>
+		<guid isPermaLink="false">/?p=9470</guid>
+
+					<description><![CDATA[久しぶりに趣味でサービス作った気がする。 広告 トラハ 20歳以降、酒を大量に飲んでも翌日に残らなかったのに30歳を過ぎてから少しずつ翌日に残るようになってしまってちょっと嫌になっていたので思い切って ... <a href="/archives/9470/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/26620373208" target="_blank" title="Screen Shot 2018-02-26 at 13.41.53"><img loading="lazy" src="https://farm5.staticflickr.com/4658/26620373208_87fa82d68a_c.jpg" alt="Screen Shot 2018-02-26 at 13.41.53" class="aligncenter" width="800" height="442"/></a></p>
+<p>久しぶりに趣味でサービス作った気がする。</p>
+<p><span id="more-9470"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>トラハ</h2>
+<p>20歳以降、酒を大量に飲んでも翌日に残らなかったのに30歳を過ぎてから少しずつ翌日に残るようになってしまってちょっと嫌になっていたので思い切って最近禁酒した。そのせいもあってか夜なかなか寝付けなくて暇なのでちょっと欲しかったサービスを作り始めることにした。</p>
+<p><a href="https://traha.org/" rel="noopener" target="_blank">トラハ</a></p>
+<p>普段、タイに住んでいて定期的に周辺国やタイ国内を旅行しているのでそんな時に役立った商品を紹介している場所をまとめてられたらいいなと思って作った。まだまだかなり荒削りではあるけど、先週の初めくらいから毎晩少しずつ開発して先週の土曜日に確か本番環境に公開出来た。</p>
+<p>ドメインを取るのさえめんどくさかったのとあまり多くのドメインを管理したくなかったのでサブドメインでの公開になっている。成長する見込みがあればドメインの購入も検討したい。あとデザインをまともなものにしたい。</p>
+<p>雑な部分が多く残るけどもしよかったら使ってみてフィードバックもらえるとサービス維持のモチベーションが上がります。</p>
+<h2>技術的な余談</h2>
+<p>Digital Oceanのシンガポールリージョンを使ってるのでもしかしたら日本から閲覧した時に表示が重いという印象があるかもしれない。一応、Let&#8217;s EncryptでSSL対応しているけどLet&#8217;s EncryptによるSSL証明書の発行をロードバランサー配下にいるサーバーで行おうとするとサーバーが複数台あった場合に正常に処理が行われない可能性があるので、今回は初めてDNSのTXTレコードでの認証を行ってみた。</p>
+<p>しかし、この方法の場合、毎回手動で設定する必要がありそうで毎月の対応が必要なので早いところ自動化したい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9470/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4658/26620373208_87fa82d68a.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.6.1をリリース</title>
+		<link>/archives/9407/</link>
+					<comments>/archives/9407/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 20 Jan 2018 17:15:12 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">/?p=9407</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.1をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/9407/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.flickr.com/photos/fukata/25849587578" target="_blank" title="I0002191"><img loading="lazy" src="https://farm5.staticflickr.com/4648/25849587578_992859aa01_c.jpg" alt="I0002191" class="aligncenter" width="800" height="600"/></a></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.1をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>img templateにwidth/heightオプションを追加</li>
+</ul>
+<p><span id="more-9407"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>img templateにwidth/heightオプションを追加</h3>
+<p>現在、挿入時のテンプレートで <code>[img]</code> の部分がimgタグに置き換わっていますがオプションを指定出来るようになりました。具体的には下記のようになります。</p>
+<p><code>[img width="1 or 0" height="1 or 0"]</code></p>
+<p>width,heightのデフォルトは1なので何も指定しない今までの指定の場合にはwidth,heightがimgタグに指定されて出力されます。もし、何らかの理由でオフにしたい場合は0を指定してください。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9407/feed/</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4648/25849587578_992859aa01.jpg</image>
+	</item>
+		<item>
+		<title>PHPなプロジェクトにcapistrano+gooseでデプロイとDBマイグレーション機能を追加する</title>
+		<link>/archives/9350/</link>
+					<comments>/archives/9350/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 25 Dec 2017 07:43:00 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[capistrano]]></category>
+		<category><![CDATA[goose]]></category>
+		<guid isPermaLink="false">/?p=9350</guid>
+
+					<description><![CDATA[知り合いのPHPプロジェクトを少し手伝う機会があったので試した時の記録。 広告 環境 PHP: 7.1.11 ruby: ruby 1.8.7 (2011-06-30 patchlevel 352)  ... <a href="/archives/9350/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9350/"><img src="https://farm5.staticflickr.com/4636/39148893112_461211ba7a_c.jpg" alt="PC196557" class="aligncenter"/></a></p>
+<p>知り合いのPHPプロジェクトを少し手伝う機会があったので試した時の記録。</p>
+<p><span id="more-9350"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<ul>
+<li>PHP: 7.1.11</li>
+<li>ruby: ruby 1.8.7 (2011-06-30 patchlevel 352) [x86_64-linux]</li>
+<li>gemコマンドない(インストールできない)</li>
+<li>rakeコマンドない</li>
+</ul>
+<p>みたいな構成のレンサバ。</p>
+<p>gemがインストール出来る環境だったらsinatra-activerecordとcapistranoでデプロイとDBマイグレーションを実現出来たはず。</p>
+<h2>goose</h2>
+<p>当初、あまりVPSだとばかり思ってxbuildでruby入れてsinatra-activerecordとcapistranoで対応しようかと思ったけど、よくよく調べてみると自由にソフトウェアをインストールすることが出来ない環境だった。</p>
+<p>何かソフトウェアをコンパイルするのは難しそうなのでgolangのマイグレーションツールであるgooseを使ってみた。</p>
+<p>シンプルだけど今回の要件を満たしてるので問題ない。</p>
+<h2>deploy.rb</h2>
+<p>大半のコードはcapistrano/railsのmigrationsから拝借したものになった。rake db:migrateの部分を書き換えただけ。</p>
+<p><script src="https://gist.github.com/fukata/bfc63dbcec5d76742323010b7af82461.js"></script></p>
+<h2>まとめ</h2>
+<p>自動デプロイとDBマイグレーションがあるとやっぱり助かる。</p>
+<p>普段、Railsを使ってる事が多いので、capistranoを使った。</p>
+<p>ただ、ある程度の規模のPHPプロジェクトを触ってくてPHPプロジェクトの場合、どういったデプロイツールやDBマイグレーションツールを使うのが流行りなのか知りたい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9350/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4636/39148893112_461211ba7a.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.6.0をリリース</title>
+		<link>/archives/9261/</link>
+					<comments>/archives/9261/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 15 Dec 2017 05:30:11 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">/?p=9261</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.0をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/9261/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9261/"><img src="https://farm5.staticflickr.com/4533/27285991059_6ce8d4decb_c.jpg" alt="Screen_Shot_2017-12-15_at_11_19_45" class="aligncenter"/></a></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.6.0をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>デバッグ情報を表示</li>
+</ul>
+<p><span id="more-9261"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>デバッグ情報を表示</h3>
+<p>設定画面の最下部付近にデバッグ情報を表示するようにしました。</p>
+<p>バグ報告時にこちらの情報をコピペしてもらえると調査が楽になるのでよろしくお願いします。<br />
+<a href="/archives/9261/"><img src="https://farm5.staticflickr.com/4533/27285991059_6ce8d4decb_c.jpg" alt="Screen_Shot_2017-12-15_at_11_19_45" class="aligncenter"/></a></p>
+<p>今後、必要な情報があれば増やしていくつもりです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9261/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4533/27285991059_6ce8d4decb.jpg</image>
+	</item>
+		<item>
+		<title>旅行用にGPSロガーを作り始めた</title>
+		<link>/archives/9253/</link>
+					<comments>/archives/9253/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 08 Dec 2017 18:29:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[react-native]]></category>
+		<category><![CDATA[react.js]]></category>
+		<category><![CDATA[TravelLogger]]></category>
+		<guid isPermaLink="false">/?p=9253</guid>
+
+					<description><![CDATA[react-nativeの勉強も兼ねて急にGPSロガーを作りたくなったので作り始めた。 広告 リポジトリは下記。 fukata/travel-logger-app: THIS IS SAMPLE AP ... <a href="/archives/9253/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9253/"><img src="https://farm5.staticflickr.com/4690/27141003139_5a83ca2db8_c.jpg" alt="Screen Shot 2017-12-08 at 15.05.11" class="aligncenter"/></a></p>
+<p>react-nativeの勉強も兼ねて急にGPSロガーを作りたくなったので作り始めた。</p>
+<p><span id="more-9253"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>リポジトリは下記。</p>
+<p><a href="https://github.com/fukata/travel-logger-app" title="fukata/travel-logger-app: THIS IS SAMPLE APP of react-native (only testing android)" target="_blank">fukata/travel-logger-app: THIS IS SAMPLE APP of react-native (only testing android)</a></p>
+<p>まだ、</p>
+<ul>
+<li>位置情報を定期的にファイルに書き出し。</li>
+<li>記録したログファイル一覧、シェア(Androidのシェア機能)、削除。</li>
+<li>各種、取得する位置情報に関する設定の更新。</li>
+</ul>
+<p>これくらいしか出来ていない。</p>
+<p>あと、アプリとは別に記録したログファイルからgoogleマップに情報をプロットするためのスクリプトも簡単ではあるけど用意した。これは今のところ単にそれぞれの位置情報をpolylineで描画するというもの。</p>
+<p>最終的には移動中や停止などを判別してどの区間でどれくらいかかったなども表示出来るようにしてブログに埋め込みたいと思っている。最悪、インタラクティブな物じゃなくてもじゃなくても静止画でも良い。</p>
+<p>react-nativeは以前から触ってみたいと思っていたのに仕事を理由にしたり、作るものが思いつかなかったなどがあったけど、急にGPSロガーを作って記録してみたいと思ったので夜にチマチマやって3日ほどで現状まで出来た。</p>
+<p>react-nativeの事をよく分かっていないのでコードはぐちゃぐちゃだと思う。まぁ、この辺は今はあまり気にしないでおこうと思う。とりあえず、自分が使える程度の動くものを最優先している。じゃないと開発へのモチベーションが一気に低下してしまう。それが最も現れたのがデフォルトの設定値の保存を行うタイミング。</p>
+<p>現状、<a href="https://reactnavigation.org/docs/navigators/tab" rel="noopener" target="_blank">TabNavigator</a>を <code>AppRegisry.registerComponent</code> に渡している。出来れば、アプリの起動時に初期設定を行ってから画面を描画したい。ただし、設定値を端末側に保存するライブラリのAPIが非同期でこの辺を上手いこと処理する方法が思いつかなかったので今はその辺がものすごくグチャッとなっている。</p>
+<p>ただ、目的は位置情報を記録してブログに埋め込めれば良いので今は諦めた。落ち着いたら見直したい。というか作り直した方が良いレベルのものだと思う。</p>
+<p>2日間react.jsを触ってその1,2週間後くらいにこれを作り始めたわけだけど、react.jsの知識があればだいぶ気軽にアプリが作れるなと感じた。特に今回作ってるのが複雑なフローもレイアウトも重い画像などが無いというのが非常に大きいと思う。</p>
+<p>なんとかモチベーションが低下しないうちにブログへの埋め込みまで作ってしまいたい。</p>
+<p>とはいえ、アプリ側は出来たので来週のラオス小旅行中に早速これが使える。</p>
+<p>今月の16日から数日、バンコクからラオスとの国境沿いの街であるノンカーイに行って、そこからヴィエンチャンに陸路で入国するつもり。タイに3年ほど住んでるけど陸路での入出国は未体験なので楽しみ。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9253/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4690/27141003139_5a83ca2db8.jpg</image>
+	</item>
+		<item>
+		<title>[WordPress]wp-flickr-pressのバージョン2.5.0をリリース</title>
+		<link>/archives/9226/</link>
+					<comments>/archives/9226/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 23 Nov 2017 08:16:25 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Release]]></category>
+		<category><![CDATA[wp-flickr-press]]></category>
+		<guid isPermaLink="false">/?p=9226</guid>
+
+					<description><![CDATA[WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.5.0をリリースしました。 プラグインの詳細についてはこちらより参照 ... <a href="/archives/9226/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4502/26459449979_6f307e9deb_c.jpg" alt="PB044626" class="aligncenter"/></a></p>
+<p>WordPressの投稿画面からFlickrの画像を気軽に挿入するためのプラグイン「wp-flickr-press」のバージョン2.5.0をリリースしました。<br />
+プラグインの詳細については<a href="https://wordpress.org/plugins/wp-flickr-press/">こちら</a>より参照下さい。</p>
+<h2>変更点</h2>
+<ul>
+<li>スマートフォン対応</li>
+</ul>
+<p><span id="more-9226"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>スマートフォン対応</h3>
+<p>簡単ではありますが、新UIに関してスマートフォンの対応を行いました。</p>
+<p>「メディアの挿入」から表示<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4521/24722985878_009a06e57e_c.jpg" alt="blog.fukata.org_wp-admin_post.php_post=9226&amp;action=edit(Nexus 6P)" class="aligncenter"/></a></p>
+<p>使える機能はPCの時とほぼ同じ。<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4578/38595311701_4cb1aac0aa_c.jpg" alt="blog.fukata.org_wp-admin_post.php_post=9226&amp;action=edit(Nexus 6P) (1)" class="aligncenter"/></a></p>
+<p>プロパティの変更も可能。<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4564/24722987458_0fde9c36f2_c.jpg" alt="blog.fukata.org_wp-admin_post.php_post=9226&amp;action=edit(Nexus 6P) (2)" class="aligncenter"/></a></p>
+<p>現状、多くのスマートフォンで画像が2列表示になっていると思います。画像を選択すると右列の画像が表示されなくなって選べなくなりますが一番下にある「クリア」ボタンを押すことでプロパティの変更用の右サイドバーが非表示になるのでその後再度選択してください。</p>
+<p>また、PCの時と基本的には同じ機能が使えますが唯一使えないのが<strong>複数挿入</strong>です。</p>
+<p>複数挿入に関してはいずれ時間を作って実装しようかと思っていますのでしばらくお待ち下さい。</p>
+<h2>追記: 2017-11-25 03:00:00</h2>
+<p>スマホの場合に複数選択モードにするボタンを表示するようにしました。これを押すことでスマホでも複数挿入が可能になります。v2.5.2から利用可能です。<br />
+<a href="/archives/9226/"><img src="https://farm5.staticflickr.com/4543/37903454704_0b20e2948e_c.jpg" alt="Screen Shot 2017-11-25 at 0.56.31" class="aligncenter"/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9226/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4502/26459449979_6f307e9deb.jpg</image>
+	</item>
+		<item>
+		<title>h2o+mrubyで移行前のブログURLを正常にリダイレクトするようにした</title>
+		<link>/archives/9053/</link>
+					<comments>/archives/9053/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 28 Oct 2017 13:43:37 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[h2o]]></category>
+		<category><![CDATA[mruby]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/?p=9053</guid>
+
+					<description><![CDATA[WordPressのインポート機能で取り込んだ時にIDが変わってしまったものがあったのでリダイレクタを作った。 広告 プログラムから生成したmrubyのリダイレクタは下記。 blog_redirect ... <a href="/archives/9053/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/9053/"><img src="https://farm5.staticflickr.com/4514/37588929851_6344b9140a_c.jpg" alt="PA083776" class="aligncenter"/></a></p>
+<p>WordPressのインポート機能で取り込んだ時にIDが変わってしまったものがあったのでリダイレクタを作った。</p>
+<p><span id="more-9053"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>プログラムから生成したmrubyのリダイレクタは下記。</p>
+<p><a href="https://gist.github.com/fukata/a7c13342d4057b0567fb0fc6ded3c804" title="blog_redirect_handler.rb" target="_blank">blog_redirect_handler.rb</a></p>
+<p>あとは、これをh2oの設定ファイルで <code>mruby.handler-file</code> に指定すれば正常に動作する。</p>
+<p>WordPressのプラグインとして書こうかとも思ったけど既に以前のドメインでアクセスが来た際にblog.fukata.orgにリダイレクトしていたのでフローを変えずに処理するのはこれが最も楽だったと思う。</p>
+<p>プログラムから吐き出したmrubyスクリプトは<a href="https://github.com/erniebrodeur/ruby-beautify" title="erniebrodeur/ruby-beautify: a cli tool to beautify ruby output to screen." target="_blank">erniebrodeur/ruby-beautify</a>で整形した。簡単に整形出来て良い。なんならsyntaxチェックまでやってくれるので便利。</p>
+<p>久々にRailsじゃなくてruby書いた気がする。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9053/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4514/37588929851_6344b9140a.jpg</image>
+	</item>
+	</channel>
+</rss>

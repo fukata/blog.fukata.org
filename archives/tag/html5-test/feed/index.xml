@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HTML5 TEST &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/html5-test/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Google Chrome Beta 16.0.912.75 on Galaxy NexusのHTML5 TEST結果</title>
+		<link>/archives/6855/</link>
+					<comments>/archives/6855/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 08 Feb 2012 02:34:58 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Galaxy Nexus]]></category>
+		<category><![CDATA[Google Chrome]]></category>
+		<category><![CDATA[HTML5 TEST]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6855</guid>
+
+					<description><![CDATA[たまたま、Galaxy Nexusがあったので、Google Chrome betaでHTML5 TESTやってみました。 キャプチャ撮るの大変だった。。。 広告 Parsing rules Canv ... <a href="/archives/6855/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>たまたま、Galaxy Nexusがあったので、Google Chrome betaでHTML5 TESTやってみました。</p>
+<p>キャプチャ撮るの大変だった。。。</p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838752503" target="_blank" title="Screenshot_2012-02-08-10-21-44"><img src="https://farm8.staticflickr.com/7018/6838752503_dab709ae41.jpg" alt="Screenshot_2012-02-08-10-21-44" class="aligncenter"/></a></p>
+<p><span id="more-6855"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h3>Parsing rules</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838753419" target="_blank" title="Screenshot_2012-02-08-10-24-14"><img src="https://farm8.staticflickr.com/7174/6838753419_878b3a34c5.jpg" alt="Screenshot_2012-02-08-10-24-14" class="aligncenter"/></a></p>
+<h3>Canvas</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838751933" target="_blank" title="Screenshot_2012-02-08-10-24-25"><img src="https://farm8.staticflickr.com/7020/6838751933_4cde7ee8ff.jpg" alt="Screenshot_2012-02-08-10-24-25" class="aligncenter"/></a></p>
+<h3>Video</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838751853" target="_blank" title="Screenshot_2012-02-08-10-25-20"><img src="https://farm8.staticflickr.com/7016/6838751853_b0ea5f0d87.jpg" alt="Screenshot_2012-02-08-10-25-20" class="aligncenter"/></a></p>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838753535" target="_blank" title="Screenshot_2012-02-08-10-25-35"><img src="https://farm8.staticflickr.com/7013/6838753535_a1f2684ed2.jpg" alt="Screenshot_2012-02-08-10-25-35" class="aligncenter"/></a></p>
+<h3>Audio</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838753777" target="_blank" title="Screenshot_2012-02-08-10-25-44"><img src="https://farm8.staticflickr.com/7166/6838753777_3f7a8f45f9.jpg" alt="Screenshot_2012-02-08-10-25-44" class="aligncenter"/></a></p>
+<h3>Elements</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838832047" target="_blank" title="Screenshot_2012-02-08-10-52-19"><img src="https://farm8.staticflickr.com/7018/6838832047_bf32ef4d7a.jpg" alt="Screenshot_2012-02-08-10-52-19" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838832257" target="_blank" title="Screenshot_2012-02-08-10-52-26"><img src="https://farm8.staticflickr.com/7009/6838832257_1db7fa5046.jpg" alt="Screenshot_2012-02-08-10-52-26" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838831453" target="_blank" title="Screenshot_2012-02-08-10-52-37"><img src="https://farm8.staticflickr.com/7172/6838831453_c82377fa6c.jpg" alt="Screenshot_2012-02-08-10-52-37" class="aligncenter"/></a></p>
+<h3>Forms</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838832157" target="_blank" title="Screenshot_2012-02-08-10-52-49"><img src="https://farm8.staticflickr.com/7174/6838832157_8f365ae046.jpg" alt="Screenshot_2012-02-08-10-52-49" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838831975" target="_blank" title="Screenshot_2012-02-08-10-52-55"><img src="https://farm8.staticflickr.com/7032/6838831975_15273479c8.jpg" alt="Screenshot_2012-02-08-10-52-55" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838831549" target="_blank" title="Screenshot_2012-02-08-10-53-07"><img src="https://farm8.staticflickr.com/7009/6838831549_207a4c5cb4.jpg" alt="Screenshot_2012-02-08-10-53-07" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838930311" target="_blank" title="Screenshot_2012-02-08-11-15-26"><img src="https://farm8.staticflickr.com/7019/6838930311_04af3ded8a.jpg" alt="Screenshot_2012-02-08-11-15-26" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838831665" target="_blank" title="Screenshot_2012-02-08-10-53-17"><img src="https://farm8.staticflickr.com/7021/6838831665_c71a911961.jpg" alt="Screenshot_2012-02-08-10-53-17" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838831739" target="_blank" title="Screenshot_2012-02-08-10-53-27"><img src="https://farm8.staticflickr.com/7168/6838831739_43ff2c9076.jpg" alt="Screenshot_2012-02-08-10-53-27" class="aligncenter"/></a></p>
+<h3>User interaction</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838751613" target="_blank" title="Screenshot_2012-02-08-10-26-33"><img src="https://farm8.staticflickr.com/7147/6838751613_b2a13d7342.jpg" alt="Screenshot_2012-02-08-10-26-33" class="aligncenter"/></a></p>
+<h3>History and navigation, Microdata</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838752281" target="_blank" title="Screenshot_2012-02-08-10-26-45"><img src="https://farm8.staticflickr.com/7157/6838752281_072cdf78f3.jpg" alt="Screenshot_2012-02-08-10-26-45" class="aligncenter"/></a></p>
+<h3>Web applications, Security</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838752183" target="_blank" title="Screenshot_2012-02-08-10-26-50"><img src="https://farm8.staticflickr.com/7159/6838752183_24c32f8d25.jpg" alt="Screenshot_2012-02-08-10-26-50" class="aligncenter"/></a></p>
+<h2>Related specifications</h2>
+<h3>Geolocation, WebGL</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838752371" target="_blank" title="Screenshot_2012-02-08-10-26-57"><img src="https://farm8.staticflickr.com/7169/6838752371_3730f9a61e.jpg" alt="Screenshot_2012-02-08-10-26-57" class="aligncenter"/></a></p>
+<h3>Communication</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838831855" target="_blank" title="Screenshot_2012-02-08-10-53-48"><img src="https://farm8.staticflickr.com/7015/6838831855_7b647b6333.jpg" alt="Screenshot_2012-02-08-10-53-48" class="aligncenter"/></a><br />
+<a href="https://www.flickr.com/photos/45259648@N06/6838752753" target="_blank" title="Screenshot_2012-02-08-10-26-38"><img src="https://farm8.staticflickr.com/7157/6838752753_383a5d39b8.jpg" alt="Screenshot_2012-02-08-10-26-38" class="aligncenter"/></a></p>
+<h3>Files</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838751339" target="_blank" title="Screenshot_2012-02-08-10-27-18"><img src="https://farm8.staticflickr.com/7028/6838751339_dfec3c6959.jpg" alt="Screenshot_2012-02-08-10-27-18" class="aligncenter"/></a></p>
+<h3>Storage</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838754743" target="_blank" title="Screenshot_2012-02-08-10-27-24"><img src="https://farm8.staticflickr.com/7014/6838754743_a261a07d10.jpg" alt="Screenshot_2012-02-08-10-27-24" class="aligncenter"/></a></p>
+<h3>Workers, Local multimedia</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838752987" target="_blank" title="Screenshot_2012-02-08-10-27-30"><img src="https://farm8.staticflickr.com/7169/6838752987_6d5659cca2.jpg" alt="Screenshot_2012-02-08-10-27-30" class="aligncenter"/></a></p>
+<h3>Notifications, Other</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838753121" target="_blank" title="Screenshot_2012-02-08-10-27-38"><img src="https://farm8.staticflickr.com/7164/6838753121_e3a828084d.jpg" alt="Screenshot_2012-02-08-10-27-38" class="aligncenter"/></a></p>
+<h2>Experimental</h2>
+<h3>Audio, Animation</h3>
+<p><a href="https://www.flickr.com/photos/45259648@N06/6838751473" target="_blank" title="Screenshot_2012-02-08-10-27-44"><img src="https://farm8.staticflickr.com/7007/6838751473_7d39c4fed9.jpg" alt="Screenshot_2012-02-08-10-27-44" class="aligncenter"/></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6855/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7018/6838752503_dab709ae41.jpg</image>
+	</item>
+	</channel>
+</rss>

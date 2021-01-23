@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>node.js &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/node-js/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>nginxのHttpSubModuleを使ってHTML内のリンクを書き換えてみた</title>
+		<link>/archives/6961/</link>
+					<comments>/archives/6961/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 21 Feb 2012 10:06:48 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[node.js]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6961</guid>
+
+					<description><![CDATA[nginxのリバースプロキシを使用して運用していたnode.jsのサービスがあったんですが、HTML内のリンクがスラッシュ始まりになっており、実際のURLはサブディレクトリを切っていたのでアクセスでき ... <a href="/archives/6961/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>nginxのリバースプロキシを使用して運用していたnode.jsのサービスがあったんですが、HTML内のリンクがスラッシュ始まりになっており、実際のURLはサブディレクトリを切っていたのでアクセスできずにリンク切れ状態になっていました。apacheで運用していた時は、<a href="https://apache.webthing.com/mod_proxy_html/">mod_proxy_html</a>などを使ってHTML内のリンクを書き換えていたんですが、nginxでも同様の事ができないか調べたところ、下記のモジュールで行うようです。</p>
+<p><a href="https://wiki.nginx.org/HttpSubModule">HttpSubModule</a></p>
+<p>ページ内に使い方は書かれていますが、今回のようにスラッシュ始まりのURLを置換するには下記のようにしました。ダブルクォーテーションで囲まれていないといけないなどの制約があります。また、sub_filterを複数書くことができないので、いくつか条件を指定したい場合にはどうやるんでしょう。</p>
+<pre lang="bash">
+    location /nodejs/ {
+        sub_filter \"/ '"/nodejs/';
+        sub_filter_once off;
+        proxy_pass https://nodejs_backend/;
+    }
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6961/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

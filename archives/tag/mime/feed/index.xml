@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mime &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mime/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>PHPでUTF8のメールの件名が文字化ける件について</title>
+		<link>/archives/1442/</link>
+					<comments>/archives/1442/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 29 Jul 2009 15:58:27 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[mime]]></category>
+		<category><![CDATA[mimeエンコード]]></category>
+		<category><![CDATA[メール]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1442</guid>
+
+					<description><![CDATA[今日は久々にはまってしまいました。 PHPでUTF8のメール送信処理を作成していたんですが、特定の文字列がある場合のみ、件名が文字化けるんですよ。しかも、ローカルのUbuntuの環境では起きず、テスト ... <a href="/archives/1442/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>今日は久々にはまってしまいました。</p>
+<p>PHPでUTF8のメール送信処理を作成していたんですが、特定の文字列がある場合のみ、件名が文字化けるんですよ。しかも、ローカルのUbuntuの環境では起きず、テストサーバ上でのみ発生。。。あ、テストサーバのPHPのバージョン確認するの忘れた。</p>
+<p>で、原因なんですが、どうやら「<a href="https://www.php.net/manual/ja/function.mb-encode-mimeheader.php">mb_encode_mimeheader</a>」が原因だったようです。しょうがないので、以下のようにして自分で作成しました。base64限定ですけどね＾＾；</p>
+<pre lang="PHP" line="1">
+function encodeBase64MimeHeader($str,$charset='UTF-8'){
+	return '=?'.$charset.'?B?'.base64_encode($str).'?='
+}
+</pre>
+<p>最近、メールに関する情報を調べていたので理解しながら修正できた感があり、久々にPHPを書いてて嬉しくなりましたw</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1442/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

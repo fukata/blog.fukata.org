@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>picasa &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/picasa/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 12 Aug 2017 02:14:34 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>札幌旅行を終えて</title>
+		<link>/archives/394/</link>
+					<comments>/archives/394/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 03 May 2008 02:40:22 +0000</pubDate>
+				<category><![CDATA[旅行]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[picasa]]></category>
+		<category><![CDATA[北海道]]></category>
+		<category><![CDATA[日本]]></category>
+		<category><![CDATA[札幌]]></category>
+		<guid isPermaLink="false">http://fukata.org/2008/05/03/394/</guid>
+
+					<description><![CDATA[1時間半かけて新千歳空港から羽田空港に戻ってきました。 う～ん、東京の空気はやっぱりよどんでる感じがしました＾＾；まぁ実際よどんでるんでしょうけどｗ 札幌で撮ってきた写真などを整理していつも通りウェブ ... <a href="/archives/394/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://farm6.static.flickr.com/5100/5475575475_256e3aeca2_m.jpg" target="_blank" title="sapporo_04.JPG"><img loading="lazy" src="https://farm6.static.flickr.com/5100/5475575475_256e3aeca2_m.jpg" alt="sapporo_04.JPG" class="imageframe imgalignright" align="right" height="150" width="200" /></a>1時間半かけて新千歳空港から羽田空港に戻ってきました。</p>
+<p>う～ん、東京の空気はやっぱりよどんでる感じがしました＾＾；まぁ実際よどんでるんでしょうけどｗ</p>
+<p>札幌で撮ってきた写真などを整理していつも通りウェブアルバムの方にもアップロードしたので、もしよろしければ後で見てやってください＾＾（リンクは記事の最後に載せています）</p>
+<p>今思えば、今回の旅行は自分の稼いだお金で初めて行った旅行だったような気がします。今まで仕事に追われて時間があまりなかったので遠くへ行く機会がなかったのですが、今回まとまった時間が出来た為思い切って札幌まで行ってきました。</p>
+<p>でも、行った甲斐はありました＾＾色々見て回れたし、何より息抜きになりました♪自分が思っていた以上にお金は使ってしまいましたがまぁたまにはね＾＾；ということで大目に見てますｗ</p>
+<p>また、仕事に追われて精神的にきつくなったら知らない土地へ行ってリフレッシュしたいと思います＾＾</p>
+<p>ウェブアルバム「<a href="https://picasaweb.google.co.jp/tatsuya.fukata/nsHixC" target="_blank">札幌旅行</a>」</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/394/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

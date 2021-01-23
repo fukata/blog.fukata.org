@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>blog.fukata.org</title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Mon, 31 Dec 2018 07:00:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>New XPS 13(9370)を半年以上使ってみた感想</title>
+		<link>/archives/9629/</link>
+					<comments>/archives/9629/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 31 Dec 2018 07:00:03 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Dell]]></category>
+		<category><![CDATA[XPS13]]></category>
+		<guid isPermaLink="false">/?p=9629</guid>
+
+					<description><![CDATA[New XPS 13(9370)を開発マシンとして使い始めて半年ほど経つのでレビュー(メモ)を残しておく。 広告 開発マシンをNew XPS 13(9370)にした &#124; blog.fukata.org ... <a href="/archives/9629/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/41018399390" target="_blank" title="IMG_20180616_132942"><img loading="lazy" src="https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4_c.jpg" alt="IMG_20180616_132942" class="aligncenter" width="800" height="600"/></a></p>
+<p>New XPS 13(9370)を開発マシンとして使い始めて半年ほど経つのでレビュー(メモ)を残しておく。</p>
+<p><span id="more-9629"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p><a href="/archives/9574">開発マシンをNew XPS 13(9370)にした | blog.fukata.org</a></p>
+<p>開発マシンをXPS13に変更した時の記事は2018-06-16に上記として書いた。</p>
+<h2>主な用途</h2>
+<p>開発用とのUbuntu、動画、写真編集のWindowsのデュアルブート体制となっている。</p>
+<ul>
+<li>Ubuntu 18.10
+<ul>
+<li>Vim</li>
+<li>Chrome</li>
+<li>Docker </li>
+</ul>
+</li>
+<li>Windows 10
+<ul>
+<li>Lightroom</li>
+<li>Photoshop</li>
+<li>Filmora</li>
+</ul>
+</li>
+</ul>
+<h2>外観・本体</h2>
+<p>個人的にはローズゴールドの方が欲しかったが、上位スペックのものでは選択不可だったので仕方なくシルバーを使っている。</p>
+<p>デザインはシンプルで気に入っている。</p>
+<p>とても軽い(1.21kg)なのでリュックに入れても重さをあまり感じないくらい。</p>
+<h2>ディスプレイ</h2>
+<p>小さなボディながら13インチのディスプレイが付いているので十分大きく感じる。ディスプレイ自体も綺麗。</p>
+<p>今回のが人生初のタッチパネル対応のディスプレイを搭載したモデルだったのだがコレが意外と役立つ。主に寝ながらYouTubeを観る時に。</p>
+<h2>バッテリー</h2>
+<p>YouTubeを常に再生しながらでも5時間以上、YouTubeを観ながらではなければ9時間ほど使える。</p>
+<p>そのため、カフェに行く際に充電アダプターを持っていかなくても困らなくなったのは非常に大きい。</p>
+<h2>キーボード</h2>
+<p>ちょっと打鍵感が重い気もする。</p>
+<p>この当たりは好みの問題が大きく、どうしても気になるならお気に入りのキーボードを接続して使えば良い。</p>
+<p>長時間使用しているとどうしても本体のパームレスト部分が熱くなってきてプログラミングをやっていると手汗をかいてしまうので長時間作業する際には外付けキーボードを持参している。</p>
+<p>New XPS 13はUSB Type-AではなくUSB Type-Cポートのみなので外で作業する時はハブやら配線やらでごちゃごちゃしがちなのでBluetooth接続のキーボードの方が便利。自分はLenovoのワイヤレストラッキングポイントキーボードを使っている。マウスを持ち運ぶ必要もないので荷物削減にもなって良い。</p>
+<p>以前まではHHKB + マウス + パームレストを持ち運んでいたが荷物が非常に多くなるので邪魔になっていた。</p>
+<p>自宅では今もHHKB + マウス + パームレストの構成で行っている。</p>
+<h2>タッチパッド</h2>
+<p>Macbookと比べると感度が悪く引っかかる事が多い。</p>
+<p>大雑把な作業なら問題ないけど細かいものは素直にマウスを接続した方がストレスが少ない。</p>
+<h2>USB Type-Cポート</h2>
+<p>今まで充電用のポートは本体のどちらかにしかなかったがUSB Type-Cになってから左右のどちらからでも充電が可能になったのでカフェなど限られたスペースで充電したい時により便利になった。</p>
+<p>ただ、USB Type-Aポートが付いていないので従来までのキーボードやマウスなどを使う場合にはハブが必要になってしまうのが外ではちょっと使いにくいところではある。</p>
+<p>旅行することが多く旅先でもデュアルディスプレイを使いたいとのことからモバイルデュアルディスプレイを半年前に本体と同時に購入した。実際には15インチのディスプレイは持ち運ぶには大きすぎてあまり持ち運べてはいないがいざという時には持ち運べるので便利。</p>
+<p>ただ、今はより持ち運びやすいDUEXというディスプレイを注文している。本体に装着可能で更に持ち運びに適した形となっている。発送が予定の1月から遅れて2月頃とのことなので早く試したくてワクワクしている。</p>
+<p><a href="https://traha.org/p/%E3%83%8E%E3%83%9E%E3%83%89%E7%94%A8%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%81%AE%E6%B1%BA%E5%AE%9A%E7%89%88%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%8B%EF%BC%81%EF%BC%9F%E3%83%8E%E3%83%BC%E3%83%88%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%AB%E8%A3%85%E7%9D%80%E5%8F%AF%E8%83%BD%E3%81%AA%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%80%8CDUEX%E3%80%8D/59">ノマド用モバイルディスプレイの決定版になるか！？ノートパソコンに装着可能なディスプレイ「DUEX」 | トラハ 旅の記録をするなら！</a></p>
+<h2>動画編集</h2>
+<p>Filmoraを使っている。</p>
+<p>多少もっさりしているため大きなファイルの編集は厳しそう。</p>
+<p>10-20分程度のシンプルな動画であれば問題なくできる。</p>
+<h2>写真現像</h2>
+<p>Lightroomを使っている。</p>
+<p>それほど違和感無く編集作業が出来ている。</p>
+<p>動画編集の時も同じだが書き出しに若干時間がかかっているがそこまで大規模なファイルを編集、現像していないので困っていない。</p>
+<h2>ゲーム</h2>
+<p>Steam版のストリートファイターVを時々プレイしたりしているが低解像度版でもラグが生じるのでゲームはあまり出来ないと割り切った方が良さそう。</p>
+<p>他のゲームはあまり試していないので分からないが。</p>
+<p>最近だとeGPUもあるので自宅でゲームする時だけその恩恵を受ける。みたいな運用方法でも良いかもしれない。</p>
+<h2>価格</h2>
+<p>今回買ったスペックで23万円。MBPで同等のスペックを買うより断然安い。</p>
+<h2>macOSからUbuntu(+Windows)に乗り換えてみて</h2>
+<p>6年ほどプライベートでも仕事でもmacOSを使い続けてきたがXPS13にしてからメインOSをUbuntuに切り替えた。</p>
+<p>社会人になりたての頃、UbuntuをThinkPadに入れてプライベートでも仕事でもそれで開発を行っていたので久々のUbuntu Desktop。あの頃よりもだいぶ進化していて随分と使いやすくはなっているもののデフォルトでも便利かと言われると流石にmacOSほどではない。なんとか自分に合った形でカスタマイズしたので今は特に不自由なく使えているがカスタマイズをあまりしたくない人には向いていないので素直にmacOSかWindowsを使っていた方がよい。</p>
+<h2>まとめ</h2>
+<p>小さく処理能力もそれなりにあり、軽いため持ち運びにも適している。</p>
+<p>開発が主な用途なので今の所特に困っていない。OSをmacOSからUbuntuに変えたわけだけどある程度カスタマイズさせるのが面倒なのでそういうのが苦に感じる人はmacを使い続ける方が得策だと思う。</p>
+<p>Ubuntuを使い始めるとmacOSがデフォルトでもよく動いてくれるのをよく感じる。</p>
+<p>ただ、個人的にはMBP 15 Mid 2014からXPS13に変更して今のところ満足している。</p>
+<p>次回、パソコンを買い換える時はXPS以外にも長らく使っていないThinkPadも視野に入れてみよう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9629/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4.jpg</image>
+	</item>
+		<item>
+		<title>2018年の振り返り</title>
+		<link>/archives/9625/</link>
+					<comments>/archives/9625/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 30 Dec 2018 17:44:08 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[振り返り]]></category>
+		<guid isPermaLink="false">/?p=9625</guid>
+
+					<description><![CDATA[2018年も明日で最後になったので振り返り。 広告 今年は、ECサイトを作り続ける年だった。 途中から飽きてきてしまって開発速度が落ちてしまったけど10月末くらいに社内での結合テストの段階まで来れた。 ... <a href="/archives/9625/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/31000034787" target="_blank" title="PB189611"><img loading="lazy" src="https://farm5.staticflickr.com/4906/31000034787_90ced29b3c_c.jpg" alt="PB189611" class="aligncenter" width="800" height="600"/></a></p>
+<p>2018年も明日で最後になったので振り返り。</p>
+<p><span id="more-9625"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今年は、ECサイトを作り続ける年だった。</p>
+<p>途中から飽きてきてしまって開発速度が落ちてしまったけど10月末くらいに社内での結合テストの段階まで来れた。</p>
+<p>来年には正式にローンチされるだろう。そして、今はタイ人の社内スタッフが主に開発してくれているので来年は自分の出番は大幅に減って徐々に手を離れていくことになると思う。</p>
+<p>タイで共同で会社を創り、5年ほど経つが、なんとか生きていけるだけの売上が定期的に上がっているのは素晴らしい事だと思う。</p>
+<p>会社を創る前から考えると6年ほど生活したバンコクを離れて今年の11月からチェンマイに移って生活している。とりあえず1年間はチェンマイに住む予定。なんでチェンマイに引っ越したかというとバンコクは人が多くて疲れるため。確かに便利だけど特にバンコクにいないといけない必要もないので自然の多いチェンマイに移った。</p>
+<p>可能なら離島とかもっと自然が多い所に移って夕日を眺めながらビールでも飲みたいところ。</p>
+<p>2019年は自分がやりたいことを色々やっていこう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9625/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4906/31000034787_90ced29b3c.jpg</image>
+	</item>
+		<item>
+		<title>Vue.jsでbeforeunloadを正しく実装する</title>
+		<link>/archives/9613/</link>
+					<comments>/archives/9613/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 21 Nov 2018 10:57:19 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Vue.js]]></category>
+		<guid isPermaLink="false">/?p=9613</guid>
+
+					<description><![CDATA[トラハをnuxtjsで書き換えて多少バグがあるものの概ねうまく動いている。記事の作成、編集をする時にページから離脱する際に警告を出しているがVueで実装する際に少し調べたのでメモしておく。 広告 現状 ... <a href="/archives/9613/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/31044568317" target="_blank" title="Screenshot from 2018-11-21 17-45-02"><img loading="lazy" src="https://farm5.staticflickr.com/4893/31044568317_469b6428e4_c.jpg" alt="Screenshot from 2018-11-21 17-45-02" class="aligncenter" width="800" height="588"/></a></p>
+<p><a href="https://traha.org/" title="トップページ | トラハ 旅の記録をするなら！" target="_blank">トラハ</a>をnuxtjsで書き換えて多少バグがあるものの概ねうまく動いている。記事の作成、編集をする時にページから離脱する際に警告を出しているがVueで実装する際に少し調べたのでメモしておく。</p>
+<p><span id="more-9613"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>現状は下記のコードをpagesに定義することで実現している。 <code>beforeRouteLeave</code> のみだとリロードや戻るボタンなどに対応出来なかったので通常の <code>beforeunload</code> イベントもフックするようにしている。</p>
+<pre><code>  created() {
+    if (process.browser) {
+      // ページを消そうとしたりリロードした場合などに対応
+      $(window)
+        .off('beforeunload')
+        .on('beforeunload', () =&gt; {
+          if (!this.pageState.saving) {
+            return '編集中のデータがあります！'
+          }
+        })
+    }
+  },
+  beforeRouteLeave(to, from, next) {
+    // フォームを送信した場合などに離脱とみなさないようにするため。
+    if (this.pageState.saving) {
+      $(window).off('beforeunload')
+      return next()
+    }
+
+    this.$swal({
+      title: '編集中のデータがあります！',
+      text: 'ページを移動すると編集中のデータが失くなります。',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'はい、移動します',
+      cancelButtonText: 'キャンセル'
+    }).then(result =&gt; {
+      if (result.value) {
+        $(window).off('beforeunload')
+        next()
+      } else {
+        next(false)
+      }
+    })
+  }
+}
+</code></pre>
+<p>今回使用したメソッドについては下記のページを参考にした。</p>
+<p><a href="https://router.vuejs.org/guide/advanced/navigation-guards.html#per-route-guard" title="Navigation Guards | Vue Router" target="_blank">Navigation Guards | Vue Router</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9613/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4893/31044568317_469b6428e4.jpg</image>
+	</item>
+		<item>
+		<title>Nuxt.js(@nuxtjs/auth)とRails(omniauth)でTwitterとOAuth認証を行う方法</title>
+		<link>/archives/9605/</link>
+					<comments>/archives/9605/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 14 Nov 2018 15:43:17 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Nuxt.js]]></category>
+		<category><![CDATA[oauth]]></category>
+		<category><![CDATA[Rails]]></category>
+		<guid isPermaLink="false">/?p=9605</guid>
+
+					<description><![CDATA[背景 トラハ は現在ものすごくシンプルな作りになっている。 そこで以前使ったことがあるnuxt.jsで置き換えてみようと思って作り変えていてやっと認証周りの部分まで実装が進んできた。 Omniauth ... <a href="/archives/9605/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<h2>背景</h2>
+<p><a href="https://traha.org/">トラハ</a> は現在ものすごくシンプルな作りになっている。</p>
+<p>そこで以前使ったことがあるnuxt.jsで置き換えてみようと思って作り変えていてやっと認証周りの部分まで実装が進んできた。</p>
+<p>Omniauthを使った現在のフローは極力崩さずに@nuxtjs/authを使えないかと思い試行錯誤した結果が今回の方法である。</p>
+<p>基本的にOmniauthの時に行っていたコールバック時の処理などには全く手を付けていないのでその辺を再実装する手間は省けた。</p>
+<h2>シーケンス図</h2>
+<p>Nuxt.js(@nuxtjs/auth)とRails(omniauth)でTwitterとOAuth認証を行うシーケンス図<br />
+<a href="https://www.flickr.com/photos/fukata/45878003031" target="_blank" title="01_oauth_twitter_sequence"><img loading="lazy" src="https://farm5.staticflickr.com/4852/45878003031_1eb761f194_c.jpg" alt="01_oauth_twitter_sequence" class="aligncenter" width="800" height="567"/></a></p>
+<h2>説明</h2>
+<p>ポイントはTwitterからRoRにコールバックが返ってきた時に有効期限の短い(ここでは1分)のJWTを付与してNuxt.js側にリダイレクトしている。</p>
+<p>Nuxt.js側は受け取ったトークンを元に <code>this.$auth.loginWith('local', { data: this.$route.query })</code> でログイン用APIにJWTを渡し、その値をもってログイン処理をし、有効期限が長いまたは無しのJWTを発行することによってログインを完了としている。</p>
+<p>既にOmniauthの設定、コールバック時のユーザー登録等の処理を実装済みだったのでこのような設計になっている。</p>
+<p>フロントエンドとバックエンドで基本的に同じドメインを使うようにしているので適宜nginx等で適切な方へプロキシしてあげる必要がある。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9605/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4852/45878003031_1eb761f194.jpg</image>
+	</item>
+		<item>
+		<title>JavaScriptからGoogle Adsenseを動的に表示する方法</title>
+		<link>/archives/9601/</link>
+					<comments>/archives/9601/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 08 Nov 2018 15:26:03 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Google Adsense]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/?p=9601</guid>
+
+					<description><![CDATA[最近、チェンマイに引っ越した。バンコクほど暑くなくて快適に過ごせるので非常に居心地が良い。 今までJavaScriptから動的にGoogle Adsenseの広告を表示したことがなかったのでメモを残し ... <a href="/archives/9601/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/31825100798" target="_blank" title="PB029211"><img loading="lazy" src="https://farm5.staticflickr.com/4892/31825100798_3ab5afff3a_c.jpg" alt="PB029211" class="aligncenter" width="800" height="600"/></a></p>
+<p>最近、チェンマイに引っ越した。バンコクほど暑くなくて快適に過ごせるので非常に居心地が良い。</p>
+<p>今までJavaScriptから動的にGoogle Adsenseの広告を表示したことがなかったのでメモを残しておく。</p>
+<p><span id="more-9601"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>最近主に記事をアップしている<a href="https://traha.org/" rel="noopener" target="_blank">トラハ</a>では目次をJSで動的に作成している。で、その下に広告を表示できないかと思い試してみたら普通に出来たので今後のためにメモを残しておこうと思う。</p>
+<p>と言ってもやることは簡単だ。</p>
+<p>下記のadsenseで共通で利用するJSをどこでもいいので読み込まれるようにしておく。今回はheadタグ内に追加した。</p>
+<pre><code>&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>今回はjsrenderを使っているので下記のようなadsenseで使い回せるテンプレートを定義する。</p>
+<pre><code>&lt;script type="text/x-jsrender" id="adsense-template"&gt;
+&lt;ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="{{:layout}}"
+     data-ad-format="{{:format}}"
+     data-ad-client="{{:client}}"
+     data-ad-slot="{{:slot}}"&gt;&lt;/ins&gt;
+&lt;/script&gt;
+</code></pre>
+<p>最後に表示したい箇所に追加して終わり。</p>
+<pre><code>var $contaienr = $('#adsense-container');
+var data = {layout: '', format: '', client: '', slot: ''};
+$container.append($.templates('#adsense-template').render(data));
+(adsbygoogle = window.adsbygoogle || []).push({});
+</code></pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9601/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4892/31825100798_3ab5afff3a.jpg</image>
+	</item>
+		<item>
+		<title>Windows10でSteamが突然落ちる問題を解決する方法</title>
+		<link>/archives/9595/</link>
+					<comments>/archives/9595/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 20 Jun 2018 19:13:18 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Steam]]></category>
+		<guid isPermaLink="false">/?p=9595</guid>
+
+					<description><![CDATA[New XPS 13でSteamを立ち上げてSFVをプレイしていたら数十分くらいで落ちるので少し検索してみると解決できそうだったのでメモ。 広告 環境 とりあえず、自分の環境はこんな感じ。 Windo ... <a href="/archives/9595/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/29052599738" target="_blank" title="Steam：Street Fighter V_ Arcade Edition - Google Chrome 2018-06-21 02.38.49"><img loading="lazy" src="https://farm2.staticflickr.com/1782/29052599738_09568333bd_c.jpg" alt="Steam：Street Fighter V_ Arcade Edition - Google Chrome 2018-06-21 02.38.49" class="aligncenter" width="800" height="416"/></a></p>
+<p>New XPS 13でSteamを立ち上げてSFVをプレイしていたら数十分くらいで落ちるので少し検索してみると解決できそうだったのでメモ。</p>
+<p><span id="more-9595"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>環境</h2>
+<p>とりあえず、自分の環境はこんな感じ。</p>
+<ul>
+<li>Windows 10(64bit)</li>
+<li>New XPS 13(9370)</li>
+<li>Steam(2018.06.21時点最新版)</li>
+</ul>
+<h2>修正方法</h2>
+<p>原因は「Touch Keyboard and Handwriting Panel Service」というものらしい。</p>
+<p>とりあえず、こいつをOFFにすれば同様の現象は発生しなくなった。</p>
+<h2>Touch Keyboard and Handwriting Panel Serviceの停止方法</h2>
+<p>Windowsキーを押して検索からサービスを入力。サービス一覧が表示されるのでそこから該当の行を探す。<br />
+<a href="https://www.flickr.com/photos/fukata/28055974687" target="_blank" title="Services 2018-06-21 02.40.48"><img loading="lazy" src="https://farm2.staticflickr.com/1805/28055974687_47d3ca982b_c.jpg" alt="Services 2018-06-21 02.40.48" class="aligncenter" width="800" height="409"/></a></p>
+<p>該当行を右クリック->プロパティ。起動時の設定があるので無効を選択。<br />
+<a href="https://www.flickr.com/photos/fukata/42206719014" target="_blank" title="Touch Keyboard and Handwriting Panel Service Properties (Local Computer) 2018-06-21 02.43.27"><img loading="lazy" src="https://farm2.staticflickr.com/1784/42206719014_aaa3b5287a_c.jpg" alt="Touch Keyboard and Handwriting Panel Service Properties (Local Computer) 2018-06-21 02.43.27" class="aligncenter" width="800" height="412"/></a></p>
+<p>一応、無効に変更後に再起動して該当のプロセスが起動していないかタスクマネージャー等で見て表示されていなければ問題ない。</p>
+<p>とりあえず、これでプレイ中に突然落ちるということはなくなった。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9595/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1782/29052599738_09568333bd.jpg</image>
+	</item>
+		<item>
+		<title>開発マシンをNew XPS 13(9370)にした</title>
+		<link>/archives/9574/</link>
+					<comments>/archives/9574/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 16 Jun 2018 07:52:25 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Dell]]></category>
+		<category><![CDATA[XPS13]]></category>
+		<guid isPermaLink="false">/?p=9574</guid>
+
+					<description><![CDATA[前職にいた時から開発マシンはずっとmacを使っていたので7、8年くらいmacを開発マシンとして使い続けてきたけど今回、Linuxをメインに使おうと思ってDELLのNew XPS 13を購入した。 広告 ... <a href="/archives/9574/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/41018399390" target="_blank" title="IMG_20180616_132942"><img loading="lazy" src="https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4_c.jpg" alt="IMG_20180616_132942" class="aligncenter" width="800" height="600"/></a></p>
+<p>前職にいた時から開発マシンはずっとmacを使っていたので7、8年くらいmacを開発マシンとして使い続けてきたけど今回、Linuxをメインに使おうと思ってDELLのNew XPS 13を購入した。</p>
+<p><span id="more-9574"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>iOSの開発を仕事でも趣味でもほとんどやらなくなってしまったのでLinuxをメインに使うことにした。</p>
+<p>あと、ここ５、６年ほどずっと15インチのものを使っていたけど今回は13インチのものにした。</p>
+<p>New XPS 13はカスタマイズ内容によって、ディスプレイなど固定されてしまう部分があり、今回買ったスペックは後述するがディスプレイが4Kになってしまう。4KディスプレイになるとフルHDのものと比べて駆動時間が4時間ほど少なくなってしまうようなので開発マシンとして使う身としてはフルHD版も提供してほしかった。</p>
+<h2>スペック</h2>
+<pre><code>XPS 9370 - New XPS 13プラチナハイエンド・4Kタッチパネル・1TB SSD
+ コメント:
+   なし
+ CPU:
+   第8世代 インテルR Core? i7-8550U プロセッサー (8M キャッシュ, 最大 4.0 GHzまで可能)
+ OS:
+   Windows 10 Home 64ビット 英語
+ オフィス プロダクト キー:
+   なし
+ Microsoft アプリケーション ソフトウェア:
+   なし
+ Microsoft オペレーティング  システム メディア:
+   OS メディア キット なし
+ セキュリティソフトウェア:
+   マカフィーR リブセーフ? (12ヶ月間更新サービス)
+ メモリ:
+   16GB LPDDR3 2133MHz
+ ハードディスク:
+   1TB PCIe ソリッド ステート ドライブ
+ ドライバ:
+   Killer 1435 ドライバー
+ ワイヤレス:
+   Killer 1435 802.11ac 2x2 and Bluetooth
+ ディスプレイ:
+   13.3” 4K Ultra HD (3840 x 2160) フレームレス・タッチディスプレイ（プラチナシルバー&amp;ブラック）
+ プロセッサー ブランディング:
+   インテルR Core? i7 ラベル
+ ビデオ カード:
+   インテルR UHD グラフィックス 620
+ システムマネジメント:
+   システム マネジメント
+ 配送:
+   デル配送(日本)
+ キーボード:
+   バックライト キーボード (US/インターナショナル) 指紋認証リーダー 付き
+ 追加ソフトウェア:
+   追加 ソフトウェア
+ プライマリバッテリ:
+   52WHr バッテリー
+ 電源 ユニット:
+   Dell アダプタ USB-C to USB-A 3.0
+ パワー オプション:
+   電源ケーブル (日本)
+ FGA Module:
+   ITALIA1805_608/ITALIA1901_608/KR/JP/HK/BTO
+ ベース:
+   XPS 13 9370 BTX BASE
+ 将来のテクニカルサポート:
+   Standard Technical Phone Support (7x12)
+ Bundle:
+   CAX6080SPITS16ON3OJP-XPS 13
+ プレースマット:
+   プレースマット
+ パッケージング:
+   出荷資料 (ダイレクト)
+ オーダー 情報:
+   なし
+ リテール 情報:
+   なし
+ アセット プロテクション:
+   2年目 バッテリ保証延長サービス
+ テック シートを含め:
+   テクシート (JP)
+ 安心サポート&lt;br&gt;最大50%OFF！ 新生活応援ディスカウントキャンペーン実施中:
+   1年間 引き取り修理サービス
+ アクシデンタル ダメージ サービス:
+   1年間 アクシデンタルダメージ (盗難対応オプション付き)
+ 商品配達希望時間:
+   ローカル デリバリー
+ ドキュメンテーション /ディスク:
+   ドキュメントMUI用 (英語,中国語・簡体,日本語,中国語・繁体,韓国語)
+数量: 1
+</code></pre>
+<h2>アクセサリー</h2>
+<p>予備バッテリーや今回初めてモバイルディスプレイも買ってみた。</p>
+<ul>
+<li><a href="https://amzn.to/2rgkx7a" rel="noopener" target="_blank">For Dell XPS13 XPS 13 2015 Laptop Power Adapter Folding 3 to 2 Pin Plug Charger [並行輸入品] </a></li>
+<li><a href="https://amzn.to/2FGGl16" rel="noopener" target="_blank">Lenovo (純正品) トラックポイント・キャップ　(ソフト・ドーム)　10個セット</a></li>
+<li><a href="https://amzn.to/2rgNVe9" rel="noopener" target="_blank">【反射防止(アンチグレア) 液晶保護フィルム】 DELL XPS 13 (13.3インチ)機種用 気泡が消えるエアーレス加工[クリーニングクロス＆ヘラ付]</a></li>
+<li><a href="https://amzn.to/2ri9M4p" rel="noopener" target="_blank">ASUS モバイルディスプレイ MB16AC 15.6インチモニター(1,920×1,080 / ブルーライト軽減 / USB Type-C / IPSパネル)</a></li>
+<li><a href="https://amzn.to/2wb4Q6W" rel="noopener" target="_blank">Dell デル 45W Type-C USB-C AC アダプター 5V/20V-2A/2.25A　PSE コード付き</a></li>
+<li><a href="https://amzn.to/2KxdKi8" rel="noopener" target="_blank">Tomtoc 360°保護 耐衝撃 インナーケース 13インチ New MacBook Pro Touch Bar搭載 (A1706 A1708) | 13インチ Dell XPS 用 13インチ ラップトップスリーブケース 、撥水加工、 ブルーブラック</a></li>
+<li><a href="https://amzn.to/2Kw8RWw" rel="noopener" target="_blank">レノボ・ジャパン ThinkPad Bluetooth ワイヤレス・トラックポイント・キーボード &#8211; 英語 0B47189</a></li>
+<li><a href="https://amzn.to/2FBnQuQ" rel="noopener" target="_blank">USB ハブ USB-C usb3.0ポートアダプターNOVOO Micro SD/ usb type c ハブ SDカードリーダー USB HDMI USB3.0 MacBook2016 MacBook Pro/ChromeBook対応 (グレー)</a></li>
+<li><a href="https://amzn.to/2riIgDN" rel="noopener" target="_blank">ASUS MB16AC 15.6インチ用【高硬度9Hアンチグレアタイプ】液晶保護フィルム 反射防止！強化ガラス同等の高硬度9Hフィルム</a></li>
+<li><a href="https://amzn.to/2w7k6BH" rel="noopener" target="_blank">Dell New XPS 13 9370 2018年2月モデル 13.3インチ用【高硬度9Hアンチグレアタイプ】液晶保護フィルム 反射防止！強化ガラス同等の高硬度9Hフィルム</a></li>
+</ul>
+<h2>金額</h2>
+<p>New XPS 13本体がクーポンなどを適用して23万円弱、アクセサリー類が7万円弱と合計30万円弱となった。</p>
+<h2>まとめ</h2>
+<p>前回、1ヶ月ベトナムのダラットに住んでみて宿のソファとローテーブルで作業をしていると体勢的に腰を痛めてしまったのでThinkpad Bluetoothキーボードを使ってみることにした。</p>
+<p>また、モバイルディスプレイも同じ理由で長期滞在などで利用するホテル、宿でもデュアルディスプレイを使いたいという要望から。</p>
+<p>windows 10 / ubuntu 18.04を使ってみてmacのUIが優れているのが確認できた。アンチmacでもない人は素直にmac使うのが無難だと思う。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9574/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm2.staticflickr.com/1824/41018399390_d3b72f85d4.jpg</image>
+	</item>
+		<item>
+		<title>Saigon Cup 2018を観戦してきた</title>
+		<link>/archives/9581/</link>
+					<comments>/archives/9581/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 21 May 2018 18:49:26 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[CPT]]></category>
+		<category><![CDATA[SaigonCup]]></category>
+		<category><![CDATA[SaigonCup2018]]></category>
+		<category><![CDATA[ベトナム]]></category>
+		<category><![CDATA[ホーチミン]]></category>
+		<category><![CDATA[格闘ゲーム大会]]></category>
+		<guid isPermaLink="false">/?p=9581</guid>
+
+					<description><![CDATA[04.21,22にベトナムのホーチミンで開催されていたSaigon Cup 2018の記事をメモ代わりに残しておく。 広告 場所 写真 会場はレストランの2階 人の密度が高かったからかかなり暑かった  ... <a href="/archives/9581/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/41967144981/in/album-72157693438519262/" target="_blank" title="P4229254"><img loading="lazy" src="https://farm1.staticflickr.com/968/41967144981_b7c5c8ea52_c.jpg" alt="P4229254" class="aligncenter" width="800" height="600"/></a></p>
+<p>04.21,22にベトナムのホーチミンで開催されていたSaigon Cup 2018の記事をメモ代わりに残しておく。</p>
+<p><span id="more-9581"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>場所</h2>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19436.446747395705!2d106.6797541139505!3d10.768194989247885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc57f4a5451ba4e36!2zTmjDoCBow6BuZyDDiW4gVGVhIEhvdXNlICYgUmVzdGF1cmFudA!5e0!3m2!1sen!2sth!4v1526928348653" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+<h2>写真</h2>
+<p>会場はレストランの2階<br />
+<a href="https://www.flickr.com/photos/fukata/41967160231/in/album-72157693438519262/" target="_blank" title="I0003218"><img loading="lazy" src="https://farm1.staticflickr.com/949/41967160231_be19346ecb_c.jpg" alt="I0003218" class="aligncenter" width="800" height="600"/></a></p>
+<p>人の密度が高かったからかかなり暑かった<br />
+<a href="https://www.flickr.com/photos/fukata/28096171498/in/album-72157693438519262/" target="_blank" title="P4229241"><img loading="lazy" src="https://farm1.staticflickr.com/969/28096171498_2c39433a3b_c.jpg" alt="P4229241" class="aligncenter" width="800" height="600"/></a></p>
+<p>ステージ<br />
+<a href="https://www.flickr.com/photos/fukata/28096166078/in/album-72157693438519262/" target="_blank" title="P4229253"><img loading="lazy" src="https://farm1.staticflickr.com/829/28096166078_765a3dede5_c.jpg" alt="P4229253" class="aligncenter" width="800" height="600"/></a></p>
+<p>優勝は韓国のNL選手<br />
+<a href="https://www.flickr.com/photos/fukata/41067773775/in/album-72157693438519262/" target="_blank" title="P4229310"><img loading="lazy" src="https://farm1.staticflickr.com/982/41067773775_43ebfa8ca6_c.jpg" alt="P4229310" class="aligncenter" width="800" height="600"/></a></p>
+<p>レストランなので1階で食事をすることも可能<br />
+<a href="https://www.flickr.com/photos/fukata/41922949832/in/album-72157693438519262/" target="_blank" title="P4229280"><img loading="lazy" src="https://farm1.staticflickr.com/958/41922949832_1262d3a214_c.jpg" alt="P4229280" class="aligncenter" width="800" height="600"/></a></p>
+<p>大会が終わって私はブイビエン通りに飲みに行くことに<br />
+<a href="https://www.flickr.com/photos/fukata/41922942532/in/album-72157693438519262/" target="_blank" title="P4229313"><img loading="lazy" src="https://farm1.staticflickr.com/968/41922942532_db96a01231_c.jpg" alt="P4229313" class="aligncenter" width="800" height="600"/></a></p>
+<h2>まとめ</h2>
+<p>決勝はふーど氏とNL氏。ふーど氏は2位が続いているので次の大会では是非優勝を見たい。</p>
+<p>次回、観戦に行くのは7月に開催されるインドネシアとマレーシアの大会。その前に中国、日本にも行くのでその時の記事はトラハの方で更新予定。</p>
+<p>今回はあまり枚数はないがその他の写真は下記から。</p>
+<p>SaigonCup2018<br />
+<a data-flickr-embed="true" data-context="true" href="https://www.flickr.com/photos/fukata/41967160231/in/album-72157693438519262/" target="_blank" title="I0003218"><img loading="lazy" src="https://farm1.staticflickr.com/949/41967160231_be19346ecb_c.jpg" alt="I0003218" class="aligncenter" width="800" height="600"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9581/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/968/41967144981_b7c5c8ea52.jpg</image>
+	</item>
+		<item>
+		<title>Android One端末の「Xiaomi Mi A1」を2.3万円弱でゲットした</title>
+		<link>/archives/9566/</link>
+					<comments>/archives/9566/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 30 Mar 2018 09:01:29 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[Xiaomi]]></category>
+		<category><![CDATA[Xiaomi Mi A1]]></category>
+		<category><![CDATA[スマホ]]></category>
+		<guid isPermaLink="false">/?p=9566</guid>
+
+					<description><![CDATA[Android One端末をずっと欲しくて何か良いものがないかと探していたらXiaomiから良さげな端末が出ていたので思わず買ってしまった。 広告 開封の儀 箱。今回は色は赤を選択。 蓋を開けてみた。 ... <a href="/archives/9566/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/41066978132" target="_blank" title="Xiaomi Mi A1"><img loading="lazy" src="https://farm1.staticflickr.com/883/41066978132_f491218872_c.jpg" alt="Xiaomi Mi A1" class="aligncenter" width="800" height="600"/></a></p>
+<p>Android One端末をずっと欲しくて何か良いものがないかと探していたらXiaomiから良さげな端末が出ていたので思わず買ってしまった。</p>
+<p><span id="more-9566"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>開封の儀</h2>
+<p>箱。今回は色は赤を選択。<br />
+<a href="https://www.flickr.com/photos/fukata/41066978132" target="_blank" title="Xiaomi Mi A1"><img loading="lazy" src="https://farm1.staticflickr.com/883/41066978132_f491218872_c.jpg" alt="Xiaomi Mi A1" class="aligncenter" width="800" height="600"/></a></p>
+<p>蓋を開けてみた。<br />
+<a href="https://www.flickr.com/photos/fukata/40215488935" target="_blank" title="Xiaomi Mi A1"><img loading="lazy" src="https://farm1.staticflickr.com/815/40215488935_38d76fb2a7_c.jpg" alt="Xiaomi Mi A1" class="aligncenter" width="800" height="600"/></a></p>
+<p>充電器と説明書。イヤホンは入ってなかった。<br />
+<a href="https://www.flickr.com/photos/fukata/39301539500" target="_blank" title="Xiaomi Mi A1"><img loading="lazy" src="https://farm1.staticflickr.com/783/39301539500_fa60461ce7_c.jpg" alt="Xiaomi Mi A1" class="aligncenter" width="800" height="600"/></a></p>
+<p>保護フィルム。ただし、ラウンドエッジ加工されていて端が浮いてしまうので裸で運用することになった。端が浮かないガラスフィルム等があれば教えてください。<br />
+<a href="https://www.flickr.com/photos/fukata/26238626327" target="_blank" title="Xiaomi Mi A1"><img loading="lazy" src="https://farm1.staticflickr.com/880/26238626327_215be1c80e_c.jpg" alt="Xiaomi Mi A1" class="aligncenter" width="800" height="600"/></a></p>
+<p>端末を取り出してみた。<br />
+<a href="https://www.flickr.com/photos/fukata/41066974552" target="_blank" title="Xiaomi Mi A1"><img loading="lazy" src="https://farm1.staticflickr.com/888/41066974552_51d55cd311_c.jpg" alt="Xiaomi Mi A1" class="aligncenter" width="800" height="600"/></a></p>
+<p>裏。ピンクがかった赤色が鮮やかで美しい。iPhoneの赤色バージョンも表は黒だったらよかったのに。端末の全体的な見た目はiPhoneっぽく、前回購入したZenfone3と同様でカメラ部分が出っ張っている。<br />
+<a href="https://www.flickr.com/photos/fukata/41066974672" target="_blank" title="Xiaomi Mi A1"><img loading="lazy" src="https://farm1.staticflickr.com/815/41066974672_d3b58da50a_c.jpg" alt="Xiaomi Mi A1" class="aligncenter" width="800" height="600"/></a></p>
+<h2>ホーム</h2>
+<p>今回、初めてAndroid One端末を買ってみたわけだけど、Google純正のアプリだけが入っているのかと思いきやXiaomi製のアプリも幾つか入っていた。<br />
+<a href="https://www.flickr.com/photos/fukata/41110042811" target="_blank" title="Screenshot_20180330-131411"><img loading="lazy" src="https://farm1.staticflickr.com/808/41110042811_a049a4d671_c.jpg" alt="Screenshot_20180330-131411" class="aligncenter" width="450" height="800"/></a></p>
+<h2>バージョン</h2>
+<p>届いた直後は7.1.2。<br />
+<a href="https://www.flickr.com/photos/fukata/26238737397" target="_blank" title="Screenshot_20180330-132017"><img loading="lazy" src="https://farm1.staticflickr.com/874/26238737397_5073b07249_c.jpg" alt="Screenshot_20180330-132017" class="aligncenter" width="450" height="800"/></a></p>
+<p>システムアップデートから8.0.0までアップデートすることができた。Zenfone3の時みたいに手動でアップデートする必要がなくて非常に楽。<br />
+<a href="https://www.flickr.com/photos/fukata/26238737107" target="_blank" title="Screenshot_20180330-152132"><img loading="lazy" src="https://farm1.staticflickr.com/801/26238737107_de019df7c0_c.jpg" alt="Screenshot_20180330-152132" class="aligncenter" width="450" height="800"/></a></p>
+<h2>写真サンプル</h2>
+<p>初期設定のままで撮影した。2万円強の端末でこれくらいの画質なら問題ないんじゃないだろうか。少し暗めの部屋の中で撮ったので次回、外に出た時に光が十分にある環境でも撮影してみる。<br />
+<a href="https://www.flickr.com/photos/fukata/39301963350" target="_blank" title="IMG_20180330_154426"><img loading="lazy" src="https://farm1.staticflickr.com/874/39301963350_82585591fc_c.jpg" alt="IMG_20180330_154426" class="aligncenter" width="800" height="600"/></a></p>
+<p>また、4K動画にも対応しているのでそちらも機会があれば試してここにアップする。</p>
+<h2>まとめ</h2>
+<p>今回もlazadaで6590THBほどでゲットした。色は自分が好きな赤。</p>
+<p>2万円強で最新のAndroid OSが使えてなおかつOSのアップデートも約束されている端末が手に入る。これは良い。</p>
+<p>デザイン的にも悪くないし挙動も気になるような点は今のところない。デュアルSIMなので嬉しい人には嬉しいかもしれない。</p>
+<p>ただ、1点挙げるとすれば今まで使っていたNexusシリーズやZenfone3と違って、バックボタンとメニューボタンの位置が逆なので若干戸惑う。もともとXiaomiを使っている人であれば問題無いであろう事と使っていればそのうち慣れると思うのでそこまで大きな問題ではない。自分が複数端末使っていてこれだけ逆なので一瞬間違うというだけ。</p>
+<p>ほとんど日本に居ないので問題ないけど、この端末、日本の技適を取得していないとのことなので日本国内で使う場合は自己責任となる。</p>
+<p>後はディスプレイがバッキバキに割れてしまっているNexus5だけどこれも頃合いを見て買い換えるかもしれない。Nokiaの端末を使ったことがないので同じくAndroid OneのNokia 6(2018)なんかも良いかもしれない。やはり最新のOSが使えるというのは良い。</p>
+<p>前回のZenfone3や今回のXiaomi Mi A1のレビューがあっさりしすぎていたので来月ダラットに行った時にでもサンプルの写真、動画を撮影して載せよう。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9566/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/883/41066978132_f491218872.jpg</image>
+	</item>
+		<item>
+		<title>バンコクで開催された「Thaiger Uppercut 2018」を観戦してきた</title>
+		<link>/archives/9556/</link>
+					<comments>/archives/9556/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 29 Mar 2018 12:42:22 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[CPT]]></category>
+		<category><![CDATA[TGU]]></category>
+		<category><![CDATA[Thaiger Uppercut]]></category>
+		<category><![CDATA[タイ]]></category>
+		<category><![CDATA[バンコク]]></category>
+		<category><![CDATA[東南アジア]]></category>
+		<category><![CDATA[格闘ゲーム大会]]></category>
+		<guid isPermaLink="false">/?p=9556</guid>
+
+					<description><![CDATA[2018.03.24,25の2日間にわたって開催された格闘ゲーム大会「TGU 2018」を観戦してきた。 広告 場所 スクンビット線のRatchathewi駅近く。 写真 入り口付近にあったパネル。  ... <a href="/archives/9556/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/40197997935/in/album-72157695029129815/" target="_blank" title="P3257730"><img loading="lazy" src="https://farm1.staticflickr.com/821/40197997935_7b7cbd9feb_c.jpg" alt="P3257730" class="aligncenter" width="800" height="600"/></a></p>
+<p>2018.03.24,25の2日間にわたって開催された格闘ゲーム大会「TGU 2018」を観戦してきた。</p>
+<p><span id="more-9556"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>場所</h2>
+<p>スクンビット線のRatchathewi駅近く。</p>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6081.346964074955!2d100.53630299617109!3d13.747357137986093!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4496529ac27a36ca!2sAsia+Hotel+Bangkok!5e0!3m2!1sen!2sth!4v1521816236166" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+<h2>写真</h2>
+<p>入り口付近にあったパネル。<br />
+<a href="https://www.flickr.com/photos/fukata/41049164852/in/album-72157695029129815/" target="_blank" title="P3247565"><img loading="lazy" src="https://farm1.staticflickr.com/802/41049164852_a5328943c5_c.jpg" alt="P3247565" class="aligncenter" width="800" height="600"/></a></p>
+<p>タイムテーブル。<br />
+<a href="https://www.flickr.com/photos/fukata/40198039325/in/album-72157695029129815/" target="_blank" title="P3247610"><img loading="lazy" src="https://farm1.staticflickr.com/868/40198039325_d2244a7375_c.jpg" alt="P3247610" class="aligncenter" width="800" height="600"/></a></p>
+<p>SFVのプールだったりフリー対戦を行っていた。<br />
+<a href="https://www.flickr.com/photos/fukata/27219653438/in/album-72157695029129815/" target="_blank" title="P3247537"><img loading="lazy" src="https://farm1.staticflickr.com/790/27219653438_be804fe4ca_c.jpg" alt="P3247537" class="aligncenter" width="800" height="600"/></a></p>
+<p>メインステージ。<br />
+<a href="https://www.flickr.com/photos/fukata/27219648048/in/album-72157695029129815/" target="_blank" title="P3247538"><img loading="lazy" src="https://farm1.staticflickr.com/876/27219648048_6978bf5351_c.jpg" alt="P3247538" class="aligncenter" width="800" height="600"/></a></p>
+<p>鉄拳を主にやっていたスペース。<br />
+<a href="https://www.flickr.com/photos/fukata/40383112434/in/album-72157695029129815/" target="_blank" title="P3247554"><img loading="lazy" src="https://farm1.staticflickr.com/877/40383112434_86e4c514ea_c.jpg" alt="P3247554" class="aligncenter" width="800" height="600"/></a></p>
+<p>前回のTGU2017と違ってレッドブル飲み放題ではない代わりに売店があった。<br />
+<a href="https://www.flickr.com/photos/fukata/41049174052/in/album-72157695029129815/" target="_blank" title="P3247558"><img loading="lazy" src="https://farm1.staticflickr.com/868/41049174052_22ae54bc2d_c.jpg" alt="P3247558" class="aligncenter" width="800" height="600"/></a></p>
+<p>軽食類も売っていた。<br />
+<a href="https://www.flickr.com/photos/fukata/40198049045/in/album-72157695029129815/" target="_blank" title="P3247577"><img loading="lazy" src="https://farm1.staticflickr.com/808/40198049045_789e95bfeb_c.jpg" alt="P3247577" class="aligncenter" width="800" height="600"/></a></p>
+<p>HyperX Cloud Revolver。<br />
+<a href="https://www.flickr.com/photos/fukata/40383118174/in/album-72157695029129815/" target="_blank" title="P3247541"><img loading="lazy" src="https://farm1.staticflickr.com/803/40383118174_ae49802b24_c.jpg" alt="P3247541" class="aligncenter" width="800" height="600"/></a></p>
+<p>BigBird氏。<br />
+<a href="https://www.flickr.com/photos/fukata/27219661258/in/album-72157695029129815/" target="_blank" title="P3247527"><img loading="lazy" src="https://farm1.staticflickr.com/890/27219661258_2983ca349a_c.jpg" alt="P3247527" class="aligncenter" width="800" height="600"/></a></p>
+<p>Razer社のパンテラ。<br />
+<a href="https://www.flickr.com/photos/fukata/41049183522/in/album-72157695029129815/" target="_blank" title="P3247551"><img loading="lazy" src="https://farm1.staticflickr.com/787/41049183522_57dc2a25bd_c.jpg" alt="P3247551" class="aligncenter" width="800" height="600"/></a></p>
+<p>K-BRAD氏。<br />
+<a href="https://www.flickr.com/photos/fukata/40198046385/in/album-72157695029129815/" target="_blank" title="P3247586"><img loading="lazy" src="https://farm1.staticflickr.com/787/40198046385_2ef91f24c6_c.jpg" alt="P3247586" class="aligncenter" width="800" height="600"/></a></p>
+<p>マゴ氏。<br />
+<a href="https://www.flickr.com/photos/fukata/40198043355/in/album-72157695029129815/" target="_blank" title="P3247599"><img loading="lazy" src="https://farm1.staticflickr.com/896/40198043355_0976ed82fa_c.jpg" alt="P3247599" class="aligncenter" width="800" height="600"/></a></p>
+<p>板橋ザンギエフ氏。<br />
+<a href="https://www.flickr.com/photos/fukata/40198034735/in/album-72157695029129815/" target="_blank" title="P3247613"><img loading="lazy" src="https://farm1.staticflickr.com/867/40198034735_c63c845a8d_c.jpg" alt="P3247613" class="aligncenter" width="800" height="600"/></a></p>
+<p>ときど氏。<br />
+<a href="https://www.flickr.com/photos/fukata/40383076694/in/album-72157695029129815/" target="_blank" title="P3247623"><img loading="lazy" src="https://farm1.staticflickr.com/881/40383076694_e78a6ccecc_c.jpg" alt="P3247623" class="aligncenter" width="800" height="600"/></a></p>
+<p>ボンちゃん氏。<br />
+<a href="https://www.flickr.com/photos/fukata/40198028765/in/album-72157695029129815/" target="_blank" title="P3247640"><img loading="lazy" src="https://farm1.staticflickr.com/804/40198028765_82e9a5d71f_c.jpg" alt="P3247640" class="aligncenter" width="800" height="600"/></a></p>
+<p>大会の様子はtwitchでも配信されていた。<br />
+<a href="https://www.flickr.com/photos/fukata/40383083584/in/album-72157695029129815/" target="_blank" title="P3247611"><img loading="lazy" src="https://farm1.staticflickr.com/902/40383083584_170dd76e4e_c.jpg" alt="P3247611" class="aligncenter" width="800" height="600"/></a></p>
+<p>ドラゴンボールファイターズの対戦中。<br />
+<a href="https://www.flickr.com/photos/fukata/40383041644/in/album-72157695029129815/" target="_blank" title="P3247642"><img loading="lazy" src="https://farm1.staticflickr.com/801/40383041644_ea7d9141d8_c.jpg" alt="P3247642" class="aligncenter" width="800" height="600"/></a></p>
+<p>鉄拳7の優勝はタイのBook氏。<br />
+<a href="https://www.flickr.com/photos/fukata/27219595168/in/album-72157695029129815/" target="_blank" title="P3257689"><img loading="lazy" src="https://farm1.staticflickr.com/892/27219595168_d20e4f9256_c.jpg" alt="P3257689" class="aligncenter" width="800" height="600"/></a></p>
+<p>ドラゴンボールファイターズの優勝はどぐら氏。<br />
+<a href="https://www.flickr.com/photos/fukata/41092541621/in/album-72157695029129815/" target="_blank" title="P3257707"><img loading="lazy" src="https://farm1.staticflickr.com/901/41092541621_d7b6ec9c20_c.jpg" alt="P3257707" class="aligncenter" width="800" height="600"/></a></p>
+<p>ストリートファイターVの優勝はときど氏。<br />
+<a href="https://www.flickr.com/photos/fukata/40197997935/in/album-72157695029129815/" target="_blank" title="P3257730"><img loading="lazy" src="https://farm1.staticflickr.com/821/40197997935_7b7cbd9feb_c.jpg" alt="P3257730" class="aligncenter" width="800" height="600"/></a></p>
+<h2>まとめ</h2>
+<p>前回のTGU2017の会場と比べると駅からのアクセスのしやすくて良かったものの、ディスプレイなど会場の配置はさすがにe-sports arenaの方が良かった。</p>
+<p>個人的に見たかったウメハラ氏を見れなかったのは残念だったけど、最近成績が安定しているときど氏らも先週Final Roundがあったにも関わらず参加していて見れてよかった。今年のCPTのポイントがプレミアとランキングでプレミアに比率が寄った関係もあるのかSFVに関してはプロプレイヤーの参加率は前回に比べて低かったようにも感じた。</p>
+<p>SFVのグランドファイナルはときど氏(W) vs sako(L)で、sako氏がメナトを使い、リセットまで持ち込むがときど氏が対応してそのまま押し切り優勝する形となった。決勝戦にふさわしい熱い試合だった。sako氏の華麗なコンボも見れたし是非優勝するところを見たい。</p>
+<p>今年は東南アジアのCPTを観戦する予定で次回は来月4月21,22日にホーチミンで行われるサイゴンカップ2018。自分は4月中旬からベトナムのダラットという避暑地に滞在しているのでサイゴンカップも観に行く予定。どれくらいのプロプレイヤーが参加するのか分からないけどまた熱い試合が観れることを期待したい。</p>
+<p>前回のTGU2017を観戦した時の記事はこちら。<br />
+<a href="/archives/864" title="バンコクで開催されたカプコンプロツアー「Thaiger Uppercut 2017」を観戦してきた | blog.fukata.org" target="_blank">バンコクで開催されたカプコンプロツアー「Thaiger Uppercut 2017」を観戦してきた</a></p>
+<p>今回載せた写真以外はこちらから。<br />
+<a data-flickr-embed="true" data-context="true" href="https://www.flickr.com/photos/fukata/27219661258/in/album-72157695029129815/" target="_blank" title="P3247527"><img loading="lazy" src="https://farm1.staticflickr.com/890/27219661258_2983ca349a_c.jpg" alt="P3247527" class="aligncenter" width="800" height="600"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9556/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm1.staticflickr.com/821/40197997935_7b7cbd9feb.jpg</image>
+	</item>
+	</channel>
+</rss>

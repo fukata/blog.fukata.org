@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ThinkPad x61 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/thinkpad-x61/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:08:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>X200用ウルトラベースの内蔵ドライブ</title>
+		<link>/archives/4651/</link>
+					<comments>/archives/4651/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 08 Aug 2010 03:33:29 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[ThinkPad]]></category>
+		<category><![CDATA[Thinkpad UltraBase]]></category>
+		<category><![CDATA[ThinkPad X201]]></category>
+		<category><![CDATA[ThinkPad x61]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4651</guid>
+
+					<description><![CDATA[昨日の25時頃に福岡の実家に帰宅して、東京で手に入れたX200ウルトラベースにX60ウルトラベースで使用していた内蔵ドライブを入れ替えようとしたのですが、どうも入らない。調べてみると規格が違いました。 ... <a href="/archives/4651/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の25時頃に福岡の実家に帰宅して、東京で手に入れたX200ウルトラベースにX60ウルトラベースで使用していた内蔵ドライブを入れ替えようとしたのですが、どうも入らない。調べてみると規格が違いました。</p>
+<ul>
+<li>X60ウルトラベース：Enhanced ATA</li>
+<li>X200ウルトラベース：Serial ATA</li>
+</ul>
+<p>参考URL</p>
+<ul>
+<li><a href="https://www-307.ibm.com/pc/support/site.wss/MIGR-70299.html">Lenovo Support &#038; downloads &#8211; ThinkPad X200 UltraBase &#8211; Overview</a></li>
+<li>Lenovo Support &#038; downloads &#8211; ThinkPad X6 UltraBase &#8211; Overview</li>
+</ul>
+<p>どうやらそのまま使うことは無理のようです。<br />
+しょうがないので汎用的に使える外付けのDVDドライブでも購入しようかと思います。最近は何が良いんでしょうかね・・・。</p>
+<p>価格.comで<a href="https://kakaku.com/pc/dvd-drive/ma_0/s1=2/">検索</a>してみたところ、外付けDVDドライブで大体1万円弱で買えるみたいです。そんなに安かったでしたっけ？</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4651/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

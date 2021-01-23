@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [Android]インストール時のリファラを取得する	</title>
+	<atom:link href="/archives/5674/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5674/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:51:08 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5674/comment-page-1/#comment-754</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Mon, 31 Oct 2011 04:12:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5674#comment-754</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5674/comment-page-1/#comment-753&quot;&gt;Y・E&lt;/a&gt;.
+
+マーケットアプリの新バージョンになってからINSTALL_REFERRERの値が以前のようには取れなくなったのが原因だと思います。
+
+【質問】Android Marketの新バージョンで、INSTALL_REFERRERが取得されない。 - 日本Androidの会 &#124; Google Groupshttp://groups.google.com/group/android-group-japan/browse_thread/thread/65bc6a88b71e4940/86ba1804a64be03a?lnk=raot&#038;pli=1]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5674/comment-page-1/#comment-753">Y・E</a>.</p>
+<p>マーケットアプリの新バージョンになってからINSTALL_REFERRERの値が以前のようには取れなくなったのが原因だと思います。</p>
+<p>【質問】Android Marketの新バージョンで、INSTALL_REFERRERが取得されない。 &#8211; 日本Androidの会 | Google Groupshttp://groups.google.com/group/android-group-japan/browse_thread/thread/65bc6a88b71e4940/86ba1804a64be03a?lnk=raot&amp;pli=1</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Y・E		</title>
+		<link>/archives/5674/comment-page-1/#comment-753</link>
+
+		<dc:creator><![CDATA[Y・E]]></dc:creator>
+		<pubDate>Mon, 31 Oct 2011 03:57:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5674#comment-753</guid>
+
+					<description><![CDATA[いつも参考にさせていただいております。
+さっそくINSTARR_REFERRERを試してみたのですが、
+一点質問がございます。
+
+receiver内で取得したgetStringExtra(&quot;referrer&quot;);をSharedPreferencesに保存し、
+それをActivityでTextViewに表示させて試験しているのですが、
+その表示結果が、一貫して「detail?doc=#パッケージ名」と表示されてしまいます。
+
+https://market.android.com/details?id=#パッケージ名&#038;referrer=test
+上記のように設定した場合、INSTALL_REFERRERによって、「test」という文字情報が取得できるものだと思っていたのですが、うまく行きません。
+何か勘違いをしておりますでしょうか。]]></description>
+			<content:encoded><![CDATA[<p>いつも参考にさせていただいております。<br />
+さっそくINSTARR_REFERRERを試してみたのですが、<br />
+一点質問がございます。</p>
+<p>receiver内で取得したgetStringExtra(&#8220;referrer&#8221;);をSharedPreferencesに保存し、<br />
+それをActivityでTextViewに表示させて試験しているのですが、<br />
+その表示結果が、一貫して「detail?doc=#パッケージ名」と表示されてしまいます。</p>
+<p><a href="https://market.android.com/details?id=#パッケージ名&#038;referrer=test" rel="nofollow ugc">https://market.android.com/details?id=#パッケージ名&#038;referrer=test</a><br />
+上記のように設定した場合、INSTALL_REFERRERによって、「test」という文字情報が取得できるものだと思っていたのですが、うまく行きません。<br />
+何か勘違いをしておりますでしょうか。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

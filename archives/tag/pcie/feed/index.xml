@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PCIe &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/pcie/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Tue, 13 Mar 2018 05:20:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>MBP15 mid 2014が壊れたのでPCIe接続の外付けケースをバンコクで探し回った</title>
+		<link>/archives/9521/</link>
+					<comments>/archives/9521/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 13 Mar 2018 05:15:03 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[HDD外付けケース]]></category>
+		<category><![CDATA[PCIe]]></category>
+		<category><![CDATA[PCIe外付けケース]]></category>
+		<category><![CDATA[タイ]]></category>
+		<category><![CDATA[バンコク]]></category>
+		<category><![CDATA[外付けケース]]></category>
+		<category><![CDATA[東南アジア]]></category>
+		<guid isPermaLink="false">/?p=9521</guid>
+
+					<description><![CDATA[バンコク市内にあるMBKという電脳市場でMBP15のバッテリー交換を依頼したらなんと本体がぶっ壊れて戻ってきた。 広告 MBKでバッテリー交換してもらうと大事に MBKでMacbook Pro15のバ ... <a href="/archives/9521/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/40021052234" target="_blank" title="I0002670"><img loading="lazy" src="https://farm5.staticflickr.com/4784/40021052234_773c2ac42d_c.jpg" alt="I0002670" class="aligncenter" width="800" height="600"/></a></p>
+<p>バンコク市内にあるMBKという電脳市場でMBP15のバッテリー交換を依頼したらなんと本体がぶっ壊れて戻ってきた。</p>
+<p><span id="more-9521"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>MBKでバッテリー交換してもらうと大事に</h2>
+<p>MBKでMacbook Pro15のバッテリーを効果してもらうとマザボがショートしてしまったと言われた。どうやら、本体の蓋を開けたタイミングで蓋に付いていた水滴がマザボに落ちてショートした？とかそんなんだった。交換してるところを見ていないので何とも言えないけど、ここ数週間雨に濡れたりもしてないしバッテリーの劣化具体が気になるだけで特に問題はなく修理に持って行った朝も問題なく動いていた。</p>
+<p>なんとなく想像になってしまうけど、もともと壊れていたマザボと交換しただけなんじゃないかとも思える。バッテリー交換くらい自分でやればよかったと後悔した。</p>
+<h2>Pantip Pratunam</h2>
+<p>MBKから近くてパーツを多く置いている場所で最初に思いついたのがここ。ゲーミング用のグラボなんかも多く取り揃えていたのでもしかしたらここならあるんじゃないかと思って行ってみた。</p>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.468140097824!2d100.53519631483049!3d13.750618990348222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ecedad79537%3A0xdd47e3da27ef611b!2sPantip+Pratunam!5e0!3m2!1sja!2sth!4v1520664268375" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+<h2>発見！</h2>
+<p>「MBP15からデータを移したいんだ」と説明するとスタッフの人が近くの店に連絡してくれて在庫を確認してくれた。そして、どうやらMacbookProのSSDに対応したものがあるようなので実際に使えるかチェックしてもらうことに。<br />
+<a href="https://www.flickr.com/photos/fukata/39836109015" target="_blank" title="I0002666"><img loading="lazy" src="https://farm5.staticflickr.com/4777/39836109015_40020c8211_c.jpg" alt="I0002666" class="aligncenter" width="800" height="600"/></a></p>
+<p>この時点までSSDが生きているかは分かっていなかったので、もしSSDまで死んでいたら諦めてプッシュ前の修正をやり直そうと思っていた。</p>
+<p>すると無事認識して速攻で購入した。5900B。SATAの外付けケースとかなら安いけどPCIe接続のものは高い。それでもデータが無くなるよりはと思うことにした。幸い、プッシュ前のデータ以外はdropboxに入っていたのでSSDがぶっ壊れていても復旧することができたのでdropbox神。</p>
+<h2>PCIe接続の外付けケース</h2>
+<p>OWC Envoy Proという製品名らしい。<br />
+<a href="https://www.flickr.com/photos/fukata/38911211690" target="_blank" title="IMG_20180310_052231"><img loading="lazy" src="https://farm5.staticflickr.com/4792/38911211690_e9cd8213a9_c.jpg" alt="IMG_20180310_052231" class="aligncenter" width="800" height="600"/></a></p>
+<p>USB3.0での接続。<br />
+<a href="https://www.flickr.com/photos/fukata/25849839967" target="_blank" title="IMG_20180310_052333"><img loading="lazy" src="https://farm5.staticflickr.com/4798/25849839967_84b15406f9_c.jpg" alt="IMG_20180310_052333" class="aligncenter" width="800" height="600"/></a></p>
+<p>接続するとランプが光る。<br />
+<a href="https://www.flickr.com/photos/fukata/25849839707" target="_blank" title="IMG_20180310_052343"><img loading="lazy" src="https://farm5.staticflickr.com/4793/25849839707_eb44604217_c.jpg" alt="IMG_20180310_052343" class="aligncenter" width="800" height="600"/></a></p>
+<p>裏。ラバーシールの下にネジがあり、ネジを外すことでSSDの交換が可能になる。<br />
+<a href="https://www.flickr.com/photos/fukata/25849934527" target="_blank" title="IMG_20180310_052442"><img loading="lazy" src="https://farm5.staticflickr.com/4797/25849934527_4d6f8540f9_c.jpg" alt="IMG_20180310_052442" class="aligncenter" width="800" height="600"/></a></p>
+<p>付属のケース。割りとしっかりしている。<br />
+<a href="https://www.flickr.com/photos/fukata/39826048875" target="_blank" title="IMG_20180310_052359"><img loading="lazy" src="https://farm5.staticflickr.com/4787/39826048875_34d7699180_c.jpg" alt="IMG_20180310_052359" class="aligncenter" width="800" height="600"/></a></p>
+<p>これを使ってなんとか必要なデータをSSDからMBPの方に移動させることができた。</p>
+<h2>まとめ</h2>
+<p>MBP15は三年間以上使っていたもので今までの買い替えサイクルからすると長い方で次回のAppleの新製品発表を待ってから買い換えようかと思っていた矢先に思わぬところでぶっ壊れてしまった。バッテリー交換くらいは自分でやるか世紀の代理店で修理してもらっとけばと後悔してもしきれない。</p>
+<p>マザボとバッテリーの交換となるとおそれなりの金額になるだろうから、最悪このパーツだけの状態で売っぱらって次のMBPの足しにでもしようか考え中。</p>
+<p>とりあえず今は会社で余っていたMBP13を使っている。開発環境はvagrantとdockerを使っていたのでスクリプトを流して待つだけでとりあえず復元できたので良かった。それにしてもMBP14のキーボードはMBP15のものと同じサイズだと思うけどどうも小さく感じてしまう。</p>
+<p>次の新製品発表でMBP15のタッチバー無しバージョンかつメモリが32GB搭載可能なモデルが出てほしい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9521/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4784/40021052234_773c2ac42d.jpg</image>
+	</item>
+	</channel>
+</rss>

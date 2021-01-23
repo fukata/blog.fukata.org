@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MojoX::Session &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mojoxsession/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>MojoX::Session::Store::Redisが動くようになりました！</title>
+		<link>/archives/7305/</link>
+					<comments>/archives/7305/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 11 Nov 2012 12:20:35 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[MojoX::Session]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7305</guid>
+
+					<description><![CDATA[Tatsuya Blog » MojoliciousのSession管理について考えてみたの中でも紹介したMojoX::Session::Store::Redisですが、無事Pull Requestが ... <a href="/archives/7305/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://fukata.org/2012/11/06/mojolicious-session/" title="Tatsuya Blog » MojoliciousのSession管理について考えてみた" target="_blank">Tatsuya Blog » MojoliciousのSession管理について考えてみた</a>の中でも紹介した<a href="https://search.cpan.org/~bluet/MojoX-Session-Store-Redis-0.06/lib/MojoX/Session/Store/Redis.pm" title="MojoX::Session::Store::Redis">MojoX::Session::Store::Redis</a>ですが、無事Pull RequestがMergeされ、正常に動作するバージョンがCPANにアップされました。これで正常に使えます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7305/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MojoliciousのSession管理について考えてみた</title>
+		<link>/archives/7292/</link>
+					<comments>/archives/7292/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 05 Nov 2012 17:08:14 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Mojolicious]]></category>
+		<category><![CDATA[MojoX::Session]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7292</guid>
+
+					<description><![CDATA[Mojoliciousのデフォルトのセッションではcookieにbase64化した文字列を格納しています。そのため、4kbの制限や毎回すべてのセッションデータを送ることになったりと色々よろしくないとこ ... <a href="/archives/7292/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Mojoliciousのデフォルトのセッションではcookieにbase64化した文字列を格納しています。そのため、4kbの制限や毎回すべてのセッションデータを送ることになったりと色々よろしくないところがあるんですが、FW基盤としてのMojoliciousという意味ではプラグインでどうにでもなるような構造が用意されていればどうでも良い気がする。</p>
+<p>そんなsessionに関して、使う機会があったので少しでもまともな実装を探してみました。</p>
+<p><span id="more-7292"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>Plack::Middleware？Mojolicious::Plugin？</h2>
+<p><a href="https://yusukebe.com/archives/20120225/081052.html" title="PerlのWAFはMojolicious推しな件とそのノウハウ - ゆーすけべー日記" target="_blank">PerlのWAFはMojolicious推しな件とそのノウハウ &#8211; ゆーすけべー日記</a></p>
+<p>でも書かれている通り、デフォルトのsession管理は使えない。また、この中ではPlackのセッション機構を使っている。個人的に、環境依存ファイルは極力少なくしたかったので可能な限りMojolicious::Plugin::Configで利用している設定ファイルのみに留めておきたかった。</p>
+<p>ただ、Mojoliciousで利用している設定ファイルと共通化したいというのも下記のMojolicious::Plugin::PlackMiddlewareというのを使えばもしかしたら解決できるのかもしれない。ただ、試していないのでなんとも言えないが。</p>
+<p><a href="https://search.cpan.org/~jamadam/Mojolicious-Plugin-PlackMiddleware-0.24/lib/Mojolicious/Plugin/PlackMiddleware.pm" title="Mojolicious::Plugin::PlackMiddleware - search.cpan.org" target="_blank">Mojolicious::Plugin::PlackMiddleware &#8211; search.cpan.org</a></p>
+<h2>MojoX::Session</h2>
+<p>今回、初めてMojoliciousを使うということもあって標準的なものを使おうと色々探してみたところ、MojoX::Sessionというのを見つけました。</p>
+<p><a href="https://search.cpan.org/~vti/MojoX-Session-0.25/lib/MojoX/Session.pm" title="MojoX::Session - search.cpan.org" target="_blank">MojoX::Session &#8211; search.cpan.org</a></p>
+<p>データストアとしてRedisを使っていたので当然MojoX::Session::Store::Redisを使うことにしました。実際に使ってみると・・・。</p>
+<p><strong>全然動かねぇ！！！</strong></p>
+<p>なんで動かないのか調べてみると、Redisのデータとして「Hash(x14123)」みたいな文字が入っていました。もしや・・・と思い、実装を見てみると、hashrefをそのまま格納してやがりました。RedisなんでせめてHash型として入れてくれていれば最低限動いていたんですが、全く動かない程度の実装になっていました。</p>
+<p>MojoX::Session::Storeの方でbase64など暗号化した文字列を下位モジュールへ渡してくれると思いきや、MojoX::Sessionの実装方針がわかりませんが、同梱されているMojoX::Session::Store::dbiの実装を見てみるとMojoX::Session::Store::dbiの中でbase64化していました。</p>
+<p>これは、MongoDBなどコレクションに格納する際にはデータを構造的に入れれるためへの配慮なんだろうと思い、Redisの方ではjson化したものを突っ込むようにしました。本家の方にPull Requestは送ったんですがまだ取り込まれる気配はありません。</p>
+<p>現在までの実装はgithubへアップしています。</p>
+<p><a href="https://github.com/fukata/p5-MojoX-Session-Store-Redis" title="fukata/p5-MojoX-Session-Store-Redis" target="_blank">fukata/p5-MojoX-Session-Store-Redis</a></p>
+<p>json化するのとRedisのキー自体にもexpireを適用するようにも対応しています。</p>
+<h2>インタフェース</h2>
+<p>無事、データストアにsessionを保存することができるようになったので、実際にコントローラ内部で使ってみたいと思います。MojoX::Sessionを使う場合、startupの中で下記のように定義します。</p>
+<pre lang="perl">
+    $self->plugin(
+        session => {
+            stash_key => 'mojox-session',
+            store     => MojoX::Session::Store::Redis->new(
+                {
+                    server  => '127.0.0.1:6379',
+                    redis_prefix    => 'mojo-session',
+                    redis_dbid      => 1,
+                }
+            ),
+            expires_delta => 3600,
+        }
+    );
+</pre>
+<p>そうするとコントローラ内ではこんな感じになります。</p>
+<pre lang="perl">
+my $session = $self->stash('mojox-session');
+$session->load;
+$session->create unless $session->sid;
+#set 
+$session->data(
+    id => 5,
+    name => 'hoge',
+);
+#get
+my $name = $session->data('name');
+</pre>
+<h2>Helper</h2>
+<p>sessionを取り出すのにstash関数を直に使うのもダサいし、リクエスト毎に自分でloadしたりするのもなんだかなぁと思ったので簡単なHelperを実装しました。</p>
+<pre lang="perl">
+use strict;
+use warnings;
+use utf8;
+
+package Hoge::Mojolicious::Plugin::SessionHelper;
+use Mojo::Base 'Mojolicious::Plugin';
+
+sub register {
+    my ($self, $app, $conf) = @_; 
+    $conf ||= {}; 
+    $conf->{stash_key} ||= 'mojox-session';
+
+    my $stash_key = $conf->{stash_key};
+
+    $app->hook(
+        before_dispatch => sub {
+            my $self = shift;
+            my $session = $self->stash( $stash_key );
+            $session->load;
+            $session->create unless $session->sid;
+
+            $self->stash()
+        }   
+    );  
+
+    $app->helper( sessions => sub { shift->stash($stash_key); } );
+}
+
+1;
+</pre>
+<p>これで、コントローラ内部ではこんな感じで書けるようになりました。</p>
+<pre lang="perl">
+#set
+$self->sessions->data(
+    id => 5,
+    name => 'hoge',
+);
+#get
+my $name = $self->sessions->data('name');
+</pre>
+<p>リクエスト毎にloadなどもしないで良いし、セッション用のAPIも用意することで見た目もすっきりするようになりました。本当は$self->session->data(&#8216;name&#8217;)みたいな感じで書けると良かったんですがsessionメソッドはMojolicious::Controllerに既に定義されているためできませんでした。</p>
+<p>MojoX::Sessionも元々存在するMojolicious::Controller::sessionメソッドは利用していないので、フックしにくい構造になっているのかもしれない。せっかくデフォルトでAPIを定義しているのだからこれを上手く利用したいし、その方がわかりやすいだろう。</p>
+<p>その辺の話はまた今度。今回はとりあえずこの実装でやってみる。</p>
+<p><strong>追記：2012.11.14</strong><br />
+<a href="https://fukata.org/2012/11/11/available-mojox-session-store-redis/" title="MojoX::Session::Store::Redisが動くようになりました！">MojoX::Session::Store::Redisが動くようになりました！</a>でMergeされて無事動くようになりました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7292/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

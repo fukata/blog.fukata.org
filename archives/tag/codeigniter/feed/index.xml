@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CodeIgniter &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/codeigniter/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>CodeIgniterライクなForm ValidationをJavaScriptで実装してみた</title>
+		<link>/archives/6110/</link>
+					<comments>/archives/6110/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 12 Sep 2011 12:03:18 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[js-CI_Validation]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6110</guid>
+
+					<description><![CDATA[jquery.validate.jsなど既にバリデーション周りはあるのですが、設定したらバーンっとライブラリ側でやってくれる的な物が多かったので、 CodeIgniterのForm_validatio ... <a href="/archives/6110/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://bassistance.de/jquery-plugins/jquery-plugin-validation/">jquery.validate.js</a>など既にバリデーション周りはあるのですが、設定したらバーンっとライブラリ側でやってくれる的な物が多かったので、<br />
+CodeIgniterの<a href="https://codeigniter.jp/user_guide_ja/libraries/form_validation.html">Form_validation</a>のゆるさを持ったバリデーションライブラリがあれば良いなぁと思って、実装してみました。</p>
+<p><a href="https://github.com/fukata/js-CI_Validation">fukata/js-CI_Validation &#8211; GitHub</a></p>
+<p>使い方に関しても上記のページに載せていますので、そちらを参照ください。</p>
+<p>基本的にCIのForm_validationと同じように利用することが出来るかと思います。悩んだのが、検証用の入力値をどのタイミングで取得しようかということで、現在はset_rules時に第2引数として渡しています。</p>
+<p>set_rulesの時に設定出来たほうが便利かなと思ったのですが、phpと違って同じvalidationインスタンスを使い回す機会も多いでしょうから、別のタイミングで設定できても良いのかなと思っています。例えば、チェーンメソッド形式にして、下記のようにするとか。</p>
+<pre lang="javascript">
+validator.set_rules('email', ...).set_value('email', 'input value');
+</pre>
+<p>もしくは、set_rulesに対するチェーンメソッドの場合、項目は指定しなくて良いようにするなど。この場合、項目の指定が必要なvalidator.set_valueメソッドを作る必要もありそうですね。</p>
+<pre lang="javascript">
+validator.set_rules('email', ...).set_value('input value');
+</pre>
+<p>set_rulesに関して、CIとほぼ同じ引数で済むので、チェーンメソッドの方が綺麗だなぁ。</p>
+<p>ということで、まだまだ開発中ですが、少しずつ通常のバリデーターなど追加していきたいと思います。</p>
+<p>&#8230;これ、別にjQueryのプラグインじゃなくてもよくね？</p>
+<p><strong>追記： 2011-09-12 22:25</strong><br />
+jQueryに依存しない形に変更しました。<br />
+また、上記で説明していたように、チェインメソッドで入力値を設定できるようにしました。<br />
+詳しくはリポジトリのREADME.mdを参照下さい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6110/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]PHP_CodeSnifferを修正しました</title>
+		<link>/archives/6015/</link>
+					<comments>/archives/6015/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 07 Aug 2011 11:00:53 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6015</guid>
+
+					<description><![CDATA[fukata/CodeIgniter-for-PHP_CodeSniffer &#8211; GitHub CodeIgniter用のCodeSnifferを作成してくれている方がいたので、forkし ... <a href="/archives/6015/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/fukata/CodeIgniter-for-PHP_CodeSniffer">fukata/CodeIgniter-for-PHP_CodeSniffer &#8211; GitHub</a></p>
+<p>CodeIgniter用のCodeSnifferを作成してくれている方がいたので、forkして、正常に動作するように修正しました。（回避コードを追加しただけ）</p>
+<p>バグの方は本家のIssueに登録しましたので、詳しくはそちらを参照下さい。</p>
+<p><a href="https://github.com/thomas-ernest/CodeIgniter-for-PHP_CodeSniffer/issues/8">#8: segmentation fault &#8211; Issues &#8211; thomas-ernest/CodeIgniter-for-PHP_CodeSniffer &#8211; GitHub</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6015/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter]表示する変数をデフォルトでエスケープするようにしてみた</title>
+		<link>/archives/5812/</link>
+					<comments>/archives/5812/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 24 Jun 2011 02:06:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5812</guid>
+
+					<description><![CDATA[CodeIgniterのXSS Filterはいろんな文字が削除されたり、入力の時点でフィルタリングされるので、あまり好きではありません。 今回は他のフレームワークでよくあるような、表示する変数にデフ ... <a href="/archives/5812/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CodeIgniterのXSS Filterはいろんな文字が削除されたり、入力の時点でフィルタリングされるので、あまり好きではありません。</p>
+<p>今回は他のフレームワークでよくあるような、表示する変数にデフォルトでエスケープするような処理を書いてみました。</p>
+<p><span id="more-5812"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>動作検証はv2.0.2で行っています。実際に利用する場合は、下記のファイルを適当な場所にコピーしてもらい、escape_helperをロードしてください。また、application/config/config.phpに下記を追加してください。</p>
+<pre lang="PHP">
+$config['display_vars_default_escape'] = TRUE;
+</pre>
+<p>エスケープ前のデータが欲しい場合は「r」メソッドを使ってデコードするようにしました。</p>
+<h2>MY_Loader.php</h2>
+<p>64行目付近がその処理になります。<br />
+<script src="https://gist.github.com/1044064.js?file=MY_Loader.php"></script></p>
+<h2>escape_helper.php</h2>
+<p><script src="https://gist.github.com/1044064.js?file=escape_helper.php"></script></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5812/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]Cacheクラスを継承するには(+2.0.2)</title>
+		<link>/archives/5557/</link>
+					<comments>/archives/5557/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Fri, 08 Apr 2011 03:09:32 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5557</guid>
+
+					<description><![CDATA[XSSフィルタ部分に脆弱性が見つかり、CodeIgniter 2.0.2がリリースされました。ただ、CSRF関連のバグが新たに発生しているようです。アップグレードについては十分注意してください。 2. ... <a href="/archives/5557/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>XSSフィルタ部分に脆弱性が見つかり、<a href="https://codeigniter.com/news/codeigniter_2.0.2_released/">CodeIgniter 2.0.2</a>がリリースされました。ただ、<a href="https://bitbucket.org/ellislab/codeigniter-reactor/issue/191/enabling-csrf-causes-php-error-when-using">CSRF関連のバグ</a>が新たに発生しているようです。アップグレードについては十分注意してください。</p>
+<p>2.0.1と2.0.2の<a href="https://www.gistlog.org/gist/909135">diff</a>を見てみたところ、</p>
+<ul>
+<li>Security.phpがcoreに移動</li>
+<li>doctypes.php、smileys.php、foreign_chars.php、user_agents.php、mimes.php、routes.php、hooks.php、constants.phpが環境切り分けに対応</li>
+<li>ENVIRONMENT定数の存在チェック追加</li>
+<li>Cacheまわりのクラス名にCI_プレフィックスが付与</li>
+</ul>
+<p>と言った感じでした。</p>
+<p><strong>Cacheまわりのクラス名にCI_プレフィックスが付与</strong>という事だったので、ついに継承を考慮されたのかと思い、前回、<a href="https://fukata.org/2011/03/25/codeigniter2-how-to-extends-cache/">[CodeIgniter2.x]Cacheクラスを継承するには</a>で書いた、Cacheクラスの継承ですが、2.0.2を利用する場合、継承方法がどのように変わったのか試しています。</p>
+<p><span id="more-5557"></span>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><br />
+</p>
+<p><a href="https://fukata.org/2011/03/25/codeigniter2-how-to-extends-cache/">前回のソース</a>をベースに話をしていきたいと思います。</p>
+<h2>CI_プレフィックスの付与</h2>
+<p>まず、Cache.php、Cache/drivers/以下のクラスにCI_プレフィックスが追加されているのでMY_Cacheにも追加します。</p>
+<h3>application/libraries/Cache/MY_Cache.php</h3>
+<pre lang="PHP">
+< ?php
+- class MY_Cache extends Cache {
++ class MY_Cache extends CI_Cache {
+</pre>
+<h3>application/libraries/MY_Cache/drivers/MY_Cache_memcached.php</h3>
+<pre lang="PHP">
+< ?php
+require_once BASEPATH.'libraries/Cache/drivers/Cache_memcached.php';
+- class MY_Cache_memcached extends Cache_memcached {
++ class MY_Cache_memcached extends CI_Cache_memcached {
+</pre>
+<p>この状態で動かすと下記のようなエラーになります。また、その際のログです。</p>
+<pre>An Error Was Encountered
+Unable to load the requested driver: MY_Cache_memcached</pre>
+<pre>INFO  - 2011-04-08 10:47:41 --> load driver=application/libraries/my_cache/drivers/My_cache_memcached.php
+INFO  - 2011-04-08 10:47:41 --> load driver=application/libraries/my_cache/drivers/my_cache_memcached.php
+INFO  - 2011-04-08 10:47:41 --> load driver=/home/tatsuya/Dropbox/www/ci202_cache/system/libraries/my_cache/drivers/My_cache_memcached.php
+INFO  - 2011-04-08 10:47:41 --> load driver=/home/tatsuya/Dropbox/www/ci202_cache/system/libraries/my_cache/drivers/my_cache_memcached.php
+ERROR - 2011-04-08 10:47:41 --> Unable to load the requested driver: MY_Cache_memcached
+</pre>
+<p>以前と読み込み場所が変わっていますね。前回までの構造は、</p>
+<pre>
+./
+|-- Cache
+|   `-- MY_Cache.php
+|-- MY_Cache
+|   `-- drivers
+|       |-- MY_Cache_apc.php
+|       |-- MY_Cache_dummy.php
+|       |-- MY_Cache_file.php
+|       `-- MY_Cache_memcached.php
+`-- index.html
+</pre>
+<p>となっていましたので、読み込み場所の指定方法が変わったようです。</p>
+<h3>Driver.phpのCI_対応</h3>
+<h2>system/libraries/Driver.php</h2>
+<p>2.0.1の頃と比べると$lib_nameや$child_classがstrtolowerされているので、上記のように小文字のディレクトリを読み込み対象とするようになりました。</p>
+<pre lang="DIFF">
+--- CodeIgniter_2.0.1/system/libraries/Driver.php       2011-03-16 02:54:00.000000000 +0800
++++ CodeIgniter_2.0.2/system/libraries/Driver.php       2011-04-07 12:20:00.000000000 +0800
+@@ -44,7 +44,11 @@
+                // The class will be prefixed with the parent lib
+                $child_class = $this->lib_name.'_'.$child;
+
+-               if (in_array(strtolower($child_class), array_map('strtolower', $this->valid_drivers)))
++               // Remove the CI_ prefix and lowercase
++               $lib_name = strtolower(preg_replace('/^CI_/', '', $this->lib_name));
++               $driver_name = strtolower(preg_replace('/^CI_/', '', $child_class));
++
++               if (in_array($driver_name, array_map('strtolower', $this->valid_drivers)))
+                {
+                        // check and see if the driver is in a separate file
+                        if ( ! class_exists($child_class))
+@@ -52,19 +56,15 @@
+                                // check application path first
+                                foreach (array(APPPATH, BASEPATH) as $path)
+                                {
+-                                       // and check for case sensitivity of both the parent and child libs
+-                                       foreach (array(ucfirst($this->lib_name), strtolower($this->lib_name)) as $lib)
++                                       // loves me some nesting!
++                                       foreach (array(ucfirst($driver_name), $driver_name) as $class)
+                                        {
+-                                               // loves me some nesting!
+-                                               foreach (array(ucfirst($child_class), strtolower($child_class)) as $class)
+-                                               {
+-                                                       $filepath = $path.'libraries/'.$this->lib_name.'/drivers/'.$child_class.EXT;
++                                               $filepath = $path.'libraries/'.$lib_name.'/drivers/'.$class.EXT;
+
+-                                                       if (file_exists($filepath))
+-                                                       {
+-                                                               include_once $filepath;
+-                                                               break;
+-                                                       }
++                                               if (file_exists($filepath))
++                                               {
++                                                       include_once $filepath;
++                                                       break;
+                                                }
+                                        }
+                                }
+</pre>
+<h2>ディレクトリ、ファイル名を2.0.2に対応</h2>
+<p>今までの説明を踏まえて、下記のようなディレクトリに変更してみます。</p>
+<pre>
+./
+|-- Cache
+|   `-- MY_Cache.php
+|-- my_cache
+|   `-- drivers
+|       |-- My_cache_apc.php
+|       |-- My_cache_dummy.php
+|       |-- My_cache_file.php
+|       `-- My_cache_memcached.php
+`-- index.html
+</pre>
+<p>これで、再度アクセスしてみると無事動くようになりました。</p>
+<h2>最後に</h2>
+<p>CI_プレフィックスが付与されていたので、継承を考慮されているのかと思ったのですが、残念ながらまだ中途半端な状態でした。まだまだ、この辺は変更されそうな感じがしますので、継承する場合は激しく自己責任でお願いします。</p>
+<p><strong>追記：2011.04.09 18:21</strong><br />
+<a href="https://bitbucket.org/ellislab/codeigniter-reactor/issue/193/ci_cache_file">ellislab / CodeIgniter Reactor / issues / #193 &#8211; CI_Cache_file — Bitbucket</a><br />
+既に本家に登録されていて対応もされているようですが、上記のDriver.php内の$lib_name変数がstrtolowerされているので、小文字化されてしまっており、読み込み対象のディレクトリも2.0.1のucfirstではなくなっており、正常に読み込めないバグが今回新たに発生しています。対処法としては、下記のように$lib_nameにucfirst実行後の値を代入すれば大丈夫です。</p>
+<pre lang="PHP">
+$lib_name = ucfirst(strtolower(preg_replace('/^CI_/', '', $this->lib_name)));
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5557/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter]CodeIgniter2のCache機能をCodeIgniter1系でも利用するパッチ</title>
+		<link>/archives/5462/</link>
+					<comments>/archives/5462/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 19 Mar 2011 23:53:38 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5462</guid>
+
+					<description><![CDATA[前回、CodeIgniter2のCache機能について触れましたが、実際に仕事で利用しているのは1系だっていう人が居るかもしれません（自分のように）そして、その環境にmemcachedを導入したいとい ... <a href="/archives/5462/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://fukata.org/2011/03/20/codeigniter2-cache/">前回</a>、CodeIgniter2のCache機能について触れましたが、実際に仕事で利用しているのは1系だっていう人が居るかもしれません（自分のように）そして、その環境にmemcachedを導入したいというタイムリーな方もまた居るかもしれません。</p>
+<p>そんなタイムリーなあなたに素敵なパッチを２種類お送りします。</p>
+<p>下記の種類のパッチをダウンロードし、下記のようにCodeIgniter1のディレクトリ直下で実行するとパッチが当たります。</p>
+<pre lang="BASH">
+cd [CodeIgniter1 directory]
+patch -p0 < cache-driver.patch
+</pre>
+<h2>system以下も書き換えちゃっていいぜ！！という方向け</h2>
+<p><a href="https://gist.github.com/877879">"CodeIgniter2" on "Cache Driver" feature "CodeIgniter1" backported patches. Override system directories. — Gist</a></p>
+<p>パッチ内容</p>
+<ol>
+<li>system/libraries/Loader.phpにdriverメソッドを追加。</li>
+<li>system/libraries/にDriver.phpとCacheディレクトリを追加。</li>
+</ol>
+<h2>system以下の書き換えはちょっと・・・。という方向け</h2>
+<p><a href="https://gist.github.com/877908">"CodeIgniter2" on "Cache Driver" feature "CodeIgniter1" backported patches. Extends Loader. — Gist</a></p>
+<p>パッチ内容</p>
+<ol>
+<li>system/application/libraries/MY_Loader.phpの追加。</li>
+<li>system/application/libraries/にDriver.phpとCacheディレクトリを追加。</li>
+</ol>
+<p>即興で作成したので、一度素のCodeIgniter 1.7.3に適用して、確かめてからの方が良いかと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5462/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter2.x]コマンドラインから使用してみた</title>
+		<link>/archives/5209/</link>
+					<comments>/archives/5209/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 29 Jan 2011 12:03:31 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[CodeIgniter 2.x]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5209</guid>
+
+					<description><![CDATA[ついに、CodeIgniter 2.0がリリースされました。PHP4対応を捨て、PHP5.1以上が必須らしいです。まだ、少ししか内部のソースを見ていないので何とも言えませんが、主要部分についてはそれほ ... <a href="/archives/5209/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ついに、<a href="https://codeigniter.com/news/codeigniter_2.0.0_released/">CodeIgniter 2.0がリリース</a>されました。PHP4対応を捨て、PHP5.1以上が必須らしいです。まだ、少ししか内部のソースを見ていないので何とも言えませんが、主要部分についてはそれほど大きな違いはなく、CodeIgniter 1.xの時の感覚にPHP5のプログラミングスタイルを適用すれば簡単に動かせます。</p>
+<p>それで、今回新たにコマンドラインから使用できるようになったので、ちょっと試してみました。</p>
+<p><span id="more-5209"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>コントローラの作成</h2>
+<p>まずは、コマンドラインから呼び出すためのコントローラを作成します。</p>
+<pre lang="PHP">
+class Example_batch extends CI_Controller {
+	public function __construct() {
+		parent::__construct();
+	}
+	
+	public function hoge($name) {
+		echo "name={$name}\n";
+	}
+}
+</pre>
+<p>至って普通のコントローラですね。ただ、このままだとWEBからもアクセス出来てしまうので、下記のようにコマンドライン以外からのアクセスの場合にはエラーにする。などの対応が必要になります。</p>
+<pre lang="PHP">
+class Example_batch extends CI_Controller {
+	public function __construct() {
+		parent::__construct();
+                // コマンドライン以外からのアクセスの場合、404エラー
+		if (!$this->input->is_cli_request()) {
+			show_404();
+		}
+	}
+	
+	public function hoge($name) {
+		echo "name={$name}\n";
+	}
+}
+</pre>
+<h2>実行</h2>
+<p>上記で作成したコントローラをコマンドラインから呼び出すには、下記のようになります。</p>
+<pre lang="BASH">
+$ php [CIディレクトリ]/index.php /example_batch/hoge/foo/
+name=foo
+</pre>
+<p>index.php以降のパラメータがURIとして扱われます。</p>
+<p>コマンドラインからのパラメータの解析自体はこんな感じでやっているみたいです。</p>
+<h3>system/core/URI.php#_parse_cli_args</h3>
+<pre lang="PHP">
+private function _parse_cli_args()
+{
+	$args = array_slice($_SERVER['argv'], 1);
+
+	return $args ? '/' . implode('/', $args) : '';
+}
+</pre>
+<p>なので、以下のような実行方法も可能です。</p>
+<pre lang="BASH">
+$ php [CIディレクトリ]/index.php example_batch hoge foo
+name=foo
+</pre>
+<p>ただ、index.php以降のパラメータをスラッシュ「/」で連結するので、query_stringなどを有効化した場合などを考慮すると前者の形式で渡した方が間違いが少ないと思います。</p>
+<p>と、思ったのですが、現在はコマンドラインから実行する場合にquery_stringには対応していないみたいです。</p>
+<h2>最大実行時間</h2>
+<p>CodeIgniter 2では、下記のようにセーフモードではない場合に、PHPスクリプトの最大実行時間を指定しています。</p>
+<h3>system/core/CodeIgniter.php</h3>
+<pre lang="PHP">
+/*
+ * ------------------------------------------------------
+ *  Set a liberal script execution time limit
+ * ------------------------------------------------------
+ */
+	if (function_exists("set_time_limit") == TRUE AND @ini_get("safe_mode") == 0)
+	{
+		@set_time_limit(300);
+	}
+</pre>
+<p>これは、上記で作成したバッチにも当てはまります。例えば、Example_batchコントローラに下記のような無限ループを行うメソッドを追加したとします。</p>
+<pre lang="PHP">
+public function while() {
+	while (true) {
+		echo "";
+	}
+}
+</pre>
+<p>で、これを実行すると３００秒が経過した時にエラーとなります。</p>
+<pre lang="BASH">
+$ php index.php /example_batch/while/
+PHP Fatal error:  Maximum execution time of 300 seconds exceeded in [CIディレクトリ]/application/controllers/example_batch.php on line 20
+</pre>
+<p>これを防ぐには、<a href="https://php.net/manual/ja/function.set-time-limit.php">set_time_limit</a>メソッドに0を指定すれば、無制限になるので、コンストラクタ内で実行します。</p>
+<pre lang="PHP">
+class Example_batch extends CI_Controller {
+	public function __construct() {
+		parent::__construct();
+                // コマンドライン以外からのアクセスの場合、404エラー
+		if (!$this->input->is_cli_request()) {
+			show_404();
+		}
+		// 最大実行時間を無制限に設定
+		if (function_exists("set_time_limit") == TRUE AND @ini_get("safe_mode") == 0) {
+			@set_time_limit(0);
+		}
+	}
+	
+	public function hoge($name) {
+		echo "name={$name}\n";
+	}
+
+	public function while() {
+		while (true) {
+			echo "";
+		}
+	}
+}
+</pre>
+<p>手軽にコマンドラインから実行できるようになったので、modelやhelperをバッチ等で再利用しやすくなりましたね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5209/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter]CI_Profilerを拡張してCI_Session内容も出力してみた</title>
+		<link>/archives/4605/</link>
+					<comments>/archives/4605/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2010 04:21:41 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4605</guid>
+
+					<description><![CDATA[Controllerなどで下記のように記述するとデバッグ用に変数の内容などを出力してくれます。 $this->output->enable_profiler(true); デフォルトだと、下記の情報が ... <a href="/archives/4605/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Controllerなどで下記のように記述するとデバッグ用に変数の内容などを出力してくれます。</p>
+<pre lang="PHP">
+$this->output->enable_profiler(true);
+</pre>
+<p>デフォルトだと、下記の情報が表示されるようです。</p>
+<ul>
+<li>URI STRING</li>
+<li>CLASS/METHOD</li>
+<li>MEMORY USAGE</li>
+<li>BENCHMARKS</li>
+<li>GET DATA</li>
+<li>POST DATA</li>
+<li>QUERIES</li>
+</ul>
+<p>今回は省略しますが、プロファイラ用のホックなんかを使っておくと便利です。</p>
+<p><strong>追記：2010-07-20</strong><br />
+大したプログラムではないですけど、残しておきます。</p>
+<h3>system/application/hooks/XC_ProfilerHook.php</h3>
+<pre lang="PHP">
+< ?php
+/**
+ * プロファイラ用ホック
+ * @author Tatsuya Fukata
+ *
+ */
+class XC_ProfilerHook {
+	/** CIインスタンス */
+	private $CI;
+	
+	/**
+	 * コンストラクタ
+	 */
+	public function __construct(){
+		$this->CI =& get_instance();
+	}
+	
+	public function enable_profiler() {
+		$this->CI->output->enable_profiler($this->CI->config->item('hook_enable_profiler'));
+	}
+}
+
+?>
+</pre>
+<p>で、設定ファイルに下記を追加します。</p>
+<h3>system/application/config/config.php</h3>
+<pre lang="PHP">
+//プロファイラホックの有効化
+$config['hook_enable_profiler'] = true;
+</pre>
+<p>さらに、hooks.phpに下記も追加します。</p>
+<h3>system/application/config/hooks.php</h3>
+<pre lang="PHP">
+//プロファイラ用ホック
+$hook['post_controller_constructor'][] = array(
+	'class' => 'XC_ProfilerHook',
+	'function' => 'enable_profiler',
+	'filename' => 'XC_ProfilerHook.php',
+	'filepath' => 'hooks',
+);
+</pre>
+<p>これで、ローカルや、開発環境ではプロファイラを有効にしておいて、テスト環境や本番で一括でプロファイラの設定を切り替えることができます。</p>
+<p>で、本題のPHP標準のSession機構を使用するCI_Session拡張のコードです。</p>
+<p>前回の記事でCI_Sessionの拡張について書いたついでにCI_Sessionの持つ、ユーザデータの内容も出力するようにしてみました。</p>
+<h3>system/application/libraries/XC_Profiler.php</h3>
+<pre lang="PHP">
+< ?php
+/**
+ * デフォルトのプロファイラ結果にCI_Sessionの持つ、ユーザデータを追加する
+ * 
+ * @author Tatsuya Fukata
+ *
+ */
+class XC_Profiler extends CI_Profiler {
+	public function __construct() {
+		parent::__construct();
+	}
+	
+	public function run() {
+		$output = "<div id='codeigniter_profiler' style='clear:both;background-color:#fff;padding:10px;'>";
+		
+		// XXX スーパクラスのprivateメソッドのため、個別定義
+		$output .= $this->_compile_uri_string();
+		$output .= $this->_compile_controller_info();
+		$output .= $this->_compile_memory_usage();
+		$output .= $this->_compile_benchmarks();
+		$output .= $this->_compile_get();
+		$output .= $this->_compile_post();
+		$output .= $this->_compile_queries();
+		
+		$output .= $this->_compile_session();
+
+		$output .= '';
+
+		return $output;
+	}
+	
+	/**
+	 * ユーザデータ情報を返す。
+	 * @return String
+	 */
+	protected function _compile_session() {
+		if (!isset($this->CI->session) || (!is_a($this->CI->session, 'CI_Session') && !is_subclass_of($this->CI->session, 'CI_Session'))) {
+			return '';
+		}
+		
+		$output  = "\n\n";
+		$output .= '<fieldset style="border:1px solid #FF3535;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee">';
+		$output .= "\n";
+		$output .= '<legend style="color:#FF3535;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_session').'&nbsp;&nbsp;</legend>';
+		$output .= "\n";
+		$output .= "\n\n<table cellpadding='4' cellspacing='1' border='0' width='100%'>\n";
+		
+		$session = $this->CI->session->all_userdata();
+		if (empty($session) || count($session)==0) {
+			$output .= "<tr><td width='100%' style='color:#FF3535;font-weight:normal;background-color:#eee;'>".$this->CI->lang->line('profiler_no_session')."</td></tr>\n";
+		} else {
+			foreach ($session as $key => $val) {
+				$output .= "<tr><td width='100%' style='color:#FF3535;font-weight:normal;background-color:#eee;'>".$key.' => '.print_r($val, true)."</td></tr>\n";
+			}
+		}
+		
+		$output .= "</table>\n";
+		$output .= "</fieldset>";
+		
+		return $output;
+	}
+}
+?>
+</pre>
+<p>プロファイラ結果として使用する言語ファイルを作成します。<br />
+デフォルトのものは、<strong>system/language/english/profiler_lang.php</strong>に定義されているので、独自で作成した言語ファイル内で読み込むようにします。</p>
+<h3>system/application/language/english/profiler_lang.php</h3>
+<pre lang="PHP">
+< ?php
+
+// 既存の言語ファイル
+@include_once(BASEPATH.'language/english/profiler_lang.php');
+
+// 以下、独自追加分
+$lang['profiler_session'] = 'SESSION';
+$lang['profiler_no_session'] = 'No SESSION data exists';
+
+/* End of file profiler_lang.php */
+/* Location: ./system/language/english/profiler_lang.php */
+?>
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4605/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter]CI_Sessionを拡張してPHP標準Sessionに対応してみた</title>
+		<link>/archives/4597/</link>
+					<comments>/archives/4597/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2010 03:00:03 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4597</guid>
+
+					<description><![CDATA[CodeIgniterが提供しているセッションクラスは、Cookieに全て保存するか、ユーザが追加したデータはデータベースに保存しておいて、キーはCookieに保存するかの2種類を選択することができま ... <a href="/archives/4597/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CodeIgniterが提供しているセッションクラスは、Cookieに全て保存するか、ユーザが追加したデータはデータベースに保存しておいて、キーはCookieに保存するかの2種類を選択することができます。</p>
+<p>ただ、PHP標準のセッション機構を使うことには対応しておらず、どうしても利用したい場合は下記のようにベタで記述する必要があります。</p>
+<pre lang="PHP">
+session_start();
+$_SESSION['hoge'] = 'foo';
+</pre>
+<p>上記でも基本的に動くとは思いますが、セッション機構を切り替える際のコストが高いので、コアクラスのCI_Sessionを拡張してPHP標準セッション機構も選択できるようにしてみました。</p>
+<h3>system/application/libraries/XC_Session.php</h3>
+<pre lang="PHP">
+< ?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/**
+ * PHP標準Session機構を利用できる
+ * 
+ * @author Tatsuya Fukata
+ *
+ */
+class XC_Session extends CI_Session {
+	/** PHP標準のSession機能を使用するか */
+	private $sess_use_php_session = false;
+
+	/** 初期化時に読み込む設定ファイルのキー一覧 */
+	private static $INIT_CONFIG_KEYS = array(
+		'sess_use_php_session', 
+		'sess_encrypt_cookie', 
+		'sess_use_database', 
+		'sess_table_name', 
+		'sess_expiration', 
+		'sess_match_ip', 
+		'sess_match_useragent', 
+		'sess_cookie_name', 
+		'cookie_path', 
+		'cookie_domain', 
+		'sess_time_to_update', 
+		'time_reference', 
+		'cookie_prefix', 
+		'encryption_key',
+	);
+	
+	/**
+	 * コンストラクタ
+	 * @param Array $params
+	 */
+	public function __construct($params = array()) {
+		$this->CI =& get_instance();
+		foreach (self::$INIT_CONFIG_KEYS as $key) {
+			$this->$key = (isset($params[$key])) ? $params[$key] : $this->CI->config->item($key);
+		}
+
+		if ($this->use_not_php_session()) {
+			parent::__construct($params);
+		} else {
+			$this->initialize($params);
+		}
+	}
+
+	/**
+	 * PHP標準Session利用時の初期化
+	 * @param Array $params
+	 * @return void
+	 */
+	protected function initialize($params) {
+		session_start();
+		
+		// XXX スーパクラスのprivateメソッドのため、個別定義
+		// Set the "now" time.  Can either be GMT or server time, based on the
+		// config prefs.  We use this to set the "last activity" time
+		$this->now = $this->_get_time();
+	
+		// Set the session length. If the session expiration is
+		// set to zero we'll set the expiration two years from now.
+		if ($this->sess_expiration == 0) {
+			$this->sess_expiration = (60*60*24*365*2);
+		}
+		
+		// セッションが既に存在すれば更新、未作成の場合はデフォルト値を作成する
+		if (!$this->sess_read()) {
+			$this->sess_create();
+		} else {
+			$this->sess_update();
+		}
+		
+		/*
+		 * XXX スーパクラスのprivateメソッドのため、個別定義
+		 * メソッド「_flashdata_sweep」「_flashdata_mark」「_sess_gc」は
+		 * CI_Sessionにプライベートメソッドを意識して定義されているため、
+		 * 本来であれば、XC_Sessionで再定義したいところ。
+		 */
+		// Delete 'old' flashdata (from last request)
+	   	$this->_flashdata_sweep();
+
+		// Mark all new flashdata as old (data will be deleted before next request)
+	   	$this->_flashdata_mark();
+
+		// Delete expired sessions if necessary
+		$this->_sess_gc();
+
+		
+	}
+
+	/**
+	 * Override
+	 */
+	public function sess_read() {
+		if ($this->use_not_php_session()) {
+			return parent::sess_read();
+		}
+
+		if (count($_SESSION) == 0) {
+			return false;
+		}
+		
+		// Is the session current?
+		if (($_SESSION['last_activity'] + $this->sess_expiration) < $this->now) {
+			$this->sess_destroy();
+			return FALSE;
+		}
+	
+		// Does the IP Match?
+		if ($this->sess_match_ip == TRUE AND $_SESSION['ip_address'] != $this->CI->input->ip_address()) {
+			$this->sess_destroy();
+			return FALSE;
+		}
+
+		// Does the User Agent Match?
+		if ($this->sess_match_useragent == TRUE AND trim($_SESSION['user_agent']) != trim(substr($this->CI->input->user_agent(), 0, 50))) {
+			$this->sess_destroy();
+			return FALSE;
+		}
+
+		$this->userdata = $_SESSION;
+		return true;
+	}
+
+	/**
+	 * Override
+	 */
+	public function sess_create() {
+		if ($this->use_not_php_session()) {
+			parent::sess_create();
+			return;
+		}
+
+		// 初期データを設定
+		$_SESSION = array(
+			'session_id' => session_id(),
+			'ip_address' => $this->CI->input->ip_address(),
+			'user_agent' => substr($this->CI->input->user_agent(), 0, 50),
+			'last_activity' => $this->now
+		);
+
+		$this->userdata = $_SESSION;
+		$this->sess_write();
+	}
+
+	/**
+	 * Override
+	 */
+	public function sess_write() {
+		if ($this->use_not_php_session()) {
+			parent::sess_write();
+			return;
+		}
+
+		$_SESSION = $this->userdata;
+	}
+
+	/**
+	 * Override
+	 */
+	public function sess_update() {
+		if ($this->use_not_php_session()) {
+			parent::sess_update();
+			return;
+		}
+
+		// We only update the session every five minutes by default
+		if (($this->userdata['last_activity'] + $this->sess_time_to_update) >= $this->now) {
+			return;
+		}
+
+		// 新しいセッションIDの生成し、設定
+		session_regenerate_id(true);
+		$this->userdata['session_id'] = session_id();
+		$this->userdata['last_activity'] = $this->now;
+
+		$this->sess_write();
+	}
+
+	/**
+	 * Override
+	 */
+	public function sess_destroy() {
+		if ($this->use_not_php_session()) {
+			parent::sess_destroy();
+			return;
+		}
+		
+		if (isset($_COOKIE[session_name()])) {
+			setcookie(session_name(), '', time()-42000, '/');
+		}
+
+		$this->userdata = array();
+		$this->sess_write();
+		
+		session_destroy();
+	}
+
+	/**
+	 * PHP標準Sessionを利用するかを返す。
+	 * @return bool
+	 */
+	protected function use_php_session() {
+		return $this->sess_use_php_session === true;
+	}
+
+	/**
+	 * PHP標準Sessionを利用しないかを返す。
+	 * @return bool
+	 */
+	protected function use_not_php_session() {
+		return !$this->use_php_session();
+	}
+}
+?>
+</pre>
+<p>また、設定ファイルに下記を追加します。</p>
+<h3>system/application/config/config.php</h3>
+<pre lang="PHP">
+// PHP標準セッションを利用するか
+$config['sess_use_php_session'] = TRUE;
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4597/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter]CI_Languageをメッセージに外部から値を組み込めるように拡張してみた</title>
+		<link>/archives/4571/</link>
+					<comments>/archives/4571/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 06 Jul 2010 14:08:13 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4571</guid>
+
+					<description><![CDATA[CodeIgniter標準の言語クラスでは、メッセージに変数などを埋め込める機能が存在しません。もしかすると誰かが既に作ってる可能性は限りなく高いですが、対した実装でもないので勢いで作っちゃいました。 ... <a href="/archives/4571/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CodeIgniter標準の<a href="https://codeigniter.jp/user_guide_ja/libraries/language.html">言語クラス</a>では、メッセージに変数などを埋め込める機能が存在しません。もしかすると誰かが既に作ってる可能性は限りなく高いですが、対した実装でもないので勢いで作っちゃいました。</p>
+<p>やってることは簡単で、可変長引数を取得し、メッセージ内に組み込まれた置換対象文字である{0}や{1}を置換しているだけです。</p>
+<p>CI_Languageと下位互換性は保っているので、置き換えてもそのまま動かすことも可能です。</p>
+<h3>system/application/helpers/xc_language_helper.php</h3>
+<pre lang="PHP">
+< ?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+if ( ! function_exists('lang'))
+{
+	/**
+	 * 言語ファイルから対象のメッセージを取得する。
+	 * 
+	 * @param $line メッセージキー
+	 * @param $id
+	 * @param $args 置換値（可変長引数）
+	 */
+	function lang($line, $id = '')
+	{		
+		$CI =&#038; get_instance();
+		$line = $CI->lang->line($line);
+
+		// 可変長引数以外の変数の個数
+		$define_arg_num = 2;
+
+		// 置換引数指定の場合は、メッセージ内の置換対象文字列を置換する。
+		$num = func_num_args();
+		if ($num > $define_arg_num) {
+			for ($i=0; $i< ($num-$define_arg_num); $i++) {
+				$line = str_replace('{'.$i.'}', func_get_arg($define_arg_num+$i), $line);
+			}
+		}
+		
+		if ($id != '')
+		{
+			$line = '<label for="'.$id.'">'.$line."";
+		}
+
+		return $line;
+	}
+}
+
+?>
+</pre>
+<h3>system/application/libraries/XC_Language.php</h3>
+<pre lang="PHP">
+< ?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class XC_Language extends CI_Language {
+	public function __construct() {
+		parent::__construct();
+	}
+	
+	/**
+	 * 言語ファイルからメッセージを取得し、置換対象文字列が指定されている場合は、置換後の文字列を返す。
+	 * 
+	 * @param $line メッセージキー
+	 * @param $args 置換値（可変長引数）
+	 */
+	function line($line = '') {
+		$line = ($line == '' OR ! isset($this->language[$line])) ? FALSE : $this->language[$line];
+		
+		// 可変長引数以外の変数の個数
+		$define_arg_num = 1;
+		
+		// 置換引数指定の場合は、メッセージ内の置換対象文字列を置換する。
+		$num = func_num_args();
+		if ($num > $define_arg_num) {
+			for ($i=0; $i< ($num-$define_arg_num); $i++) {
+				$line = str_replace('{'.$i.'}', func_get_arg($define_arg_num+$i), $line);
+			}
+		}
+				
+		return $line;
+	}
+}
+?>
+</pre>
+<p><strong>追記：2011.03.12 15:23</strong><br />
+CodeIgniter 2.0からCI_Launguageではなく<strong>CI_Lang</strong>にクラス名が変更されています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4571/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[CodeIgniter]Twigと連携してみた &#8211; その1</title>
+		<link>/archives/4556/</link>
+					<comments>/archives/4556/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 04 Jul 2010 06:58:17 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CodeIgniter]]></category>
+		<category><![CDATA[Twig]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=4556</guid>
+
+					<description><![CDATA[PHPの軽量フレームワークである日本CodeIgniterユーザ会とDJangoやTilesのように継承機能を用いたPHPテンプレートエンジン「Twig &#8211; The flexible, f ... <a href="/archives/4556/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>PHPの軽量フレームワークである<a href="https://codeigniter.jp/">日本CodeIgniterユーザ会</a>とDJangoやTilesのように継承機能を用いたPHPテンプレートエンジン「<a href="https://www.twig-project.org/">Twig &#8211; The flexible, fast, and secure template language for PHP</a>」を簡単に連携させてみましたので設定を書きたいと思います。</p>
+<p>ただ、CodeIgniterで作成したHelperなどをTwig内での使用までは検証できなかったのでまた時間がある時にでもやってみたいと思います。</p>
+<p>下記で説明しているファイルはこちらのファイルに含まれています。<br />
+説明用にソースを一部編集していますので、異なる部分もあるのでご了承ください。</p>
+<p><a href='https://fukata.org/media/2010/07/ci-twig-1.0.0.zip'>ci-twig-1.0.0.zip</a></p>
+<p>※下記のソースは<a href="https://github.com/jamiepittock/codeigniter-twig">jamiepittock&#8217;s codeigniter-twig at master &#8211; GitHub</a>を拝借して一部編集しています。</p>
+<h2>全体の構成</h2>
+<blockquote>
+<pre>
+.
+`-- system
+    |-- application
+    |   |-- config
+    |   |   `-- twig.php // Twig用設定ファイル
+    |   |-- controllers
+    |   |-- errors
+    |   |-- helpers
+    |   |-- hooks
+    |   |-- language
+    |   |-- libraries
+    |   |   |-- Twig // Twigライブラリ
+    |   |   `-- Twig.php // Twigクラス
+    |   |-- models
+    |   `-- views
+    |-- cache
+    |   `-- twig // Twig用キャッシュディレクトリ
+    |-- codeigniter
+    |-- database
+    |   `-- drivers
+    |-- fonts
+    |-- helpers
+    |-- language
+    |   `-- english
+    |-- libraries
+    |-- logs
+    |-- plugins
+    `-- scaffolding
+        |-- images
+        `-- views
+</pre>
+</blockquote>
+<h2>追加ファイル</h2>
+<h3>application/libraries/Twig</h3>
+<p><a href="https://www.twig-project.org/installation">https://www.twig-project.org/installation</a>からダウンロードしたTwigのlibディレクトリ以下を格納する。</p>
+<h3>application/config/twig.php</h3>
+<pre lang="PHP">
+< ?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+$config['template_dir'] = APPPATH.'views';
+$config['cache_dir'] = BASEPATH.'cache/twig';
+?>
+</pre>
+<h3>application/libraries/Twig.php</h3>
+<pre lang="PHP">
+< ?php if (!defined('BASEPATH')) {exit('No direct script access allowed');}
+
+class Twig
+{
+	private $CI;
+	private $_twig;
+	private $_template_dir;
+	private $cache_dir;
+
+	/**
+	 * Constructor
+	 *
+	 */
+	function __construct()
+	{
+		$this->CI =& get_instance();
+		$this->CI->config->load('twig');
+	  
+		ini_set('include_path',
+		ini_get('include_path') . PATH_SEPARATOR . APPPATH . 'libraries/Twig');
+
+		require_once (string) "Autoloader" . EXT;
+		log_message('debug', "Twig Autoloader Loaded");
+
+		Twig_Autoloader::register();
+
+		$this->_template_dir = $this->CI->config->item('template_dir');
+		$this->_cache_dir = $this->CI->config->item('cache_dir');
+
+		$loader = new Twig_Loader_Filesystem($this->_template_dir);
+		$this->_twig = new Twig_Environment($loader, array(
+			'debug' => true,
+			'cache' => $this->_cache_dir,
+		));
+	}
+
+	public function view($template, $data = array()) {
+		$template = $this->_twig->loadTemplate($template);
+
+		echo $template->render($data);
+	}
+}
+?>
+</pre>
+<h2>サンプル</h2>
+<h3>application/controllers/</h3>
+<pre lang="PHP">
+< ?php
+
+class Welcome extends Controller {
+	function Welcome()
+	{
+		parent::Controller();
+		$this->load-library('twig');
+	}
+	
+	function index()
+	{
+		$data['name'] = 'Tatsuya';
+		$this->twig->view('welcome_message.php', $data);
+	}
+}
+
+/* End of file welcome.php */
+/* Location: ./system/application/controllers/welcome.php */
+?>
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/4556/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

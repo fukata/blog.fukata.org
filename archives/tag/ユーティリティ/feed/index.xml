@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ユーティリティ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:59:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Python]ディレクトリをまとめてzip圧縮</title>
+		<link>/archives/1810/</link>
+					<comments>/archives/1810/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 20 Oct 2009 16:39:28 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[zip]]></category>
+		<category><![CDATA[ユーティリティ]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1810</guid>
+
+					<description><![CDATA[pythonのライブラリリファレンスを見ているとディレクトリをzip圧縮するメソッドがなかったので作成してみました。 # -*- coding: utf-8 -*- import os,zipfile ... <a href="/archives/1810/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>pythonのライブラリリファレンスを見ているとディレクトリをzip圧縮するメソッドがなかったので作成してみました。</p>
+<pre lang="Python" line="1">
+# -*- coding: utf-8 -*-
+import os,zipfile
+
+def zip_write_dir(base_dir, src_dir, zip_name):
+    """ディレクトリをzip圧縮する
+        base_dir: src_dirが属するディレクトリを表す
+        src_dir: 圧縮対象のディレクトリを表す
+        zip_name: 出力先のzipファイルのフルパスを表す
+    """
+    zf = zipfile.ZipFile(zip_name, 'w', zipfile.ZIP_DEFLATED)
+
+    current_dir = os.getcwd();
+    os.chdir(base_dir)
+
+    for root,dirs,files in os.walk(src_dir):
+        for _file in files:
+            filename = os.path.join(root,_file)
+            arcname = filename
+            zf.write(filename, arcname)
+
+    zf.close()
+    os.chdir(current_dir)
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1810/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Python]mod_python使用時のダウンロード処理</title>
+		<link>/archives/1806/</link>
+					<comments>/archives/1806/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 20 Oct 2009 16:36:50 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[mod_python]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[ユーティリティ]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=1806</guid>
+
+					<description><![CDATA[現在、pythonを勉強中でちょっとしたWEBアプリを作っていたのですが、ダウンロード処理を書かないといけなくなったので、モジュールを作成してみました。よかったらどうぞ。 # -*- coding:  ... <a href="/archives/1806/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、pythonを勉強中でちょっとしたWEBアプリを作っていたのですが、ダウンロード処理を書かないといけなくなったので、モジュールを作成してみました。よかったらどうぞ。</p>
+<pre lang="Python" line="1">
+# -*- coding: utf-8 -*-
+
+import sys
+import os
+
+def download(req,filepath):
+
+    req.content_type = 'application/octet-stream'
+    req.headers_out['Content-Type'] = 'application/octet-stream'
+    req.headers_out['Content-Disposition'] = "attachment; filename=\"" + os.path.basename(filepath)
+    req.headers_out['Content-Length'] = str(os.path.getsize(filepath))
+    req.headers_out['Expires'] = '0'
+    req.headers_out['Cache-Control'] = 'must-revalidate, post-check=0,pre-check=0'
+    req.headers_out['Pragma'] = 'private'
+
+    if sys.platform == "win32":
+        import msvcrt
+        msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
+
+    return req.sendfile(filepath)
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/1806/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

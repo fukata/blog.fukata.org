@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>mac mini &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/mac-mini/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:56:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>mac mini 2012をSSDに換装してみた</title>
+		<link>/archives/7276/</link>
+					<comments>/archives/7276/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 03 Nov 2012 03:18:53 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[mac mini]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7276</guid>
+
+					<description><![CDATA[CPUをアップグレードしたmac mini 2012 広告 見た目は前回のモデルと変わらない（と思います） 裏 反時計回りに回すと蓋が外せる 適当にネジを外してファンとメモリを取り外す 無線ユニットが ... <a href="/archives/7276/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>CPUをアップグレードしたmac mini 2012<br />
+<a href="https://www.flickr.com/photos/fukata/8148418449" target="_blank" title="R0012580"><img src="https://farm9.staticflickr.com/8185/8148418449_a6ae601f85.jpg" alt="R0012580" class="aligncenter"/></a></p>
+<p><span id="more-7276"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>見た目は前回のモデルと変わらない（と思います）<br />
+<a href="https://www.flickr.com/photos/fukata/8148450818" target="_blank" title="R0012581"><img src="https://farm9.staticflickr.com/8049/8148450818_f3b97fcff8.jpg" alt="R0012581" class="aligncenter"/></a></p>
+<p>裏<br />
+<a href="https://www.flickr.com/photos/fukata/8148418205" target="_blank" title="R0012582"><img src="https://farm9.staticflickr.com/8045/8148418205_561d4df49a.jpg" alt="R0012582" class="aligncenter"/></a></p>
+<p>反時計回りに回すと蓋が外せる<br />
+<a href="https://www.flickr.com/photos/fukata/8148418059" target="_blank" title="R0012583"><img src="https://farm9.staticflickr.com/8463/8148418059_e4e23d1a31.jpg" alt="R0012583" class="aligncenter"/></a></p>
+<p>適当にネジを外してファンとメモリを取り外す<br />
+<a href="https://www.flickr.com/photos/fukata/8148450502" target="_blank" title="R0012584"><img src="https://farm9.staticflickr.com/8047/8148450502_3d0b09d3d0.jpg" alt="R0012584" class="aligncenter"/></a></p>
+<p>無線ユニットが付いた網状の金属板も外す<br />
+<a href="https://www.flickr.com/photos/fukata/8148450374" target="_blank" title="R0012585"><img src="https://farm9.staticflickr.com/8193/8148450374_799e738d3d.jpg" alt="R0012585" class="aligncenter"/></a></p>
+<p>左側にある黒い奴も外す<br />
+<a href="https://www.flickr.com/photos/fukata/8148450246" target="_blank" title="R0012586"><img src="https://farm9.staticflickr.com/8331/8148450246_6463640946.jpg" alt="R0012586" class="aligncenter"/></a></p>
+<p>HDDを取り外す<br />
+<a href="https://www.flickr.com/photos/fukata/8148450110" target="_blank" title="R0012587"><img src="https://farm9.staticflickr.com/8053/8148450110_bde3e6bab4.jpg" alt="R0012587" class="aligncenter"/></a></p>
+<p>今回、差し替えるSSDとメモリ<br />
+<a href="https://www.flickr.com/photos/fukata/8148449984" target="_blank" title="R0012588"><img src="https://farm9.staticflickr.com/8327/8148449984_c63caf414b.jpg" alt="R0012588" class="aligncenter"/></a></p>
+<p>HDDに付いていたSATAコネクタをSSDに装着<br />
+<a href="https://www.flickr.com/photos/fukata/8148449894" target="_blank" title="R0012589"><img src="https://farm9.staticflickr.com/8326/8148449894_ddde17c80c.jpg" alt="R0012589" class="aligncenter"/></a></p>
+<p>詰め込む（ここが一番大変だった）<br />
+<a href="https://www.flickr.com/photos/fukata/8148417199" target="_blank" title="R0012590"><img src="https://farm9.staticflickr.com/8335/8148417199_e707e67ffa.jpg" alt="R0012590" class="aligncenter"/></a></p>
+<p>逆の手順で全部付け直す<br />
+<a href="https://www.flickr.com/photos/fukata/8148417043" target="_blank" title="R0012591"><img src="https://farm9.staticflickr.com/8044/8148417043_3607f11a20.jpg" alt="R0012591" class="aligncenter"/></a></p>
+<p>無事メモリも認識！<br />
+<a href="https://www.flickr.com/photos/fukata/8147984422" target="_blank" title="無事16GB認識"><img src="https://farm9.staticflickr.com/8183/8147984422_96e3b72a6d.jpg" alt="無事16GB認識" class="aligncenter"/></a></p>
+<p>今回使用したパーツはこんな感じです。</p>
+<table>
+<tr>
+<td>
+<iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B008MRWKCO" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+        </td>
+<td>
+<iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B008DPYAAK" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+        </td>
+<td>
+<iframe src="https://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=fukata-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=ss_til&#038;asins=B000I0KLMO" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+        </td>
+</tr>
+</table>
+<p>データの移行は先日買ったmac miniからMigration Assistantを使って簡単に移行することが出来ました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7276/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm9.staticflickr.com/8185/8148418449_a6ae601f85.jpg</image>
+	</item>
+	</channel>
+</rss>

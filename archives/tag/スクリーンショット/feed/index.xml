@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>スクリーンショット &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Sat, 09 Sep 2017 06:03:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>Mac標準のスクリーンショットで特定のウィンドウだけを指定する方法</title>
+		<link>/archives/8874/</link>
+					<comments>/archives/8874/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2017 05:49:58 +0000</pubDate>
+				<category><![CDATA[雑記]]></category>
+		<category><![CDATA[mac]]></category>
+		<category><![CDATA[キーボードショートカット]]></category>
+		<category><![CDATA[ショートカット]]></category>
+		<category><![CDATA[スクリーンショット]]></category>
+		<guid isPermaLink="false">/?p=8874</guid>
+
+					<description><![CDATA[誰かに画面をシェアする際に適当に範囲選択してスクリーンショットを取っていたけど特定のウィンドウだけを指定する方法を最近知ったのでメモ。 広告 Mac標準のスクリーンショットのショートカットは下記の通り ... <a href="/archives/8874/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/8874/"><img src="https://farm5.staticflickr.com/4406/36719048610_fecef1d3e4_c.jpg" alt="Screenshot only Active Window" class="aligncenter"/></a></p>
+<p>誰かに画面をシェアする際に適当に範囲選択してスクリーンショットを取っていたけど特定のウィンドウだけを指定する方法を最近知ったのでメモ。</p>
+<p><span id="more-8874"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>Mac標準のスクリーンショットのショートカットは下記の通り。</p>
+<ul>
+<li>全画面: Shift + Command + 3</li>
+<li>範囲選択: Shfit + Command + 4</li>
+<li>特定のウィンドウのみ:
+<ol>
+<li>Shift + Command + 4</li>
+<li>Space</li>
+<li>スクリーンショットしたいウィンドウにカーソルを合わせクリック</li>
+</ol>
+</li>
+</ul>
+<p>範囲選択モードにした後にスペースを押すとカーソルがカメラマークになり、対象のウィンドウが分かるようになる。その状態でクリックをするとそのウィンドウだけのスクリーンショットを保存することが出来るようになる。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/8874/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4406/36719048610_fecef1d3e4.jpg</image>
+	</item>
+	</channel>
+</rss>

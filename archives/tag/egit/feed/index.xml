@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>EGit &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/egit/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[Eclipse]EGitで追加したリポジトリをリストから消す方法</title>
+		<link>/archives/5733/</link>
+					<comments>/archives/5733/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 08 Jun 2011 08:37:57 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Eclipse]]></category>
+		<category><![CDATA[EGit]]></category>
+		<category><![CDATA[git]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5733</guid>
+
+					<description><![CDATA[ローカルのリポジトリをEGitに認識させた後に、やっぱり不要になり、リストから削除しようと思っても削除のやり方が分からなかったので、かなり強引ですがメモ程度に書いておきます。EGitのGUIとしては存 ... <a href="/archives/5733/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>ローカルのリポジトリをEGitに認識させた後に、やっぱり不要になり、リストから削除しようと思っても削除のやり方が分からなかったので、かなり強引ですがメモ程度に書いておきます。EGitのGUIとしては存在しないようで、下記のファイルを直接編集しました。</p>
+<blockquote><p>[ワークスペース]/.metadata/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs</p></blockquote>
+<p>上記のファイルにはリポジトリのパスなどが記載されているので、不要なリポジトリのパスを削除してやれば、大丈夫です。念の為、このファイルを編集する際は、Eclipseは閉じておいた方が良いと思います。</p>
+<p>また、Linux版Eclipseでの話なので、Windows版の場合は若干異なったりするかもしれません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5733/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

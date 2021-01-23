@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>gistlog &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/gistlog/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>[gistlog]メールアドレスの表示についてのお詫び</title>
+		<link>/archives/5637/</link>
+					<comments>/archives/5637/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Wed, 27 Apr 2011 17:00:47 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[gistlog]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5637</guid>
+
+					<description><![CDATA[現在、運営を行っているgistlogでGithub APIから取得可能なアカウントのメールアドレスの情報が無条件に表示されるようになっている問題が有り、対応しました。現在は、Google, Yahoo ... <a href="/archives/5637/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>現在、運営を行っている<a href="https://www.gistlog.org/">gistlog</a>でGithub APIから取得可能なアカウントのメールアドレスの情報が無条件に表示されるようになっている問題が有り、対応しました。現在は、Google, Yahoo, Bing等の主要検索エンジンにてwww.gistlog.org全体のインデックス、キャッシュ削除依頼を行いました。</p>
+<p>Githubをご利用の方に迷惑をお掛けし、誠に申し訳ありませんでした。</p>
+<p><span id="more-5637"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>経緯</h2>
+<p>昨日の日本時間１９時頃、当ブログの<a href="https://fukata.org/2011/03/26/gistlog/">コメント</a>にて<a href="https://www.gistlog.org/">gistlog</a>にて、Github APIで取得可能なアカウントのメールアドレスが無条件に表示されており、また、検索エンジンにインデックス、キャッシュされているとの報告を受けました。</p>
+<h2>対応</h2>
+<p>昨日の日本時間１９時半頃、報告を受け、表示されていたメールアドレスを非表示、各ページにnoindex, nofollow, noarchiveを追加を行い、再度リリースを行いました。また、Google, Yahoo, Bing等の主要検索エンジンにてwww.gistlog.org全体のインデックス、キャッシュ削除依頼を行いました。</p>
+<h2>今後</h2>
+<p>削除依頼を行った検索エンジンからインデックス、キャッシュの削除が確認できるまで現状維持、その後は、個人情報に関して、基本的に非表示にし、必要であればユーザ側で同意の元に表示項目を選別できるように改良を加えるか検討したいと思います。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5637/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[gistlog]OAuth連携後のデータ表示に関する修正</title>
+		<link>/archives/5497/</link>
+					<comments>/archives/5497/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 26 Mar 2011 12:40:31 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[gistlog]]></category>
+		<category><![CDATA[Release]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5497</guid>
+
+					<description><![CDATA[Gistをブログ形式で表示するgistlog。 今まで、OAuth連携後、データを整形する間何も表示されなかったのですが、それだとあまりにも寂しいので、データ整形が終わるまでOAuth連携前と同じデー ... <a href="/archives/5497/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>Gistをブログ形式で表示する<a href="https://fukata.org/dev/other/gistlog">gistlog</a>。</p>
+<p>今まで、OAuth連携後、データを整形する間何も表示されなかったのですが、それだとあまりにも寂しいので、データ整形が終わるまでOAuth連携前と同じデータを表示するようにしました。また、サイドバーにFollowingとFollowersを追加しました。これで、その人がフォローしているアカウントへの遷移が楽になると思います。</p>
+<p>本当であれば、アカウント名と一緒にアイコンも表示したいのですが、現在のGithubのAPIでは一度にまとめてアカウント名とgravatar_idを一気に取得することができないので、とりあえず今回はアカウント名のみ表示するようにしました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5497/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Gistをブログ形式で表示する「gistlog」</title>
+		<link>/archives/5486/</link>
+					<comments>/archives/5486/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 26 Mar 2011 00:15:26 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[gistlog]]></category>
+		<category><![CDATA[Release]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=5486</guid>
+
+					<description><![CDATA[あるサービスを作成している最中にふと思いついたので、合間を見て少しずつ実装していたものをとりあえず公開してみることにしました。タイトルの通り、コードを公開する場所として利用しているgist.githu ... <a href="/archives/5486/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>あるサービスを作成している最中にふと思いついたので、合間を見て少しずつ実装していたものをとりあえず公開してみることにしました。タイトルの通り、コードを公開する場所として利用している<a href="https://gist.github.com/">gist.github.com</a>のデータをブログ形式で表示するサービスです。かなり荒っぽいところが多々あります。<a href="https://develop.github.com/p/gist.html">Gist API</a>がまだ提供されていないものが多く、表示したい情報などは他にもあるのですが（コメント情報など）出来ない状態です。APIが整備され次第、機能追加を行いたいと思います。</p>
+<p>ということで、gistlogです。Google App Engine上で動かしています。<br />
+（初回、githubとの連携後データが表示されるまで1〜5分ほどかかります）</p>
+<p><a href="https://www.gistlog.org/">www.gistlog.org</a></p>
+<p>サイト内ページ：<a href="https://fukata.org/dev/other/gistlog">gistlog</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/5486/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

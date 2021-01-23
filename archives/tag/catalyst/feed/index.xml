@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Catalyst &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/catalyst/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>DBIx::Classで、複数テーブルをまたいでjoinする</title>
+		<link>/archives/6224/</link>
+					<comments>/archives/6224/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 06 Oct 2011 03:07:07 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[Catalyst]]></category>
+		<category><![CDATA[DBIx]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6224</guid>
+
+					<description><![CDATA[DBIx::Classを使用しており、ARの機能を使って、あるテーブルから複数テーブルをまたいでjoinする方法です。 テーブル構成 下記のようなテーブル構成だったとします。 apps: アプリ情報  ... <a href="/archives/6224/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://search.cpan.org/~abraxxa/DBIx-Class-0.08195/lib/DBIx/Class.pm">DBIx::Class</a>を使用しており、ARの機能を使って、あるテーブルから複数テーブルをまたいでjoinする方法です。</p>
+<h2>テーブル構成</h2>
+<p>下記のようなテーブル構成だったとします。</p>
+<ul>
+<li>apps: アプリ情報</li>
+<li>users: アプリを保持するユーザ情報</li>
+<li>agencies: ユーザを管理する代理店情報</li>
+</ul>
+<h3>データ間の紐付き</h3>
+<p>こんな感じで紐づいています。</p>
+<ul>
+<li>apps.user_id -> users.id</li>
+<li>users.agency_id -> agencies.id</li>
+</ul>
+<h2>ARの設定</h2>
+<p>各モデルには上記のデータの紐付きを下記のように設定しています。</p>
+<p><strong>apps</strong></p>
+<pre lang="Perl">
+__PACKAGE__->belongs_to(
+    user => 'Users',
+    { 'foreign.id' => 'self.user_id' }
+);
+</pre>
+<p><strong>users</strong></p>
+<pre lang="Perl">
+__PACKAGE__->belongs_to(
+    agency => 'Agencies',
+    { 'foreign.id' => 'self.agency_id' }
+);
+</pre>
+<h2>やりたいこと</h2>
+<p><strong>agencies.idでappsの一覧を取得したい。</strong></p>
+<p>具体的なコードはこんな感じになりました。</p>
+<pre lang="Perl">
+my $rs = $apps_model->search( 
+    # conditions
+    {
+        'me.agency_id' => [検索条件の入力値]
+    },
+    # attributes
+    {
+        join => { user => [qw/agency/] }
+    }
+);
+</pre>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6224/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

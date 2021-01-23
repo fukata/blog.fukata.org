@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>json &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/json/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>congomongoのjsonを正しい形式にする</title>
+		<link>/archives/6394/</link>
+					<comments>/archives/6394/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sat, 29 Oct 2011 18:34:08 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[CongoMongo]]></category>
+		<category><![CDATA[json]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6394</guid>
+
+					<description><![CDATA[MongoDB, Clojure, JSON and PHP &#8211; CongoMongo issues and solutions &#124; ProDevTips &#8211; Web Deve ... <a href="/archives/6394/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.prodevtips.com/2010/12/31/mongodb-clojure-json-and-php-congomongo-issues-and-solutions/">MongoDB, Clojure, JSON and PHP &#8211; CongoMongo issues and solutions | ProDevTips &#8211; Web Development Tutorials</a></p>
+<p>congomongoはfetchした結果をjson形式にしてくれる機能が存在するのでJSON APIを作成する時に楽なのですが、このjsonは各行オブジェクトをjson形式に展開するというだけで、複数だったら配列のjson形式にしてくれるというような気が利いた形式で返してくれず、こんな感じになります。</p>
+<pre lang="json">
+{...1行目...}{...2行目...}
+</pre>
+<p>せっかく便利な機能があるので、下記のように括弧で閉じて、各行をカンマで区切って欲しいなぁと思い、探したところ上記のページを見つけました。</p>
+<pre lang="json">
+[{...1行目...},{...2行目...}]
+</pre>
+<p>ページ内に書いてあるとおり、fix-strを定義し、fetchの戻り値を引数として渡すと上記のように正しいjson形式にしてくれます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6394/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

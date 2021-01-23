@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: [CodeIgniter2.x]環境切り分けについて	</title>
+	<atom:link href="/archives/5431/feed/" rel="self" type="application/rss+xml" />
+	<link>/archives/5431/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>
+		By: 深田 達也(Tatsuya Fukata)		</title>
+		<link>/archives/5431/comment-page-1/#comment-687</link>
+
+		<dc:creator><![CDATA[深田 達也(Tatsuya Fukata)]]></dc:creator>
+		<pubDate>Thu, 24 Mar 2011 02:26:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5431#comment-687</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/archives/5431/comment-page-1/#comment-686&quot;&gt;bonnaroo&lt;/a&gt;.
+
+ありがとうございます！
+これは、ほんとに良い機能ですよね。
+あ、やっぱり、2.0.1からの機能だったんですね、changelogをあまり読んでいませんでした。。。
+記事の方も修正しておきます。
+ありがとうございます。]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/archives/5431/comment-page-1/#comment-686">bonnaroo</a>.</p>
+<p>ありがとうございます！<br />
+これは、ほんとに良い機能ですよね。<br />
+あ、やっぱり、2.0.1からの機能だったんですね、changelogをあまり読んでいませんでした。。。<br />
+記事の方も修正しておきます。<br />
+ありがとうございます。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: bonnaroo		</title>
+		<link>/archives/5431/comment-page-1/#comment-686</link>
+
+		<dc:creator><![CDATA[bonnaroo]]></dc:creator>
+		<pubDate>Thu, 24 Mar 2011 02:07:00 +0000</pubDate>
+		<guid isPermaLink="false">http://fukata.org/?p=5431#comment-686</guid>
+
+					<description><![CDATA[とても良い情報ですね。参考になりました！
+ちなみにこの機能は、2.0.1からの機能っぽいですね。
+http://codeigniter.com/user_guide/changelog.html
+
+2.0.0はこの機能はありませんでした。
+]]></description>
+			<content:encoded><![CDATA[<p>とても良い情報ですね。参考になりました！<br />
+ちなみにこの機能は、2.0.1からの機能っぽいですね。<br />
+<a href="http://codeigniter.com/user_guide/changelog.html" rel="nofollow ugc">http://codeigniter.com/user_guide/changelog.html</a></p>
+<p>2.0.0はこの機能はありませんでした。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

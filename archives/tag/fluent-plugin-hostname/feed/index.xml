@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>fluent-plugin-hostname &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/fluent-plugin-hostname/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:07:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>fluent-plugin-hostname v0.0.2をリリース</title>
+		<link>/archives/7457/</link>
+					<comments>/archives/7457/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 16 May 2013 06:07:55 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[fluent-plugin-hostname]]></category>
+		<category><![CDATA[fluentd]]></category>
+		<category><![CDATA[Release]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7457</guid>
+
+					<description><![CDATA[add_prefixなどタグを変更させる機能を提供していなかったのと、プラグイン自体でもタグを変更してemitしていなかったので、無限ループになってしまっていたという指摘をtwitterでもらったので ... <a href="/archives/7457/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>add_prefixなどタグを変更させる機能を提供していなかったのと、プラグイン自体でもタグを変更してemitしていなかったので、無限ループになってしまっていたという指摘をtwitterでもらったのでadd_prefixを実装しました。</p>
+<p><a href="https://github.com/fukata/fluent-plugin-hostname" title="fukata/fluent-plugin-hostname · GitHub">fukata/fluent-plugin-hostname · GitHub</a></p>
+<p><span id="more-7457"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>元々オレオレプラグインとして開発しており、使うのも自分くらいしか居ないだろうと軽い気持ちで開発していてかつ、forestプラグインと併用しておりタグの変更はforestプラグインの方で行なっていました。このプラグイン単体で使っていなかったので問題に気づいていませんでした。</p>
+<p>でも、各プラグインでタグに関する機能を実装しないといけないのは統一感も出にくいので、簡単に組み込めると楽なんだけどなぁ。それこそforestプラグインみたいなプラグインと併用すれば良いんじゃないかと個人的には思った。それすらもコストになるようなものだったら独自に実装すればいいし、こういう部分もfluentd-v11のlabel機能とかで解決できるようになったりするのかな。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7457/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

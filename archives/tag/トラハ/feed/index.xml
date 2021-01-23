@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>トラハ &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E3%83%88%E3%83%A9%E3%83%8F/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Wed, 07 Mar 2018 10:10:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>旅行時に役立つ便利グッズを紹介するサイト「トラハ」を作りました</title>
+		<link>/archives/9470/</link>
+					<comments>/archives/9470/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Mon, 26 Feb 2018 07:01:53 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[トラハ]]></category>
+		<guid isPermaLink="false">/?p=9470</guid>
+
+					<description><![CDATA[久しぶりに趣味でサービス作った気がする。 広告 トラハ 20歳以降、酒を大量に飲んでも翌日に残らなかったのに30歳を過ぎてから少しずつ翌日に残るようになってしまってちょっと嫌になっていたので思い切って ... <a href="/archives/9470/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.flickr.com/photos/fukata/26620373208" target="_blank" title="Screen Shot 2018-02-26 at 13.41.53"><img loading="lazy" src="https://farm5.staticflickr.com/4658/26620373208_87fa82d68a_c.jpg" alt="Screen Shot 2018-02-26 at 13.41.53" class="aligncenter" width="800" height="442"/></a></p>
+<p>久しぶりに趣味でサービス作った気がする。</p>
+<p><span id="more-9470"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>トラハ</h2>
+<p>20歳以降、酒を大量に飲んでも翌日に残らなかったのに30歳を過ぎてから少しずつ翌日に残るようになってしまってちょっと嫌になっていたので思い切って最近禁酒した。そのせいもあってか夜なかなか寝付けなくて暇なのでちょっと欲しかったサービスを作り始めることにした。</p>
+<p><a href="https://traha.org/" rel="noopener" target="_blank">トラハ</a></p>
+<p>普段、タイに住んでいて定期的に周辺国やタイ国内を旅行しているのでそんな時に役立った商品を紹介している場所をまとめてられたらいいなと思って作った。まだまだかなり荒削りではあるけど、先週の初めくらいから毎晩少しずつ開発して先週の土曜日に確か本番環境に公開出来た。</p>
+<p>ドメインを取るのさえめんどくさかったのとあまり多くのドメインを管理したくなかったのでサブドメインでの公開になっている。成長する見込みがあればドメインの購入も検討したい。あとデザインをまともなものにしたい。</p>
+<p>雑な部分が多く残るけどもしよかったら使ってみてフィードバックもらえるとサービス維持のモチベーションが上がります。</p>
+<h2>技術的な余談</h2>
+<p>Digital Oceanのシンガポールリージョンを使ってるのでもしかしたら日本から閲覧した時に表示が重いという印象があるかもしれない。一応、Let&#8217;s EncryptでSSL対応しているけどLet&#8217;s EncryptによるSSL証明書の発行をロードバランサー配下にいるサーバーで行おうとするとサーバーが複数台あった場合に正常に処理が行われない可能性があるので、今回は初めてDNSのTXTレコードでの認証を行ってみた。</p>
+<p>しかし、この方法の場合、毎回手動で設定する必要がありそうで毎月の対応が必要なので早いところ自動化したい。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/9470/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm5.staticflickr.com/4658/26620373208_87fa82d68a.jpg</image>
+	</item>
+	</channel>
+</rss>

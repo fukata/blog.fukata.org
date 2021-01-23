@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>難読化 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/%E9%9B%A3%E8%AA%AD%E5%8C%96/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>コマンドラインでJavaScriptを難読化するツール「consyntools.jar」</title>
+		<link>/archives/6093/</link>
+					<comments>/archives/6093/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Thu, 08 Sep 2011 14:43:58 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[難読化]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=6093</guid>
+
+					<description><![CDATA[https://dean.edwards.name/packer/ のサービスが落ちていたので、代わりになりそうな難読化ツールを探していたところ、下記が良さそうだったので書いておきます。 Obfusc ... <a href="/archives/6093/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://dean.edwards.name/packer/">https://dean.edwards.name/packer/</a></p>
+<p>のサービスが落ちていたので、代わりになりそうな難読化ツールを探していたところ、下記が良さそうだったので書いておきます。</p>
+<p><a href="https://tools.2vi.nl/">ObfuscateJS &#8211; A Free Javascript Obfuscator</a></p>
+<p>特徴としては、WEBサービスではなく、ローカルで難読化してくれるので、サービスが落ちているかどうかは関係ありません。ローカルにJavaが入っていれば下記のようにして使えると思います。</p>
+<pre lang="bash">
+java -jar consyntools.jar Obfuscator [source] [dest]
+</pre>
+<p>手軽に難読化したいという方はどうぞ</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/6093/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

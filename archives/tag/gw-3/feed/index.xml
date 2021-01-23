@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GW-3 &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/gw-3/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 23:19:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>広角レンズを検討してみる</title>
+		<link>/archives/503/</link>
+					<comments>/archives/503/#respond</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Tue, 08 Mar 2016 10:56:53 +0000</pubDate>
+				<category><![CDATA[カメラ]]></category>
+		<category><![CDATA[E-M1]]></category>
+		<category><![CDATA[GH-3]]></category>
+		<category><![CDATA[GW-3]]></category>
+		<category><![CDATA[LUMIX G VARIO 7-14mm F4.0 ASPH]]></category>
+		<category><![CDATA[M.ZUIKO DIGITAL ED 7-14mm F2.8 PRO]]></category>
+		<category><![CDATA[M.ZUIKO DIGITAL ED 9-18mm F4.0-5.6]]></category>
+		<category><![CDATA[RICOH]]></category>
+		<category><![CDATA[RICOH GR]]></category>
+		<category><![CDATA[コンバージョンレンズ]]></category>
+		<category><![CDATA[マイクロフォーサーズ]]></category>
+		<category><![CDATA[レンズ]]></category>
+		<category><![CDATA[広角レンズ]]></category>
+		<category><![CDATA[機材]]></category>
+		<guid isPermaLink="false">https://camera.fukata.org/?p=503</guid>
+
+					<description><![CDATA[修理に出していたRICOH GRの完了報告がLINEで来たので今週末に受け取りに行く。広角レンズが欲しいので検討してみる。 広告 カメラ 所持しているカメラは下記の2つなのでこれらのカメラに装着可能な ... <a href="/archives/503/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/archives/503/"><img src="https://farm8.staticflickr.com/7426/8994742822_3c7fc04967_z.jpg" alt="R0014377" class="aligncenter" /></a></p>
+<p>修理に出していたRICOH GRの完了報告がLINEで来たので今週末に受け取りに行く。広角レンズが欲しいので検討してみる。</p>
+<p><span id="more-503"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<h2>カメラ</h2>
+<p>所持しているカメラは下記の2つなのでこれらのカメラに装着可能な広角レンズを検討する。</p>
+<ul>
+<li>RICOH GR</li>
+<li>OLYMPUS OM-D E-M1</li>
+</ul>
+<h2>RICOH GRのワイドコンバージョンレンズ</h2>
+<p>RICOH GRのワイドコンバージョンレンズ(以下、ワイコン)は通常GRの28mmのレンズを21mmにしてくれるものである。F値も変わらず2.8のまま使える。ただし、ワイコンを付けた時、外した時には設定からワイコンを装着してることを設定してあげないとEXIFにワイコンのデータが載らなくなる。要するに実際の焦点距離とEXIFの焦点距離が合わなくなる。</p>
+<p>また、ワイコンのレンズは出っ張ってるのでフィルター等は付けられない。通常、ワイコンにはフィルター等は付けないらしい。</p>
+<p>ただし、下記のようなステップアップリングとフィルターの組み合わせであればケラレも出ずに使用することができるようだ。外観は好みの問題なのでスルーする。</p>
+<blockquote><p>ステップアップリング：Kenko製62-67mm<br />
+フィルター：Zeta UV41 67mm
+</p></blockquote>
+<p>引用元: <a href="http://bbs.kakaku.com/bbs/K0000502110/SortID=18481661/">価格.com &#8211; 『GW-3に使えるフードは御存知ないですか？』 リコー RICOH GR のクチコミ掲示板</a></p>
+<div class="ad"></div>
+<div class="ad"></div>
+<div style="clear:both"></div>
+<p>普段、12-40mm(35mm換算、24-80mm)のレンズを使ってるので3mmだけ広角になるのがどれくらい効果あるのかというのが使ってみないと分からないなぁ。</p>
+<h2>マイクロフォーサーズレンズ</h2>
+<p><a href="http://www.four-thirds.org/jp/microft/wide.html#i_009-018mm_f040-056_olympus">マイクロフォーサーズの広角レンズ</a></p>
+<ul>
+<li>OLYMPUS : M.ZUIKO DIGITAL ED 7-14mm F2.8 PRO</li>
+<li>Panasonic : LUMIX G VARIO 7-14mm F4.0 ASPH.</li>
+<li>OLYMPUS : M.ZUIKO DIGITAL ED 9-18mm F4.0-5.6</li>
+</ul>
+<div class="ad"></div>
+<div class="ad"></div>
+<div class="ad"></div>
+<div style="clear:both"></div>
+<p>7-14mm PROとまではいかなくとも風景だけ撮るなら9-18mm F4.0-5.6でも良いんじゃないかと思う。9-18mmであればフィルターも付けられそうだし扱いが雑な自分でも残念な結果にならない気がする。</p>
+<p>現在、OLYMPUSのPROレンズ12-40mm、40-150mmを持っているのでせっかくなので7-14mm PROで揃えたいところだが、写りを撮るか持ち運びやすさを取るか。。。非常に悩ましい。というのも出目金レンズと呼ばれるものを今まで使ったことがないのでこすってしまった時のことをどうしても考えてしまう。</p>
+<p>あぁ〜悩ましい。</p>
+<p>次、日本に戻った時に色々触ってみるかな・・・。結局、今回も結論出ず。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/503/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<image>https://farm8.staticflickr.com/7426/8994742822_3c7fc04967.jpg</image>
+	</item>
+	</channel>
+</rss>

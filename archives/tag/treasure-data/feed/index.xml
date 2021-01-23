@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Treasure Data &#8211; blog.fukata.org</title>
+	<atom:link href="/archives/tag/treasure-data/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>旅するプログラマ</description>
+	<lastBuildDate>Fri, 11 Aug 2017 22:58:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+	<item>
+		<title>(途中メモ)fluentdのout_exec_filterがうまく動作しない</title>
+		<link>/archives/7159/</link>
+					<comments>/archives/7159/#comments</comments>
+		
+		<dc:creator><![CDATA[fukata]]></dc:creator>
+		<pubDate>Sun, 29 Jul 2012 15:05:59 +0000</pubDate>
+				<category><![CDATA[開発]]></category>
+		<category><![CDATA[fluentd]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[Treasure Data]]></category>
+		<guid isPermaLink="false">http://fukata.org/?p=7159</guid>
+
+					<description><![CDATA[fluentdのout_exec_filterを使って、アプリから出されるログを整形して出力をそのままfluentdへ戻すということが出来ます。コレを使って、検索クエリをmecabに通して名詞のみを引 ... <a href="/archives/7159/"> 続きを読む</a>]]></description>
+										<content:encoded><![CDATA[<p>fluentdのout_exec_filterを使って、アプリから出されるログを整形して出力をそのままfluentdへ戻すということが出来ます。コレを使って、検索クエリをmecabに通して名詞のみを引っ張ってこようかと思い、以下の様なプログラムを書いてみました。参考にしたのは、<a href="https://d.hatena.ne.jp/studio3104/20120619/1340069545" target="_blank">こちら</a>です。</p>
+<p>現在も調査中なので、下記はメモ程度に受け取って下さい。</p>
+<p><span id="more-7159"></span></p>
+<div class="ad_section"><div class="ad_title">広告</div><div class="ad_body"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-content-bottom1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9703571485671477"
+     data-ad-slot="4353022998"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+<p>今回使用したtd-agentのバージョンは<strong>0.10.25</strong>になります。</p>
+<p>exec_filterのソースとtd-agent.confの設定は下記のようになっています。mecabで分解した文字列が名詞かどうか判定するのが下記のやり方で正しいのかどうかわかりませんが。</p>
+<p><script src="https://gist.github.com/3199348.js"> </script></p>
+<p>実際に動かしてみた挙動としては、td-agentを再起動する段階で値が入ることもあれば、入らないこともあるという感じで、少なくともリアルタイムには値が入っていませんでした。今回行ったmecabでの名詞取り出しの処理はout_exec_filterで行うには重い処理なのかもしれないと思い、試しにmecabを使わずに固定の文字列を出力するだけのものを作成し、動かしてみたところ、クエリの総数よりも少ない数がいくつかだけデータベースに格納されているといった状況でした。</p>
+<p>ちなみに、今回、Treasure Dataとローカルに設置したMongoDBの2つに格納するようにしていますが、ローカルのMongoDBにもリアルタイムとは言えないラグがありました。また、予想された数よりも少ないレコードしかありませんでした。out_exec_filterを介さず、直接データを格納するようにすればほとんどラグが無くデータが格納されます。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/archives/7159/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
